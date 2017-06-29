@@ -1,0 +1,4 @@
+name = ICFI Related links
+description = Creates block to display related links in Basic Page content type
+core = 7.x
+package = ICFI Custom

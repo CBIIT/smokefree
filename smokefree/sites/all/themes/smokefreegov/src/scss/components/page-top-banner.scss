@@ -1,0 +1,24 @@
+.page-top-banner {
+  position: relative;
+  width: 100%;
+  .page-top-banner-headline {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    width: 200px;
+    color: #ffffff;
+    border-right: #ffffff 1px solid;
+    font-size: 3em;
+    line-height: 1.3;
+  }
+  .page-top-banner-description {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    width: 420px;
+    padding-left: 220px;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,2950 @@
+/* Layout 0: Old Smartphone ----------- */
+@media only screen
+	and (max-width : 319px) {
+	
+	/* Background */
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg1-mobile-portrait-480x2290.jpg');
+		background-position: 0 -30px;
+		height:              2290px;
+	}
+	
+	/* Homepage/sub-homepage containers */
+	#mask {
+		list-style:          none;
+		width:               100%;
+	}
+	#mask LI.box { 
+		display:             block;
+		clear:               both;
+		float:               left;
+		padding:             0;
+		width:               100%;
+	}
+	#mask LI.blue  { 
+		background-color:    #003f51;
+	}
+	#mask LI.green { 
+		background-color:    #215b42;
+	}
+	#mask LI.orange { 
+		background-color:    #491c09;
+	}
+	#mask LI#main { 
+		background-color:    transparent;
+		padding:             2.5%; 
+		width:               95%; /* Padding (x2=5%) + width adds up to 100% of the overall width of the outer container */
+	}
+	#mask LI#main LI {
+		background-color:    transparent;
+	}
+	
+	/* Main container - Photo grid */
+	#main .row-fluid {
+		display:             inline;
+		float:               left;
+	}
+	#main .row-fluid:after {
+		clear:               none;
+	}
+	#main .picture-box {
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		margin-bottom:       3px;
+		margin-left:         0;
+		margin-right:        0;
+		max-width:           100%;
+		overflow:            visible;
+		position:            relative;
+		width:               100%;
+	}
+	#main .extra {
+		display:             none !important;
+		visibility:          hidden !important;
+	}
+	#main .picture-box .img-container {
+		display:             block;
+		float:               left;
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box  .img-container A {
+		display:             block;
+		float:               left;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+		float:               left;
+		max-width:           25.4386%;
+		width:               auto;
+	}
+	
+	/* Caption */
+	#main .picture-box  .image-caption-bg {
+		background-image:    none;
+		display:             inline;
+		float:               none;
+		font-size:           1.1em;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		width:               100%;
+	}
+	#main .picture-box A .image-caption-text {
+		left:                1.1%;
+		line-height:         1em;
+		margin:              5.5% 0 0.5%;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		width:               62%;
+	}
+	#main .picture-box A .image-caption-arrow {
+		background-size:     100% auto;
+		display:             block;
+		float:               right;
+		height:              1.51173em;
+		margin:              5.5% 1.8% 0.5% 0;
+		min-height:          24px;
+		position:            relative;
+		width:               20px;
+	}
+	#main .blue A  .image-caption-arrow {
+		background-image:    url('../images/content/smokefree-homepage-arrw-dwn-blu-29x29.png');
+	}
+	#main .green A  .image-caption-arrow {
+		background-image:    url('../images/content/smokefree-homepage-arrw-dwn-grn-29x29.png');
+	}
+	#main .orange A  .image-caption-arrow {
+		background-image:    url('../images/content/smokefree-homepage-arrw-dwn-ong-29x29.png');
+	}
+	
+	/* Sub-homepage */
+	#mask .box .box-header {
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              2.5% 2.5% 0;
+		width:               95%;
+	}
+	#mask .box .box-header .box-title {
+		float:               right;
+		margin:              0 3% 0 0;
+		width:               54%;
+	}
+	#mask .box .box-header .box-title H2 {
+		height:              3.2em;
+	}
+	#mask .box .box-header .box-back-link {
+		display:             block;
+		float:               left;
+		height:              3.2em;
+		left:                0;
+		position:            relative;
+		width:               7.920792%;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		background-size:     96% auto;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               left;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.98666em;
+		line-height:         2.98666em;
+		margin:              2px;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+		width:               91.6667%;
+	}
+	#mask .blue .box-header .box-back-link .homelink {
+		background-color:    #94e5ff;
+		background-image:    url('../images/content/smokefree-homepage-arrw-up-blu-29x29.png');
+		background-image:    75% auto;
+	}
+	#mask .green .box-header .box-back-link .homelink {
+		background-color:    #e7fdb4;
+		background-image:    url('../images/content/smokefree-homepage-arrw-up-grn-29x29.png');
+		background-image:    75% auto;
+	}
+	#mask .orange .box-header .box-back-link .homelink {
+		background-color:    #FCC98D;
+		background-image:    url('../images/content/smokefree-homepage-arrw-up-ong-29x29.png');
+		background-image:    75% auto;
+	}
+	#mask .box .box-header .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		display:             block;
+		float:               none;
+		height:              3.2em;/*
+		margin-left:         7.89474%;*/
+	}
+	
+	/* Quote */
+	#mask .box .quote {
+		clear:               both;
+		float:               left;
+		font-size:           1em;
+		margin:              2px 0 0;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #fff;
+		font-family:         'cabinregular',Arial,​Helvetica,​sans-serif;
+		font-size:           1.333333333em;
+		line-height:         1em;
+		margin:              2.5%;
+		padding:             2.9703%;
+		width:               89.0594%;
+	}
+	#mask .box .description P {
+		line-height:         1.4375em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+		font-size:           1.14286em;
+	}
+	#mask .box  .related-links  UL {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0 0 2.5%;
+		padding:             0;
+		text-indent:         0;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI {
+		clear:               both;
+		float:               left;
+		margin:              2px 2.5% 0;
+		width:               95%;
+	}
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		color:               inherit;
+		font-family:         'cabinseminbold',Arial,Helvetica,sans-serif;
+		line-height:         1.4375em;
+		padding:             0.78125em 2.9703%;
+		vertical-align:      middle;
+		width:               94.0594%;
+	}
+	
+	/* Poll & Quiz */
+	#mask .box  .col_3_of_3_cols {
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0;
+		padding:             0;
+		width:               100%;
+	}
+	#mask .box  .col_3_of_4_cols,
+	#mask .box  .col_4_of_4_cols {
+		background-color:    #fff;
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0;
+		padding:             0 5%;
+		width:               90%;
+	}
+	#mask .box  .col_4_of_4_cols  {
+		margin-top:          2px;
+	}
+	#mask .box  .poll,
+	#mask .box  .quiz {
+		clear:               both;
+		display:             block;
+		float:               left;
+		font-size:           1.142857em;
+		margin:              0;
+		padding:             0 0 1em;
+		width:               100%;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.7857em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              0.64em 0 0;
+	}
+	#mask .box  .poll P {
+		line-height:         2.14285em;
+	}
+	#mask .box  .poll P STRONG {
+		line-height:         2.14285em;
+		margin-bottom:       0;
+	}
+	#mask .box  .quiz  P {
+		line-height:         2.14285em;
+		margin-bottom:       .57143em;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL,
+	#mask .box  .poll .control-group {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         2.14285em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option {
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         2.14285em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio {
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.571425em 0.5em 0.571425em  0;
+		width:               8%;
+	}
+	
+	/* Form buttons */
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		margin:              0 0 1em;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		border-bottom:       10px solid #3a3a3a;
+		display:             block;
+		float:               left;
+		overflow:            visible;
+		padding:             1.666% 2.5%;
+		position:            relative;
+		width:               95%;
+	}
+	#mask .box .back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-up-41x41.png');
+		background-repeat:   no-repeat;
+		background-size:     auto 1.7857em;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		font-family:         Arial,Helvetica,sans-serif;
+		line-height:         1.7857em;
+		position:            relative;
+		text-indent:         -99999px;
+		white-space:         nowrap;
+	}
+}
+/* Layout 1: Smartphone ----------- */
+@media only screen 
+	and (min-width : 320px)
+	and (max-width : 480px) {
+	
+	/* Background */
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg1-mobile-portrait-480x2290.jpg');
+		background-position: 0 -30px;
+		height:              2290px;
+	}
+	
+	/* Homepage/sub-homepage containers */
+	#mask {
+		list-style:          none;
+		width:               100%;
+	}
+	#mask LI.box { 
+		display:             block;
+		clear:               both;
+		float:               left;
+		padding:             0;
+		width:               100%;
+	}
+	#mask LI.blue  { 
+		background-color:    #003f51;
+	}
+	#mask LI.green { 
+		background-color:    #215b42;
+	}
+	#mask LI.orange { 
+		background-color:    #491c09;
+	}
+	#mask LI#main { 
+		background-color:    transparent;
+		padding:             2.5%; 
+		width:               95%; /* Padding (x2=5%) + width adds up to 100% of the overall width of the outer container */
+	}
+	#mask LI#main li {
+		background-color:    transparent;
+	}
+	
+	/* Main container - Photo grid */
+	#main .row-fluid {
+		display:             inline;
+		float:               left;
+	}
+	#main .row-fluid:after {
+		clear:               none;
+	}
+	#main .row-fluid > UL {
+		margin-bottom:       0;
+		margin-top:          0;
+	}
+	#main .picture-box {
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		margin-bottom:       3px;
+		margin-left:         0;
+		margin-right:        0;
+		max-width:           100%;
+		overflow:            visible;
+		position:            relative;
+		width:               100%;
+	}
+	#main .extra {
+		display:             none !important;
+		visibility:          hidden !important;
+	}
+	#main .picture-box .img-container {
+		display:             block;
+		float:               left;
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box  .img-container A {
+		display:             block;
+		float:               left;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+		float:               left;
+		max-width:           25.4386%;
+		width:               auto;
+	}
+	
+	/* Caption */
+	#main .picture-box  .image-caption-bg {
+		background-image:    none;
+		display:             inline;
+		float:               none;
+		font-size:           1.1em;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		width:               100%;
+	}
+	#main .picture-box A .image-caption-text {
+		left:                1.36892%;
+		line-height:         1em;
+		margin:              6.5% 0 0.5%;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		width:               62%;
+	}
+	#main .picture-box A .image-caption-arrow {
+		background-size:     100% auto;
+		display:             block;
+		float:               right;
+		height:              1.51173em;
+		margin:              6.5% 1.8% 0.5% 0;
+		min-height:          24px;
+		position:            relative;
+	}
+	#main .blue A  .image-caption-arrow {
+		background-image:    url('../images/content/smokefree-homepage-arrw-dwn-blu-29x29.png');
+	}
+	#main .green A  .image-caption-arrow {
+		background-image:    url('../images/content/smokefree-homepage-arrw-dwn-grn-29x29.png');
+	}
+	#main .orange A  .image-caption-arrow {
+		background-image:    url('../images/content/smokefree-homepage-arrw-dwn-ong-29x29.png');
+	}
+	
+	/* Sub-homepage */
+	#mask .box .box-header {
+		clear:               both;
+		display:             block;
+		float:               left;
+		font-size:           1.3333333333em;
+		margin:              2.5% 2.5% 0;
+		width:               95%;
+	}
+	#mask .box .box-header .box-title {
+		float:               right;
+		margin:              0 5% 0 0;
+		width:               60%;
+	}
+	#mask .box .box-header .box-title H2 {
+		height:              3em;
+	}
+	#mask .box .box-header .box-back-link {
+		display:             block;
+		float:               left;
+		height:              3em;
+		left:                0;
+		position:            relative;
+		width:               7.920792%;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		background-size:     96% auto;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               left;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.84em;
+		line-height:         2.84em;
+		margin:              2px;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+		width:               91.6667%;
+	}
+	#mask .blue .box-header .box-back-link .homelink {
+		background-color:    #94e5ff;
+		background-image:    url('../images/content/smokefree-homepage-arrw-up-blu-29x29.png');
+		background-size:     75% auto;
+	}
+	#mask .green .box-header .box-back-link .homelink {
+		background-color:    #e7fdb4;
+		background-image:    url('../images/content/smokefree-homepage-arrw-up-grn-29x29.png');
+		background-size:     75% auto;
+	}
+	#mask .orange .box-header .box-back-link .homelink {
+		background-color:    #FCC98D;
+		background-image:    url('../images/content/smokefree-homepage-arrw-up-ong-29x29.png');
+		background-size:     75% auto;
+	}
+	#mask .box .box-header .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		display:             block;
+		float:               none;
+		height:              3em;/*
+		margin-left:         7.89474%;*/
+	}
+	
+	/* Quote */
+	#mask .box .quote {
+		clear:               both;
+		float:               left;
+		font-size:           0.8571432em;
+		margin:              2px 0 0;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #fff;
+		font-size:           1.142857em;
+		line-height:         1em;
+		margin:              2.5%;
+		padding:             2.9703%;
+		width:               89.0594%;
+	}
+	#mask .box .description P {
+		line-height:         1.4375em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+		font-size:           1.35714em;
+	}
+	#mask .box  .related-links  UL {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0 0 2.5%;
+		padding:             0;
+		text-indent:         0;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI {
+		clear:               both;
+		float:               left;
+		margin:              2px 2.5% 0;
+		width:               95%;
+	}
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		color:               inherit;
+		font-family:         'cabinseminbold',Arial,Helvetica,sans-serif;
+		line-height:         1.4375em;
+		padding:             0.78125em 2.9703%;
+		vertical-align:      middle;
+		width:               94.0594%;
+	}
+	
+	/* Poll & Quiz */
+	#mask .box  .col_3_of_3_cols {
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0;
+		padding:             0;
+		width:               100%;
+	}
+	#mask .box  .col_3_of_4_cols,
+	#mask .box  .col_4_of_4_cols {
+		background-color:    #fff;
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0;
+		padding:             0 5%;
+		width:               90%;
+	}
+	#mask .box  .col_4_of_4_cols  {
+		margin-top:          2px;
+	}
+	#mask .box  .poll,
+	#mask .box  .quiz {
+		clear:               both;
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		margin:              0;
+		padding:             0 0 1em;
+		width:               100%;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.7857em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              0.64em 0 0;
+	}
+	#mask .box  .poll P {
+		line-height:         2.14285em;
+	}
+	#mask .box  .poll P STRONG {
+		line-height:         2.14285em;
+		margin-bottom:       0;
+	}
+	#mask .box  .quiz  P {
+		line-height:         2.14285em;
+		margin-bottom:       .57143em;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL,
+	#mask .box  .poll .control-group	{
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         2.14285em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option {
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         2.14285em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio {
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.571425em 0.5em 0.571425em  0;
+		width:               8%;
+	}
+	
+	/* Form buttons */
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		margin:              0 0 1em;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		border-bottom:       10px solid #3a3a3a;
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		overflow:            visible;
+		padding:             1.666% 2.5%;
+		position:            relative;
+		width:               95%;
+	}
+	#mask .box .back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-up-41x41.png');
+		background-repeat:   no-repeat;
+		background-size:     auto 1.7857em;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		font-family:         Arial,Helvetica,sans-serif;
+		line-height:         1.7857em;
+		position:            relative;
+		text-indent:         -99999px;
+		white-space:         nowrap;
+	}
+}
+
+/* Layout 2: Tablet (small) or Smartphone (landscape) ----------- */
+@media only screen 
+	and (min-width : 481px)
+	and (max-width : 767px) {
+	
+	/* Background */
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg2-tablet-small-portrait-768x1160.jpg');
+		height:              1160px;
+	}
+	/* Homepage/sub-homepage containers */
+	#mask {
+		list-style:          none;
+	}
+	#mask LI.box { 
+		float:               left;
+		padding-left:        0.3809524%; /* Padding is 1/7 of 2.6666% */
+		padding-right:       0.3809524%;
+		width:               13.523796%; /* Padding (x2=0.761904%) + width adds up to 1/7 (14.2857%) of the overall width of the outer container */
+	}
+	#mask #main.box {
+		padding-left:        1.02465%; /* Padding is 1/7 of 7.17256% */
+		padding-right:       1.02465%;
+		width:               12.2364%; /* Padding (x2=2.04930%) + width adds up to 1/7 (14.2857%) of the overall width of the outer container */
+	}
+	
+	/* Main container - Photo grid */
+	#main .row-fluid {
+		display:             inline;
+	}
+	#main .row-fluid:after {
+		clear:               none;
+	}
+	#main .picture-box,
+	#main .tablet-column-2 {
+		float:               left;
+		margin-bottom:       7.76699%;
+		margin-left:         7.76699%;
+		max-width:           100%;
+		width:               46.11650%;
+	}
+	#main .tablet-column-1 {
+		margin-left:         0;
+	}
+	#main .extra {
+		display:             none !important;
+		visibility:          hidden !important;
+	}
+	#main .picture-box .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box .img-container A {
+		float:               none;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+	}
+	
+	/* Caption */
+	#main .picture-box  .image-caption-bg {
+		font-size:           1.1em;
+		height:              3em;
+		position:            absolute;
+	}
+	#main .picture-box A .image-caption-text {
+		line-height:         1em;
+		margin-left:         1.5%;
+		margin-right:        1.5%;
+		padding-top:         1em;
+		width:               80%;
+	}
+	#main .picture-box  A .image-caption-arrow {
+		height:              2em;
+		margin:              .5em 1.5% .5em 0;
+	}
+	
+	/* Sub-homepage */
+	
+	/* Header */
+	#mask .box .box-header {
+		clear:               both;
+		display:             block;
+		float:               left;
+		font-size:           1.5342857em;
+		margin:              0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask LI.blue .box-header {
+		background-color:    #006483;
+	}
+	#mask LI.green .box-header {
+		background-color:    #438164;
+	}
+	#mask LI.orange .box-header  {
+		background-color:    #CA501B;
+	}
+	#mask .box .box-header .box-title {
+		float:               left;
+		margin:              0 0 0 2.8169%;
+		width:               80%;
+	}
+	#mask .box .box-header .box-title H2 {
+		height:              2.1412em;
+	}
+	#mask .box .box-header .box-back-link {
+		display:             block;
+		float:               right;
+		height:              2.1412em;
+		position:            relative;
+		margin:              0 1.4% 0 0;
+		position:            relative;
+		right:               0;
+		top:                 0;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               right;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.1412em;
+		line-height:         2.1412em;
+		margin:              0;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+	}
+	#mask .box-header .box-back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-lft-28x28.png');
+		min-width:           28px;
+	}
+	
+	/* Row 1 */
+	#mask .box-header .col_1_of_3_cols {
+		background-color:    #453128;
+		display:             table-row;
+		float:               left;
+		font-size:           0.71694399em;
+		min-height:          8.5em;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Column 1 */
+	#mask .span_2_of_5,
+	#mask .box .box-header .span_2_of_5	{
+		display:             block;
+		float:               left;
+		margin:              0;
+		overflow:            hidden;
+		position:            relative;
+		vertical-align:      middle;
+		width:               40%;
+	}
+	
+	/* Column 2 */
+	#mask .span_3_of_5,
+	#mask .box .box-header .span_3_of_5 {
+		bottom:              0;
+		display:             block;
+		float:               left;
+		margin:              0;
+		position:            relative;
+		top:                 0;
+		vertical-align:      middle;
+		width:               60%;
+	}
+	
+	/* Photo */
+	#mask .box .box-header .img-container {
+		background-color:    transparent !important;
+		display:             block;
+		float:               left;
+		overflow:            visible;
+		position:            relative;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		background-position: 50% 50%;
+		background-size:     100% auto;
+		display:             block;
+		float:               left;
+		min-height:          8.5em;
+		position:            relative;
+		width:               100%;
+	}
+	
+	/* Quote */
+	#mask .box .box-header .quote {
+		bottom:              0;
+		clear:               both;
+		display:             block;
+		float:               left;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	#mask .box .box-header .quote BLOCKQUOTE {
+		display:             block;
+		left:                0;
+		line-height:         1.4em;
+		margin:              5% 10% 5%;
+		min-height:          80%;
+		position:            relative;
+		width:               80%;
+	}
+	
+	/* Row 2 */
+	#mask .col_2_of_3_cols {
+		background-image:    url('../images/home/smokefree-homepage-photo-caption-bg-2x43.png');
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		font-size:           1em;
+		background-color:    #transparent;
+		position:            relative;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #424242;
+		font-size:           1.142857em;
+		line-height:         1.81516em;
+		margin:              0;
+		min-height:          3.875em;
+		padding:             1em 12.4949% 0.3125em;
+		width:               75.3522%;
+	}
+	#mask .box .description STRONG {
+		line-height:         1.35em;
+	}
+	#mask .box .description P {
+		line-height:         1.35em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+	}
+	#mask .box  .related-links  UL {
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0.5625em 0;
+		padding:             0;
+		text-indent:         0;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI {
+		float:               left;
+		margin:              0 0.70425345% 0 0;
+		min-height:          10em;
+		position:            relative;
+		width:               32.863831033%;
+	}
+	#mask .box  .related-links  UL LI.last-link {
+		margin-right:        0
+	}
+	
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		color:               inherit;
+		font-family:         'cabinseminbold',Arial,Helvetica,sans-serif;
+		line-height:         1.5em;
+		min-height:          3em;
+		padding:             4.25em 1% 0;
+		vertical-align:      middle;
+		width:               98%;
+	}
+	#mask .box .related-links IMG {
+		height:              2em;
+		position:            absolute;
+		right:               10.1449%;
+		top:                 9.42029%;
+		width:               2em;
+	}
+	
+	/* Row 3 */
+	#mask .box  .col_3_of_3_cols {
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		clear:               both;
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		margin:              0;
+		padding:             0;
+		width:               100%;
+	}
+	
+	/* Column 1 */
+	#mask .box  .col_4_of_4_cols {
+		background-color:    #fff;
+		display:             block;
+		float:               left;
+		margin:              0;
+		width:               39.5033%;
+	}
+	
+	/* Column 2 */
+	#mask .box  .col_3_of_4_cols {
+		background-color:    #fff;
+		display:             block;
+		float:               right;
+		margin:              0;
+		width:               60%;
+	}
+	
+	/* Quiz & Poll */
+	#mask .box  .poll,
+	#mask .box  .quiz {
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0;
+		padding:             0 0 1em;
+		min-height:          19em;
+	}
+	#mask .box  .quiz {
+		padding:             0 12.6500573%;
+		width:               74.699885314%;
+	}
+	#mask .box  .poll {
+		padding:             0 9%;
+		width:               82%;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.56274em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              0.64em 0 0;
+	}
+	#mask .box  .poll P,
+	#mask .box  .quiz  P {
+		line-height:         1.815160051em;
+		margin-bottom:       0.57143em;
+	}
+	#mask .box  .poll P STRONG {
+		margin:              0;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL,
+	#mask .box  .poll .control-group {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         1.815160051em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option {
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         1.815160051em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio	{
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.437580026em 1% 0.437580026em  -0.5%;
+		width:               8%;
+	}
+	
+	/* Form buttons */
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		margin:              0 0 1em;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		overflow:            visible;
+		padding:             3px 0;
+		position:            relative;
+		width:               1.7857em;
+	}
+	#mask .box .back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-lft-38x41.png');
+		background-repeat:   no-repeat;
+		background-size:     auto 1.7857em;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		font-family:         Arial,Helvetica,sans-serif;
+		line-height:         1.7857em;
+		margin-bottom:       1em;
+		position:            relative;
+		text-indent:         -99999px;
+		white-space:         nowrap;
+	}
+}
+
+/* Layout 3: Tablet (large) */
+@media only screen 
+	and (min-width : 768px)
+	and (max-width : 979px) {
+	
+	/* Background */
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg3-tablet-large-portrait-980x1356.jpg');
+		background-position: 0 -45px;
+		height:              1356px;
+	}
+	
+	/* Homepage/sub-homepage containers */
+	#mask {
+		list-style:          none;
+	}
+	#mask LI.box {
+		float:               left;
+		padding-left:        0.1485%; /* Padding is 1/7 of 1.03950% */
+		padding-right:       0.1485%;
+		width:               13.98871%; /* Padding (x2=.297%) + width adds up to 1/7 (14.2857%) of the overall width of the outer container */
+	}
+	
+	/* Main container - Photo grid */
+	#main .picture-box {
+		float:               left;
+		margin-bottom:       1.91083%;
+		margin-left:         1.91083%;
+		max-width:           100%;
+		width:               32.05945%;
+	}
+	#main .picture-box:first-child {
+		margin-left:         0;
+	}
+	#main .extra {
+		display:             none !important;
+		visibility:          hidden !important;
+	}
+	#main .picture-box .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box .img-container A {
+		float:               none;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+	}
+	
+	/* Caption */
+	#main .picture-box  .image-caption-bg {
+		font-size:           1.1em;
+		height:              2.6em;
+		position:            absolute;
+	}
+	#main .picture-box A .image-caption-text {
+		line-height:         1em;
+		margin-left:         1.5%;
+		margin-right:        1.5%;
+		padding-top:         0.8em;
+		width:               83%;
+	}
+	#main .picture-box  A .image-caption-arrow {
+		height:              1.6em;
+		margin:              0.55em 1.5% 0.45em 0;
+	}
+	
+	/* Sub-homepage */
+	#mask .box-container {
+		background-color:    transparent;
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		margin-bottom:       1em;
+		width:               100%;
+	}
+	
+	/* Header */
+	#mask .box .box-header {
+		background-color:    none;
+		clear:               both;
+		display:             block;
+		float:               none;
+		font-size:           1.5342857em;
+		margin:              0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box .box-header .box-title {
+		clear:               left;
+		float:               left;
+		margin:              0;
+		padding:             0 1%;
+		position:            absolute;
+		width:               98%;
+	}
+	#mask LI.blue .box-header .box-title {
+		background-color:    #006483;
+	}
+	#mask LI.green .box-header  .box-title {
+		background-color:    #438164;
+	}
+	#mask LI.orange .box-header .box-title  {
+		background-color:    #CA501B;
+	}
+	#mask .box .box-header .box-title H2 {
+		display:             block;
+		float:               left;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+	}
+	#mask .box .box-header .box-back-link {
+		clear:               right;
+		display:             block;
+		float:               right;
+		height:              2.148148148em;
+		margin:              0;
+		padding-right:       0.5%;
+		position:            relative;
+		right:               0;
+		top:                 0;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               right;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+	}
+	#mask .box-header .box-back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-lft-28x28.png');
+		min-width:           28px;
+	}
+	
+	/* Column 1 */
+	#mask .box-header .col_1_of_3_cols {
+		background-color:    #453128;
+		clear:               both;
+		display:             table-row;
+		float:               left;
+		font-size:           0.884408em;
+		margin:              0;
+		min-height:          31em;
+		position:            relative;
+		vertical-align:      middle;
+		width:               33.333333333%;
+	}
+	#mask .box .box-header .span_2_of_5,
+	#mask .box .box-header .span_3_of_5  {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Photo */
+	#mask .box .box-header .img-container {
+		background-color:    transparent !important;
+		display:             block;
+		float:               left;
+		overflow:            visible;
+		position:            relative;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		background-position: 50% 50%;
+		background-size:     100% auto;
+		display:             block;
+		float:               left;
+		min-height:          8.5em;
+		position:            relative;
+		width:               100%;
+	}
+	
+	/* Quote */
+	#mask .box .box-header .quote {
+		bottom:              0;
+		clear:               both;
+		display:             block;
+		float:               left;
+		min-height:          10em;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	#mask .box .box-header .quote BLOCKQUOTE {
+		display:             block;
+		left:                0;
+		line-height:         1.5em;
+		margin:              15% 10% 5%;
+		min-height:          80%;
+		position:            relative;
+		width:               80%;
+	}
+	
+	/* Column 2 */
+	#mask .col_2_of_3_cols {
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		background-color:    transparent;
+		margin:              0;
+		position:            relative;
+		width:               33.333333333%;
+	}
+	#mask .span_2_of_5,
+	#mask .span_3_of_5 {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #424242;
+		line-height:         1em;
+		margin:              0;
+		min-height:          4em;
+		padding:             2.5em 4.5% 0.5em;
+		width:               91%;
+	}
+	#mask .box .description P {
+		line-height:         1.4375em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+	}
+	#mask .box  .related-links  UL {
+		display:             block;
+		float:               none;
+		list-style:          none;
+		margin:              0 4.5%;
+		padding:             0;
+		text-indent:         0;
+		width:               91%;
+	}
+	#mask .box  .related-links  UL LI {
+		float:               left;
+		margin:              0.625em 0.70425345% 0 0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI.last-link {
+		margin-right:        0
+	}
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		line-height:         1.5em;
+		min-height:          3em;
+		padding:             2em 20% 0 4%;
+		vertical-align:      middle;
+		width:               76%
+	}
+	#mask .box .related-links IMG {
+		height:              2em;
+		position:            absolute;
+		right:               4%;
+		top:                 9.42029%;
+		width:               2em;
+	}
+	
+	/* Column 3 */
+	#mask .box  .col_3_of_3_cols {
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		margin:              0;
+		padding:             0;
+		width:               33.333333333%;
+	}
+	#mask .box  .col_3_of_4_cols,
+	#mask .box  .col_4_of_4_cols	{
+		display:             block;
+		float:               left;
+		margin:              0;
+		width:               100%;
+	}
+	
+	/* Quiz & Poll */
+	#mask .box  .poll,
+	#mask .box  .quiz {
+		background-color:    #fff;
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0 0 2px;
+		padding:             0 4.5% 0 4.5%;
+		width:               91%;
+	}
+	#mask .box  .poll {
+		margin-bottom:       0.125em;
+		min-height:          20em;
+		padding-bottom:      1em;
+	}
+	#mask .box  .quiz {
+		min-height:          10.5em;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.56274em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              0.64em 0 0;
+	}
+	#mask .box  .poll P,
+	#mask .box  .quiz  P {
+		line-height:         1.4375em;
+		margin-bottom:       0.57143em;
+	}
+	#mask .box  .poll P STRONG {
+		margin:              0;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL,
+	#mask .box  .poll .control-group {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         1.815160051em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option	{
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         1.815160051em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio	{
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.437580026em 1% 0.437580026em  -0.5%;
+		width:               8%;
+	}
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		background-color:    #453128;
+		background-image:    none;
+		background-repeat:   no-repeat;
+		border:              0 none;
+		border-collapse:     collapse;
+		border-radius:       0;
+		box-shadow:          0;
+		color:               #fff;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		min-height:          2.1875em;
+		line-height:         2em;
+		margin:              0.5em 0 0.75em;
+		padding:             0 .5em;
+		text-shadow:         none;
+		vertical-align:      middle;
+		width:               auto;
+	}
+	#mask .box  .poll .form-submit {
+		left:                -99999px;
+		position:            relative;
+	}
+	#mask .box  .poll .links {
+		display:             none;
+		left:                -99999px;
+		opacity:             0;
+		position:            absolute;
+		visibility:          hidden;
+	}
+	#mask .box  .quiz A.quiz {
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-quiz-38x49.png');
+		background-position: 92% 50%;
+		background-repeat:   no-repeat;
+		background-size:     25px auto;
+		line-height:         2em;
+		padding-right:       38px;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		overflow:            visible;
+		padding:             3px 0;
+		position:            relative;
+		width:               1.7857em;
+	}
+	#mask .box .back-link .homelink {
+		display:             none;
+		opacity:             0;
+		visibility:          hidden;
+	}
+}
+
+/* Layout 4: Small screen ----------- */
+@media only screen 
+	and (min-width : 980px)
+	and (max-width : 1199px) {
+	
+	/* Background */
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg4-desktop-small-landscape-1854x1200.jpg');
+		background-position: 0 -45px;
+		height:              1200px;
+	}
+	
+	/* Homepage/sub-homepage containers */
+	#mask {
+		list-style:          none;
+	}
+	#mask LI.box { 
+		float:               left;
+		padding-left:        .1488%; /* Padding is 1/7 of 1.0416% */
+		padding-right:       .1488%;
+		width:               13.9881%; /* Padding (x2=.2976%) + width adds up to 1/7 (14.2857%) of the overall width of the outer container */
+	}
+	
+	/* Main container - Photo grid */
+	#main .picture-box {
+		float:               left;
+		margin-bottom:       1.7021%;
+		margin-left:         1.7021%;
+		max-width:           100%;
+		width:               32.1986%;
+	}
+	#main .picture-box:first-child {
+		margin-left:         0;
+	}
+	#main .extra {
+		display:             none !important;
+		visibility:          hidden !important;
+	}
+	#main .picture-box .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box .img-container A {
+		float:               none;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+	}
+	
+	/* Caption */
+	#main .picture-box  A .image-caption-bg {
+		font-size:           1.1em;
+		height:              3em;
+		position:            absolute;
+		width:               100%;
+	}
+	#main .picture-box A .image-caption-bg .image-caption-text {
+		line-height:         1em;
+		margin:              1em 0.75em;
+		width:               75%;
+	}
+	#main .picture-box A .image-caption-bg .image-caption-arrow {
+		margin:              0.7em .75em 0.7em 0;
+	}
+	
+	/* Sub-homepage */
+	#mask .box-container {
+		background-color:    transparent;
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		margin-bottom:       1em;
+		width:               100%;
+	}
+	
+	/* Header */
+	#mask .box .box-header {
+		background-color:    none;
+		clear:               both;
+		display:             block;
+		float:               none;
+		font-size:           1.5342857em;
+		margin:              0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box .box-header .box-title {
+		clear:               left;
+		float:               left;
+		margin:              0;
+		padding:             0 1%;
+		position:            absolute;
+		width:               98%;
+	}
+	#mask LI.blue .box-header .box-title {
+		background-color:    #006483;
+	}
+	#mask LI.green .box-header  .box-title {
+		background-color:    #438164;
+	}
+	#mask LI.orange .box-header .box-title  {
+		background-color:    #CA501B;
+	}
+	#mask .box .box-header .box-title H2 {
+		display:             block;
+		float:               left;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+	}
+	#mask .box .box-header .box-back-link {
+		clear:               right;
+		display:             block;
+		float:               right;
+		height:              2.148148148em;
+		margin:              0;
+		padding-right:       0.5%;
+		position:            relative;
+		right:               0;
+		top:                 0;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               right;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+	}
+	#mask .box-header .box-back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-lft-28x28.png');
+		min-width:           28px;
+	}
+	
+	/* Column 1 */
+	#mask .box-header .col_1_of_3_cols {
+		background-color:    #453128;
+		clear:               both;
+		display:             table-row;
+		float:               left;
+		font-size:           0.884408em;
+		margin:              0;
+		min-height:          27em;
+		position:            relative;
+		vertical-align:      middle;
+		width:               33.333333333%;
+	}
+	#mask .box .box-header .span_2_of_5,
+	#mask .box .box-header .span_3_of_5  {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Photo */
+	#mask .box .box-header .img-container {
+		background-color:    transparent !important;
+		display:             block;
+		float:               left;
+		overflow:            visible;
+		position:            relative;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		background-position: 50% 50%;
+		background-size:     100% auto;
+		display:             block;
+		float:               left;
+		min-height:          8.5em;
+		position:            relative;
+		width:               100%;
+	}
+	
+	/* Quote */
+	#mask .box .box-header .quote {
+		bottom:              0;
+		clear:               both;
+		display:             block;
+		float:               left;
+		min-height:          19em;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	#mask .box .box-header .quote BLOCKQUOTE {
+		display:             block;
+		left:                0;
+		line-height:         1.5em;
+		margin:              18% 10% 5%;
+		min-height:          80%;
+		position:            relative;
+		width:               80%;
+	}
+	
+	/* Column 2 */
+	#mask .col_2_of_3_cols {
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		background-color:    transparent;
+		margin:              0;
+		position:            relative;
+		width:               33.333333333%;
+	}
+	#mask .span_2_of_5,
+	#mask .span_3_of_5 {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #424242;
+		line-height:         1em;
+		margin:              0;
+		min-height:          4em;
+		padding:             2.5em 7.804878049% 0.5em;
+		width:               84.3902439%;
+	}
+	#mask .box .description P {
+		line-height:         1.4375em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+	}
+	#mask .box  .related-links  UL {
+		display:             block;
+		float:               none;
+		list-style:          none;
+		margin:              0 4.390243902%;
+		padding:             0;
+		text-indent:         0;
+		width:               91.219512196%;
+	}
+	#mask .box  .related-links  UL LI {
+		float:               left;
+		margin:              0.625em 0 0 0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI.last-link {
+		margin-right:        0
+	}
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		color:               inherit;
+		font-size:           1.1875em;
+		font-weight:         bold;
+		line-height:         1.5em;
+		min-height:          3.05263em;
+		padding:             2.2105em 20% 0 3.98860399%;
+		vertical-align:      middle;
+		width:               76.01139601%
+	}
+	#mask .blue  .related-links,
+	#mask .blue  .related-links  A:hover	{
+		color:               #006483 !important;
+	}
+	#mask .green  .related-links,
+	#mask .green  .related-links  A:hover	{
+		color:               #438164 !important;
+	}
+	#mask .orange  .related-links ,
+	#mask .orange  .related-links  A:hover {
+		color:               #CA501B !important;
+	}
+	#mask .box .related-links IMG {
+		height:              2em;
+		position:            absolute;
+		right:               4%;
+		top:                 9.42029%;
+		width:               2em;
+	}
+	
+	/* Column 3 */
+	#mask .box  .col_3_of_3_cols {
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		margin:              0;
+		padding:             0;
+		width:               33.333333333%;
+	}
+	#mask .box  .col_3_of_4_cols,
+	#mask .box  .col_4_of_4_cols	{
+		display:             block;
+		float:               left;
+		margin:              0;
+		width:               100%;
+	}
+	
+	/* Quiz & Poll */
+	#mask .box  .poll,
+	#mask .box  .quiz {
+		background-color:    #fff;
+		clear:               both;
+		display:             block;
+		float:               left;
+		margin:              0 0 2px;
+		padding:             0 4.5% 0 4.5%;
+		width:               91%;
+	}
+	#mask .box  .poll {
+		margin-bottom:       0.125em;
+		min-height:          17em;
+		padding-bottom:      1em;
+	}
+	#mask .box  .quiz {
+		min-height:          10em;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.56274em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              1em 0 0;
+	}
+	#mask .box  .poll P,
+	#mask .box  .quiz  P {
+		line-height:         1.815160051em;
+		margin-bottom:       1em;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL, 
+	#mask .box  .poll .control-group {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         1.815160051em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option	{
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         1.815160051em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio	{
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.437580026em 1% 0.437580026em  -0.5%;
+		width:               8%;
+	}
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		background-color:    #453128;
+		background-image:    none;
+		background-repeat:   no-repeat;
+		border:              0 none;
+		border-collapse:     collapse;
+		border-radius:       0;
+		box-shadow:          0;
+		color:               #fff;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		min-height:          2.1875em;
+		line-height:         2em;
+		margin:              0.5em 0 0.75em;
+		padding:             0 .5em;
+		text-shadow:         none;
+		vertical-align:      middle;
+		width:               auto;
+	}
+	#mask .box  .poll .form-submit {
+		left:                -99999px;
+		position:            relative;
+	}
+	
+	#mask .box  .poll .links {
+		display:             none;
+		left:                -99999px;
+		opacity:             0;
+		position:            absolute;
+		visibility:          hidden;
+	}
+	#mask .box  .quiz A.quiz {
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-quiz-38x49.png');
+		background-position: 92% 50%;
+		background-repeat:   no-repeat;
+		background-size:     25px auto;
+		line-height:         2em;
+		padding-right:       38px;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		overflow:            visible;
+		padding:             3px 0;
+		position:            relative;
+		width:               1.7857em;
+	}
+	#mask .box .back-link .homelink {
+		display:             none;
+		opacity:             0;
+		visibility:          hidden;
+	}
+}
+	
+/* Layout 5: Regular screen ----------- */
+@media only screen
+	and (min-width : 1200px)
+	and (max-width : 1365px) {
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg6-desktop-large-landscape-2400x1520.jpg');
+		background-position: 0 -45px;
+		height:              1520px;
+	}
+	#mask .box { 
+		float:               left;
+		padding-left:        .1488%; /* Padding is 1/7 of 1.0416% */
+		padding-right:       .1488%;
+		width:               13.9881%; /* Padding (x2=.2976%) + width adds up to 1/7 (14.2857%) of the overall width of the outer container */
+	}
+	#main .picture-box {
+		float:               left;
+		margin-bottom:       0.68966%;
+		margin-left:         0.68966%;
+		max-width:           100%;
+		width:               24.48276%;
+	}
+	#main .picture-box:first-child {
+		margin-left:         0;
+	}
+	#main .extra .green{
+		display:             none;
+		visibility:          hidden;
+	}
+	#main .picture-box .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box .img-container A {
+		float:               none;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+		margin-top:          -5%;
+	}
+	#main .picture-box  A .image-caption-bg {
+		font-size:           1.1em;
+		height:              3em;
+		position:            absolute;
+		width:               100%;
+	}
+	#main .picture-box A .image-caption-bg .image-caption-text {
+		line-height:         1em;
+		margin:              1em 0.5em 0;
+		width:               83%;
+	}
+	#main .picture-box A .image-caption-bg .image-caption-arrow {
+		margin:              0.7em .75em 0.7em 0;
+	}
+	
+	/* Sub-homepage */
+	#mask .box-container {
+		background-color:    transparent;
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		margin-bottom:       1em;
+		width:               100%;
+	}
+	
+	/* Header */
+	#mask .box .box-header {
+		background-color:    none;
+		clear:               both;
+		display:             block;
+		float:               none;
+		font-size:           1.5342857em;
+		margin:              0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box .box-header .box-title {
+		clear:               left;
+		float:               left;
+		margin:              0;
+		padding:             0 1%;
+		position:            absolute;
+		width:               98%;
+	}
+	#mask LI.blue .box-header .box-title {
+		background-color:    #006483;
+	}
+	#mask LI.green .box-header  .box-title {
+		background-color:    #438164;
+	}
+	#mask LI.orange .box-header .box-title  {
+		background-color:    #CA501B;
+	}
+	#mask .box .box-header .box-title H2 {
+		display:             block;
+		float:               left;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+	}
+	#mask .box .box-header .box-back-link {
+		clear:               right;
+		display:             block;
+		float:               right;
+		height:              2.148148148em;
+		margin:              0;
+		padding-right:       0.5%;
+		position:            relative;
+		right:               0;
+		top:                 0;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               right;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+	}
+	#mask .box-header .box-back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-lft-28x28.png');
+		min-width:           28px;
+	}
+	
+	/* Column 1 */
+	#mask .box-header .col_1_of_3_cols {
+		background-color:    #453128;
+		clear:               both;
+		display:             table-row;
+		float:               left;
+		font-size:           0.884408em;
+		margin:              0;
+		min-height:          24em;
+		position:            relative;
+		vertical-align:      middle;
+		width:               25%;
+	}
+	#mask .box .box-header .span_2_of_5,
+	#mask .box .box-header .span_3_of_5  {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Photo */
+	#mask .box .box-header .img-container {
+		background-color:    transparent !important;
+		display:             block;
+		float:               left;
+		overflow:            visible;
+		position:            relative;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		background-position: 50% 50%;
+		background-size:     100% auto;
+		display:             block;
+		float:               left;
+		min-height:          8.5em;
+		position:            relative;
+		width:               100%;
+	}
+	
+	/* Quote */
+	#mask .box .box-header .quote {
+		bottom:              0;
+		clear:               both;
+		display:             block;
+		float:               left;
+		min-height:          13.5em;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	#mask .box .box-header .quote BLOCKQUOTE {
+		display:             block;
+		left:                0;
+		line-height:         1.5em;
+		margin:              18% 10% 5%;
+		min-height:          80%;
+		position:            relative;
+		width:               80%;
+	}
+	
+	/* Column 2 */
+	#mask .col_2_of_3_cols {
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		background-color:    transparent;
+		margin:              0;
+		position:            relative;
+		width:               25%;
+	}
+	#mask .span_2_of_5,
+	#mask .span_3_of_5 {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #424242;
+		line-height:         1em;
+		margin:              0;
+		min-height:          4em;
+		padding:             2.5em 7.804878049% 0.5em;
+		width:               84.3902439%;
+	}
+	#mask .box .description P {
+		line-height:         1.4375em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+	}
+	#mask .box  .related-links  UL {
+		display:             block;
+		float:               none;
+		list-style:          none;
+		margin:              0 4.390243902%;
+		padding:             0;
+		text-indent:         0;
+		width:               91.219512196%;
+	}
+	#mask .box  .related-links  UL LI {
+		float:               left;
+		margin:              0.625em 0 0 0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI.last-link {
+		margin-right:        0
+	}
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		color:               inherit;
+		font-size:           1.1875em;
+		font-weight:         bold;
+		line-height:         1.5em;
+		min-height:          3.05263em;
+		padding:             2.2105em 20% 0 3.98860399%;
+		vertical-align:      middle;
+		width:               76.01139601%
+	}
+	#mask .blue  .related-links,
+	#mask .blue  .related-links  A:hover	{
+		color:               #006483 !important;
+	}
+	#mask .green  .related-links,
+	#mask .green  .related-links  A:hover	{
+		color:               #438164 !important;
+	}
+	#mask .orange  .related-links ,
+	#mask .orange  .related-links  A:hover {
+		color:               #CA501B !important;
+	}
+	#mask .box .related-links IMG {
+		height:              2em;
+		position:            absolute;
+		right:               4%;
+		top:                 9.42029%;
+		width:               2em;
+	}
+	
+	/* Columns 3 & 4 */
+	#mask .box  .col_3_of_3_cols {
+		font-size:           1.14286em;
+		margin:              0;
+		padding:             0;
+	}
+	
+	/* Poll & Quiz */
+	#mask .box  .col_3_of_4_cols,
+	#mask .box  .col_4_of_4_cols	{
+		display:             block;
+		float:               left;
+		margin:              0;
+		min-height:          24em;
+		width:               25%;
+	}
+	#mask .box  .poll,
+	#mask .box  .quiz	{
+		background-color:    #fff;
+		clear:               both;
+		display:             block;
+		float:               left;
+		min-height:          22em;
+		padding:             15% 4.390243902% 15%;
+		width:               89.024390245%;
+	}
+	#mask .box  .poll {
+		margin:              0 2.19512195% 0 0;
+	}
+	#mask .box  .quiz {
+		margin:              0 0 0 2.19512195%;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.56274em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              1em 0 0;
+	}
+	#mask .box  .poll P,
+	#mask .box  .quiz  P {
+		line-height:         1.815160051em;
+		margin-bottom:       1em;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL,
+	#mask .box  .poll .control-group {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         1.815160051em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option {
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         1.815160051em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio {
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.437580026em 1% 0.437580026em  -0.5%;
+		width:               8%;
+	}
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		background-color:    #453128;
+		background-image:    none;
+		background-repeat:   no-repeat;
+		border:              0 none;
+		border-collapse:     collapse;
+		border-radius:       0;
+		box-shadow:          0;
+		color:               #fff;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		min-height:          2.1875em;
+		line-height:         2em;
+		margin:              0.5em 0 0.75em;
+		padding:             0 .5em;
+		text-shadow:         none;
+		vertical-align:      middle;
+		width:               auto;
+	}
+	#mask .box  .poll .form-submit {
+		left:                -99999px;
+		position:            relative;
+	}
+	#mask .box  .poll .links {
+		display:             none;
+		left:                -99999px;
+		opacity:             0;
+		position:            absolute;
+		visibility:          hidden;
+	}
+	#mask .box  .quiz A.quiz {
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-quiz-38x49.png');
+		background-position: 92% 50%;
+		background-repeat:   no-repeat;
+		background-size:     25px auto;
+		line-height:         2em;
+		padding-right:       38px;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		overflow:            visible;
+		padding:             3px 0;
+		position:            relative;
+		width:               1.7857em;
+	}
+	#mask .box .back-link .homelink {
+		display:             none;
+		opacity:             0;
+		visibility:          hidden;
+	}
+}
+
+/* Layout 6: Large screen ----------- */
+@media only screen 
+	and (min-width : 1366px) {
+	#bg-photo { 
+		background-image:    url('../images/background/smokefree-people-walking-bg6-desktop-large-landscape-2400x1520.jpg');
+		background-position: 0 -45px;
+		height:              1520px;
+	}
+	#mask .box { 
+		float:               left;
+		padding-left:        .232199%; /* Padding is 1/7 of 1.625387% */
+		padding-right:       .232199%;
+		width:               13.821302%; /* Padding (x2=.464398%) + width adds up to 1/7 (14.2857%) of the overall width of the outer container */
+	}
+	#main .picture-box {
+		float:               left;
+		margin-bottom:       0.6933%;
+		margin-left:         0.6933%;
+		max-width:           100%;
+		width:               24.4800%;
+	}
+	#main .picture-box:first-child {
+		margin-left:         0;
+	}
+	#main .picture-box .img-container {
+		height:              100%;
+		overflow:            visible;
+		top:                 0;
+	}
+	#main .picture-box .img-container A {
+		float:               none;
+	}
+	#main .picture-box .img-container A IMG.photo {
+		display:             inline;
+		margin-top:          -5%;
+	}
+	#main .picture-box  A .image-caption-bg {
+		font-size:           1.1em;
+		height:              3em;
+		position:            absolute;
+	}
+	#main .picture-box A .image-caption-bg .image-caption-text {
+		line-height:         1em;
+		margin:              1em 0.5em 0;
+		width:               83%;
+	}
+	#main .picture-box A .image-caption-bg .image-caption-arrow {
+		margin:              .7em 1em .7em 0;
+	}
+	
+	/* Sub-homepage */
+	#mask .box-container {
+		background-color:    transparent;
+		background-image:    url("../images/home/smokefree-homepage-photo-caption-bg-2x43.png");
+		background-repeat:   repeat;
+		display:             block;
+		float:               left;
+		margin-bottom:       1em;
+		width:               100%;
+	}
+	
+	/* Header */
+	#mask .box .box-header {
+		background-color:    none;
+		clear:               both;
+		display:             block;
+		float:               none;
+		font-size:           1.5342857em;
+		margin:              0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box .box-header .box-title {
+		clear:               left;
+		float:               left;
+		margin:              0;
+		padding:             0 1%;
+		position:            absolute;
+		width:               98%;
+	}
+	#mask LI.blue .box-header .box-title {
+		background-color:    #006483;
+	}
+	#mask LI.green .box-header  .box-title {
+		background-color:    #438164;
+	}
+	#mask LI.orange .box-header .box-title  {
+		background-color:    #CA501B;
+	}
+	#mask .box .box-header .box-title H2 {
+		display:             block;
+		float:               left;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+	}
+	#mask .box .box-header .box-back-link {
+		clear:               right;
+		display:             block;
+		float:               right;
+		height:              2.148148148em;
+		margin:              0;
+		padding-right:       0.5%;
+		position:            relative;
+		right:               0;
+		top:                 0;
+	}
+	#mask .box .box-header .box-back-link .homelink {
+		background-position: 50% 50%;
+		background-repeat:   no-repeat;
+		border:              none;
+		color:               transparent;
+		display:             block;
+		float:               right;
+		font-family:         Arial,Helvetica,sans-serif;
+		height:              2.148148148em;
+		line-height:         2.148148148em;
+		margin:              0;
+		text-align:          center;
+		text-indent:         -99999px;
+		vertical-align:      middle;
+		white-space:         nowrap;
+	}
+	#mask .box-header .box-back-link .homelink {
+		background-color:    transparent;
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-arrw-lft-28x28.png');
+		min-width:           28px;
+	}
+	
+	/* Column 1 */
+	#mask .box-header .col_1_of_3_cols {
+		background-color:    #453128;
+		clear:               both;
+		display:             table-row;
+		float:               left;
+		font-size:           0.884408em;
+		margin:              0;
+		min-height:          24em;
+		position:            relative;
+		vertical-align:      middle;
+		width:               25%;
+	}
+	#mask .box .box-header .span_2_of_5,
+	#mask .box .box-header .span_3_of_5  {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Photo */
+	#mask .box .box-header .img-container {
+		background-color:    transparent !important;
+		display:             block;
+		float:               left;
+		overflow:            visible;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box .box-header .img-container IMG.photo {
+		background-position: 50% 50%;
+		background-size:     100% auto;
+		display:             block;
+		float:               left;
+		min-height:          8.5em;
+		position:            relative;
+		width:               100%;
+	}
+	
+	/* Quote */
+	#mask .box .box-header .quote {
+		bottom:              0;
+		clear:               both;
+		display:             block;
+		float:               left;
+		min-height:          13.5em;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	#mask .box .box-header .quote BLOCKQUOTE {
+		display:             block;
+		left:                0;
+		line-height:         1.5em;
+		margin:              18% 10% 5%;
+		min-height:          80%;
+		position:            relative;
+		width:               80%;
+	}
+	
+	/* Column 2 */
+	#mask .col_2_of_3_cols {
+		display:             block;
+		float:               left;
+		font-size:           1.14286em;
+		background-color:    transparent;
+		margin:              0;
+		position:            relative;
+		width:               25%;
+	}
+	#mask .span_2_of_5,
+	#mask .span_3_of_5 {
+		display:             block;
+		float:               none;
+		margin:              0;
+		position:            relative;
+		vertical-align:      middle;
+		width:               100%;
+	}
+	
+	/* Description */
+	#mask .box .description {
+		color:               #424242;
+		line-height:         1em;
+		margin:              0;
+		min-height:          4em;
+		padding:             2.5em 7.804878049% 0.5em;
+		width:               84.3902439%;
+	}
+	#mask .box .description P {
+		line-height:         1.4375em;
+		margin:              0.4375em 0 0;
+	}
+	
+	/* Related links */
+	#mask .box  .related-links {
+		clear:               both;
+		float:               none;
+	}
+	#mask .box  .related-links  UL {
+		display:             block;
+		float:               none;
+		list-style:          none;
+		margin:              0 4.390243902%;
+		padding:             0;
+		text-indent:         0;
+		width:               91.219512196%;
+	}
+	#mask .box  .related-links  UL LI {
+		float:               left;
+		margin:              0.625em 0 0 0;
+		position:            relative;
+		width:               100%;
+	}
+	#mask .box  .related-links  UL LI.last-link {
+		margin-right:        0
+	}
+	#mask .box  .related-links  A ,
+	#mask .box  .related-links  A:active,
+	#mask .box  .related-links  A:link,
+	#mask .box  .related-links  A:hover,
+	#mask .box  .related-links  A:visited {
+		color:               inherit;
+		font-size:           1.1875em;
+		font-weight:         bold;
+		line-height:         1.5em;
+		min-height:          3.05263em;
+		padding:             2.2105em 20% 0 3.98860399%;
+		vertical-align:      middle;
+		width:               76.01139601%
+	}
+	#mask .blue  .related-links,
+	#mask .blue  .related-links  A:hover	{
+		color:               #006483 !important;
+	}
+	#mask .green  .related-links,
+	#mask .green  .related-links  A:hover	{
+		color:               #438164 !important;
+	}
+	#mask .orange  .related-links ,
+	#mask .orange  .related-links  A:hover {
+		color:               #CA501B !important;
+	}
+	#mask .box .related-links IMG {
+		height:              2em;
+		position:            absolute;
+		right:               4%;
+		top:                 9.42029%;
+		width:               2em;
+	}
+	
+	/* Columns 3 & 4 */
+	#mask .box  .col_3_of_3_cols {
+		font-size:           1.14286em;
+		margin:              0;
+		padding:             0;
+	}
+	
+	/* Poll & Quiz */
+	#mask .box  .col_3_of_4_cols,
+	#mask .box  .col_4_of_4_cols	{
+		display:             block;
+		float:               left;
+		margin:              0;
+		min-height:          24em;
+		width:               25%;
+	}
+	#mask .box  .poll,
+	#mask .box  .quiz	{
+		background-color:    #fff;
+		clear:               both;
+		display:             block;
+		float:               left;
+		min-height:          22em;
+		padding:             15% 4.390243902% 15%;
+		width:               89.024390245%;
+	}
+	#mask .box  .poll {
+		margin:              0 2.19512195% 0 0;
+	}
+	#mask .box  .quiz {
+		margin:              0 0 0 2.19512195%;
+	}
+	#mask .box  .poll H3,
+	#mask .box  .quiz H3 {
+		font-size:           1.56274em;
+		font-weight:         normal;
+		line-height:         1.2em;
+		margin:              1em 0 0;
+	}
+	#mask .box  .poll P,
+	#mask .box  .quiz  P {
+		line-height:         1.815160051em;
+		margin-bottom:       1em;
+	}
+	#mask .box  .poll FORM,
+	#mask .box  .poll UL,
+	#mask .box  .poll .control-group {
+		clear:               both;
+		display:             block;
+		float:               left;
+		list-style:          none;
+		margin:              0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .element-invisible {
+		left:                -99999px;
+		position:            absolute;
+	}
+	#mask .box  .poll .control-group .form-radios {
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item {
+		clear:               none;
+		display:             block;
+		float:               left;
+		line-height:         1.815160051em;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option {
+		clear:               right;
+		display:             inline;
+		float:               left;
+		font-size:           inherit;
+		line-height:         1.815160051em;
+		padding-left:        0;
+		width:               100%;
+	}
+	#mask .box  .poll .control-group .form-radios .form-item .option .form-radio {
+		clear:               left;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		height:              1em;
+		margin:              0.437580026em 1% 0.437580026em  -0.5%;
+		width:               8%;
+	}
+	#mask .box  .poll .form-submit,
+	#mask .box  .quiz .submit	{
+		background-color:    #453128;
+		background-image:    none;
+		background-repeat:   no-repeat;
+		border:              0 none;
+		border-collapse:     collapse;
+		border-radius:       0;
+		box-shadow:          0;
+		color:               #fff;
+		display:             block;
+		float:               left;
+		font-size:           inherit;
+		min-height:          2.1875em;
+		line-height:         2em;
+		margin:              0.5em 0 0.75em;
+		padding:             0 .5em;
+		text-shadow:         none;
+		vertical-align:      middle;
+		width:               auto;
+	}
+	#mask .box  .poll .form-submit {
+		left:                -99999px;
+		position:            relative;
+	}
+	#mask .box  .poll .links {
+		display:             none;
+		left:                -99999px;
+		opacity:             0;
+		position:            absolute;
+		visibility:          hidden;
+	}
+	#mask .box  .quiz A.quiz {
+		background-image:    url('../images/home/sub/smokefree-subhomepage-wht-quiz-38x49.png');
+		background-position: 92% 50%;
+		background-repeat:   no-repeat;
+		background-size:     25px auto;
+		line-height:         2em;
+		padding-right:       38px;
+	}
+	
+	/* Back buttons */
+	#mask .box .back-link  {
+		display:             block;
+		float:               left;
+		font-size:           1.35714em;
+		overflow:            visible;
+		padding:             3px 0;
+		position:            relative;
+		width:               1.7857em;
+	}
+	#mask .box .back-link .homelink {
+		display:             none;
+		opacity:             0;
+		visibility:          hidden;
+	}
+}

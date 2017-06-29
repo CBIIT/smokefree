@@ -1,0 +1,2086 @@
+/**** Vets Styling ****/
+
+@import 'https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i';
+
+.page-veterans, .node-type-section-landing, .veterans_branded, .node-type-veterans {
+
+	    #main-nav {
+			position: relative;
+			z-index: 10; //SF-472
+	    	//z-index: 999;
+		}
+
+	/****** SF Vet Menu and Header *******/
+
+	.vet-sub-menu {
+
+		section#block-icfi-veterans-icfi-veterans-header {
+			background-color: #35723C;
+	    	z-index: -1;
+			margin-bottom: 0px;
+		
+			#veterans-header {
+				width: 1170px;
+    			margin: auto;
+    			padding: 2em 0;
+    			overflow: auto;
+
+				#veterans-header-logo {
+				    background-color: #35723C;
+				    height: 90px;
+				    position: relative;
+				    overflow: auto;
+				    padding: 1.5em 0px;
+				    margin: 0px auto !important;
+				    z-index: 1;
+				    float:left;
+				    padding-right: 1em;
+
+				    img {
+				    	width: 26em;
+				    }
+				}
+
+				#veterans-header-divider {
+					border-left: solid 2px #ffffff;
+				    height: 90px;
+				    width: 2px;
+				    overflow: auto;
+				    float: left;
+				}
+
+				#veterans-header-text {
+					float: left;
+				    width: 50%;
+				    font-size: 20px;
+				    color: #ffffff;
+				    font-weight: normal;
+				    line-height: 25px;
+				    padding-left: 1em;
+
+				}
+				
+			}
+		}
+
+		  background-color: #000;
+		  position: relative;
+		  z-index: 1;
+
+
+		  ul {
+		    list-style-type: none;
+		    width:1170px;
+		    margin: auto;
+    	  }
+
+		  li {
+		    display: inline-block;
+		  }
+
+		  li a {
+
+		    color: #fff;
+		    padding: 16px;
+		    font-size: 16px;
+		    border: none;
+		    cursor: pointer;
+		    text-decoration: none;
+
+		  }
+
+		  li a:hover, li a.active {
+		    background: #606060
+		  }
+
+		  ul#superfish-1 li > ul {
+		      display: none;
+		      position: absolute;
+		      background: #f9f9f9 !important;
+		      min-width: 200px;
+		      padding: 0 !important;
+		      border-top-right-radius: 0px;
+		      border-bottom-left-radius: 0px;
+		      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		      top: 48px;
+		      -moz-transition: none;
+		      -webkit-transition: none;
+		      -o-transition: color 0 ease-in;
+		      transition: none;
+		  }
+
+		  ul#superfish-1 li > ul li a {
+		      color: black;
+		      padding: 12px 16px;
+		      text-decoration: none;
+		      display: block;
+		      cursor: pointer;
+		      text-align: left;
+		  }
+
+		  ul#superfish-1 li > ul li a:hover, ul#superfish-1 li > ul li a:active {
+		    background-color: #EBEBEB;
+		  }
+
+		  ul#superfish-1 li a span.sf-sub-indicator {
+		    display:none;
+		  }
+
+		.smokefreevet_nav .submenu {
+		    display: table-cell;
+		    text-align: center;
+		}
+
+		.smokefreevet_nav .submenu:hover .dropdown-content {
+		    display: block;
+		}
+
+		.smokefreevet_nav .submenu:hover .dropbtn {
+		    background-color: #606060;
+		}
+
+		ul.sf-expanded {
+		  margin-top: 1.4em !important;
+		  background-color: #fff;
+		  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		}
+
+		ul.sf-expanded li {
+		  background: #fff;
+		    display: none;
+		    margin-bottom: 0px;
+		}
+
+		.sf-accordion-toggle a#superfish-1-toggle {
+
+		    color: #36723F;
+		    font-size: 25px;
+		    font-weight: normal;
+		    text-decoration:none;
+		    padding: 0.7em 0 0 0.7em;
+		    display: block;
+		    
+		}
+
+		.sf-accordion-toggle a#superfish-1-toggle span {
+
+		}
+
+		ul.sf-expanded li, ul.sf-expanded li a {
+		    display: block;
+		    /*padding: 10px 16px 10px 30px;*/
+		    font-size: 18px;
+		    color: black !important;
+		    text-decoration: none !important;
+		    font-weight: normal !important;
+		    cursor: pointer;
+		}
+
+		ul.sf-expanded li:hover, ul.sf-expanded li a:hover, ul.sf-expanded li a.active {
+		  background-color: #ECECEC;
+		}
+
+		.smokefreevet_nav #smokefreevet-accordion #sfv-collapse-menu .sub_menu a{
+		    padding-left: 60px;
+		}
+
+		.smokefreevet_nav i.fa.fa-chevron-right {
+		    position: relative;
+		    right: -15px;
+		    top: 5px;
+		    float: right;
+		    padding-left: 22px;
+		    font-size: 20px;
+		    padding-right: 19px;
+		}
+
+		.smokefreevet_nav #sfv-collapse-menu {
+		    padding-right: 15px;
+		    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		    padding: 12px 0px;
+		}
+
+		.smokefreevet_nav .panel,
+		.smokefreevet_nav .panel-heading {
+		  border-radius: 0px;
+		  border: 0px;
+		}
+
+	} /**** End of Desktop styling for .vet-sub-menu ****/
+
+} /***** End of Veterans Header styling *****/
+
+.page-veterans {
+
+	font-family: 'Cabin', sans-serif !important;
+	
+	.node-vet-main-page {
+		width: 100%;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	.col-md-8.col-sm-12.article-container {
+		width:100%;
+	}
+
+	.row {margin:0;}
+
+	/*.panel-3col-33-stacked {
+    	width: 1170px;
+		margin: auto;
+    }*/
+
+	#veterans-home-panel {
+
+		#veterans-quiz-text {
+			margin: 0 !important;
+		    padding: 10px 15px 20px 15px !important;
+		    background-color: #F4FAFF;
+		    border: 1px solid #D5D5D5;
+		    position: relative;
+		    top: 7.5em;
+		}
+
+		#veterans-quiz-title {
+			font-weight: 600;
+		    font-size: 58px;
+		    line-height: 58px;
+		    letter-spacing: 1.1px;
+		    color: #023448;
+		    margin-left:-0.3em;
+		    padding-top: 0px;
+		    position: absolute;
+		    top: -1.5em;
+		    z-index: 0;
+		}
+
+			.panel-col-top {
+				
+			    background: #ffffff;
+			    width: 100%;
+			    border-top: 1px solid #ADADAD;
+			    border-bottom: 1px solid #ADADAD;
+			    margin-top: -11px;
+			    margin-bottom: 3em;
+
+				.inside {
+				width: 1170px;
+    			margin: auto;
+    			overflow: auto;
+    			margin-bottom: -14em;
+				}
+			}
+
+		.center-wrapper {
+			overflow: auto;
+		    width: 1170px;
+		    margin: auto;
+		}
+
+		.panel-col-bottom {
+
+			width: 1170px;
+			margin:auto;
+
+
+			.pane-1 {
+				width: 25%;
+				float:left;
+			}
+		}	
+
+		.hero1-b {
+			font-weight: 600;
+		    font-size: 58px;
+		    line-height: 58px;
+		    letter-spacing: 1.1px;
+		    color: #023448;
+		    margin: 0 !important;
+		    padding-top: 0px;
+    		font-size: 60px;
+		    padding-bottom: 25px;
+		}
+
+
+		#veterans-quiz-summary {
+			font-size: 32px;
+		    color: #023448;
+		    line-height: 50px;
+		    width: 58%;
+		    float: left;
+		}
+
+		.file-image-png img {
+			width: 190px !important;
+		    margin: 0px auto;
+		    display: block;
+		}
+
+		#veterans-quiz-link {
+			background-color: #D31F0C;
+			display:inline;
+		    margin: 0px auto;
+		    position: relative;
+		    top: -20px;
+		    padding: 0.6em;
+		    color: white;
+		    font-size: 26px;
+		    cursor: pointer;
+		    margin-left: 1.9em;
+		}
+
+		.media-element-container {
+			width:40%;
+			float: left;
+		}
+
+		.pane-2 {
+			width: 62%;
+		}
+
+		.pane-3 {
+		    width: 36%;
+		    float: right;
+		    position: relative;
+		    top: -17.8em;
+		}
+
+		#veterans-why-you-smoke {
+			width: 100%;
+
+			.media-element-container {
+			    width: 100%;
+			    float: none;
+			}
+
+			img {
+			height: 327px;
+			}
+
+		}
+
+		#veterans-why-you-smoke-caption {
+			/*position: absolute;*/
+			margin-top: -6.5em;
+		    bottom: 0px;
+		    width: 100%;
+		    background-color: #35723C;
+		    height: 86px;
+		    padding: 15px 0px 15px;
+		    opacity: 0.9;
+		    color: white;
+		    line-height: 2em;
+		}
+
+		#veterans-why-you-smoke-caption span {
+			display:block;
+			text-align:center;
+		}
+
+		#veterans-why-you-smoke-caption .title {
+			font-size: 24px;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		}
+
+		#veterans-why-you-smoke-caption .subtitle {
+			font-size: 20px;
+		}
+
+		.pane-bundle-link-list h2.pane-title {
+			font-size: 23px;
+			font-weight:100;
+			text-transform: uppercase;
+		    height: 84px;
+		    background-color: #35723C;
+		    letter-spacing: 2px;
+		    color: white;
+		    padding-top: 25px;
+		    text-align: center;
+		    line-height:1;
+		    margin: 0px;
+		}
+
+		.pane-bundle-link-list .pane-content {
+			height: 272px;
+		    background-color: white;
+		    border: 1px solid #ADADAD;
+		    font-size: 20px;
+		    padding: 25px;
+		}
+
+		.panel-col-last .inside {
+			margin-right: -0.8em;
+		}
+
+		.pane-content a {
+			display: block;
+		    padding-top: 13px;
+		    color: #104872;
+		    cursor: pointer;
+		}
+
+		.toolh2 {
+			font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    font-weight: 700;
+		    font-style: normal;
+		    font-size: 70px;
+		    line-height: 60px;
+		    color: #4A4A4A;
+		    padding-bottom: 18px;
+		    padding-right: 70px;
+		}
+
+		.toolp {
+			font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    font-weight: 400;
+		    font-style: normal;
+		    font-size: 24px;
+		    line-height: 30px;
+		    color: #4A4A4A;
+		    padding-right: 8px;
+		    margin: 0px 0px;
+		}
+
+		.pane-bundle-tools-tips {
+
+					background-color: #ffffff;
+				    border: 1px solid #ADADAD;
+				    padding: 50px 15px 15px 14px;
+				    min-height: 140px;
+				    /*min-width: 130px;
+				    max-width: 150px;*/
+				    width: 14%;
+				    margin-left: 5px;
+				    margin-right: 5px;
+				    position: relative;
+				    top: 120px;
+				    left: 15px;
+				    float: left;
+
+				.pane-content {
+    				margin-top: -11em;
+				}
+
+				.pane-title, .pane-title a {
+					font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				    font-weight: 600;
+				    font-style: normal;
+				    text-transform: none;
+				    font-size: 20px;
+				    text-align: left;
+				    line-height: 20px;
+				    color: #104872;
+				    letter-spacing: 0px;
+				    
+				}
+
+
+		}
+
+		.pane-bundle-tools-tips:hover  {
+			background-color: #4A4A4A;
+			border: 1px solid #4A4A4A;
+		}
+
+		.pane-bundle-tools-tips:hover a {
+			color:#ffffff;
+		}
+
+	}
+} /****** End Veterans Home Page *******/
+
+.node-type-section-landing, .node-type-veterans {
+	#veterans-header {
+		padding: 0 !important;
+	}
+}
+
+/******** Quiz Styling *********/
+
+.smokefreegov-why-i-use-tobacco-quiz {
+
+	.webform-client-form {
+		width:100%;
+	}
+
+	.form-group {
+	    margin-bottom: 15px;
+	    border-bottom: 1px solid #ADADAD;
+	    padding-bottom: 20px !important;
+	    overflow: auto;
+	}
+
+	div.form-radios {
+		width: 100%;
+	}
+
+	.form-group > label {
+		float: left;
+	    font-size: 24px;
+	    font-weight: normal;
+	}
+
+	input.form-radio {
+		position: absolute;
+	    opacity: 0;
+	    float: right;
+	    margin: 0px;
+	    border: 0px;
+	    overflow: hidden;
+	}
+
+
+	.form-radio-label-no, .form-radio-label-yes {
+		min-width: 10em;
+	    background-color: #ffffff;
+	    color: #2A2A2A;
+	    border-radius: 0px;
+	    margin: 0px;
+	    border: 1px solid #DADADA;
+	    padding: 1em 3em !important;
+	    text-align: center;
+	    float: right;
+	    text-indent: 0px !important;
+	    margin-left: 0px !important;
+	}
+
+	.form-radio-no:hover, .form-radio-label-no:hover, .form-radio-label-yes:hover {
+		border: 1px solid #DADADA;
+    	background-color: #eee;
+	}
+
+	input:checked + label {
+		background-color: #757576 !important;
+		color:#ffffff;
+	}
+
+	.webform-progressbar {
+		margin-bottom: 5em;
+	}
+
+	.webform-progressbar .webform-progressbar-outer {
+	    position: relative;
+	    border: none;
+	    width: 100%;
+	    height: 2em;
+	    margin: 0.35em -1px 2em;
+	    background-color: white;
+	}
+
+	.webform-progressbar .webform-progressbar-outer .webform-progressbar-inner {
+		height: 2em;
+		background: repeating-linear-gradient(135deg, #aaaaaa, #aaaaaa 5px, #777777 0px, #777777 20px);
+	}
+
+	.webform-progressbar-page {
+		display: none !important;
+	}
+
+	.webform-progressbar-number {
+	    position: relative;
+	    z-index: 999;
+	    margin-top: -3.2em;
+	    text-align: center;
+	    width: 100%;
+	    font-size: 20px;
+	}
+
+
+} /***End Quiz Styling ***/
+
+
+/***** Quiz Results ******/
+
+.veterans_branded.page-node-done {
+
+	h1 {
+		font-size: 44px;
+    	line-height: 44px;
+    	color: #4A4A4A;
+    	font-weight: 700;
+	}
+
+	.webform-confirmation {
+		    
+		padding-top: 3em;
+
+		ul li {
+			list-style-type: disc;
+			padding-left: 2em;
+	    	text-indent: -2em;
+		}
+	}
+
+	section.content-container {
+		width: 61%;
+	    margin: 0 1%;
+	    padding-top: 4em;
+	}
+
+	.sidebar_second {
+		width:33%;
+	}
+
+	.region-sidebar-second {
+		padding-top: 4em;
+
+			section#block-bean-veterans-quiz-tools-and-tips-blo {
+				padding-left: 16px;
+			    padding-right: 16px;
+			    padding-bottom: 2em;
+			    background-color: #D8D8D8;
+			    border: #979797 solid 1px;
+			
+
+		    	.fieldable-panels-pane {
+		    		font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				    font-weight: 600;
+				    font-style: normal;
+				    font-size: 18px;
+				    line-height: 20px;
+				    color: #104872;
+				    background-color: #ffffff;
+				    border: 1px solid #ADADAD;
+				    padding: 50px 12px 15px 14px !important;
+				    min-width: 130px;
+				    margin-left: 5px;
+				    margin-right: 5px;
+				    top: 120px;
+				    left: 15px !important;
+				    padding-top: 20px !important;
+				    position: initial;
+				    margin-top: 15px;
+				    min-height: 120px;
+				    margin-left: 0px !important;
+		    	}
+
+		    	.fieldable-panels-pane .field-name-field-icon img {
+		    		position: initial;
+				    bottom: 0px;
+				    margin: 0px;
+				    left: 0%;
+				    width: 83px;
+				    height: 83px;
+				    float: left;
+		    	}
+
+		    	.fieldable-panels-pane h2 {
+		    		font-size: 20px;
+				    display: inline-block;
+				    width: 200px;
+				    vertical-align: middle;
+				    padding-left: 20px;
+				    line-height: 20px;
+				    color: #104872;
+		    	}
+
+		    	.fieldable-panels-pane h2 a {
+		    		text-decoration: none;
+		    		color: #104872;
+		    	}
+
+		    	.fieldable-panels-pane:hover {
+					background-color: #4A4A4A;
+				    border: 1px solid #4A4A4A;
+				}
+
+				.fieldable-panels-pane:hover h2 a, .fieldable-panels-pane:hover h2 {
+					color:#ffffff;
+				}
+
+				.toolh2 {
+					font-size: 51px;
+			    	padding-top: 25px;
+			    	color: #4A4A4A;
+				}
+
+				.toolp {
+					font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				    font-weight: 400;
+				    font-style: normal;
+				    font-size: 24px;
+				    line-height: 30px;
+				    color: #4A4A4A;
+				    padding-right: 8px;
+				    margin: 0px 0px;
+				}
+
+			}	
+
+	} /**** End of Quiz Results Sidebar ****/
+
+
+} /***** End of Quiz Results ******/
+
+/********* Article - Test Node Page ******/
+
+.node-type-veterans {
+
+	.margin-top-lg {
+	    margin-top: 40px !important;
+	}
+
+	.container {
+		padding-right: 15px;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+
+	.row {
+		width: auto;
+	}
+
+	.article-container {
+	    padding-right: 30px;
+		.syndicate .col-sm-12 > ul {
+			font-weight: 400;
+			font-size: 16px;
+			padding-bottom: 13px;
+			padding-left: 17px;
+			line-height: 24px;
+			color: #4A4A4A;
+		}
+		.syndicate .article-img {
+			margin-bottom: 60px;
+		}
+		.syndicate .article-quote-container {
+			clear: both;
+			font-family: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			letter-spacing: 1.01px;
+			border-top: 1px solid #ADADAD;
+			border-bottom: 1px solid #ADADAD;
+			padding: 20px 20px 30px 20px !important;
+			margin: 15px 0px 45px 0px;
+		}
+	}
+
+	h1.article-title {
+	    font-family: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	    font-style: normal;
+	    font-weight: 700;
+	    font-size: 44px;
+	    line-height: 44px;
+	    letter-spacing: 1.1px;
+	    color: #4A4A4A;
+	    padding-bottom: 15px;
+	}
+
+	h3.article-intro,
+	.h3.article-intro p,
+	.article-container h3.article-intro p,
+	.article-container .h3.article-intro p{
+	    font-weight: 700;
+	    font-size: 20px;
+	    line-height: 36px;
+	    color: #4A4A4A;
+	    margin-bottom: 20px;
+	}
+
+	h3.article-intro p {
+	    margin-bottom: 0px;
+	}
+
+	.article-container p {
+	    font-family: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	    font-style: normal;
+	    font-weight: 400;
+	    font-size: 16px;
+	    line-height: 24px;
+	    color: #4A4A4A;
+	    padding-bottom: 15px;
+	    margin: 0px;
+	}
+
+	.article-quote {
+	    font-weight: 600;
+	    font-size: 33px;
+	    line-height: 41px;
+	    color: #023448;
+	    padding: 0px;
+	    font-style: italic;
+	    width: 90%;
+	    padding-bottom: 20px;
+	}
+
+	.region-sidebar-second {
+    width: 100% !important;
+	}
+
+	.sidebar-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #D8D8D8;
+    border: #979797 solid 1px;
+	}
+
+	#block-views-quit-notes-block .block-title {
+		color: #ffffff;
+	    padding: 25px 0px;
+	    margin: 25px 0px;
+	    background-color: #35723C;
+	    display: inline-block;
+	    font-family: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	    font-weight: 700;
+	    font-size: 20px;
+	    text-transform: uppercase;
+	    text-align: center;
+	    letter-spacing: 13px;
+	    width: 100%;
+	}
+
+	.notes {
+	    background-color: #ffffff;
+	    margin: 0px 0px 15px;
+	    padding-bottom: 10px;
+	}
+
+	.notes img {
+	    width: 92% !important;
+	    padding-top: 4%;
+	    margin-left: 4%;
+	    margin-right: 4%;
+	    margin-bottom: 4%;
+	}
+
+	.notes {
+
+		.views-field-field-tip, .views-field-field-myth, .views-field-field-fact, .views-field-field-quote, .views-field-field-promo-description {
+			color: #023448;
+		    font-size: 24px;
+		    font-weight: 700;
+		    font-style: italic;
+		    margin: 0px 20px;
+		    line-height: 1.42857143;
+		}
+
+		.views-field-field-attribution {
+			color: #023448;
+		    font-size: 17px;
+		    font-weight: 700;
+		    margin: 10px 20px;
+		}
+
+	}
+
+	.icons .icon_wrapper {
+	    text-decoration: none;
+	    color: #8F8F8F;
+	}
+
+	.icons {
+		margin-top: 10px;
+		width: 235px;
+	    border: 1px solid #D4D4D4;
+	    padding: 1px 6px 1px 8px;
+	    font-family: Cabin,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	    font-weight: 700;
+	    letter-spacing: 5px;
+	    color: #2A2A2A;
+	    background-color: #ffffff;
+	    text-transform: uppercase;
+	    margin: 0px auto 30px;
+	    display: block;
+	}
+
+	.icon {
+	    display: inline-block;
+	    padding: 0.6em 1.1em;
+	    margin-top: 0.35em;
+	    height: 2em;
+	}
+
+	 .icons div {
+	    display: inline-block;
+	    height: 22px;
+	}
+
+	.icons .twitter {
+	    background-position: -30px 0px;
+	}
+
+	.icons .icon {
+	    background-image: url('/sites/all/themes/smokefreegov/images/social_hor_icons@2x.png');
+	    width: 30px;
+	    background-repeat: no-repeat;
+	    background-size: 120px 44px;
+	    vertical-align: baseline !important;
+	    background-position-y: 0px;
+	    cursor: pointer;
+	}
+
+	.icons .icon_wrapper .share {
+	    transition: none;
+	}
+
+	.icons .share {
+	    vertical-align: super;
+	}
+
+	.share {
+	    font-size: 12px;
+	}
+
+	.icons .email {
+	    background-position: -90px 0px;
+	}
+
+	.icons .icon_wrapper:hover {
+	    color: #2A2A2A;
+	}
+
+	.icons .icon_wrapper:hover .icon, .icons > .icon:hover {
+	    background-position-y: -22px !important;
+	}
+
+	.article-container .icons {
+	    width: auto;
+	}
+
+	.article-quote-container .icons {
+	    display: inline-block;
+	    margin: 0px 15px;
+	}
+
+	.article-quote-container .icons {
+	    float: right;
+	    margin-right: 0px !important;
+	    bottom: 0px;
+	    position: relative;
+	    background-color: #ffffff;
+	}
+
+	#block-views-more-for-you-content-bottom {
+	    float: none;
+	    width: auto !important;
+	    padding: 0px !important;
+	    margin-right: auto;
+	    margin-left: auto;
+
+	    .block-title {
+		    font-family: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
+		    font-weight: 700;
+		    font-size: 20px;
+		    letter-spacing: 12px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    color: #ffffff;
+		    background-color: #35723C;
+		    padding: 24px 0px !important;
+		    margin-top: 40px !important;
+		}
+
+		.views-row .views-field-field-featured-image img {
+		    border: 1px solid #979797;
+		    margin-bottom: 24px;
+		    padding-bottom: 0px;
+
+		}
+
+		.views-row .views-field-title span a {
+		    color: #255987;
+		    font-weight: 600;
+		    font-size: 24px;
+		    line-height: 24px;
+		    padding-bottom: 15px;
+		    padding-left: 3px !important;
+		    padding-right: 3px !important;
+		}
+
+		.views-row .views-field-field-short-summary .field-content {
+		    font-weight: 500;
+		    font-size: 15px;
+		    line-height: 24px;
+		    padding-left: 3px !important;
+		    padding-right: 3px !important;
+		    margin: 0px 0px;
+		}
+
+		.morebox:hover {
+		    -webkit-transform: scale(1.01);
+		    transform: scale(1.01);
+		}
+	}
+
+
+
+} /********* End of Article - Test Node Page ******/
+
+/******* Responsiveness ********/
+
+/***** Header Responsiveness ******/
+.page-veterans, .node-type-section-landing, .veterans_branded, .node-type-veterans {
+
+		@media (max-width:1199px) {
+
+			ul {
+				width:970px;
+
+				li a {
+					font-size: 1.2em !important;
+				}
+			}
+
+			#veterans-header {
+				    width: 90% !important;
+    				padding-left: 2em !important;
+
+    			#veterans-header-logo {
+				    padding: 2% !important;
+				    width: 350px !important;
+    			}
+
+    			#veterans-header-logo img {
+    				width: 100% !important;
+    			}
+
+    			#veterans-header-text {
+    				font-size: 18px;
+    			}
+
+    			#veterans-header-divider {
+    				height: 80px;
+    			}
+			}
+
+		}
+
+		
+		@media (max-width:992px) {
+
+			ul {
+				width:750px !important;
+
+				li a {
+					font-size: 1.2em !important;
+				}
+			}
+
+			#veterans-header {
+			    width: 80% !important;
+			    padding-left: 0 !important;
+
+    			#veterans-header-logo {
+    				padding: 0 0 0 1em !important;
+    				width: 350px !important;
+    				height: 60px !important;
+    			}
+
+    			#veterans-header-logo img {
+    				width: 100% !important;
+    			}
+
+    			#veterans-header-text {
+    				font-size: 18px !important;
+    				width: 100% !important;
+    			}
+
+    			#veterans-header-divider {
+    				display:none;
+    			}
+			}
+
+		}
+
+		@media (max-width:767px) {
+
+			.vet-sub-menu {
+				background-color:transparent !important;
+				.sf-has-clone-parent > .sf-clone-parent {
+					display: none;
+				}
+			}
+
+		    #block-superfish-1 {
+
+	    	    background-color: #fff !important;
+			    height: 56px !important;
+			    border: 1px solid #36723F !important;
+			    margin: 5% !important;
+		        
+
+				ul#superfish-1 li a span.sf-sub-indicator {
+				        display:inline !important;
+				}
+
+			    ul.sf-expanded li, ul.sf-expanded li a {
+			        background-color: #fff !important;
+			        color:#000 !important;
+			     }
+
+		    }
+		}
+
+		@media (max-width:480px) {
+
+			#veterans-header {
+
+    			#veterans-header-logo {
+    				padding: 0 0 0 0.5em !important;
+    				width: 100% !important;
+    			}
+
+    			#veterans-header-text {
+    				padding-left: 0.5em !important;
+    			}
+			}
+
+		}  
+}
+
+/****** Veterans Home Page Responsiveness *******/
+
+.page-veterans {
+
+	@media (max-width:1199px) {
+
+		#veterans-home-panel {
+
+			.panel-col-top .pane-content {
+				width: 970px;
+			}
+
+			.panel-col-top .inside {
+			    width: 970px;
+			    margin: auto;
+			    overflow: visible;
+			    margin-bottom: 1em;
+			}
+
+			#veterans-quiz-text {
+			    width: 970px;
+			    margin: 0 auto 8em auto !important;
+			    /*height: 280px;*/
+			    height: auto;
+			}
+
+			.panel-3col-33-stacked .panel-separator {
+				display: none;
+			}
+
+			.panel-col-top {
+				height: auto;
+			}
+
+	 		.pane-3 {
+			    width: 100%;
+			    float: none;
+			    margin: auto;
+			    top: 3em;
+			    position: initial;
+	 		}
+
+	 		.media-element-container {
+	 			float:none;
+	 			display:inline-block;
+	 		}
+
+			#veterans-why-you-smoke .media-element-container {
+			    width: 100%;
+			    float: none;
+			    margin: auto;
+    			top: 7.5em;
+			}
+
+			#veterans-why-you-smoke img {
+			    width: 100% !important;
+    			height: auto;
+			    margin: auto;
+			}
+
+			#veterans-why-you-smoke-caption {
+				width: 100%;
+			    margin: auto;
+			    margin-top: -6.4em;
+			}
+
+			#veterans-quiz-link {
+				float: right;
+			    margin-right: 3em;
+			    margin-top: -2em;
+			    padding: 1em 2em;
+			}
+
+			#veterans-quiz-summary {
+				display: inline-block;
+			    float: none;
+			    /*overflow: auto;*/
+			    margin-bottom: 1em;
+			}
+
+			.center-wrapper {
+				width:100%;
+
+				.panel-panel {
+					width: 86%;
+				    float: none;
+				    margin: 2em auto;
+
+				    .inside {
+				    	margin:0;
+				    }
+				}
+			}
+
+			.panel-col-bottom {
+				width: 100%;
+			    margin: auto;
+			    padding: 0 6em;
+
+			    .toolh2 {
+			    	font-size: 60px;
+				    line-height: 60px;
+				    padding-right: 50px;
+			    }
+
+			    .pane-title, .pane-title a {
+				margin-top: 3em;
+			    float: left;				
+			    font-size:28px;
+				line-height:28px;
+				}
+
+				.pane-bundle-tools-tips {
+					width: 75%;
+					top: 0 !important;
+					left: 0 !important;
+					margin: 0.5em 0 !important;
+					float: right;
+				}
+
+				.fieldable-panels-pane {
+					width: 110px;
+					margin-top: 9em;
+	    			float: left;
+	    			margin-right: 2em;
+				}
+			}
+
+		}
+	}
+
+	@media (max-width:996px) {
+
+		#veterans-home-panel {
+
+			#veterans-quiz-summary {
+	    		width: 100%;
+			}
+
+			.panel-col-top .inside {
+				width: 100%;
+			}
+
+			.pane-2 {
+				width: 100%;
+			}
+
+			.panel-col-top .pane-content {
+				width: 100%;
+			}
+
+			#veterans-quiz-text {
+				width: 80%;
+				height: auto;
+			}
+
+			.media-element-container {
+				width: 100%;
+			}
+
+			#veterans-quiz-link {
+				float: none;
+			    display: block;
+			    text-align: center;
+			    margin: -0.5em 5%;
+			}
+
+			.file-image-png img {
+				display: block !important;
+			}
+
+			#veterans-why-you-smoke {
+				width: 80%;
+				margin: auto;
+			}
+
+			#veterans-why-you-smoke-caption {
+			    margin-top: -6.8em;
+			}
+		}
+
+		.panel-col-bottom {
+			width:100% !important;
+			padding: 0 4em;
+
+			.inside {
+				width: 100% !important
+			}
+
+			.pane-1 {
+				width: 100% !important;
+				text-align: center;
+				float:none !important;
+			}
+
+			.pane-title, .pane-title a {
+				margin-top: 3em !important;				
+			}
+
+			.pane-bundle-tools-tips {
+				width: 100% !important;
+				float:none !important;
+			}
+
+			.fieldable-panels-pane {
+				width: 110px;
+				margin-top: 8.5em !important;
+    			float: left;
+    			margin-right: 2em;
+			}
+
+			.toolh2 {
+				padding: 0 !important;
+			}
+
+		}
+
+	}
+
+	@media (max-width:799px) {
+
+		#veterans-home-panel {
+
+			.center-wrapper .panel-panel, #veterans-why-you-smoke-caption, #veterans-quiz-text, #veterans-why-you-smoke img {
+				width: 100% !important;
+			}
+		}
+
+		#veterans-home-panel {
+
+				#veterans-quiz-title {
+					top: -2.7em;
+				}
+
+				#veterans-quiz-text {
+					top: 12em;
+					margin: 0 auto 12em auto !important;
+				}
+
+				#veterans-why-you-smoke-caption {
+					margin-top: -6.5em;
+				}
+
+				#veterans-why-you-smoke {
+					width: 100%;
+					margin: auto;
+				}
+			}
+
+			.panel-col-bottom {
+
+				padding:0 !important;
+
+				.pane-title, .pane-title a {	
+					margin-top: 2.9em !important;		
+				}
+
+				.fieldable-panels-pane {
+					margin-top: 8.5em !important;
+				}
+
+			}   
+	}
+
+		@media (max-width:640px) {
+			.panel-col-bottom {
+
+				.fieldable-panels-pane {
+					width: 15%;
+					margin-top: 9em;
+				}
+
+				.pane-title, .pane-title a {	
+					margin-top: 3.8em !important;		
+				    font-size:22px !important;
+					line-height:22px !important;
+
+				}
+			}
+
+		}
+
+		@media (max-width:499px) {
+			.panel-col-bottom {
+
+				.pane-bundle-tools-tips {
+					min-height: 100px !important;
+				}
+
+				.pane-title, .pane-title a {	
+					margin-top: 4.5em !important;		
+				    font-size:16px !important;
+					line-height:16px !important;
+
+				}
+
+				.fieldable-panels-pane {
+					width: 80px !important;
+    				margin-top: 8em !important;
+					margin-right: 0.8em !important;
+				}
+			}
+
+		}
+
+		@media (max-width:399px) {
+
+			#veterans-quiz-title {
+				top: -4em !important;
+				font-size: 40px !important;
+			}
+
+			.center-wrapper .pane-content a {
+				font-size:16px;
+			}
+
+			#veterans-quiz-summary {
+				font-size: 28px !important;
+    			line-height: 30px !important;
+			}
+
+			#veterans-why-you-smoke-caption .subtitle {
+				font-size: 16px !important;
+			}
+
+			.pane-bundle-link-list h2.pane-title {
+				font-size: 18px !important;
+			    height: 60px !important;
+			    padding-top: 1.2em !important;
+			}
+
+			.panel-col-bottom {
+				.pane-title, .pane-title a {	
+				    margin-top: 5.3em !important;
+				    font-size: 14px !important;
+				    line-height: 14px !important;
+
+				}
+
+				.toolh2 {
+					font-size: 40px !important;
+    				line-height: 60px !important;
+				}
+
+			}
+
+		}
+
+}
+
+.node-type-veterans {
+
+		@media (min-width:767px) and (max-width:992px) {
+
+				  #block-views-more-for-you-content-bottom .views-row-3 {
+				    clear: left;
+				  }
+		}
+
+		@media (min-width: 768px) {
+
+				  .container {
+				    width: 750px !important;
+				  }
+		}
+
+		@media (min-width: 992px) {
+				  
+				.container {
+				    width: 970px !important;
+				  }
+		}
+
+		@media (min-width: 1200px) {
+
+				.container {
+				    width: 1170px !important;
+				  }
+		}
+
+		@media only screen and (max-width: 979px) and (min-width: 767px) {
+		  #block-views-more-for-you-content-bottom .container {
+		    width: 750px !important;
+		  }
+		  .morebox.views-row-even {
+		    padding:0px 0px 0px 0px !important;
+		  }
+		}
+
+		/* No greater than 996px, no less than 704px */
+		@media screen and (min-width: 767px) and (max-width: 996px) {
+		  .morebox-margin-fix{ padding:0px 0px 0px 0px !important;}
+		  #block-views-more-for-you-content-bottom .views-row .views-field-field-featured-image img{height:155px;}
+
+		}
+
+		/* No greater than 704px, no less than 230px */
+		@media screen and (min-width: 230px) and (max-width: 767px) {
+		  .morebox{padding-right:30px !important; padding-left:30px !important;}
+		}
+
+		/* No greater than 305px*/
+		@media only screen and (max-width: 305px) {
+		  .morebox{padding-right:30px !important; padding-left:30px !important;}
+		}
+
+		@media only screen and (max-width: 991px) {
+		   #block-views-quit-notes-carousel,
+		   #block-views-more-for-you-carousel {
+		    display: block;
+		  }
+		   #block-views-quit-notes-block,
+		   #block-views-more-for-you-sidebar {
+		    display: none;
+		  }
+		  /*kaipeng's edit*/
+		   .icons.all{
+		    float:left;
+		  }
+
+		}
+
+		@media (min-width: 992px) {
+		   #block-views-quit-notes-carousel,
+		   #block-views-more-for-you-carousel
+		  {
+		    display: none;
+		  }
+		   #block-views-quit-notes-block,
+		   #block-views-more-for-you-sidebar {
+		    display: block;
+		  }
+		}
+
+		@media (max-width:320px){
+		   h1.article-title,
+		   h2.form-title{
+		    font-size:40px !important;
+		  }
+		   .question-opt{
+		    min-width:110px;
+		    padding-left:5px !important;
+		    padding-right:5px !important;
+		  }
+		   .fixedWidth{
+		    max-width:220px;
+		  }
+		}
+
+		/*  Exta small devices (portrait phones, less than 544px) */
+		@media (max-width: 543px) {
+		   h3 {
+		    font-size: 28px;
+		  }
+		   h3.article-intro {
+		    font-size: 19px;
+		    padding-bottom: 0px;
+		    margin-bottom: 30px;
+		  }
+		   .article-img img {
+		    margin-bottom:30px;
+		    width: 100%;
+		    border-bottom: 1px solid gainsboro;
+		  }
+
+		   .article-quote-container .icons {
+		    margin: 0px auto;
+		  }
+
+		   button.btn.btn-include.center-block {
+		    height: 80px;
+		    font-size: 18px;
+		    color:#ffffff;
+		    padding: 10px 70px;
+		  }
+		   .smoking_accordion li {
+		    width: 100%;
+		  }
+		   .breadcrumb {
+		    display: none;
+		  }
+		   .article-container{
+		    padding-right:30px;
+		    padding-left:30px;
+		  }
+		   .article-quote-container {
+		    padding: 20px 5px !important;
+		  }
+		   .article-tip-container {
+		    margin: 0px 0px 35px 0px !important;
+		    padding: 20px 5px 25px 5px !important;
+		  }
+		   .article-quote-container .icons {
+		    float:left;
+		    margin-left:0px !important;
+		    margin-top:20px !important;
+		  }
+		   .sidebar-container{
+		    background-color: transparent;
+		    border: transparent solid 0px;
+		  }
+		   .contributor {
+		    display:block !important;
+		  }
+
+		   .question-container{
+		    margin-bottom:0 !important;
+		  }
+		   .fixedWidth{
+		    width:260px;
+		  }
+		   .question-text{
+		    font-size:20px;
+		    padding-right:0;
+		  }
+		   .question-container{
+		    border-bottom:0 !important;
+		  }
+		   .question-opt{
+		    min-width:130px;
+		    font-size:13px;
+		  }
+		}
+
+		/* Small devices (landscape phones, 544px and up) */
+		@media (min-width: 544px) and (max-width: 767px) {
+		   .breadcrumb {
+		    display: none;
+		  }
+		   .article-container{
+		    padding-right:30px;
+		    padding-left:30px;
+		  }
+		   .article-quote-container {
+		    padding: 20px 5px 83px 5px !important;
+		    margin: 0px 0px 35px 0px !important;
+		  }
+		   .article-tip-container {
+		    margin: 0px 0px 35px 0px !important;
+		    padding: 20px 5px 25px 5px !important;
+		  }
+		   .article-quote-container .icons {
+		    float:left;
+		    margin-left:0px !important;
+		    margin-top:20px !important;
+		  }
+		   .article-quote-container{
+		    padding: 20px 20px 83px 20px !important;
+		  }
+		   .article-quote-container .icons {
+		    float:left;
+		    margin-left:0px !important;
+		    margin-top:20px !important;
+		  }
+		   .sidebar-container{
+		    background-color: transparent;
+		    border: transparent solid 0px;
+		  }
+		   .contributor {
+		    display:block !important;
+		  }
+
+		   .question-container{
+		    padding-top: 20px !important;
+		    padding-bottom: 20px !important;
+		  }
+		   .question-opt {
+		    min-width: 119px;
+		  }
+		}
+
+		@media only screen and (max-width: 979px) and (min-width: 767px) {
+		  .carousel-inner {
+		    margin-left: 0px !important;
+		  }
+		}
+
+
+		/* No greater than 996px, no less than 704px */
+		@media screen and (min-width: 704px) and (max-width: 996px) {
+		   button.btn.btn-include.center-block {
+		    height: 80px;
+		    font-size: 18px;
+		    padding: 10px 30px;
+		  }
+
+		   .article-container {
+		    padding-right:30px;
+		    padding-left:30px;
+		  }
+
+		   .sidebar-container {
+		    background-color: transparent;
+		    border: transparent solid 0px;
+		  }
+
+		   .question-container{
+		    padding-top:20px !important;
+		    padding-bottom:20px !important;
+		  }
+		   .question-opt {
+		    min-width: 119px;
+		  }
+
+		}
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+
+			section.block.block-views.clearfix {
+				width:100% !important;
+			}
+		}
+
+
+		/* Large devices (desktops, 992px and up) */
+		@media (min-width: 992px) and (max-width: 1199px) {
+		   button.btn.btn-include.center-block {
+		    height: 80px;
+		    font-size: 18px;
+		    padding: 10px;
+		  }
+		   .contributor {
+		    font-size:16px !important;
+		  }
+
+		   .question-opt{
+		    min-width:225px !important;
+		  }
+		   .icons.all{
+		    min-width:220px;
+		    letter-spacing:2px;
+		  }
+		}
+
+
+} /****** End of node-type-veterans Responsiveness ******/
+
+.node-type-section-landing {
+
+	@media only screen and (max-width: 992px) {
+		.view-read-more-links .views-row {
+			width: 45% !important;
+    		margin: 2.4%;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		.view-read-more-links .views-row {
+			width: 45% !important;
+    		margin: 2%;
+		}
+	}
+
+	@media only screen and (max-width: 640px) {
+		.view-read-more-links .views-row {
+		    width: 100% !important;
+		    margin: 2% 0;
+		}
+	}
+} /****** End of Vets Landing Pages Responsiveness ******/
+
+
+/***** Quiz and Results Responsiveness *****/
+
+.smokefreegov-why-i-use-tobacco-quiz, .veterans_branded.page-node-done {
+
+	@media only screen and (max-width: 1365px) and (min-width: 1200px) {
+			.container {
+			    width: 1170px !important;
+			}
+	}
+}
+
+.smokefreegov-why-i-use-tobacco-quiz {
+
+	@media only screen and (max-width: 1199px) {
+		.content-container{width: 96% !important;}
+
+		.webform-progressbar-number {
+		    margin-top: -2.7em;
+		}
+		
+	}
+
+	@media only screen and (max-width: 992px) {
+
+		.form-radio-label-no, .form-radio-label-yes {
+		    width: calc(100%/2);
+		}
+
+		.form-group > label {
+			float:none;
+		}
+	}
+
+	@media only screen and (max-width: 480px) and (min-width: 320px) {
+		.btn {background-image: none !important;}
+	}
+
+}
+
+/*Quiz Results*/
+.veterans_branded.page-node-done {
+
+		@media (max-width: 1199px){
+
+
+			.bean-tools-tips {
+    			margin-bottom: 7em;
+    		}
+
+			.region-sidebar-second section#block-bean-veterans-quiz-tools-and-tips-blo .fieldable-panels-pane h2 {
+				width: 67%;
+			}
+
+			.region-sidebar-second {
+			    padding-top: 1em;
+			}
+
+			.content-container {
+				float:none;
+				width: 100% !important;
+    			margin: 0 !important;
+    			padding: 4em;
+			}
+
+			.container {
+			    width: 100%;
+			}
+
+			.sidebar_second {
+			    width: 100%;
+    			margin: 0;			
+    		}
+
+    		#block-bean-veterans-quiz-tools-and-tips-blo {
+    			padding: 0 !important;
+    		}
+
+			.field-name-field-icon {
+				margin-top: -6em;
+			}
+
+			.field-name-field-icon img {
+				width: 110px !important;
+				height: 110px !important;
+			}
+
+			.fieldable-panels-pane {
+			    max-width: 140px !important;
+			    float: left;
+			    height: 140px;
+			    margin: 0px;
+			}
+
+			.fieldable-panels-pane:hover  {
+				background-color: #4A4A4A;
+			    border: 1px solid #4A4A4A;
+			}
+
+			.fieldable-panels-pane h2 {
+				font-size: 16px !important;
+			    width: 100% !important;
+			    padding: 0 !important;
+			}
+
+			.fieldable-panels-pane:hover h2 a {
+				color:#ffffff;
+			}
+
+			.field-name-field-sidebar-text {
+				float: left;
+    			width: 25%;
+    			padding-left: 1em;
+
+			}
+
+			.field-name-field-tools-tips-reference {
+				overflow: auto;
+    			padding: 8em 1% 0;
+			}
+
+			.toolh2 {
+				font-size: 70px !important;
+			    line-height: 70px !important;
+			    font-weight: 700 !important;
+			    padding: 0 .5em;
+			    text-align: center; 
+			}
+
+			.toolp {
+				text-align:center;
+			}
+
+			.main-container {
+				padding-bottom:0 !important
+			}
+
+			footer {
+				margin-top: 0px !important;
+			}
+	
+
+		}
+
+		@media (min-width: 993px) and (max-width: 996px) {
+
+			.field-name-field-tools-tips-reference {
+			    padding: 0.1em 1% 0;
+			}
+
+			.bean-tools-tips {
+    			width: 100%;
+    			margin-bottom: 7em;
+    		}
+
+    		.toolh2 {
+			    padding: 0 .2em !important;
+			}
+
+    		.fieldable-panels-pane {
+			    min-height: 140px !important;
+			    max-height: 160px !important;
+			    margin-right: 0 !important;
+			    max-width: 750px !important;
+			    float:none !important
+			}
+
+    		.fieldable-panels-pane .field-name-field-icon img {
+    			height: 118px !important;
+    			width: auto !important;
+    			margin-top: -1% !important;
+
+    		}
+
+    		.fieldable-panels-pane h2 {
+    			font-size: 28px !important;
+    			margin-top: 1.5em;
+    			width: 67% !important;
+    			padding-left: 20px !important;
+
+    		}
+
+    		.field-name-field-icon {
+			    margin-top: -0.3em;
+			}
+
+
+		}
+
+		@media (max-width: 992px){
+
+			.content-container {
+    			padding: 0em;
+			}
+
+			.field-name-field-tools-tips-reference {
+			    padding: 0.1em 1% 0;
+			}
+
+			.page-header-div {
+				float:none !important
+			}
+
+			.page-header-div {
+				padding-top:0 !important;
+			}
+
+			.field-name-field-sidebar-text {
+			    width: 100% !important;
+			    float:none;
+			    padding-left:0;
+			}
+
+			.field-name-field-icon {
+			    margin-top: -0.3em;
+			}
+
+    		.toolh2 {
+    			text-align: center;
+    			font-size: 70px !important;
+    			padding-top:0 !important;
+    		}
+
+    		.bean-tools-tips {
+    			width: 750px;
+    			margin: 0 auto 7em;
+    		}
+
+    		.fieldable-panels-pane .field-name-field-icon img {
+    			height: 118px !important;
+    			width: auto !important;
+    			margin-top: -1% !important;
+
+    		}
+
+    		.fieldable-panels-pane {
+    			min-height: 140px !important;
+    			max-height: 160px !important;
+    			margin-right: 0 !important;
+    			max-width: 750px !important;
+			    float:none !important
+    		}
+
+    		.fieldable-panels-pane h2 {
+    			font-size: 28px !important;
+    			margin-top: 1.5em;
+    			width: 67% !important;
+    			padding-left: 20px !important;
+
+    		}
+		}
+
+		@media (max-width: 767px){
+
+			#block-bean-veterans-quiz-tools-and-tips-blo {
+			    padding-left: 0 !important;
+			    padding-right: 0 !important;
+			    margin: 0
+			}
+
+			.bean-tools-tips {
+			    width: 100%;
+			    margin: 0 auto 7em;
+			}
+
+			.toolh2 {
+				padding-top:0 !important;
+			}
+
+
+		}
+
+		@media (max-width: 640px){
+
+			.fieldable-panels-pane h2 {
+				font-size: 22px !important;
+			}
+
+			.fieldable-panels-pane .field-name-field-icon img {
+				height: 90px !important;
+			    margin-top: 1% !important;
+			}
+
+			.fieldable-panels-pane h2 {margin-top: 1.8em;}
+
+			.region-sidebar-second section#block-bean-veterans-quiz-tools-and-tips-blo .toolh2 {
+			    font-size: 51px !important;
+			}
+		}
+
+
+}
+

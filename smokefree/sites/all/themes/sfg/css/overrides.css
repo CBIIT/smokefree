@@ -1,0 +1,25 @@
+.layoutLinks {
+	position:relative;
+}
+dl.dlist-inline dd{
+	width: 75%;
+	display: inline-block;
+	border-top: solid;
+	border-width: 1px;
+	border-top-color: rgb(221,221,221);
+	margin-bottom:40px;
+}
+dl.dlist-inline dt {
+	width:20%;
+	display: inline-block;
+	vertical-align: top;
+	border-top: solid;
+	border-width: 1px;
+	border-top-color: rgb(221,221,221);
+}
+button.btn, input[type="submit"].btn {
+	text-shadow: none;
+}
+.btn-primary:hover {
+	color: rgb(51,51,51);
+}

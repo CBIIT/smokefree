@@ -1,0 +1,25 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="phpunit.xsd"
+         colors="true"
+         printerClass="PHPUnit_TextUI_ResultPrinter"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+         stopOnFailure="false"
+         stopOnError="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         verbose="true">
+
+  <testsuites>
+    <testsuite name="smokefree_tests">
+        <directory>./sites/all/modules/custom/</directory>
+    </testsuite>
+  </testsuites>
+  <!-- Filter for coverage reports. -->
+  <filter>
+    <blacklist>
+      <directory>./sites/all/vendor</directory>
+    </blacklist>
+  </filter>
+</phpunit>

@@ -1,0 +1,241 @@
+/** Blog Content type **/
+.node-blog-entry .page_title h2 a {
+  background-image: url("/sites/all/themes/smokefreegov/images/blog/title_bg_one.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 100%;
+  max-width: 900px;
+  padding: 1.2em;
+  color: #ffffff;
+  display: block;
+}
+
+.node-blog-entry .page_title h2 {
+  max-width: 900px;
+}
+
+.node-type-blog-entry .content-container .page-header {
+  display: none;
+}
+
+.node-blog-entry .author_name,
+.node-blog-entry .date_submitted,
+.node-blog-entry .topics {
+  font-weight: bold;
+}
+
+.node-blog-entry .topics {
+  margin-bottom: 1.5em;
+}
+
+.node-blog-entry .field-name-body {
+  margin-bottom: 2em;
+}
+
+
+@media only screen and (max-width: 1199px) and (min-width: 481px) {
+  .node-type-blog-entry section.block.block-views.clearfix,
+  .page-mhealth-blog-index section.block.block-views.clearfix,
+  .page-mhealth-archive section.block.block-views.clearfix {
+    width: 49% !important;
+  }
+  .node-type-blog-entry section.block.block-views.clearfix:nth-child(2),
+  .page-mhealth-blog-index section.block.block-views.clearfix:nth-child(2),
+  .page-mhealth-archive section.block.block-views.clearfix:nth-child(2) {
+    margin-left: 2%;
+  }
+  .page-mhealth-blog-index .row .col-sm-9,
+  .page-mhealth-archive .row .col-sm-9 {
+    width: 96.76966%;
+    margin: 1em 1.61517% 0 1.61517%;
+  }
+  .node-type-blog-entry .row .col-sm-9 {
+    margin: 1em 1.61517% 0 1.61517%;
+  }
+  .node-type-blog-entry .main-container .col-sm-3 {
+    margin-left: 1.61517%;
+  }
+  .node-type-blog-entry h2.block-title {
+    margin-top: 0px;
+  }
+}
+.mhealth_logo img {
+  max-width: 100%;
+}
+
+/** Blog Blocks **/
+
+#block-views-exp-blog-index-page .block_body,
+#block-views-blog-archive-block .block_body {
+  padding: 5%;
+}
+
+#block-views-exp-blog-index-page .block-title,
+#block-views-blog-archive-block .block-title {
+  background-color: #07364b;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 5%;
+  background-image: url('/sites/all/themes/smokefreegov/images/sf-vet/arrow_down.png');
+  background-position: 95% center;
+  padding-right: 5%;
+  background-repeat: no-repeat;
+}
+
+#block-views-exp-blog-index-page .block-title.collapsed,
+#block-views-blog-archive-block .block-title.collapsed {
+  background-image: url('/sites/all/themes/smokefreegov/images/sf-vet/arrow_up.png');
+}
+
+#block-views-blog-archive-block .views-summary {
+  list-style: none;
+}
+
+#block-views-blog-archive-block ul {
+  background-color: transparent;
+}
+
+.views-exposed-form .views-exposed-widget {
+  width:100%;
+}
+
+#block-views-exp-blog-index-page .form-type-bef-link a {
+  display: block;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+}
+
+#block-views-exp-blog-index-page .form-type-bef-link a, .region-sidebar-second section#block-views-blog-archive-block  ul.views-summary li a {
+    color: #07364b !important;
+}
+
+#block-views-exp-blog-index-page .form-type-bef-link a.active, .region-sidebar-second section#block-views-blog-archive-block  ul.views-summary li a.active {
+  color: #ffffff !important;
+  /* background-color: #337ab7; */
+  background-color: #07364b;
+}
+
+.region-sidebar-second section#block-views-blog-archive-block  ul.views-summary li a.active  {
+      padding: 0.2em 1em;
+}
+
+#block-views-exp-blog-index-page h2.block-title, #block-views-blog-archive-block h2.block-title {
+  margin:0px !important;
+}
+
+/** Blog index and archive pages **/
+
+.view-id-blog_index,
+.view-id-blog_archive {
+  max-width: 900px;
+}
+
+.view-id-blog_index .view-content + .text-center,
+.view-id-blog_archive .view-content + .text-center {
+  clear: both;
+}
+
+.view-id-blog_index .intro,
+.view-id-blog_archive .intro{
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+.view-id-blog_index .views-row,
+.view-id-blog_archive .views-row{
+  clear: both;
+}
+
+.view-id-blog_index .views-row-odd .views-field-title a,
+.view-id-blog_archive .views-row-odd .views-field-title a{
+  background-image: url("/sites/all/themes/smokefreegov/images/blog/title_bg_one.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 100%;
+  padding: 1.2em;
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  display: block;
+}
+
+.view-id-blog_index .views-row-even .views-field-title a,
+.view-id-blog_archive .views-row-even .views-field-title a{
+  background-image: url("/sites/all/themes/smokefreegov/images/blog/title_bg_two.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 100%;
+  padding: 1.2em;
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  display: block;
+}
+
+.view-id-blog_index .views-row:nth-child(3n+3) .views-field-title a,
+.view-id-blog_archive .views-row:nth-child(3n+3) .views-field-title a {
+  background-image: url("/sites/all/themes/smokefreegov/images/blog/title_bg_three.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 100%;
+  padding: 1.2em;
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  display: block;
+}
+
+.view-id-blog_index .views-field-disqus-comment-count a,
+.view-id-blog_archive .views-field-disqus-comment-count a {
+  display: inline-block;
+  background-color: #d7d7d7;
+  color: #000000;
+  padding: 1em;
+  float: left;
+  margin-bottom: 3em;
+  margin-top: 1.5em;
+}
+
+.view-id-blog_index .views-field-view-node a,
+.view-id-blog_archive .views-field-view-node a {
+  display: inline-block;
+  background-color: #007fbf;
+  color: #ffffff;
+  padding: 1em;
+  float: right;
+  margin-bottom: 3em;
+  margin-top: 1.5em;
+}
+.view-id-blog_index .views-field-created,
+.view-id-blog_archive .views-field-created {
+  margin-top: 1.5em;
+}
+
+.view-id-blog_index .views-field-created span,
+.view-id-blog_index .views-field-name span,
+.view-id-blog_archive .views-field-created span,
+.view-id-blog_archive .views-field-name span {
+  font-weight: bold;
+}
+
+.view-id-blog_index .views-field-name,
+.view-id-blog_archive .views-field-name {
+  margin-bottom: 1.5em;
+}
+
+.page-mhealth-blog-index h2.block-title,
+.page-mhealth-archive h2.block-title {
+  margin-top: 0px;
+}
+
+.page-mhealth-blog-index .view-header img,
+.page-mhealth-archive .view-header img {
+  max-width: 100%;
+}
+
+.blog_rss_wrapper {
+  clear: both;
+  margin-top: 4em;
+}

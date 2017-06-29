@@ -1,0 +1,191 @@
+    #txt-tobacco-boxes {
+
+        @media all and  (max-width:649px){
+            .quit, .col-xs-12 {
+                margin-bottom:3%;
+            }
+        }
+
+        @media all and (min-width:650px) and (max-width: 1139px){
+            .last-third {
+                width:100% !important;
+                margin: 0 auto !important;
+                .quit {
+                   width:90%;
+                   margin:1% auto;
+                }
+
+            }
+
+            .quit, .col-xs-12 {
+                width:46%;
+                margin:2%;
+
+            }
+
+
+
+        }
+
+        @media all and (min-width:1140px){
+            .col-xs-12 {
+                width: 30%;
+                margin: 0 1%;
+                width: 30%;
+                width: calc(90%/3);
+                width: -webkit-calc(90%/3);
+                width: -moz-calc(90%/3);
+                text-align:left;
+
+            }
+        }
+        
+
+
+
+        @media all and (max-width: 649px){
+            .last-third {
+                width:100% !important;
+                margin: 0 auto !important;
+                .quit {
+                   //width:90%;
+                   //margin:1% auto;
+                }
+
+            }
+
+            .quit, .col-xs-12 {
+                //width:96%;
+                //margin:2%;
+                margin-top: 25px;
+
+            }
+
+            
+            
+        }
+        .quit {
+            height: 407px;
+            border: 1px solid #ADADAD;
+            background-color:#fff;
+        }
+        .blue-title {
+            font-size: 23px;
+            height: 84px;
+            background-color: #023448;
+            letter-spacing: 2px;
+            color: white;
+            padding-top: 33px;
+            text-align: center;
+            text-transform:uppercase;
+        }
+        .gray-title {
+            font-size: 23px;
+            height: 84px;
+            background-color: #4A4A4A;
+            letter-spacing: 2px;
+            color: white;
+            padding-top: 33px;
+            text-align: center;
+        }
+
+        .links {
+            padding:9%;
+
+            p {
+                font-size: 22px;
+                font-weight: bold;
+                color: #023448;
+
+            }
+            @media all and (max-width: 576px) {
+                p {
+                    margin: 0px 0px 0px 0px !important;
+                }
+            }
+        }
+        .on-demand {
+            p {
+                color: #4A4A4A;
+                padding-bottom: 0px !important;
+            }
+        }
+        ul {
+            line-height: 23px;
+            width:auto;
+        }
+
+        @media all and (max-width: 576px) {
+            ul {
+                width: auto !important;
+                padding-left: 15px;
+            }
+        }
+
+        ul.practice-quit {
+            display:inline;
+        }
+        li {
+            padding-top: 10px;
+        }
+    }
+
+    @media all and (min-width:650px) and (max-width: 1139px){
+        .boxes-plain {
+            width:45%;
+            margin:2%;
+        }
+    }
+
+     @media all and (max-width: 649px){
+        .boxes-plain {
+            width:100%;
+            //margin:2%;
+            margin-bottom: 35px;
+        }
+    }
+
+    @media all and (min-width: 1140px){
+
+        .boxes-plain {
+            width:30%;
+            margin: 15px;
+            width: calc(90%/3);
+            width: -webkit-calc(90%/3);
+            width: -moz-calc(90%/3);
+            text-align:left;
+
+        }
+    }
+
+    .boxes-plain {
+
+      height: 245px;
+      padding:30px;
+      border: 1px #ADADAD solid;
+      background-color: #ffffff;
+
+        .title {
+            color:#104872;
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 500;
+            font-style: normal;
+            font-family: 'Cabin', sans-serif;
+            transition: all 0ms ease-in-out;
+        }
+        p {
+          margin-top: 10px;
+          color: #4A4A4A !important;
+          font-size: 15px !important;
+          line-height: 24px !important;
+          font-weight: 400 !important;
+          font-family: 'Cabin', sans-serif;
+        }
+        @media all and (max-width: 576px) {
+            p {
+                margin: 10px 0px 0px 0px !important;
+            }
+        }
+
+    }

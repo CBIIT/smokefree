@@ -1,0 +1,5 @@
+name = ICFI Build Your Quit Plan
+description = Build Your Quit Plan feature
+core = 7.x
+package = ICFI Custom
+

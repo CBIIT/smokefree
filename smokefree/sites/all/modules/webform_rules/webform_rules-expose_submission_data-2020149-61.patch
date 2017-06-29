@@ -1,0 +1,43 @@
+diff --git a/webform_rules.rules.inc b/webform_rules.rules.inc
+index 11f834e..f24b44c 100644
+--- a/webform_rules.rules.inc
++++ b/webform_rules.rules.inc
+@@ -223,25 +223,22 @@ function webform_rules_rules_data_info() {
+  */
+ function webform_rules_condition_data_nid($submission, $selection, $settings, $state, $condition, $op) {
+   $first_key = key($submission);
+-  if (empty($submission) || !$submission[$first_key]->nid) {
++  //Test the data we've been passed
++  if (is_array($selection) && is_object($submission)) {
++    $this_nid = $submission->nid;
++  } elseif (is_array($selection) && is_object($submission[$first_key])) {
++    $this_nid = $submission[$first_key]->nid;
++  } elseif (is_array($selection) && is_array($submission[$first_key])) {
++    $this_nid = $submission[nid];
++  }
++  if (empty($submission) || !isset($this_nid)) {
+     drupal_set_message('No submission found!','error');
+     return FALSE;
+   }
+-  if (is_array($selection)) {
+-    if(!empty($selection['webform-client-form-' . $submission[$first_key]->nid])){
+-      return TRUE;
+-    }else{
+-      drupal_set_message('Submission is not in webform!','error');
+-      return FALSE;
+-    }
+-  }
+-  elseif (is_string($selected_webform)) {
+-    if('webform-client-form-' . $submission[$first_key]->nid == $selection){
+-      return TRUE;
+-    }else{
+-      drupal_set_message('Submission is not in webform(string)!','error');
+-      return FALSE;
+-    }
++  if(isset($this_nid) && !empty($selection['webform-client-form-' . $this_nid])) {
++    return TRUE;
++  }else{
++    return FALSE;
+   }
+   return FALSE;
+ }

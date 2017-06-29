@@ -1,0 +1,632 @@
+
+/*
+ * UN-SETTING STYLES SET FROM BEFORE THAT ARE NOT NEEDED
+ * =====================================================
+ */
+A {
+	font-size:           inherit;
+	padding:             0;
+}
+BODY {
+	/* Every other page but the homepage has the background image on the BODY */
+	background-image:    none;
+	background-repeat:   no-repeat;
+	/* There is a padding on the smartphone bootstrap layout */
+	padding-left:        0;
+	padding-right:       0;
+}
+INPUT,
+UL, 
+LI {
+	font-size:           inherit;
+}
+.hidden {
+    display:             inherit;
+    visibility:          inherit;
+	clear:               none;
+	float:               none;
+	left:                -99999px;
+	position:            absolute;
+	z-index:             -1;
+}
+
+/*
+ * FINISH UN-SETTING STYLES SET FROM BEFORE THAT ARE NOT NEEDED
+ * ============================================================
+ */
+
+/* Background */
+#bg-container {
+	height:              auto;
+	overflow:            hidden;
+	position:            fixed;
+	top:                 0;
+	width:               100%;
+}
+#bg-photo { 
+	background-repeat:   repeat-x;
+	background-size:     100% auto;
+	height:              110%;
+	overflow:            hidden;
+	position:            relative;
+	width:               135%; 
+	z-index:             -100;
+}
+
+/* Homepage/sub-homepage containers */
+#wrapper {
+    clear:               both;
+	left:                0;
+    overflow:            hidden;
+    position:            relative;
+    top:                 0;
+    width:               100%;
+}
+#mask { 
+	border:              none;
+	height:              100%;
+	list-style:          none;
+	overflow:            hidden; 
+	width:               700%; /* This is to account for the main box plus the six sub-homepages */
+}
+#mask UL {
+	list-style:          none;
+}
+#main UL {
+	margin:              0;
+}
+
+/* Main container - Photo grid */
+#main .picture-box {
+	overflow:            hidden;
+	position:            relative;
+}
+#main .picture-box .img-container {
+	display:             block;
+	float:               none;
+	overflow:            hidden;
+	width:               100%;
+}
+#main .picture-box .img-container A {
+	display:             block;
+	float:               left;
+	height:              100%;
+	position:            relative;
+	width:               100%;
+}
+#main .picture-box  .img-container  A IMG.photo {
+	display:             block;
+	height:              auto;
+	max-width:           inherit;
+	width:               100%;
+}
+
+/* Corner Icons */
+#main .picture-box  .img-container  .photo-badge {
+	clear:               none;
+	color:               transparent;
+	display:             block;
+	height:              80px;
+	position:            absolute;
+	right:               0;
+	text-indent:         -99999px;
+	top:                 0;
+	width:               80px;
+	z-index:             500;
+}
+#main .blue .img-container .photo-badge {
+	background-image:    url('../images/home/smokefree-home-sf-txt-word-cloud-80x80.png');
+}
+#main .green .img-container .photo-badge {
+	background-image:    url('../images/home/smokefree-home-quit-plan-calendar-80x80.png');
+}
+
+/* Caption */
+#main .picture-box .image-caption-bg {
+	background-image:    url('../images/home/smokefree-homepage-photo-caption-bg-2x43.png');
+	background-repeat:   repeat;
+	bottom:              0;
+	display:             block;
+	float:               left;
+	position:            absolute;
+	width:               100%;
+	z-index:             100;
+}
+#main .picture-box A .image-caption-text {
+	background-image:    none;
+	bottom:              0;
+	color:               #5b141d;
+	display:             block;
+	float:               left;
+	font-family:         'breeserif',Arial,Helvetica,sans-serif;
+	margin-left:         1em;
+}
+#main .blue A:hover,
+#main .blue A:hover .image-caption-text,
+#main .blue A:focus,
+#main .blue A:focus .image-caption-text {
+	color:               #006483;
+	text-decoration:     underline;
+}
+#main .blue A  .image-caption-arrow {
+	background-image:    url('../images/content/smokefree-homepage-arrw-rgt-blu-29x29.png');
+}
+#main .green A:hover,
+#main .green A:hover .image-caption-text,
+#main .green A:focus,
+#main .green A:focus .image-caption-text {
+	color:               #438164;
+	text-decoration:     underline;
+}
+#main .green A  .image-caption-arrow {
+	background-image:    url('../images/content/smokefree-homepage-arrw-rgt-grn-29x29.png');
+}
+#main .orange A:hover,
+#main .orange A:hover .image-caption-text,
+#main .orange A:focus,
+#main .orange A:focus .image-caption-text {
+	color:               #CA501B;
+	text-decoration:     underline;
+}
+#main .orange A  .image-caption-arrow {
+	background-image:    url('../images/content/smokefree-homepage-arrw-rgt-ong-29x29.png');
+}
+#main A .image-caption-arrow {
+	background-position: center;
+	background-repeat:   no-repeat;
+	bottom:              0;
+	float:               right;
+	height:              29px;
+	position:            absolute;
+	right:               0;
+	top:                 0;
+	width:               29px;
+	z-index:             120;
+}
+
+/* Sub-homepage */
+#mask .box   .box-header {
+	float:               left;
+	font-family:         'breeserif',Arial,Helvetica,sans-serif;
+	font-size:           1.333333em;
+	line-height:         1.2em;
+	position:            relative;
+}
+#mask .box   .box-header .box-title {
+	display:             block;
+	margin:              0;
+	position:            relative;
+}
+#mask .box   .box-header .box-title H2 {
+	color:               #fff;
+	display:             table-cell;
+	font-family:         inherit;
+	font-size:           inherit;
+	font-weight:         normal; /* The font is already bold */
+	line-height:         inherit;
+	margin:              0;
+	text-shadow:         1px 1px #334901;
+	vertical-align:      middle;
+}
+#mask .box .box-header .box-back-link {
+	display:             block;
+	float:               left;
+	left:                0;
+	line-height:         inherit;
+	position:            relative;
+	vertical-align:      middle;
+}
+#mask .box .box-header .span_2_of_5,
+#mask .box .box-header .span_3_of_5 {
+	display:             block;
+	float:               none;
+	margin-left:         0;
+}
+#mask LI.blue DIV.box-header .img-container {
+	background-color:    #006483;
+}
+#mask LI.green DIV.box-header .img-container {
+	background-color:    #438164;
+}
+#mask LI.orange DIV.box-header .img-container {
+	background-color:    #CA501B;
+}
+#mask .box .box-header .img-container IMG {
+	background-position: 50% 50%;
+	background-repeat:   no-repeat;
+	background-size:     auto 100%;
+	display:             block;
+}
+#mask #box1 .box-header .img-container IMG {
+	background-image:    url('../images/home/smokefree-homepage-photo1.jpg');
+}
+#mask #box2 .box-header .img-container IMG {
+	background-image:    url('../images/home/smokefree-homepage-photo2.jpg');
+}
+#mask #box3 .box-header .img-container IMG {
+	background-image:    url('../images/home/smokefree-homepage-photo3.jpg');
+}
+#mask #box4 .box-header .img-container IMG {
+	background-image:    url('../images/home/smokefree-homepage-photo5.jpg');
+}
+#mask #box5 .box-header .img-container IMG {
+	background-image:    url('../images/home/smokefree-homepage-photo6.jpg');
+}
+#mask #box6 .box-header .img-container IMG {
+	background-image:    url('../images/home/smokefree-homepage-photo7.jpg');
+}
+
+/* Quote */
+#mask .box .box-header .quote {
+	background-color:    #453128;
+	color:               #fff;
+	display:             block;
+	font-family:         'breeserif',Arial,Helvetica,sans-serif;
+	font-style:          normal; /* The font is already italicized */
+	text-align:          center;
+}
+#mask .box .box-header .quote BLOCKQUOTE {
+	border:              0;
+	display:             block;
+    float:               left;
+    font-style:          normal;
+    margin:              1em 2%;
+	padding:             0;
+	text-indent:         0;
+    width:               96%;
+}
+#mask .box .box-header .quote BLOCKQUOTE STRONG {
+	display:             inline;
+	font-family:         'cabinseminbold',Arial,Helvetica,sans-serif;
+	font-size:           1.1em;
+	line-height:         1em;
+	margin:              0;
+	padding:             0;
+}
+
+/* Description */
+#mask .box .description {
+	clear:               both;
+    display:             block;
+    float:               none;
+}
+#mask .box .description STRONG {
+	clear:               both;
+    display:             block;
+    float:               none;
+	font-family:         'breeserif',Arial,Helvetica,sans-serif;
+	font-style:          normal; /* The font is already semi-bold */
+}
+#mask .box .description STRONG {
+	margin:              0;
+}
+
+/* Related links */
+#mask .box  .related-links {
+	display:             block;
+}
+#mask .box  .related-links  UL LI {
+	background-color:    #fff;
+	display:             block;
+	float:               left;
+}
+#mask .box  .related-links  A ,
+#mask .box  .related-links  A:active,
+#mask .box  .related-links  A:link,
+#mask .box  .related-links  A:hover,
+#mask .box  .related-links  A:visited {
+	color:               inherit;
+	display:             block;
+	float:               left;
+	font-family:         'breeserif',Arial,Helvetica,sans-serif;
+	height:              100%;
+}
+#mask .box       .related-links  A:visited,
+#mask .blue     .related-links  A:visited,
+#mask .green   .related-links  A:visited,
+#mask .orange .related-links  A:visited  {
+	color:               #757575 !important;
+}
+#mask .blue  .related-links {
+	color:               #006483;
+}
+#mask .blue  .related-links  A:hover {
+	color:               #006483;
+}
+#mask .green  .related-links {
+	color:               #438164;
+}
+#mask .green  .related-links  A:hover {
+	color:               #438164;
+}
+#mask .orange  .related-links {
+	color:               #CA501B;
+}
+#mask .orange  .related-links  A:hover {
+	color:               #CA501B;
+}
+#mask .box  .related-links  IMG {
+	display:             inline;
+	float:               right;
+	height:              1.875em;
+    margin:              0;
+    position:            relative;
+    top:                 0;
+    width:               1.875em;
+}
+#mask .blue  .related-links  IMG.image-calendar {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-blu-calendar-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .blue  .related-links  IMG.image-checkmark {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-blu-check-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .blue  .related-links  IMG.image-happy {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-blu-happy-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .blue  .related-links  IMG.image-notepad {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-blu-notepad-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .blue  .related-links  IMG.image-star {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-blu-star-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .green  .related-links  IMG.image-calendar {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-grn-calendar-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .green  .related-links  IMG.image-checkmark {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-grn-check-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .green  .related-links  IMG.image-happy {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-grn-happy-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .green  .related-links  IMG.image-notepad {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-grn-notepad-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .green  .related-links  IMG.image-star {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-grn-star-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .orange  .related-links  IMG.image-calendar {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-ong-calendar-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .orange  .related-links  IMG.image-checkmark {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-ong-check-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .orange  .related-links  IMG.image-happy {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-ong-happy-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .orange  .related-links  IMG.image-notepad {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-ong-notepad-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+#mask .orange  .related-links  IMG.image-star {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-ong-star-54x52.png');
+	background-repeat:   no-repeat;
+    background-size:     100% auto;
+}
+
+/* Poll & Quiz */
+#mask .box .col_3_of_3_cols {
+	color:               #424242;
+}
+#mask .box .related-links {
+	clear:               both;
+    display:             block;
+    float:               left;
+    width:               100%;
+}
+#mask .box  .poll,
+#mask .box  .quiz {
+	background-color:    #fff;
+    clear:               both;
+    display:             block;
+    float:               left;
+    width:               100%;
+}
+#mask .box  .poll H3,
+#mask .box  .quiz H3 {
+	font-family:         'breeserif',Arial,Helvetica,sans-serif;
+}
+#mask .box  .poll .option {
+	border:              0 !important;
+}
+
+/* Form buttons */
+#mask .box  .poll .form-submit,
+#mask .box  .quiz .submit	{
+	background-color:    #453128;
+	background-image:    none;
+	background-repeat:   no-repeat;
+	border:              0 none;
+	border-collapse:     collapse;
+	border-radius:       0;
+	box-shadow:          0;
+	color:               #fff;
+	display:             block;
+	float:               left;
+	font-size:           inherit;
+	min-height:          2.1875em;
+	line-height:         2em;
+	margin:              0.5em 0 0.75em;
+	padding:             0 .5em;
+	text-shadow:         none;
+	vertical-align:      middle;
+	width:               auto;
+}
+#mask .box .poll .form-submit {
+    /* Jason: Commented out these lines temporarily
+	left:                -99999px;
+    position:            absolute;*/
+	left:                inherit !important;
+    position:            relative;
+	white-space:         nowrap;
+}
+#mask .box  .quiz A.submit {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-wht-quiz-38x49.png');
+	background-position: 95% 50%;
+	background-repeat:   no-repeat;
+	background-size:     1.5em auto;
+	padding:             0.4em 40px 0.4em 8px;
+}
+#mask .box  .checklist A.submit {
+	background-image:    url('../images/home/sub/smokefree-subhomepage-wht-checklist-38x49.png');
+}
+#mask .box  .poll .links {
+	display:             none;
+	left:                -99999px;
+	opacity:             0;
+	position:            absolute;
+	visibility:          hidden;
+}
+
+/* Poll results bar graph 
+ *
+ * NOTE THAT THE POLL WAS REPLACED
+ * 
+ */
+#mask .box .poll .img-container {
+	margin:              1em 0;
+	text-align:          left;
+	width:               100%;
+}
+#mask .box .poll STRONG {
+	margin:              0.5em 0;
+}
+#mask .box .poll P {
+	margin:              0em !important;
+}
+#mask .box .poll SMALL {
+	display:             block;
+    float:               left;
+	font-size:           9pt; 
+	line-height:         1.2em; 
+	margin:              0.2em 0; 
+	padding:             0;
+	position:            relative;
+	color: 				 #0088cc;
+}
+#mask .box .poll A {
+	color:               #0080AB;
+}
+#mask .box .poll .text {
+	line-height:         1.1em;
+}
+#mask .box .poll .bar {
+	font-size:           0.875em;
+	height:              1em;
+	line-height:         1em;
+	margin:              1px 0;
+	background-color:    #DDD;
+}
+#mask .box .poll .bar .foreground {
+	height:              1em;
+	line-height:         1em;
+	float:               left;
+}
+#mask .blue  .poll .bar .foreground {
+	background-color:    #006483;
+}
+#mask .green  .poll .bar .foreground  {
+	background-color:    #438164;
+}
+#mask .orange  .poll .bar .foreground {
+	background-color:    #CA501B;
+}
+#mask .box .poll .percent {
+	font-size:           0.875em;
+	line-height:         1.1em;
+	text-align:          right;
+}
+#mask .box .poll .total {
+	display:             none;
+	font-size:           0.875em;
+	line-height:         1.1em;
+	opacity:             0;
+	text-align:          center;
+	visibility:          hidden;
+}
+
+/* Home page message box */
+#message-bar {
+	display:             block;
+	float:               left;
+	position:            relative;
+	width:               100%;
+	z-index:             1000;
+}
+#message-bar-link {
+	background-color:    #608018;
+	color:               #fff;
+	display:             block;
+	float:               left;
+	line-height:         1.2em;
+	position:            relative;
+	width:               100%;
+}
+#message-bar:hover {
+	text-decoration:     underline;
+}
+#message-bar-pin {
+	float:               left;
+}
+#message-bar SPAN {
+	display:             block;
+	float:               left;
+}
+#message-bar-arrow {
+	float:               left;
+}
+#close-message-bar {
+	display:             block;
+	float:               right;
+	position:            absolute;
+	top:                 0;
+	right:               0;
+}
+
+/* Survey dialog */
+#dialog-modal.offscreen {
+	bottom:              0;
+	display:             block;
+	float:               left;
+	left:                -1000%;
+	position:            absolute;
+	width:               2em;
+	z-index:             -10;
+}
+.ui-widget-overlay {
+	display:             none;
+}
+.ui-dialog {
+	z-index:             3000;
+}
+.ui-dialog .ui-widget-header {
+	background-image:    none;
+	background-color:    #0A5371;
+	color:               #FFFFFF;
+}

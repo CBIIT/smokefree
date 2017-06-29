@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Static Page feature.
+ */
+
+include_once 'icfi_static_page.features.inc';

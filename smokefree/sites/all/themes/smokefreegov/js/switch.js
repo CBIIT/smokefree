@@ -1,0 +1,1 @@
+!function(o){o().jquery.replace(/\./g,"");window.jq_bootstrap=jQuery.noConflict(!0)}(jQuery);

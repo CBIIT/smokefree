@@ -1,0 +1,240 @@
+/******************************************************
+ style for main-menu dropdown navigation
+ ******************************************************/
+
+/* custom dropdown-menu */
+.caret {
+	display:    block;
+    float:      left;
+    font-size:  small;
+    left:       -99999px;
+    position:   absolute;
+}
+.navbar ul.nav .dropdown-menu A {
+	min-height: 1em;
+}
+.navbar .nav ul.dropdown-menu {
+    float: right;
+    font-size: 1em;
+    margin-left: 0;
+    margin-top: 0;
+    min-height: 1em;
+    position: absolute;
+    width: 115%;
+    z-index: 3000;
+}
+/* Styles for the last menu item */
+.navbar .nav .last ul.dropdown-menu {
+	left: -17%;
+}
+.navbar .nav > li > .dropdown-menu:before {
+	display: none;
+}
+.navbar .nav > li > .dropdown-menu:after {
+	display: none;
+}
+.navbar .nav > li > a {
+	text-shadow: none;
+}
+.navbar .nav ul.dropdown-menu .first.leaf {
+	margin-left: 0;
+}
+.navbar .nav ul.dropdown-menu .leaf {
+	margin-left: 0;
+}
+.navbar .nav ul.dropdown-menu .last.leaf {
+	margin-left: 0;
+}
+.navbar .nav li .dropdown-menu .first.leaf {
+	background-color: transparent;
+	background-image: none; 
+	color: #fff;
+	line-height: 1em;
+	padding: 0;
+	width: 100%;
+}
+.navbar .nav li .dropdown-menu .leaf, .nav-collapse.in .nav li .dropdown {
+	background-color: transparent;
+	background-image: none;
+	border-bottom: solid thin #e3e3e3;
+	color: #fff;
+	padding: 0;
+	width: 100%;
+}
+.navbar .nav li .dropdown-menu .last.leaf {
+    background-color: transparent;
+    background-image: none;
+    border-bottom: none;
+	padding: 0;
+}
+.navbar .nav li .dropdown-menu .first.leaf:hover a,
+.navbar .nav li .dropdown-menu .first.leaf:focus a {
+  	background-color: #D1CEC2;
+}
+.navbar .nav li .dropdown-menu .leaf:hover, 
+.nav-collapse .nav li .dropdown-menu .leaf:focus {
+  	background-color: #D1CEC2;
+}
+.navbar .nav li .dropdown-menu .leaf:hover a {
+	color: #453128;
+}
+.navbar .nav li .dropdown-menu .last.leaf:hover,
+.navbar .nav li .dropdown-menu .last.leaf:focus {
+ 	background-color: #D1CEC2;
+}
+.navbar UL.nav LI.active-trail A.active-trail {
+	background-color: #FFFFFF;
+	background-image: none;
+	color: #453128;
+}
+.navbar UL.nav LI.active-trail UL A.active-trail {
+	background-color: #D1CEC2;
+}
+.navbar .nav li .dropdown-menu a {
+  	background-color: transparent;
+  	background-image: none;
+	color: #fff;
+	line-height: 1em;
+	padding-bottom: .8em;
+	padding-top: .8em;
+	text-shadow: none;
+	white-space: pre-wrap;
+}
+/*.navbar .nav li .dropdown-menu a:link, .nav-collapse .nav li .dropdown-menu a:link {
+	background-color: transparent;
+}*/
+.navbar .nav li .dropdown-menu a:active, .nav-collapse .nav li .dropdown-menu a:active  {
+	background-color: #D1CEC2;
+	background-image: none;
+	color: #fff;
+	line-height: 1em;
+	text-wrap: yes;
+	z-index: 1000;
+}
+.navbar .nav li .dropdown-menu a:active-trail, .nav-collapse .nav li .dropdown-menu a:active-trail  {
+	background-color: #D1CEC2;
+	background-image: none;
+	color: #fff;
+	line-height: 1em;
+	padding-bottom: 7px;
+	padding-top: 10px;
+	padding-left: 3.0%;
+	text-wrap: yes;
+}
+.navbar .nav li .dropdown-menu a:hover {
+	background-image: none;
+	text-decoration: none;
+}
+.navbar .nav li .dropdown-menu a:focus {
+	background-color: transparent;
+	color: #453128;
+	text-decoration: none;
+}
+.navbar .nav li.dropdown.open .dropdown-toggle,
+.navbar .nav li.dropdown.active .dropdown-toggle {
+	color: #fff;
+}
+.navbar .nav li.dropdown.open.active .dropdown-toggle {
+	color: #453128;
+}
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;    
+}
+a.menu:after, .dropdown-toggle:after {
+    content: 			 none;
+	text-shadow:         2px 3px #333; 
+}
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: #453128;
+    border: 1px solid #fff;
+    border-radius: 0 0 0 0;
+    box-shadow: 2px 5px 10px 5px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: none;
+    float: left;
+    left: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+.nav-collapse .menu ul.menu a.dropdown-menu {
+	color: #453128;
+}
+.navbar UL.dropdown-menu a,
+.navbar UL.dropdown-menu A:active,
+.navbar UL.dropdown-menu A.active-trail,
+.navbar UL.dropdown-menu A.active-trail:focus,
+.navbar UL.dropdown-menu A.active-trail:link,
+.navbar UL.dropdown-menu A.active-trail:visited {
+	background-image: none;
+	background-color: #FFFFFF;
+	color: #453128;
+	display: block;
+	font-size: 1.1em;
+	padding-left: 3.0%;
+}
+.navbar LI.dropdown-menu A:active,
+.navbar UL.dropdown-menu A.active-trail,
+.navbar UL.dropdown-menu A.active-trail:focus,
+.navbar UL.dropdown-menu A.active-trail:link,
+.navbar UL.dropdown-menu A.active-trail:visited {
+	background-color: #FFFFFF;
+	background-image: none;
+	color: #453128;
+	display: block;
+	padding-left: 3.0%;
+	width: 92%;
+}
+
+/* Media Queries */
+
+/* Layout 2: Tablet (small) or Smartphone (landscape) ----------- */
+@media only screen 
+	and (min-width : 481px)
+	and (max-width : 767px) {
+	.navbar UL.dropdown-menu a,
+	.navbar UL.dropdown-menu A:active,
+	.navbar UL.dropdown-menu A.active-trail,
+	.navbar UL.dropdown-menu A.active-trail:focus,
+	.navbar UL.dropdown-menu A.active-trail:link,
+	.navbar UL.dropdown-menu A.active-trail:visited {
+		font-size: 0.878em;
+	}
+}
+
+/* Layout 3: Tablet (large) */
+@media only screen 
+	and (min-width : 768px)
+	and (max-width : 979px) {
+		
+	.navbar UL.dropdown-menu a,
+	.navbar UL.dropdown-menu A:active,
+	.navbar UL.dropdown-menu A.active-trail,
+	.navbar UL.dropdown-menu A.active-trail:focus,
+	.navbar UL.dropdown-menu A.active-trail:link,
+	.navbar UL.dropdown-menu A.active-trail:visited {
+		font-size: 0.878em;
+	}
+}
+/* Layout 4: Small screen ----------- */
+@media only screen 
+	and (min-width : 980px)
+	and (max-width : 1199px) {
+	.navbar UL.dropdown-menu a,
+	.navbar UL.dropdown-menu A:active,
+	.navbar UL.dropdown-menu A.active-trail,
+	.navbar UL.dropdown-menu A.active-trail:focus,
+	.navbar UL.dropdown-menu A.active-trail:link,
+	.navbar UL.dropdown-menu A.active-trail:visited {
+		font-size: 1.071em;
+	}
+}
+
+.dropdown-toggle a.leaf:focus,
+a.leaf:hover {
+}

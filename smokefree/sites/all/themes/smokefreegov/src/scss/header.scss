@@ -1,0 +1,593 @@
+/* Nav Bar Styles */
+
+.header-col-12 {
+  min-height: 1px;
+  float: left;
+  width: 100%;
+  position: static;
+}
+
+#main-nav {
+  background-color: #023448 !important;
+  padding: 25px 0px 12px 0px !important;
+  font-family: Cabinregular, sans-serif;
+  font-size: 16px;
+  border: none;
+  .col-md-10 {
+    width: 80.333333%;
+  }
+  .navbar {
+    margin-bottom: 0px !important;
+  }
+  .logo_area #mega-desktop {
+    margin: 0;
+  }
+  li.menu-overlay.open, li.menu-overlay.open > a {
+  color: #f1f1f1 !important;
+  background-color: #00151D !important;
+  }
+  ul {
+    li {
+      width: auto !important;
+      white-space: nowrap;
+      a {
+        font-family: Cabinregular, sans-serif;
+        font-weight: normal !important;
+        color: #f1f1f1 !important;
+      }
+      .dropdown-menu a {
+        color: black !important;
+      }
+    }
+    li.level-3 {
+      a {
+        color: black;
+      }
+    }
+  }
+  ul.level-0 {
+    margin-left: -15px;
+  }
+}
+
+
+#mega-desktop #block-tb-megamenu-main-menu #tb-megamenu-main-menu .nav-collapse ul li.open a {
+  background-color: #000;
+}
+.nav-bar {
+  height: 65px;
+  margin: 0px auto !important;
+  float: none;
+  position: relative;
+}
+.nav-bar-logo {
+  min-width: 205px;
+  float: left;
+}
+.nav-bar-menu {
+  float: left;
+}
+.nav-bar-icon {
+  width: 23px;
+  float: right;
+}
+
+/* swap menus at 1100px */
+
+@media screen and (min-width: 1100px) {
+  button.nav-bar-toggle {
+    display: none;
+  }
+}
+@media screen and (max-width: 1099px) {
+  #main-nav .logo_area {
+    display: none;
+  }
+}
+
+/* Adjust menu item size and spacing */
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+  #main-nav ul li.level-1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  #main-nav ul li a {
+    font-size: 13px !important;
+  }
+  .nav-bar-menu {
+    width: 742px;
+    margin-top: 5px;
+  }
+  .nav-bar {
+    margin: 0px auto !important;
+    width: 970px !important;
+    float: none;
+  }
+}
+@media (min-width: 1200px) {
+  #main-nav ul li.level-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #main-nav ul li a {
+    //font-size: 16px !important;
+  }
+  .nav-bar-menu {
+    width: 922px;
+  }
+  #main-nav #mega-desktop nav {
+    width: 922px;
+  }
+  .nav-bar {
+    margin: 0px auto !important;
+    width: 1150px !important;
+    float: none;
+    min-width: 1150px !important;
+  }
+}
+/* Logo */
+
+img.nav-bar-brand {
+  height: 55px;
+  padding: 14px;
+  float: left;
+  width: 205px;
+}
+@media (min-width: 1100px) {
+  img.nav-bar-brand {
+    margin-left: -15px;
+  }
+}
+
+/* Search Tool */
+
+.nav-search {
+  cursor: pointer;
+  color: white;
+  font-size: 23px;
+  top: 15px !important;
+}
+.search-bar {
+  background-color: #023448 !important;
+  font-size: 16px;
+  border: none;
+  padding: 1px !important;
+}
+.search-bar-form {
+  position: relative;
+  top: -10px;
+  z-index: 10;
+  border: none;
+  box-shadow: none;
+padding: 0px;
+margin: 0px;
+  .search-bar-input {
+  border-radius: 0px;
+    width: calc(100% - 120px) !important;
+  display: inline-block;
+  vertical-align: middle;
+  height: 45px;
+  border: none;
+    padding: 6px 12px;
+  }
+  .search-bar-group {
+  display:block;
+    width: calc(100% - 50px);
+    margin: 0px auto;
+    max-width: 1150px;
+    height: 0px;
+    overflow: hidden;
+  -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+  }
+  .btn.btn-default {
+  border-radius: 0px;
+  height: 45px;
+  border: none;
+    -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+    box-shadow: inset 0px 0px 0px 0px #ffffff;
+    background-color: #0C6AB1 !important;
+    color: #FFFFFE;
+  }
+  .btn.btn-default:hover {
+  color: #FFFFFF;
+    background-color: #0A558E !important;
+  }
+  .closebtn {
+  position: relative;
+    line-height: 0px;
+    right: 0px;
+    top: 10px;
+    color: white;
+    width: 25px;
+    font-size: 45px;
+    padding: 0px;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    cursor: pointer;
+  }
+}
+.search-bar-group .closebtn {
+  font-family: Cabinregular, sans-serif;
+}
+@media only screen and (min-width: 320px) and (max-width: 766px) {
+  .search-bar-form .btn {
+    background: none;
+    color: #333;
+    background-color: #fff;
+    margin: 0px;
+    float: none;
+    width: auto;
+    position: relative;
+  }
+}
+@media (max-width: 1099px) {
+  .nav-bar-icon {
+    margin-right: 50px;
+  }
+}
+
+/* Mobile Menu */
+
+@media (min-width: 320px) and (max-width: 1099px)  { 
+
+  .tb-megamenu .nav > li > a { padding: 10px 0 !important; }
+  
+  .tb-megamenu .mega-nav .mega-group > .mega-group-title, .tb-megamenu .dropdown-menu .mega-nav .mega-group > .mega-group-title, .tb-megamenu .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+        text-transform: none;
+  }
+  .tb-megamenu .nav-collapse .nav > li > a, .tb-megamenu .nav-collapse .dropdown-menu a {
+    border-bottom: none;
+  }
+
+.tb-megamenu.animate .mega.animating > .mega-dropdown-menu {
+    display: none!important;
+  }
+
+.tb-megamenu.animate .mega.animating.open > .mega-dropdown-menu {
+    opacity: 0;
+  }
+
+  button.btn.btn-navbar.tb-megamenu-button {
+    display:none;
+  } 
+
+  .nav-collapse { 
+    padding: 0 !important;
+    display:block !important;
+    top: 0 !important; 
+  }
+
+      .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+        width: 100% !important;
+      }
+
+      .tb-megamenu-column {
+        width:100% !important;
+        margin-left: 0 !important;
+      }
+
+      #mobile-nav {
+
+      background-color: #023448;
+      width: 100%;
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+      transition: 0.5s;
+      height: 0%;
+      font-family: Cabinregular, sans-serif !important;
+
+ 
+
+      .tb-megamenu .mega-inner, .tb-megamenu .mega-nav > li, .tb-megamenu .dropdown-menu .mega-nav > li {
+        background-color: #00151D;
+      } 
+
+      .tb-megamenu.style-black .dropdown-menu {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      .overlay-content > a {
+        color: #f1f1f1;
+        margin-left: 10%;
+        font-size: 16px;
+      }
+
+      .tb-megamenu .mega-inner {
+        padding: 0px;
+      }
+    }
+
+  ul.tb-megamenu-subnav.level-1 {
+        
+        li a {
+            display: block;
+            text-indent: 20%;
+            font-size: 14px;
+            padding: 15px 0px;
+        }
+
+        li a {
+          padding: 15px 10px !important;
+        }
+
+        li:hover,
+        li:focus,
+        li:active,
+        li a:hover,
+        li a:focus,
+        li a:active {
+        background-color: #CECECE !important;
+        color: #000000 !important;
+        }
+
+        ul.tb-megamenu-subnav.level-2 {
+          li, li a {background-color: #263236;}
+
+          li a {margin-left: 0;}
+
+          li a:hover,
+          li a:focus {
+              background-color: #CECECE !important;
+              color: #000000;
+          }
+        }
+
+  } 
+
+  #mobile-nav .overlay-content > ul.tb-megamenu-nav li a {
+    text-indent: 15%;
+    font-weight: normal;
+  }
+
+  #mobile-nav ul.tb-megamenu-nav li a {
+      text-decoration: none !important;
+      color: white;
+      display: block;
+      transition: 0.3s;
+      border: none;
+      color: #f1f1f1;
+      text-indent: 10%;
+      font-weight: normal;
+      font-size: 16px;
+  }
+      
+
+
+    .tb-megamenu.style-black .nav-collapse, .tb-megamenu.style-black .nav-collapse .dropdown-menu {
+     background-color: #023448; 
+    } 
+
+    #mobile-nav ul.tb-megamenu-nav li a,
+    #mobile-nav ul.tb-megamenu-nav li a:focus {
+      color: #f1f1f1;
+    } 
+
+    #mobile-nav ul.tb-megamenu-nav li:hover, #mobile-nav ul.tb-megamenu-nav li:focus, #mobile-nav ul.tb-megamenu-nav li:active, #mobile-nav ul.tb-megamenu-nav li a:hover, #mobile-nav ul.tb-megamenu-nav li a:focus, #mobile-nav ul.tb-megamenu-nav li a:active, .tb-megamenu.style-black .nav li.dropdown.open > .dropdown-toggle, .tb-megamenu.style-black .nav li.dropdown.open.active > .dropdown-toggle {
+      background-color: #00151D;
+    } 
+
+    #mobile-nav .overlay-content {
+      position: relative;
+      top: 5em;
+      width: 100%;
+      text-align: left;
+    }
+
+    #mobile-nav .mega-group-title a {
+    padding: 18px 0px;
+    }
+
+
+    #mobile-nav .collapsed > .fa.fa-chevron-right {
+    -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+    } 
+
+    #mobile-nav .fa.fa-chevron-right{
+    text-indent: 0px;
+    margin-left: 10px;
+    font-size: 12px;
+
+    -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+
+    -webkit-transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+        -moz-transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+        -o-transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    transition: all 200ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+    } 
+
+    .closebtn {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  color: white;
+  font-size: 65px;
+  padding: 0px;
+  text-decoration: none !important;
+  background-color: transparent !important;
+  cursor: pointer;
+  z-index:9999;
+}
+
+}/**** end of @media screen max 1099 for mobile menu */
+ /***end of tb-megamenu-subnav styling ***/
+
+@media screen and (min-width: 1100px) {
+  #mobile-nav {display: none !important;}
+}
+
+
+.nav-bar-toggle {
+  background-image: none;
+  position: relative;
+  float: none;
+  margin: 0px;
+  background-color: black !important;
+  color: white;
+  font-size: 22px;
+  font-family: Cabinregular, sans-serif;
+  font-weight: normal;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0px;
+}
+
+button.nav-bar-toggle {
+  line-height: 35px;
+}
+
+/* Dropdown menu fixes make into better less later */
+
+#main-nav .menu-level-3 {
+  font-weight: lighter;
+}
+
+
+/* Menu dropdown adjustments for smaller size */
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+  //#main-nav .tools-tips .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+  //  width: 675px !important;
+  //}
+  //#main-nav .challenges-when-quitting .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+  //  width: 700px !important;
+  //}
+  //#main-nav .quitting-smoking .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+  //  width: 445px !important;
+  //}
+  //#main-nav .stay-smokefree .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+  //  width: 695px !important;
+  //}
+  //#main-nav .understanding-smoking .tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+  //  width: 745px !important;
+  //}
+  #main-nav div.tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+    margin-top: 34px !important;
+  }
+  #main-nav .width-200 .tb-megamenu-column-inner {
+    width: 200px;
+  }
+}
+
+/* change width to auto on columns */
+
+@media (min-width: 1100px) {
+  #main-nav .tb-megamenu .row-fluid .span3,
+  #main-nav .tb-megamenu .row-fluid .span4,
+  #main-nav .tb-megamenu .row-fluid .span6 {
+    width: auto !important;
+    margin-left: 0 !important;
+}
+}
+
+/* kill megamenu padding */
+
+#main-nav .tb-megamenu-column-inner.mega-inner {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#main-nav .logo_area #mega-desktop #block-tb-megamenu-main-menu #tb-megamenu-main-menu .nav-collapse ul li.open .mega-dropdown-menu .mega-dropdown-inner .tb-megamenu-column-inner ul li a {
+  margin-top: 0px;
+}
+#main-nav .logo_area #mega-desktop #block-tb-megamenu-main-menu #tb-megamenu-main-menu .nav-collapse ul li.open .mega-dropdown-menu {
+  padding-left: 0;
+}
+@media (min-width: 1200px) {
+  #main-nav .logo_area #mega-desktop #block-tb-megamenu-main-menu #tb-megamenu-main-menu .nav-collapse ul li.level-1 a {
+    padding: 0 3px !important;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+  #main-nav .logo_area #mega-desktop #block-tb-megamenu-main-menu #tb-megamenu-main-menu .nav-collapse ul li.level-1 a {
+    padding: 0 !important;
+  }
+}
+/* lower dropdown-menu to the bottom of the navbar and add the arrow */
+
+@media (min-width: 1200px) {
+  #main-nav div.tb-megamenu-submenu.dropdown-menu.mega-dropdown-menu.nav-child {
+    margin-top: 30px !important;
+  }
+}
+#main-nav .caret {
+border-top: none;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: absolute;
+    bottom: -30px;
+    left: 35%;
+    display: none;
+    color: transparent;
+}
+#main-nav li.dropdown.open > a > .caret {
+display: block;
+}
+
+/* Get rid of the white space megamenu adds, so a can be highlighted  */
+
+#main-nav ul li.level-2 a,
+#main-nav ul li.level-3 a {
+  white-space: nowrap !important;
+}
+#main-nav ul li.level-2 a:hover,
+#main-nav ul li.level-3 a:hover {
+  background-color: #ebebeb !important;
+}
+
+
+#main-nav .logo_area #mega-desktop #block-tb-megamenu-main-menu #tb-megamenu-main-menu .nav-collapse .mega-dropdown-inner ul li a {
+  padding: 15px 15px 20px 15px !important;
+  width: 100% !important;
+}
+
+/* but allow wrap for inner menu items if set in megamenu ui */
+
+#main-nav .menu-wrap a,
+#main-nav .menu-wrap ul li.level-2 a,
+#main-nav .menu-wrap ul li.level-3 a {
+  white-space: normal !important;
+}
+
+/* Add the border to right of the menu columns, */
+#main-nav .tb-megamenu-row {
+  display: flex;
+}
+#main-nav .tb-megamenu-column {
+  //border-right: 1px solid #EEEEEE;
+  display: inline-block;
+  vertical-align: top;
+}
+/* but no border on last column or lower-level columns */
+#main-nav .tb-megamenu-column .tb-megamenu-column {
+  border-right: none;
+}
+#main-nav .tb-megamenu-column.last-column {
+  border-right: none;
+}
+
+#main-nav .tb-megamenu-column-inner {
+  margin: 10px 0 0;
+}
+
+/* lighten the dropdown box-shadow */
+#main-nav .tb-megamenu.style-black .dropdown-menu {
+  box-shadow: 0 5px 10px rgba(26,26,26,0.2);
+}
+
+

@@ -1,0 +1,6 @@
+name = ICFI Fix Webform
+description = Fixes a corruption in the systems table for webform and print modules in order to facilitate upgrade
+core = 7.x
+package = ICFI Custom
+dependencies[] = webform
+dependencies[] = print

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Text Signup feature.
+ */
+
+include_once 'icfi_text_signup.features.inc';

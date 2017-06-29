@@ -1,0 +1,6 @@
+
+name = FDA point of sale
+description = Angular point of sale module
+version = 7.x-1.0
+core = 7.x
+

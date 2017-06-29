@@ -1,0 +1,65 @@
+<?php
+
+include 'MCDoublePost.php';
+
+/**
+ * Implements hook_page_build().
+ */
+function icfi_txt_signup_page_build(&$page) {
+  // SmokefreeTXT Women & Teen forms are displayed within an iframe.
+  // We need to remove the X-Frame-Options header emitted by Drupal.
+  $node = menu_get_object();
+  if (!empty($node)) {
+    if ($node->nid == 485) {
+      drupal_add_http_header('X-Frame-Options', 'ALLOW-FROM http://women.smokefree.gov/', FALSE);
+    }
+  }
+}
+
+//Displays two of the eight A/B questions on the form
+
+function icfi_txt_signup_form_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form['#node']->title) && in_array($form['#node']->title, array('SmokefreeTXT', 'SmokefreeTXT-Women'))  && $form['#node']->type == 'webform') {
+
+    // Force the A/B fields we want, for now.
+    $form['submitted']['a_b_show_fields']['#default_value'] = array(
+      'person_wake_up_smoke',
+      'person_around_smoking',
+    );
+
+    // Hide the field that determines which questions are conditionally shown.
+    $form['submitted']['a_b_show_fields']['#prefix'] = '<div style="display:none;">';
+    $form['submitted']['a_b_show_fields']['#suffix'] = '</div>';
+
+    // Set each A/B field equal to either 1 or 2.
+    foreach ($form['submitted'] as $key => &$field) {
+      if (substr($key, strlen($key) - 3) == '_ab') {
+        $field['#value'] = rand(1, 2);
+      }
+    }
+  }
+}
+
+/**
+ * Implements webform_remote_post_repost_alter().
+ */
+function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
+  // For the first submission, filter out everything except the opt-in-key and
+  // phone number. This "double-submission" is necessary to correct reporting
+  // bug so that the answers are always associated with a pre-existing
+  // account per Kiran Muppidi.
+  if (strpos($target['url'], 'secure.mcommons.com') !== FALSE) {
+    // $mCDoublePost = new MCDoublePost($payload, $target);
+    // $mCDoublePost->pre_post();
+  }
+  // In cases where there are two questions that need the same key, use
+  // _alrernative_version suffix on the second, and remove it before post.
+  foreach($payload as $key=>$value) {
+    if (strpos($key, '_alternative_version') !== FALSE) {
+      if (!empty($value)) {
+        $payload[str_replace('_alternative_version_2', '', str_replace('_alternative_version_1', '', $key))] = $value;
+      }
+      unset($payload[$key]);
+    }
+  }
+}

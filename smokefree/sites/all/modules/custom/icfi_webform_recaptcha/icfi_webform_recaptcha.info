@@ -1,0 +1,6 @@
+name = ICFI Webform Recaptcha
+description = Adds a reCaptcha to all webforms of type "form"
+core = 7.x
+package = ICFI Custom
+dependencies[] = recaptcha
+dependencies[] = webform

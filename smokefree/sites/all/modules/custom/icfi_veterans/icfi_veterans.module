@@ -1,0 +1,103 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Veterans feature.
+ */
+
+include_once 'icfi_veterans.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function icfi_veterans_theme() {
+  return array(
+    'icfi_veterans_header' => array(
+      'variables' => array(),
+      'file' => 'icfi_veterans.theme.inc',
+      'template' => 'icfi-veterans-header',
+    )
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function icfi_veterans_block_info() {
+  $blocks['icfi_veterans_header'] = array(
+    'info' => t('SmokeFreeVET Header'),
+    'cache' => DRUPAL_CACHE_PER_PAGE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function icfi_veterans_block_view($delta = '') {
+  if ($delta == 'icfi_veterans_header') {
+    return array(
+      'subject' => NULL,
+      'content' => theme('icfi_veterans_header'),
+    );
+  }
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function icfi_veterans_block_configure($delta = '') {
+  if ($delta == 'icfi_veterans_header') {
+    // Allow content editors to configure the text that appears on the homepage.
+    $form['icfi_veterans_header_text'] = array(
+      '#type' => 'textarea',
+      '#title' => t('This text content will appear in the block only on the /veterans home page.'),
+      '#default_value' => icfi_veterans_header_text(),
+    );
+  }
+  return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function icfi_veterans_block_save($delta = '', $edit = array()) {
+  if ($delta == 'icfi_veterans_header') {
+    variable_set('icfi_veterans_header_text', $edit['icfi_veterans_header_text']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_panels_pane().
+ */
+function icfi_veterans_preprocess_panels_pane(&$vars) {
+  // Add a custom panels pane template just for the tools_tips FPP bundle.
+  if ($vars['pane']->type == 'fieldable_panels_pane' && isset($vars['content']['#bundle']) && $vars['content']['#bundle'] == 'tools_tips') {
+    $vars['theme_hook_suggestions'][] = 'panels_pane__fieldable_panels_pane__tools_tips';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function icfi_veterans_form_alter(&$form, &$form_state, $form_id) {
+  // For SFVet Quiz, append "form-radio-yes" or "form-radio-no" classes for
+  // easy theming.
+  if (!empty($form['#node']->title) && strtolower($form['#node']->nid) == 149) {
+    foreach ($form['submitted'] as &$element) {
+      foreach ($element['#options'] as $key => $value) {
+        $title_value = trim(strtolower($value));
+        if (in_array($title_value, array('yes', 'no'))) {
+          $element[$key]['#attributes']['class'][] = "form-radio-$title_value";
+          $element['#webform_component']['extra']['title_display'] = 'outside';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Get veterans header text value.
+ */
+function icfi_veterans_header_text() {
+  return variable_get('icfi_veterans_header_text', t('Quitting smoking is part of the transition from being in the military to being a civilian.  Only about 20% of American adults are smokers.  Quitting smoking is one of the best things you can do for your physical health, emotional well-being, and quality of life.'));
+}

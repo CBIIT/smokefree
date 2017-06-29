@@ -1,0 +1,33 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://smokefree_dev.mydrupalvm.dev
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: '.'
+      subcontexts:
+        paths:
+          - "sites/all"
+      text:
+        log_out: "Log out"
+        log_in: "Log in"
+      region_map:
+        content: "#Content"
+        footer: "#Footer"
+        navigation: "#Navigation"
+      selectors:
+        message_selector: '.messages'
+        error_message_selector: '.messages.messages-error'
+        success_message_selector: '.messages.messages-status'

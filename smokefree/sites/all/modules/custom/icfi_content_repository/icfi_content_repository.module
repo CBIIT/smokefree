@@ -1,0 +1,247 @@
+<?php
+
+/**
+ * Helper function to return Taxonomy ID By term name.
+ *
+ * @param string $term_name
+ *    Name of the vocabulary term.
+ * @param string $vocabulary
+ *    Optional name of vocabulary to limit search to.
+ *
+ * @return string
+ *    Taxonomy ID as a string; Blank string if not found.
+ */
+function _get_taxonomy_id_by_name($term_name, $vocabulary = NULL) {
+  $term_array = taxonomy_get_term_by_name($term_name, $vocabulary);
+  if (empty($term_array)) {
+    return '';
+  }
+  else {
+    return array_pop($term_array)->tid;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function icfi_content_repository_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'include_node_form') {
+    $form['#validate'][] = 'icfi_include_form_custom_validate';
+    $form['#submit'][] = 'icfi_include_form_custom_submit';
+
+    // The myth field should only be visible for Mythbuster includes.
+    $form['field_myth']['#states'] = array(
+      'visible' => array(
+        array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Mythbuster', 'type'))),
+      ),
+      'required' => array(
+        array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Mythbuster', 'type'))),
+      ),
+    );
+
+    // The fact field should only be visible for Mythbuster or Fact includes.
+    $form['field_fact']['#states'] = array(
+      'visible' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Fact', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Mythbuster', 'type'))),
+        ),
+      ),
+      'required' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Fact', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Mythbuster', 'type'))),
+        ),
+      ),
+    );
+
+    // The tip field should only be visible for crave tip or quit tip includes.
+    $form['field_tip']['#states'] = array(
+      'visible' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Crave Tip', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Quit Tip', 'type'))),
+        ),
+      ),
+      'required' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Crave Tip', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Quit Tip', 'type'))),
+        ),
+      ),
+    );
+
+    // The quote field should only be visible for Motivational Quote or
+    // Testimonial includes.
+    $form['field_quote']['#states'] = array(
+      'visible' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Motivational Quote', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Testimonial', 'type'))),
+        ),
+      ),
+      'required' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Motivational Quote', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Testimonial', 'type'))),
+        ),
+      ),
+    );
+
+    // The attribution field should only be visible for Motivational Quote or
+    // Testimonial includes.
+    $form['field_attribution']['#states'] = array(
+      'visible' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Motivational Quote', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Testimonial', 'type'))),
+        ),
+      ),
+      'required' => array(
+        array(
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Motivational Quote', 'type'))),
+          array('or'),
+          array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Testimonial', 'type'))),
+        ),
+      ),
+    );
+
+    // The promo description field should only be visible for Promo includes.
+    $form['field_promo_description']['#states'] = array(
+      'visible' => array(
+        array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Promo', 'type'))),
+      ),
+      'required' => array(
+        array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Promo', 'type'))),
+      ),
+    );
+    $form['field_promo_url']['#states'] = array(
+      'visible' => array(
+        array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Promo', 'type'))),
+      ),
+      'required' => array(
+        array(':input[name="field_type[und]"]' => array('value' => _get_taxonomy_id_by_name('Promo', 'type'))),
+      ),
+    );
+  }
+}
+
+/**
+ * Custom validation function.
+ */
+function icfi_include_form_custom_validate($form, &$form_state) {
+  $include_type = '';
+  $include_type_field = $form_state['values']['field_type']['und'][0]['tid'];
+  if (!empty($include_type_field)) {
+    $term = taxonomy_term_load($include_type_field);
+    if (!empty($term->name)) {
+      $include_type = $term->name;
+    }
+  }
+
+  if (empty($form_state['values']['field_myth']['und'][0]['value'])
+    && $include_type == 'Mythbuster') {
+    form_set_error('field_myth][und', 'Myth field is required for Mythbuster includes.');
+  }
+  if (empty($form_state['values']['field_fact']['und'][0]['value'])
+    && in_array($include_type, array('Fact', 'Mythbuster'))) {
+    form_set_error('field_fact][und', 'Fact field is required for Mythbuster or Fact includes.');
+  }
+  if (empty($form_state['values']['field_tip']['und'][0]['value'])
+    && in_array($include_type, array('Crave Tip', 'Quit Tip'))) {
+    form_set_error('field_tip][und', 'Tip field is required for Quit Tip or Crave Tip includes.');
+  }
+  if (empty($form_state['values']['field_quote']['und'][0]['value'])
+    && in_array($include_type, array('Motivational Quote', 'Testimonial'))) {
+    form_set_error('field_quote][und', 'Quote field is required for Motivational Quote or Testimonial includes.');
+  }
+  if (empty($form_state['values']['field_attribution']['und'][0]['value'])
+    && in_array($include_type, array('Motivational Quote', 'Testimonial'))) {
+    form_set_error('field_attribution][und', 'Attribution field is required for Motivational Quote or Testimonial includes.');
+  }
+  if (empty($form_state['values']['field_promo_description']['und'][0]['value'])
+    && $include_type == 'Promo') {
+    form_set_error('field_promo_description][und', 'Promo Description field is required for Promo includes.');
+  }
+  if ((empty($form_state['values']['field_promo_url']['und'][0]['title']) || empty($form_state['values']['field_promo_url']['und'][0]['url']))
+    && $include_type == 'Promo') {
+    form_set_error('field_promo_url][und', 'Promo URL field is required for Promo includes.');
+  }
+}
+
+/**
+ * Custom submit function.
+ */
+function icfi_include_form_custom_submit($form, &$form_state) {
+  $include_type = '';
+  $include_type_field = $form_state['values']['field_type']['und'][0]['tid'];
+  if (!empty($include_type_field)) {
+    $term = taxonomy_term_load($include_type_field);
+    if (!empty($term->name)) {
+      $include_type = $term->name;
+    }
+  }
+  // Cleans out fields irrelevant to the include type.
+  if ($include_type != 'Mythbuster') {
+    $form_state['values']['field_myth']['und'][0]['value'] = "";
+  }
+  if ($include_type != 'Promo') {
+    $form_state['values']['field_promo_description']['und'][0]['value'] = "";
+    $form_state['values']['field_promo_url']['und'][0]['title'] = "";
+    $form_state['values']['field_promo_url']['und'][0]['url'] = "";
+  }
+  if (!in_array($include_type, array('Fact', 'Mythbuster'))) {
+    $form_state['values']['field_fact']['und'][0]['value'] = "";
+  }
+  if (!in_array($include_type, array('Crave Tip', 'Quit Tip'))) {
+    $form_state['values']['field_tip']['und'][0]['value'] = "";
+  }
+  if (!in_array($include_type, array('Motivational Quote', 'Testimonial'))) {
+    $form_state['values']['field_quote']['und'][0]['value'] = "";
+    $form_state['values']['field_attribution']['und'][0]['value'] = "";
+  }
+}
+
+/*
+ * Implements hook_block_view_alter
+ *
+ * Changes the title of the "more for you" sidebar block depending on the
+ * article bundle of the cr_article hosting the block.
+ */
+function icfi_content_repository_block_view_alter(&$data, $block) {
+  if ($block->delta == 'more_for_you-sidebar' || $block->delta == 'more_for_you-carousel') {
+    $current_node = menu_get_object();
+    if (!empty($current_node->type) && $current_node->type == 'cr_article') {
+      $bundle_array = field_get_items('node', $current_node, 'field_article_bundle');
+      if (!empty($bundle_array[0]['taxonomy_term']->name)) {
+        switch (strtolower($bundle_array[0]['taxonomy_term']->name)) {
+          case 'smokeless':
+            $block->title = 'More for Quitting Dip';
+            break;
+          case 'lgbt':
+            $block->title = 'More for LGBT';
+            break;
+
+          default:
+            $block->title = 'More Resources';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements icfi_content_repository_views_api().
+ */
+function icfi_content_repository_views_api() {
+  return array(
+    'api' => 3,
+  );
+}

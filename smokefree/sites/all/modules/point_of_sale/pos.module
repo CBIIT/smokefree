@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * pos module.
+ *
+ * Implements hook menu
+ * Implements hook theme
+ * 
+ */
+
+function pos_menu(){
+    $items ["fda/pos"] = array(
+        "title" => "Point of Sale",
+        "page callback" => "_pos_callback",
+        "access arguments" => array("access content"),
+        
+    );
+    return $items;
+}
+
+function pos_theme(){
+    return array(
+        "pos" => array(
+            "template" => "pos",
+        ),
+    );
+}
+
+function _pos_callback(){
+    
+    drupal_add_js('https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js', 'external');
+    drupal_add_js(drupal_get_path('module', 'pos') . '/pos/app.js');
+    drupal_add_js("//unpkg.com/angular-ui-router/release/angular-ui-router.min.js", 'external');
+    drupal_add_js("https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js", 'external');
+    return theme("pos");
+    
+}
+

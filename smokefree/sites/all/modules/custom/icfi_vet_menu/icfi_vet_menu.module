@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Vet Menu feature.
+ */
+
+include_once 'icfi_vet_menu.features.inc';

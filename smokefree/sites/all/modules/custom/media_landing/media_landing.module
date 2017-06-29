@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Media Landing feature.
+ */
+
+include_once 'media_landing.features.inc';

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#social .externalllinktooltip .externalllinktooltipleft {
+    background: url("../images/externalllinktooltip.png") no-repeat scroll left top transparent;
+    height: 35px;
+    left: -3000px;
+    padding: 10px 6px 0;
+    position: absolute;
+    text-align: center;
+    top: -32px;
+    width: 266px;
+}
+.externalllinktooltipleft {
+    background: url("../images/externalllinktooltip.png") no-repeat scroll 0 -45px transparent;
+}
+#social .externalllinktooltip, #social ul li:hover .externalllinktooltipleft {
+    display: block;
+    left: -218px;
+}
+#social ul li:hover .externalllinktooltipleft {
+    left: 20px;
+}

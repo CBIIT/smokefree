@@ -1,0 +1,5 @@
+name = ICFI Text Signup
+core = 7.x
+package = ICFI Custom
+version = 7.x-1.0
+dependencies[] = webform_remote_post

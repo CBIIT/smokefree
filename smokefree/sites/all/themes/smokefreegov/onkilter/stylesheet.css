@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.hyperlink {color:#004642; font-weight:bold;}
+.upper-banner {background-image:url(img/top-image2.png);background-position: center; background-repeat:no-repeat; background-size:cover; }
+.upper-banner-inside { margin:0 auto;  text-align:center; padding-top:300px;}
+.header{width:100%; margin:0 auto !important; padding:0;}
+html, body {margin:0;}
+.content {width:100%; margin:0 auto; text-align:center;}
+.content-outer {width:100%; background-image:url(img/middle-bck.png); background-position:center; background-size:cover; background-repeat:no-repeat; padding:55px 85px; } 
+.content p {text-align:left; font-family: 'Droid Sans', sans-serif; color:#323232; font-size:18px; line-height:30px;}
+.steps { text-align:center; padding:20px;}
+.space-photo{ padding-right:15px;}
+.social {text-align:center;}
+.photos {width:100%;}
+.photos img {width:100%; height:auto;}
+.footer {width:100%; font-family: 'Droid Sans', sans-serif; font-size:14px; color:#505050; text-align:center; padding:44px 0;}
+.photos-mobile, .social-mobile {display:none;}
+.orange-color {color: #a52e00;}
+.box{width:100%; height:auto;  background-color:rgba(255,255,255,0.5); border:#989e93 solid 1px; padding-top:20px; padding-left:28px; padding-right:28px; margin-bottom:20px; padding-bottom:20px;min-height:310px; }
+.title{text-align:left; font-family: 'Oswald', sans-serif; font-size:36px; color:#0b2246; padding-top:10px; padding-left:1 }
+.rec{width: 15px; height: 50px; background: #a52e00;}
+.sentence{font-family: 'Droid Sans', sans-serif; font-size:28px; color:#0b2246; text-align:left; padding-bottom:40px;}
+.socialbox{width:100%; height:auto; background-color:rgba(255,255,255,0.5); border:#989e93 solid 1px; padding-top:3em; margin-bottom:20px; text-align:center; }
+.social-title{font-family: 'Droid Sans', sans-serif; font-size:28px; color:#0b2246; text-align:center; padding-bottom:40px; padding-left:10px; padding-right:10px;}
+.social-sentence{padding-left:5px; padding-right:5px; margin-top:20px; font-family: 'Droid Sans'; font-weight:bold; font-size:18px; color:#a52e00 }
+.icon{padding-bottom:30px;}
+.bottom-imgs{padding:0 !important; margin:0 !important; width:100%;}
+.img-list{padding:0 !important; margin:0 !important; width:100%;}
+.step-images{vertical-align:center;}
+.largetitle{font-family: 'Oswald', sans-serif; font-size:80px; color:#004642; margin:0; text-transform:uppercase; font-weight:400; padding-bottom:30px; text-align:center;} 
+.title-font{font-size:38px;}
+.socialcontainer{padding-left:20px; padding-right:20px;}
+@media (max-width: 768px) {
+
+.upper-banner-inside img {width:90%; height:auto; }
+.upper-banner-inside {width:100%;}
+.content {width:90%; padding-bottom:32px;}
+.social img, .photos img {width:100%; height:auto;}
+.content-outer {padding:0; padding-top:30px;}
+.space-photo {padding:0;}
+.photos-mobile, .social-mobile { display:inline;}
+.photos-mobile-image {width:100%; height:auto;}
+.photos, .social {display:none;}
+.upper-banner { background-image:url(img/mobile-top-image2-2.png); background-size:cover; background-position:center; }
+.upper-banner-inside{padding-top:250px;}
+.title{font-size:42px; padding-top:15px;}
+.steps{padding:0;}
+.socialcontainer{padding-left:0px; padding-right:0px;}
+}
+@media(min-width:480px) and (max-width:991px){
+	.step-images{margin: 10px;}
+	.title{padding-top:50px;}
+	
+}
+@media(min-width:992px) and (max-width:1199px){
+	.title-font{font-size:29px;}
+	.title{padding-bottom:20px;}
+	
+}
+@media(max-width:400px){
+	.title-font{font-size:30px;}
+	.title{padding-bottom:20px;}
+	.box{padding-left:25px; padding-right:25px;}
+	.largetitle{font-size:70px;}
+	.instagram{width:50px;}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+        .title-font{font-size:30px;}
+}

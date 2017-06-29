@@ -1,0 +1,110 @@
+.morebox {
+  font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#4A4A4A;
+  padding-right:30px !important;
+  margin:40px 0px  60px 0px !important;
+  -webkit-transition-duration: 150ms; /* Safari */
+  transition-duration: 150ms;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.more-row{
+  background-color:#EEEEEE;
+}
+
+.more-row a{
+  text-decoration:none;
+}
+
+.morebox .views-field-field-featured-image img {
+  border:1px solid #979797;
+  margin-bottom:24px;
+  padding-bottom: 0;
+}
+
+.morebox .views-field-title span a {
+  color: #255987;
+  font-weight:600;
+  font-size:24px;
+  padding-bottom:15px;
+}
+
+.morebox .field-content {
+  font-weight:500;
+  font-size:15px;
+  line-height:24px;
+  padding-left:3px !important;
+  padding-right:3px !important;
+  margin:0px 0px;
+}
+
+
+/* More For You */
+.more-row{background-color:#EEEEEE;}
+
+.more-row a{
+  text-decoration:none;
+}
+
+/* Morebox Hover */
+
+.morebox:hover .views-field-field-featured-image img {border:1px solid #023448;}
+
+.morebox:hover .views-field-title span a {color:#023448;}
+
+.morebox:hover .views-field-field-short-summary .field-content {color:#023448;}
+
+.morebox:hover{
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+/* Morebox active */
+
+.morebox:active .views-field-field-featured-image img {border:1px solid #023448;}
+
+.morebox:active .views-field-title span a {color:#023448;}
+
+.morebox:active .views-field-field-short-summary .field-content {color:#023448;}
+
+.morebox:active{
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:767px) and (max-width:992px) {
+  .more-row .views-row-3 {
+    clear: left;
+  }
+}
+
+@media only screen and (max-width: 979px) and (min-width: 767px) {
+  .more-row .container {
+    width: 750px !important;
+  }
+  .morebox.views-row-even {
+    padding:0px 0px 0px 0px !important;
+  }
+}
+
+/* No greater than 996px, no less than 704px */
+@media screen and (min-width: 767px) and (max-width: 996px) {
+  .morebox-margin-fix{ padding:0px 0px 0px 0px !important;}
+  .morebox .views-field-field-featured-image img{height:155px;}
+
+}
+
+/* No greater than 704px, no less than 230px */
+@media screen and (min-width: 230px) and (max-width: 767px) {
+  .morebox{padding-right:30px !important; padding-left:30px !important;}
+}
+
+/* No greater than 305px*/
+@media only screen and (max-width: 305px) {
+  .morebox{padding-right:30px !important; padding-left:30px !important;}
+}

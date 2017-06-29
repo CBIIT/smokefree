@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Repository feature.
+ */
+
+include_once 'content_repository.features.inc';

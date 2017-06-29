@@ -1,0 +1,478 @@
+*{margin:0; padding:0;}
+
+/* Layout 0: Old Smartphone ----------- */
+@media only screen
+	and (max-width : 319px) {
+	BODY {
+		background-color:    #666666 !important;
+		background-image:    url('../images/background/smokefree-people-walking-bg1-mobile-portrait-480x2290.jpg') !important;
+		background-repeat:   repeat-y;
+		background-size:     auto 100%;
+	}
+	.node-type-page .span9 article #myTab li, .node-type-page .span9 article .nav-pills li,
+	.node-type-veterans .span9 article #myTab li, .node-type-page .span9 article .nav-pills li {
+		list-style-image: none;
+		min-width: 100% !important;
+	}
+	.node-type-page .row-fluid .span9,
+	.node-type-veterans .row-fluid .span9 {
+		margin: 1em 0 0 1.61517%;
+		width: 100% !important;
+	}
+	.quizzes_Img  {
+		float:none !important;
+	}
+	.smokeFree_Img {
+		float:none !important;
+	}
+	.features_layout {
+		margin-bottom: 5px;
+		padding: 0 !important;
+	}
+	.ext {
+		background: none repeat scroll;
+		border-radius: 2px;
+		color: #FFFFFF;
+		display: inline-block;
+		float: right;
+		padding: 5px 10px;
+		text-align: center;
+		width: 100%;
+		margin-bottom:10px;
+	}
+	.ads-page-contain .ext {
+		float: none;
+		padding: 0;
+		width: 0;
+		display: inline;
+	}
+	.smaller_grid li {
+		background: url("/sites/new.smokefree.gov/themes/sfg/images/home/smokefree-homepage-photo-caption-bg-2x43") repeat scroll 0 0 rgba(0, 0, 0, 0);
+		border: 1px dotted #CCCCCC;
+		float: left;
+		margin-bottom: 5px;
+		width: 95% !important;
+	}
+	
+	/* Logo */
+	.logo-container {
+		float:               none;
+	}
+	.logo-container A {
+		width:               75%;
+	}
+	.logo {
+		background-position: 0 50%;
+		background-size:     100% auto;
+		margin-left: 0%;
+		margin-top:          0;
+		width:       100%;
+	}
+	.facebook-icon {
+		padding-left:0;
+	}
+	.twitter-icon {
+		padding-left: 0;
+		padding-top: 2em;
+	}
+	
+	/* Mobile button */
+	.mobile-btn {
+		display:             block;
+		margin-top:          1em;
+		min-width:           20px;
+		position:            relative;
+		right:               2.5%;
+		top:                 0;
+	}
+	.mobile-btn IMG {
+		float:               right;
+	}
+	
+	/* Nav bar (hidden) */
+	.navbar {
+		display: none;
+		opacity: 0;
+	}
+	
+	/* Tag line */
+	.tagline {
+		border-bottom:       1px solid #626C68;
+		border-top:          1px solid #626C68;
+		position:            relative;
+		display:none;
+	}
+	.tagline P {
+		font-size:           1.085em;
+		margin:              0 2.5%;
+		max-height:          inherit;
+		min-height:          19px;
+		padding:             0.6875em 0;
+		z-index:             2;
+		display:none;
+	}
+	.tagline P STRONG {
+		font-weight:         bold;
+	}
+	.tagline_responsive {
+		background-image: url("../images/header/smokefree-hd5-tagline-bg-4x65.png");
+		background-repeat: repeat;
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+		margin-bottom:4%;
+	}
+	.tagline_responsive P {
+		font-size:           1.35714em;
+		margin:              0 2.5%;
+		max-height:          inherit;
+		min-height:          19px;
+		padding:             0.6875em 0;
+		z-index:             2;
+	}
+	.tagline_responsive a STRONG {
+    font-family: 'cabinsemibold', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #424242;
+	}
+
+	.tagline_responsive a:hover {
+    color: #424242;
+	}
+	.quitPlan_Img {
+		float: none;
+	}
+	h4, .h4 {
+		font-size: 16px !important;
+		font-weight: bold !important;
+	}
+	.features_label {
+		margin-left: 2% !important;
+		width: 100% !important;
+	}
+	.rule {
+		display:none;
+	}
+	.img-layout {
+		float: left;
+		padding: 10%;
+		width: 25%;
+	}
+	.carousel {display:none;}
+	
+	/* Bottom header border (hidden) */
+	.nav-bottom-border {	
+		display:             none;
+		float:               none;
+		opacity:             0;
+		padding:             0;
+		visibility:          hidden;
+	}
+	
+	.content-container {
+		line-height:         1.55em;
+		margin:              1em  0;
+		width:               100%;
+	}
+	
+	.content-container .content-container {
+		margin:              4.583333%;
+		width:               90.83333%;
+	}
+	
+	.content-container h1 {
+		margin-left: 0.5em;
+	}
+	
+	.logobar {
+		padding-top: 0px;
+	}
+	
+	.logobar .half-width {
+		border-bottom: 1px solid #043F58;
+		width: 100%;
+	}
+	
+	.desktop-site,
+	.veterans-desktop-sites {
+		display:none;
+	}
+	
+	.logobar .half-width-sites {
+		width: 100% !important;
+	}
+	
+	.social-container {
+		display: inline;	
+		float: left;
+		width: 26.666%;
+		padding-right: .4em;
+	}
+	.logobar .social {
+		margin-bottom: 42px;
+		margin-top: 16px;
+	}
+	.logobar .social img {
+		margin-left: 0;
+	}
+	.logobar .links img {
+		float: none;
+	}
+	.links-container {
+		float: left;
+	}
+	.links-container-txt {		
+		float: left;
+		padding-top: 2em;
+		text-align: center;
+		width: 30.668%;
+		display:none;
+	}
+	.links-container-qp {
+		float: left;
+		padding-top: 2em;
+		text-align: center;
+		width: 25.666%;
+	}
+	.logobar .links {
+		display: inline;
+		/*display:none;*/
+		margin-bottom: 7px;
+		margin-top: 5px;
+		position: relative;		
+	}
+	.logobar .links a {
+		color: #fff;
+		font-size: 0.857em;
+		text-decoration: none;
+	}
+	.logobar .links a:hover {
+		color: #fff;
+	}
+	.sites-container.smokefree-teen {
+		margin-left: 1em;
+	}
+	.sites-container.smokefree-espanol {
+		margin-left: 1.2em;
+	}
+	.sites-container.smokefree-veterans {
+		margin-left: 0em !important;
+	}
+	.sites-container {
+		float: left;
+		margin-bottom: 25px;
+		margin-top: 9px;
+		width: 24.5%;
+	}
+	.smokefree-women {
+		margin-left: .5em;
+	}
+	.logobar .sites {
+		opacity: 0;
+	}
+	.bottom-border {
+		border-bottom: 7px solid #264C59;
+		display: block; 	
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+	.footer {
+		text-align: left;
+	}
+	.footer .footer-links ul {
+		line-height: 1.428em;
+		margin-bottom: 10px;
+	}
+	.footer .footer-links li {
+		display: block;
+		margin-left: 5px;
+	}
+	.footer .footer-links span {
+		opacity: 0;
+	}
+	#searchbox-footer {
+		width: 76.56250%;
+	}
+	#search-footer-container {
+		margin-top:20px;
+		margin-bottom:20px;
+		margin-left:20px;
+	}
+	#search-header {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.page-now-leaving .main-container{
+		padding-top: 0;
+	}
+	.sidebar {
+		line-height:         1.55em;
+		margin:              1em 4.583333%;
+		min-height:          auto;
+		width:               90.83333%;
+	}
+	.sidebar-image {
+		margin-bottom:       0;
+		margin-right:        2.4725%;
+		width:               41.621%;
+	}
+	.node-type-webform .row-fluid .content-container, 
+	.page-node-done .row-fluid .content-container {
+		margin:              4.5833%;
+		width:               90.833%;
+	}
+	.twitter-icon:hover .externalllinktooltip-twitter {
+		display:             block; /* Necessary to work in IE7 & IE8 */
+		left:                25px;
+		top:                 35px;
+	}
+	
+	/* Mobile menu navigation */
+	.container-page .nav-collapse {
+		display:             block;
+	}
+	.container-page .nav-collapse.collapse {
+		height:              0;
+		display:             block;
+		overflow:            inherit;
+		width:               100%;
+	}
+	.container-page .nav-collapse.collapse.in {
+		height:              auto;
+	}
+	.dropdown-menu {
+		border:              0;
+		margin-top:          0;
+	}
+	#slides{
+		display:            none !important;
+	}
+	#slidesjs-container{
+		display:           none !important;
+	}
+	.container_slideshow{
+		display: 		   none !important;
+		
+	}
+	
+	/*****************************************************
+	Content page styles
+	*****************************************************/
+	.node-type-page .row-fluid .span9,
+	.node-type-veterans .row-fluid .span9 {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		width:               96%;
+		display: inline-block;
+	}
+	.node-type-page .row-fluid .span9.no-sidebar,
+	.node-type-veterans .row-fluid .span9.no-sidebar  {
+		margin: 0 2.4725%;
+		width: 94.8414%;	
+	}
+	.node-type-page .row-fluid .span9 .page-content-container,
+	.node-type-veterans .row-fluid .span9 .page-content-container{
+		margin:              4.583333%;
+		width:               90.83333%;
+		clear:				 left;
+	}
+	.img-container_2{padding:25px; background-color:#ffffff !important;}
+	.contentLayout1{width:100% !important;}
+	.img-layout{width:auto !important;}
+	.grid {display:none;}
+	.features {margin:auto !important;}
+	
+	.sidebar {
+		line-height:         1.55em;
+		margin:              1em 4.583333%;
+		min-height:          auto;
+		width:               90.83333%;
+	}
+	.node-type-page .span3,
+	.node-type-veterans .span3 {
+		background-color: transparent;
+	}
+	aside .sidebar-image, .link-area {
+		margin: 0 2.4725%;
+		width: 94.8414%;
+	}
+	.content-container h1 {
+		margin-left: 0;
+	}
+	.grid_layout{
+		display:none;
+	}
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li,
+	.node-type-veterans .span9   article #myTab li,
+	.node-type-page .span9 article .nav-pills li,
+	.node-type-veterans .span9 article .nav-pills li {
+		min-width: 100%;
+	}
+	.nav-pills li a {
+		box-shadow: none !important;
+	}
+
+	.row-fluid .SecondCol {
+		margin-left: 0;
+	}
+
+	.ad-btn {
+		position: relative;
+		float: none;
+	}
+
+	.ads-page-contain .txtR {
+		margin-left: 0;
+	}
+
+	.ads-page-contain .bannerText {
+		top: 2%;
+	}
+
+	.ads-page-contain img.tb2 {
+		padding-bottom: 70px;
+	}
+
+
+	.ads-page-contain .bannerText p#everyDay {
+    font-size: 1em;
+    font-weight: bold;
+	}
+
+	.ads-page-contain .bannerText p#sloganText {
+	    font-size: .8em;
+	}
+
+	.ads-page-contain .shareButtons {
+		right: 0;
+		bottom: 10px;
+	}
+
+	.ads-page-contain .shareButtons p {
+		font-size: 14px;
+	}
+
+	.ads-page-contain .shareButtons img {
+		width: 20px;
+	}
+
+	.ads-page-contain .shareButtons img.fbShare {
+		width: 10px;
+	}
+
+	.page-mysmokefree button.btn.form-submit {
+		width:200px;
+		height: auto;
+		display: block;
+		float: none;
+		margin-right: 30%;
+		margin-bottom: 35px;
+		margin-left: 0;
+	}
+}

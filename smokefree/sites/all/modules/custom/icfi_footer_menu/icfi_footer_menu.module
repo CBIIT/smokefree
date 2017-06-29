@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Footer Menu feature.
+ */
+
+include_once 'icfi_footer_menu.features.inc';

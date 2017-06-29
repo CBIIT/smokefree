@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Section Landing feature.
+ */
+
+include_once 'icfi_section_landing.features.inc';
+
+/**
+ * Implements hook_node_view().
+ */
+function icfi_section_landing_node_view($node, $view_mode) {
+  // Check field_section value for section_landing pages and switch the context
+  // if it is set.
+  if ($view_mode == 'full' && $node->type == 'section_landing') {
+    if (isset($node->field_section[LANGUAGE_NONE][0]['value']) && $node->field_section[LANGUAGE_NONE][0]['value'] != 'default') {
+      $context = context_load($node->field_section[LANGUAGE_NONE][0]['value']);
+      if ($context) {
+        context_set('context', $context->name, $context);
+      }
+    }
+  }
+}

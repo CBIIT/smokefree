@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tabbable {
+    margin-right: 1em;
+}
+.accordion-group {
+	margin-bottom: 0;
+}
+.accordion-heading A,
+.accordion-headingAlt A {
+    color: #5c5c5c;
+	position: relative;
+}
+.accordion-heading .the_icon1,
+.accordion-headingAlt .the_icon2 {
+	display: block;
+
+   	margin: 1px 2px 1px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 36px;
+}
+.accordion-heading { 
+	background-color: #f0f0f0;
+	border-radius: 4px;
+    	color: #5c5c5c;
+    	text-decoration: none;
+}
+.accordion-heading:hover {
+	background-color: #fff;
+     color: #5c5c5c;
+     text-decoration: none;    
+}
+.accordion-headingAlt {
+	background-color: #e3e3e3;
+	border-radius: 4px;
+     color: #5c5c5c;
+     text-decoration: none;
+}
+.accordion-headingAlt:hover {
+	background-color: #fff;
+     color: #5c5c5c;
+     text-decoration: none;
+}
+.accordion-heading h2 {
+    margin: 0;
+    line-height: 1em;
+}
+.accordion-headingAlt h2 {
+    margin: 0;
+    line-height: 1em;
+}
+.accordion-heading h3 {
+    margin: 0;
+    line-height: 1em;
+}
+.accordion-headingAlt h3 {
+    margin: 0;
+    line-height: 1em;
+}
+.accordion-inner h3 {
+    margin: 0;
+    line-height: 1.25em;
+}
+.accordion-heading .accordion-toggle {
+     display: block;
+	padding-bottom: 0;
+     padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 0;
+}
+.accordion-toggle.opened {
+     background: none repeat scroll 0 0 #0a5471;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+}
+.accordion-toggle.opened:hover {
+     background: none repeat scroll 0 0 #0a5471;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+}
+.accordion-inner {
+     background: none repeat scroll 0 0 #fff;
+     border-bottom-left-radius: 4px;
+     border-bottom-right-radius: 4px;
+     color: #5c5c5c;
+     margin-left: 3.5%;
+}
+.arrow-no-js {
+     background: url("/sites/all/themes/sfg/images/content/smokefree-homepage-arrw-rgt-grn-29x29.png") repeat scroll 0 -29px transparent;
+     height: 29px;
+     margin-bottom: 8px;
+     margin-right: 18px;
+}
+.arrow {
+     background: url("/sites/default/files/images/health-effects/arrow-sprite.png") repeat scroll 0 -29px transparent;
+     height: 28px;
+     margin-bottom: 10px;
+     margin-right: 18px;
+}
+.accordion-toggle .arrow {
+     background: url("/sites/default/files/images/health-effects/arrow-sprite.png") repeat scroll 0 0px transparent;
+     height: 28px;
+     margin-right: 18px;
+}
+.accordion-toggle.opened .arrow {
+     background: url("/sites/default/files/images/health-effects/arrow-sprite.png") repeat scroll 0 -29px transparent;
+     height: 28px;
+     margin-righit: 18px;
+}
+.accordion-toggle.opened h2 a {
+	color: #fff;
+}
+.accordion-headingAlt .accordion-toggle {
+	display: block;
+	padding-left: 1%;
+	padding-right: 1%;  
+}
+.accordion-heading a,
+.accordion-headingAlt a {
+	color: #5c5c5c;
+	font-weight: bold;
+	margin-bottom: 2px;
+	line-height: 0.5em;
+}
+.accordion-heading a .accordion-toggle.opened,
+.accordion-headingAlt a .accordion-toggle.opened {
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 2px;
+	line-height: 0.5em;
+}
+.node-type-page .row-fluid .span9 .accordion-heading a,
+.node-type-page .row-fluid .span9 .accordion-headingAlt a,
+.node-type-page .row-fluid .span9 .accordion-heading a:visited,
+.node-type-page .row-fluid .span9 .accordion-headingAlt a:visited  {
+	color: #5c5c5c;
+	font-weight: bold;
+	margin-bottom: 2px;
+	line-height: 0.5em;
+}
+.node-type-page .row-fluid .span9 .accordion-heading a.accordion-toggle.opened,
+.node-type-page .row-fluid .span9 .accordion-headingAlt a.accordion-toggle.opened{
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 2px;
+	line-height: 0.5em;
+}
+.collapse.in,
+.collapse.opened {
+	height: auto !important;
+}
+ARTICLE DIV {
+     padding-left: 0;
+}
+.tab-content .tab-pane IFRAME {  
+	border: medium none;  
+	display: block;  
+	min-height: 60em;
+	overflow: hidden; 
+	width: 90%;
+}
+.nav-pills .active a,
+.nav-pills .active a:hover,
+.nav-pills .active a:focus {
+	background-color: #608018;
+	color: #fff !important;
+	text-decoration: none;
+}
+.nav-pills .non-active a,
+.nav-pills .non-active a:hover,
+.nav-pills .non-active a:focus {
+	background-color: #e3e3e3;
+	color: #5c5c5c;
+	text-decoration: none;
+}
+.nav-pills li a {
+    background-color: #e3e3e3;
+    box-shadow: 2px 2px 2px #AAA;
+    border-radius: 5px 5px 5px 5px;
+    color: #5c5c5c;
+    margin-bottom: 2px;/*
+    margin-top: 10px;*/
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.nav-pills a strong,
+.nav-pills a:hover strong,
+.nav-pills a:focus strong {
+	color: #5c5c5c;
+	line-height: 2em;
+}
+.nav-pills .active a strong,
+.nav-pills .active a:hover strong,
+.nav-pills .active a:focus strong {
+	color: #FFFFFF;
+	line-height: 2em;
+}
+.nav-pills br {
+	line-height: -12px;
+}
+.nav-pills p {
+    line-height: 0;
+}
+.nav-tabs li a h2, .nav-pills li a h2 {
+	line-height: 1em;
+	margin: .5em 0;
+}
+.nav-tabs li a, .nav-pills li a {
+    margin-right: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+	line-height: 1.2em;
+}
+.nav-pills br, .nav-pills p {
+	line-height: 0;
+}
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+    color: 5c5c5c;
+    line-height: 14px;
+    margin-right: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.nav-tabs ul {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+IMG {
+    vertical-align: middle;
+}
+TD {  
+	padding: 0;  
+	text-align: center;    
+}  
+.iframe-container {  
+	display: block;  
+	overflow: hidden;  
+	width: 100%;  
+}

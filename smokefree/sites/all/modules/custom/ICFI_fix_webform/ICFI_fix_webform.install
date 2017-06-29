@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function ICFI_fix_webform_install() {
+    $webform_version = drupal_get_installed_schema_version('webform');
+    if ($webform_version == -1) {
+      drupal_set_installed_schema_version('webform', 7321);
+      db_drop_table('webform_conditional');
+      db_drop_table('webform_conditional_rules');
+      db_drop_table('webform_conditional_actions');
+    }
+    $print_version = drupal_get_installed_schema_version('print');
+    if ($print_version == -1) {
+      drupal_set_installed_schema_version('print', 7001);
+    }
+}

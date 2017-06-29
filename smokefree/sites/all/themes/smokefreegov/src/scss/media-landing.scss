@@ -1,0 +1,429 @@
+.node-type-media-landing .main-container {
+  background-color: #ffffff;
+}
+
+.node-type-media-landing .header_banner {
+  position: relative;
+}
+
+.header_banner_logo {
+  background-image: url(/sites/all/themes/smokefreegov/images/header/smokefree-hd5-tagline-bg-4x65.png);
+  background-repeat: repeat;
+  display: block;
+  float: left;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  padding-left: 10%;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.node-type-media-landing .header_blurb {
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 1em;
+}
+
+.node-type-media-landing .header_blurb_headline {
+  display: block;
+  font-weight: bold;
+}
+
+.node-type-media-landing .app_promo_body,
+.node-type-media-landing .txt_promo_body {
+  text-align: center;
+}
+
+.node-type-media-landing .app_promo_body_headline,
+.node-type-media-landing .txt_promo_body_headline,
+.node-type-media-landing .more_articles_headline,
+.node-type-media-landing .get_social_body_headline {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 1em;
+  color: #4c5870;
+}
+
+.node-type-media-landing .get_social_body_subheadline {
+  color: #4c5870;
+}
+
+.node-type-media-landing .app_promo_image img,
+.node-type-media-landing .txt_promo_image img {
+  display: inline;
+}
+.node-type-media-landing .app_promo_image_mobile img,
+.node-type-media-landing .txt_promo_image_mobile img {
+  display: none;
+}
+
+.node-type-media-landing img.app_promo_body_image.quitguide_image {
+    width: 20%;
+    margin-top: 1em;
+}
+
+.node-type-media-landing .app_buttons {
+  margin-top: 1em;
+}
+
+.node-type-media-landing .app_buttons a img {
+  width: 80%;
+}
+
+.node-type-media-landing .txt_promo_body_headline span {
+  display: block;
+}
+
+.node-type-media-landing .txt_promo_body_text_signup {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.node-type-media-landing .txt_promo_body_text {
+  padding: 0px 1.5em;
+}
+
+.node-type-media-landing .txt_promo_image {
+  width: 113%;
+}
+
+.node-type-media-landing .txt_promo_image img {
+  border: white solid 1.5em;
+  margin-left: -6em;
+  margin-top: 4em;
+}
+
+.node-type-media-landing .apps_text_promos,
+.node-type-media-landing .more_articles,
+.node-type-media-landing .get_social {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.node-type-media-landing .more_articles {
+  background-color: #f6f7f8;
+  padding-bottom: 3em;
+}
+.node-type-media-landing .more_articles {
+  text-align: center;
+}
+
+.node-type-media-landing .more_articles_link {
+  display: block;
+  text-align: center;
+  border-right: solid 2px #b7b7b7;
+  height: 7em;
+  width: 100%;
+  background-image:url("/sites/all/themes/smokefreegov/images/arrow_black.png");
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  padding-top: .5em;
+}
+
+.node-type-media-landing .more_articles_link:hover {
+  background-color: #e7eef6;
+  background-image:url("/sites/all/themes/smokefreegov/images/arrow_blue.png");
+  text-decoration: none;
+}
+
+.node-type-media-landing .more_articles_link.last {
+  border: none;
+}
+
+.node-type-media-landing .get_social_body {
+  text-align: center;
+}
+
+.node-type-media-landing .get_social_body_subheadline {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.node-type-media-landing .get_social_body_button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.node-type-media-landing .get_social_image {
+  padding: 5px;
+}
+
+.node-type-media-landing .app_promo_body,
+.node-type-media-landing .txt_promo_body,
+.node-type-media-landing .get_social_instagram {
+  padding-left: 0;
+  padding-right: 3em;
+}
+
+.node-type-media-landing .btn {
+  position: static;
+  float: none;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: #333333;
+  background-color: #ffffff;
+  background-image:none;
+  /*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;*/
+  border: 2px solid #acacac !important;
+  border-radius: 4px;
+  /*border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);*/
+  white-space: nowrap;
+  padding: 4px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 70%;
+  height: auto;
+  text-decoration: none;
+
+}
+
+.node-type-media-landing .apple_bad,
+.node-type-media-landing .android_good {
+  display: inline-block;
+  margin: auto;
+}
+
+.node-type-media-landing .logobar {
+  display:none;
+}
+
+.node-type-media-landing a.more_articles_link {
+    color:#000000;
+}
+
+
+/********* Responsiveness Starts Here *********/
+
+@media (max-width: 767px) {
+  .node-type-media-landing .header_blurb {
+    position: static;
+    display: inline;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .node-type-media-landing .header_blurb_headline {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  .node-type-media-landing .header_blurb_body {
+    display: block;
+    text-align: center;
+  }
+
+  .node-type-media-landing .txt_promo_image img {
+    border: none;
+    margin-left: 0px;
+  }
+
+  .node-type-media-landing .app_promo_image_mobile img,
+  .node-type-media-landing .txt_promo_image_mobile img,
+  .node-type-media-landing .get_social_image img {
+    display: inline;
+  }
+
+  .node-type-media-landing .app_promo_image img,
+  .node-type-media-landing .txt_promo_image img {
+    display: none;
+  }
+
+  .node-type-media-landing .more_articles_link {
+    border-bottom: solid 1px #b7b7b7;
+    border-right: none;
+  }
+
+  .node-type-media-landing .more_articles_1,
+  .node-type-media-landing .more_articles_2,
+  .node-type-media-landing .more_articles_3,
+  .node-type-media-landing .more_articles_4,
+  .node-type-media-landing .more_articles_5 {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+
+/*********** Responsive Tablet View - Tiffany ************/
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+    .node-type-media-landing div.app_promo_image img.img-responsive, .node-type-media-landing div.txt_promo_image img.img-responsive {
+        margin-top:-2.5em;
+    }
+    .node-type-media-landing div.app_promo_image div.field-item.even, .node-type-media-landing div.txt_promo_image div.field-item.even {
+      overflow: hidden;
+      height: 10em;
+
+    }
+
+    .node-type-media-landing div.app_promo_image_mobile img.img-responsive, .node-type-media-landing div.txt_promo_image_mobile img.img-responsive {
+      display:none !important;
+    }
+
+    .node-type-media-landing .quitstart_image {
+        margin-top: 1em;
+        width: 25%;
+    }
+
+    .node-type-media-landing .app_promo_body, .node-type-media-landing .txt_promo_body, .node-type-media-landing .get_social_instagram {
+      padding-right:0;
+    }
+
+    .node-type-media-landing .header_blurb {
+      padding:0;
+    }
+
+    .node-type-media-landing .header_blurb_headline {
+      font-size: 1em;
+      text-align: left;
+    }
+
+    .node-type-media-landing .header_blurb_body {
+      text-align: left;
+      padding: 0 1em;
+    }
+
+    .node-type-media-landing .header_banner_logo {
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+    }
+
+    .node-type-media-landing .header_banner_logo a img {
+      padding-left: 5%;
+      width: 30%;
+    }
+
+    .node-type-media-landing .app_promo_body_headline,
+    .node-type-media-landing .txt_promo_body_headline,
+    .node-type-media-landing .more_articles_headline,
+    .node-type-media-landing .get_social_body_headline {
+      font-size: 2em;
+    }
+
+    .node-type-media-landing div.get_social_images.col-sm-4 img.get_social_image {
+      width: 50%;
+      float: left;
+    }
+    .node-type-media-landing .more_articles_link {
+      margin-top: 2em;
+    }
+
+    .node-type-media-landing a.more_articles_link {
+      font-size: 18px;
+    }
+    
+    .node-type-media-landing .more_articles_link {
+    background-image: url("/sites/all/themes/smokefreegov/images/arrow_black.png");
+    background-position: 50% 70%;
+  }
+
+}
+
+@media only screen and (min-width : 767px) and (max-width : 1025px) {
+
+.node-type-media-landing .header_blurb {
+  box-shadow: 2px 2px 3px rgb(51, 51, 51);
+}
+
+.node-type-media-landing .col-sm-offset-2 {margin-left:3%;}
+
+.node-type-media-landing .col-sm-4 {width: 47%;}
+
+.node-type-media-landing .txt_promo_body { 
+    min-width: 100%;
+    padding-left:0;
+    padding-right:0;
+
+  }
+
+.node-type-media-landing .txt_promo_body_text {
+  padding: 0px 1.5em;
+}
+
+.node-type-media-landing .app_promo_body {
+    min-width: 100%;
+    padding-left:0;
+    padding-right:0;
+}
+
+.node-type-media-landing .app_promo_body img {
+    width: 14%;
+    margin-right: 4em;
+    margin-top: 1em;
+}
+
+.node-type-media-landing .app_promo_body_headline {
+  margin-left: -2.5em;
+  padding: 0.5em;
+}
+
+.node-type-media-landing .app_buttons a img {
+  width: 70% !important;
+  float: left;
+  margin-right:0;
+}
+
+.node-type-media-landing .txt_promo_image {
+  width: 113%;
+}
+
+.node-type-media-landing .txt_promo_image img {
+    border: 1em solid #FFF;
+    margin-left: -6em;
+    margin-top: 0.5em;
+}
+
+.node-type-media-landing div.app_promo_body_text.quitguide_text, .node-type-media-landing div.app_promo_body_text.quitstart_text  {
+    text-align: center;
+    margin-bottom: 0;
+    padding-right: 3.5em;
+}
+
+.node-type-media-landing .app_buttons {
+  margin-top: 0.5em;
+}
+
+}
+
+/*********** Make header banner 100% so it takes up full screen at wide resolutions 4/29/2016 - DEG ************/
+.node-type-media-landing .field-name-field-header-banner img {
+  width: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+; $Id: $
+name = Webform Overrides
+description = Adds functionality to the webforms on the espanol website.
+core = 7.x
+package = MMG Inc.

@@ -1,0 +1,2403 @@
+/* REMOVE FOR PRODUCTION */
+#layout_desc {
+	visibility:       hidden;
+}
+
+/* REMOVE FOR PRODUCTION */
+#layout_desc:after {
+	background-color: #cccccc;
+	content:          'NO LAYOUT SPECIFIED.';
+	display:          block;
+	font-size:        .8em;
+	font-weight:      bold;
+	line-height:      1.2em;
+	padding:          4px;
+	position:         absolute;
+	left:             0;
+	top:              4px;
+	visibility:       visible;
+	z-index:          100;
+}
+
+/* Layout 0: Old Smartphone ----------- */
+@media only screen
+	and (max-width : 319px) {
+	BODY {
+		background-color:    #424242;
+		background-image:    url('../images/background/smokefree-people-walking-bg1-mobile-portrait-480x2290.jpg');
+		background-repeat:   repeat-x;
+		background-size:     100% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:          3px solid blue;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:               blue;
+		content:             'Layout 0: Old Smartphones';
+	}
+	
+	/* Logo */
+	.logo-container {
+		float:               none;
+	}
+	.logo-container A {
+		width:               75%;
+	}
+	.logo {
+		background-position: 0 50%;
+		background-size:     100% auto;
+		margin-left:         2.5%;
+		margin-top:          0;
+		width:               95%;
+	}
+	.pinterest-icon {
+		padding-left:0;
+	}
+	
+	.twitter-icon {
+		padding-left: 0;
+		padding-top: 2em;
+	}
+	
+	/* Mobile button */
+	.mobile-btn {
+		display:             block;
+		float:               right;
+		margin-top:          1em;
+		min-width:           20px;
+		position:            relative;
+		right:               2.5%;
+		top:                 0;/*
+		width:               22.5%;*/
+	}
+	.mobile-btn IMG {
+		float:               right;
+	}
+	
+	/* Nav bar (hidden) */
+	.navbar {
+		display: none;
+		opacity: 0;
+	}
+	
+	/* Tag line */
+	.tagline {
+		border-bottom:       1px solid #626C68;
+		border-top:          1px solid #626C68;
+		position:            relative;
+	}
+	.tagline P {
+		font-size:           1.085em;
+		margin:              0 2.5%;
+		max-height:          inherit;
+		min-height:          19px;
+		padding:             0.6875em 0;
+		z-index:             2;
+	}
+	.tagline P STRONG {
+		font-weight:         bold;
+	}
+	
+	/* Bottom header border (hidden) */
+	.nav-bottom-border {	
+		display:             none;
+		float:               none;
+		opacity:             0;
+		padding:             0;
+		visibility:          hidden;
+	}
+	.content-container {
+		line-height:         1.55em;
+		margin:              1em  0;
+		width:               100%;
+	}
+	.content-container .content-container {
+		margin:              4.583333%;
+		width:               90.83333%;
+	}
+	.content-container h1 {
+		margin-left: 0.5em;
+	}
+	.logobar {
+		padding-top: 0px;
+	}
+	.logobar .half-width {
+		border-bottom: 1px solid #adadab;
+		width: 100%;
+	}
+	.logobar .half-width-sites {
+		width: 100%;
+	}
+	.social-container {
+		border-right: 1px solid #adadab;
+		display: inline;	
+		float: left;
+		width: 26.666%;
+		padding-right: .4em;
+	}
+	.logobar .social {
+		margin-bottom: 42px;
+		margin-top: 16px;
+	}
+	.logobar .social img {
+		margin-left: 0;
+	}
+	.logobar .links img {
+		float: none;
+	}
+	.links-container {
+		float: left;
+	}
+	.links-container-txt {		
+		float: left;
+		padding-top: 2em;
+		text-align: center;
+		width: 36.668%;
+	}
+	.links-container-qp {
+		float: left;
+		padding-top: 2em;
+		text-align: center;
+		width: 25.666%;
+	}
+	.logobar .links {
+		display: inline;
+		margin-bottom: 7px;
+		margin-top: 5px;
+		position: relative;		
+	}
+	.logobar .links a {
+		font-size: 0.857em;
+		text-decoration: none;
+	}
+
+	.sites-container.smokefree-teen {
+		margin-left: 1em;
+	}
+	.sites-container.smokefree-espanol {
+		margin-left: 1.2em;
+	}
+	/* coode for using a spacer instead of the image for better printability.  It's not working currently */
+	/*.sites-container .smokefree-women{
+		background-image: url('../images/footer/smokefree-ftr5-sf-women-68x34.png');
+		background-repeat: no-repeat;
+		background-color: transparent;
+		width: 68px;
+		height: 34px;
+		z-index: 1000;
+		text-indent: -9999px;
+	}
+	.sites-container .smokefree-women img,
+	.sites-container .smokefree-women a
+	{
+		width: 68px;
+		height: 34px;
+	}
+	.sites-container .smokefree-teen {
+		background-image: url('../images/footer/smokefree-ftr6-sf-teen-68x34.png');
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}*/	
+	.sites-container {
+		float: left;
+		margin-bottom: 25px;
+		margin-top: 9px;
+		width: 22.5%;
+	}
+	.smokefree-women {
+		margin-left: .5em;
+	}
+	.logobar .tablet-sites {
+		display: inline;
+		float: right;
+		opacity: 100;
+		position: relative;
+	}
+	.logobar .sites {
+		opacity: 0;
+	}
+	.bottom-border {
+		border-bottom: 7px solid #264C59;
+		display: block; 	
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+	.footer {
+		text-align: left;
+	}
+	.footer .footer-links ul {
+		line-height: 1.428em;
+		margin-bottom: 10px;
+	}
+	.footer .footer-links li {
+		display: block;
+		margin-left: 5px;
+	}
+	.footer .footer-links span {
+		opacity: 0;
+	}
+	#searchbox-footer {
+		width: 76.56250%;
+	}
+	#search-header {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.page-now-leaving .main-container{
+		padding-top: 0;
+	}
+	.sidebar {
+		line-height:         1.55em;
+		margin:              1em 4.583333%;
+		min-height:          auto;
+		width:               90.83333%;
+	}
+	.sidebar-image {
+		margin-bottom:       0;
+		margin-right:        2.4725%;
+		width:               41.621%;
+	}
+	.node-type-webform .row-fluid .content-container, 
+	.page-node-done .row-fluid .content-container {
+		margin:              4.5833%;
+		width:               90.833%;
+	}
+	.twitter-icon:hover .externalllinktooltip-twitter {
+		display:             block; /* Necessary to work in IE7 & IE8 */
+		left:                25px;
+		top:                 35px;
+	}
+	
+	/* Mobile menu navigation */
+	.container-page .nav-collapse {
+		display:             block;
+	}
+	.container-page .nav-collapse.collapse {
+		height:              0;
+		display:             block;
+		overflow:            inherit;
+		width:               100%;
+	}
+	.container-page .nav-collapse.collapse.in {
+		height:              auto;
+	}
+	.dropdown-menu {
+		border:              0;
+		margin-top:          0;
+	}
+}
+
+/* Layout 1: Smartphone ----------- */
+@media only screen 
+	and (min-width : 320px)
+	and (max-width : 480px) {
+	BODY {
+		background-color:    #424242;
+		background-image:    url('../images/background/smokefree-people-walking-bg1-mobile-portrait-480x2290.jpg');
+		background-repeat:   repeat-x;
+		background-size:     100% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:          3px solid red;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:               red;
+		content:             'Layout 1: Smartphone';
+	}
+	
+	/* Logo */
+	.logo-container {
+		float:               none;
+	}
+	.logo-container A {
+		width:               75%;
+	}
+	.logo {
+		background-position: 0 50%;
+		background-size:     100% auto;
+		margin-left:         2.5%;
+		margin-top:          0;
+		width:               95%;
+	}
+	
+	/* Mobile button */
+	.mobile-btn {
+		display:             block;
+		float:               right;
+		margin-top:          1em;
+		min-width:           20px;
+		position:            relative;
+		right:               2.5%;
+		top:                 0;/*
+		width:               22.5%;*/
+	}
+	.mobile-btn IMG {
+		float:               right;
+	}
+	
+	/* Nav bar (hidden) */
+	.navbar {
+		display:             none;
+		opacity:             0;
+	}
+	
+	/* Tag line */
+	.tagline {
+		border-bottom:       1px solid #626C68;
+		border-top:          1px solid #626C68;
+		position:            relative;
+	}
+	.tagline p {
+		font-size:           1.35714em;
+		margin:              0 4.5%;
+		max-height:          inherit;
+		min-height:          20px;
+		padding:             0.6875em 0;
+		z-index:             2;
+	}
+	
+	/* Bottom header border (hidden) */
+	.nav-bottom-border {
+		display:             none;
+		float:               none;
+		opacity:             0;
+		padding:             0;
+		visibility:          hidden;
+	}
+	
+	.main-container {
+		padding-top: 1em;
+	}
+	.node-type-page .main-container {
+		padding-top: 0;
+	}
+	.content-container h1 {
+		margin-left: 0.5em;
+	}
+	.node-type-page .span3 ul li {
+		line-height: 2.7em;
+	}
+	.node-type-page .main-container .span3 {
+		background-color: transparent;
+		width:100%;
+		clear: left;
+	}
+	.node-type-custom .row-fluid .span9,
+	.node-type-webform .row-fluid .span9,
+	.node-type-done .content-container .content-container,
+	.node-type-page .main-container .link-area {
+		margin: 0 2.4725%;
+		
+		width: 94.8414%;
+	}
+	.node-type-custom .row-fluid .span9 .content-container,
+	.node-type-webform .row-fluid .span9 .content-container {
+		margin: 0;
+		width: 100%;
+		padding-left: 1em;
+	}
+	.logobar {
+		padding-top: 0px;
+	}
+	.logobar .half-width {
+		border-bottom: 1px solid #adadab;
+		width: 100%;
+		padding-bottom: 0;
+		padding-left: 0;
+	}	
+	.logobar .half-width-sites {
+		width: 100%;
+	}
+	.social-container {
+		border-right: 1px solid #adadab;
+		display: inline;	
+		float: left;
+		width: 80px;
+		margin-left: 1em;
+		margin-top: 0;
+	}
+	.logobar .social {
+		margin-bottom: 30px;
+		margin-left: 0px;
+		margin-top: 13px;
+	}
+	.links-container {
+		float: left;
+	}
+	.links-container-txt {		
+		float: left;
+		margin-left: 1em;
+		text-align: center;
+	}
+	.links-container-qp {
+		float: left;
+		margin-left: 1em;
+		text-align: center;
+	}
+	.logobar .links {
+		display: inline;
+		margin-bottom: 7px;
+		margin-top: 5px;
+		position: relative;		
+	}
+	.logobar .links a {
+		font-size: 1em;
+		text-align: center;
+		text-decoration: none;
+	}
+	.logobar .links a:hover {
+		font-size: 1em;
+	}
+	.logobar .links img {
+		float: none;
+	}
+	.logobar .pinterest-icon {
+		width: 1em;
+		display: inline-block;
+	}
+	
+	.logobar .twitter-icon {
+		margin-left: 1.5em;
+		width: 1em;
+		display: inline-block;
+	}
+	.sites-container {
+		float: left;
+		margin-bottom: 25px;
+		margin-top: 9px;
+		width: 20%;
+	}
+	.smokefree-women {
+		margin-left: .5em;
+	}
+	.logobar .smokefree-teen {
+		margin-left: 3.4em;
+	}
+	.logobar .smokefree-espanol {
+		margin-left: 3.2em;
+	}
+	.logobar .tablet-sites {
+		display: inline;
+		float: right;
+		opacity: 100;
+		position: relative;
+	}
+	.logobar .sites {
+		opacity: 0;
+	}
+	.footer {
+		text-align: left;
+		padding-left: 1%;
+	}
+	.footer .footer-links ul {
+		line-height: 1.428em;
+		margin-bottom: 10px;
+	}
+	.footer .footer-links li {
+		display: block;
+		margin-left: 5px;
+	}		
+	.footer .footer-links span {
+		opacity: 0;
+	}
+	#searchbox-footer {
+		width: 76.55291%;
+	}
+	#search-header {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	/* Menu for smartphones */
+	.nav collapse ul{
+		display: block;
+	}
+	.navbar ul.nav{
+		display:none;
+	}
+	.navbar ul.collapse{
+		display: block;
+	}
+	.container-page .collapsed{
+		display: block;
+	}
+	.nav select {
+		display: inline-block;
+	}
+	.navbar .nav {
+		border-radius: 20px;
+		margin-top:0;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+	}
+	.navbar .nav .leaf {
+		background-color: #FCFCFC;
+		line-height: 1em;
+		margin-left: 0;
+		margin-top: 0;
+		width: 100%;
+	}
+	.navbar  li {
+		border-bottom: 2px solid #296882;
+	}
+	.navbar .nav .leaf.last {
+		border-bottom: none;
+	}
+	.navbar .nav .leaf:hover {
+		background-color: #296882;
+	}
+	.navbar .nav .leaf a {
+		color: #000000;
+		padding-bottom: .4em;
+	}
+	.container-page .navbar ul {
+		left: 35%;
+		position: absolute;
+		top: 4.2em;
+		z-index: 200;
+	}
+	
+	.page-now-leaving .main-container{
+		padding-top:0;
+	}
+	.addthis_counter.addthis_pill_style a.atc_s,
+	.addthis_counter.addthis_pill_style a.addthis_button_expanded:hover,
+	.addthis_counter.addthis_pill_style a.atc_s:hover, 
+	.addthis_counter a.addthis_button_expanded:hover, 
+	.addthis_counter a.atc_s:hover {
+		left: 83%;
+	}
+	
+	/* Mobile menu navigation */
+	.container-page .nav-collapse {
+		display:             block;
+	}
+	.container-page .nav-collapse.collapse {
+		height:              0;
+		display:             block;
+		overflow:            inherit;
+		width:               100%;
+	}
+	.container-page .nav-collapse.collapse.in {
+		height:              auto;
+	}
+	.dropdown-menu {
+		border:              0;
+		margin-top:          0;
+	}
+}
+
+/* Layout 2: Tablet (small) or Smartphone (landscape) ----------- */
+@media only screen 
+	and (min-width : 481px)
+	and (max-width : 767px) {
+	BODY {
+		background-color:    #424242;
+		background-image:    url('../images/background/smokefree-people-walking-bg2-tablet-small-portrait-768x1160.jpg');
+		background-repeat:   repeat-x;
+		background-size:     100% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:          3px solid #000;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:               #000;
+		content:             'Layout 2: Tablet (small) or Smartphone (landscape)';
+	}
+	
+	/* Logo */
+	.logo-container {
+		left:                2.7083%;
+		min-width:           63px;
+		padding-top:		 1em;
+		top:                 4.2em;
+		width:               8%;
+	}
+	.logo {
+		background-image:    url('../images/header/smokefree-hd1-logo-tablet-63x62.png');
+		background-size:     100% auto;
+		height:              auto;
+		width:               100%;
+	}
+	
+	/* Mobile button (hidden) */
+	.mobile-btn {
+		display:             none;
+		opacity:             0;
+	}
+	
+	/* Nav bar */
+	.navbar UL.nav {
+		margin:              4.2em 2.7083% 1.071em 0;
+		width:               80%;
+	}
+	.navbar UL.nav LI {
+		font-size:           inherit;
+		line-height:         3.142em;
+		margin-left:         .79492%;
+		width:               24.4038%;
+	}
+	.navbar UL.nav A {
+		font-size:           1.233em;
+		line-height:         1.07143em;
+		min-height:          3.2em;
+		padding:             0.1em 5% 0.0428em;
+		width:               90%;
+	}
+
+	.navbar .menu.nav UL.dropdown-menu A, 
+	.navbar .menu.nav UL.dropdown-menu A:active, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail:focus, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail:link, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail:visited {
+		font-size: 1.1em;
+	}
+	.navbar.nav .nav .last ul.dropdown-menu {
+		left: -49%;
+	}
+	.navbar {
+		padding-top: 1em;
+	}
+	/* Tag line */
+	.tagline P {
+		font-size:           1.51429em;
+		line-height:         1em;
+		margin:              0.375em 1% 0.375em 2.7083%;
+		min-height:          24px;
+		z-index:             2;
+	}
+	
+	.node-type-page .main-container {
+		padding-top: 0;
+	}
+	.node-type-webform .row-fluid .content-container,
+	.node-type-custom .row-fluid .content-container,
+	.content-container {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		min-height:          auto;
+		width:               96.8414%;
+	}
+	.node-type-webform .content-container .content-container,
+	.node-type-done .content-container .content-container,
+	.node-type-custom .content-container .content-container {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		min-height:          auto;
+		padding-left:		 1em;
+		width:               96.8414%;
+	}
+	.content-container .content-container {
+		margin:              5%;
+		width:               90%;
+	}
+	.sidebar {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 1em;
+		min-height:          auto;
+		width:               96.8414%;
+	}
+	.sidebar-image {
+		margin-bottom:       0;
+		margin-right:        2.4725%;
+		width:               41.621%;
+	}
+	.sidebar-image .span3 ul li.li-third {
+		border-bottom: none;
+	}
+	/* Logo bar */
+	.logobar {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.logobar .half-width {
+		width: 55%;
+	}
+	.logobar .half-width-sites {
+		width: 45%;
+	}
+	.social-container {		
+		display: inline;	
+		float: left;
+		width: 28.984%;
+	}
+	.logobar .social {
+		margin-left: .06%;
+		margin-top: .8em;
+	}
+	.links-container {
+		float: left;
+	}
+	.links-container-txt {
+		border-left: 1px solid #adadab;	
+		float: left;
+		margin-left: 1em;
+		text-align: center;
+		width: 35.845%;
+	}
+	.links-container-txt img {
+		clear: right;
+		vertical-align: bottom;
+	}
+	.links-container-qp {
+		border-right: 1px solid #adadab;
+		float: left;	
+		max-width: 60px;
+		padding-right: 3%;
+		text-align: center;
+		width: 25.394%;
+	}
+	.links-container-qp img {
+		clear: right;
+		vertical-align: bottom;
+	}
+	.logobar .links {
+		display: inline;
+		position: relative;		
+	}
+	.logobar .links a {
+		font-size: 1em;
+		text-align: center;
+		text-decoration: none;
+	}
+	.logobar .links a:hover {
+		font-size: 1em;
+	}
+	.sites-container {
+		float: left;
+		width: 24%;
+	}
+	.logobar .tablet-sites {
+		display: inline;
+		float: right;
+		opacity: 100;
+		position: relative;
+	}
+	.logobar .sites {
+		opacity: 0;
+		height: 0;
+		padding-top: 1em;
+	}
+	.pinterest-icon {
+		display: inline-block;
+		margin-right: 14%;
+		width: 2em;
+	}
+	.twitter-icon {
+		display: inline-block;
+		width:2em;
+	}
+	.logobar .smokefree-txt-icon img {
+		float: none;
+	}
+	.logobar .smokefree-txt-icon {
+		display: block;
+		padding-top: .5em;
+		text-align: center;
+		vertical-align: top;
+	}
+	.logobar .smokefree-txt-text {
+		display: inline-block;
+		line-height: 1.3em;
+		vertical-align: top;
+		padding-top: .2em;
+	}
+	.quit-plan-icon {
+		display: block;
+		padding-top: .5em;
+		text-align: center;
+		vertical-align: top;
+	}
+	.logobar .quit-plan-icon img {
+		float: none;
+	}
+	.quit-plan-text {
+		display: inline-block;
+		padding-top: 2px;
+		padding-bottom: 5px;
+		text-align: center;
+		vertical-align: top;
+	}
+	.bottom-border {
+		border-bottom: 0px;
+	}
+	.footer {
+		text-align: left;
+		padding-left: 1%;
+	}
+	.footer .footer-links ul {
+		line-height: 0.758em;
+		margin-bottom: 10px;
+	}
+	.footer .footer-links li {
+		display: inline;
+		margin-left: 0.04%;
+	}
+	#searchbox-footer {
+		width: 88.55291%;
+	}
+	#search-header {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.page-now-leaving .main-container{
+		padding-top: 0;
+	}
+	div.addthis_32x32_style .dummy .at300bs, div.addthis_32x32_style .at300bs, div.addthis_32x32_style .at15t, div.addthis_toolbox {
+		margin-right: 3%;
+		margin-top: 3%;
+	}
+}
+
+/* Layout 3: Tablet (large) */
+@media only screen 
+	and (min-width : 768px)
+	and (max-width : 979px) {
+	BODY {
+		background-color:    #424242;
+		background-image:    url('../images/background/smokefree-people-walking-bg3-tablet-large-portrait-980x1356.jpg');
+		background-repeat:   repeat-x;
+		background-size:     100% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:          3px double cyan;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:               cyan;
+		content:             'Layout 3: Tablet (large)';
+	}
+	
+	/* Logo */
+	.logo-container {
+		display:             block;
+		float:               left;
+		left:                4.7817%;
+		margin-top:          7.5em;
+		min-width:           164px;
+		width:               21%;
+	}
+	.logo-container A {
+		display:             block;
+		float:               left;
+		font-size:           1.333em;
+		line-height:         3.2428em;
+		width:               100%;
+	}
+	.logo {
+		background-image:    url("../images/header/smokefree-hd1-logo-314x79.png");
+		background-position: 50% center;
+		background-size:     100% auto;
+		height:              3.2428em;
+		width:               100%;
+	}
+	.logo-image,
+	.logo-image IMG	{
+		height:              100%;
+		width:               100%;
+	}
+	
+	/* Mobile button (hidden) */
+	.mobile-btn {
+		display: none;
+		opacity: 0;
+	}
+	
+	/* Nav bar */
+	.navbar UL.nav {
+		margin:              7.5em 1.143% 1em 0;
+		width:               65.5236%;
+	}
+	.navbar UL.nav LI {
+		line-height:         3.142em;
+		margin-left:         .79492%;
+		width:               24.4038%;
+	}
+	.navbar UL.nav A {
+		font-size:           1.233em;
+		line-height:         1.07143em;
+		min-height:          2.2em;
+		padding:             1.0428em 5% 0.1em;
+		width:               90%;
+	}
+	.navbar .menu.nav UL.dropdown-menu {
+		width: 155%;
+	}
+	.navbar.nav .nav .last ul.dropdown-menu {
+		width: 125.5%;
+		left: -27%;
+	}
+	.navbar .menu.nav UL.dropdown-menu A, 
+	.navbar .menu.nav UL.dropdown-menu A:active, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail:focus, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail:link, 
+	.navbar .menu.nav UL.dropdown-menu A.active-trail:visited {
+		font-size: 1.1em;
+	}
+	/* Tag line */
+	.tagline P {
+		font-size:           1.9264em;
+		line-height:         1.1013em;
+		margin:              0.54109em 1.143%;
+		min-height:          30px;
+		z-index:             2;
+	}
+	
+	/* Bottom header border */
+	.front .nav-bottom-border {
+		margin:              0 1.143% 1.5em;
+		width:               97.714%;
+	}
+	.node-type-page .nav-bottom-border,
+	.node-type-webform .nav-bottom-border,
+	.node-type-done .nav-bottom-border	{
+		padding:             0.6em;
+	}
+	.main-container {
+		padding-top:1.125em;
+	}
+	.node-type-page .span3 ul li.li-third {
+		border-bottom: none;
+	}
+	.social-container {
+		display: inline;
+		float: left;
+		/*margin-left: 4.333%;	*/
+		/*margin-top: 2.229%;*/
+		width: 21.791%;
+		padding: 1em 0.5em 0 0;
+	}
+	.logobar .social {
+		margin-left: 0.052%;
+	}
+	.links-container-txt {
+		border-left: 1px solid #adadab;		
+		float: left;
+		text-align: left;
+		width: 27%;
+		padding: .5em .2em .5em .2em;
+		margin-left: 1.3em;
+	}
+	.links-container-txt img {
+		clear: right;
+		float: left;
+		vertical-align: text-top;
+	}
+	.links-container-qp {
+		border-right: 1px solid #adadab;
+		float: left;
+		padding: .5em .2em .5em .2em;
+		text-align: left;
+		width: 32%;
+	}
+	.links-container-qp img {
+		clear: right;
+		float: left;
+		vertical-align: middle;
+	}
+	.logobar .links a {
+		font-size: 1em;
+		text-align: center;
+		text-decoration: none;
+		line-height: 1.2em;
+	}
+	.logobar .links a:hover {
+		font-size: 1em;
+	}
+	.smokefree-txt-icon {
+		display: inline-block;
+	}
+	.quit-plan-icon {
+		display: inline-block;
+	}
+	.sites-container {
+		display: inline;
+		float: left;
+		margin-left: 0;
+		padding-top: 1.5em;
+		width: 23%;
+	}
+	.pinterest-icon {
+		display: inline-block;
+		margin-right: .2em;
+	}
+	.twitter-icon {
+		display: inline-block;
+	}
+	.smokefree-txt-text {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.quit-plan-text {
+		display: block;
+		vertical-align: top;
+	}
+	.logobar .sites img {
+		display: inline;
+		float: right;
+		position: relative;
+	}
+	.logobar .tablet-sites {
+		/*
+		height: 1px;
+		left : -10000px;
+		overflow: hidden;
+		top : auto;
+		width: 1px;
+		*/
+		display: none;
+		float: none;
+		margin: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0;
+		visibility: hidden;
+	}		
+	.bottom-border {
+		border-bottom: 0;
+	}
+	.footer {
+		text-align: left;
+		padding-left: .5em;
+	}
+	.footer .footer-links ul {
+		line-height: 0.758em;
+		margin-bottom: 10px;
+	}
+	.footer .footer-links li {
+		display: inline;
+		margin-left: 0.05%;
+	}
+	#searchbox-footer {
+		width: 92.55291%;
+	}
+	#search-header {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/* Layout 4: Small screen ----------- */
+@media only screen 
+	and (min-width : 980px)
+	and (max-width : 1199px) {
+	BODY {
+		background-color:  #424242;
+		background-image:  url('../images/background/smokefree-people-walking-bg4-desktop-small-landscape-1854x1200.jpg');
+		background-repeat: repeat-x;
+		background-size:   100% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:        3px double black;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:             black;
+		content:           'Layout 4: Small screen';
+	}
+	
+	/* Logo */
+	.logo-container {
+		left:                4.7377%;
+		margin-top:          7.5em;
+		min-width:           210px;
+		width:               21.6582%;
+	}
+	.logo-container A {
+		font-size:           1.4079em;
+		line-height:         3.9219em;
+	}
+	.logo {
+		height:              3.9219em;
+		width:               100%;
+	}
+	
+	/* Mobile button (hidden) */
+	.mobile-btn {
+		display: none;
+		opacity: 0;
+	}
+	
+	/* Nav bar */
+	.navbar .nav {
+		margin:              7.5em 1.01523% 1em 0;
+		width:               65.6514%;
+	}
+	.navbar UL.nav LI {
+		line-height:         5.5em;
+		margin-left:         .79492%;
+		width:               24.4038%;
+	}
+	.navbar UL.nav A {
+		font-size:           1.4079em;
+		line-height:         1.07143em;
+		min-height:          2.2em;
+		padding:             1.4861em 5% 0.2em;
+		width:               90%;
+	}
+	
+	/* Tag line */
+	.tagline P {
+		font-size:           1.6em;
+		line-height:         1.8em;
+		margin:              0.51904em 0.2% 0.51904em 1.01523%;
+		min-height:          38px;
+		width:               65.9695%;
+		z-index:             2;
+	}
+	.content-container {
+		/*font-size:           1.1429em;*/
+		line-height:         1.55em;
+		margin:              1em 0 0 1.0008340284%;
+		width:               65%;
+	} /* 12 + 783 = 794px */
+	.content-container .content-container {
+		margin:              2.9787%;
+		width:               94.0426%;
+	}
+	.sidebar {
+		font-size:           1.1429em;
+		line-height:         1.55em;
+		margin:              1em 1.0008340284% 0 1.5846538782%;
+		width:               31.1092577148%;
+	} /* 19 + 373 + 12 = 404px */
+	
+	/* Search field */
+	#search-header {
+		background:          none;
+		display:             block;
+		float:               right;
+		font-family:         Arial,​Helvetica,​sans-serif;
+		margin:              1.2143em 1.01523% 0;
+		padding:             0;
+		position:            absolute;
+		right:               0;
+		top:                 0;
+		width:               97.9695%;
+	}
+	#search-header FORM {
+		display:             inline;
+		float:               none;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+	}
+	#search-header #search-header-container {
+		display:             block;
+		float:               right;
+		line-height:         0;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		white-space:         nowrap;
+		width:               33%;
+	}	
+	#search-header #searchbox-header {
+		background-color:    transparent;
+		background-image:    url("../images/footer/smokefree-ftr8-search-bg-mobile-4x35.png");
+		background-repeat:   repeat;
+		border:              none;
+		color:               #373737;
+		float:               right;
+		font-size:           1.2em;
+		height:              2.1429em;
+		line-height:         2.5714em;
+		margin-right:        40px;
+		min-height:          36px;
+		position:            relative;
+		top:                 0;
+		width:               87%;
+	}
+	#search-header .search-button {
+		background-position: 50% center;
+		border:              0;
+		float:               right;
+		font-family:         Arial,​Helvetica,​sans-serif;
+		font-size:           1.2em;
+		height:              2.1429em;
+		line-height:         1em;
+		margin:              0;
+		min-height:          36px;
+		padding:             0;
+		position:            absolute;
+		right:               0;
+		top:                 0;
+		width:               40px;
+	}
+	#search-footer {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	/* Bottom header border */
+	.front .nav-bottom-border {
+		margin:              0 1.01523% 1.5em;
+		width:               97.96954%;
+	}
+	.node-type-page .nav-bottom-border,
+	.node-type-webform .nav-bottom-border,
+	.node-type-done .nav-bottom-border	{
+		padding:             0.6em;
+	}
+	
+	/** Logo Bar **/
+	/*This appears to be duplicated below...
+	.social-container {
+		
+		display: inline;
+		float: left;
+		//margin-left: 4.333%;	//
+		//margin-top: 2.229%;//
+		width: 21.791%;
+		
+	}*/
+	.social-container {
+		border-right: 1px solid #adadab;
+		display: inline;
+		float: left;
+		/*margin-left: 8.333%;	*/
+		/*margin-top: 2.229%;*/
+		width: 24.791%;
+		padding: 1em 1em .5em;
+	}
+	.logobar .social {
+		display: inline;
+		float: left;
+		margin-left: 2.708%;
+		position: relative;
+	}
+	.links-container-txt {
+		display: inline;
+		float: left;
+		margin-left: 5%;
+		padding-top: 1em;
+		text-align: left;
+		width: 30.0%;
+	}
+	.links-container-txt img {
+		clear: right;
+		float: left;
+		vertical-align: middle;
+	}
+	.links-container-qp {
+		display: inline;
+		float: left;
+		margin-left: 0.854%;
+		padding-top: 1em;
+		text-align: left;
+		width: 30.0%;
+	}
+	.links-container-txt img {
+		clear: right;
+		float: left;
+		vertical-align: middle;
+	}
+	.logobar .links {
+		display: inline;
+		position: relative;		
+	}
+	.logobar .links a {
+		display: inline;
+		float: right;
+		font-size: 1em;
+		line-height: 1.785em;
+		margin-left: 0.18%;
+		text-decoration: none;
+	}
+	.logobar .links a:hover {
+		font-size: 1em;
+	}
+	.smokefree-txt-icon {
+		display: inline-block;
+	}
+	.quit-plan-icon {
+		display: inline-block;
+	}
+	.sites-container {
+		display: inline;
+		float: left;
+		margin-left: 4.666%;
+		padding-top: 1.5em;
+		width: 20%;
+	}
+	.pinterest-icon {
+		display: inline-block;
+		margin-right: 2em;
+		padding-left: .6em;
+	}
+	.twitter-icon {
+		display: inline-block;
+	}
+	.smokefree-txt-text {
+		display: inline-block;
+		padding-top: .5em;
+		vertical-align: top;
+	}
+	.quit-plan-text {
+		display: inline-block;
+		padding-top: .5em;
+		vertical-align: top;
+	}
+	.logobar .sites img {
+		display: inline;
+		float: right;
+		position: relative;
+	}
+	.logobar .tablet-sites {
+		display: none;
+		visibility: hidden;
+	}
+	.bottom-border {
+		border-bottom: 7px solid #264C59;
+		display: block; 	
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+	
+	/** Footer **/
+	
+	.footer {
+		background-color: #424242;
+		display: block;
+		float:left;
+		margin-right: 0px;
+		overflow: hidden;
+		padding-top:10px;
+		text-align: center;
+		width: 100%;
+	}
+	.footer ul {
+		margin-bottom: 0;
+		width: 100%;
+	}
+	.footer .footer-links ul {
+		list-style-type: none;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-top: 10px;
+	}
+	.footer .footer-links li {
+		color: #fff;
+		display: inline;
+		font-size: 1em;
+		line-height: 1em;
+		margin-right: 0.05%;
+		text-decoration: none;
+	}
+	.footer .footer-links li a,
+	.footer .footer-links li a:hover {
+		color: #fff;
+		display: inline;
+		font-size: 1em;
+		line-height: 1em;
+		text-decoration: none;
+	}
+	.footer .footer-links li a:active {
+		color: #0A5371;
+	}
+	.footer .nih-copy p {
+		color: #fff;
+		text-align: center;
+	}
+}
+	
+/* Layout 5: Regular screen ----------- */
+@media only screen
+	and (min-width : 1200px)
+	and (max-width : 1365px) {
+	BODY {
+		background-color:  #424242;
+		background-image:  url('../images/background/smokefree-people-walking-bg6-desktop-large-landscape-2400x1520.jpg');
+		background-repeat: repeat-x;
+		background-size:   105% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:        3px double yellow;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:             yellow;
+		content:           'Layout 5: Regular screen';
+	}
+	
+	/* Logo */
+	.logo-container {
+		left:                4.7377%;
+		margin-top:          9.2em;
+		min-width:           210px;
+		width:               21.6582%;
+	}
+	.logo-container A {
+		font-size:           1.4079em;
+		line-height:         3.9219em;
+	}
+	.logo {
+		height:              3.9219em;
+		width:               100%;
+	}
+	
+	/* Mobile button (hidden) */
+	.mobile-btn {
+		display: none;
+		visibility: hidden;
+	}
+	
+	/* Nav bar */
+	.navbar .nav {
+		margin:              9.2em 1.01523% 1.71429em 0;
+		width:               48.98477%;
+	}
+	.navbar UL.nav LI {
+		line-height:         5.5em;
+		margin-left:         .79492%;
+		width:               24.4038%;
+	}
+	.navbar UL.nav A {
+		font-size:           1.4079em;
+		line-height:         1.07143em;
+		min-height:          2.2em;
+		padding:             1.4861em 5% 0.2em;
+		width:               90%;
+	}
+	
+	/* Tag line */
+	.tagline P {
+		font-size:           2.0em;
+		line-height:         1.1013em;
+		margin:              0.51904em 0.2% 0.51904em 1.01523%;
+		min-height:          38px;
+		width:               65.9695%;
+		z-index:             2;
+	}
+	.content-container {
+		line-height:         1.55em;
+		margin:              1em 0 0 0.952380952%;
+		width:               73.7728937729%;
+	} /* 13 + 1007 = 1020 */
+	.content-container .content-container {
+		margin:              2.3333%;
+		width:               95.3334%;
+	}
+	.sidebar {
+		font-size:           1.2em;
+		line-height:         1.55em;
+		margin:              1em 0.9523809523% 0 0.6593406593%;
+		width:               23.663003663%;
+	} /* 9 + 323 + 13 = 345 */
+	.sidebar-image {
+		margin-bottom:       0;
+	}
+	
+	/* Search field */
+	#search-header {
+		background:          none;
+		display:             block;
+		float:               right;
+		font-family:         Arial,​Helvetica,​sans-serif;
+		margin:              1.2143em 1.01523% 0;
+		padding:             0;
+		position:            absolute;
+		right:               0;
+		top:                 0;
+		width:               97.9695%;
+	}
+	#search-header FORM {
+		display:             inline;
+		float:               none;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+	}
+	#search-header #search-header-container {
+		display:             block;
+		float:               right;
+		line-height:         0;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		white-space:         nowrap;
+		width:               25%;
+	}	
+	#search-header #searchbox-header {
+		background-color:    transparent;
+		background-image:    url("../images/footer/smokefree-ftr8-search-bg-mobile-4x35.png");
+		background-repeat:   repeat;
+		border:              none;
+		color:               #373737;
+		float:               right;
+		font-size:           1.2em;
+		height:              2.1429em;
+		line-height:         2.5714em;
+		margin-right:        40px;
+		min-height:          36px;
+		position:            relative;
+		top:                 0;
+		width:               87%;
+	}
+	#search-header .search-button {
+		background-position: 50% center;
+		border:              0;
+		float:               right;
+		font-family:         Arial,​Helvetica,​sans-serif;
+		font-size:           1.2em;
+		height:              2.1429em;
+		line-height:         1em;
+		margin:              0;
+		min-height:          36px;
+		padding:             0;
+		position:            absolute;
+		right:               0;
+		top:                 0;
+		width:               40px;
+	}
+	#search-footer {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	/* Bottom header border */
+	.front .nav-bottom-border {
+		margin:              0 1.01523% 1.5em;
+		width:               97.96954%;
+	}
+	.node-type-page .nav-bottom-border,
+	.node-type-webform .nav-bottom-border,
+	.node-type-done .nav-bottom-border	{
+		padding:             0.6em;
+	}
+	
+	/*
+	.main-container {
+		padding-top: 1.125em;
+	}
+	*/
+	.social-container {
+		border-right: 1px solid #adadab;
+		display: inline;
+		float: left;
+		/*margin-left: 4.333%;	*/
+		/*margin-top: 2.229%;*/
+		width: 21.791%;
+		padding-right: 1em;
+		padding-left: 1em;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	.logobar .social {
+		display: inline;
+		float: left;
+		margin-left: 2.708%;
+		position: relative;
+	}
+	.links-container-txt {
+		display: inline;
+		float: left;
+		margin-left: 0.416%;
+		margin-top: 2.229%;
+		text-align: left;
+		width: 30.0%;
+	}
+	.links-container-txt img {
+		clear: right;
+		float: left;
+		vertical-align: middle;
+	}
+	.links-container-qp {
+		display: inline;
+		float: left;
+		margin-left: 0.854%;
+		margin-top: 2.229%;
+		text-align: left;
+		width: 30.0%;
+	}
+	.links-container-qp img {
+		clear: right;
+		float: left;
+		vertical-align: middle;
+	}
+	.logobar .links {
+		display: inline;
+		position: relative;		
+	}
+	.logobar .links a {
+		font-size: 1em;
+		line-height: 1.785em;
+		margin-left: 0.18%;
+		text-decoration: none;
+	}
+	.logobar .links a:hover {
+		font-size: 1em;
+	}
+	.sites-container {
+		display: inline;
+		float: left;
+		margin-top: 2.229%;
+		width: 23.0%
+	}
+	.logobar .sites img {
+		display: inline;
+		float: right;
+		position: relative;
+	}
+	.bottom-border {
+		border-bottom: 7px solid #264C59;
+		display: block; 	
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+	.logobar .tablet-sites {
+	/*
+		height: 1px;
+		left : -10000px;
+		top : auto;
+		overflow: hidden;
+		width: 1px;
+	*/
+		display: none;
+		float: none;
+		margin: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0;
+		visibility: hidden;
+	}
+	.pinterest-icon {
+		display: inline-block;
+		margin-right: 2em;
+		padding-left: .6em;
+	}
+	.twitter-icon {
+		display: inline-block;
+	}
+	.smokefree-txt-text {
+		display: inline-block;
+		padding-top: .5em;
+		vertical-align: top;
+	}
+	.quit-plan-text {
+		display: inline-block;
+		padding-top: .5em;
+		vertical-align: top;
+	}
+}
+
+/* Layout 6: Large screen ----------- */
+@media only screen 
+	and (min-width : 1366px) {
+	BODY {
+		background-color:  #424242;
+		background-image:  url('../images/background/smokefree-people-walking-bg6-desktop-large-landscape-2400x1520.jpg');
+		background-repeat: repeat-x;
+		background-size:   100% auto;
+		
+		/* REMOVE FOR PRODUCTION 
+		border-top:        3px double blue;*/
+	}
+	/* REMOVE FOR PRODUCTION */
+	#layout_desc:after {
+		color:             blue;
+		content:           'Layout 6: Large screen';
+	}
+	
+	/* Logo */
+	.logo-container {
+		left:                4.7377%;
+		margin-top:          9.5em;
+		min-width:           210px;
+		width:               21.6582%;
+	}
+	.logo-container A {
+		font-size:           1.4079em;
+		line-height:         3.9219em;
+	}
+	.pinterest-icon {
+		display: inline-block;
+		margin-right: 2em;
+		padding-left: .6em;
+	}
+	.twitter-icon {
+		display: inline-block;
+	}
+	.smokefree-txt-text {
+		display: inline-block;
+		padding-top: .5em;
+		vertical-align: top;
+	}
+	.quit-plan-text {
+		display: inline-block;
+		padding-top: .5em;
+		vertical-align: top;
+	}
+	
+	/* Mobile button (hidden) */
+	.mobile-btn {
+		display: none;
+		visibility: hidden;
+	}
+	
+	/* Nav bar */
+	.navbar .nav {
+		margin:              9.5em 1.5793% 1.71429em 0;
+		width:               48.4207%;
+	}
+	.navbar UL.nav LI {
+		line-height:         5.5em;
+		margin-left:         .79492%;
+		width:               24.4038%;
+	}
+	.navbar UL.nav A {
+		font-size:           1.4079em;
+		line-height:         1.07143em;
+		min-height:          2.2em;
+		padding:             1.4861em 5% 0.2em;
+		width:               90%;
+	}
+	
+	.content-container {
+		line-height:         1.55em;
+		margin:              1em 0 0 1.61517%;
+		width:               72%;
+	}
+	.content-container .content-container {
+		margin:              2.3333%;
+		width:               95.3334%;
+	}
+	.sidebar {
+		font-size:           1.3em;
+		margin:              1em 1.61517% 0 0.6933%;
+		width:               23.663003663%;
+	}
+	
+	/* Tag line */
+	.tagline P {
+		font-size:           2.2em;
+		line-height:         1.1013em;
+		margin:              0.51904em 0.2% 0.51904em 1.5793%;
+		min-height:          38px;
+		width:               62.8414%;
+		z-index:             2;
+	}
+	
+	/* Search field */
+	#search-header {
+		background:          none;
+		display:             block;
+		float:               right;
+		font-family:         Arial,​Helvetica,​sans-serif;
+		margin:              1.2143em 1.5793% 0;
+		padding:             0;
+		position:            absolute;
+		right:               0;
+		top:                 0;
+		width:               96.8414%;
+	}
+	#search-header FORM {
+		display:             inline;
+		float:               none;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+	}
+	#search-header #search-header-container {
+		display:             block;
+		float:               right;
+		line-height:         0;
+		margin:              0;
+		padding:             0;
+		position:            relative;
+		top:                 0;
+		white-space:         nowrap;
+		width:               25%;
+	}	
+	#search-header #searchbox-header {
+		background-color:    transparent;
+		background-image:    url("../images/footer/smokefree-ftr8-search-bg-mobile-4x35.png");
+		background-repeat:   repeat;
+		border:              none;
+		color:               #373737;
+		float:               right;
+		font-size:           1.2em;
+		height:              2.1429em;
+		line-height:         2.5714em;
+		margin-right:        40px;
+		min-height:          36px;
+		position:            relative;
+		top:                 0;
+		width:               87%;
+	}
+	#search-header .search-button {
+		background-position: 50% center;
+		border:              0;
+		float:               right;
+		font-family:         Arial,​Helvetica,​sans-serif;
+		font-size:           1.2em;
+		height:              2.1429em;
+		line-height:         1em;
+		margin:              0;
+		min-height:          36px;
+		padding:             0;
+		position:            absolute;
+		right:               0;
+		top:                 0;
+		width:               40px;
+	}
+	#search-footer {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	
+	/* Bottom header border */
+	.front .nav-bottom-border {
+		margin:              0 1.5793% 1.5em;
+		width:               96.8414%;
+	}
+	.node-type-page .nav-bottom-border,
+	.node-type-webform .nav-bottom-border,
+	.node-type-done .nav-bottom-border	{
+		padding:             0.6em;
+	}
+	.social-container {
+		border-right: 1px solid #adadab;
+		display: inline;
+		float: left;
+		/*margin-left: 4.333%;	*/
+		/*margin-top: 2.229%;*/
+		width: 21.791%;
+		padding-right: 1em;
+		padding-left: 1em;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	.logobar .social {
+		float: left;
+		position: relative;
+	}
+	.links-container-txt {
+		display: inline;
+		float: left;
+		margin-left: 0.416%;
+		padding-top: .5em;
+		text-align: left;
+		width: 26%;
+	}
+	.links-container-txt img {
+		clear: right;
+		float: left;		
+		vertical-align: middle;
+	}
+	.links-container-qp {
+		display: inline;
+		float: left;
+		margin-left: 0.854%;
+		padding-top: .5em;
+		text-align: left;
+		width: 38.542%;
+	}
+	.logobar .links {
+		margin-left: 1em;
+	}
+	.logobar .links a {
+		display: inline;
+		float: left;
+		font-size: 1em;
+		line-height: 1.785em;
+		margin-left: 0.18%;
+		text-decoration: none;
+		vertical-align: text-bottom;
+	}
+	.logobar .links a:hover {
+		font-size: 1em;
+	}
+	.smokefree-txt-icon {
+		display: inline-block;
+	}
+	.quit-plan-icon {
+		display: inline-block;
+	}
+	.sites-container {
+		display: inline;
+		float: left;
+		margin-left: 4.666%;
+		padding-top: .5em;
+		width: 20%;
+	}
+	.logobar .sites img {
+		display: inline;
+		float: right;
+		position: relative;
+	}
+	.bottom-border {
+		border-bottom: 7px solid #264C59;
+		display: block; 	
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+	.logobar .tablet-sites {
+	/*
+		height: 1px;
+		left : -10000px;
+		overflow: hidden;
+		top : auto;
+		width: 1px;
+	*/
+		display: none;
+		float: none;
+		margin: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0;
+		visibility: hidden;
+	}
+	.twitter-icon:hover .externalllinktooltip-twitter {
+		display: block; /* Necessary to work in IE7 & IE8 */
+		left: 55%;
+	}
+}
+
+/*****************************************************
+Content page styles
+*****************************************************/
+/* Layout 0: Old Smartphone ----------- */
+@media only screen
+	and (max-width : 320px) {
+	.node-type-page .row-fluid .span9 {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		width:               96%;
+		display: inline-block;
+	}
+	.node-type-page .row-fluid .span9.no-sidebar  {
+		margin: 0 2.4725%;
+		width: 94.8414%;	
+	}
+	.node-type-page .row-fluid .span9 .page-content-container{
+		margin:              4.583333%;
+		width:               90.83333%;
+		clear:				 left;
+	}
+	.sidebar {
+		line-height:         1.55em;
+		margin:              1em 4.583333%;
+		min-height:          auto;
+		width:               90.83333%;
+	}
+	.node-type-page .span3 {
+		background-color: transparent;
+	}
+	aside .sidebar-image, .link-area {
+		margin: 0 2.4725%;
+		width: 94.8414%;
+	}
+	.content-container h1 {
+		margin-left: 0;
+	}
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 100%;
+	}
+	.nav-pills li a {
+		box-shadow: none !important;
+	}
+}
+/* Layout 1: Smartphone ----------- */
+@media only screen 
+	and (min-width : 320px)
+	and (max-width : 480px) {
+	.node-type-page .row-fluid .span9 {
+		float:				 left;
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		padding-left:		 2%;
+		width:               96%;
+}
+	.span3 {
+		line-height:         1.55em;
+		margin:              1em 4.583333%;
+		min-height:          auto;
+		width:               90.83333%;
+	}
+	.span3 .sidebar-image {
+		margin-bottom:       0;
+		margin-right:        2.4725%;
+		margin-left:        2.4725%;
+		/*width:               41.621%; */
+		width:               94.8414%;
+	}
+	.node-type-page aside ul h2 {
+		margin-bottom: 0;
+	}
+	.content-container h1 {
+		margin-left: 0;
+	}
+	.node-type-page .row-fluid .span9.no-sidebar {
+		margin: 0 2.4725%;
+		width: 94.8414%;
+	}
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 100%;
+	}
+	.nav-pills li a {
+		box-shadow: none !important;
+	}
+}
+
+/* Layout 2: Tablet (small) ----------- */
+@media only screen 
+	and (min-width : 480px)
+	and (max-width : 768px) {
+	.span12 {
+		margin-left: 0;
+		width:100%;
+	}
+	.node-type-page .row-fluid .span9 {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		min-height:          auto;
+		width:               96.8414%;
+	}
+	.node-type-page .row-fluid .span9 .page-content-container {
+		margin:              1em 1.5793% 0;
+		width:               96.8414%;
+		min-height: 		 auto;
+		padding-left:		 5%;
+	}
+	.node-type-page .span3 {
+		display: 			 inline-block;
+		line-height:         1.55em;
+		margin:              1em 2.5793% 1em; /* originally 2.5793% */
+		min-height:          auto;
+		width:               94.8414%; /* originall 96.8414% */
+	}
+	aside .image-area  {
+		float: 				left;
+		margin-bottom:      0;
+		/*margin-right:     2.4725%; */
+		width:              41.621%;
+		/*padding-left: 		1.3%;*/
+	}
+	aside .sidebar-image {
+		margin-bottom: 0;
+	}
+	.link-area {
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: 58.2%;
+	}
+	.node-type-page .span3 ul li {
+		padding-bottom: 0;
+		padding-left: 3.5%;
+	}
+	.node-type-page .region-sidebar-second {
+		width: 100%;
+	}
+	.node-type-page .sidebar-image IMG {
+		max-width: 384px;
+	}
+	aside .sidebar-link p {
+		margin-bottom: .5em;
+	}
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 50%;
+	}
+}
+/* Layout 3: Tablet (large) */
+@media only screen 
+	and (min-width : 768px)
+	and (max-width : 980px) {
+	.span12 {
+		margin-left: 0;
+	}
+	.node-type-page .row-fluid .span9 {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		min-height:          auto;
+		width:               96.8414%;
+	}
+	.node-type-webform .row-fluid  .content-container,
+	.node-type-done .row-fluid .content-container,
+	.node-type-custom .row-fluid  .content-container {
+		margin:              1em 1.5793% 0;
+		width:               96.8414%;		
+	}
+	.node-type-webform .span9 .page-content-container,	
+	.node-type-custom .span9 .page-content-container,
+	.node-type-done .span9 .page-content-container,
+	.node-type-page .row-fluid .span9 .page-content-container {
+		margin:              2.9787%;
+		width:               94.0426%;	
+		font-size: 			 1.2em;
+	}
+	.node-type-webform .span9 .page-content-container {
+		font-size: 			 1em;
+	}
+	.node-type-page .span3 {
+		line-height:         1.55em;
+		margin:              1em 1.5793% 1em;
+		min-height:          auto;
+		width:               96.8414%;
+	}
+	aside .image-area  {
+		float: 				left;
+		margin-bottom:       0;
+		/*margin-right:        2.4725%; */
+		width:               41.621%;
+	}
+	aside .sidebar-image {
+		margin-bottom: 0;
+	}
+	.link-area {
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: 58.2%;
+	}
+	.node-type-page .span3 ul li {
+		padding-bottom: 0;
+		padding-left: 3.5%;
+	}
+	.node-type-page .region-sidebar-second {
+		width: 100%;
+	}
+	.node-type-page .sidebar-image IMG {
+		max-width: 384px;
+	}
+	aside .sidebar-link p {
+		margin-bottom: .5em;
+	}
+	aside .image-note {
+		vertical-align: bottom;
+		width: 7%;
+	}
+	/*.link-area UL {
+		padding-left: 1em;
+	}*/
+	/*.node-type-page .image-area, .node-type-page .link-area {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.node-type-page .span3 .image-area {
+		width: 28%;
+	}
+	.node-type-page .span3 .link-area {
+		width: 71.2%;
+	}
+	.node-type-page .span3 .main-container {
+		padding-bottom:0;
+	}
+	.node-type-page .span3 .sidebar-title {
+		font-size: .75em;
+		height: auto;
+		top: 77%;
+		width: 28%;
+	}
+	.node-type-page .span3 ul h2 {
+		line-height: 2em;
+	}
+	.node-type-page .span3 ul li {
+		height: 4.6em;
+		line-height: 1em;
+		padding-bottom: .2em;
+	}
+	.node-type-page .span3 .sidebar-link {
+		line-height:0;
+		width: 70%;
+	}
+*/
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 33%;
+	}
+}
+/* Layout 4: Small screen ----------- */
+@media only screen 
+	and (min-width : 980px)
+	and (max-width : 1200px) {
+	.node-type-page .span3 {
+		font-size:           1.1429em;
+		line-height:         1.55em;
+		margin:              .8em 1.0008340284% 0 1.5846538782%;
+		width:               31.1092577148%;
+	} /* 19 + 373 + 12 = 404px */
+	.node-type-page .row-fluid .span9 {
+		line-height:         1.55em;
+		margin:              1em 0 0 1.0008340284%;
+		width:               65%;
+	} /* 12 + 783 = 794px */
+	.node-type-page .row-fluid .span9 .page-content-container{
+		font-size:           1.1429em;
+		margin:              2.9787%;
+		width:               94.0426%;	
+	}
+	.node-type-page .row-fluid .span9.no-sidebar,
+	.node-type-webform .row-fluid .content-container,
+	.node-type-done .row-fluid .content-container,
+	.node-type-custom .row-fluid .content-container	{
+		margin:              1em 1.5793% 0;
+		width:               96.8414%;		
+	}
+	.span3 .image-area {  
+		height: auto;  
+		width: 100%;  
+    }  
+    .span3 .link-area {  
+		border-top: 0.8em solid #f2f0e7;  
+		width: 100%;  
+    }
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 14%;
+	}
+}
+/* Layout 5: Regular screen ----------- */
+@media only screen
+	and (min-width : 1200px)
+	and (max-width : 1366px) {
+	.node-type-page .span3 {
+		font-size:           1.2em;
+		line-height:         1.55em;
+		margin:              .8em 0.9523809523% 0 0.6593406593%;
+		width:               23.663003663%;
+	} /* 9 + 323 + 13 = 345 */
+	.node-type-page .row-fluid .span9 {
+
+		line-height:         1.55em;
+		margin:              1em 0 0 0.952380952%;
+		width:               73.7728937729%;
+	} /* 13 + 1007 = 1020 */
+	.node-type-page .row-fluid .page-content-container{
+		font-size:           1.2em;
+		margin:              2.3333%;
+		width:               95.3334%;
+	}
+	
+	.node-type-page .row-fluid .span9.no-sidebar,
+	.node-type-webform .row-fluid .content-container,
+	.node-type-custom .row-fluid .content-container {
+		margin:              1em 1.5793% 0;
+		width:               96.8414%;		
+	}
+	
+	.node-type-page .row-fluid .span9 .page-content-container	{
+		margin: 2.3333%;
+		width: 95.3334%;
+	}
+	.node-type-page .row-fluid .span9 .content-container	{
+		margin: 2.3333%;
+		width: 95.3334%;
+	}
+	.addthis_32x32_style .dummy .at300bs, .addthis_32x32_style .at300bs, .addthis_32x32_style .at15t, .addthis_toolbox {
+		top: 1.6em;
+	}
+	/*.navbar .nav {
+		margin-right: 1em;
+	}*/
+	.span3 .link-area {  
+		border-top: 0.8em solid #f2f0e7;  
+		width: 100%;  
+    }
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 14%;
+	}
+}
+/* Layout 6: Large screen ----------- */
+@media only screen 
+	and (min-width : 1366px) {
+	.node-type-webform .span3,
+	.node-type-custom .span3,
+	.node-type-page .span3 {
+		font-size:           1.2em;
+		line-height:         1.55em;
+		margin: 1em 1.61517% 0 0.6933%;
+		width: 23.663%;
+		background-color: #FFFFFF;
+	}
+	.node-type-page .row-fluid .span9 {
+		margin: 1em 0 0 1.61517%;
+		width: 72%;
+	}
+	.node-type-page .row-fluid .span9.no-sidebar {
+		margin: 2.3333%;
+		width: 96.3334%;
+	}
+	.node-type-webform .row-fluid .span9,
+	.node-type-custom .row-fluid .span9 {
+		margin:              1em 1.5793% 0;
+		width:               96.8414%;		
+	}
+	.node-type-webform .span9 .page-content-container,
+	.node-type-done .span9 .page-content-container,
+	.node-type-custom .span9 .page-content-container,
+	.node-type-page .row-fluid .span9 .page-content-container	{
+		margin: 2.3333%;
+		width: 96.3334%;
+		font-size: 1.2em;
+	}
+	.node-type-page .region-sidebar-second {
+		width: 92%;
+	}
+	.node-type-page .region-sidebar-second .block-block {
+		width: 98%;
+	}
+	.span3 .sidebar-title {
+		height: auto;
+		width: 100%;
+	}
+	.span3 .region-sidebar-second .link-area {
+		width:100%;
+	}
+	.span3 .region-sidebar-second .image-area {
+		height: auto;
+		width: 100%;
+	}
+	.sidebar {
+		font-size: 1.3em;
+	}
+	.span3 .link-area {  
+		border-top: 0.8em solid #f2f0e7;  
+		width: 100%;  
+    }
+	
+	/* Tab styles */
+	.node-type-page .span9   article #myTab li, 
+	.node-type-page .span9 article .nav-pills li {
+		min-width: 14%;
+	}
+}
+
+

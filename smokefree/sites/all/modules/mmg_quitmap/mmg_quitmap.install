@@ -1,0 +1,60 @@
+<?php
+
+function mmg_quitmap_schema(){
+  $schema['mmg_quitmap'] = array(
+    'description' => 'The table containing pins and stories',
+      'fields' => array(
+        'pid' => array(
+          'description' => 'The primary identifier for a pin.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE),
+        'latitude' => array(
+          'description' => 'The latitude of a pin',
+          'type' => 'numeric',
+          'size' => 'normal',
+          'not null' => TRUE,
+          'precision' => 25,
+          'scale' => 20,
+          'default' => 0),
+        'longitude' => array(
+          'description' => 'The longitude of a pin',
+          'type' => 'numeric',
+          'size' => 'normal',
+          'not null' => TRUE,
+          'precision' => 25,
+          'scale' => 20,
+          'default' => 0),
+        'zip' => array(
+          'description' => 'Zip Code',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => ''),
+        'name' => array(
+          'description' => 'Name of the person associated with the pin',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => ''),
+        'story' => array(
+          'description' => 'Story of a journey',
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => TRUE),
+        'date_quit' => array(
+          'description' => 'The Unix timestamp when the user quit smoking.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0),
+        'timestamp' => array(
+          'description' => 'The Unix timestamp when the pin was saved.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0),
+      ),
+    'primary key' => array('pid'),
+  );
+
+  return $schema;
+}

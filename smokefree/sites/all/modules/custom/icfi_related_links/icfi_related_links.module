@@ -1,0 +1,57 @@
+<?php
+
+/*
+ * Implements hook_block_info.
+ */
+function icfi_related_links_block_info() {
+  $blocks['icfi_related_links'] = array(
+    'info' => t('Related links'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function icfi_related_links_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'icfi_related_links':
+      $block['subject'] = t('Related links');
+      $block['content'] = related_links_callback();
+      break;
+  }
+  return $block;
+}
+
+function related_links_callback() {
+  $node = menu_get_object();
+  $output = '';
+  if(!empty($node) && $node->type == 'page') {
+    $related_links_array = field_get_items('node', $node, 'field_related_links');
+    $related_link_descriptions = field_get_items('node', $node, 'field_related_link_descriptions');
+    $list_class_names = array('li-first','li-second','li-third');
+    for ($i = 0; $i < 3; $i++) {
+      if (!empty($related_links_array[$i]['url']) && !empty($related_links_array[$i]['title'])) {
+        $url = $related_links_array[$i]['url'];
+        $title = $related_links_array[$i]['title'];
+        $description = $related_link_descriptions[$i]['safe_value'];
+        $path = drupal_get_path('theme', 'smokefreegov');
+        $output .= <<< EOT
+          <li class="$list_class_names[$i]"><a href="$url" title="$title">
+							<div class="sidebar-link">
+								<h2>$title</h2>
+									<p>$description</p>
+							</div>
+							<div class="image-note"><img alt="" src="/$path/images/content/spacer.png" /></div>
+						</a></li>
+EOT;
+      }
+    }
+  }
+  if (!empty($output)) {
+    $output = '<div class="link-area"><ul>' . $output . '</ul></div>';
+  }
+  return $output;
+}

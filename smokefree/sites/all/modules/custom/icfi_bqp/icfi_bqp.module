@@ -1,0 +1,641 @@
+<?php
+
+/**
+ * Implements hook_init().
+ *
+ * The Build your quit plan page should not be cached.
+ */
+function icfi_bqp_init() {
+  if (drupal_match_path($_GET['q'], 'build-your-quit-plan')) {
+    drupal_page_is_cacheable(FALSE);
+    return;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Sets the templates for the form, results, and print screens.
+ */
+function icfi_bqp_theme($existing, $type, $theme, $path) {
+  $custom_theme = array();
+  $custom_theme['bqp_theme'] = array(
+    'render element' => 'form',
+    'template' => 'bqp-template',
+    'path' => drupal_get_path('module', 'icfi_bqp'),
+  );
+  $custom_theme['bqp_results_theme'] = array(
+    'render element' => 'form',
+    'template' => 'bqp-results-template',
+    'path' => drupal_get_path('module', 'icfi_bqp'),
+  );
+  $custom_theme['bqp_print_theme'] = array(
+    'render element' => 'form',
+    'template' => 'bqp-print-template',
+    'path' => drupal_get_path('module', 'icfi_bqp'),
+  );
+  return $custom_theme;
+}
+
+/**
+ * Implements hook_menu().
+ *
+ * Sets the /build-your-quit-plan URL to load the form created in _bqp_callback.
+ */
+function icfi_bqp_menu() {
+  $items['build-your-quit-plan'] = array(
+    'title' => 'Build Your Quit Plan',
+    'page callback' => '_bqp_callback',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['build-your-quit-plan-results'] = array(
+    'title' => 'Build Your Quit Plan Results',
+    'page callback' => '_bqp_results_callback',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Callback function for build-your-quit-plan menu item.
+ *
+ * @return array|mixed
+ *    The form as a render array.
+ */
+function _bqp_results_callback() {
+  $theform = drupal_get_form('bqp_results_form');
+  return $theform;
+}
+
+/**
+ * Callback function for build-your-quit-plan menu item.
+ *
+ * @return array|mixed
+ *    The form as a render array.
+ */
+function _bqp_callback() {
+  $theform = drupal_get_form('bqp_form');
+  return $theform;
+}
+
+/**
+ * Creates the build-your-quit-plan form.
+ */
+function bqp_form($form, &$form_state) {
+
+  $fields = array(
+    'quit_day',
+    'reasons_for_quitting',
+    'triggers_emotional',
+    'triggers_habitual',
+    'triggers_social',
+    'fight_cravings',
+    'extra_help',
+    'milestones_24hours',
+    'milestones_48hours',
+    'milestones_oneWeek',
+    'milestones_twoWeeks',
+    'milestones_oneMonth',
+  );
+
+  $existing_choices = &$_SESSION['existing_bqp_choices'];
+  // If static variable existing_choices is set, use them as default for
+  // users to edit.
+  if (isset($existing_choices)) {
+    foreach ($fields as $field) {
+      $form_state['values'][$field] = $existing_choices[$field];
+    }
+    unset($form_state['input'][$field]);
+    $form_state['rebuild'] = TRUE;
+  }
+
+  $form['quit_day'] = array(
+    '#type' => 'textfield',
+    '#required' => FALSE,
+    '#attributes' => array(
+      'class' => array('date-picker'),
+      'id' => 'quit-day',
+      'placeholder' => 'mm-dd-yyyy',
+    ),
+    // This technique allows the label to be moved where it needs to be to
+    // work with legacy css.
+    '#title_display' => 'none',
+    '#prefix' => '<label for="quit-day" class="sr-only">Quit Day</label>',
+  );
+  // Set default value to match form-state value that may have been passed in to
+  // remember the user's prior selections.
+  if (!empty($form_state['values']['quit_day'])) {
+    $form['quit_day']['#default_value'] = $form_state['values']['quit_day'];
+  }
+
+  $form['reasons_for_quitting'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'reasons.breathEasier' => 'Be healthier',
+      'reasons.saveMoney' => 'Save money',
+      'reasons.smellBetter' => 'Smell better',
+      'reasons.myLovedOnes' => 'My loved ones',
+    ),
+    '#required' => FALSE,
+  );
+  if (!empty($form_state['values']['reasons_for_quitting'])) {
+    $form['reasons_for_quitting']['#default_value'] = $form_state['values']['reasons_for_quitting'];
+  }
+
+  $icon_markup = array();
+  $icon_markup['reasons.breathEasier'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_BreatheEasier.png" alt="breath easier icon">';
+  $icon_markup['reasons.saveMoney'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_MoreMoney.png" alt="money icon">';
+  $icon_markup['reasons.smellBetter'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_SenseSmell.png" alt="smell better icon">';
+  $icon_markup['reasons.myLovedOnes'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_MakeOthersProud.png" alt="loved ones icon">';
+
+  foreach ($form['reasons_for_quitting']['#options'] as $name => $label) {
+    $form['reasons_for_quitting'][$name]['#prefix'] = '<div class="reason-options">';
+    $form['reasons_for_quitting'][$name]['#prefix'] .= $icon_markup[$name];
+    $form['reasons_for_quitting'][$name]['#prefix'] .= '<div class="fancy-checkbox-wrap">';
+    $form['reasons_for_quitting'][$name]['#suffix'] = '<label for="'
+      . $name . '"' . '><span><span></span></span>' . $label . '</label></div></div>';
+
+    $form['reasons_for_quitting'][$name]['#title_display'] = 'none';
+    $form['reasons_for_quitting'][$name]['#attributes'] = array(
+      'class' => array('fancy', 'bind-change'),
+      'id' => $name,
+      'data-ga-action' => "ReasonsForQuitting",
+      'data-ga-label' => str_replace('reasons.', '', $name),
+    );
+  }
+
+  $form['triggers_emotional'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'emotional.stressed' => 'Feeling stressed',
+      'emotional.anxious' => 'Feeling anxious',
+      'emotional.down' => 'Feeling down',
+      'emotional.lonely' => 'Feeling lonely',
+      'emotional.bored' => 'Feeling bored',
+      'emotional.afterFight' => 'Cooling off after a fight',
+    ),
+    '#required' => FALSE,
+  );
+
+  $form['triggers_habitual'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'habitual.phone' => 'Talking on the phone',
+      'habitual.alcohol' => 'Drinking alcohol',
+      'habitual.tv' => 'Watching TV',
+      'habitual.driving' => 'Driving',
+      'habitual.afterMeal' => 'Finishing a meal',
+      'habitual.coffee' => 'Drinking coffee',
+      'habitual.workBreak' => 'Taking a work break',
+      'habitual.afterSex' => 'After having sex',
+    ),
+    '#required' => FALSE,
+  );
+
+  $form['triggers_social'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'social.bar' => 'Going to a bar',
+      'social.event' => 'Going to a social event',
+      'social.othersSmoking' => 'Seeing someone else smoke',
+    ),
+    '#required' => FALSE,
+  );
+  foreach(array('triggers_emotional', 'triggers_habitual', 'triggers_social') as $trigger) {
+    foreach ($form[$trigger]['#options'] as $name => $label) {
+      $form[$trigger][$name]['#prefix'] = '<div class="fancy-checkbox-wrap">';
+      $form[$trigger][$name]['#suffix'] = '<label for="' . $name . '"><span><span></span></span>' . $label . '</label></div>';
+      $form[$trigger][$name]['#title_display'] = 'none';
+      $form[$trigger][$name]['#attributes'] = array(
+        'class' => array('fancy', 'bind-change'),
+        'id' => $name,
+        'data-ga-action' => "SmokingTriggers",
+        'data-ga-label' => str_replace('social.', '', str_replace('habitual.', '', str_replace('emotional.', '', $name))),
+      );
+    }
+    if (!empty($form_state['values'][$trigger])) {
+      $form[$trigger]['#default_value'] = $form_state['values'][$trigger];
+    }
+  }
+
+  $form['fight_cravings'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
+      'cravings.relieveStress' => 'Do you smoke to relieve stress or improve your mood?',
+      'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
+      'cravings.pleasurable' => 'Do you smoke because it’s pleasurable and relaxing?',
+      'cravings.irritable' => 'Do you get irritable and anxious without cigarettes?',
+      'cravings.energyBoost' => 'Do you smoke for an energy boost?',
+    ),
+    '#required' => FALSE,
+  );
+
+  $form['extra_help'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array(
+      'help.smokefreeVet' => 'SmokefreeTXT Text Message Program',
+      'help.apps' => 'Apps',
+      'help.facebook' => 'SmokefreeUS Facebook',
+      'help.quitlines' => 'Quitlines',
+      'help.livehelp' => 'NCI LiveHelp',
+      'help.medication' => 'Medication and Nicotine Replacement Therapy (NRT)',
+    ),
+    '#required' => FALSE,
+  );
+
+  foreach (array('fight_cravings', 'extra_help') as $accordion_parent) {
+    if (!empty($form_state['values'][$accordion_parent])) {
+      $form[$accordion_parent]['#default_value'] = $form_state['values'][$accordion_parent];
+    }
+    foreach ($form[$accordion_parent]['#options'] as $name => $label) {
+      $form[$accordion_parent][$name]['#prefix'] = <<< EOC
+    <div class="accordion-group">
+       <div class="accordion-heading accordion-toggle $accordion_parent collapsed" data-toggle="collapse" data-parent="#accordion1">
+              <a class="accordion-toggle toggle-arrow collapsed" data-toggle="collapse" data-parent="#accordion1" href="">
+                <span class="sr-only">Toggle Craving</span>
+              </a>
+              <div class="fancy-checkbox-wrap">
+EOC;
+      $form[$accordion_parent][$name]['#suffix'] = '<label for="' . $name . '"><span><span></span></span>' . $label . '</label></div></div>';
+      $form[$accordion_parent][$name]['#suffix'] .= getAccordionContent($name) . '</div>';
+      $form[$accordion_parent][$name]['#title_display'] = 'none';
+      $form[$accordion_parent][$name]['#attributes'] = array(
+        'class' => array('fancy', 'bind-change'),
+        'id' => $name,
+      );
+      if ($accordion_parent == 'fight_cravings') {
+        $form[$accordion_parent][$name]['#attributes']['data-ga-action'] = 'FightCravings';
+        $form[$accordion_parent][$name]['#attributes']['data-ga-label'] = str_replace('cravings.', '', $name);
+      }
+      elseif ($accordion_parent == 'extra_help') {
+        $form[$accordion_parent][$name]['#attributes']['data-ga-action'] = 'Help';
+        $form[$accordion_parent][$name]['#attributes']['data-ga-label'] = str_replace('help.', '', $name);
+      }
+    }
+  }
+
+  $form['milestones_24hours'] = array(
+    '#type' => 'hidden',
+    '#attributes' => array(
+      'id' => 'milestones.24hours',
+    ),
+  );
+
+  $form['milestones_48hours'] = array(
+    '#type' => 'hidden',
+    '#attributes' => array(
+      'id' => 'milestones.48hours',
+    ),
+  );
+
+  $form['milestones_oneWeek'] = array(
+    '#type' => 'hidden',
+    '#attributes' => array(
+      'id' => 'milestones.oneWeek',
+    ),
+  );
+
+  $form['milestones_twoWeeks'] = array(
+    '#type' => 'hidden',
+    '#attributes' => array(
+      'id' => 'milestones.twoWeeks',
+    ),
+  );
+
+  $form['milestones_oneMonth'] = array(
+    '#type' => 'hidden',
+    '#attributes' => array(
+      'id' => 'milestones.oneMonth',
+    ),
+  );
+
+  foreach (array('milestones_24hours', 'milestones_48hours', 'milestones_oneWeek', 'milestones_twoWeeks', 'milestones_oneMonth') as $milestone) {
+    if (!empty($form_state['values'][$milestone])) {
+      $form[$milestone]['#default_value'] = $form_state['values'][$milestone];
+    }
+  }
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Show my quit plan',
+    '#attributes' => array(
+      'class' => array('btn-show-my-quit-plan', 'btn-quit-plan'),
+      'id' => 'get-my-quit-plan',
+    ),
+  );
+  $form['#theme'] = 'bqp_theme';
+  $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/jquery.waypoints.min.js';
+  $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/build-your-quit-plan-progress-bar.js';
+
+
+  $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-non-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
+  $form['#attached']['css'][] = drupal_get_path('module', 'icfi_bqp') . '/css/bootstrap-datepicker.standalone.min.css';
+  $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/bootstrap-datepicker.min.js';
+  $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/icfi_bqp.js';
+
+  return $form;
+}
+
+function bqp_results_form($form, &$form_state) {
+
+  $existing_choices = &$_SESSION['existing_bqp_choices'];
+  // If static variable existing_choices is set, use them as default for
+  // users to edit.
+  if (isset($existing_choices)) {
+    $form['choices']['#value'] = $existing_choices;
+  }
+  else {
+    // No choices to display so redirect to input form.
+    drupal_goto('/build-your-quit-plan');
+  }
+
+  // Used only in the results template.
+  $form['print_pdf_top'] = array(
+    '#type' => 'submit',
+    '#value' => 'Get Printable PDF',
+    '#attributes' => array(
+      'class' => array('button', 'btn-quit-plan', 'print-pdf-btn'),
+      'id' => 'generate-pdf',
+    ),
+  );
+
+  $form['print_pdf_bottom'] = array(
+    '#type' => 'submit',
+    '#value' => 'Get Printable PDF',
+    '#attributes' => array(
+      'class' => array('button', 'btn-quit-plan', 'print-pdf-btn'),
+      'id' => 'generate-pdf-bottom',
+    ),
+  );
+
+  $form['edit_my_quit_plan_top'] = array(
+    '#type' => 'submit',
+    '#value' => 'Edit My Quit Plan',
+    '#attributes' => array(
+      'class' => array('button', 'btn-quit-plan', 'edit-quitplan-btn'),
+      'id' => 'edit-my-quit-plan',
+    ),
+  );
+
+  $form['edit_my_quit_plan_bottom'] = array(
+    '#type' => 'submit',
+    '#value' => 'Edit My Quit Plan',
+    '#attributes' => array(
+      'class' => array('button', 'btn-quit-plan', 'edit-quitplan-btn'),
+      'id' => 'edit-my-quit-plan-bottom',
+    ),
+  );
+  $form['#theme'] = 'bqp_results_theme';
+
+  $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-non-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
+  $form['#attached']['css'][] = drupal_get_path('module', 'icfi_bqp') . '/css/bootstrap-datepicker.standalone.min.css';
+  $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/bootstrap-datepicker.min.js';
+  $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/icfi_bqp.js';
+
+  return $form;
+}
+
+/**
+ * Returns the inner content for each of the accordion cravings or help options.
+ *
+ * @param string $option
+ *    One of the cravings or help options.
+ *
+ * @return string
+ *    The inner content that should only appear when the accordion option is
+ *    opened.
+ */
+function getAccordionContent($option) {
+  $content = '';
+  switch ($option) {
+    case 'cravings.keepBusy':
+      $content = <<< EOC
+        <div id="collapse1" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Straw.png" alt="a couple straws">
+              <p>Hold a straw in your hand and breathe through it.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Coin.png" alt="hand holding coin">
+              <p>Play with a coin or paperclip to keep your hands busy.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'cravings.relieveStress':
+      $content = <<< EOC
+        <div id="collapse2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Breath.png" alt="yoga icon">
+              <p>Practice deep breathing to calm down or do some pushups to blow off steam.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Talk.png" alt="two people icon">
+              <p>Turn to friends, family, and counselors when you need someone to talk to.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'cravings.mindOccupied':
+      $content = <<< EOC
+        <div id="collapse3" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span12 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Checklist.png" alt="checklist icon">
+              <p>Make a list of tasks that you can accomplish when a craving hits. This list can include chores, replying to emails, running errands, or planning your schedule for the next day.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'cravings.pleasurable':
+      $content = <<< EOC
+      <div id="collapse4" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div class="span12 clearfix crave-tip">
+            <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets">
+            <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your cigarette money for a special treat when you reach a smokefree milestone.</p>
+          </div>
+        </div>
+      </div>
+EOC;
+      break;
+
+    case 'cravings.irritable':
+      $content = <<< EOC
+        <div id="collapse5" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span12 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Gum.png" alt="gum">
+              <p>Nicotine replacement therapy (NRT), such as patches, gum, or lozenges, can help relieve your withdrawal symptoms. Talk to your doctor to see which type of NRT is right for you.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'cravings.energyBoost':
+      $content = <<< EOC
+        <div id="collapse7" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" width="37" height="32" alt="person running icon">
+              <p>To keep your energy level stable, get regular exercise and have healthy snacks throughout the day.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Sleep.png" alt="sleep cloud">
+              <p>Make sure you’re getting plenty of sleep at night to help you from feeling slow during the day.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.smokefreeVet':
+      $content = <<< EOC
+        <div id="help-collapse-1" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p><strong>SmokefreeTXT</strong> is a mobile text messaging service designed for adults and young adults across the United States who are trying to quit smoking. <a href="http://smokefree.gov/smokefreetxt" target="_blank">Sign up online</a> or send a text message with the word QUIT to 47848.</p>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.apps':
+      $content = <<< EOC
+        <div id="help-collapse-2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>
+              <strong><a href="http://smokefree.gov/apps" target="_blank">Smokefree Apps</a></strong> help you track cravings, monitor progress, and give you strategies to help you become smokefree.
+            </p>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.facebook':
+      $content = <<< EOC
+        <div id="help-collapse-3" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p class="no-external">Get extra support and information by checking out Smokefree on <a href="https://www.facebook.com/SmokefreeUS" target="_blank">Facebook</a>.</p>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.quitlines':
+      $content = <<< EOC
+        <div id="help-collapse-5" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Consider calling either the National Cancer Institute or state quitlines to get information and help with quitting:</p>
+            <ul>
+              <li><strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">The National Cancer Institute quitline:</a></strong> 1-877-44U-QUIT (1-877-448-7848)</li>
+              <li><strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">Find your state’s quitline: </a></strong>1-800-QUIT-NOW (1-800-784-8669) </li>
+            </ul>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.livehelp':
+      $content = <<< EOC
+        <div id="help-collapse-6" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Get help quitting through an online chat with a smoking cessation counselor. LiveHelp is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. <a href="https://livehelp.cancer.gov/app/chat/chat_launch/" target="_blank">Visit the NCI LiveHelp page to chat with a counselor.</a></p>
+          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.medication':
+      $content = <<< EOC
+         <div id="help-collapse-6" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <p>Using <a href="http://smokefree.gov/explore-medications" target="_blank">medications and/or nicotine replacement therapy (NRT)</a> can improve your chances of quitting for good. Make an appointment with your health care provider to find out which options are best for you.</p>
+            </div>
+          </div>
+EOC;
+      break;
+  }
+  return $content;
+}
+
+/**
+ * Submit handler for bqp_form.
+ *
+ * The main function of the submit handler is to route to the appropriate
+ * template and set the form to rebuild. If the user selected the print button,
+ * The submit function handles the printing. If the user clicked "Edit My Quit
+ * Plan" from the results page, the stored choices are put into form_state (to
+ * be used as defaults when the form rebuilds) and choices is emptied, which
+ * will cause the input template to be used. Otherwise, the input form has been
+ * submitted and the form_state is saved in choices, triggering the results
+ * template to be displayed.
+ *
+ * @param array $form.
+ *    Form render array.
+ * @param array $form_state
+ *    Current choices.
+ *
+ * @throws \Exception
+ *    Not on my watch.
+ */
+function bqp_form_submit($form, &$form_state) {
+  // Populate user's choices into static variable and redirect to results form.
+  $choices = array();
+  $choices['quit_day'] = $form_state['values']['quit_day'];
+  $choices['reasons_for_quitting'] = array_keys(array_filter($form_state['values']['reasons_for_quitting']));
+  $choices['triggers_emotional'] = array_keys(array_filter($form_state['values']['triggers_emotional']));
+  $choices['triggers_habitual'] = array_keys(array_filter($form_state['values']['triggers_habitual']));
+  $choices['triggers_social'] = array_keys(array_filter($form_state['values']['triggers_social']));
+  $choices['fight_cravings'] = array_keys(array_filter($form_state['values']['fight_cravings']));
+  $choices['extra_help'] = array_keys(array_filter($form_state['values']['extra_help']));
+  $choices['milestones_24hours'] = $form_state['values']['milestones_24hours'];
+  $choices['milestones_48hours'] = $form_state['values']['milestones_48hours'];
+  $choices['milestones_oneWeek'] = $form_state['values']['milestones_oneWeek'];
+  $choices['milestones_twoWeeks'] = $form_state['values']['milestones_twoWeeks'];
+  $choices['milestones_oneMonth'] = $form_state['values']['milestones_oneMonth'];
+  // Save choices in static variable and redirect to results page.
+  $existing_choices = &$_SESSION['existing_bqp_choices'];
+  $existing_choices = $choices;
+  $form_state['redirect'] = '/build-your-quit-plan-results';
+}
+
+function bqp_results_form_submit($form, &$form_state) {
+  if (isset($form_state['clicked_button']['#value'])) {
+    // User has requested a pdf. Theme the form with the print template, render
+    // the pdf with dompdf and stream the result.
+    if ($form_state['clicked_button']['#value'] == 'Get Printable PDF') {
+      require_once $_SERVER['DOCUMENT_ROOT'] . "/sites/all/libraries/dompdf/dompdf_config.inc.php";
+      $themed_form = theme('bqp_print_theme', $form);
+      $dompdf = new DOMPDF();
+      $dompdf->load_html($themed_form);
+
+      $dompdf->render();
+      $dompdf->stream("Quit_Plan.pdf");
+      $form_state['rebuild'] = TRUE;
+    }
+    else if ($form_state['clicked_button']['#value'] == 'Edit My Quit Plan') {
+      // User wants to edit plan. Redirect to form input page.
+      $form_state['redirect'] = '/build-your-quit-plan';
+    }
+  }
+}
+
+// Only quit date is required.
+function bqp_form_validate(&$form, &$form_state) {
+  if (empty($form_state['values']['quit_day'])) {
+    form_set_error('quit_date', 'Please enter your Quit Day.');
+  }
+}
+

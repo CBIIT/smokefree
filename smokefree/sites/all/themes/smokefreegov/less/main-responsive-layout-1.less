@@ -1,0 +1,805 @@
+/* Layout 1: Smartphone ----------- */
+@media only screen 
+	and (min-width : 320px)
+	and (max-width : 480px) {
+	BODY {
+		background-size:     100% auto;
+		overflow-x: hidden;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+	}
+	.ext {
+		border-radius: 2px;
+		color: #FFFFFF;
+		display: inline-block;
+		float: right;
+		padding: 5px 10px;
+		text-align: center;
+		width: 100%;
+	}
+	.ads-page-contain .ext {
+		float: none;
+		/* padding: 0; */
+		width: 0;
+		display: inline;
+	}
+	.sites-container {
+		float: left;
+		margin-bottom: 25px;
+		margin-top: 9px;
+		width: 32.5%;
+	}
+	.image-note {
+		float: right;
+		width: 15%;
+		margin-top: 25px;
+		background: url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0);
+		height: 35px;
+	}
+	.grid_layout{display:none;}
+	.features_layout {margin-left:5%;}
+	.look {
+		background: none repeat scroll 0 0 #ED4E6E;
+		border-radius: 2px;
+		color: #FFFFFF;
+		display: inline-block;
+		float: right;
+		padding: 5px 10px;
+		text-align: center;
+		width: 100%;
+		padding: 20px;
+		mARGIN-TOP: 5%;
+	}
+	.leftImage {
+		float: left;
+		width: 30% !important;
+	}
+	.leftImage IMG {
+		max-width: 100%;
+		width: 65% !important;
+	}
+	.linkMessage {
+		float: left;
+		width: 50% !important;
+		font-size: 1.3em !important;
+		padding: auto;
+		line-height: 1.06777;
+		width: 40% !Important;
+	}
+	.linkMessage a {
+		font-size: 14px !important;
+		color: #666666 !important;
+		font-family: 'cabinregular',Arial,Helvetica,sans-serif;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+	}
+	.image-note {
+		display:block;
+	}
+	.speak {
+		background-color: #b56000;
+		box-shadow: 1px 8px 6px -6px #666666;
+		float: left;
+		height: auto;
+		margin-right: 20px;
+		margin-top: 2%;
+		padding: 5px;
+		width: 100% !important;
+	}
+	.awards {
+		background-color: #0A5371;
+		box-shadow: 1px 8px 6px -6px #666666;
+		float: left;
+		height: auto;
+		margin-right: 20px;
+		margin-top: 2%;
+		padding: 5px;
+		width: 100% !important;
+	}
+	.quitPlan {
+		background-color: #608018;
+		box-shadow: 1px 8px 6px -6px #666666;
+		float: left;
+		height: auto;
+		margin-right: 20px;
+		margin-top: 2%;
+		padding: 5px;
+		width: 100% !important;
+	}
+	.linkMessage {
+		float: left;
+		font-size: inherit;
+		line-height: 1.0677;
+		text-align: center;
+		width: 40% !important;
+	}
+	.image-note {
+		float: right;
+		width: 10%;
+		margin-top: 25px;
+		background: url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0);
+		height: 35px;
+	}
+	.img-layout{
+		float:none !important; 
+		padding-left:10% !important; 
+		width:100% !important;
+	}
+	.smaller_grid {
+		width:70%;
+	}
+	.contentLayout1{
+		width:100% !important;
+	}
+	.smaller_grid li {
+		background:#ffffff !important;
+		border: 1px dotted #CCCCCC;
+		float: left;
+		margin-bottom: 5px;
+		padding: 25px;
+		width: 100%;
+	}
+
+	/* Logo */
+	.logo-container {
+		float:               none;
+	}
+	.logo-container A {
+		width:               75%;
+	}
+	.logo {
+		background-position: 0 50%;
+		background-size:     100% auto;
+		margin-left:         1.5%;
+		margin-top:          0;
+		width:               100%;
+	}
+	
+	/* Mobile button */
+	.mobile-btn {
+		//display:             block;
+		//margin-top:          1em;
+		//min-width:           20px;
+		//position:            relative;
+		//right:               2.5%;
+		//top:                 0;
+	}
+	.mobile-btn IMG {
+		margin-left: 8%;
+	}	
+	.rule {
+		display:none;
+	}
+	
+	/* Nav bar (hidden) */
+	.navbar {
+		display:             none;
+		opacity:             0;
+	}
+	
+	/* Tag line */
+	.tagline {
+		border-bottom:       1px solid #626C68;
+		border-top:          1px solid #626C68;
+		position:            relative;
+	}
+	.tagline p {
+		font-size:           1.35714em;
+		margin:              0 4.5%;
+		max-height:          inherit;
+		min-height:          20px;
+		padding:             0.6875em 0;
+		z-index:             2;
+	}
+	
+	/* Bottom header border (hidden) */
+	.nav-bottom-border {
+		display:             none;
+		float:               none;
+		opacity:             0;
+		padding:             0;
+		visibility:          hidden;
+	}
+	.main-container {
+		padding-top: 1em;
+	}
+	.node-type-page .main-container,
+    .node-type-cr-article .main-container,
+    .node-type-blog-entry .main-container,
+	.node-type-veterans .main-container {
+		padding-top: 0;
+	}
+	.content-container h1 {
+		margin-left: 0.5em;
+	}
+	.node-type-page .col-sm-3 ul li,
+    .node-type-cr-article .col-sm-3 ul li,
+    .node-type-blog-entry .col-sm-3 ul li,
+	.node-type-veterans .col-sm-3 ul li {
+		line-height: 2.7em;
+	}
+	.node-type-page .main-container .col-sm-3,
+    .node-type-cr-article .main-container .col-sm-3,
+    .node-type-blog-entry .main-container .col-sm-3,
+	.node-type-veterans .main-container .col-sm-3 {
+		background-color: transparent;
+		width:100%;
+		clear: left;
+	}
+	.node-type-custom .row .col-sm-9,
+	.node-type-webform .row .col-sm-9,
+	.node-type-done .content-container .content-container,
+	.node-type-page .main-container .link-area,
+    .node-type-cr-article .main-container .link-area,
+    .node-type-blog-entry .main-container .link-area,
+	.node-type-veterans .main-container .link-area {
+		margin: 0 2.4725%;
+		width: 94.8414%;
+	}
+	.node-type-custom .row .col-sm-9 .content-container,
+	.node-type-webform .row .col-sm-9 .content-container {
+		margin: 0;
+		width: 100%;
+		padding-left: 1em;
+	}
+	.logobar {
+		padding-top: 0px;
+		
+	}
+	.logobar .half-width {
+		border-bottom: 1px solid #043F58;
+		width: 100%;
+		padding-bottom: 0;
+		padding-left: 0;
+		font-size: .8em;
+	}	
+	.logobar .half-width-sites {
+		width: 100% !important;
+	}
+	.social-container {
+		display: inline;
+		float: left;
+		padding: 0.5em 1em;
+		width: 50%;
+		margin-left:0px !important;
+	}
+	#rn_nciChatLaunchButton_4 {
+
+		overflow:hidden;
+	}
+	
+	#rn_nciChatLaunchButton_4 {
+		width:102%;
+	}
+	
+	.logobar .social {
+		margin-bottom: 30px;
+		margin-left: 0px;
+		margin-top: 13px;
+	}
+	.links-container {
+		float: left;
+	}
+	.links-container-txt {		
+		float: left;
+		margin-left: 1em;
+		text-align: center;
+	}
+	.links-container-qp {
+		float: left;
+		margin-left: 1em;
+		text-align: center;
+		padding-top:.5em;
+		width: 10% !important;
+	}
+	.logobar .links {
+		display: inline; 
+		margin-bottom: 7px;
+		margin-top: 5px;
+		position: relative;	
+	}
+	.logobar .links a {
+		color: #fff;
+		font-size: 1em;
+		text-align: center;
+		text-decoration: none;
+	}
+	.logobar .links a:hover {
+		color: #fff;
+		font-size: 1em;
+	}
+	.logobar .links img {
+		float: none;
+	}
+	.logobar .facebook-icon {
+		display: inline-block;
+	}
+	
+	.logobar .twitter-icon {
+		margin-left: 2em;
+		width: 1em;
+		display: inline-block;
+	}
+	.sites-container {
+		float: left;
+		margin-bottom: 25px;
+		margin-top: 9px;
+		width: 30.5%;
+	}
+	.smokefree-txt-text,
+	.quit-plan-text {
+		display:none;
+	}
+	.smokefree-women {
+		margin-left: .5em;
+	}
+	.desktop-sites,
+	.veterans-desktop-sites {
+		display:none;
+	}
+	.veterans-mobile-sites img {
+		margin-left:1em;
+		margin-top:1em;
+		margin-bottom:1em;
+	}
+	#rn_nciChatLaunchButton_4 {
+		padding-top:.5em;
+	}
+	.footer {
+		text-align: left;
+		padding-left: 1%;
+	}
+	.footer .footer-links ul {
+		line-height: 1.428em;
+		margin-bottom: 10px;
+	}
+	.footer .footer-links li {
+		display: block;
+		margin-left: 5px;
+		text-align:center;
+	}		
+	.footer .footer-links span {
+		opacity: 0;
+	}
+	.footer .nih-copy {
+		text-align:center;
+	}
+	#searchbox-footer {
+		width: 76.55291%;
+	}
+	#search-header {
+		display:none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#search-footer-container {
+		margin-top:20px;
+		margin-bottom:20px;
+		margin-left:20px;
+	}
+	
+	/* Menu for smartphones */
+	.nav .collapse ul{
+		display: block;
+	}
+	.navbar ul.nav{
+		display:none;
+	}
+	.navbar ul.collapse{
+		display: block;
+	}
+	.container-page .collapsed{
+		display: block;
+	}
+	.nav select {
+		display: inline-block;
+	}
+	.navbar .nav {
+		border-radius: 20px;
+		margin-top:0;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+	}
+	.navbar .nav .leaf {
+		background-color: #FCFCFC;
+		line-height: 1em;
+		margin-left: 0;
+		margin-top: 0;
+		width: 100%;
+	}
+	.navbar  li {
+		border-bottom: 2px solid #296882;
+	}
+	.navbar .nav .leaf.last {
+		border-bottom: none;
+	}
+	.navbar .nav .leaf:hover {
+		background-color: #296882;
+	}
+	.navbar .nav .leaf a {
+		color: #000000;
+		padding-bottom: .4em;
+	}
+	.container-page .navbar ul {
+		left: 35%;
+		position: absolute;
+		top: 4.2em;
+		z-index: 200;
+	}
+	.page-now-leaving .main-container{
+		padding-top:0;
+	}
+	.addthis_counter.addthis_pill_style a.atc_s,
+	.addthis_counter.addthis_pill_style a.addthis_button_expanded:hover,
+	.addthis_counter.addthis_pill_style a.atc_s:hover, 
+	.addthis_counter a.addthis_button_expanded:hover, 
+	.addthis_counter a.atc_s:hover {
+		left: 83%;
+	}
+	
+	/* Mobile menu navigation */
+	.container-page .nav-collapse {
+		display:             block;
+	}
+	.container-page .nav-collapse.collapse {
+		height:              0;
+		display:             block;
+		overflow:            inherit;
+		width:               100%;
+	}
+	.container-page .nav-collapse.collapse.in {
+		height:              auto;
+	}
+	.dropdown-menu {
+		border:              0;
+		margin-top:          0;
+	}
+	.grid {
+		display:none;
+	}
+	
+	/* Layout 1: Additional ----------- */
+	body {background-size:    auto 100%; }
+	.features{margin:0;}
+	.features_top{float:left; width:50%;}
+	.features_bottom{float:left; width:50%;}
+	
+	#slides {display:none !important;}
+	.tagline_responsive{display:none;}
+	.node-type-page .row .col-sm-9,
+    .node-type-cr-article .row .col-sm-9,
+    .node-type-blog-entry .row .col-sm-9,
+	.node-type-veterans .row .col-sm-9 {
+		float:				 left;
+		line-height:         1.55em;
+		margin:              1em 1.5793% 0;
+		padding-left:		 2%;
+		width:               96%;}
+	.linkMessage {
+		float: left;
+		font-size: inherit;
+		line-height: 1.0677;
+		text-align: left;  
+		width: 50% !important;
+	}
+	.image-note {margin-right:0em;}
+	.describe{padding:10px; color:#fff;}
+	.describe h2 {line-height:1.2; font-size:1.3em !important;}
+	.describe p {color:#fff; font-size:1.1em; font-weight: normal;}
+	.btn {
+		background: url("../images/health-effects/arrow_link.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0);
+		bottom: 0;
+		border:none !Important;
+		cursor: pointer;
+		display: inline-block;
+		float: right;
+		height: 20px;
+		line-height: 20px;
+		margin: 10px;
+		padding: 4px 12px;
+		position: absolute;
+		right: 0;
+		width:10px;
+	}
+	.tab_1, .tab_2, .tab_3 {
+		position: relative;	
+		float: left;  	
+		width: 98%;	
+		padding: 4px;	
+	}
+	.tab_1 {
+		background: none repeat scroll 0 0 #608018;
+		margin-right: 5px;
+		margin-bottom:5px;
+	}
+	.tab_2 {
+		background: none repeat scroll 0 0 #0A5371;
+		margin-right: 5px;
+		margin-bottom:5px;
+	}
+	.tab_3 {
+		background: none repeat scroll 0 0 #b56000;
+	
+	}	
+	.links-container-txt p {
+		margin-left: 4px;
+		padding-top: 0.5em !important;
+	}
+	.img-responsive {
+		display: block;
+		height: auto;
+		max-width: 100%;
+		padding-bottom: 5px;
+		width: 100% !important;
+	}
+	.links-container-txt {
+		display: inline;
+		float: left;
+		margin-left: 0.416%;
+		padding-top: 0.5em;
+		text-align: left;
+	}
+	h4, .h4 {
+		font-size: 16px !important;
+		font-weight:bold !important;
+	}
+	.logobar .half-width-sites {width:100%;}
+	.look {
+		background: none repeat scroll 0 0 #ED4E6E;
+		border-radius: 2px;
+		color: #FFFFFF;
+		display: inline-block;
+		float: right;
+		padding: 5px 10px;
+		text-align: center;
+		width: 100%;
+		padding: 20px !important;
+		mARGIN-TOP: 5% !important;
+	}
+	.features {
+		width: 80% !important;
+	}
+	.linkMessage {
+		float: left;
+		width: 55%;
+		font-size: 1.3em !important;
+		padding: auto;
+		line-height: 1.06777;
+		margin: 1.5% 0 0.5% !important; 
+	}
+	.image-note {
+		float: right;
+		width: 15% !important;
+		margin-top: 0px !important;
+		background: url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0);
+		height: 35px;
+	}
+	.img-layout {
+		float: none !important;
+		width: 100% !important;
+	}
+	.img-responsive {
+		display: inline !important;
+		height: auto;
+		max-width: 100%;
+		padding-bottom: 5px;
+	}
+	.carousel {margin-top: 20px;//display:none;
+		.bx-viewport {
+			margin: -1px 0 0 3.2em !important;
+		}
+	}
+	.grid {display:none;}
+	.features {
+		width: 75%;
+	}
+	.joinUs_Img{padding:5px !important; width:100%;}
+	.quizzes_Img{padding:5px !important;}
+	.quitPlan_Img {padding:5px !important;}
+	.smokeFree_Img{padding:5px !important;}
+	.img-container{ height: auto; width:auto;}
+	.figure{margin:0; position:relative; float:none !important;}
+	.grid li {
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0px !important;
+		position: relative;
+		text-align: left;
+		width: 100% !important;
+		margin-bottom:5px !important;
+		border:1px solid black;
+	}
+	.grid figure{height:auto; background-color:#ffffff;}
+	.grid figure img {
+		display: block;
+		float: left;
+		max-width: 100%;
+		width: 33%;
+	}
+	.cover{padding:15px; position:relative; float:left; width:65%; }
+	.grid {margin-left:0px !important; padding-top:5px !important; padding-bottom:5px !important; width:100%;}
+	.quitPlan p{line-height:2;}
+	.awards p{line-height: 2;}
+	.speak p {line-height:2;}
+	.quizzes_Img {float:none !important;}
+	.quitPlan_Img{float:none !important;}
+	.smokeFree_Img{float:none !Important;}
+	.col-sm-3 {
+		line-height:         1.55em;
+		margin:              1em 4.583333%;
+		width:               90.83333%;
+	}
+	.col-sm-3 .sidebar-image {
+		margin-bottom:       0;
+		margin-right:        2.4725%;
+		margin-left:        2.4725%;
+		width:               94.8414%;
+	}
+	.node-type-page aside ul h2,
+    .node-type-cr-article aside ul h2,
+    .node-type-blog-entry aside ul h2,
+	.node-type-veterans aside ul h2 {
+		margin-bottom: 0;
+	}
+	.content-container h1 {
+		margin-left: 0;
+	}
+	.node-type-page .row .col-sm-9.no-sidebar,
+    .node-type-cr-article .row .col-sm-9.no-sidebar,
+    .node-type-blog-entry .row .col-sm-9.no-sidebar,
+	.node-type-veterans .row .col-sm-9.no-sidebar  {
+		margin: 0 2.4725%;
+		width: 94.8414%;
+	}
+	
+	/* Tab styles */
+	.node-type-page .col-sm-9   article #myTab li, 
+	.node-type-page .col-sm-9 article .nav-pills li,
+    .node-type-cr-article .col-sm-9   article #myTab li,
+    .node-type-cr-article .col-sm-9 article .nav-pills li,
+    .node-type-blog-entry .col-sm-9   article #myTab li,
+    .node-type-blog-entry .col-sm-9 article .nav-pills li,
+	.node-type-veterans .col-sm-9   article #myTab li, 
+	.node-type-veterans .col-sm-9 article .nav-pills li {
+		min-width: 100%;
+	}
+	.nav-pills li a {
+		box-shadow: none !important;	
+	}
+	.look {
+		background: none repeat scroll 0 0 #ED4E6E;
+		border-radius: 2px;
+		color: #FFFFFF;
+		display: inline-block;
+		float: right;
+		padding: 5px 10px;
+		text-align: center;
+		width: 100%;
+	}
+	.footer {
+		padding: 22px 22px 22px 5%;
+		text-align: left;
+	}
+	.tagline {display:none;}
+	.tagline_responsive {
+		background-image: url("../images/header/smokefree-hd5-tagline-bg-4x65.png");
+		background-repeat: repeat;
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+		margin-bottom:4%;
+	}
+	.tagline_responsive P {
+		font-size:           1.35714em;
+		margin:              0 2.5%;
+		max-height:          inherit;
+		min-height:          19px;
+		padding:             0.6875em 0;
+		z-index:             2;
+	}
+	.tagline_responsive a STRONG {
+    font-family: 'cabinsemibold', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #424242;
+	}
+
+	.tagline_responsive a:hover {
+    color: #424242;
+	}
+	
+	/* SmokefreeTXT Page Icon Responsive Styles */
+	.smokefree-txt-icon:hover .externalllinktooltip-smokefreetxt {
+		display: block;
+		left: 3.7% !important;
+		top: 18.5%;
+	}
+	.logobar .external-sites img {
+		margin-left:0em;
+		margin-right:0em;
+	}
+
+	.row .SecondCol {
+		margin-left: 0;
+	}
+
+	.ad-btn {
+		position: relative;
+		float: none;
+	}
+
+	.ads-page-contain .txtR {
+		margin-left: 0;
+	}
+
+	.ads-page-contain img.tb2 {
+		padding-bottom: 120px;
+	}
+
+	.ads-page-contain .bannerText {
+		top: 2%;
+	}
+
+	.ads-page-contain .bannerText p#everyDay {
+    font-size: 1.1em;
+    font-weight: bold;
+	}
+
+	.ads-page-contain .bannerText p#sloganText {
+	    font-size: 1.1em;
+	}
+
+	.ads-page-contain .bannerDash {
+    left: 20%;
+    top: 2%;
+	}
+
+	.ads-page-contain img.bannerTb {
+		padding-bottom: 70px;
+	}
+
+	.ads-page-contain .bannerDash p#everyDay {
+		font-size: 1em;
+	}
+
+	.ads-page-contain .shareButtons {
+		right: 0;
+		bottom: 10px;
+	}
+
+	.ads-page-contain .shareButtons p {
+		font-size: 14px;
+	}
+
+	.ads-page-contain .shareButtons img {
+		width: 20px;
+	}
+
+	.ads-page-contain .shareButtons img.fbShare {
+		width: 10px;
+	}
+
+	.page-mysmokefree .SecondCol .dash-button {
+    display: block;
+    width: 100px;
+    margin-left: 32%;
+    clear: both;
+	}
+
+	.page-mysmokefree button.btn.form-submit {
+		width:200px;
+		height: auto;
+		display: block;
+		float: none;
+		margin-right: 20%;
+		margin-bottom: 35px;
+        white-space: normal;
+	}
+
+	#homepage-personalized-quit {
+		display: none;
+	}
+}

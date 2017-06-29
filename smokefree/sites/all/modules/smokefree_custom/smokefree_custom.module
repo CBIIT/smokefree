@@ -1,0 +1,867 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function smokefree_custom_init() {
+  if (drupal_match_path($_GET['q'], 'mysmokefree')) {
+    drupal_page_is_cacheable(FALSE);
+    return;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function smokefree_custom_menu() {
+  $items['mysmokefree'] = array(
+    'title' => 'MYSmokefree: Your personalized quit experience',
+    'page callback' => '_mysmokefree',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ *
+ */
+function _mysmokefree() {
+  $content = '<div class="row-fluid module dash-row zero-padding"><div class="col-sm-2"></div><div id="top-dash-head" class="col-sm-8">
+  <h1>MYSmokefree: Your personalized quit experience</h1>
+  <p>This interactive page delivers articles, apps, text messaging programs and social media accounts from Smokefree.gov’s full library of tools that help you quit smoking.</p>
+  </div>
+  <div class="col-sm-2"></div>
+  </div>';
+  $form = drupal_get_form('_mysmokefree_form');
+  $content .= drupal_render($form);
+  return $content;
+}
+
+/**
+ *
+ */
+function _mysmokefree_form($form, &$form_state) {
+  $form = array();
+  $interest_default = $quit_journey_default = $tried_but_slipped_default = '';
+  $interest = array('man' => '<br>Men', 'woman' => '<br>Women', 'pregnant' => '<br>Pregnant',
+    'teen' => '<br>Teen', 'vet' => '<br>Veteran', 'espanol' => '<br>en Español');
+  $quit_journey = array('not_ready' => '<br>Want to Quit But Not Ready', 'preparing_to_quit' => '<br>Preparing to Quit', 'first_24_hrs' => '<br>First 24 Hours', 'first_two_weeks' => '<br>First Two Weeks', 'maintaining_your_quit' => '<br>Maintaining Your Quit');
+  $intro_txt = '';
+  if (isset($_COOKIE['interest'])) {
+    $interest_default = $_COOKIE['interest'];
+    $intro_txt = '<h2>Need to make adjustments? </h2>';
+  }
+  if (isset($_COOKIE['quit_journey'])) {
+    $quit_journey_default = $_COOKIE['quit_journey'];
+  }
+  if (isset($_COOKIE['tried_but_slipped'])) {
+    $tried_but_slipped_default = $_COOKIE['tried_but_slipped'];
+  }
+  $intro_txt .= '<p>Get information and support that is made for your needs. Start by selecting a group and a point along the quit journey.</p>';
+  if (empty($form_state['mysmokefree_results'])) {
+    $form['intro_txt'] = array(
+      '#type' => 'item',
+      '#markup' => $intro_txt,
+      '#prefix' => '<div id = "dashboard-form">',
+    );
+    $form['interest'] = array(
+      '#type' => 'radios',
+      '#title' => t('Group'),
+      '#default_value' => $interest_default,
+      '#options' => $interest,
+      '#required' => TRUE,
+    );
+    $form['quit_journey'] = array(
+      '#type' => 'radios',
+      '#title' => t('Quit Journey Point'),
+      '#options' => $quit_journey,
+      '#default_value' => $quit_journey_default,
+      '#required' => TRUE,
+    );
+    $form['tried_but_slipped'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('I\'m trying to quit, but I slipped'),
+      '#default_value' => $tried_but_slipped_default,
+    );
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('View My Personalized Content'),
+      '#suffix' => '</div>',
+    );
+  }
+  if (!empty($form_state['mysmokefree_results'])) {
+    $form['results'] = array(
+      '#type' => 'item',
+      '#markup' => $form_state['mysmokefree_results'],
+    );
+  }
+  return $form;
+}
+
+/**
+ *
+ */
+function _mysmokefree_form_submit($form, &$form_state) {
+  $interest = $form_state['values']['interest'];
+  $quit_journey = $form_state['values']['quit_journey'];
+  $tried_but_slipped = $form_state['values']['tried_but_slipped'];
+  $form_state['mysmokefree_results'] = _mysmokefree_results($interest, $quit_journey, $tried_but_slipped);
+  setcookie('interest', $interest, 0, "", "", (isset($_SERVER["HTTPS"]) && strtolower($_SERVER["HTTPS"]) == "on"));
+  setcookie('quit_journey', $quit_journey, 0, "", "", (isset($_SERVER["HTTPS"]) && strtolower($_SERVER["HTTPS"]) == "on"));
+  setcookie('tried_but_slipped', $tried_but_slipped, 0, "", "", (isset($_SERVER["HTTPS"]) && strtolower($_SERVER["HTTPS"]) == "on"));
+  $form_state['rebuild'] = TRUE;
+}
+
+/**
+ *
+ */
+function _mysmokefree_results($interest, $quit_journey, $tried_but_slipped) {
+  $content = '';
+  // Copied content from node 174.
+  // Todo: Cleanup inline css
+  $content .= '<div class="container-fluid col-sm-12 ads-page-contain">
+  <div class="col-sm-1"></div>
+
+  <div class="col-sm-10 ads-container">
+  <!--  Begin Dashboard Container -->
+  <div id="ads-content">
+  <div class="dash-row">
+  <!--  Begin Make Adjustments -->
+  <div class="col-sm-8 module module-pad">
+  <span class="accent-text">Viewing <b>' . _mysmokefree_quit_journey_options($quit_journey) . '</b> Content for <b>' . _mysmokefree_interest_options($interest) . '</b> </span>
+  <a class="dash-button" href="/mysmokefree">Update</a>
+  </div><!-- End Make Adjustments -->
+  <!-- Begin Social Media Icons -->
+  <div class="col-sm-4 module SecondCol module-pad"><div class="shareButtons dash-shareButtons"><p>Share:</p>
+<a class="extlink" target="_blank" href="https://www.facebook.com/SmokefreeUS"><img src="/sites/all/themes/sfg/images/dashboard/SF-share_facebook.png"></a> <a class="extlink" target="_blank" href="https://twitter.com/SmokefreeUs"><img src="/sites/all/themes/sfg/images/dashboard/SF-share_twitter.png"></a> <a href="mailto:name@email.com?subject=I’m%20becoming%20smokefree%20and%20I%20need%20your%20help!&amp;body=On [Quit Date] I’m quitting smoking. %0D%0A%0D%0AI’m letting you know this because quitting will be tough, but having the support of my loved ones will make it a little easier. I hope that I can turn to you for help during my journey to become smokefree. %0D%0AI look forward to sharing this new chapter of my life with you. %0D%0ASincerely, %0D%0A[Name]"><img src="/sites/all/themes/sfg/images/dashboard/SF-share_email.png"></a></div></div>
+  </div><!-- End Social Media Icons -->
+  </div>';
+  $content .= '<!-- Begin Banner -->
+  <div class="row-fluid top-banner">
+  <div class="col-sm-12 top-box">
+  <img class="tb2 bannerTb" src="/sites/all/themes/sfg/images/dashboard/banners/' . $interest . '_bubble.png"/>
+  <div class="bannerText bannerDash">
+  <p id="everyDay">' . _mysmokefree_dashboard_slogantext($interest) . '</p>
+  </div>
+  </div>
+  </div>
+  <!-- End Banner -->';
+  $content .= '<!-- Begin Column 1--><div class="col-sm-6 FirstCol">';
+  $content .= '<div class="module">';
+  $matrix = _mysmokefree_dashboard_matrix($quit_journey);
+  if ($interest == 'espanol') {
+    $content .= '<h1>Temas de más interés para usted</h1> <p>Here is content tailored specifically for your interests!</p>';
+  }
+  else {
+    $content .= '<h1>Your Top Five</h1> <p>Here is content tailored specifically for your interests!</p>';
+  }
+  $count = 1;
+  foreach($matrix['website'][$interest] as $result) {
+    $content .= '<div id="row' . $count . '" class="inner-row ' . ($count%2 ? "" : "grey") . '">';
+    $content .= '<div class="dash-left"><span class="top-5-number">'. $count++ . '.</span></div>';
+    $content .= '<div class="top-5">' . $result . '</div></div>';
+  }
+  $content .= '</div>';
+
+  if ($interest == 'teen') {
+  $content .= '<div class="module"><div class="dash-left"><img class="quit-guide-icon" src="/sites/all/themes/sfg/images/dashboard/SF-App_QuitStart_app_icon.png"/></div>
+  <div><h1>quitSTART</h1><p class="dashboard-paragraph">quitSTART is a free app made for teens who want to quit smoking, but adults can use it too. This app takes the information you provide about your smoking history and gives you tailored tips, inspiration, and challenges to help you become smokefree and live a healthier life.</p></div>
+  <br class="paid-clear"/>';
+  //$content .= $matrix['app'][$interest][0];
+  $content .= '<br class="paid-clear"/><div class="col-sm-5"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF-App_QuitSTART_iPhone_Android.png" /></div>
+  <br />
+  <div>
+  <div id="buttons">
+  <a href="http://itunes.apple.com/us/app/quitstart/id494552000?mt=8"><img src="/sites/all/themes/sfg/images/dashboard/SF-App_AppleStoreBadge.png" class="store-button" /></a> <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitstart"><img src="/sites/all/themes/sfg/images/dashboard/SF-App_GooglePlayBadge.png" class="store-button"/></a>
+  </div>
+  </div>
+  </div>
+  </div>';
+  }
+  elseif ($interest == 'espanol') {
+  $content .= '<div class="module"><div class="dash-left"><img class="quit-guide-icon" src="/sites/all/themes/sfg/images/dashboard/quit-guide-icon.png" /></div>
+  <div><h1>QuitGuide</h1><p class="paid-ad-paragraph">QuitGuide es una aplicación gratis que puede ayudarle a entender sus comportamientos como fumador y a desarrollar las habilidades necesarias para dejar de fumar.” (Disponible solo en inglés)</p></div>
+  <br class="paid-clear"/>';
+  //$content .= $matrix['app'][$interest][0];
+  $content .= '<br class="paid-clear"/><div class="qg-img-container"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF-App_QuitGuide.png" /></div>
+  <br />
+  <div>
+  <div id="buttons">
+  <a href="https://itunes.apple.com/app/quitguide/id411766556?mt=8"><img src="/sites/all/themes/sfg/images/dashboard/SF-App_AppleStoreBadge.png" class="store-button" /></a> <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitguide2&hl=en"><img src="/sites/all/themes/sfg/images/dashboard/SF-App_GooglePlayBadge.png" class="store-button"/></a>
+  </div>
+  </div>
+  </div>
+  </div>';
+  }
+  else {
+  $content .= '<div class="module"><div class="dash-left"><img class="quit-guide-icon" src="/sites/all/themes/sfg/images/dashboard/quit-guide-icon.png" /></div>
+  <div><h1>QuitGuide</h1><p class="dashboard-paragraph">QuitGuide is a free app that can help you understand your smoking patterns and build the skills needed to become and stay smokefree.</p></div>
+  <br class="paid-clear"/>';
+  //$content .= $matrix['app'][$interest][0];
+  $content .= '<br class="paid-clear"/><div class="qg-img-container"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF-App_QuitGuide.png" /></div>
+  <br />
+  <div>
+  <div id="buttons">
+  <a href="https://itunes.apple.com/app/quitguide/id411766556?mt=8"><img src="/sites/all/themes/sfg/images/dashboard/SF-App_AppleStoreBadge.png" class="store-button" /></a> <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitguide2&hl=en"><img src="/sites/all/themes/sfg/images/dashboard/SF-App_GooglePlayBadge.png" class="store-button"/></a>
+  </div>
+  </div>
+  </div>
+  </div>';
+  }
+
+
+  $content .= '<!-- Begin Column 2 --><div class="col-sm-6 SecondCol">';
+  if ($tried_but_slipped) {
+    $quit_but_slipped = _mysmokefree_dashboard_quit_but_slipped_matrix($interest);
+    $content .='<div class="module"><h1>Slip?</h1>';
+    $content .= "Quitting is a learning process. Many ex-smokers had to try stopping many times before they finally succeeded. When people slip up, it's usually within the first three months after quitting.";
+    $content .= "<br><br>" . $quit_but_slipped . '</div>';
+  }
+  $content .='<div class="module">';
+  if ($interest == 'pregnant') {
+    $content .= '<h1>SmokefreeMOM</h1>';
+    $content .= '<div class="col-sm-5"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF-TXT_SFMOM.png" /></div>
+  <div class="col-sm-6 txtR"><p>The program will help you set a quit date and get ready for quitting. You’ll get daily tips and on-demand help with cravings. </p>';
+    $content .= $matrix['txt'][$interest][0];
+    $content .= '<p class="accent-text"><em>or</em></p><p class="textQuit">Text MOM to 222888. </p></div>';
+  }
+  elseif ($interest == 'vet') {
+  $content .= '<h1>SmokefreeTXT</h1>';
+   $content .= '<div class="col-sm-5"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF-TXT_QuitTXT.png"/></div>
+  <div class="col-sm-6 txtR"><p>The program will help you set a quit date and get ready for quitting. You’ll get daily tips and on-demand help with cravings. </p>';
+    $content .= $matrix['txt'][$interest][0];
+    $content .= '<p class="accent-text"><em>or</em></p><p class="textQuit">Text VET to 47848. </p></div>';
+  }
+  elseif ($interest == 'espanol') {
+    $content .= '<h1>SmokefreeTXT En Español</h1>';
+    $content .= '<div class="col-sm-5"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Text_Espanol.PNG" /></div>';
+    $content .= '<div class="col-sm-6 txtR"><p>Con la ayuda de este programa, usted podrá establecer la fecha en que desea dejar de fumar y
+    prepararse para hacerlo.  Usted recibirá consejos todos los días y podrá solicitar ayuda cuando tenga antojos.
+    </p>';
+    $content .= $matrix['txt'][$interest][0];
+    $content .= '<p class="accent-text"><em>o</em></p><p class="textQuit">Envíe un mensaje de texto con la palabra “LIBRE” al 47848. </p></div>';
+  }
+  else {
+    $content .= '<h1>SmokefreeTXT</h1>';
+    $content .= '<div class="col-sm-5"><img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF-TXT_QuitTXT.png" /></div>
+  <div class="col-sm-6 txtR"><p>The program will help you set a quit date and get ready for quitting. You’ll get daily tips and on-demand help with cravings. </p>';
+    $content .= $matrix['txt'][$interest][0];
+    $content .= '<p class="accent-text"><em>or</em></p><p class="textQuit">Text QUIT to 47848. </p></div>';
+  }
+  $content .= '</div>';
+
+  if ($interest == 'pregnant') {
+    $content .= '<div class="module"><h1>Get Social!</h1>
+    <img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Social_SFWomen.png" />';
+    $content .= '<p>The ';
+    $content .= $matrix['social_media'][$interest][0];
+    $content .= ' page is a supportive community of people in all
+    stages of quitting. Get tips, find motivation, share your story or read about the
+    experiences of others.</p>
+    <div class="dash-row"><a href="https://www.facebook.com/smokefree.women/" class="facebook-like"><strong>Like us on Facebook</strong>
+    <img src="/sites/all/themes/sfg/images/dashboard/FB-Like-button.png" /></a></div></div><!-- End Get Social --></div><!-- End Column 2 -->
+    </div><!-- End Dashboard Content --></div><!-- End Dashboard Container --> <div class="col-sm-1"></div></div>';
+    return $content;
+  }
+  elseif ($interest == 'woman') {
+    $content .= '<div class="module"><h1>Get Social!</h1>
+    <img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Social_SFWomen.png" />';
+    $content .= '<p>The ';
+    $content .= $matrix['social_media'][$interest][0];
+    $content .= ' page is a supportive community of people in all
+    stages of quitting. Get tips, find motivation, share your story or read about the
+    experiences of others.</p>
+    <div class="dash-row"><a href="https://www.facebook.com/smokefree.women/" class="facebook-like"><strong>Like us on Facebook</strong>
+    <img src="/sites/all/themes/sfg/images/dashboard/FB-Like-button.png" /></a></div></div><!-- End Get Social --></div><!-- End Column 2 -->
+    </div><!-- End Dashboard Content --></div><!-- End Dashboard Container --> <div class="col-sm-1"></div></div>';
+    return $content;
+  }
+  elseif ($interest == 'vet') {
+    $content .= '<div class="module"><h1>Get Social!</h1>
+    <img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Social_SFVet.png" />';
+    $content .= '<p>The ';
+    $content .= $matrix['social_media'][$interest][0];
+    $content .= ' page is a supportive community of people in all
+    stages of quitting. Get tips, find motivation, share your story or read about the
+    experiences of others.</p>
+    <div class="dash-row"><a href="https://www.facebook.com/smokefreevet" class="facebook-like"><strong>Like us on Facebook</strong>
+    <img src="/sites/all/themes/sfg/images/dashboard/FB-Like-button.png" /></a></div></div><!-- End Get Social --></div><!-- End Column 2 -->
+    </div><!-- End Dashboard Content --></div><!-- End Dashboard Container --> <div class="col-sm-1"></div></div>';
+    return $content;
+  }
+  elseif ($interest == 'teen') {
+    $content .= '<div class="module"><h1>Get Social!</h1>
+    <img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Social_Instagram.png" />';
+    $content .= '<p>The ';
+    $content .= $matrix['social_media'][$interest][0];
+    $content .= ' page is a supportive community of people in all
+    stages of quitting. Join us and share your tips and support to be free of tobacco.</p>
+    <div class="dash-row"><a href="https://www.instagram.com/SmokefreeUs/" class="facebook-like"><strong>Follow us on Instagram</strong>
+    </a></div></div><!-- End Get Social --></div><!-- End Column 2 -->
+    </div><!-- End Dashboard Content --></div><!-- End Dashboard Container --> <div class="col-sm-1"></div></div>';
+    return $content;
+  }
+  elseif ($interest == 'espanol') {
+    $content .= '<div class="module"><h1>Get Social!</h1>
+    <img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Social_SFUS.png" />';
+    $content .= '¡Juntos somos más fuertes y podemos dejar de fumar! Síganos en <a href="https://www.facebook.com/SmokefreeUS">Facebook</a> para recibir consejos, apoyo y la motivación para dejar de fumar.</p>
+    <div class="dash-row"><a href="https://www.facebook.com/SmokefreeUS" class="facebook-like"><strong>Like us on Facebook</strong>
+    <img src="/sites/all/themes/sfg/images/dashboard/FB-Like-button.png" /></a></div></div><!-- End Get Social --></div><!-- End Column 2 -->
+    </div><!-- End Dashboard Content --></div><!-- End Dashboard Container --> <div class="col-sm-1"></div></div>';
+    return $content;
+  }
+  else {
+    $content .= '<div class="module"><h1>Get Social!</h1>
+    <img class="mobile-phone-img" src="/sites/all/themes/sfg/images/dashboard/SF_Social_SFUS.png"/>';
+    $content .= '<p>The ';
+    $content .= $matrix['social_media'][$interest][0];
+    $content .= ' page is a supportive community of people in all
+    stages of quitting. Get tips, find motivation, share your story or read about the
+    experiences of others.</p>
+    <div class="dash-row"><a href="https://www.facebook.com/SmokefreeUS" class="facebook-like"><strong>Like us on Facebook</strong>
+    <img src="/sites/all/themes/sfg/images/dashboard/FB-Like-button.png" /></a></div></div><!-- End Get Social --></div><!-- End Column 2 -->
+    </div><!-- End Dashboard Content --></div><!-- End Dashboard Container --> <div class="col-sm-1"></div></div>';
+    return $content;
+  }
+}
+
+/**
+ *
+ */
+function _mysmokefree_dashboard_matrix($quit_journey) {
+  $matrix = array();
+  $matrix['not_ready']['website']['man'] = array(
+    l("What's Your Reason to Quit?", "http://smokefree.gov/reasons-to-quit"),
+    l("18 Ways Smoking Affects Your Health", "http://smokefree.gov/health-effects"),
+    l("Do You Know The Risks of Secondhand Smoke?", "http://smokefree.gov/secondhand-smoke-quiz"),
+    l("The Real Rewards of Quitting", "http://smokefree.gov/rewards-of-quitting"),
+    l("Preparing to Quit", "http://smokefree.gov/steps-to-prepare"),
+  );
+  $matrix['preparing_to_quit']['website']['man'] = array(
+    l("Preparing to Quit", "http://smokefree.gov/steps-to-prepare"),
+    l("Have You Built A Quit Plan?", "http://smokefree.gov/build-your-quit-plan"),
+    l("Find a Quit Method That Works For You", "http://smokefree.gov/explore-quit-methods"),
+    l("Which Smoking Medication is Right For You?", "http://smokefree.gov/explore-medications"),
+    l("5 Steps to Take on Your Quit Day", "http://smokefree.gov/steps-on-quit-day"),
+  );
+  $matrix['first_24_hrs']['website']['man'] = array(
+    l("How to Manage Cravings", "http://smokefree.gov/cravings"),
+    l("Why Quitting Is Hard", "http://smokefree.gov/why-quitting-is-hard"),
+    l("Do I have Nicotine Withdrawal?", "http://smokefree.gov/withdrawal"),
+    l("12 Tips to Get Support As You Quit", "http://smokefree.gov/getting-support"),
+    l("10 Ways to Cope With Emotions Without Cigarettes", "http://smokefree.gov/cope-with-emotions-without-cigarettes"),
+  );
+  $matrix['first_two_weeks']['website']['man'] = array(
+    l("5 Ways to Stay Smokefree", "http://smokefree.gov/staying-smokefree"),
+    l("How to Manage Cravings", "http://smokefree.gov/cravings"),
+    l("Do I have Nicotine Withdrawal?", "http://smokefree.gov/withdrawal"),
+    l("6 Ways To Boost Your Mood After Quitting", "http://smokefree.gov/ways-to-boost-your-mood-after-quitting"),
+    l("Conquer Stress", "http://smokefree.gov/stress-and-smoking"),
+  );
+  $matrix['maintaining_your_quit']['website']['man'] = array(
+    l("5 Ways to Stay Smokefree", "http://smokefree.gov/staying-smokefree"),
+    l("Conquer Stress", "http://smokefree.gov/stress-and-smoking"),
+    l("The Real Rewards of Quitting", "http://smokefree.gov/rewards-of-quitting"),
+    l("Understanding Links Between Smoking and Weight", "http://smokefree.gov/understanding-links-between-smoking-and-weight"),
+    l("Create A Positive Environment", "http://smokefree.gov/create-a-positive-environment"),
+  );
+
+  $matrix['not_ready']['app']['man'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['preparing_to_quit']['app']['man'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_24_hrs']['app']['man'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_two_weeks']['app']['man'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['maintaining_your_quit']['app']['man'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+
+  $matrix['not_ready']['txt']['man'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['preparing_to_quit']['txt']['man'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_24_hrs']['txt']['man'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_two_weeks']['txt']['man'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['maintaining_your_quit']['txt']['man'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+
+  $matrix['not_ready']['social_media']['man'] = array(
+    l("SmokefreeUS Facebook ", "https://www.facebook.com/SmokefreeUS/", array('attributes' => array('class' => 'facebook-social-link'))),
+  );
+  $matrix['preparing_to_quit']['social_media']['man'] = array(
+    l("SmokefreeUS Facebook ", "https://www.facebook.com/SmokefreeUS/", array('attributes' => array('class' => 'facebook-social-link'))),
+  );
+  $matrix['first_24_hrs']['social_media']['man'] = array(
+    l("SmokefreeUS Facebook ", "https://www.facebook.com/SmokefreeUS/", array('attributes' => array('class' => 'facebook-social-link'))),
+  );
+  $matrix['first_two_weeks']['social_media']['man'] = array(
+    l("SmokefreeUS Facebook ", "https://www.facebook.com/SmokefreeUS/", array('attributes' => array('class' => 'facebook-social-link'))),
+  );
+  $matrix['maintaining_your_quit']['social_media']['man'] = array(
+    l("SmokefreeUS Facebook ", "https://www.facebook.com/SmokefreeUS/", array('attributes' => array('class' => 'facebook-social-link'))),
+  );
+
+  $matrix['not_ready']['website']['woman'] = array(
+    l("Thinking About Quitting? 4 Questions to Ask Yourself", "http://women.smokefree.gov/ways-to-quit/thinking-about-quitting-4-questions-to-ask-yourself.aspx"),
+    l("20 Reasons Why Many Women Quit Smoking", "http://women.smokefree.gov/benefits-of-quitting/20-reasons-why-many-women-quit-smoking.aspx"),
+    l("11 Harmful Effects of Smoking on Women's Health", "http://women.smokefree.gov/health-effects-of-smoking/11-harmful-effects-of-smoking-on-women%E2%80%99s-health.aspx"),
+    l("3 Very Real Dangers of Secondhand Smoke", "http://women.smokefree.gov/secondhand-smoke/3-very-real-dangers-of-secondhand-smoke.aspx"),
+    l("Ready to Set a Quit Date?", "http://women.smokefree.gov/ways-to-quit/ready-to-set-a-quit-date.aspx"),
+  );
+  $matrix['preparing_to_quit']['website']['woman'] = array(
+    l("Preparing to Quit? Start by Taking These 5 Steps", "http://women.smokefree.gov/ways-to-quit/preparing-to-quit-start-by-taking-these-5-steps.aspx"),
+    l("Have You Built A Quit Plan?", "http://smokefree.gov/build-your-quit-plan"),
+    l("Quitting Cold Turkey Isn't Your Only Choice", "http://women.smokefree.gov/ways-to-quit/quitting-%E2%80%9Ccold-turkey%E2%80%9D-isn%E2%80%99t-your-only-choice.aspx"),
+    l("Is Nicotine Replacement Therapy Right for You?", "http://women.smokefree.gov/ways-to-quit/is-nicotine-replacement-therapy-right-for-you-6-things-you-should-consider.aspx"),
+    l("5 Things to do on Your Quit Day", "http://women.smokefree.gov/ways-to-quit/5-things-to-do-on-your-quit-day.aspx"),
+  );
+  $matrix['first_24_hrs']['website']['woman'] = array(
+    l("Everything You Ever Wanted to Know About Withdrawal", "http://women.smokefree.gov/withdrawal/everything-you-ever-wanted-to-know-(but-were-afraid-to-ask)-about-withdrawal.aspx"),
+    l("3 Reasons Why Quitting is So Hard", "http://women.smokefree.gov/withdrawal/3-reasons-why-quitting-is-so-hard.aspx"),
+    l("15 Tips for Dealing With Cravings", "http://women.smokefree.gov/ways-to-quit/15-tips-for-dealing-with-cravings.aspx"),
+    l("3 Ways to Get The Support You Need to Be Smokefree", "http://women.smokefree.gov/ways-to-quit/want-to-talk-to-an-expert-about-quitting-3-ways-to-get-the-support-you-need-to-be-smokefree.aspx"),
+    l("12 Ways to Stay Focused on Being Smokefree", "http://women.smokefree.gov/health-effects-of-smoking/12-ways-to-stay-focused-on-being-smokefree.aspx"),
+  );
+  $matrix['first_two_weeks']['website']['woman'] = array(
+    l("14 Things You Can DO to cope with Cravings", "http://women.smokefree.gov/ways-to-quit/14-things-you-can-do-to-cope-with-cravings.aspx"),
+    l("6 New Habits to Create to Replace Smoking", "http://women.smokefree.gov/ways-to-quit/quitting-6-new-habits-to-create-to-replace-smoking.aspx"),
+    l("Good-for-you Stress Busters", "http://women.smokefree.gov/stress/good-for-you-stress-busters.aspx"),
+    l("3 Types of People You May Meet on Your Smokefree Journey", "http://women.smokefree.gov/getting-support/3-types-of-people-you-may-meet.aspx"),
+    l("Pick Your Pick Me Up", "http://women.smokefree.gov/smoking-mood/pick-your-pick-me-up.aspx"),
+  );
+  $matrix['maintaining_your_quit']['website']['woman'] = array(
+    l("Already Quit? 4 Tips for Staying Smokefree", "http://women.smokefree.gov/ways-to-quit/already-quit-4-tips-for-staying-smokefree.aspx"),
+    l("What Happens to Your Body After you Quit?", "http://women.smokefree.gov/benefits-of-quitting/what-happens-to-your-body-after-you-quit.aspx"),
+    l("Understanding the Links Between Smoking & Weight", "http://women.smokefree.gov/smoking-and-weight-the-basics/understanding-links-between-smoking-weight.aspx"),
+    l("Putting a Stop to Smoky Thinking", "http://women.smokefree.gov/putting-a-stop-to-smoky-thinking.aspx"),
+    l("4 Healthy Ways to Deal with Emotions", "http://women.smokefree.gov/emotions-relationships-dealing-with-the-tough-stuff/4-healthy-ways-to-deal-with-emotions.aspx"),
+  );
+
+  $matrix['not_ready']['app']['woman'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['preparing_to_quit']['app']['woman'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_24_hrs']['app']['woman'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_two_weeks']['app']['woman'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['maintaining_your_quit']['app']['woman'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+
+  $matrix['not_ready']['txt']['woman'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['preparing_to_quit']['txt']['woman'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_24_hrs']['txt']['woman'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_two_weeks']['txt']['woman'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['maintaining_your_quit']['txt']['woman'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+
+  $matrix['not_ready']['social_media']['woman'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['preparing_to_quit']['social_media']['woman'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['first_24_hrs']['social_media']['woman'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['first_two_weeks']['social_media']['woman'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['maintaining_your_quit']['social_media']['woman'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+
+  $matrix['not_ready']['txt']['pregnant'] = array(
+    l("SmokefreeMoM", "http://smokefree.gov/smokefreemom", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['preparing_to_quit']['txt']['pregnant'] = array(
+    l("SmokefreeMoM", "http://smokefree.gov/smokefreemom", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_24_hrs']['txt']['pregnant'] = array(
+    l("SmokefreeMoM", "http://smokefree.gov/smokefreemom", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_two_weeks']['txt']['pregnant'] = array(
+    l("SmokefreeMoM", "http://smokefree.gov/smokefreemom", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['maintaining_your_quit']['txt']['pregnant'] = array(
+    l("SmokefreeMoM", "http://smokefree.gov/smokefreemom", array('attributes' => array('class' => 'dash-button'))),
+  );
+
+  $matrix['not_ready']['website']['pregnant'] = array(
+    l("9 Myths About Smoking and Pregnancy", "http://women.smokefree.gov/before-your-baby-is-born/9-myths-about-smoking-and-pregnancy.aspx"),
+    l("Thinking About Quitting? 4 Questions to Ask Yourself", "http://women.smokefree.gov/ways-to-quit/thinking-about-quitting-4-questions-to-ask-yourself.aspx"),
+    l("Have A Happy Birth Day", "http://women.smokefree.gov/before-your-baby-is-born/have-a-happy-birth-day.aspx"),
+    l("20 Reasons Why Many Women Quit Smoking", "http://women.smokefree.gov/benefits-of-quitting/20-reasons-why-many-women-quit-smoking.aspx"),
+    l("Quit for You, Quit for Two", "http://women.smokefree.gov/smokefree-mom/quit-for-you,-quit-for-two.aspx"),
+  );
+  $matrix['preparing_to_quit']['website']['pregnant'] = array(
+    l("Preparing to Quit? Start by Taking These 5 Steps", "http://women.smokefree.gov/ways-to-quit/preparing-to-quit-start-by-taking-these-5-steps.aspx"),
+    l("Get by with a Little Help From Your Friends", "http://women.smokefree.gov/smokefree-mom/get-by-with-a-little-help-from-your-friends.aspx"),
+    l("Prescription for Quitting", "http://women.smokefree.gov/smokefree-mom/prescription-for-quitting.aspx"),
+    l("Your Feelings, Your Friends", "http://women.smokefree.gov/before-your-baby-is-born/your-feelings,-your-friends.aspx"),
+    l("Quit for You, Quit for Two", "http://women.smokefree.gov/smokefree-mom/quit-for-you,-quit-for-two.aspx"),
+  );
+  $matrix['first_24_hrs']['website']['pregnant'] = array(
+    l("Withdrawal When You're Pregnant", "http://women.smokefree.gov/before-your-baby-is-born/withdrawal-when-you%E2%80%99re-pregnant.aspx"),
+    l("15 Tips for Dealing With Cravings", "http://women.smokefree.gov/ways-to-quit/15-tips-for-dealing-with-cravings.aspx"),
+    l("Prescription for Quitting", "http://women.smokefree.gov/smokefree-mom/prescription-for-quitting.aspx"),
+    l("12 Ways to Stay Focused on Being Smokefree", "http://women.smokefree.gov/health-effects-of-smoking/12-ways-to-stay-focused-on-being-smokefree.aspx"),
+    l("Get by with a Little Help From Your Friends", "http://women.smokefree.gov/smokefree-mom/get-by-with-a-little-help-from-your-friends.aspx"),
+  );
+  $matrix['first_two_weeks']['website']['pregnant'] = array(
+    l("14 Things You Can DO to cope with Cravings", "http://women.smokefree.gov/ways-to-quit/14-things-you-can-do-to-cope-with-cravings.aspx"),
+    l("6 New Habits to Create to Replace Smoking", "http://women.smokefree.gov/ways-to-quit/quitting-6-new-habits-to-create-to-replace-smoking.aspx"),
+    l("Good-for-you Stress Busters", "http://women.smokefree.gov/stress/good-for-you-stress-busters.aspx"),
+    l("3 Types of People You May Meet on Your Smokefree Journey", "http://women.smokefree.gov/getting-support/3-types-of-people-you-may-meet.aspx"),
+    l("Pick Your Pick Me Up", "http://women.smokefree.gov/smoking-mood/pick-your-pick-me-up.aspx"),
+  );
+  $matrix['maintaining_your_quit']['website']['pregnant'] = array(
+    l("Already Quit? 4 Tips for Staying Smokefree", "http://women.smokefree.gov/ways-to-quit/already-quit-4-tips-for-staying-smokefree.aspx"),
+    l("What Happens to Your Body After you Quit?", "http://women.smokefree.gov/benefits-of-quitting/what-happens-to-your-body-after-you-quit.aspx"),
+    l("Eating Healthy for Two", "http://women.smokefree.gov/before-your-baby-is-born/eating-healthy-for-two.aspx"),
+    l("4 Healthy Ways to Deal with Emotions", "http://women.smokefree.gov/emotions-relationships-dealing-with-the-tough-stuff/4-healthy-ways-to-deal-with-emotions.aspx"),
+    l("Smokefree After Baby", "http://women.smokefree.gov/smokefree-mom/smokefree-after-baby.aspx"),
+  );
+
+  $matrix['not_ready']['app']['pregnant'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['preparing_to_quit']['app']['pregnant'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_24_hrs']['app']['pregnant'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_two_weeks']['app']['pregnant'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['maintaining_your_quit']['app']['pregnant'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+
+  $matrix['not_ready']['social_media']['pregnant'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['preparing_to_quit']['social_media']['pregnant'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['first_24_hrs']['social_media']['pregnant'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['first_two_weeks']['social_media']['pregnant'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+  $matrix['maintaining_your_quit']['social_media']['pregnant'] = array(
+    l("Smokefree Women Facebook", "https://www.facebook.com/smokefree.women/"),
+  );
+
+  $matrix['not_ready']['website']['teen'] = array(
+    l("What's Your Reason to Quit?", "http://smokefree.gov/reasons-to-quit"),
+    l("Health Effects", "http://teen.smokefree.gov/yourHealthEffects.aspx"),
+    l("Secondhand Smoke", "http://teen.smokefree.gov/secondhandSmoke.aspx"),
+    l("Decisions", "http://teen.smokefree.gov/yourDecision.aspx"),
+    l("Your Social Life", "http://teen.smokefree.gov/yourSocialLife.aspx"),
+  );
+  $matrix['preparing_to_quit']['website']['teen'] = array(
+    l("Have you Built A Quit Plan?", "http://smokefree.gov/build-your-quit-plan"),
+    l("Set a Quit Date", "http://teen.smokefree.gov/quitStart.aspx#SetAQuitDate"),
+    l("Tell Family and Friends", "http://teen.smokefree.gov/quitStart.aspx#TellFamilyAndFriends"),
+    l("Anticipate and Plan for Challenges", "http://teen.smokefree.gov/quitStart.aspx#AnticipateAndPlan"),
+    l("Remind Yourself Why You Want to be Smokefree", "http://teen.smokefree.gov/quitStart.aspx#RemindYourself"),
+  );
+  $matrix['first_24_hrs']['website']['teen'] = array(
+    l("Cravings", "http://teen.smokefree.gov/quitStart.aspx#Craving"),
+    l("Triggers", "http://teen.smokefree.gov/yourTriggers.aspx#"),
+    l("Track and Monitor your Progress Daily", "http://teen.smokefree.gov/quitStart.aspx#DailyTracker"),
+    l("Withdrawal", "http://teen.smokefree.gov/quitStart.aspx#Withdrawal"),
+    l("10 Ways to Cope Without having a Smoke", "http://teen.smokefree.gov/yourMood.aspx#Coping"),
+  );
+  $matrix['first_two_weeks']['website']['teen'] = array(
+    l("Sticking With It", "http://teen.smokefree.gov/quitStart.aspx#StickingWithIt"),
+    l("Cravings", "http://teen.smokefree.gov/quitStart.aspx#Craving"),
+    l("10 Ways to Cope Without having a Smoke", "http://teen.smokefree.gov/yourMood.aspx#Coping"),
+    l("Track and Monitor your Progress Daily", "http://teen.smokefree.gov/quitStart.aspx#DailyTracker"),
+    l("6 Ways To Boost Your Mood After Quitting", "http://smokefree.gov/ways-to-boost-your-mood-after-quitting"),
+  );
+  $matrix['maintaining_your_quit']['website']['teen'] = array(
+    l("Sticking With It", "http://teen.smokefree.gov/quitStart.aspx#StickingWithIt"),
+    l("Support", "http://teen.smokefree.gov/yourSocialLife.aspx#Support"),
+    l("Conquer Stress", "http://smokefree.gov/stress-and-smoking"),
+    l("10 Ways to Cope Without having a Smoke", "http://teen.smokefree.gov/yourMood.aspx#Coping"),
+    l("The Real Rewards of Quitting", "http://smokefree.gov/rewards-of-quitting"),
+  );
+
+  $matrix['not_ready']['app']['teen'] = array(
+    l("quitSTART", "http://smokefree.gov/apps-quitstart"),
+  );
+  $matrix['preparing_to_quit']['app']['teen'] = array(
+    l("quitSTART", "http://smokefree.gov/apps-quitstart"),
+  );
+  $matrix['first_24_hrs']['app']['teen'] = array(
+    l("quitSTART", "http://smokefree.gov/apps-quitstart"),
+  );
+  $matrix['first_two_weeks']['app']['teen'] = array(
+    l("quitSTART", "http://smokefree.gov/apps-quitstart"),
+  );
+  $matrix['maintaining_your_quit']['app']['teen'] = array(
+    l("quitSTART", "http://smokefree.gov/apps-quitstart"),
+  );
+
+  $matrix['not_ready']['txt']['teen'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['preparing_to_quit']['txt']['teen'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_24_hrs']['txt']['teen'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_two_weeks']['txt']['teen'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['maintaining_your_quit']['txt']['teen'] = array(
+    l("SmokefreeTXT", "http://smokefree.gov/smokefreetxt", array('attributes' => array('class' => 'dash-button'))),
+  );
+
+  $matrix['not_ready']['social_media']['teen'] = array(
+    l("Smokefree Teen Instagram", "https://www.instagram.com/SmokefreeUs/"),
+  );
+  $matrix['preparing_to_quit']['social_media']['teen'] = array(
+    l("Smokefree Teen Instagram", "https://www.instagram.com/SmokefreeUs/"),
+  );
+  $matrix['first_24_hrs']['social_media']['teen'] = array(
+    l("Smokefree Teen Instagram", "https://www.instagram.com/SmokefreeUs/"),
+  );
+  $matrix['first_two_weeks']['social_media']['teen'] = array(
+    l("Smokefree Teen Instagram", "https://www.instagram.com/SmokefreeUs/"),
+  );
+  $matrix['maintaining_your_quit']['social_media']['teen'] = array(
+    l("Smokefree Teen Instagram", "https://www.instagram.com/SmokefreeUs/"),
+  );
+
+  $matrix['not_ready']['website']['vet'] = array(
+    l("Why You Smoke", "http://smokefree.gov/veterans/why-you-smoke"),
+    l("Why I Use Tobacco Quiz", "http://smokefree.gov/veterans/why-i-use-tobacco-quiz"),
+    l("Why You Should Quit", "http://smokefree.gov/veterans/why-you-need-to-quit-now"),
+    l("Common Questions & Answers About Quitting", "http://smokefree.gov/veterans/common-questions-and-answers-about-quitting"),
+    l("Do You Know The Risks of Secondhand Smoke?", "http://smokefree.gov/secondhand-smoke-quiz"),
+  );
+  $matrix['preparing_to_quit']['website']['vet'] = array(
+    l("Why You Should Quit", "http://smokefree.gov/veterans/why-you-need-to-quit-now"),
+    l("Build Your Quit Plan", "http://smokefree.gov/veterans/how-to-quit/build-your-quit-plan"),
+    l("Learn Your Triggers", "http://smokefree.gov/veterans/how-to-quit#triggers-content"),
+    l("5 Steps to Take on Your Quit Day", "http://smokefree.gov/steps-on-quit-day"),
+    l("Social Support", "http://smokefree.gov/veterans/how-to-quit#social-content"),
+  );
+  $matrix['first_24_hrs']['website']['vet'] = array(
+    l('15 Ways to Take a "Smokefree Break"', "http://smokefree.gov/veterans/success-tips#smokefree-break-content"),
+    l("Overcoming Your Nicotine Addiction", "http://smokefree.gov/veterans/how-to-quit#addiction-content"),
+    l("Learn Your Triggers", "http://smokefree.gov/veterans/how-to-quit#triggers-content"),
+    l("Dealing With Triggers and Cravings", "http://smokefree.gov/veterans/how-to-quit#cravings-content"),
+    l("Stress Management", "http://smokefree.gov/veterans/success-tips#stress-management-tips-content"),
+  );
+  $matrix['first_two_weeks']['website']['vet'] = array(
+    l("5 Ways to Stay Smokefree", "http://smokefree.gov/staying-smokefree"),
+    l('15 Ways to Take a "Smokefree Break"', "http://smokefree.gov/veterans/success-tips#smokefree-break-content"),
+    l("Stress Management", "http://smokefree.gov/veterans/success-tips#stress-management-tips-content"),
+    l("6 Ways To Boost Your Mood After Quitting", "http://smokefree.gov/ways-to-boost-your-mood-after-quitting"),
+    l("Dealing With Triggers and Cravings", "http://smokefree.gov/veterans/how-to-quit#cravings-content"),
+  );
+  $matrix['maintaining_your_quit']['website']['vet'] = array(
+    l("Stress Management", "http://smokefree.gov/veterans/success-tips#stress-management-tips-content"),
+    l("5 Ways to Stay Smokefree", "http://smokefree.gov/staying-smokefree"),
+    l("Social Support", "http://smokefree.gov/veterans/how-to-quit#social-content"),
+    l("Understanding Links Between Smoking and Weight", "http://smokefree.gov/understanding-links-between-smoking-and-weight"),
+    l("The Real Rewards of Quitting", "http://smokefree.gov/rewards-of-quitting"),
+  );
+
+  $matrix['not_ready']['app']['vet'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['preparing_to_quit']['app']['vet'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_24_hrs']['app']['vet'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_two_weeks']['app']['vet'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['maintaining_your_quit']['app']['vet'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+
+  $matrix['not_ready']['txt']['vet'] = array(
+    l("SmokefreeVET", "http://smokefree.gov/vet", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['preparing_to_quit']['txt']['vet'] = array(
+    l("SmokefreeVET", "http://smokefree.gov/vet", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_24_hrs']['txt']['vet'] = array(
+    l("SmokefreeVET", "http://smokefree.gov/vet", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['first_two_weeks']['txt']['vet'] = array(
+    l("SmokefreeVET", "http://smokefree.gov/vet", array('attributes' => array('class' => 'dash-button'))),
+  );
+  $matrix['maintaining_your_quit']['txt']['vet'] = array(
+    l("SmokefreeVET", "http://smokefree.gov/vet", array('attributes' => array('class' => 'dash-button'))),
+  );
+
+  $matrix['not_ready']['social_media']['vet'] = array(
+    l("SmokefreeVET Facebook", "https://www.facebook.com/smokefreevet/"),
+  );
+  $matrix['preparing_to_quit']['social_media']['vet'] = array(
+    l("SmokefreeVET Facebook", "https://www.facebook.com/smokefreevet/"),
+  );
+  $matrix['first_24_hrs']['social_media']['vet'] = array(
+    l("SmokefreeVET Facebook", "https://www.facebook.com/smokefreevet/"),
+  );
+  $matrix['first_two_weeks']['social_media']['vet'] = array(
+    l("SmokefreeVET Facebook", "https://www.facebook.com/smokefreevet/"),
+  );
+  $matrix['maintaining_your_quit']['social_media']['vet'] = array(
+    l("SmokefreeVET Facebook", "https://www.facebook.com/smokefreevet/"),
+  );
+
+  $matrix['not_ready']['website']['espanol'] = array(
+    l("Motivos Para Dejar De Fumar", "http://espanol.smokefree.gov/motivos-para-dejar-de-fumar"),
+    l("Efectos de la Salud", "http://espanol.smokefree.gov/efectos-de-la-salud"),
+    l("Impacto Sobre los Demás", "http://espanol.smokefree.gov/impacto-sobre-los-demas"),
+    l("Recompensas por Dejar de Fumar", "http://espanol.smokefree.gov/recompensas"),
+    l("Fumar leve y ocasionalmente", "http://espanol.smokefree.gov/fumar-leve-y-ocasionalmente"),
+  );
+  $matrix['preparing_to_quit']['website']['espanol'] = array(
+    l("Tome pasos para prepararse", "http://espanol.smokefree.gov/preparacion-por-pasos"),
+    l("Preparación de un plan para dejar de fumar", "http://espanol.smokefree.gov/preparacion-de-un-plan-para-dejar-de-fumar"),
+    l("Pasos a seguir el día que deje de fumar", "http://espanol.smokefree.gov/el-dia-que-deje-de-fumar"),
+    l("Reciba apoyo mientras deja de fumar", "http://espanol.smokefree.gov/reciba-apoyo"),
+    l("Explore medicamentos", "http://espanol.smokefree.gov/explore-medicamentos"),
+  );
+  $matrix['first_24_hrs']['website']['espanol'] = array(
+    l("Antojos", "http://espanol.smokefree.gov/antojos"),
+    l("Por qué es difícil dejar de fumar", "http://espanol.smokefree.gov/por-que-es-dificil-dejar-de-fumar"),
+    l("Síntomas de abstinencia", "http://espanol.smokefree.gov/sintomas-de-abstinencia"),
+    l("Reciba apoyo mientras deja de fumar", "http://espanol.smokefree.gov/reciba-apoyo"),
+    l("Hable con un experto", "http://espanol.smokefree.gov/hable-con-un-experto"),
+  );
+  $matrix['first_two_weeks']['website']['espanol'] = array(
+    l("Para seguir sin fumar", "http://espanol.smokefree.gov/para-seguir-sin-fumar"),
+    l("Por qué es difícil dejar de fumar", "http://espanol.smokefree.gov/por-que-es-dificil-dejar-de-fumar"),
+    l("El estrés y fumar", "http://espanol.smokefree.gov/el-estres-y-fumar"),
+    l("Antojos", "http://espanol.smokefree.gov/antojos"),
+    l("Síntomas de abstinencia", "http://espanol.smokefree.gov/sintomas-de-abstinencia"),
+  );
+  $matrix['maintaining_your_quit']['website']['espanol'] = array(
+    l("Pasos a seguir el día que deje de fumar", "http://espanol.smokefree.gov/el-dia-que-deje-de-fumar"),
+    l("Antojos", "http://espanol.smokefree.gov/antojos"),
+    l("El estrés y fumar", "http://espanol.smokefree.gov/el-estres-y-fumar"),
+    l("Reciba apoyo mientras deja de fumar", "http://espanol.smokefree.gov/reciba-apoyo"),
+    l("Recompensas por Dejar de Fumar", "http://espanol.smokefree.gov/recompensas"),
+  );
+
+  $matrix['not_ready']['app']['espanol'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['preparing_to_quit']['app']['espanol'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_24_hrs']['app']['espanol'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['first_two_weeks']['app']['espanol'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+  $matrix['maintaining_your_quit']['app']['espanol'] = array(
+    l("QuitGuide", "http://smokefree.gov/apps-quitguide"),
+  );
+
+  $matrix['not_ready']['txt']['espanol'] = array(
+    l("SmokefreeTXT en Español", "http://espanol.smokefree.gov/smokefreetxt-espanol", array('attributes' => array('class' => 'dash-button btnEsp'))),
+  );
+  $matrix['preparing_to_quit']['txt']['espanol'] = array(
+    l("SmokefreeTXT en Español", "http://espanol.smokefree.gov/smokefreetxt-espanol", array('attributes' => array('class' => 'dash-button btnEsp'))),
+  );
+  $matrix['first_24_hrs']['txt']['espanol'] = array(
+    l("SmokefreeTXT en Español", "http://espanol.smokefree.gov/smokefreetxt-espanol", array('attributes' => array('class' => 'dash-button btnEsp'))),
+  );
+  $matrix['first_two_weeks']['txt']['espanol'] = array(
+    l("SmokefreeTXT en Español", "http://espanol.smokefree.gov/smokefreetxt-espanol", array('attributes' => array('class' => 'dash-button btnEsp'))),
+  );
+  $matrix['maintaining_your_quit']['txt']['espanol'] = array(
+    l("SmokefreeTXT en Español", "http://espanol.smokefree.gov/smokefreetxt-espanol", array('attributes' => array('class' => 'dash-button btnEsp'))),
+  );
+
+  return $matrix[$quit_journey];
+}
+
+/**
+ *
+ */
+function _mysmokefree_dashboard_quit_but_slipped_matrix($interest) {
+  $matrix = array();
+  $matrix['man'] = l("Tips for Slips", "http://smokefree.gov/slips", array('attributes' => array('class' => 'dash-button')));
+  $matrix['woman'] = l("What Should I do if I Slip?", "http://women.smokefree.gov/ways-to-quit/what-should-i-do-if-i-slip.aspx", array('attributes' => array('class' => 'dash-button')));
+  $matrix['pregnant'] = l("What Should I do if I Slip?", "http://women.smokefree.gov/ways-to-quit/what-should-i-do-if-i-slip.aspx", array('attributes' => array('class' => 'dash-button')));
+  $matrix['teen'] = l("Slips", "http://teen.smokefree.gov/quitStart.aspx#Slips", array('attributes' => array('class' => 'dash-button')));
+  $matrix['vet'] = l("Tips for Slips", "http://smokefree.gov/slips", array('attributes' => array('class' => 'dash-button')));
+  $matrix['espanol'] = l("Deslices", "http://espanol.smokefree.gov/deslices", array('attributes' => array('class' => 'dash-button')));
+  return $matrix[$interest];
+}
+
+/**
+ *
+ */
+function _mysmokefree_interest_options($interest) {
+  $interest_options = array('man' => 'Men', 'woman' => 'Women', 'pregnant' => 'Pregnant',
+    'teen' => 'Teen', 'vet' => 'Veteran', 'espanol' => 'en Español');
+  return $interest_options[$interest];
+}
+
+/**
+ *
+ */
+function _mysmokefree_quit_journey_options($quit_journey) {
+  $quit_journey_options = array('not_ready' => 'Want to Quit But Not Ready', 'preparing_to_quit' => 'Preparing to Quit', 'first_24_hrs' => 'First 24 Hours', 'first_two_weeks' => 'First Two Weeks', 'maintaining_your_quit' => 'Maintaining Your Quit');
+  return  $quit_journey_options[$quit_journey];
+}
+
+/**
+ *
+ */
+function _mysmokefree_dashboard_slogantext($interest) {
+  $slogan['man'] = "Quitting can be tough, but we have the tools to help you get it done.";
+  $slogan['woman'] = "We know quitting can be hard, but we've got your back. Check out these resources for women like you.";
+  $slogan['pregnant'] = "Being pregnant doesn't magically make quitting easier, but it's still important! Here are resources just for pregnant women to help you out.";
+  $slogan['teen'] = "You're in control of the direction your life takes. Use these tools to help you as you decide to quit smoking.";
+  $slogan['vet'] = " Quitting smoking is part of the transition from being in the military to being a civilian, from where you are to where you want to be. Use these resources designed just for Veterans to help you quit.";
+  $slogan['espanol'] = "Dejar de fumar puede ser difícil, pero tenemos las herramientas para ayudarle a lograrlo.";
+  return $slogan[$interest];
+}

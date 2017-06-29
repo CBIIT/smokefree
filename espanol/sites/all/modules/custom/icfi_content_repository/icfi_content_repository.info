@@ -1,0 +1,6 @@
+name= ICFI Content Repository
+description = Content Repository functionality
+core = 7.x
+package = ICFI Custom
+dependencies[] = ctools
+files[] = icfi_content_repository_handler_url_friendly.inc

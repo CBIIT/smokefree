@@ -1,0 +1,313 @@
+/* 
+ * =================================
+ * JASON'S CHANGES FOR THE HOME PAGE 
+ * =================================
+ */
+
+/* Some necessary resets */ 
+body {
+  /* There should not be unnecessary padding at the top of the page */
+    padding-top: 0px;
+}
+
+/* Set a maximum container for the page */
+.container:after {
+    clear: inherit;
+}
+.container-fluid {
+  height:75%;
+}
+
+/* Style the front-page pics */
+
+.picture-grid .span4 {
+  overflow: hidden;
+  position: relative;
+}
+
+.picture-grid .img-container {
+  display:  block;
+  float:    none;
+  overflow: hidden;
+}
+.picture-grid .span4 .img-container A {
+  display: block;
+  float: left;
+  line-height: 0;
+  position: relative;
+  width: 100%;
+}
+
+
+/* Layout 1: Old Android Phones (portrait) ----------- */
+@media only screen 
+  and (max-width : 240px) {
+  /* Styles */
+}
+/* Layout 2: Old Android Phones (landscape) and iPhones (portrait) ----------- */
+@media only screen 
+  and (min-width : 241px)
+  and (max-width : 320px) {
+/* Added the following... */
+  .picture-grid .span4 {
+    display: block;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 5px;
+    max-width: 100%;
+    width: 100%;
+  }
+    .picture-grid .span4 .img-container {
+      height: 110%;
+      max-height: 175px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 185px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -25%;
+				width: auto;
+			}
+			.picture-grid .span4 .img-container .image-caption-text {
+				font-size: .8em;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:none;
+				visibility:hidden;
+			}
+}
+/* Layout 3: Smartphones (portrait and landscape) ----------- */
+@media only screen 
+  and (min-width : 321px) 
+  and (max-width : 480px) {
+  .picture-grid .span4 {
+    display: block;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 5px;
+    max-width: 100%;
+    width: 100%;
+  }
+    .picture-grid .span4 .img-container {
+      height: 110%;
+      max-height: 115px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 125px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -25%;
+				width:auto;
+			}
+			.picture-grid .span4 .img-container .image-caption-text {
+				font-size: .9em;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:none;
+				visibility:hidden;
+			}
+}
+/* iPhone 4 ----------- */
+@media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+}
+/* Layout 4: Tablets */
+@media only screen 
+  and (min-width : 481px) 
+  and (max-width : 768px) {
+  .picture-grid .span4 {
+    float: left;
+    margin-left: 2.12766%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    width: 31.9149%;
+}
+  }
+    .picture-grid .span4 .img-container {
+      height: 116%;
+      max-height: 115px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 125px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -18%;
+			}
+			.picture-grid .span4 .img-container .image-caption-text {
+				font-size: 1em;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:none;
+				visibility:hidden;
+			}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : portrait) {
+  /* Styles */
+}
+/* Layout 5: Small-sized desktops and laptops ----------- */
+@media only screen 
+  and (min-width : 767px) 
+  and (max-width : 1024px) {
+  .picture-grid .span4 {
+    float: left;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+    .picture-grid .span4 .img-container {
+      height: 110%;
+      max-height: 200px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 210px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -10%;
+			}
+			.picture-grid .span4 .img-container .image-caption-text {
+				font-size: 1.3em;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:inherit;
+				visibility:inherit;
+			}
+}
+/* Layout 6: Medium-sized desktops and laptops ----------- */
+@media only screen 
+  and (min-width : 1025px) 
+  and (max-width : 1280px) {
+  .picture-grid .span4 {
+    float: left;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+    .picture-grid .span4 .img-container {
+      height: 116%;
+      max-height: 220px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 230px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -16%;
+			}
+			.picture-grid .span4 .img-container .image-caption-text {
+				font-size: 1.6em;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:inherit;
+				visibility:inherit;
+			}
+}
+
+/* Widescreen desktops and laptops ----------- */
+@media only screen 
+  and (min-width : 1281px) {
+  .picture-grid .span4 {
+    float: left;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+    .picture-grid .span4 .img-container {
+      height: 122%;
+      max-height: 240px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 250px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -22%;
+			}
+			.picture-grid .span4 .img-container .image-caption-text {
+				font-size: 1.7em;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:inherit;
+				visibility:inherit;
+			}
+}
+
+/* Large screens ----------- */
+@media only screen 
+  and (min-width : 1600px) {
+  /* Change to 1824 */
+  .picture-grid .span4 {
+    float: left;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+    .picture-grid .span4 .img-container {
+      height: 128%;
+      max-height: 260px;
+    }
+		.picture-grid .span4 .img-container A {
+			max-height: 260px;
+		}
+			.picture-grid .span4 .img-container  IMG {
+				margin-top: -28%;
+			}
+			.picture-grid .span4 .img-container .image-caption-arrow {
+				display:inherit;
+				visibility:inherit;
+			}
+}
+
+
+	
+	.picture-grid .span4 .img-container  A IMG {
+		display: block;
+		height: auto;
+		max-width: inherit;
+		width: 100%;
+	}
+	.picture-grid .span4  A .image-caption-bg {
+		background-image: url('/sites/default/files/photo-grid-caption-bg.png');
+		background-repeat: yes;
+		bottom: 0;
+		display: block;
+		float: left;
+		height: 60px;
+		position: absolute;
+		width: 100%;
+		z-index: 100;
+	}
+	.picture-grid .span4 A .image-caption-bg  .image-caption-text {
+		background-image: none;
+		color: #fff;
+		display: block;
+		float: left;
+		/*font-size: 1.7em;*/
+		line-height: 60px;
+		margin-left: 1em;
+	}
+	.picture-grid .span4 A .image-caption-bg  .image-caption-arrow {
+		background-image: url('/sites/default/files/photo-grid-caption-arrow.png');
+		float: right;
+		height: 60px;
+		margin-right: 1em;
+		width: 46px;
+		z-index: 120;
+	}
+  
+

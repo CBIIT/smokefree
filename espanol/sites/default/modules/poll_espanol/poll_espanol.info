@@ -1,0 +1,6 @@
+name = Poll Espanol
+description = Override some of the functionality of the poll module (ONLY FOR ESPANOL.SMOKEFREE.GOV).
+package = MMG Inc.
+dependencies[] = poll
+core = 7.x
+

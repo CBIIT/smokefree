@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Home feature.
+ */
+
+include_once 'icfi_home.features.inc';

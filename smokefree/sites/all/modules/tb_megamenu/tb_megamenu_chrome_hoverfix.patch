@@ -1,0 +1,26 @@
+diff --git a/sites/all/modules/tb_megamenu/js/tb-megamenu-frontend.js b/sites/all/modules/tb_megamenu/js/tb-megamenu-frontend.js
+index 6275f7a..d91b528 100644
+--- a/sites/all/modules/tb_megamenu/js/tb-megamenu-frontend.js
++++ b/sites/all/modules/tb_megamenu/js/tb-megamenu-frontend.js
+@@ -40,7 +40,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
+       });
+ 
+ 
+-      var isTouch = 'ontouchstart' in window && !(/hp-tablet/gi).test(navigator.appVersion);
++      var isTouch = 'ontouchstart' in window && !(/hp-tablet/gi).test(navigator.appVersion) && !(/Windows NT(.*)Chrome/gi).test(navigator.appVersion) && !(/Windows NT(.*)Firefox/gi).test(navigator.appVersion);
+       if(!isTouch){
+         $(document).ready(function($){
+           var mm_duration = 0;
+diff --git a/sites/all/modules/tb_megamenu/js/tb-megamenu-touch.js b/sites/all/modules/tb_megamenu/js/tb-megamenu-touch.js
+index 52155a9..155da08 100644
+--- a/sites/all/modules/tb_megamenu/js/tb-megamenu-touch.js
++++ b/sites/all/modules/tb_megamenu/js/tb-megamenu-touch.js
+@@ -57,7 +57,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
+   }
+   Drupal.behaviors.tbMegaMenuTouchAction = {
+     attach: function(context) {
+-      var isTouch = 'ontouchstart' in window && !(/hp-tablet/gi).test(navigator.appVersion);
++      var isTouch = 'ontouchstart' in window && !(/hp-tablet/gi).test(navigator.appVersion) && !(/Windows NT(.*)Chrome/gi).test(navigator.appVersion) && !(/Windows NT(.*)Firefox/gi).test(navigator.appVersion);
+       if(isTouch){
+         $('html').addClass('touch');
+         Drupal.TBMegaMenu.createTouchMenu($('.tb-megamenu ul.nav li.mega').has('.dropdown-menu'));

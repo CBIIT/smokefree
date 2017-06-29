@@ -1,0 +1,79 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333333;
+    font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0 0 20px 0;
+}
+
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; padding-top: 15px; }
+h4 { font-size: 1.125em; }
+
+.collapse {
+    display: none;
+}
+
+.plan-help-img img {
+    width: 60px;
+    height: 60px;
+}
+
+.plan-help-img {
+    width: 75px;
+    height: 60px;
+}
+
+.reason {
+    width: 120px;
+    text-align: center;
+}
+
+.reason img {
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.quit-plan-pdf td {
+    vertical-align: top;
+}
+
+.quit-plan-pdf h2 {
+    border-bottom: 5px solid #2a85a3;
+}
+
+.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-milestones li {
+    margin-bottom: 20px;
+}
+
+ol h4,
+ul h4,
+td h4 { margin: 0; }
+
+.quit-tip td {
+    padding-bottom: 20px;
+}
+
+.triggers {
+    width: 27%;
+    padding-right: 5%;
+    padding-bottom: 20px;
+}
+
+.plan-help-icon {
+    width: 50px;
+    margin: 0 0 0 1em;
+}

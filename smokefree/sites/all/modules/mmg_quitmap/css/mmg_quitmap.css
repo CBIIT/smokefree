@@ -1,0 +1,827 @@
+.clear{
+	display: block;
+	float: none;
+	clear: both;
+}
+
+/*.main-container{
+	background: transparent !important;
+}
+
+.content-container{
+	background: transparent !important;
+}*/
+
+.hidden{
+	display: none;
+}
+
+.boxit{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.description{
+	font-size: 12px;
+	color: #333;
+}
+
+#toggle-view{
+	margin: 20px auto 10px;
+	text-align: right;
+	width: 95%;
+}
+
+	#toggle-view a{
+		margin: 3px;
+	}
+
+#mapbox-wrapper{
+	position: relative;
+	width: 95%;
+	margin: 0 auto;
+}
+
+#mapbox-wrapper .save-pin-error{
+	position: absolute;
+	z-index: 10;
+	color: #F00;
+	background: #FFF;
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: -25px 0 0 -150px;
+}
+
+#mapbox-container{
+	position: relative;
+	height: 650px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+	#to-instructions{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1;
+		display: none;
+	}
+
+#mapbox {
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	width: 100%;
+	height: 100%;
+}
+
+	#loading-screen{
+		background: url(../img/loading-bg.png) repeat scroll 50% 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		font-size: 25px;
+		color: #0080AB;
+		z-index: 1;
+	}
+
+	#loading-screen img{
+		margin: 5% 0 10px 0;
+	}
+
+	
+
+	#map-instructions{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1001;
+		width: 350px;
+		-moz-box-shadow: 2px 2px 10px #000;
+		-webkit-box-shadow: 2px 2px 10px #000;
+		box-shadow: 2px 2px 10px #000;
+		background: #FFF;
+		color: #0080AB;
+		display: none;
+	}
+
+	#map-instructions-wrapper{
+		display: none;
+	}
+
+	#map-instructions h4{
+		background: #608018;
+		color: #FFF;
+		margin: 0 0 10px 0;
+		height: 46px;
+		line-height: 46px;
+		padding: 0 10px;
+		font-size: 20px;
+		text-shadow: 1px 1px 1px #000;
+		font-family: 'cabinbold',​Arial,​Helvetica,​sans-serif;
+		font-weight: normal;
+	}
+
+		#map-instructions h4 span{
+			float: right;
+			cursor: pointer;
+		}
+
+	#map-instructions h5,
+	#table-instructions h5{
+		padding: 0 10px;
+		margin: 5px 0;
+		font-size: 16px;
+		font-weight: bolder;
+	}
+
+	#map-instructions p,
+	#table-instructions p{
+		padding: 0 10px;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 0 0 10px 0;
+	}
+
+	#inst-handles{
+		cursor: pointer;
+		display: none;
+	}
+
+		#inst-handles h5{
+			background: url(../img/chevron.png) no-repeat scroll 97% 50%;
+		}
+
+	
+	#inst-minimize p{
+		color: #608018;
+		text-align: right;
+		cursor: pointer;
+	}
+
+	#inst-minimize img{
+		float: right;
+		transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		position: relative;
+		top: 3px;
+		margin: 0 0 0 5px;
+	}
+
+	#inst-content{
+		
+	}
+
+	#map-instructions ol,
+	#table-instructions ol {
+		margin: 10px 0 10px 50px;
+		font-size: 14px;
+		padding-right: 10px;
+	}
+
+		#map-instructions ol li{
+			margin: 0 0 5px;
+		}
+
+	#pin-drag{
+		text-align: center;
+		margin: 20px 0;
+	}
+
+		#pin-wrapper{
+			display: inline-block;
+			border: dashed 1px #CCC;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 0 10px 0 0;
+		}
+
+			#pin-wrapper img{
+			display: inline-block;
+			cursor: pointer;
+			margin: 0 0 0 10px;
+		}
+			
+
+		#pin-drag img{
+			display: inline-block;
+		}
+
+	/*Table View*/
+	#table-view-wrapper{
+		width: 95%;
+		margin: 0 auto;
+		display: none;
+	}
+
+		#table-instructions{
+			color: #0080AB;
+		}
+
+		#table-add-pin{
+			color: #0080AB;
+		}
+
+			#get-latlng{
+				margin: 0 0 20px;
+			}
+
+				#get-latlng label{
+
+				}
+
+				#get-latlng input{
+					height: 25px;
+				}
+
+				#submit-table-zip{
+					margin: 10px 0 0 0;
+				}
+
+		#table-journey-form{
+			margin: 0 0 20px;
+			display: none;
+		}
+
+			#table-journey-form p{
+
+			}
+
+			#table-journey-form .input-wrapper{
+				margin: 0 0 5px;
+			}
+
+				#table-journey-form .input-wrapper label{
+				}
+
+				#table-journey-form .input-wrapper input{
+					height: 25px;
+				}
+
+				#table-journey-form .input-wrapper input[type=text].datepicker {
+					background: #FFF url(../img/calendar-icon.png) no-repeat scroll right 50%;
+				}
+
+			#table-journey-form textarea{
+				width: 249px;
+				height: 72px;
+				display: block;
+				max-width: 210px;
+				margin: 10px 0 0 2px;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			#table-journey-form .remove-pin{
+				color: #565656;
+				text-decoration: underline;
+				text-transform: capitalize;
+				cursor: pointer;
+			}
+
+			#table-journey-form .mark-it{
+				border: none;
+				background: #0080AB;
+				color: #FFF;
+				width: auto;
+				padding: 0 15px;
+				margin: 10px 0 0 94px;
+			}
+
+
+
+/*********************************
+POPUPS
+*********************************/
+.leaflet-popup-content-wrapper{
+	padding: 0;
+}
+
+.leaflet-popup-content-wrapper *{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+.leaflet-popup-content{
+	margin: 0;
+}
+
+.popup{
+	color: #0080AB;
+	-moz-box-shadow: 2px 2px 10px #000;
+	-webkit-box-shadow: 2px 2px 10px #000;
+	box-shadow: 2px 2px 10px #000;
+}
+
+	.popup h4{
+		background: #608018;
+		color: #FFF;
+		margin: 0 0 10px 0;
+		height: 46px;
+		line-height: 46px;
+		padding: 0 10px;
+		font-size: 20px;
+		text-shadow: 1px 1px 1px #000;
+		font-family: 'cabinbold',​Arial,​Helvetica,​sans-serif;
+		font-weight: normal;
+	}
+
+	.popup p{
+		padding: 0 10px 5px !important;
+		margin: 0;
+		font-size: 16px;
+		line-height: 1.2em !important;
+	}
+
+	.popup form{
+		padding: 0 10px 10px;
+	}
+
+	.popup form .input-wrapper{
+		margin: 0 0 5px 0;
+	}
+
+	.popup form label{
+		font-size: 12px;
+		float: left;
+		line-height: 25px;
+	}
+
+	.popup form input[type=text]{
+		width: 150px;
+		float: right;
+		border: none;
+		box-shadow: none;
+		background: #EEE;
+		height: 25px;
+		padding: 0 5px;
+		line-height: 25px;
+	}
+
+	.popup form input[type=text].datepicker{
+		background: #EEE url(../img/calendar-icon.png) no-repeat scroll right 50%;
+		cursor: pointer;
+	}
+
+	.popup form textarea{
+		background-color: #EEE;
+		border: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		width: 100%;
+		max-width: 100%;
+		margin: 5px 0 0 0;
+		resize: none;
+		padding: 5px;
+	}
+
+	.popup form .remove-pin{
+		position: relative;
+		top: 15px;
+		color: #777;
+		text-decoration: underline;
+		text-transform: capitalize;
+		cursor: pointer;
+	}
+
+	.popup form .mark-it{
+		float: right;
+		border: none;
+		background: #0080AB;
+		color: #FFF;
+		padding: 5px 10px;
+		width: auto;
+		margin: 10px 0 0 0;
+		height: auto;
+	}
+
+	#field-error{
+		display: none;
+		color: #FF0000;
+	}
+	
+	.popup .summary-journey{
+		padding: 10px;
+	}
+
+		.popup .summary-journey h5{
+			margin: 0;
+			font-size: 18px;
+			padding: 0 0 5px !important;
+		}
+
+		.popup .summary-journey p{
+			font-size: 16px;
+			padding: 0 !important;
+		}
+
+		.popup .summary-journey .show-journey{
+			float: right;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+
+
+	.popup .full-journey{
+		display: none;
+	}
+
+	.popup .full-journey h4{
+		background: #B56000;
+	}
+
+		.popup .full-journey h4 .close-popup{
+			float: right;
+			cursor: pointer;
+		}
+
+	.popup .full-journey .col-left{
+		float: left;
+		padding: 10px 5px 0 5px;
+		width: 90px;
+	}
+
+		.popup .full-journey .col-left h2{
+			margin: 0;
+			font-size: 22px;
+			line-height: 1em;
+			text-align: center;
+			font-weight: lighter;
+		}
+		.popup .full-journey .col-left h2 .number{
+			font-weight: bold;
+			font-size: 32px;
+		}
+
+		.popup .full-journey .col-left h6{
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0;
+			text-align: center;
+		}
+
+	.popup .full-journey .col-right{
+		float: right;
+		padding: 5px 10px 10px 5px;
+		width: 220px;
+	}
+
+		.popup .full-journey .col-right p{
+			padding: 0 !important;
+			font-size: 14px;
+			word-wrap: break-word;
+		}
+
+	.leaflet-container a.leaflet-popup-close-button{
+		color: #FFF;
+		font-size: 25px;
+		top: 10px;
+		right: 2px;
+	}
+
+	.leaflet-container a.leaflet-popup-close-button:hover{
+		color: #FFF;
+	}
+
+/********************************
+SOCIAL SHARE
+********************************/
+.social-share-wrapper{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 10001;
+	width: 250px;
+	-moz-box-shadow: 2px 2px 10px #000;
+	-webkit-box-shadow: 2px 2px 10px #000;
+	box-shadow: 2px 2px 10px #000;
+	background: #FFF;
+	color: #0080AB;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+    display: none;
+}
+
+.social-share-wrapper.table-view{
+	position: static;
+	top: auto;
+	right: auto;
+	margin: 10px auto;
+	width: 100%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing:    content-box;
+    box-sizing:         content-box;
+}
+
+
+.social-share-wrapper *{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+.social-share-wrapper.table-view *{	
+	-webkit-box-sizing: content-box;
+    -moz-box-sizing:    content-box;
+    box-sizing:         content-box;
+}
+
+	.social-share h4,
+	.social-share-wrapper h4{
+		background: #0080AB;
+		color: #FFF;
+		margin: 0 0 10px 0;
+		height: 46px;
+		line-height: 46px;
+		padding: 0 10px;
+		font-family: 'cabinbold',​Arial,​Helvetica,​sans-serif;
+		font-size: 20px;
+		font-weight: normal;
+		text-shadow: 1px 1px 1px #000;
+	}
+
+	.social-share p {
+		clear: both;
+		padding: 0 10px;
+	}
+
+	#close-share{
+		float: right;
+		cursor: pointer;
+		margin: 15px 0 0 0;
+	}
+
+	.social-share p img,
+	.social-share-wrapper p img{
+		float: left;
+		margin: 0 5px 0 -5px;
+		line-height: 1.4em;
+	}
+
+	.social-share .social-icons{
+		margin: 10px 0 0;
+		padding: 0 10px;
+	}
+
+	.social-share .social-icons span{
+		display: block;
+	}
+
+	.social-share .social-icons a {
+		display: inline-block;
+		width: 105px;
+		height: 95px;
+	}
+		.social-share .social-icons a img,
+		.social-share .social-icons a .ext {
+			float:left;
+		}
+
+	.social-share .social-icons .fb-link{
+		color: #FFF;
+		background: url(../img/fb-link.png) no-repeat;
+		margin: 0 10px 0 0;
+	}
+
+	.social-share .social-icons .twit-link{
+		color: #FFF;
+		background: url(../img/twit-link) no-repeat;
+	}
+
+#terms,
+#disclaimer{
+	width: 95%;
+	margin: 5px auto;
+}
+
+#terms a{
+	color: #0080AB;
+}
+
+#terms-wrapper{
+	width: 95%;
+	margin: 20px auto;
+}
+
+#terms-wrapper p{
+	margin: 0 0 15px;
+}
+
+/*******************************
+ADMIN SECTION
+*******************************/
+#pin-list{
+	width: 95%;
+	margin: 0 auto;
+}
+
+	#pin-list p{
+		text-align: center;
+		font-size: 18px;
+	}
+
+	#pin-list .delete-success{
+		color: #608018;
+	}
+
+	#pin-list .delete-fail{
+		color: #FF0000;
+	}
+
+	#pin-list table{
+
+	}
+
+		#pin-list table tr{
+			border: solid 1px;
+		}
+
+		#pin-list table tr th{
+			color: #0080AB;
+		}	
+
+		#pin-list table tr td,
+		#table-pin-list tr td{
+			vertical-align: middle;
+		}
+
+		#pin-list table tr .s,
+		#table-pin-list tr .s{
+			
+		}
+
+		#pin-list table tr .m,
+		#table-pin-list tr .m{
+
+		}
+
+		#pin-list table tr .l,
+		#table-pin-list tr .l{
+			width: 80%;
+		}
+
+		#pin-list table tr td.left,
+		#table-pin-list tr td.left{
+			text-align: left;
+		}
+
+		#pin-list table tr td.center,
+		#table-pin-list tr td.center{
+			text-align: center;
+		}
+
+		#pin-list table tr td i{
+			cursor: pointer;
+			color: #FF0000;
+		}
+
+
+
+
+/********************************
+CONTROLS
+********************************/
+.leaflet-control-container .leaflet-left{
+	right: 220px;
+	left: auto;
+}
+
+.leaflet-control-mapbox-geocoder .leaflet-control-mapbox-geocoder-wrap{
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 26px;
+}
+
+.leaflet-control-mapbox-geocoder .leaflet-control-mapbox-geocoder-form input{
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 26px;
+}
+
+
+/*********************************
+CLUSTERING CSS
+*********************************/
+.leaflet-cluster-anim .leaflet-marker-icon, .leaflet-cluster-anim .leaflet-marker-shadow {
+	-webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-in;
+	-moz-transition: -moz-transform 0.2s ease-out, opacity 0.2s ease-in;
+	-o-transition: -o-transform 0.2s ease-out, opacity 0.2s ease-in;
+	transition: transform 0.2s ease-out, opacity 0.2s ease-in;
+	}
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 36px;
+	height: 85px;
+	margin-left: 5px;
+	margin-top: 5px;
+	font: 10px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	background: url(../img/pin.png) no-repeat scroll 0 0;
+	position: relative;
+}
+.marker-cluster span {
+	line-height: 32px;
+	height: 32px;
+	display: block;
+	width: 22px;
+	text-align: center;
+	color: #FFF;
+}
+
+/********************************
+IE8 STYLE
+********************************/
+body.ie8 #mapbox-wrapper,
+body.ie8 #toggle-view,
+#ie8-text{
+	display: none;
+}
+
+body.ie8 #ie8-text{
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	width: 95%;
+	margin: 25px auto;
+	color: #0080AB;
+}
+
+
+/********************************
+MEDIA QS
+********************************/
+@media (max-width: 979px){
+	#map-instructions{
+		position: static;
+		top: auto;
+		left: auto;
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	.social-share-wrapper{
+		position: static;
+		top: auto;
+		right: auto;
+		width: auto;
+		margin: 10px 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px){
+	#mapbox-container{
+		height: 400px
+	}
+}
+
+@media (max-width: 480px) {
+	#to-instructions{
+		display: block;
+	}
+
+	.leaflet-control-container .leaflet-left{
+		right: 187px;
+		left: auto;
+		top: auto;
+		bottom: 20px;
+	}
+
+	.popup h4{
+		text-align: center;
+	}
+}
+
+/********************************
+JQUERY UI OVERRIDES
+********************************/
+
+.ui-datepicker-year {
+	display: inline-block;
+}
+.ui-datepicker {
+	z-index: 1008 !important;
+}
