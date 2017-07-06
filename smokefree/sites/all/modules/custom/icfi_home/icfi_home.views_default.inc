@@ -427,7 +427,7 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['fields']['field_tools_tips_link']['label'] = '';
   $handler->display->display_options['fields']['field_tools_tips_link']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_tools_tips_link']['alter']['text'] = '<div class="row">
-<div class="col-md-3 col-sm-12">
+<div class="col-lg-3 col-md-12 col-sm-12">
     	<h2 class="toolh2">[field_tools_tips_title]</h2>
 <p class="toolp hidden-sm hidden-xs">[field_tools_tips_text]</p>
 </div>
@@ -826,7 +826,7 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['fields']['field_tools_tips_text']['field'] = 'field_tools_tips_text';
   $handler->display->display_options['fields']['field_tools_tips_text']['label'] = '';
   $handler->display->display_options['fields']['field_tools_tips_text']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_tools_tips_text']['alter']['text'] = '<div class="col-md-3 col-sm-12">
+  $handler->display->display_options['fields']['field_tools_tips_text']['alter']['text'] = '<div class="col-lg-3 col-md-12 col-sm-12">
     	<h2 class="toolh2">[field_tools_tips_title]</h2>
 <p class="toolp hidden-sm hidden-xs">[field_tools_tips_text]</p>
 </div>';

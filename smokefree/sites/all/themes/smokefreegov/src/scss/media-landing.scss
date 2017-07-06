@@ -346,6 +346,10 @@
 
 }
 
+@media only screen and (min-width : 768px) and (max-width : 1025px) {
+  .node-type-media-landing .col-sm-4 {width: 47%;}
+}
+
 @media only screen and (min-width : 767px) and (max-width : 1025px) {
 
 .node-type-media-landing .header_blurb {
@@ -353,8 +357,6 @@
 }
 
 .node-type-media-landing .col-sm-offset-2 {margin-left:3%;}
-
-.node-type-media-landing .col-sm-4 {width: 47%;}
 
 .node-type-media-landing .txt_promo_body { 
     min-width: 100%;
