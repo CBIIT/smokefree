@@ -1328,15 +1328,14 @@ External Link styles for social media buttons
 Quiz styles
 *********************************/
 
-.page-node-done ul {
+.page-node-done .container-page ul {
     list-style-position: inside;
     margin: 1em;
-}
-
-.page-node-done ul li {
-    list-style-type: circle;
-    font-size: 1.2em;
-    line-height: 30px;
+    li {
+        list-style-type: circle;
+        font-size: 1.2em;
+        line-height: 30px;
+    }
 }
 
 .answer-image {
@@ -4975,6 +4974,11 @@ nav.cl-effect-4 a:focus {
 
 .smokefreegov-practicequittxt article iframe {
   min-height: 1300px !important;
+}
+
+// removing min height applied to captcha iframe
+.smokefreegov-smokefreetxt .webform-client-form .captcha iframe {
+  min-height: 0px !important;
 }
 
 .smokefreegov-smokefreetxt div:not(.nih_widget) iframe {

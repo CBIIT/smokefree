@@ -13,14 +13,6 @@
 
     <?php if ($_SERVER['HTTP_HOST'] == "smokefree.gov" || $_SERVER['HTTP_HOST'] == "www.smokefree.gov") : ?>
         <meta name="google-site-verification" content="PUSFJOhbNJlL_-NDz0NB49EN2MdclUqhec3d2qQh8iY" />
-        <!-- Page hiding snippet (recommended) -->
-        <style>.async-hide { opacity: 0 !important} </style>
-        <script>
-        (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
-        h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
-        })(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-MKWX85':true});
-        </script>
         
         <!-- Google Tag Manager -->
         <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-55BKGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
