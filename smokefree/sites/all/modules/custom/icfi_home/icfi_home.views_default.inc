@@ -128,6 +128,65 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_article_info_1_node']['id'] = 'reverse_field_article_info_1_node';
   $handler->display->display_options['relationships']['reverse_field_article_info_1_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_article_info_1_node']['field'] = 'reverse_field_article_info_1_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Featured Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Short Summary */
+  $handler->display->display_options['fields']['field_short_summary']['id'] = 'field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['table'] = 'field_data_field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['field'] = 'field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_short_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_short_summary']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'READ MORE';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
 
   /* Display: Articles Lower */
   $handler = $view->new_display('block', 'Articles Lower', 'block_1');
@@ -136,6 +195,65 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_article_info_2_node']['id'] = 'reverse_field_article_info_2_node';
   $handler->display->display_options['relationships']['reverse_field_article_info_2_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_article_info_2_node']['field'] = 'reverse_field_article_info_2_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Featured Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Short Summary */
+  $handler->display->display_options['fields']['field_short_summary']['id'] = 'field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['table'] = 'field_data_field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['field'] = 'field_short_summary';
+  $handler->display->display_options['fields']['field_short_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_short_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_short_summary']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['text'] = 'READ MORE';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';

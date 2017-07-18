@@ -234,7 +234,6 @@
 	#veterans-home-panel {
 
 		#veterans-quiz-text {
-			margin: 0 !important;
 		    padding: 10px 15px 20px 15px !important;
 		    background-color: #F4FAFF;
 		    border: 1px solid #D5D5D5;
@@ -253,6 +252,7 @@
 		    position: absolute;
 		    top: -1.5em;
 		    z-index: 0;
+		    white-space:nowrap;
 		}
 
 			.panel-col-top {
@@ -261,21 +261,19 @@
 			    width: 100%;
 			    border-top: 1px solid #ADADAD;
 			    border-bottom: 1px solid #ADADAD;
-			    margin-top: -11px;
 			    margin-bottom: 3em;
 
 				.inside {
-				width: 1170px;
+				width:80%;
     			margin: auto;
     			overflow: auto;
-    			margin-bottom: -14em;
 				}
 			}
 
 		.center-wrapper {
 			overflow: auto;
 		    width: 1170px;
-		    margin: auto;
+		    margin: auto auto 10% auto;
 		}
 
 		.panel-col-bottom {
@@ -335,10 +333,6 @@
 			float: left;
 		}
 
-		.pane-2 {
-			width: 62%;
-		}
-
 		.pane-3 {
 		    width: 36%;
 		    float: right;
@@ -361,10 +355,9 @@
 		}
 
 		#veterans-why-you-smoke-caption {
-			/*position: absolute;*/
 			margin-top: -6.5em;
 		    bottom: 0px;
-		    width: 100%;
+		    width: 416px;
 		    background-color: #35723C;
 		    height: 86px;
 		    padding: 15px 0px 15px;
@@ -447,21 +440,16 @@
 
 					background-color: #ffffff;
 				    border: 1px solid #ADADAD;
-				    padding: 50px 15px 15px 14px;
-				    min-height: 140px;
-				    /*min-width: 130px;
-				    max-width: 150px;*/
-				    width: 14%;
-				    margin-left: 5px;
-				    margin-right: 5px;
+				    min-height: 170px;
+				    margin-left: 2px;
+				    margin-right: 2px;
 				    position: relative;
-				    top: 120px;
-				    left: 15px;
 				    float: left;
 
-				.pane-content {
-    				margin-top: -11em;
-				}
+
+				 .pane-title {
+				 	margin:100px 10px 0 10px;
+				 }
 
 				.pane-title, .pane-title a {
 					font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1133,27 +1121,42 @@
 /****** Veterans Home Page Responsiveness *******/
 
 .page-veterans {
+	@media (min-width:1200px){
+		#veterans-home-panel {
+			.pane-2 {
+				width:60%;
+			}
+			#veterans-quiz-text {
+				width:100%;
+				height:338px;
+			}
+
+		}
+	}
 
 	@media (max-width:1199px) {
 
 		#veterans-home-panel {
 
 			.panel-col-top .pane-content {
-				width: 970px;
+				width: 100%;
+
+			}
+
+			.panel-col-top {
+				padding-bottom: 0;
 			}
 
 			.panel-col-top .inside {
-			    width: 970px;
 			    margin: auto;
 			    overflow: visible;
 			    margin-bottom: 1em;
 			}
 
 			#veterans-quiz-text {
-			    width: 970px;
-			    margin: 0 auto 8em auto !important;
-			    /*height: 280px;*/
-			    height: auto;
+
+
+			    margin: 0 auto 150px auto;
 			}
 
 			.panel-3col-33-stacked .panel-separator {
@@ -1166,10 +1169,8 @@
 
 	 		.pane-3 {
 			    width: 100%;
-			    float: none;
 			    margin: auto;
-			    top: 3em;
-			    position: initial;
+			    top:0;
 	 		}
 
 	 		.media-element-container {
@@ -1190,10 +1191,16 @@
 			    margin: auto;
 			}
 
+		
+			#veterans-why-you-smoke {
+				margin:3% auto;
+			}
+
+
+
 			#veterans-why-you-smoke-caption {
 				width: 100%;
-			    margin: auto;
-			    margin-top: -6.4em;
+			    margin: -6.4em auto 0 auto;
 			}
 
 			#veterans-quiz-link {
@@ -1227,125 +1234,144 @@
 			.panel-col-bottom {
 				width: 100%;
 			    margin: auto;
-			    padding: 0 6em;
+			    padding: 0 3em;
 
 			    .toolh2 {
 			    	font-size: 60px;
 				    line-height: 60px;
-				    padding-right: 50px;
 			    }
-
-			    .pane-title, .pane-title a {
-				margin-top: 3em;
-			    float: left;				
-			    font-size:28px;
-				line-height:28px;
-				}
-
-				.pane-bundle-tools-tips {
-					width: 75%;
-					top: 0 !important;
-					left: 0 !important;
-					margin: 0.5em 0 !important;
-					float: right;
-				}
 
 				.fieldable-panels-pane {
 					width: 110px;
-					margin-top: 9em;
 	    			float: left;
-	    			margin-right: 2em;
+				}
+
+				.pane-1 {
+					width:100%;
+					margin-bottom:10%;
 				}
 			}
 
 		}
 	}
 
-	@media (max-width:996px) {
+	@media all and (min-width:1199px) {
 
-		#veterans-home-panel {
+			#veterans-home-panel {
+				.pane-bundle-tools-tips {
 
-			#veterans-quiz-summary {
-	    		width: 100%;
+					.pane-title a {
+						font-size:2rem;
+					}
+					width:170px;
+
+					.field-name-field-icon {
+						position:absolute;
+				    	top:-80px;
+				    	width:130px;
+				    	margin:0 20px;
+
+					}
+
+				}
+
+				.panel-col-bottom {
+					width: 100%;
+			    	margin: auto;
+			    	padding: 0 3em;
+			    }
+
+				.panel-col-bottom{
+					.pane-1 {
+						margin: -71px 0 0;
+					}
+				}
+
 			}
 
-			.panel-col-top .inside {
-				width: 100%;
+
+	}
+
+	@media all and (min-width:997px) and (max-width: 1198px) {
+
+			#veterans-home-panel {
+				.fieldable-panels-pane {
+					margin:3%;
+				}
+				.pane-bundle-tools-tips {
+
+					.pane-title {
+						margin:50% 0 0 3%;
+					}
+
+					.pane-title a {
+						font-size:2rem;
+					}
+					width: 18%;
+					margin-top:0;
+
+					.field-name-field-icon {
+						position: absolute;
+						top:-86px;
+						padding:7%;
+					}
+				}
+
+				.panel-col-bottom {
+					width: 100%;
+			    	margin: auto;
+			    	padding: 0 6em;
+			    }
+
+				
+
 			}
 
-			.pane-2 {
-				width: 100%;
-			}
+		
 
-			.panel-col-top .pane-content {
-				width: 100%;
-			}
+	}
 
-			#veterans-quiz-text {
+	@media all and (max-width:996px) {
+
+
+			#veterans-home-panel {
+				.fieldable-panels-pane {
+					margin:3%;
+				}
+				.pane-bundle-tools-tips {
+
+				.pane-title {
+					margin:8% 0 0 3%;
+				}
+
+				.pane-title a {
+						font-size:3rem;
+					}
+					width: 100%;
+					margin-bottom: 3%;
+
+				}
+
+				.panel-col-bottom {
 				width: 80%;
-				height: auto;
+			    margin: auto;
+			    padding: 0 6em;
+
+
+					pane-title a {
+						font-size: 3rem;
+					}
+				}
+				.field-name-field-icon {
+					.img-responsive {
+					}
+				}
 			}
 
-			.media-element-container {
-				width: 100%;
-			}
+		
+	
 
-			#veterans-quiz-link {
-				float: none;
-			    display: block;
-			    text-align: center;
-			    margin: -0.5em 5%;
-			}
 
-			.file-image-png img {
-				display: block !important;
-			}
-
-			#veterans-why-you-smoke {
-				width: 80%;
-				margin: auto;
-			}
-
-			#veterans-why-you-smoke-caption {
-			    margin-top: -6.8em;
-			}
-		}
-
-		.panel-col-bottom {
-			width:100% !important;
-			padding: 0 4em;
-
-			.inside {
-				width: 100% !important
-			}
-
-			.pane-1 {
-				width: 100% !important;
-				text-align: center;
-				float:none !important;
-			}
-
-			.pane-title, .pane-title a {
-				margin-top: 3em !important;				
-			}
-
-			.pane-bundle-tools-tips {
-				width: 100% !important;
-				float:none !important;
-			}
-
-			.fieldable-panels-pane {
-				width: 110px;
-				margin-top: 8.5em !important;
-    			float: left;
-    			margin-right: 2em;
-			}
-
-			.toolh2 {
-				padding: 0 !important;
-			}
-
-		}
 
 	}
 
@@ -1382,20 +1408,24 @@
 			.panel-col-bottom {
 
 				padding:0 !important;
+				width: 80%;
+			    margin: auto;
+			    padding: 0 6em;
 
 				.pane-title, .pane-title a {	
 					margin-top: 2.9em !important;		
 				}
 
-				.fieldable-panels-pane {
-					margin-top: 8.5em !important;
-				}
+
 
 			}   
 	}
 
 		@media (max-width:640px) {
 			.panel-col-bottom {
+				width: 80%;
+			    margin: auto;
+			    padding: 0 6em;
 
 				.fieldable-panels-pane {
 					width: 15%;
@@ -1403,7 +1433,7 @@
 				}
 
 				.pane-title, .pane-title a {	
-					margin-top: 3.8em !important;		
+					margin-top: 3.0em !important;		
 				    font-size:22px !important;
 					line-height:22px !important;
 
@@ -1414,6 +1444,9 @@
 
 		@media (max-width:499px) {
 			.panel-col-bottom {
+				width: 90%;
+			    margin: auto;
+			    padding: 0 6em;
 
 				.pane-bundle-tools-tips {
 					min-height: 100px !important;
@@ -1426,11 +1459,7 @@
 
 				}
 
-				.fieldable-panels-pane {
-					width: 80px !important;
-    				margin-top: 8em !important;
-					margin-right: 0.8em !important;
-				}
+				
 			}
 
 		}
