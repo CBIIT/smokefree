@@ -400,11 +400,31 @@
         color: #4A4A4A;
     }
 
+    .view-articles-upper .views-field-title span.field-content {
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #104872;
+    }
+
+    .view-articles-upper .home-article-block-anchor {
+        text-decoration: none;
+    }
+
+    .views-row > a.home-article-block-anchor {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+
     .view-articles-upper .views-field-field-short-summary {
         font-weight: 400;
         font-size: 16px;
         line-height: 29px;
         color: #303841;
+        .field-content {
+            text-transform: initial;
+        }
     }
 
     .view-articles-upper a {
