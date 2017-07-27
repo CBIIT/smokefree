@@ -21,7 +21,7 @@ var notify = require('gulp-notify');
 /************Working Tasks************/
 
 gulp.task('sass', function() {
-    return gulp.src('src/scss/style.scss')
+    return gulp.src('src/scss/teenstyle.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             noCache: true,
@@ -65,7 +65,7 @@ gulp.task('clean-up', function() {
 	//return del.sync('dist')
     return del([
         //'dist/css/**/*', //who put images folder under css folder? Please move it under smokefree theme root folder
-        'dist/css/style.css',
+        'dist/css/teenstyle.css',
         'dist/js/**/*',
         'dist/images/**/*',
     ])

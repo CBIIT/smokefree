@@ -385,7 +385,8 @@
     }
 
     .global-view-articles-upper .views-field-title, .global-view-articles-bottom .views-field-title {
-        padding-top: 1.2em;
+      padding-bottom: 15px !important;
+      padding-top: 25px !important;
     }
 
     .view-articles-upper span {
@@ -397,9 +398,10 @@
 
   .view-articles-upper .views-field-title span.field-content {
     font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #104872;
+    font-size: 30px;
+    color: #4A4A4A;
+    letter-spacing: 1.01px;
+    text-transform: capitalize;
   }
 
   .view-articles-upper .home-article-block-anchor {

@@ -26,7 +26,7 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = dist/css/style.css
+stylesheets[all][] = dist/css/teenstyle.css
 
 
 ;;;;;;;;;;;;;;;;;;;;;
