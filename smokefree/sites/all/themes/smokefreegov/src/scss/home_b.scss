@@ -243,7 +243,7 @@
         display: block;
         margin:auto;
         height: 170px;
-        width: 170px;
+        width: 170px !important;
     }
 
     .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links {
@@ -1092,7 +1092,7 @@
     }
 
     .field-collection-item-field-includes-2, .field-name-field-includes-text {
-        padding: 2%;
+        padding: 5%;
     }
 }
 

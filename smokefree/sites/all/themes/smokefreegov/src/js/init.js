@@ -1,11 +1,11 @@
 ( function($) {
 	$(document).ready(function() {
         
-        // $("#live-chat-bar-link img").click(function() {
-        //     $("#live-chat-bar-form").submit();
-        //     //return false;
-        // });
-		
+        $('.page-home .toolsandtips li, .page-home-b .toolsandtips li').each(function () {
+            var href = $(this).find('a.ClickClass-ToolsTips').attr('href');
+            $(this).find('.col-md-9').wrapInner('<a class="ClickClass-ToolsTips" href="'+href+'"></a>');
+        });
+        
 		$('#mobile-accordion section#block-tb-megamenu-main-menu > #tb-megamenu-main-menu > .nav-collapse').addClass('collapse in');
 		
 		//Create rm-header-footer class
