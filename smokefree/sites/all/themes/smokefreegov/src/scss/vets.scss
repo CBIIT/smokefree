@@ -312,14 +312,15 @@
 			font-size: 32px;
 		    color: #023448;
 		    line-height: 50px;
-		    width: 62%;
+		    width: 52%;
 		    float: left;
+		    padding:3%;
 		}
 
 		.quiz-image-button {
-			width:34%;
+			width:300px;
 			float:left;
-			padding-left:5%;
+			padding: 3%;
 		}
 
 		.file-image-png img {
@@ -346,10 +347,9 @@
 		}
 
 		.pane-3 {
-		    width: 40%;
 		    float: right;
 		    position: relative;
-		    top: -19em;
+		    top: -17em;
 		}
 
 		#veterans-why-you-smoke {
@@ -1141,7 +1141,6 @@
 			}
 			#veterans-quiz-text {
 				width:100%;
-				max-width: 703px;
 				height:338px;
 			}
 
@@ -1284,6 +1283,25 @@
 		}
 	}
 
+	@media all and (min-width:1681px) {
+		#veterans-home-panel {
+				.pane-bundle-tools-tips {
+					width:223px;
+					margin:0 5px;
+				}
+		}
+
+	}
+
+	@media all and (min-width:1199px) and (max-width:1680px){
+		#veterans-home-panel {
+				.pane-bundle-tools-tips {
+					width:14%;
+				}
+		}
+
+	}
+
 	@media all and (min-width:1199px) {
 
 			#veterans-home-panel {
@@ -1292,13 +1310,13 @@
 					.pane-title a {
 						font-size:2rem;
 					}
-					width:170px;
+					
 
 					.field-name-field-icon {
 						position:absolute;
 				    	top:-80px;
 				    	width:130px;
-				    	margin:0 20px;
+				    	margin:0 14%;
 
 					}
 
@@ -1380,7 +1398,7 @@
 				.quiz-image-button {
 					margin:0 auto;
 					text-align: center;
-					width:45%;
+					width:300px;
 					float:none;
 				}
 
