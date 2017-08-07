@@ -1,3 +1,9 @@
+Smokefree 1.2 2017-08-04
+-----------------------
+- SF-511 Various styling fixes for the veterans homepage
+- SF-519 Fixing bug with socket module to allow Firefox and IE to embed the site in an iframe on allowed domains
+- SF-520 Updated hours on the Speak to an Expert page
+
 Smokefree 1.1 2017-07-13
 -----------------------
 - SF-454 More fo ryou links added to text confirmation pages
