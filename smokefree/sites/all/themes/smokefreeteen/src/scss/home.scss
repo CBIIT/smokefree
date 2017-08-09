@@ -122,14 +122,24 @@
                     }
                 }
             }
+            #myCarousel {
+                width: 570px;
+                margin-left: -122px;
+            }
             .carousel-container {
                 .slide {
                     margin-bottom: 70px;
+                    .first, .middle, .last {
+                        padding-left: 15px;
+                    }
+                    .first, .last {
+                        opacity: 0.5;
+                    }
                 }
                 .carousel-indicators {
                     bottom: -32%;
-                    width: 100%;
-                    left: 31%;
+                    width: 64%;
+                    left: 50%;
                     margin-bottom: -15px;
                     li {
                         border-radius: 0;
