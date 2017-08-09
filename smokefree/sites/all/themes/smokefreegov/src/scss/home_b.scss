@@ -1309,7 +1309,7 @@
 
     }
 
-    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a {
+    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a a {
 
         position: absolute !important;
         top: 50% !important;
@@ -1326,6 +1326,12 @@
     }
 }
 
+}
+
+.page-home-b .view-home-b .views-row {
+    @media (max-width:768px) {
+        overflow: hidden;
+    }
 }
 
 .page-home-b .view-home-b .views-row.content-area {

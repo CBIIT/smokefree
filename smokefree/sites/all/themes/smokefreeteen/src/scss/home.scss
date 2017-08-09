@@ -1,0 +1,180 @@
+.smokefreegov-teen {
+    .syndicate {
+        margin:0 auto;
+        margin-top: 45px;
+        margin-bottom: 45px;
+
+        .teen-h2, .tools-tips .block-title {
+            color: #353535;
+            font-size: 44px;
+        }
+        .become-smokefree-more {
+            a {
+                color: #104872;
+                font-size: 17px;
+                float: right;
+                padding-top: 25px;
+            }
+        }
+        .row-eq-height {
+            margin-left: -11px;
+            .block-title {
+                padding-bottom: 10px;
+            }
+            .become-smokefree-more {
+                a {
+                    margin-right: 33%;
+                    padding-top: 35px;
+                }
+            }
+        }
+        .block-views {
+            padding-top: 48px;
+            padding-bottom: 25px;
+            border-top: #ADADAD 1px solid;
+            padding-left: 9%;
+        }
+
+        .landing-blocks {
+            .block-view-content {
+                display: inline-block;
+            }
+            .views-row.three-col {
+                width: 29.5%;
+                height: 430px;
+                margin-right: 20px;
+            }
+
+            .views-row.two-col {
+                width: 45%;
+                height: 470px;
+                margin-right: 20px;
+            }
+            .views-row {
+                background-color: #ffffff;
+                &:hover {
+                    border: 1px solid #0C6AB1;
+                    -webkit-transform: scale(1.01);
+                    transform: scale(1.01);
+                }
+                .cr-article {
+                    padding: 30px 30px;
+                    cursor: pointer;
+                    .views-field-title {
+                        padding-top: 10px;
+                        padding-bottom: 15px;
+                        .field-content {
+                            color: #104872;
+                            font-weight: 600;
+                            font-size: 30px;
+                            line-height: 35px;
+                        }
+                    }
+                    .views-field-field-short-summary {
+                        .field-content {
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 29px;
+                            color: #303841;
+                            letter-spacing: 1.01px;
+                        }
+                    }
+                    .article-line {
+                        width: 80px;
+                        border-top: 3px solid #FFB600;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+        .block.tools-tips {
+            padding-left: 9%;
+            padding-bottom: 25px;
+            .teen-toolbox-container {
+                .toolbox-flex {
+                    width: 18.5%;
+                    display: inline-block;
+                    background-color: #ffffff;
+                    border: 1px solid #ADADAD;
+                    padding: 15px 10px 15px 10px;
+                    margin-right: -0.42%;
+                    &:hover {
+                        background-color:#4A4A4A;
+                        border:1px solid #4A4A4A;
+                        .teen-toolbox-title{
+                            color:#ffffff !important;
+                        }
+                    }
+                    .teen-toolbox-title {
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 20px;
+                            color: #104872;
+                            width: 55%;
+                            float: right;
+                            display: flex;
+                            align-items: center;
+                            height: 80px;
+                        }
+                    .tool-img {
+                      width: 40%;
+                      float: left;
+                    }
+                }
+            }
+            .carousel-container {
+                .slide {
+                    margin-bottom: 70px;
+                }
+                .carousel-indicators {
+                    bottom: -32%;
+                    width: 100%;
+                    left: 31%;
+                    margin-bottom: -15px;
+                    li {
+                        border-radius: 0;
+                        width: 15%;
+                        border: 0;
+                        background-color: #D8D8D8;
+                        height: 20px
+                    }
+                    li.active {
+                        background-color: #104872;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-container {
+        width: 100%;
+        .no-sidebar {
+            width: 100% !important;
+            margin: 0% !important;
+            .page-content-container {
+                width: 100%;
+                margin: 0% !important;
+            }
+        }
+        #block-boxes-teen-homepage-hero {
+            margin-left: -2.5%;
+        }
+        .teen-homepage-hero-image {
+            background-image: url(/sites/all/themes/smokefreeteen/src/images/teen-hero-1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            position: relative;
+            min-height: 400px;
+            width: 105%;
+
+        }
+
+        .page-header-div {
+            display: none;
+        }
+    }
+}

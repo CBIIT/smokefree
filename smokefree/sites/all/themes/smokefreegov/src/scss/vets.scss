@@ -208,6 +208,12 @@
 
 	} /**** End of Desktop styling for .vet-sub-menu ****/
 
+	@media (max-width: 991px) and (min-width: 768px) {
+		.hidden-sm {
+			display: none!important;
+		}
+	}
+
 } /***** End of Veterans Header styling *****/
 
 .page-veterans {
