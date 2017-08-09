@@ -10,3 +10,10 @@ Smokefree 1.1 2017-07-13
 - SF-497 Styling bug in text confirmation pages (gab after submit) fixed.
 - SF-441 DipfreeTXT program page added
 - SF-468 Homepage A/B testing with Google optimize added
+
+Smokefree 1.2 2017-07-27
+-----------------------
+- SF-483 Make whole article blocks on SF homepage clickable
+- SF-486 Adds QuitGuide app promo
+- SF-501 Fixes double scrollbar on SF home (mobile size)
+- SF-514 Fixes font issue on main article site
