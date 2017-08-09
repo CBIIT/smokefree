@@ -1,8 +1,7 @@
 <div class="container-page">
   <?php if (is_teen_homepage()): ?>
       <div class="hero-img <?php print $random_hero_class ?>">
-        <div class="cont
-        ainer">
+        <div class="container">
           <div class="col-xs-12 col-md-8 col-sm-8">
             <img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-teen-logo.png" alt="" class="large-logo img-responsive" >
             <div>
