@@ -140,11 +140,26 @@
                 }
             }
         }
-
+        @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+            .block-tools-tips {
+                padding-left: 6% !important;
+            }
+        }
+        @media only screen and (max-device-width : 991px) {
+            .block.tools-tips {
+                padding-left: 6% !important;
+            }
+        }
         .block.tools-tips {
             padding-left: 9%;
             padding-bottom: 25px;
             .teen-toolbox-container {
+                @media only screen and (max-device-width : 991px) {
+                    .toolbox-flex {
+                        width: 19.5% !important;
+                        margin-right: -1.42% !important;
+                    }
+                }
                 .toolbox-flex {
                     width: 18.5%;
                     display: inline-block;
@@ -170,6 +185,31 @@
                             align-items: center;
                             height: 80px;
                         }
+                    @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+                        .teen-toolbox-title {
+                            font-size: 13px !important;
+                            line-height: 16px !important;
+                            padding-left: 8%;
+                        }
+                    }
+                    @media only screen and (max-device-width : 991px) {
+                        .tool-img {
+                            width: 100% !important;
+                            height: 50px;
+                            padding-left: 17%;
+                        }
+                        .teen-toolbox-title {
+                            padding-top: 58px;
+                            padding-bottom: 14px;
+                            width: 100% !important;
+                            height:40px;
+                            line-height: 16px !important;
+                            font-size: 17px !important;
+                            text-align: center;
+                            justify-content: center
+                        }
+                    }
+
                     .tool-img {
                       width: 40%;
                       float: left;
