@@ -37,19 +37,30 @@
                 text-decoration: none;
             }
         }
+        @media only screen and (max-width: 1199px) and (min-width: 767px) {
+            .block.block-views.clearfix {
+                width: 100% !important;
+            }
+        }
 
         .landing-blocks {
             .block-view-content {
                 display: inline-block;
             }
             .views-row.three-col {
-                width: 29.5%;
                 height: 430px;
                 margin-right: 20px;
             }
+            @media only screen  and (min-width : 1024px) {
+                .views-row.three-col {
+                    width: 29.5%;
+                }
+                .views-row.two-col {
+                    width: 45%;
+                }
+            }
 
             .views-row.two-col {
-                width: 45%;
                 height: 470px;
                 margin-right: 20px;
             }
