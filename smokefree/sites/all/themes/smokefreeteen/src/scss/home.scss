@@ -92,6 +92,32 @@
                             }
                         }
                     }
+                    .views-row.three-col {
+                        height: 225px !important;
+                        margin-bottom: 35px;
+                        margin-left: 3%;
+                        .cr-article {
+                            padding: 32px 0px !important;
+                        }
+                        .views-field.views-field-field-featured-image {
+                            width:45%
+                        }
+                        .views-field-title, .views-field-field-short-summary {
+                            width: 49%;
+                            float: right;
+                        }
+                        .article-line {
+                            float: right;
+                            margin-right: 38.25%;
+                            margin-top: -104px;
+                        }
+                        .views-field-title {
+                            margin-top: -158px;
+                        }
+                        .views-field-field-short-summary {
+                            margin-top: -95px;
+                        }
+                    }
                 }
             }
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
