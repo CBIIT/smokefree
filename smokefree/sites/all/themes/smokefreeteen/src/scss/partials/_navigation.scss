@@ -87,12 +87,12 @@ fieldset[disabled] a.teen-navigation-btn {
 }
 @media (min-width: 768px) {
   .container.teen-navigation-container {
-    width: 750px !important;
+    width: 700px !important;
   }
 }
 @media (min-width: 992px) {
   .container.teen-navigation-container {
-    width: 970px !important;
+    width: 980px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -114,7 +114,7 @@ fieldset[disabled] a.teen-navigation-btn {
 #sticky.stick {
   margin-top: 0 !important;
   position: fixed;
-  top: 50px;
+  top: 0px;
   z-index: 10000;
   border-top: 3px solid #FFB600;
 }
@@ -206,7 +206,7 @@ fieldset[disabled] a.teen-navigation-btn {
   color:#000000;
   font-size:21px;
   vertical-align: middle;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
   font-weight: normal;
 }
@@ -250,4 +250,13 @@ fieldset[disabled] a.teen-navigation-btn {
   padding-bottom: 20px;
   margin-top: 3px;
   background-color: #ffffff;
+}
+.nav-bar-icon{
+  padding-left: 10px;
+}
+
+@media screen and (max-width:1099px){
+  .nav-bar-icon{
+    margin-right: 20px !important;
+  }
 }
