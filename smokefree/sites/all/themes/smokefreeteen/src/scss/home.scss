@@ -100,7 +100,7 @@
                             padding: 32px 0px !important;
                         }
                         .views-field.views-field-field-featured-image {
-                            width:45%
+                            width: 47%
                         }
                         .views-field-title, .views-field-field-short-summary {
                             width: 49%;
@@ -116,6 +116,10 @@
                         }
                         .views-field-field-short-summary {
                             margin-top: -95px;
+                            .field-content {
+                                font-size: 15px !important;
+                                line-height: 26px !important;
+                            }
                         }
                     }
                 }
