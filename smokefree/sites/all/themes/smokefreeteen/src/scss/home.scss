@@ -29,6 +29,18 @@
                 }
             }
         }
+        @media only screen and (min-device-width : 700px) and (max-device-width : 1023px) {
+            .row-eq-height {
+                margin-left: 35px !important;
+                .teen-h2 {
+                    font-size: 37px !important;
+                }
+                .become-smokefree-more a {
+                    margin-right: 6% !important;
+                }
+            }
+        }
+
         .row-eq-height {
             margin-left: -11px;
             .block-title {
@@ -63,6 +75,24 @@
         .landing-blocks {
             .block-view-content {
                 display: inline-block;
+            }
+            @media only screen and (min-device-width : 700px) and (max-device-width : 1023px) {
+                .block-view-content {
+                    width: 98% !important;
+                    .views-row.two-col {
+                        height: 520px !important;
+                        margin-right: 20px;
+                        margin-left: 3%;
+                        margin-bottom: 40px;
+                        .cr-article {
+                            padding: 50px 30px;
+                            .views-field-title {
+                                padding-top: 23px;
+                                padding-bottom: 18px;
+                            }
+                        }
+                    }
+                }
             }
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
                 .block-view-content {
