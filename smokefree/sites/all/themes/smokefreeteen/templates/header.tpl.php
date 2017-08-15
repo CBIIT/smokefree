@@ -16,9 +16,9 @@
     <div class="container teen-navigation-container">
       <div class="hidden-xs">
         <ul class="col-xs-11 teen-homepage-navigation">
-          <div class="col-xs-4 left-nav"><a href="#" class="hvr-rectangle-out" target="_blank">BECOME SMOKEFREE</a></div>
-          <div class="col-xs-4 mid-nav"><a href="#" class="hvr-rectangle-out" target="_blank">THE RISKS OF TOBACCO</a></div>
-          <div class="col-xs-4 right-nav"><a href="#" class="hvr-rectangle-out" target="_blank">YOUR TRIGGERS</a></div>
+          <div class="col-xs-4 left-nav"><a href="/become-smokefree" class="hvr-rectangle-out" target="_blank">BECOME SMOKEFREE</a></div>
+          <div class="col-xs-4 mid-nav"><a href="/the-risks-of-tobacco" class="hvr-rectangle-out" target="_blank">THE RISKS OF TOBACCO</a></div>
+          <div class="col-xs-4 right-nav"><a href="/tobacco-triggers" class="hvr-rectangle-out" target="_blank">TOBACCO TRIGGERS</a></div>
         </ul>
       </div>
         <div class="hidden-xs nav-bar-icon">
@@ -30,14 +30,13 @@
           </button>
           <div id="dropdown-content" class="collapse">
             <div class="dropdown-content-container">
-              <a href="#" target="_blank"><button class="dropdown-item" type="button">Become Smokefree</button></a>
-              <a href="#" target="_blank"><button class="dropdown-item" type="button">The Risks of Tobacco</button></a>
-              <a href="#" target="_blank"><button class="dropdown-item" type="button">Your Triggers</button></a>
+              <a href="/become-smokefree" target="_blank"><button class="dropdown-item" type="button">Become Smokefree</button></a>
+              <a href="/the-risks-of-tobacco" target="_blank"><button class="dropdown-item" type="button">The Risks of Tobacco</button></a>
+              <a href="/tobacco-triggers" target="_blank"><button class="dropdown-item" type="button">Tobacco Triggers</button></a>
             </div>
           </div>
         </div>
       </div>
-    </div>
     <div class="header-col-12 search-bar" >
         <form class="search-bar-form" action="https://barney2.cit.nih.gov/search" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
                         || document.getElementById('searchbox-header').value=='')
@@ -48,6 +47,21 @@
                 <button type="submit" value="Search" class="btn btn-default">Submit</button>
                 <a class="closebtn">&times;</a>
             </div>
-        </form>
+      </form>
   </div>
   </div>
+  </div>
+    <div class="visible-xs">
+        <div class="header-col-12 mobile-search-bar" >
+            <form class="search-bar-form" action="https://barney2.cit.nih.gov/search" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
+                        || document.getElementById('searchbox-header').value=='')
+                            return false;" _lpchecked="1">
+                <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*"> <label class="hiddenSearch hidden" for="searchbox-header">Search</label>
+                <div class="search-bar-group">
+                    <input maxlength="255" name="q" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
+                    <button type="submit" value="Search" class="btn btn-default">Submit</button>
+                    <a class="closebtn">&times;</a>
+                </div>
+            </form>
+        </div>
+    </div>
