@@ -60,7 +60,6 @@
                 <div class="search-bar-group">
                     <input maxlength="255" name="q" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
                     <button type="submit" value="Search" class="btn btn-default">Submit</button>
-                    <a class="closebtn">&times;</a>
                 </div>
             </form>
         </div>
