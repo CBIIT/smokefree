@@ -16,9 +16,9 @@
     <div class="container teen-navigation-container">
       <div class="hidden-xs">
         <ul class="col-xs-11 teen-homepage-navigation">
-          <div class="col-xs-4 left-nav"><a href="/become-smokefree" class="hvr-rectangle-out" target="_blank">BECOME SMOKEFREE</a></div>
-          <div class="col-xs-4 mid-nav"><a href="/the-risks-of-tobacco" class="hvr-rectangle-out" target="_blank">THE RISKS OF TOBACCO</a></div>
-          <div class="col-xs-4 right-nav"><a href="/tobacco-triggers" class="hvr-rectangle-out" target="_blank">TOBACCO TRIGGERS</a></div>
+          <div class="col-xs-4 left-nav"><a href="/become-smokefree" class="hvr-rectangle-out">BECOME SMOKEFREE</a></div>
+          <div class="col-xs-4 mid-nav"><a href="/the-risks-of-tobacco" class="hvr-rectangle-out">THE RISKS OF TOBACCO</a></div>
+          <div class="col-xs-4 right-nav"><a href="/tobacco-triggers" class="hvr-rectangle-out">TOBACCO TRIGGERS</a></div>
         </ul>
       </div>
         <div class="hidden-xs nav-bar-icon">
@@ -30,9 +30,9 @@
           </button>
           <div id="dropdown-content" class="collapse">
             <div class="dropdown-content-container">
-              <a href="/become-smokefree" target="_blank"><button class="dropdown-item" type="button">Become Smokefree</button></a>
-              <a href="/the-risks-of-tobacco" target="_blank"><button class="dropdown-item" type="button">The Risks of Tobacco</button></a>
-              <a href="/tobacco-triggers" target="_blank"><button class="dropdown-item" type="button">Tobacco Triggers</button></a>
+              <a href="/become-smokefree"><button class="dropdown-item" type="button">Become Smokefree</button></a>
+              <a href="/the-risks-of-tobacco"><button class="dropdown-item" type="button">The Risks of Tobacco</button></a>
+              <a href="/tobacco-triggers"><button class="dropdown-item" type="button">Tobacco Triggers</button></a>
             </div>
           </div>
         </div>
@@ -60,7 +60,6 @@
                 <div class="search-bar-group">
                     <input maxlength="255" name="q" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
                     <button type="submit" value="Search" class="btn btn-default">Submit</button>
-                    <a class="closebtn">&times;</a>
                 </div>
             </form>
         </div>

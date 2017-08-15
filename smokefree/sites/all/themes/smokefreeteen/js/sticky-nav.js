@@ -18,3 +18,15 @@ jQuery(function() {
     jQuery(window).scroll(sticky_relocate);
     sticky_relocate();
 });
+
+/**
+ * Adds a padding to the search bar on click
+ */
+jQuery(document).ready(function() {
+    jQuery(".nav-search").click(function() {
+        jQuery(".search-bar").css('margin-top', '15px');
+    });
+    jQuery(".search-bar .closebtn").click(function() {
+        jQuery(".search-bar").css('margin-top', '0px');
+    })
+});
