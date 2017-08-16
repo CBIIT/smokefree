@@ -73,12 +73,15 @@
 					<div class="programContent">
 						<p>Get a new challenge at 9 a.m. every day for a week to build skills without quitting.</p>
 						<p class="example">Try to resist 2 cigarette cravings today for 10 minutes each. Go for a walk or call someone. Cravings usually last only 5 to 10 minutes.</p>
-						<div class="input-group">
+						<div class="input-group" v-if="show_program_challenge_submit==true">
 						   <input type="text" class="form-control" placeholder="Enter Your Phone Number" v-model="program_challenge_phone">
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_program_challenge">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="send_challenge_signup">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
+                        <div class="text_confirmation" v-else>
+                            {{ program_challenge_confirmation }}
+                        </div>
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
 					</div> <!-- /.programContent -->
 				</div> <!-- /.programBox /#programChallenge -->
@@ -89,12 +92,15 @@
 					<div class="programContent">
 						<p>Practice quitting for 1, 3, or 5 days at a time and build up to quitting for good.</p>
 						<p class="example">You're 24 hours into your practice! That is a MAJOR milestone! Be sure to reward yourself. Say, do, or get something nice to celebrate your success.</p>
-						<div class="input-group">
+						<div class="input-group" v-if="show_program_practice_submit==true">
 						   <input type="text" class="form-control" placeholder="Enter Your Phone Number" v-model="program_practice_phone">
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="send_practice_signup">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
+                        <div class="text_confirmation" v-else>
+                            {{ program_practice_confirmation }}
+                        </div>
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
 					</div> <!-- /.programContent -->
 				</div> <!-- /.programBox /#programPractive -->
@@ -108,7 +114,7 @@
 						<div class="input-group">
 						   <input type="text" class="form-control" placeholder="Enter Your Phone Number" v-model="program_quit_phone">
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="send_quit_signup">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
@@ -131,7 +137,6 @@
 		<div class="bottomShadow"></div> <!-- Bottom Shadow -->
 		<div class="smokerMale"></div>
 	</div> <!-- /.row /.video -->
-	
 	<div class="row tips">
 		<div class="col-lg-5 col-md-6 col-sm-12">
 			<h2>Deal With Cravings</h2>
@@ -141,40 +146,35 @@
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
 			<div class="box grayBox">
 				<div class="text-right" id="tipTicker">
-					TIP <span id="tipCurrent">1</span>/<span id="tipTotal">5</span>
+					TIP <span id="tipCurrent">{{current_crave_tip_number}}</span>/<span id="tipTotal">{{total_crave_tips}}</span>
 				</div> <!-- /#tipTicker -->
 				
-				<div id="carousel-tips" class="carousel slide" data-ride="carousel">
+				<div id="carousel-tips" class="carousel slide">
 					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
+                    <transition-group
+                            name="custom-transition-3"
+                            enter-active-class="slideinLeft"
+                            leave-active-class="slideOutRight"
+                            mode="out-in"
+                    >
+					<div class="carousel-inner" role="listbox" v-for="tip, index in all_crave_tips" v-if="index == current_crave_tip_number - 1" v-bind:key="'slide_' + index">
     					<div class="item active">
-      						<img src="images/tip-1.png" alt="#">
-    					</div> <!-- /.item -->
-    					<div class="item">
-      						<img src="images/tip-2.png" alt="#">
-    					</div> <!-- /.item -->
-    					<div class="item">
-      						<img src="images/tip-3.png" alt="#">
-    					</div> <!-- /.item -->
-    					<div class="item">
-      						<img src="images/tip-4.png" alt="#">
-    					</div> <!-- /.item -->
-    					<div class="item">
-      						<img src="images/tip-5.png" alt="#">
-    					</div> <!-- /.item -->
+      						<img v-bind:src="tip.node.field_crave_tip_image.src"  v-bind:alt="tip.node.field_crave_tip_image.alt" />
+    					</div>
     				</div> <!-- /.carousel-inner -->
+                    </transition-group>
 					<!-- Controls -->
-  					<a class="left carousel-control" href="#carousel-tips" role="button" data-slide="prev">
+  					<a class="left carousel-control" href="#carousel-tips" role="button" v-on:click="previous_crave_tip" >
     					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     					<span class="sr-only">Previous</span>
   					</a>
-  					<a class="right carousel-control" href="#carousel-tips" role="button" data-slide="next">
+  					<a class="right carousel-control" href="#carousel-tips" role="button" v-on:click="next_crave_tip">
     					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     					<span class="sr-only">Next</span>
   					</a>
 				</div> <!-- /.carousel -->
 				
-				<p class="tipContent"></p>
+				<p class="tipContent" v-for="tip, index in all_crave_tips" v-if="index == current_crave_tip_number - 1">{{tip.node.field_crave_tip_description}}</p>
 			</div> <!-- /.box /.grayBox -->
 		</div> <!-- /.col-lg-6 /.col-lg-offset-1 /.col-md-6 /.col-sm-12 -->
 	</div> <!-- /.row /.tips -->
