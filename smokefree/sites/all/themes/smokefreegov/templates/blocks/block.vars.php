@@ -13,6 +13,7 @@ function smokefreegov_preprocess_block(&$variables, $hook) {
   $block = $variables['block'];
   if (!empty($block->title)) {
     if (in_array(strtolower($block->title), array('tags', 'archives', 'blog index', 'blog archive'))) {
+      $variables['title_attributes_array']['class'][] = 'h3';
       $variables['title_attributes_array']['data-toggle'] = 'collapse';
       $variables['title_attributes_array']['data-target'] = '#' . str_replace(' ', '_', strtolower($block->title)) . '_body';
       $variables['collapsible_body_id'] = str_replace(' ', '_', strtolower($block->title)) . '_body';

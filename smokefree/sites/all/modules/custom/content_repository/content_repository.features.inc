@@ -52,6 +52,22 @@ function content_repository_image_default_styles() {
  */
 function content_repository_node_info() {
   $items = array(
+    'author_bio' => array(
+      'name' => t('Author Bio'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Author Name'),
+      'help' => '',
+    ),
+    'blog_entry' => array(
+      'name' => t('Blog Entry'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'cr_article' => array(
       'name' => t('CR Article'),
       'base' => 'node_content',
@@ -62,6 +78,14 @@ function content_repository_node_info() {
     ),
     'cr_landing' => array(
       'name' => t('CR Landing'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'disclaimer' => array(
+      'name' => t('Disclaimer'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
