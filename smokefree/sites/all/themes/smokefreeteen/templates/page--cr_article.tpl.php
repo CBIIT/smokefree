@@ -89,7 +89,7 @@
         <!-- Breadcrumbs -->
         <?php if ($show_breadcrumbs && !empty($breadcrumb)): ?>
           <?php
-          print $breadcrumb;
+          print get_cr_article_breadcrumb($breadcrumb);
           ?>
         <?php endif; ?>
         <?php if (!empty($title) && $include_title == TRUE): ?>

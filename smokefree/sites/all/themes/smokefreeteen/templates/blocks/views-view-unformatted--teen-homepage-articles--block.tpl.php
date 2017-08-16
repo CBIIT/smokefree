@@ -22,7 +22,9 @@ else if (count($rows) == 3) {
 <?php foreach ($rows as $id => $row): ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .' '.$bootrap_class.'"';  } ?>>
     <div class="cr-article">
-      <?php print $row; ?>
+      <a class="cr-article-link" href="<?php print drupal_get_path_alias('node/'. $view->result[$id]->nid);?>">
+        <?php print $row; ?>
+      </a>
     </div>
   </div>
 <?php endforeach; ?>

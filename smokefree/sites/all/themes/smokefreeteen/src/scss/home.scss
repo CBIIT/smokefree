@@ -1,9 +1,13 @@
 .smokefreegov-teen {
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        .syndicate {
+            margin-bottom: -30px !important;
+        }
+    }
     .syndicate {
         margin:0 auto;
         margin-top: 45px;
         margin-bottom: 45px;
-
         .teen-h2, .tools-tips .block-title {
             color: #353535;
             font-size: 44px;
@@ -16,6 +20,27 @@
                 padding-top: 25px;
             }
         }
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            .become-smokefree-more {
+                a {
+                    float: left !important;
+                    padding-left: 9%;
+                    padding-top: 0px !important;
+                }
+            }
+        }
+        @media only screen and (min-device-width : 700px) and (max-device-width : 1023px) {
+            .row-eq-height {
+                margin-left: 35px !important;
+                .teen-h2 {
+                    font-size: 37px !important;
+                }
+                .become-smokefree-more a {
+                    margin-right: 6% !important;
+                }
+            }
+        }
+
         .row-eq-height {
             margin-left: -11px;
             .block-title {
@@ -32,21 +57,109 @@
             padding-top: 48px;
             padding-bottom: 25px;
             border-top: #ADADAD 1px solid;
-            padding-left: 9%;
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        @media only screen and (min-width: 1024px) {
+            .block.block-views.clearfix {
+                padding-left: 9%;
+            }
+        }
+        @media only screen and (max-width: 1199px) and (min-width: 767px) {
+            .block.block-views.clearfix {
+                width: 100% !important;
+            }
         }
 
         .landing-blocks {
             .block-view-content {
                 display: inline-block;
             }
+            @media only screen and (min-device-width : 700px) and (max-device-width : 1023px) {
+                .block-view-content {
+                    width: 98% !important;
+                    .views-row.two-col {
+                        height: 520px !important;
+                        margin-right: 20px;
+                        margin-left: 3%;
+                        margin-bottom: 40px;
+                        .cr-article {
+                            padding: 50px 30px;
+                            .views-field-title {
+                                padding-top: 23px;
+                                padding-bottom: 18px;
+                            }
+                        }
+                    }
+                    .views-row.three-col {
+                        height: 225px !important;
+                        margin-bottom: 35px;
+                        margin-left: 3%;
+                        .cr-article {
+                            padding: 32px 0px !important;
+                        }
+                        .views-field.views-field-field-featured-image {
+                            width: 47%
+                        }
+                        .views-field-title, .views-field-field-short-summary {
+                            width: 49%;
+                            float: right;
+                        }
+                        .article-line {
+                            float: right;
+                            margin-right: 38.25%;
+                            margin-top: -104px;
+                        }
+                        .views-field-title {
+                            margin-top: -158px;
+                        }
+                        .views-field-field-short-summary {
+                            margin-top: -95px;
+                            .field-content {
+                                font-size: 15px !important;
+                                line-height: 26px !important;
+                            }
+                        }
+                    }
+                }
+            }
+            @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                .block-view-content {
+                    width: 105%;
+
+                    .views-row.three-col, .views-row.two-col {
+                        height: 315px;
+                        margin-bottom: 30px;
+                        .cr-article {
+                            padding: 24px 45px;
+                        }
+                    }
+                    .views-field-field-featured-image {
+                        display: none;
+                    }
+                }
+                .teen-h2 {
+                    padding-left: 10%;
+                }
+                h2 {
+                    font-size: 37px;
+                }
+            }
             .views-row.three-col {
-                width: 29.5%;
                 height: 430px;
                 margin-right: 20px;
             }
+            @media only screen  and (min-width : 1024px) {
+                .views-row.three-col {
+                    width: 29.5%;
+                }
+                .views-row.two-col {
+                    width: 45%;
+                }
+            }
 
             .views-row.two-col {
-                width: 45%;
                 height: 470px;
                 margin-right: 20px;
             }
@@ -87,10 +200,26 @@
                 }
             }
         }
+        @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+            .block-tools-tips {
+                padding-left: 6% !important;
+            }
+        }
+        @media only screen and (max-device-width : 991px) {
+            .block.tools-tips {
+                padding-left: 6% !important;
+            }
+        }
         .block.tools-tips {
             padding-left: 9%;
             padding-bottom: 25px;
             .teen-toolbox-container {
+                @media only screen and (max-device-width : 991px) {
+                    .toolbox-flex {
+                        width: 19.5% !important;
+                        margin-right: -1.42% !important;
+                    }
+                }
                 .toolbox-flex {
                     width: 18.5%;
                     display: inline-block;
@@ -116,20 +245,60 @@
                             align-items: center;
                             height: 80px;
                         }
+                    @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+                        .teen-toolbox-title {
+                            font-size: 13px !important;
+                            line-height: 16px !important;
+                            padding-left: 8%;
+                        }
+                    }
+                    @media only screen and (max-device-width : 991px) {
+                        .tool-img {
+                            width: 100% !important;
+                            height: 50px;
+                            padding-left: 17%;
+                        }
+                        .teen-toolbox-title {
+                            padding-top: 58px;
+                            padding-bottom: 14px;
+                            width: 100% !important;
+                            height:40px;
+                            line-height: 16px !important;
+                            font-size: 17px !important;
+                            text-align: center;
+                            justify-content: center
+                        }
+                    }
+
                     .tool-img {
                       width: 40%;
                       float: left;
                     }
                 }
             }
+            #myCarousel {
+                width: 173%;
+                margin-left: -38%;
+            }
+            .carousel-instruction {
+                padding-top: 93%;
+                padding-left: 11%;
+                font-size: 13px;
+            }
             .carousel-container {
                 .slide {
                     margin-bottom: 70px;
+                    .first, .middle, .last {
+                        padding-left: 15px;
+                    }
+                    .first, .last {
+                        opacity: 0.5;
+                    }
                 }
                 .carousel-indicators {
                     bottom: -32%;
-                    width: 100%;
-                    left: 31%;
+                    width: 64%;
+                    left: 50%;
                     margin-bottom: -15px;
                     li {
                         border-radius: 0;
@@ -175,6 +344,12 @@
 
         .page-header-div {
             display: none;
+        }
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        .col-sm-9.center_column.content-container {
+            padding-left: 0%;
         }
     }
 }

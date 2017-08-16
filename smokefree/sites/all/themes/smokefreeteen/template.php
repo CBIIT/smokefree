@@ -27,3 +27,13 @@ function is_teen_homepage() {
     return FALSE;
   }
 }
+
+/**
+ * Adds Smokefree.gov and Smokefree Teen to the breadcrumb
+ */
+function get_cr_article_breadcrumb($breadcrumb) {
+  $split = explode('<li>', $breadcrumb);
+  $addition = '<li><a href="https://www.smokefree.gov/">Smokefree.gov</a></li> <li><a href="/">Smokefree Teen</a></li>';
+  $added_breadcrumbs = $addition. '<li>'.$split[1];
+  return $split[0].$added_breadcrumbs;
+}

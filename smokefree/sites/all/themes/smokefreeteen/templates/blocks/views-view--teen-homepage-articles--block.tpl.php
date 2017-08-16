@@ -43,5 +43,10 @@
     <div class="row row-eq-height-lg block-view-content">
         <?php  print ($rows); ?>
     </div>
+    <div class="col-xs-12 visible-xs hidden-bottom-link">
+        <div class="become-smokefree-more">
+          <?php  print ($header); ?>
+        </div>
+    </div>
 </div>
 

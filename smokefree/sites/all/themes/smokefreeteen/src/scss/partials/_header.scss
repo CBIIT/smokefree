@@ -206,3 +206,20 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
   max-width: 100%;
   height: auto;
 }
+.search-bar {
+  background-color: #333 !important;
+}
+.mobile-search-bar {
+  margin-top: 25px;
+  border-bottom: #ADADAD 1px solid;
+  .search-bar-form {
+    input[type=text] {
+      border: 2px solid #ABADB6;
+    }
+    .search-bar-group {
+      height: 55px;
+      width: 104% !important;
+      margin-right: -8%;
+    }
+  }
+}
