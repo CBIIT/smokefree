@@ -3,6 +3,7 @@
   background-image: url("/sites/all/themes/smokefreegov/images/blog/title_bg_one.png");
   background-repeat: no-repeat;
   background-position: left center;
+  background-size:cover;
   width: 100%;
   max-width: 900px;
   padding: 1.2em;
@@ -107,7 +108,7 @@
 }
 
 #block-views-exp-blog-index-page .form-type-bef-link a, .region-sidebar-second section#block-views-blog-archive-block  ul.views-summary li a {
-    color: #07364b !important;
+  color: #07364b !important;
 }
 
 #block-views-exp-blog-index-page .form-type-bef-link a.active, .region-sidebar-second section#block-views-blog-archive-block  ul.views-summary li a.active {
@@ -117,12 +118,72 @@
 }
 
 .region-sidebar-second section#block-views-blog-archive-block  ul.views-summary li a.active  {
-      padding: 0.2em 1em;
+  padding: 0.2em 1em;
 }
 
 #block-views-exp-blog-index-page h2.block-title, #block-views-blog-archive-block h2.block-title {
   margin:0px !important;
 }
+
+/** Blog page - unordered and ordered lists **/
+.node-type-blog-entry .content-container ul,
+.node-type-blog-entry .content-container ol {
+  padding-bottom:13px;
+  padding-left:40px;
+  font-size:16px;
+  line-height:24px;
+  color:#4A4A4A;
+}
+
+/** Blog page - Quotes container **/
+
+.node-type-blog-entry .content-container .field-name-field-include-quote-1,
+.node-type-blog-entry .content-container .field-name-field-include-quote-2 {
+  clear: both;
+  font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1.01px;
+  border-top: 1px solid #ADADAD;
+  border-bottom: 1px solid #ADADAD;
+  padding: 20px 20px 30px 20px !important;
+  margin: 15px 0px 45px 0px;
+}
+
+/** Blog page -  Quotes text **/
+
+.node-type-blog-entry .content-container .field-name-field-include-quote-1 p,
+.node-type-blog-entry .content-container .field-name-field-include-quote-2 p {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 41px;
+  color: #023448;
+  padding: 0px;
+  font-style: italic;
+  width:90%;
+}
+
+/** Blog page - Blog Image **/
+
+.node-type-blog-entry .content-container .field-name-field-blog-image img,
+.node-type-blog-entry .content-container .field-name-field-blog-image-1 img,
+.node-type-blog-entry .content-container .field-name-field-blog-image-2 img,
+.node-type-blog-entry .content-container .field-name-field-blog-image-3 img {
+  display: block;
+  //border: #d8d8d8 solid 1px;
+  width: 100%;
+  height: auto;
+  max-width: 811px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:60px
+}
+
+
+/** Blog page - disclaimer on sidebar **/
+
+.node-type-blog-entry .view-mhealth-blog-disclaimer{
+  padding: 5%;
+}
+
 
 /** Blog index and archive pages **/
 
