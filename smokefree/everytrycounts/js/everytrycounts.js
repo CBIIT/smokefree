@@ -1,9 +1,8 @@
-var base_url = "";
 var quiz_questions_path = "/true-false-quiz-json-questions";
 var quiz_answers_path = "/true-false-quiz-json-answers";
 var daily_challenges_path = "/daily-challenge-json";
 var crave_tips_path = "/crave-tip-json"
-var quiz_nid = "810";
+var quiz_title = "How Does Smoking Harm Your Body";
 var program_challenge_opt_in_path = "OPD68A526E6545B2403E05609C77E3BD62";
 var program_practice_opt_in_path = "OP199DA2CFFA269A4F0675809DEB4A75CE";
 var program_quit_opt_in_path = "OPF1DF0FF02128C81EF4A5EF9FF7BD2471";
@@ -65,7 +64,7 @@ fallback.load({
             },
             mounted: function () {
                 $.ajax({
-                    url: quiz_questions_path + '/' + quiz_nid,
+                    url: quiz_questions_path + '/' + quiz_title,
                     method: 'GET',
                     success: function (data) {
                         vm.all_quiz_questions = data.nodes;
@@ -78,7 +77,7 @@ fallback.load({
                     }
                 });
                 $.ajax({
-                    url: quiz_answers_path + '/' + quiz_nid,
+                    url: quiz_answers_path + '/' + quiz_title,
                     method: 'GET',
                     success: function (data) {
                         vm.all_quiz_responses = data.nodes;
