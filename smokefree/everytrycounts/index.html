@@ -148,16 +148,17 @@
 				<div class="text-right" id="tipTicker">
 					TIP <span id="tipCurrent">{{current_crave_tip_number}}</span>/<span id="tipTotal">{{total_crave_tips}}</span>
 				</div> <!-- /#tipTicker -->
-				
+
 				<div id="carousel-tips" class="carousel slide">
 					<!-- Wrapper for slides -->
                     <transition-group
                             name="custom-transition-3"
-                            enter-active-class="slideinLeft"
-                            leave-active-class="slideOutRight"
-                            mode="out-in"
+                            enter-active-class="animated fadeInRight"
+							leave-active-class="animated fadeOutLeft"
+							tag="div"
+							class="transition"
                     >
-					<div class="carousel-inner" role="listbox" v-for="tip, index in all_crave_tips" v-if="index == current_crave_tip_number - 1" v-bind:key="'slide_' + index">
+					<div class="carousel-inner" role="listbox" v-for="tip, index in all_crave_tips" v-show="index == current_crave_tip_number - 1" v-bind:key="'slide_' + index">
     					<div class="item active">
       						<img v-bind:src="tip.node.field_crave_tip_image.src"  v-bind:alt="tip.node.field_crave_tip_image.alt" />
     					</div>
@@ -173,7 +174,7 @@
     					<span class="sr-only">Next</span>
   					</a>
 				</div> <!-- /.carousel -->
-				
+
 				<p class="tipContent" v-for="tip, index in all_crave_tips" v-if="index == current_crave_tip_number - 1">{{tip.node.field_crave_tip_description}}</p>
 			</div> <!-- /.box /.grayBox -->
 		</div> <!-- /.col-lg-6 /.col-lg-offset-1 /.col-md-6 /.col-sm-12 -->

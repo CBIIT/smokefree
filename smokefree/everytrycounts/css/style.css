@@ -304,6 +304,8 @@ ul>li {
 /* -------------------------------------- Tips -------------------------------------- */
 .carousel {
 	margin-bottom:50px;
+	height: 195px;
+	overflow: hidden;
 }
 .carousel-control.right,
 .carousel-control.left {
@@ -332,6 +334,13 @@ ul>li {
 	margin: 0px;
 	padding:0px 30px;
 }
+
+.carousel-inner {
+    position: absolute;
+	left: 0;
+	top: 0;
+}
+
 /* -------------------------------------- Questions -------------------------------------- */
 .questions {
 	background-color:#dad6d3;
