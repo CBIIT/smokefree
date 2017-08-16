@@ -53,3 +53,22 @@ function point_of_sale_node_info() {
   drupal_alter('node_info', $items);
   return $items;
 }
+
+/**
+ * Implements hook_paragraphs_info().
+ */
+function point_of_sale_paragraphs_info() {
+  $items = array(
+    'true_false_question' => array(
+      'name' => 'True False Question',
+      'bundle' => 'true_false_question',
+      'locked' => '1',
+    ),
+    'true_false_result' => array(
+      'name' => 'True False Result',
+      'bundle' => 'true_false_result',
+      'locked' => '1',
+    ),
+  );
+  return $items;
+}
