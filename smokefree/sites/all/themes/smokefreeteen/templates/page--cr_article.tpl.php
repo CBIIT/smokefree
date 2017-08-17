@@ -91,6 +91,9 @@
           <?php
           print get_cr_article_breadcrumb($breadcrumb);
           ?>
+          <div class="teen-article-logo">
+          <img src="/sites/all/themes/smokefreeteen/src/images/smokefreeteen_logo@2x.png" class="img-responsive">
+          </div>
         <?php endif; ?>
         <?php if (!empty($title) && $include_title == TRUE): ?>
         <div class="syndicate">
