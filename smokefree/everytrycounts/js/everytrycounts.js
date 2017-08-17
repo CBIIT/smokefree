@@ -239,6 +239,10 @@ fallback.load({
                         vm.program_quit_confirmation = text_signup_error_message;
                     });
                 },
+                program_appear: function() {
+                    $('#programChallenge').slideToggle(200);
+                    $('#programChallenge').find('.titleArea').delay(400).toggleClass('active');
+                }
             },
         });
     }
