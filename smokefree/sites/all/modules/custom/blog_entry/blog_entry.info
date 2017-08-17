@@ -14,6 +14,11 @@ dependencies[] = media
 dependencies[] = menu
 dependencies[] = metatag
 dependencies[] = node_export_features
+<<<<<<< HEAD
+=======
+
+dependencies[] = node_export_features
+>>>>>>> SF-511-stage
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
@@ -21,6 +26,16 @@ dependencies[] = views
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+<<<<<<< HEAD
+=======
+features[node_export_features][] = 0530917a-d3a4-43f5-8ed4-cfe881715d5a
+features[node_export_features][] = 2db3ea84-b745-4a33-bcf5-6c5149d3ff65
+features[node_export_features][] = 4f8c70ff-3f71-47fc-b0be-72ee5ad018be
+features[node_export_features][] = 907aea24-efbb-4e54-be1a-e221e3356be5
+features[node_export_features][] = c2079320-dacd-4dde-a74b-0b8eb5819612
+features[node_export_features][] = c4dd2231-f534-4f99-9eee-b5dc3812c8c3
+features[node_export_features][] = d268b0c1-47fc-4135-a7ab-c92715dc846d
+>>>>>>> SF-511-stage
 features[taxonomy][] = tags
 features[variable][] = field_bundle_settings_node__author_bio
 features[variable][] = field_bundle_settings_node__blog_entry
