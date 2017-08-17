@@ -225,8 +225,8 @@ ul>li {
 	-webkit-transition: all 400ms ease-in;
     -ms-transition: all 400ms ease-in;
     transition: all 400ms ease-in;
-	top:-18px;
-	right:-18px;
+	top: 2px;
+	right: 2px;
 	width:36px;
 	height:36px;
 }
@@ -399,10 +399,22 @@ ul>li {
   transform-style: preserve-3d;
 }
 #flipCard .card.flipped {
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+#flipCard .card.flipped-out {
+	-webkit-transform: rotateY( 90deg );
+	-moz-transform: rotateY( 90deg );
+	-o-transform: rotateY( 90deg );
+	transform: rotateY( 90deg );
+}
+#flipCard .card.flipped-in {
+  -webkit-transform: rotateY( 90deg );
+  -moz-transform: rotateY( 90deg );
+  -o-transform: rotateY( 90deg );
+  transform: rotateY( 90deg );
 }
 #flipCard .card .front,
 #flipCard .card .back {
@@ -680,4 +692,19 @@ button {
 	display:block;
 	font-size:14px;
 	margin-bottom:6px;
+}
+
+.slidetoggle-enter-active {
+	height: 100%;
+	transition: height .3s ease;
+}
+.slidetoggle-leave-active {
+	height: 100%;
+	transition: height .3s ease;
+}
+.slidetoggle-enter, .slidetoggle-leave-to {
+	height: 0px;
+}
+.programBox {
+	overflow: hidden;
 }
