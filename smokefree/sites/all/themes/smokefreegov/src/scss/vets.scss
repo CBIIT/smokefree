@@ -208,6 +208,12 @@
 
 	} /**** End of Desktop styling for .vet-sub-menu ****/
 
+	@media (max-width: 991px) and (min-width: 768px) {
+		.hidden-sm {
+			display: none!important;
+		}
+	}
+
 } /***** End of Veterans Header styling *****/
 
 .page-veterans {
@@ -256,15 +262,19 @@
 		}
 
 			.panel-col-top {
+				padding-top: 2%;
+				padding-left: 2%;
+				padding-right: 2%;
 				
 			    background: #ffffff;
 			    width: 100%;
 			    border-top: 1px solid #ADADAD;
 			    border-bottom: 1px solid #ADADAD;
-			    margin-bottom: 3em;
+			    margin-bottom: 0 auto 3em auto;
+			    height:550px;
 
 				.inside {
-				width:80%;
+				width:100%;
     			margin: auto;
     			overflow: auto;
 				}
@@ -272,14 +282,17 @@
 
 		.center-wrapper {
 			overflow: auto;
-		    width: 1170px;
+		    width: 96%;
 		    margin: auto auto 10% auto;
 		}
 
 		.panel-col-bottom {
 
-			width: 1170px;
-			margin:auto;
+			.inside {
+				width:100%;
+    			margin: auto;
+
+				}
 
 
 			.pane-1 {
@@ -305,8 +318,16 @@
 			font-size: 32px;
 		    color: #023448;
 		    line-height: 50px;
-		    width: 58%;
+		    width: 52%;
 		    float: left;
+		    padding:3%;
+		}
+
+		.quiz-image-button {
+			width:200px;
+			float:left;
+			margin-left:15%;
+			margin-top:6%;
 		}
 
 		.file-image-png img {
@@ -317,27 +338,25 @@
 
 		#veterans-quiz-link {
 			background-color: #D31F0C;
-			display:inline;
+			display:inline-block;
 		    margin: 0px auto;
 		    position: relative;
-		    top: -20px;
+		    top: -30px;
 		    padding: 0.6em;
 		    color: white;
 		    font-size: 26px;
 		    cursor: pointer;
-		    margin-left: 1.9em;
+			width: 190px !important;
 		}
 
-		.media-element-container {
-			width:40%;
+		.media-element-container { 
 			float: left;
 		}
 
 		.pane-3 {
-		    width: 36%;
 		    float: right;
 		    position: relative;
-		    top: -17.8em;
+		    top: -17em;
 		}
 
 		#veterans-why-you-smoke {
@@ -350,14 +369,15 @@
 
 			img {
 			height: 327px;
+				width: 98% !important;
 			}
 
 		}
 
 		#veterans-why-you-smoke-caption {
-			margin-top: -6.5em;
+			margin-top: -6em;
 		    bottom: 0px;
-		    width: 416px;
+		    width: 98%;
 		    background-color: #35723C;
 		    height: 86px;
 		    padding: 15px 0px 15px;
@@ -1124,11 +1144,17 @@
 	@media (min-width:1200px){
 		#veterans-home-panel {
 			.pane-2 {
-				width:60%;
+				width:57%;
 			}
 			#veterans-quiz-text {
 				width:100%;
-				height:338px;
+				height:355px;
+			}
+
+			.panel-col-top {
+			    .inside {
+			    	//height:510px;
+			    }
 			}
 
 		}
@@ -1204,10 +1230,11 @@
 			}
 
 			#veterans-quiz-link {
-				float: right;
-			    margin-right: 3em;
-			    margin-top: -2em;
-			    padding: 1em 2em;
+			    font-size: 24px;
+			    padding:20px;
+				width: 190px !important;
+				display: block;
+				margin-left: 5px;
 			}
 
 			#veterans-quiz-summary {
@@ -1215,6 +1242,13 @@
 			    float: none;
 			    /*overflow: auto;*/
 			    margin-bottom: 1em;
+			}
+
+			.quiz-image-button {
+				float:right;
+				padding:0;
+				width:200px;
+				margin-top:3%;
 			}
 
 			.center-wrapper {
@@ -1234,7 +1268,7 @@
 			.panel-col-bottom {
 				width: 100%;
 			    margin: auto;
-			    padding: 0 3em;
+
 
 			    .toolh2 {
 			    	font-size: 60px;
@@ -1255,6 +1289,25 @@
 		}
 	}
 
+	@media all and (min-width:1681px) {
+		#veterans-home-panel {
+				.pane-bundle-tools-tips {
+					width:223px;
+					margin:0 5px;
+				}
+		}
+
+	}
+
+	@media all and (min-width:1199px) and (max-width:1680px){
+		#veterans-home-panel {
+				.pane-bundle-tools-tips {
+					width:14%;
+				}
+		}
+
+	}
+
 	@media all and (min-width:1199px) {
 
 			#veterans-home-panel {
@@ -1263,13 +1316,13 @@
 					.pane-title a {
 						font-size:2rem;
 					}
-					width:170px;
+					
 
 					.field-name-field-icon {
 						position:absolute;
 				    	top:-80px;
 				    	width:130px;
-				    	margin:0 20px;
+				    	margin:0 14%;
 
 					}
 
@@ -1335,6 +1388,29 @@
 
 
 			#veterans-home-panel {
+
+				#veterans-quiz-text {
+					height: 500px;
+					width:100%;
+					margin: 100px auto;
+
+					.media-element-container {
+						float:none;
+						display:inline-block;
+						width:100%;
+					}
+				}
+
+				.quiz-image-button {
+					margin:0 auto;
+					text-align: center;
+					width:200px;
+					float:none;
+				}
+
+				#veterans-quiz-summary {
+					width:100%;
+				}
 				.fieldable-panels-pane {
 					margin:3%;
 				}

@@ -1,0 +1,10 @@
+// Base-theme overrides.
+@import 'overrides';
+
+// Custom stylesheets
+@import 'home.scss';
+
+// Import Partials
+@import 'partials/header';
+@import 'partials/navigation';
+@import 'footer_overrides.scss';
