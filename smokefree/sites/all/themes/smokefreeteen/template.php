@@ -1,7 +1,7 @@
 <?php
 
 function smokefreeteen_preprocess_page(&$variables) {
-  define('NUMBER_OF_HOMEPAGE_HERO_IMAGES', 2);
+  define('NUMBER_OF_HOMEPAGE_HERO_IMAGES', 11);
   $variables['random_hero_class'] = 'hero-' . rand(1, NUMBER_OF_HOMEPAGE_HERO_IMAGES);
   $footer_menu_tree = menu_tree_all_data('menu-teen-footer');
   $variables['footer_menu'] =  menu_tree_output($footer_menu_tree);
