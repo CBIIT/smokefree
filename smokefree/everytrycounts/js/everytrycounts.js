@@ -73,7 +73,7 @@ fallback.load({
                         console.log(vm.all_quiz_questions);
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
                 $.ajax({
@@ -83,7 +83,7 @@ fallback.load({
                         vm.all_quiz_responses = data.nodes;
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
                 $.ajax({
@@ -95,7 +95,7 @@ fallback.load({
                         vm.current_daily_challenge_number = 1;
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
                 $.ajax({
@@ -108,7 +108,7 @@ fallback.load({
                         vm.current_crave_tip_number = 1;
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
             },

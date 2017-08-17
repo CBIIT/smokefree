@@ -66,6 +66,59 @@ ul>li {
 	font-weight: 400;
 	line-height: 28px;
 }
+p.quiz-results-message {
+	text-align: center;
+	font-size: 24px;
+}
+@media (max-width: 650px) {
+	h2 {
+		font-size: 46px;
+		line-height: 44px;
+	}
+	.challenges h3 {
+		width:100%;
+		min-height: 20px;
+	}
+}
+@media (max-width: 500px) {
+	h2 {
+		font-size: 40px;
+		line-height: 36px;
+	}
+}
+@media (max-width: 430px) {
+	h2 {
+		font-size: 38px;
+		line-height: 32px;
+	}
+	p,
+	ul>li {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+@media (max-width: 390px) {
+	h2 {
+		font-size: 36px;
+		line-height: 30px;
+	}
+	p,
+	ul>li {
+		font-size: 17px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 370px) {
+	h2 {
+		font-size: 32px;
+		line-height: 28px;
+	}
+	p,
+	ul>li {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
 .bold {
 	font-weight:900;
 }
@@ -79,16 +132,6 @@ ul>li {
 	line-height: 38px;
 	padding-right:20px;
 	margin-bottom:30px;
-}
-@media (max-width: 992px) {
-	.moreHelp h2 {
-		padding-right:30px;
-	}	
-}
-@media (max-width: 768px) {
-	.moreHelp h2 {
-		padding-right:0px;
-	}	
 }
 .moreHelp h2 a {
 	text-decoration: none;
@@ -114,6 +157,19 @@ ul>li {
 }
 .moreHelp p {
 	padding-right:80px;	
+}
+@media (max-width: 992px) {
+	.moreHelp h2 {
+		padding-right:30px;
+	}	
+}
+@media (max-width: 768px) {
+	.moreHelp h2 {
+		padding-right:0px;
+	}
+	.moreHelp p {
+		padding-right:0px;	
+	}
 }
 /* -------------------------------------- Rows -------------------------------------- */
 .everyTryCounts,
@@ -225,10 +281,11 @@ ul>li {
 	-webkit-transition: all 400ms ease-in;
     -ms-transition: all 400ms ease-in;
     transition: all 400ms ease-in;
-	top: 2px;
-	right: 2px;
-	width:36px;
-	height:36px;
+	top: 50%;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    margin-top: -20px;
 }
 .programBox .programContent {
 	font-size:18px;
@@ -278,6 +335,11 @@ ul>li {
 .video {
 	min-height: 365px;
 }
+@media (max-width: 450px) {
+	.video {
+		min-height: auto;
+	}	
+}
 .video .col-sm-12 {
 	z-index:50;
 }
@@ -304,7 +366,7 @@ ul>li {
 /* -------------------------------------- Tips -------------------------------------- */
 .carousel {
 	margin-bottom:50px;
-	height: 195px;
+	height: 250px;
 	overflow: hidden;
 }
 .carousel-control.right,
@@ -334,27 +396,66 @@ ul>li {
 	margin: 0px;
 	padding:0px 30px;
 }
-
 .carousel-inner {
     position: absolute;
 	left: 0;
 	top: 0;
 }
-
+@media (max-width: 1200px) {
+	.carousel {
+		height: 200px;
+	}
+}
+@media (max-width: 992px) {
+	.carousel {
+		height: 320px;
+	}
+}
+@media (max-width: 768px) {
+	.carousel {
+		height: 250px;
+	}
+}
+@media (max-width: 610px) {
+	.carousel {
+		height: 220px;
+	}
+}
+@media (max-width: 550px) {
+	.carousel {
+		height: 180px;
+	}
+}
+@media (max-width: 475px) {
+	.carousel {
+		height: 150px;
+		margin-bottom: 70px;
+	}
+	.tipContent {
+		bottom:15px;
+	}
+}
+@media (max-width: 420px) {
+	.carousel {
+		height: 120px;
+	}
+}
+@media (max-width: 370px) {
+	.carousel {
+		height: 100px;
+	}
+}
+@media (max-width: 330px) {
+	.carousel {
+		height: 80px;
+	}
+}
 /* -------------------------------------- Questions -------------------------------------- */
 .questions {
 	background-color:#dad6d3;
 	background-image: url(../images/questions-background.png);
 	background-position: center center;
 	background-repeat: no-repeat;
-}
-.question2,
-.question3,
-.question4,
-.question5,
-.question6,
-.question7 {
-	display:none;
 }
 @media (max-width: 1200px) {
 	.questions {
@@ -497,6 +598,25 @@ ul>li {
 		right:0px;
 	}
 }
+@media (max-width: 768px) {
+	.quitGuide {
+		padding-right:0px;
+	}
+}
+@media (max-width: 480px) {
+	.appDownloads a:first-of-type img{
+		display:block;
+		width:180px;
+		height:60px;
+		margin:20px auto;
+	}
+	.appDownloads a:nth-child(2) img{
+		display:block;
+		width:185px;
+		height:60px;
+		margin:20px auto;
+	}
+}
 /* -------------------------------------- More Help -------------------------------------- */
 .moreHelp {
 	background-color:#26231e;
@@ -557,6 +677,7 @@ ul>li {
 .whiteBox {
 	background-color: #ffffff;
 	overflow: hidden;
+	min-height:280px;
 }
 /* -------------------------------------- buttons -------------------------------------- */
 button {
@@ -631,10 +752,10 @@ button {
     -ms-transition: all 500ms ease-in;
     transition: all 500ms ease-in;
 }
-@media (max-width: 1200px) {
-	.answerGroup button.btn {
-		width:45%;	
-	}
+#quiz_next_button,
+#try_again {
+	margin:10px auto;
+	display: block;
 }
 .challenges .btn.btn-calendar {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -685,6 +806,91 @@ button {
     -ms-transition: background-color 500ms ease-in;
     transition: background-color 500ms ease-in;
 }
+
+@media (max-width: 1200px) {
+	.answerGroup button.btn {
+		width:45%;	
+	}
+}
+@media (max-width: 650px) {
+	.challenges .btn.btn-calendar {
+		float:none;
+		margin-bottom:10px;
+	}
+	#quiz_next_button,
+	#try_again {
+		width:auto;
+	}
+}
+@media (max-width: 500px) {
+	.programs button.btn,
+	.programBox .titleArea h3,
+	.challenges .btn.btn-challenge{
+		font-size:28px;
+		padding:20px;
+	}
+	.answerGroup button.btn {
+		font-size:22px;
+		line-height:20px;
+		padding:10px;
+	}
+	#quiz_next_button,
+	#try_again {
+		width:auto;
+	}
+}
+@media (max-width: 430px) {
+	.programs button.btn,
+	.programBox .titleArea h3,
+	.challenges .btn.btn-challenge{
+		font-size:24px;
+		padding:15px;
+	}
+	#quiz_next_button,
+	#try_again {
+		width:auto;
+	}
+}
+@media (max-width: 390px) {
+	.programs button.btn,
+	.programBox .titleArea h3,
+	.challenges .btn.btn-challenge{
+		font-size:20px;
+	}
+	.answerGroup button.btn {
+		font-size:18px;
+		line-height:16px;
+		padding:8px;
+		width:45%;
+	}
+	.answerGroup button.btn:first-of-type {
+		margin-right:5px;	
+	}
+	.answerGroup button.btn:last-of-type {
+		margin-left:5px;	
+	}
+	#quiz_next_button,
+	#try_again {
+		width:auto;
+	}
+}
+@media (max-width: 370px) {
+	.programs button.btn,
+	.programBox .titleArea h3 {
+		font-size:18px;
+		padding:12px;
+		letter-spacing: 0.04em;
+	}
+	.challenges .btn.btn-challenge{
+		font-size:16px;
+		padding:8px;
+		letter-spacing: 0.04em;
+	}
+	#quiz_next_button,
+	#try_again {
+		width:auto;
+	}
+}
 /* -------------------------------------- ticker -------------------------------------- */
 #tipTicker,
 #questionTicker,
@@ -693,7 +899,7 @@ button {
 	font-size:14px;
 	margin-bottom:6px;
 }
-
+/* -------------------------------------- overrides -------------------------------------- */
 .slidetoggle-enter-active {
 	height: 100%;
 	transition: height .3s ease;
@@ -707,4 +913,4 @@ button {
 }
 .programBox {
 	overflow: hidden;
-}
+} 
