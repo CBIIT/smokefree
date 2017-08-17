@@ -1,3 +1,4 @@
+var base_url=“smokefree_dev.drupalvm.dev”;
 var quiz_questions_path = "/true-false-quiz-json-questions";
 var quiz_answers_path = "/true-false-quiz-json-answers";
 var daily_challenges_path = "/daily-challenge-json";
@@ -64,7 +65,7 @@ fallback.load({
             },
             mounted: function () {
                 $.ajax({
-                    url: quiz_questions_path + '/' + quiz_title,
+                    url: base_url + quiz_questions_path + '/' + quiz_title,
                     method: 'GET',
                     success: function (data) {
                         vm.all_quiz_questions = data.nodes;
@@ -73,21 +74,21 @@ fallback.load({
                         console.log(vm.all_quiz_questions);
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
                 $.ajax({
-                    url: quiz_answers_path + '/' + quiz_title,
+                    url: base_url + quiz_answers_path + '/' + quiz_title,
                     method: 'GET',
                     success: function (data) {
                         vm.all_quiz_responses = data.nodes;
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
                 $.ajax({
-                    url: daily_challenges_path,
+                    url: base_url + daily_challenges_path,
                     method: 'GET',
                     success: function (data) {
                         vm.all_daily_challenges = data.nodes;
@@ -95,11 +96,11 @@ fallback.load({
                         vm.current_daily_challenge_number = 1;
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
                 $.ajax({
-                    url: crave_tips_path,
+                    url: base_url + crave_tips_path,
                     method: 'GET',
                     success: function (data) {
                         vm.all_crave_tips = data.nodes;
@@ -108,7 +109,7 @@ fallback.load({
                         vm.current_crave_tip_number = 1;
                     },
                     error: function (error) {
-                        alert(JSON.stringify(error));
+                        console.log(JSON.stringify(error));
                     }
                 });
             },
