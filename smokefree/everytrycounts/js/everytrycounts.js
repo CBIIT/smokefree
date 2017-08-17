@@ -1,4 +1,3 @@
-var base_url=“smokefree_dev.drupalvm.dev”;
 var quiz_questions_path = "/true-false-quiz-json-questions";
 var quiz_answers_path = "/true-false-quiz-json-answers";
 var daily_challenges_path = "/daily-challenge-json";
@@ -65,7 +64,7 @@ fallback.load({
             },
             mounted: function () {
                 $.ajax({
-                    url: base_url + quiz_questions_path + '/' + quiz_title,
+                    url: quiz_questions_path + '/' + quiz_title,
                     method: 'GET',
                     success: function (data) {
                         vm.all_quiz_questions = data.nodes;
@@ -78,7 +77,7 @@ fallback.load({
                     }
                 });
                 $.ajax({
-                    url: base_url + quiz_answers_path + '/' + quiz_title,
+                    url: quiz_answers_path + '/' + quiz_title,
                     method: 'GET',
                     success: function (data) {
                         vm.all_quiz_responses = data.nodes;
@@ -88,7 +87,7 @@ fallback.load({
                     }
                 });
                 $.ajax({
-                    url: base_url + daily_challenges_path,
+                    url: daily_challenges_path,
                     method: 'GET',
                     success: function (data) {
                         vm.all_daily_challenges = data.nodes;
@@ -100,7 +99,7 @@ fallback.load({
                     }
                 });
                 $.ajax({
-                    url: base_url + crave_tips_path,
+                    url: crave_tips_path,
                     method: 'GET',
                     success: function (data) {
                         vm.all_crave_tips = data.nodes;
