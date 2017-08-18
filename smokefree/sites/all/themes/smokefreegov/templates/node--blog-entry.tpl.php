@@ -99,11 +99,19 @@
      <?php 
 print 'By: '
      ?>
+<?php /** For linking the author name to author Bio page  */ ?>
+      <?php
+      $firstname = $node->field_first_name['und'][0]['value'];
+      $surname = $node->field_last_name['und'][0]['value'];
+      $author_url = '/'.$firstname.'-'.$surname;
+      ?>
 
-<a href="/author-bios">
+<?php /** For linking the author name to author Bio page  */ ?>
+
+      <a href="<?php print $author_url; ?>">
      <?php
-     $firstname = $node->field_first_name['und'][0]['value'];
-     $surname = $node->field_last_name['und'][0]['value']; 
+     //$firstname = $node->field_first_name['und'][0]['value'];
+     //$surname = $node->field_last_name['und'][0]['value'];
 
      if (!empty ($firstname)) {print  $firstname .' ' .$surname;}
      ?>

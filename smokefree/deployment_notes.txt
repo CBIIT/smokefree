@@ -1,3 +1,14 @@
+Smokefree 1.3 2017-08-10
+-----------------------
+- SF-527 Fix for footer repeating in satelites
+- SF-481 mhealth blog
+- SF-512 Adding new fields to text forms
+
+Smokefree 1.3 2017-08-10
+-----------------------
+- SF-499 Adding canonical links back to all pages
+- SF-529 Fixing age dropdown on teen signup page
+
 Smokefree 1.2 2017-08-04
 -----------------------
 - SF-511 Various styling fixes for the veterans homepage
@@ -10,3 +21,10 @@ Smokefree 1.1 2017-07-13
 - SF-497 Styling bug in text confirmation pages (gab after submit) fixed.
 - SF-441 DipfreeTXT program page added
 - SF-468 Homepage A/B testing with Google optimize added
+
+Smokefree 1.2 2017-07-27
+-----------------------
+- SF-483 Make whole article blocks on SF homepage clickable
+- SF-486 Adds QuitGuide app promo
+- SF-501 Fixes double scrollbar on SF home (mobile size)
+- SF-514 Fixes font issue on main article site
