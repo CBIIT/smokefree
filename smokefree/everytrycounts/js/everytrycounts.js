@@ -61,6 +61,7 @@ fallback.load({
                 program_challenge_phone: "",
                 program_practice_phone: "",
                 program_quit_phone: "",
+                show_calendar_dropdown: false,
             },
             mounted: function () {
                 $.ajax({
@@ -148,7 +149,6 @@ fallback.load({
                     this.daily_challenge_next_button_text = this.current_daily_challenge_number == this.total_daily_challenges ? "START OVER" : "NEXT CHALLENGE";
                 },
                 next_crave_tip: function(e) {
-                    e.preventDefault();
                     if (this.current_crave_tip_number < this.total_crave_tips) {
                         this.current_crave_tip_number++;
                     }
@@ -157,7 +157,6 @@ fallback.load({
                     }
                 },
                 previous_crave_tip: function(e) {
-                    e.preventDefault();
                     if (this.current_crave_tip_number > 1) {
                         this.current_crave_tip_number--;
                     }
@@ -172,78 +171,78 @@ fallback.load({
                     this.show_quiz_part="question";
                     this.quiz_next_button_text = "next";
                 },
-                toggle_program_challenge: function() {
-                    this.show_program_challenge = !this.show_program_challenge;
-                },
-                toggle_program_practice: function() {
-                    this.show_program_practice = !this.show_program_practice;
-                },
-                toggle_program_quit: function() {
-                    this.show_program_quit = !this.show_program_quit;
-                },
-                send_challenge_signup: function() {
-                    this.show_program_challenge_submit = false;
+                send_text_signup: function(opt_in, phone_number) {
                     var request = $.ajax({
                         url: mobile_commons_url,
                         type: "POST",
                         data: {
-                            opt_in_path: this.program_challenge_opt_in_path,
-                            person_phone: this.program_challenge_phone
+                            opt_in_path: opt_in,
+                            person_phone: phone_number
                         },
+                        opt_in_path: opt_in,
                         dataType: "html"
                     });
                     request.done(function(msg) {
-                        console.log(msg)
-                        vm.program_challenge_confirmation = text_signup_confirmation_message;
+                        switch (this.opt_in_path) {
+                            case program_challenge_opt_in_path:
+                                vm.program_challenge_confirmation = text_signup_confirmation_message;
+                                break;
+                            case program_practice_opt_in_path:
+                                vm.program_practice_confirmation = text_signup_confirmation_message;
+                                break;
+                            case program_quit_opt_in_path:
+                                vm.program_quit_confirmation = text_signup_confirmation_message;
+                                break;
+                        }
                     });
                     request.fail(function(jqXHR, textStatus) {
-                        console.log(textStatus);
-                        vm.program_challenge_confirmation = this.text_signup_error_message;
+                        switch (this.opt_in_path) {
+                            case program_challenge_opt_in_path:
+                                vm.program_challenge_confirmation = text_signup_error_message;
+                                break;
+                            case program_practice_opt_in_path:
+                                vm.program_practice_confirmation = text_signup_error_message;
+                                break;
+                            case program_quit_opt_in_path:
+                                vm.program_quit_confirmation = text_signup_error_message;
+                                break;
+                        }
                     });
                 },
-                send_practice_signup: function() {
-                    this.show_program_practice_submit = false;
-                    var request = $.ajax({
-                        url: mobile_commons_url,
-                        type: "POST",
-                        data: {
-                            opt_in_path: this.program_practice_opt_in_path,
-                            person_phone: this.program_practice_phone
-                        },
-                        dataType: "html"
-                    });
-                    request.done(function(msg) {
-                        console.log(msg)
-                        vm.program_practice_confirmation = text_signup_confirmation_message;
-                    });
-                    request.fail(function(jqXHR, textStatus) {
-                        console.log(textStatus);
-                        vm.program_practice_confirmation = text_signup_error_message;
-                    });
+                _addEvent: function(event, service, title, description) {
+
+                    var today = new Date();
+                    var dd = today.getDate() + 1; //Use Tomorrow.
+                    var mm = today.getMonth()+1; //January is 0!
+                    var yyyy = today.getFullYear();
+
+                    var url = 'https://addevent.com/dir/?'
+                        + 'client=alytbm1p6z01u48glmv7810'
+                        + "&service="       + encodeURIComponent(service)
+                        + "&start="         + encodeURIComponent(mm + "/" + dd + "/" + yyyy + " 09:00 AM")
+                        + "&end="           + encodeURIComponent(mm + "/" + dd + "/" + yyyy + " 10:00 AM")
+                        + "&title="         + encodeURIComponent(title)
+                        + "&date_format="   + encodeURIComponent("MM/DD/YYYY")
+                        + "&description="   + encodeURIComponent(description)
+                        + "&timezone="      + encodeURIComponent("America/Chicago")
+                        + "&all_day_event=false";
+
+                    window.open(url);
+                    vm.show_calendar_dropdown = false;
                 },
-                send_quit_signup: function() {
-                    this.show_program_quit_submit = false;
-                    var request = $.ajax({
-                        url: mobile_commons_url,
-                        type: "POST",
-                        data: {
-                            opt_in_path: this.program_quit_opt_in_path,
-                            person_phone: this.program_quit_phone
-                        },
-                        dataType: "html"
-                    });
-                    request.done(function(msg) {
-                        vm.program_quit_confirmation = text_signup_confirmation_message;
-                    });
-                    request.fail(function(jqXHR, textStatus) {
-                        vm.program_quit_confirmation = text_signup_error_message;
-                    });
-                },
-                program_appear: function() {
-                    $('#programChallenge').slideToggle(200);
-                    $('#programChallenge').find('.titleArea').delay(400).toggleClass('active');
+                documentClick(e){
+                    if (!$(e.target).closest('.calendar-button-container').length) {
+                        vm.show_calendar_dropdown=false
+                    }
                 }
             },
+            created () {
+                document.addEventListener('click', this.documentClick)
+            },
+            destroyed () {
+                // important to clean up!!
+                document.removeEventListener('click', this.documentClick)
+            }
         });
     }
 });

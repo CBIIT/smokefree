@@ -51,21 +51,21 @@
 		</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
 			<div class="programs">
-				<button class="btn" id="programChallengeButton" v-on:click="toggle_program_challenge">TRY DAILY CHALLENGES</button>
-				<button class="btn" id="programPracticeButton" v-on:click="toggle_program_practice">PRACTICE QUITTING</button>
-				<button class="btn" id="programQuitButton" v-on:click="toggle_program_quit">QUIT FOR GOOD</button>
+				<button class="btn" id="programChallengeButton" v-on:click="show_program_challenge = !show_program_challenge">TRY DAILY CHALLENGES</button>
+				<button class="btn" id="programPracticeButton" v-on:click="show_program_practice = !show_program_practice">PRACTICE QUITTING</button>
+				<button class="btn" id="programQuitButton" v-on:click="show_program_quit = !show_program_quit">QUIT FOR GOOD</button>
 				
 				<!-- Try Daily Challenges overlay box -->
 				<transition name="slidetoggle">
 				<div class="programBox" id="programChallenge" v-if="show_program_challenge">
-					<button class="titleArea active" id="programChallengeClose" v-on:click="toggle_program_challenge"><h3>TRY DAILY CHALLENGES</h3></button>
+					<button class="titleArea active" id="programChallengeClose" v-on:click="show_program_challenge = !show_program_challenge"><h3>TRY DAILY CHALLENGES</h3></button>
 					<div class="programContent">
 						<p>Get a new challenge at 9 a.m. every day for a week to build skills without quitting.</p>
 						<p class="example">Try to resist 2 cigarette cravings today for 10 minutes each. Go for a walk or call someone. Cravings usually last only 5 to 10 minutes.</p>
 						<div class="input-group" v-if="show_program_challenge_submit==true">
-						   <input type="text" class="form-control" placeholder="Enter Your Phone Number" v-model="program_challenge_phone">
+						   <input type="number" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_challenge_phone">
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_challenge_signup">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="send_text_signup(program_challenge_opt_in_path, program_challenge_phone); show_program_challenge_submit = false">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else>
@@ -79,14 +79,14 @@
 				<!-- Try Practice Quitting overlay box -->
 				<transition name="slidetoggle">
 				<div class="programBox" id="programPractice" v-if="show_program_practice">
-					<button class="titleArea active" id="programPracticeClose" v-on:click="toggle_program_practice"><h3>PRACTICE QUITTING</h3></button>
+					<button class="titleArea active" id="programPracticeClose" v-on:click="show_program_practice = !show_program_practice"><h3>PRACTICE QUITTING</h3></button>
 					<div class="programContent">
 						<p>Practice quitting for 1, 3, or 5 days at a time and build up to quitting for good.</p>
 						<p class="example">You're 24 hours into your practice! That is a MAJOR milestone! Be sure to reward yourself. Say, do, or get something nice to celebrate your success.</p>
 						<div class="input-group" v-if="show_program_practice_submit==true">
-						   <input type="text" class="form-control" placeholder="Enter Your Phone Number" v-model="program_practice_phone">
+						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_practice_phone">
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_practice_signup">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="send_text_signup(program_practice_opt_in_path, program_practice_phone); show_program_practice_submit = false">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else>
@@ -100,14 +100,14 @@
 				<!-- Try Quit for Good overlay box -->
 				<transition name="slidetoggle">
 				<div class="programBox" id="programQuit" v-if="show_program_quit">
-					<button class="titleArea active" id="programQuitClose" v-on:click="toggle_program_quit"><h3>QUIT FOR GOOD</h3></button>
+					<button class="titleArea active" id="programQuitClose" v-on:click="show_program_quit = !show_program_quit"><h3>QUIT FOR GOOD</h3></button>
 					<div class="programContent">
 						<p>Become &#8212; and stay &#8212; smokefree with 6-8 weeks of support.</p>
 						<p class="example">Cravings will get weaker and less frequent with every day that you don't smoke. What's your craving level? Reply: HI, MED, or LOW</p>
 						<div class="input-group">
-						   <input type="text" class="form-control" placeholder="Enter Your Phone Number" v-model="program_quit_phone">
+						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_quit_phone">
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_quit_signup">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="send_text_signup(program_quit_opt_in_path, program_quit_phone); show_program_quit_submit = false">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
@@ -159,11 +159,11 @@
     				</div> <!-- /.carousel-inner -->
                     </transition-group>
 					<!-- Controls -->
-  					<a class="left carousel-control" href="#carousel-tips" role="button" v-on:click="previous_crave_tip" >
+  					<a class="left carousel-control" href="#carousel-tips" role="button" v-on:click.prevent="previous_crave_tip" >
     					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     					<span class="sr-only">Previous</span>
   					</a>
-  					<a class="right carousel-control" href="#carousel-tips" role="button" v-on:click="next_crave_tip">
+  					<a class="right carousel-control" href="#carousel-tips" role="button" v-on:click.prevent="next_crave_tip">
     					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     					<span class="sr-only">Next</span>
   					</a>
@@ -231,11 +231,24 @@
 				<div class="card" v-for="challenge, index in all_daily_challenges" v-if="index == current_daily_challenge_number - 1" v-bind:key="index + '_challenge'">
 					<div class="front">
 						<div class="text-right challengeTicker">
-							TIP <span class="challengeCurrent">{{ current_daily_challenge_number }}</span>/<span class="challengeTotal">{{ total_daily_challenges }}</span>
+							CHALLENGE <span class="challengeCurrent">{{ current_daily_challenge_number }}</span>/<span class="challengeTotal">{{ total_daily_challenges }}</span>
 						</div> <!-- /#tipTicker -->
 						<div class="challengeTitle">
-							<button class="btn btn-calendar"><span class="calendarIcon"></span><span class="calendarAdd">Add to My Calendar</span></button>
 							<h3>{{ challenge.node.title }}</h3>
+							<div class="calendar-button-container">
+								<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index">Add to My Calendar</span></button>
+								<ul class="calendar-dropdown-menu" v-if="show_calendar_dropdown" role="menu" v-bind:aria-labelledby="'calendarAdd' + index">
+									<li>
+										<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
+									</li>
+								</ul>
+							</div>
 						</div> <!-- /.challengeTitle -->
 						<p class="challengeContent">{{ challenge.node.field_challenge_description }}</p>
 						<button class="btn btn-challenge" v-on:click="next_daily_challenge">{{ daily_challenge_next_button_text }}</button>
