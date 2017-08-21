@@ -38,10 +38,6 @@ h3 {
 	line-height: 32px;
 	margin:0px 0px 8px;
 }
-.challenges h3 {
-	width:50%;
-	min-height:40px;
-}
 .programBox .titleArea h3 {
 	text-align: center;
 	font-family: "Knockout", "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -103,8 +99,11 @@ p.quiz-results-message {
 }
 .moreHelp p.phone {
 	margin:0;
-	font-size:20px;
+	font-size:24px;
 	font-weight: 900;
+}
+.moreHelp p.phone a {
+	text-decoration: underline;	
 }
 .moreHelp p {
 	padding-right:80px;	
@@ -475,6 +474,7 @@ p.quiz-results-message {
 /* -------------------------------------- Challenges -------------------------------------- */
 .challengeTitle {
 	margin:10px 0px;
+	min-height:40px;
 }
 .challengeContent {
 	min-height:120px;
@@ -773,7 +773,7 @@ button {
 	background-color: #ffffff;
 	border-radius: 0;
 	border:1px solid #3f628b;
-	float: none;
+	float: right;
 	display: table;
 }
 .btn-calendar .calendarIcon {
@@ -782,14 +782,27 @@ button {
 	display: table-cell;
 	vertical-align: middle;
 	background-image: url(../images/calendar-icon-2x.png);
-	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 20px 40px;
+	background-position: 0 0;
 }
 .btn-calendar .calendarAdd {
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 6px;
+}
+.challenges .btn.btn-calendar:focus,
+.challenges .btn.btn-calendar:hover {
+	background-color: #3e5269;
+	color: #ffffff;
+	border:1px solid #3e5269;
+	-webkit-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+.challenges .btn.btn-calendar:focus .calendarIcon,
+.challenges .btn.btn-calendar:hover .calendarIcon {
+	background-position: 0px -20px;
 }
 .challenges .btn.btn-challenge {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -815,6 +828,9 @@ button {
 @media (max-width: 1200px) {
 	.answerGroup button.btn {
 		width:45%;	
+	}
+	.challenges .btn.btn-calendar { 
+		float:none;	
 	}
 }
 @media (max-width: 650px) {
@@ -909,11 +925,11 @@ button {
 .calendar-button-container {
 	position: relative;
 }
-
 .calendar-dropdown-menu {
 	position: absolute;
-	left: 0;
-	top: 100%;
+	right: 0;
+	top: 33px;
+	width: 182px;
 	list-style: none outside none;
 	padding: 0;
 	margin: 0;
@@ -921,14 +937,13 @@ button {
 	background-color: #5B799B;
 	color: #ffffff;
 }
-
 .challenges .btn.btn-calendar-dropdown {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-size: 14px;
 	font-weight: 500;
 	font-style: normal;
 	width:100%;
-	padding:5px;
+	padding:6px 12px;
 	color: #ffffff;
 	background-color: #5B799B;
 	border-radius: 0;
@@ -941,8 +956,12 @@ button {
 	-ms-transition: background-color 500ms ease-in;
 	transition: background-color 500ms ease-in;
 }
-
-
+@media (max-width: 1200px) {
+	.calendar-dropdown-menu {
+		right: auto;
+		left:0;
+	}
+}
 /* -------------------------------------- overrides -------------------------------------- */
 .slidetoggle-enter-active {
 	height: 100%;

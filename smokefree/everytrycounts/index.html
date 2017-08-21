@@ -8,7 +8,8 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<title></title>
+<meta name="format-detection" content="telephone=no">
+<title>Every Try Counts</title>
 <!-- Disable tap highlight on IE -->
 <meta name="msapplication-tap-highlight" content="no">
 <!-- Google Fonts, Muli -->
@@ -222,7 +223,6 @@
 		</div> <!-- /.col-lg-6 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-md-6 col-sm-12">
 			<div id="flipCard">
-
 				<transition-group
 						name="custom-transition-2"
 						enter-class="flipped"
@@ -234,21 +234,27 @@
 							CHALLENGE <span class="challengeCurrent">{{ current_daily_challenge_number }}</span>/<span class="challengeTotal">{{ total_daily_challenges }}</span>
 						</div> <!-- /#tipTicker -->
 						<div class="challengeTitle">
-							<h3>{{ challenge.node.title }}</h3>
-							<div class="calendar-button-container">
-								<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index">Add to My Calendar</span></button>
-								<ul class="calendar-dropdown-menu" v-if="show_calendar_dropdown" role="menu" v-bind:aria-labelledby="'calendarAdd' + index">
-									<li>
-										<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
-									</li>
-									<li>
-										<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
-									</li>
-									<li>
-										<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
-									</li>
-								</ul>
-							</div>
+							<div class="row">	
+								<div class="col-lg-6">
+									<h3>{{ challenge.node.title }}</h3>
+								</div> <!-- /.col-lg-6 -->
+								<div class="col-lg-6">
+									<div class="calendar-button-container">
+										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index">Add to My Calendar</span></button>
+										<ul class="calendar-dropdown-menu" v-if="show_calendar_dropdown" role="menu" v-bind:aria-labelledby="'calendarAdd' + index">
+											<li>
+												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
+											</li>
+											<li>
+												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
+											</li>
+											<li>
+												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
+											</li>
+										</ul>
+									</div> <!-- /.calendar-button-container -->
+								</div> <!-- /.col-lg-6 -->
+							</div> <!-- /.row -->	
 						</div> <!-- /.challengeTitle -->
 						<p class="challengeContent">{{ challenge.node.field_challenge_description }}</p>
 						<button class="btn btn-challenge" v-on:click="next_daily_challenge">{{ daily_challenge_next_button_text }}</button>
@@ -310,7 +316,7 @@
 				<li><a href="https://smokefree.gov/help-others-quit">Help Others Quit</a></li>
 				<li><a href="https://smokefree.gov/about-smokefree/">About Smokefree.gov</a></li>
 			</ul>
-			<p class="phone">Call 877-44U-QUIT (877-448-7848)</p>
+			<p class="phone">Call <a href="tel:+01-877-448-7848" rel="nofollow">877-44U-QUIT (877-448-7848)</a></p>
 			<p>The National Cancer Institute’s trained counselors provide information and support for quitting in English and Spanish. Call Monday through Friday 8:00 a.m. to 8:00 p.m. Eastern time.</p>
 		</div> <!-- /.col-lg-6 /.col-md-7 /.col-sm-10 /.col-xs-12 -->
 	</div> <!-- /.row /.moreHelp -->
