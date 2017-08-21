@@ -40,7 +40,7 @@ h3 {
 }
 .challenges h3 {
 	width:50%;
-	min-height:64px;
+	min-height:40px;
 }
 .programBox .titleArea h3 {
 	text-align: center;
@@ -474,7 +474,7 @@ p.quiz-results-message {
 }
 /* -------------------------------------- Challenges -------------------------------------- */
 .challengeTitle {
-	margin:20px 0px;
+	margin:10px 0px;
 }
 .challengeContent {
 	min-height:120px;
@@ -773,7 +773,7 @@ button {
 	background-color: #ffffff;
 	border-radius: 0;
 	border:1px solid #3f628b;
-	float:right;
+	float: none;
 	display: table;
 }
 .btn-calendar .calendarIcon {
@@ -904,6 +904,45 @@ button {
 	font-size:14px;
 	margin-bottom:6px;
 }
+
+/* ------------------------------------ calendar dropdown ----------------------------*/
+.calendar-button-container {
+	position: relative;
+}
+
+.calendar-dropdown-menu {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	list-style: none outside none;
+	padding: 0;
+	margin: 0;
+	z-index: 1000;
+	background-color: #5B799B;
+	color: #ffffff;
+}
+
+.challenges .btn.btn-calendar-dropdown {
+	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 14px;
+	font-weight: 500;
+	font-style: normal;
+	width:100%;
+	padding:5px;
+	color: #ffffff;
+	background-color: #5B799B;
+	border-radius: 0;
+	text-align: left;
+}
+.challenges .btn.btn-calendar-dropdown:focus,
+.challenges .btn.btn-calendar-dropdown:hover {
+	background-color:#3e5269;
+	-webkit-transition: background-color 500ms ease-in;
+	-ms-transition: background-color 500ms ease-in;
+	transition: background-color 500ms ease-in;
+}
+
+
 /* -------------------------------------- overrides -------------------------------------- */
 .slidetoggle-enter-active {
 	height: 100%;
@@ -918,4 +957,5 @@ button {
 }
 .programBox {
 	overflow: hidden;
-} 
+}
+
