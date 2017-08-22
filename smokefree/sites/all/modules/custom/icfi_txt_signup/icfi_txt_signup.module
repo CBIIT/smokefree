@@ -50,8 +50,8 @@ function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
   // account per Kiran Muppidi.
   if (strpos($target['url'], 'secure.mcommons.com') !== FALSE) {
 
-     $mCDoublePost = new MCDoublePost($payload, $target);
-     $mCDoublePost->pre_post();
+     //$mCDoublePost = new MCDoublePost($payload, $target);
+     //$mCDoublePost->pre_post();
   }
   sleep(2);
   // In cases where there are two questions that need the same key, use

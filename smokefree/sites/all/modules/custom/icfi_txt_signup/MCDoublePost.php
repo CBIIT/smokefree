@@ -58,9 +58,6 @@ Class MCDoublePost {
 
     $request = $this->make_request($this->target['url'], $drupal_http_request_options);
 
-    watchdog('webform_remote_post', 'Debug : %node_title', array('%node_title' => $request), WATCHDOG_INFO, NULL);
-
-
     // Log any errors.
     $this->log_error($request->code, $this->target['url']);
 
@@ -156,7 +153,7 @@ Class MCDoublePost {
   function get_minimized_payload() {
     if (is_array($this->payload) && !empty($this->payload)) {
       $fields_to_keep = array(
-      //  'opt_in_path',
+        'opt_in_path',
         'person_phone',
       );
       $filtered_array = array();
