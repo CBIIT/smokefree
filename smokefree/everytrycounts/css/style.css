@@ -40,7 +40,7 @@ h3 {
 }
 .challenges h3 {
 	width:50%;
-	min-height:64px;
+	min-height:40px;
 }
 .programBox .titleArea h3 {
 	text-align: center;
@@ -69,55 +69,6 @@ ul>li {
 p.quiz-results-message {
 	text-align: center;
 	font-size: 24px;
-}
-@media (max-width: 650px) {
-	h2 {
-		font-size: 46px;
-		line-height: 44px;
-	}
-	.challenges h3 {
-		width:100%;
-		min-height: 20px;
-	}
-}
-@media (max-width: 500px) {
-	h2 {
-		font-size: 40px;
-		line-height: 36px;
-	}
-}
-@media (max-width: 430px) {
-	h2 {
-		font-size: 38px;
-		line-height: 32px;
-	}
-	p,
-	ul>li {
-		font-size: 18px;
-		line-height: 26px;
-	}
-}
-@media (max-width: 390px) {
-	h2 {
-		font-size: 36px;
-		line-height: 30px;
-	}
-	p,
-	ul>li {
-		font-size: 17px;
-		line-height: 24px;
-	}
-}
-@media (max-width: 370px) {
-	h2 {
-		font-size: 32px;
-		line-height: 28px;
-	}
-	p,
-	ul>li {
-		font-size: 16px;
-		line-height: 22px;
-	}
 }
 .bold {
 	font-weight:900;
@@ -169,6 +120,60 @@ p.quiz-results-message {
 	}
 	.moreHelp p {
 		padding-right:0px;	
+	}
+}
+@media (max-width: 650px) {
+	h2,
+	.moreHelp h2 {
+		font-size: 46px;
+		line-height: 44px;
+	}
+	.challenges h3 {
+		width:100%;
+		min-height: 20px;
+	}
+}
+@media (max-width: 500px) {
+	h2,
+	.moreHelp h2 {
+		font-size: 40px;
+		line-height: 36px;
+	}
+}
+@media (max-width: 430px) {
+	h2,
+	.moreHelp h2 {
+		font-size: 38px;
+		line-height: 32px;
+	}
+	p,
+	ul>li {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+@media (max-width: 390px) {
+	h2,
+	.moreHelp h2 {
+		font-size: 36px;
+		line-height: 30px;
+	}
+	p,
+	ul>li {
+		font-size: 17px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 370px) {
+	h2,
+	.moreHelp h2 {
+		font-size: 32px;
+		line-height: 28px;
+	}
+	p,
+	ul>li {
+		font-size: 16px;
+		line-height: 22px;
 	}
 }
 /* -------------------------------------- Rows -------------------------------------- */
@@ -469,7 +474,7 @@ p.quiz-results-message {
 }
 /* -------------------------------------- Challenges -------------------------------------- */
 .challengeTitle {
-	margin:20px 0px;
+	margin:10px 0px;
 }
 .challengeContent {
 	min-height:120px;
@@ -768,7 +773,7 @@ button {
 	background-color: #ffffff;
 	border-radius: 0;
 	border:1px solid #3f628b;
-	float:right;
+	float: none;
 	display: table;
 }
 .btn-calendar .calendarIcon {
@@ -899,6 +904,45 @@ button {
 	font-size:14px;
 	margin-bottom:6px;
 }
+
+/* ------------------------------------ calendar dropdown ----------------------------*/
+.calendar-button-container {
+	position: relative;
+}
+
+.calendar-dropdown-menu {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	list-style: none outside none;
+	padding: 0;
+	margin: 0;
+	z-index: 1000;
+	background-color: #5B799B;
+	color: #ffffff;
+}
+
+.challenges .btn.btn-calendar-dropdown {
+	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 14px;
+	font-weight: 500;
+	font-style: normal;
+	width:100%;
+	padding:5px;
+	color: #ffffff;
+	background-color: #5B799B;
+	border-radius: 0;
+	text-align: left;
+}
+.challenges .btn.btn-calendar-dropdown:focus,
+.challenges .btn.btn-calendar-dropdown:hover {
+	background-color:#3e5269;
+	-webkit-transition: background-color 500ms ease-in;
+	-ms-transition: background-color 500ms ease-in;
+	transition: background-color 500ms ease-in;
+}
+
+
 /* -------------------------------------- overrides -------------------------------------- */
 .slidetoggle-enter-active {
 	height: 100%;
@@ -913,4 +957,5 @@ button {
 }
 .programBox {
 	overflow: hidden;
-} 
+}
+
