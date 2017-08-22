@@ -58,6 +58,8 @@ Class MCDoublePost {
 
     $request = $this->make_request($this->target['url'], $drupal_http_request_options);
 
+    var_dump($request);
+
     // Log any errors.
     $this->log_error($request->code, $this->target['url']);
 
