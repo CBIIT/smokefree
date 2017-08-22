@@ -163,6 +163,9 @@ function webform_remote_post_webform_submission_insert($node, $submission) {
 
     // Where the magic happens:
     $request = drupal_http_request($target['url'], $drupal_http_request_options);
+
+    watchdog('webform_remote_post', 'Debug : %node_title', array('%node_title' => $request), WATCHDOG_INFO, NULL);
+
     // Log any errors.
     if (isset($request->code) && !in_array($request->code, $benign_reponse_codes)) {
       $log_msg = 'A remote (%type) post to %url by webform node ID %id returned a \'%code\' code, which is a different HTTP response code than expected. Please make sure that the remote post URL is correct in the Remote Posts webform settings, and that the post was received in the remote system.';
