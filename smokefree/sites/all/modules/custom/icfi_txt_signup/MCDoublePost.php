@@ -58,7 +58,12 @@ Class MCDoublePost {
 
     $request = $this->make_request($this->target['url'], $drupal_http_request_options);
 
-    var_dump($request);
+    watchdog(
+      'webform_remote_post','Debug %request',
+      array(
+        '%request'   => $request,
+      ),
+      WATCHDOG_WARNING);
 
     // Log any errors.
     $this->log_error($request->code, $this->target['url']);
