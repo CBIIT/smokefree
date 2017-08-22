@@ -1,0 +1,7 @@
+// Over riding buggy code see SF-530
+
+@media only screen and (max-device-width : 767px) {
+    .node-type-section-landing .teen-navigation-container .hidden-xs {
+        display: none !important;
+    }
+}
