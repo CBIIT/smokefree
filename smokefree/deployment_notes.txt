@@ -1,6 +1,12 @@
 
 Smokefree 1.3 2017-08-10
 -----------------------
+- SF-527 Fix for footer repeating in satelites
+- SF-481 mhealth blog
+- SF-512 Adding new fields to text forms
+
+Smokefree 1.3 2017-08-10
+-----------------------
 - SF-499 Adding canonical links back to all pages
 - SF-529 Fixing age dropdown on teen signup page
 
