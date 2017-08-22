@@ -160,7 +160,7 @@ Class MCDoublePost {
   function get_minimized_payload() {
     if (is_array($this->payload) && !empty($this->payload)) {
       $fields_to_keep = array(
-        'opt_in_path',
+      //  'opt_in_path',
         'person_phone',
       );
       $filtered_array = array();
