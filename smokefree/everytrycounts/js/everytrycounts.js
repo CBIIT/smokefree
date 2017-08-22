@@ -10,7 +10,6 @@ var mobile_commons_url = "https://secure.mcommons.com/profiles/join";
 var text_signup_confirmation_message = "Check your phone for a text message from 47848. Respond to the questions to complete enrollment.";
 var text_signup_error_message = "Unable to process your request at this time. Please try again later.";
 
-
 fallback.load({
     global_css: 'css/bootstrap.min.css',
     page_css: 'css/style.css',
@@ -230,16 +229,16 @@ fallback.load({
                     window.open(url);
                     vm.show_calendar_dropdown = false;
                 },
-                documentClick(e){
+                documentClick: function(e) {
                     if (!$(e.target).closest('.calendar-button-container').length) {
-                        vm.show_calendar_dropdown=false
+                        vm.show_calendar_dropdown=false;
                     }
                 }
             },
-            created () {
+            created: function() {
                 document.addEventListener('click', this.documentClick)
             },
-            destroyed () {
+            destroyed: function() {
                 // important to clean up!!
                 document.removeEventListener('click', this.documentClick)
             }
