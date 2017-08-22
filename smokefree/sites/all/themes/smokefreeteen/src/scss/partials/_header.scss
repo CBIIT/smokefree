@@ -178,7 +178,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
 
 
 /* iPads (portrait and landscape) ----------- */
-@media screen and (min-width : 768px) and (max-width : 1024px) {
+@media screen and (min-width : 769px) and (max-width : 1024px) {
   .hero-img{
     background-image: url(../images/teen-hero-tablet-1.png);
   }
@@ -212,6 +212,42 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
     background-image: none;
   }
   .hero-img.hero-2{
+    background-image: none;
+  }
+
+  .hero-img.hero-3{
+    background-image: none;
+  }
+
+  .hero-img.hero-4{
+    background-image: none;
+  }
+
+  .hero-img.hero-5{
+    background-image: none;
+  }
+
+  .hero-img.hero-6{
+    background-image: none;
+  }
+
+  .hero-img.hero-7{
+    background-image: none;
+  }
+
+  .hero-img.hero-8{
+    background-image: none;
+  }
+
+  .hero-img.hero-9{
+    background-image: none;
+  }
+
+  .hero-img.hero-10{
+    background-image: none;
+  }
+
+  .hero-img.hero-11{
     background-image: none;
   }
 }
