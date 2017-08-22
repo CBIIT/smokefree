@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+Smokefree 1.3 2017-08-10
+-----------------------
+- SF-527 Fix for footer repeating in satelites
+- SF-481 mhealth blog
+- SF-512 Adding new fields to text forms
+>>>>>>> SB-544
 
 Smokefree 1.3 2017-08-10
 -----------------------
