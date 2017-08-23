@@ -284,7 +284,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
   background-color: #333 !important;
 }
 .mobile-search-bar {
-  margin-top: 25px;
+  margin-top: 80px;
   border-bottom: #ADADAD 1px solid;
   .search-bar-form {
     input[type=text] {
@@ -296,4 +296,9 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
       margin-right: -8%;
     }
   }
+}
+
+//homepage
+.smokefreegov-teen .mobile-search-bar {
+  margin-top: 25px !important;
 }
