@@ -141,4 +141,12 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
 	{
 		throw new PendingException();
 	}
+
+  /**
+   * @Given /^I wait for "([^"]*)" seconds$/
+   */
+  public function iWaitForSeconds($arg1) {
+    $this->getSession()->wait(intval($arg1) * 1000);
+  }
+
 }
