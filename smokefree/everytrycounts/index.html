@@ -64,9 +64,10 @@
 						<p>Get a new challenge at 9 a.m. every day for a week to build skills without quitting.</p>
 						<p class="example">Try to resist 2 cigarette cravings today for 10 minutes each. Go for a walk or call someone. Cravings usually last only 5 to 10 minutes.</p>
 						<div class="input-group" v-if="show_program_challenge_submit==true">
-						   <input type="number" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_challenge_phone" id="programchallengephone" name="programchallengephone" />
+						   <input class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_challenge_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programchallengephone') }" id="programchallengephone" name="programchallengephone" />
+							<span v-show="errors.has('programchallengephone')" class="help is-danger">{{ errors.first('programchallengephone') }}</span>
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_text_signup(program_challenge_opt_in_path, program_challenge_phone); show_program_challenge_submit = false">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else>
@@ -85,9 +86,10 @@
 						<p>Practice quitting for 1, 3, or 5 days at a time and build up to quitting for good.</p>
 						<p class="example">You're 24 hours into your practice! That is a MAJOR milestone! Be sure to reward yourself. Say, do, or get something nice to celebrate your success.</p>
 						<div class="input-group" v-if="show_program_practice_submit==true">
-						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_practice_phone" id="programpracticephone" name="programpracticephone" />
-						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_text_signup(program_practice_opt_in_path, program_practice_phone); show_program_practice_submit = false">Sign Up</button>
+						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_practice_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programpracticephone') }" id="programpracticephone" name="programpracticephone" />
+							<span v-show="errors.has('programpracticephone')" class="help is-danger">{{ errors.first('programpracticephone') }}</span>
+							<span class="input-group-btn">
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else>
@@ -105,12 +107,16 @@
 					<div class="programContent">
 						<p>Become &#8212; and stay &#8212; smokefree with 6-8 weeks of support.</p>
 						<p class="example">Cravings will get weaker and less frequent with every day that you don't smoke. What's your craving level? Reply: HI, MED, or LOW</p>
-						<div class="input-group">
-						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_quit_phone" id="programquitphone" name="programquitphone" />
-						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="send_text_signup(program_quit_opt_in_path, program_quit_phone); show_program_quit_submit = false">Sign Up</button>
+						<div class="input-group" v-if="show_program_quit_submit==true">
+						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_quit_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programquitphone') }" id="programquitphone" name="programquitphone" />
+							<span v-show="errors.has('programquitphone')" class="help is-danger">{{ errors.first('programquitphone') }}</span>
+							<span class="input-group-btn">
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
+						<div class="text_confirmation" v-else>
+							{{ program_quit_confirmation }}
+						</div>
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
 					</div> <!-- /.programContent -->
 				</div> <!-- /.programBox /#programQuit -->
