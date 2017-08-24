@@ -18,17 +18,33 @@ fallback.load({
         '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
         'js/jquery-1.12.4.min.js'
     ],
-    'vue': [
+    'Vue': [
         '//unpkg.com/vue@2.4.2',
         'js/vue.min.js'
     ],
+    'VeeValidate': [
+        '//unpkg.com/vee-validate@2.0.0-rc.7',
+        'js/vee-validate-master/dist/vee-validate.min.js'
+    ]
 }, {
     shim: {
         'bootstrap': [
             'js/bootstrap.min.js'
         ],
+
     },
     callback: function(success, failed) {
+        Vue.use(VeeValidate);
+        const dictionary = {
+            en: {
+                messages: {
+                    numeric: function () {
+                        return "Please enter numerals (0-9) only."
+                    }
+                }
+            }
+        };
+        VeeValidate.Validator.updateDictionary(dictionary);
         var vm = new Vue({
             el: "#app",
             data: {
@@ -61,6 +77,9 @@ fallback.load({
                 program_practice_phone: "",
                 program_quit_phone: "",
                 show_calendar_dropdown: false,
+                program_challenge_opt_in_path: program_challenge_opt_in_path,
+                program_practice_opt_in_path: program_practice_opt_in_path,
+                program_quit_opt_in_path: program_quit_opt_in_path
             },
             mounted: function () {
                 $.ajax({
@@ -70,7 +89,6 @@ fallback.load({
                         vm.all_quiz_questions = data.nodes;
                         vm.total_quiz_questions = vm.all_quiz_questions.length;
                         vm.current_quiz_question_number = 1;
-                        console.log(vm.all_quiz_questions);
                     },
                     error: function (error) {
                         console.log(JSON.stringify(error));
@@ -103,7 +121,6 @@ fallback.load({
                     method: 'GET',
                     success: function (data) {
                         vm.all_crave_tips = data.nodes;
-                        console.log(vm.all_crave_tips[0].node.field_crave_tip_image.src);
                         vm.total_crave_tips = vm.all_crave_tips.length;
                         vm.current_crave_tip_number = 1;
                     },
@@ -171,42 +188,55 @@ fallback.load({
                     this.quiz_next_button_text = "next";
                 },
                 send_text_signup: function(opt_in, phone_number) {
-                    var request = $.ajax({
-                        url: mobile_commons_url,
-                        type: "POST",
-                        data: {
+                    if (phone_number.length > 0 && !isNaN(phone_number)) {
+                        switch (opt_in) {
+                            case vm.program_challenge_opt_in_path:
+                                vm.show_program_challenge_submit = false;
+                                break;
+                            case vm.program_practice_opt_in_path:
+                                vm.show_program_practice_submit = false;
+                                break;
+                            case vm.program_quit_opt_in_path:
+                                vm.show_program_quit_submit = false;
+                                break;
+                        }
+                        var request = $.ajax({
+                            url: mobile_commons_url,
+                            type: "POST",
+                            data: {
+                                opt_in_path: opt_in,
+                                person_phone: phone_number
+                            },
                             opt_in_path: opt_in,
-                            person_phone: phone_number
-                        },
-                        opt_in_path: opt_in,
-                        dataType: "html"
-                    });
-                    request.done(function(msg) {
-                        switch (this.opt_in_path) {
-                            case program_challenge_opt_in_path:
-                                vm.program_challenge_confirmation = text_signup_confirmation_message;
-                                break;
-                            case program_practice_opt_in_path:
-                                vm.program_practice_confirmation = text_signup_confirmation_message;
-                                break;
-                            case program_quit_opt_in_path:
-                                vm.program_quit_confirmation = text_signup_confirmation_message;
-                                break;
-                        }
-                    });
-                    request.fail(function(jqXHR, textStatus) {
-                        switch (this.opt_in_path) {
-                            case program_challenge_opt_in_path:
-                                vm.program_challenge_confirmation = text_signup_error_message;
-                                break;
-                            case program_practice_opt_in_path:
-                                vm.program_practice_confirmation = text_signup_error_message;
-                                break;
-                            case program_quit_opt_in_path:
-                                vm.program_quit_confirmation = text_signup_error_message;
-                                break;
-                        }
-                    });
+                            dataType: "html"
+                        });
+                        request.done(function(msg) {
+                            switch (this.opt_in_path) {
+                                case vm.program_challenge_opt_in_path:
+                                    vm.program_challenge_confirmation = text_signup_confirmation_message;
+                                    break;
+                                case vm.program_practice_opt_in_path:
+                                    vm.program_practice_confirmation = text_signup_confirmation_message;
+                                    break;
+                                case vm.program_quit_opt_in_path:
+                                    vm.program_quit_confirmation = text_signup_confirmation_message;
+                                    break;
+                            }
+                        });
+                        request.fail(function(jqXHR, textStatus) {
+                            switch (this.opt_in_path) {
+                                case program_challenge_opt_in_path:
+                                    vm.program_challenge_confirmation = text_signup_error_message;
+                                    break;
+                                case program_practice_opt_in_path:
+                                    vm.program_practice_confirmation = text_signup_error_message;
+                                    break;
+                                case program_quit_opt_in_path:
+                                    vm.program_quit_confirmation = text_signup_error_message;
+                                    break;
+                            }
+                        });
+                    }
                 },
                 _addEvent: function(event, service, title, description) {
 
