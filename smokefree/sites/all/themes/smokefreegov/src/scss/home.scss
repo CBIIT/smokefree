@@ -6,7 +6,11 @@
 
     a {text-decoration:none;}
 
-	#home-view {
+    .view-home img.img-responsive {
+      padding-bottom: 0 !important;
+    }
+
+    #home-view {
 		width: 100%;
 	}
 
@@ -197,7 +201,7 @@
         display: block;
         margin:auto;
         height: 170px;
-        width: 170px;
+        width: 170px !important;
     }
 
     .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links {
@@ -716,7 +720,7 @@
 
     }
 
-    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a {
+    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a a {
 
         position: absolute !important;
         top: 50% !important;
@@ -828,7 +832,7 @@
 
     }
 
-    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a {
+    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a a {
 
         position: absolute !important;
         top: 50% !important;
@@ -926,7 +930,7 @@
     }
 
     .field-collection-item-field-includes-2, .field-name-field-includes-text {
-        padding: 2%;
+        padding: 5%;
     }
 }
 
@@ -1032,7 +1036,7 @@
 
     }
 
-    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a {
+    .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a a {
 
         position: absolute !important;
         top: 50% !important;

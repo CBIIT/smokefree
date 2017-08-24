@@ -4,7 +4,24 @@
  * The primary PHP file for this theme.
  */
 
+/**
+ * Fixes a bug in the seckit module.
+ * Replaces 'Allow-From:' with the correct value 'ALLOW-FROM'.
+ */
+
+function _seckit_fix() {
+  $existing_header = drupal_get_http_header('X-Frame-Options');
+  if (!empty($existing_header) && strpos($existing_header, 'Allow-From:') !== FALSE) {
+    $new_header = str_replace('Allow-From:', 'ALLOW-FROM', $existing_header);
+    header_remove('X-Frame-Options');
+    drupal_add_http_header('X-Frame-Options', $new_header);
+  }
+}
+
+
 function smokefreegov_preprocess_page(&$variables) {
+  _seckit_fix();
+
 
   if (isset($variables['node']->type)) {
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
