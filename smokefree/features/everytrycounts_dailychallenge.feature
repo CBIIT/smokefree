@@ -19,6 +19,7 @@ Scenario: User looks at the Daily Challenges section of EveryTryCounts.
 
 @javascript
 Scenario: User scrolls through the Daily Challenges section of EveryTryCounts.
+  Given I wait for "2" seconds
   Given I press "NEXT CHALLENGE"
   And I wait for "2" seconds
   Then I should see "CHALLENGE 2/7" in the "#flipCard" element
@@ -47,5 +48,12 @@ Scenario: User scrolls through the Daily Challenges section of EveryTryCounts.
   And I wait for "2" seconds
   Then I should see "CHALLENGE 6/7" in the "#flipCard" element
   And I should see "Add to My Calendar" in the "#flipCard" element
-  And I should see "Stay Hydrated" in the "#flipCard" element
-  And I should see "Drink water the next time a craving hits, instead of smoking a cigarette." in the "#flipCard" element
+  And I should see "Visualize Your Triggers" in the "#flipCard" element
+  And I should see "What is one trigger that is particularly hard for you? Visualize yourself overcoming it to become smokefree." in the "#flipCard" element
+  Given I press "NEXT CHALLENGE"
+  And I wait for "2" seconds
+  Then I should see "CHALLENGE 7/7" in the "#flipCard" element
+  And I should see "Add to My Calendar" in the "#flipCard" element
+  And I should see "Don't Miss Out" in the "#flipCard" element
+  And I should see "Think of social situations where you missed out by smoking. Tell yourself \"it can wait,\" when you get an urge today around other people." in the "#flipCard" element
+  And I should see the button "START OVER"
