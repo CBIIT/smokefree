@@ -13,3 +13,12 @@
         }
     }
 }
+
+@media only screen and (min-device-width: 414px) {
+    .main-container.container, .container.margin-top-lg {
+        margin-top: 80px !important;
+    }
+    .smokefreegov-teen .main-container.container {
+        margin-top: 0px !important;
+    }
+}
