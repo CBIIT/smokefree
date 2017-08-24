@@ -25,6 +25,9 @@ fallback.load({
     'VeeValidate': [
         '//unpkg.com/vee-validate@2.0.0-rc.7',
         'js/vee-validate-master/dist/vee-validate.min.js'
+    ],
+    'Promise': [
+        'js/es6-promise-polyfill-master/promise.min.js'
     ]
 }, {
     shim: {
