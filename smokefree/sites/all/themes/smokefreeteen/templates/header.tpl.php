@@ -1,4 +1,14 @@
 <div class="container-page">
+    <nav class="scrollmenu">
+        <div class="container">
+            <a href="https://www.smokefree.gov" id="smokefree-gov"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-gov.png" alt="smokefree-gov"></a>
+            <a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-vet.png" alt="smokefree-vet"></a>
+            <a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-women.png" alt="smokefree-women"></a>
+            <a href="/" id="smokefree-teen" class="active"><span><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-teen.png" alt="smokefree-teen"></span></a>
+            <a href="https://espanol.smokefree.gov" id="smokefree-espanol"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-espanol.png" alt="smokefree-espanol"></a>
+            <a href="https://60plus.smokefree.gov" id="smokefree-60plus"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-60+.png" alt="smokefree-60+"></a>
+        </div>
+    </nav>
   <?php if (is_teen_homepage()): ?>
       <div class="hero-img <?php print $random_hero_class ?>">
         <div class="container">

@@ -5,3 +5,27 @@
         display: none !important;
     }
 }
+
+// fixes for CSS issues in the parent theme
+
+.node-type-section-landing .scrollmenu .container {
+    background-color: #000000;
+    width: auto;
+}
+
+.node-type-section-landing  .container-page .col-xs-11.teen-homepage-navigation {
+  width: 91.66666667% !important;
+}
+
+@media only screen and (min-device-width : 767px)and (max-device-width : 992px) {
+    .node-type-section-landing .block .view-read-more-links .views-row {
+        width: 44% !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .node-type-section-landing .scrollmenu .container {
+      width: 1170px !important;
+  }
+}
+
