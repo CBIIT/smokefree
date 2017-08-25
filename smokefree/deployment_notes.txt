@@ -1,3 +1,9 @@
+Smokefree 1.4 2017-08-25
+-----------------------
+- SF-542 Fix for missing images
+- SF-546 Adding linkchecker module
+- SF-511 Veterans homepage styling fixes
+
 Smokefree HOTFIX 2017-08-23
 - SF-544: Fixing tools and tips on responsive view
 
