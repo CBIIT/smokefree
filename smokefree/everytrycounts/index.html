@@ -326,7 +326,23 @@
 			<p>The National Cancer Institute’s trained counselors provide information and support for quitting in English and Spanish. Call Monday through Friday 8:00 a.m. to 8:00 p.m. Eastern time.</p>
 		</div> <!-- /.col-lg-6 /.col-md-7 /.col-sm-10 /.col-xs-12 -->
 	</div> <!-- /.row /.moreHelp -->
-</div> <!-- /.container -->		
+</div> <!-- /.container -->
+
+	<div id='popupContact'>
+		<a id='popupContactClose'>X</a><br />
+		<h1 class='popup-message-title'>Chat Online</h1>
+		<div id='popup-message-content'>
+			<div class="col-sm-5"><img class="img-responsive" src="/sites/all/themes/smokefreegov/images/chat-woman-icon.png"></div>
+			<div class="col-sm-7"><p>Would you like to speak to an NCI LiveHelp information specialist about quitting smoking?</p></div>
+			<div class="col-sm-12"><p id="cheat_button">&nbsp;</p>
+				<form action="https://livehelp.cancer.gov/app/chat/chat_landing" id="bar" method="POST">
+					<input name="_icf_22" style="display: none;" type="text" value="91" />
+					<button type="submit">Quit Smoking</button></form>
+			</div>
+		</div>
+	</div>
+	<div id='backgroundPopup'></div>
+
 </footer>
 </body>
 </html>
