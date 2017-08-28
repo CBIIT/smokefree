@@ -28,13 +28,16 @@ fallback.load({
     ],
     'Promise': [
         'js/es6-promise-polyfill-master/promise.min.js'
-    ]
+    ],
+    '$.fn.popup': [
+        'js/popup.js'
+    ],
 }, {
     shim: {
         'bootstrap': [
             'js/bootstrap.min.js'
         ],
-
+        '$.fn.popup': ['_', 'jQuery'],
     },
     callback: function(success, failed) {
         Vue.use(VeeValidate);
@@ -275,6 +278,11 @@ fallback.load({
                 // important to clean up!!
                 document.removeEventListener('click', this.documentClick)
             }
+        });
+        //Livechat redirect
+        $("#live-chat-bar-link img").click(function() {
+            $("#live-chat-bar-form").submit();
+            //return false;
         });
     }
 });
