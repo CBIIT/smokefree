@@ -480,6 +480,13 @@ p.quiz-results-message {
 		background-image: none;
 	}	
 }
+.question {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	border-top: solid 1px gray;
+}
 /* -------------------------------------- Challenges -------------------------------------- */
 .challengeTitle {
 	margin:10px 0px;
@@ -691,7 +698,7 @@ p.quiz-results-message {
 .whiteBox {
 	background-color: #ffffff;
 	overflow: hidden;
-	min-height:280px;
+	height:300px;
 }
 /* -------------------------------------- buttons -------------------------------------- */
 button {

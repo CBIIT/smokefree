@@ -10,7 +10,7 @@
 var popupStatus = 0;
 
 //Time after page load that the popup should load.
-var trigger_time = 5;
+var trigger_time = 90;
 
 //loading popup with jQuery magic!
 function loadPopup(){
