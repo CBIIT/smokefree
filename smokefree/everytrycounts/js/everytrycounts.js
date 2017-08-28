@@ -279,5 +279,10 @@ fallback.load({
                 document.removeEventListener('click', this.documentClick)
             }
         });
+        //Livechat redirect
+        $("#live-chat-bar-link img").click(function() {
+            $("#live-chat-bar-form").submit();
+            //return false;
+        });
     }
 });
