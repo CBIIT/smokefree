@@ -195,15 +195,18 @@
 				<transition-group
 						name="custom-transition"
 						enter-active-class="animated slideInUp"
+						leave-active-class="animated slideOutUp"
+						tag="div"
+						class="transition"
 				>
-					<div v-for="question, index in all_quiz_questions" v-if="index == current_quiz_question_number - 1 && show_quiz_part=='question'" v-bind:key="index + '_question'" v-bind:class="'question_' + index">
+					<div v-for="question, index in all_quiz_questions" v-if="index == current_quiz_question_number - 1 && show_quiz_part=='question'" v-bind:key="index + '_question'" class="question" v-bind:class="'question_' + index">
 						<p><strong>True or False?</strong> {{ question.node.field_statement }}</p>
 						<div class="answerGroup">
 							<button v-on:click="record_answer" class="btn" id="true">TRUE</button>
 							<button v-on:click="record_answer" class="btn" id="false">FALSE</button>
 						</div>
 					</div>
-					<div v-for="question, index in all_quiz_questions" v-if="index == current_quiz_question_number - 1 && show_quiz_part=='feedback'" v-bind:key="index + '_answer'" v-bind:class="'question_' + index">
+					<div v-for="question, index in all_quiz_questions" v-if="index == current_quiz_question_number - 1 && show_quiz_part=='feedback'" v-bind:key="index + '_answer'" class="question" v-bind:class="'question_' + index">
 						<p v-if="answer_selected == 'true'" class="quiz-feedback">{{ question.node.field_true_feedback }}</p>
 						<p v-else class="quiz-feedback">{{ question.node.field_false_feedback }}</p>
 						<div class="answerGroup">
