@@ -88,6 +88,10 @@ fallback.load({
                 program_quit_opt_in_path: program_quit_opt_in_path
             },
             mounted: function () {
+                /**
+                 * Fetch the true-false quiz questions and store in
+                 * all_quiz_questions; Also populate total_quiz_questions.
+                 */
                 $.ajax({
                     url: quiz_questions_path + '/' + quiz_title,
                     method: 'GET',
@@ -100,6 +104,10 @@ fallback.load({
                         console.log(JSON.stringify(error));
                     }
                 });
+                /**
+                 * Fetch the true-false quiz responses (messages for various
+                 * amount correct) and store in all_quiz_responses.
+                 */
                 $.ajax({
                     url: quiz_answers_path + '/' + quiz_title,
                     method: 'GET',
@@ -110,6 +118,10 @@ fallback.load({
                         console.log(JSON.stringify(error));
                     }
                 });
+                /**
+                 * Fetch Daily Challenges and store in all_daily_challenges;
+                 * also populate total_daily_challenges.
+                 */
                 $.ajax({
                     url: daily_challenges_path,
                     method: 'GET',
@@ -122,6 +134,10 @@ fallback.load({
                         console.log(JSON.stringify(error));
                     }
                 });
+                /**
+                 * Fetch all crave tips and store in all_crave_tips; also
+                 * populate total_crave_tips.
+                 */
                 $.ajax({
                     url: crave_tips_path,
                     method: 'GET',
@@ -136,6 +152,13 @@ fallback.load({
                 });
             },
             methods: {
+                /**
+                 * When user selects true of false, store the answer in
+                 * answer_selected and increment correct_answers if correct.
+                 *
+                 * @param e
+                 *    The button press event.
+                 */
                 record_answer: function(e) {
                     btn = e.target || e.srcElement;
                     this.answer_selected = btn.id;
@@ -144,6 +167,11 @@ fallback.load({
                     }
                     this.show_quiz_part="feedback";
                 },
+                /**
+                 * User moves to next true/false question. Simply increment
+                 * current_quiz_question_number unless it is the end of quiz- if
+                 * so display response that matches number correct.
+                 */
                 next_quiz_question: function () {
                     this.answer_selected = "";
                     if (this.current_quiz_question_number < this.total_quiz_questions) {
@@ -161,6 +189,11 @@ fallback.load({
                     }
                     this.quiz_next_button_text = this.current_quiz_question_number == this.total_quiz_questions ? "RESULTS" : "Next";
                 },
+                /**
+                 * User moves to next daily challenge. Simply increment
+                 * current_daily_challenge_number unless it is the last one- if
+                 * so, set current challenge to 1 and change button text.
+                 */
                 next_daily_challenge: function() {
                     if (this.current_daily_challenge_number < this.total_daily_challenges) {
                         this.current_daily_challenge_number++;
@@ -170,7 +203,12 @@ fallback.load({
                     }
                     this.daily_challenge_next_button_text = this.current_daily_challenge_number == this.total_daily_challenges ? "START OVER" : "NEXT CHALLENGE";
                 },
-                next_crave_tip: function(e) {
+                /**
+                 * User moves to next crave tip. Simply increment
+                 * current_crave_tip_number unless it is the last crave tip. If
+                 * so, set current crave tip to 1.
+                 */
+                next_crave_tip: function() {
                     if (this.current_crave_tip_number < this.total_crave_tips) {
                         this.current_crave_tip_number++;
                     }
@@ -178,7 +216,12 @@ fallback.load({
                         this.current_crave_tip_number = 1;
                     }
                 },
-                previous_crave_tip: function(e) {
+                /**
+                 * User moves to previous crave tip. Simpy decrement
+                 * current_crave_tip_number unless it is the first crave tip. If
+                 * so, set current crave tip back to the total number of tips.
+                 */
+                previous_crave_tip: function() {
                     if (this.current_crave_tip_number > 1) {
                         this.current_crave_tip_number--;
                     }
@@ -186,6 +229,9 @@ fallback.load({
                         this.current_crave_tip_number = this.total_crave_tips;
                     }
                 },
+                /**
+                 * Initialize true/false quiz parameters.
+                 */
                 reset_quiz: function () {
                     this.answer_selected = "";
                     this.current_quiz_question_number = 1;
@@ -193,6 +239,14 @@ fallback.load({
                     this.show_quiz_part="question";
                     this.quiz_next_button_text = "next";
                 },
+                /**
+                 * Posts opt-in and number to mobile commons.
+                 *
+                 * @param opt_in
+                 *   Opt In Key for the appropriate text program.
+                 * @param phone_number
+                 *    Users phone as entered in the input field.
+                 */
                 send_text_signup: function(opt_in, phone_number) {
                     if (phone_number.length > 0 && !isNaN(phone_number)) {
                         switch (opt_in) {
@@ -244,6 +298,20 @@ fallback.load({
                         });
                     }
                 },
+                /**
+                 * Posts to addevent service to which we subscribe.
+                 *
+                 * @param event
+                 *    The click event
+                 * @param service
+                 *    Google, iOS, or Outlook
+                 * @param title
+                 *    Event title
+                 * @param description
+                 *    Event description
+                 *
+                 * @private
+                 */
                 _addEvent: function(event, service, title, description) {
 
                     var today = new Date();
@@ -265,21 +333,34 @@ fallback.load({
                     window.open(url);
                     vm.show_calendar_dropdown = false;
                 },
+                /**
+                 * Calendar dropdown should close with a click anywhere else on
+                 * the document.
+                 *
+                 * @param e
+                 *    The click event.
+                 */
                 documentClick: function(e) {
                     if (!$(e.target).closest('.calendar-button-container').length) {
                         vm.show_calendar_dropdown=false;
                     }
                 }
             },
+            /**
+             * Listens for document clicks to close modal windows.
+             */
             created: function() {
                 document.addEventListener('click', this.documentClick)
             },
+            /**
+             * Stops listening for document clicks.
+             */
             destroyed: function() {
                 // important to clean up!!
                 document.removeEventListener('click', this.documentClick)
             }
         });
-        //Livechat redirect
+        //Livechat bar redirect
         $("#live-chat-bar-link img").click(function() {
             $("#live-chat-bar-form").submit();
             //return false;
