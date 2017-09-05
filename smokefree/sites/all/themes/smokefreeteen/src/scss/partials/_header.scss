@@ -164,7 +164,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
 }
 
 .hero-img.hero-9{
-   background-image: url(../images/teen-hero-9.jpg);
+  background-image: url(../images/teen-hero-9.jpg);
 }
 
 .hero-img.hero-10{
@@ -262,6 +262,11 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
 @media (min-width: 768px) {
   .hero-img .container {
     width: 750px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-img .container {
+    padding-top: 30px;
   }
 }
 @media (min-width: 992px) {
