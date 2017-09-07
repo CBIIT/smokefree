@@ -37,8 +37,6 @@ nav.scrollmenu a:before {
   left: 0;
   right: 0;
   background: #000000;
-  border-left:#ffffff 1px solid;
-  border-right:#ffffff 1px solid;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -58,7 +56,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
+/*
 #smokefree-gov:before {
   border-left:#9ACAE4 1px solid !important;
   border-right:#9ACAE4 1px solid !important;
@@ -73,6 +71,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
   border-left:#FFA9D7 1px solid !important;
   border-right:#FFA9D7 1px solid !important;
 }
+*/
 #smokefree-teen{
   display: inline-block;
   color: white;
@@ -91,10 +90,13 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
   left:-20px;
 }
 #smokefree-teen:before{
+  /*
   border-left:#FFB600 1px solid !important;
   border-right:#FFB600 1px solid !important;
+  */
   background-color: #333333;
 }
+/*
 #smokefree-espanol:before {
   border-left:#FFB09E 1px solid !important;
   border-right:#FFB09E 1px solid !important;
@@ -103,7 +105,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
   border-left:#7EE7FB 1px solid !important;
   border-right:#7EE7FB 1px solid !important;
 }
-
+*/
 /*Hero Image*/
 .hero-img{
   padding-top: 120px;
