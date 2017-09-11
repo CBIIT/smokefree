@@ -8,7 +8,7 @@ var program_practice_opt_in_path = "OP199DA2CFFA269A4F0675809DEB4A75CE";
 var program_quit_opt_in_path = "OPF1DF0FF02128C81EF4A5EF9FF7BD2471";
 var mobile_commons_url = "https://secure.mcommons.com/profiles/join";
 var text_signup_confirmation_message = "Check your phone for a text message from 47848. Respond to the questions to complete enrollment.";
-var text_signup_error_message = "Unable to process your request at this time. Please try again later.";
+var text_signup_error_message = "Unable to process your request at this time. Please <a href='#' onclick='window.location.reload(true);'>reload page</a> to try again.";
 
 fallback.load({
     global_css: 'css/bootstrap.min.css',
