@@ -70,8 +70,7 @@
 								<button class="btn btn-signup" type="button" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
-                        <div class="text_confirmation" v-else>
-                            {{ program_challenge_confirmation }}
+                        <div class="text_confirmation" v-else v-html="program_challenge_confirmation">
                         </div>
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
 					</div> <!-- /.programContent -->
@@ -92,8 +91,7 @@
 								<button class="btn btn-signup" type="button" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
-                        <div class="text_confirmation" v-else>
-                            {{ program_practice_confirmation }}
+                        <div class="text_confirmation" v-else v-html="program_practice_confirmation">
                         </div>
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
 					</div> <!-- /.programContent -->
@@ -114,8 +112,7 @@
 								<button class="btn btn-signup" type="button" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
-						<div class="text_confirmation" v-else>
-							{{ program_quit_confirmation }}
+						<div class="text_confirmation" v-else v-html="program_quit_confirmation">
 						</div>
 						<p class="unsubscribe">To unsubscribe text STOP to 47848</p>
 					</div> <!-- /.programContent -->
