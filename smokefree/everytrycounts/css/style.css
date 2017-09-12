@@ -340,6 +340,23 @@ p.quiz-results-message {
 	left:0;
 	z-index: 99;
 }
+@media (max-width: 490px) {
+	.programs .input-group {
+		width:100%;
+	}
+	.programs .input-group .form-control.input,
+	.programs .input-group .input-group-btn {
+		width:100%;
+		float:none;
+		display:block;
+	}
+	.programs .input-group .input-group-btn .btn-signup {
+		width:100%;
+		display:block;
+		float:none;
+		margin:15px 0px 5px;
+	}
+}
 /* -------------------------------------- Video -------------------------------------- */
 .video {
 	min-height: 365px;
