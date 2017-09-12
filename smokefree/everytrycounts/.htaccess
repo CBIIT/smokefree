@@ -1,5 +1,7 @@
-AuthUserFile /var/www/smokefree/smokefree/everytrycounts/.htpasswd
+<If "req('Host') = 'http://smokefree.dev.icfi.com'">
+AuthUserFile /home/smokefree/public_html/everytrycounts/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Secure Document"
 AuthType Basic
 require user fdauser
+</If>
