@@ -92,6 +92,6 @@ features[field_base][] = field_topics
 features[field_base][] = field_type
 features[field_base][] = field_waypoint
 features[taxonomy][] = article_bundle
-features[taxonomy][] = tags
 features[variable][] = pathauto_taxonomy_term_article_bundle_pattern
+features_exclude[taxonomy][tags] = tags
 project path = sites/all/modules/custom
