@@ -17,7 +17,7 @@
 
 			    <!--Help Row Start-->
 			    <div class="help-row">
-			    <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> | <a href="/build-your-quit-plan">QuitPlan</a> | <a href="/smokefree-text-messaging-programs">SmokefreeTXT</a> | <a href="/mhealthmonitor/blog-index">mHealth Monitor</a>
+			    <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> | <a href="/build-your-quit-plan">QuitPlan</a> | <a href="https://smokefree.gov/smokefree-text-messaging-programs">SmokefreeTXT</a> | <a href="/mhealthmonitor/blog-index">mHealth Monitor</a>
 			    </div>
 			    <!--Help Row End-->
 			    <!--Smokefree Icon Row Start-->
@@ -51,9 +51,9 @@
 			    <!--Smokefree Icon Row End-->
 			    <!--Site Map Row-->
 			    <div class="sitemap-row">
-			    <a href="/">Home</a><span> </span><a href="/about-smokefree/">About Smokefree</a><a href="/health-care-profesionals/">Health Professionals</a>
-			    <a href="http://www.cancer.gov/global/web/policies/foia/">FOIA</a><a href="/privacy-policy/">Privacy</a><a href="/accessibility/">Accessibility</a>
-			    <a href="/viewing-files/">Viewing Files</a><a href="/disclaimer/">Disclaimer</a>
+			    <a href="/">Home</a><span> </span><a href="/about">About Smokefree</a><a href="/health-care-profesionals/">Health Professionals</a>
+			    <a href="http://www.cancer.gov/global/web/policies/foia/">FOIA</a><a href="https://smokefree.gov/privacy-policy/">Privacy</a><a href="https://smokefree.gov/accessibility/">Accessibility</a>
+			    <a href="https://smokefree.gov/viewing-files/">Viewing Files</a><a href="https://smokefree.gov/disclaimer/">Disclaimer</a>
 			    </div>
 
 			    <div class="sitemap-row">
