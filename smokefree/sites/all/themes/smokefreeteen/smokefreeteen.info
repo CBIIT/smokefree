@@ -34,3 +34,6 @@ stylesheets[all][] = dist/css/teenstyle.css
 ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'dist/js/508-fixes.js'
+scripts[] = js/sticky-nav.js
+scripts[] = js/footer-fix.js
+scripts[] = js/caurosel-slide.js

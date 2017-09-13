@@ -1,0 +1,262 @@
+/*btn definition*/
+.teen-navigation-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent !important;
+  border-radius: 4px;
+  height: auto;
+  float: none;
+  background: none;
+  position: relative;
+  margin: 0px;
+  color: #333;
+}
+
+.teen-navigation-btn:hover, .teen-navigation-btn:focus {
+  color: #333 !important;
+}
+
+@media only screen and (max-width: 766px) and (min-width: 0px) {
+  .teen-navigation-btn {
+    float: none;
+    background: none;
+    position: relative;
+    margin: 0px;
+  }
+}
+
+.teen-navigation-btn:focus,
+.teen-navigation-btn:active:focus,
+.teen-navigation-btn.active:focus,
+.teen-navigation-btn.focus,
+.teen-navigation-btn:active.focus,
+.teen-navigation-btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.teen-navigation-btn:hover,
+.teen-navigation-btn:focus,
+.teen-navigation-btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.teen-navigation-btn:active,
+.teen-navigation-btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.teen-navigation-btn.disabled,
+.teen-navigation-btn[disabled],
+fieldset[disabled] .teen-navigation-btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+}
+a.teen-navigation-btn.disabled,
+fieldset[disabled] a.teen-navigation-btn {
+  pointer-events: none;
+}
+
+/*Container definitions*/
+.container.teen-navigation-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #333;
+}
+@media (min-width: 768px) {
+  .container.teen-navigation-container {
+    width: 700px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container.teen-navigation-container {
+    width: 980px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container.teen-navigation-container {
+    width: 1170px !important;
+  }
+}
+
+/*page-navigation*/
+#sticky {
+  padding-top:10px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-size: 28px;
+}
+
+#sticky.stick {
+  margin-top: 0 !important;
+  position: fixed;
+  top: 49px;
+  z-index: 10000;
+  border-top: 3px solid #FFB600;
+}
+
+.teen-homepage-navigation div{
+  text-align: center;
+}
+.teen-homepage-navigation a{
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width:1200px){
+  .teen-homepage-navigation a{
+    font-size:22px;
+    line-height: 27px;
+  }
+}
+.teen-homepage-navigation .mid-nav{
+  border-left: #696969 solid 1px;
+  border-right: #696969 solid 1px;
+}
+.teen-homepage-navigation .left-nav{
+  border-left: #696969 solid 1px;
+}
+.teen-homepage-navigation .right-nav{
+  border-right: #696969 solid 1px;
+}
+@media screen and (min-width:1200px){
+  #sticky .container{
+    width:1200px !important;
+  }
+}
+
+/* Rectangle Out */
+.hvr-rectangle-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #333333;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+.hvr-rectangle-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: #FFB600 3px solid;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+  color: white;
+  text-decoration: none;
+}
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+/*mobile dropdown*/
+.teen-navigation-container .dropdown button{
+  width:100% !important;
+  border-radius: 0;
+  background-color: #ffffff;
+  color:#000000;
+  font-size:21px;
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+
+.teen-navigation-container .dropdown-content-container button {
+  background: none;
+}
+
+.teen-navigation-container .dropdown button .rotate{
+  color:#FFB600 !important;
+}
+
+.teen-navigation-container .dropdown button[aria-expanded="true"] .rotate{
+  -ms-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg);
+}
+
+.teen-navigation-container .rotate{
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.teen-navigation-container .dropdown-menu{
+  border-radius: 0;
+}
+.teen-navigation-container .dropdown-item{
+  border:none;
+  text-align: left;
+  border-radius: 0;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.teen-navigation-container .dropdown-item:hover{
+  background-color: #eeeeee;
+}
+.teen-navigation-container .dropdown-content-container{
+  padding-top:20px;
+  padding-bottom: 20px;
+  margin-top: 3px;
+  background-color: #ffffff;
+}
+.nav-bar-icon{
+  padding-left: 10px;
+}
+
+@media screen and (max-width:1099px){
+  .nav-bar-icon{
+    margin-right: 20px !important;
+  }
+}

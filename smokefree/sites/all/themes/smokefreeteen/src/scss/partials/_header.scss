@@ -1,0 +1,311 @@
+/*navigation*/
+nav.scrollmenu {
+  background-color: #000000;
+  overflow: auto;
+  white-space: nowrap;
+  top:0;
+  position: fixed;
+  width:100%;
+  z-index: 100;
+}
+
+nav.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 24px;
+  text-decoration: none;
+  height: 100%;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #000000;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  left:-20px;
+}
+nav.scrollmenu a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+nav.scrollmenu a:hover, nav.scrollmenu a:focus, nav.scrollmenu a:active {
+  background-color: #000000
+}
+
+nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*
+#smokefree-gov:before {
+  border-left:#9ACAE4 1px solid !important;
+  border-right:#9ACAE4 1px solid !important;
+}
+
+#smokefree-vet:before {
+  border-left:#7ADE61 1px solid !important;
+  border-right:#7ADE61 1px solid !important;
+}
+
+#smokefree-women:before {
+  border-left:#FFA9D7 1px solid !important;
+  border-right:#FFA9D7 1px solid !important;
+}
+*/
+#smokefree-teen{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 24px;
+  text-decoration: none;
+  height: 100%;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  border-left:#FFB600 1px solid !important;
+  border-right:#FFB600 1px solid !important;
+  background-color: #333333;
+  left:-20px;
+}
+#smokefree-teen:before{
+  /*
+  border-left:#FFB600 1px solid !important;
+  border-right:#FFB600 1px solid !important;
+  */
+  background-color: #333333;
+}
+/*
+#smokefree-espanol:before {
+  border-left:#FFB09E 1px solid !important;
+  border-right:#FFB09E 1px solid !important;
+}
+#smokefree-60plus:before {
+  border-left:#7EE7FB 1px solid !important;
+  border-right:#7EE7FB 1px solid !important;
+}
+*/
+/*Hero Image*/
+.hero-img{
+  padding-top: 120px;
+  height: 350px;
+  background-image: url(../images/teen-hero-1.jpg);
+  background-size: cover;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 35px;
+}
+.hero-img img{
+  padding-bottom: 20px;
+}
+.hero-img h1{
+  display: inline-block;
+  font-size: 40px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  letter-spacing: inherit;
+  margin: 0px;
+}
+.large-logo{
+  width:70% !important;
+}
+
+.hero-img.hero-1{
+  background-image: url(../images/teen-hero-1.jpg);
+}
+
+.hero-img.hero-2{
+  background-image: url(../images/teen-hero-2.jpg);
+}
+
+.hero-img.hero-3{
+  background-image: url(../images/teen-hero-3.jpg);
+}
+
+.hero-img.hero-4{
+  background-image: url(../images/teen-hero-4.jpg);
+}
+
+.hero-img.hero-5{
+  background-image: url(../images/teen-hero-5.jpg);
+}
+
+.hero-img.hero-6{
+  background-image: url(../images/teen-hero-6.jpg);
+}
+
+.hero-img.hero-7{
+  background-image: url(../images/teen-hero-7.jpg);
+}
+
+.hero-img.hero-8{
+  background-image: url(../images/teen-hero-8.jpg);
+}
+
+.hero-img.hero-9{
+  background-image: url(../images/teen-hero-9.jpg);
+}
+
+.hero-img.hero-10{
+  background-image: url(../images/teen-hero-10.jpg);
+}
+
+.hero-img.hero-11{
+  background-image: url(../images/teen-hero-11.jpg);
+}
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media screen and (min-width : 769px) and (max-width : 1024px) {
+  .hero-img{
+    background-image: url(../images/teen-hero-tablet-1.png);
+  }
+  .hero-img.hero-1{
+    background-image: url(../images/teen-hero-tablet-1.png);
+  }
+  .hero-img.hero-2{
+    background-image: url(../images/teen-hero-tablet-2.png);
+  }
+}
+/*small screens*/
+@media screen and (max-width: 768px){
+  .hero-img{
+    background-image:none;
+    background-color: #4A4A4A !important;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    height: auto !important;
+  }
+  .hero-img h1{
+    font-size: 32px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+  }
+  .large-logo{
+    width:100% !important;
+  }
+  .hero-img.hero-1{
+    background-image: none;
+  }
+  .hero-img.hero-2{
+    background-image: none;
+  }
+
+  .hero-img.hero-3{
+    background-image: none;
+  }
+
+  .hero-img.hero-4{
+    background-image: none;
+  }
+
+  .hero-img.hero-5{
+    background-image: none;
+  }
+
+  .hero-img.hero-6{
+    background-image: none;
+  }
+
+  .hero-img.hero-7{
+    background-image: none;
+  }
+
+  .hero-img.hero-8{
+    background-image: none;
+  }
+
+  .hero-img.hero-9{
+    background-image: none;
+  }
+
+  .hero-img.hero-10{
+    background-image: none;
+  }
+
+  .hero-img.hero-11{
+    background-image: none;
+  }
+}
+
+/*Container definitions*/
+.hero-img .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .hero-img .container {
+    width: 750px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-img .container {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-img .container {
+    width: 970px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-img .container {
+    width: 1170px !important;
+  }
+}
+
+.hero-img .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.search-bar {
+  background-color: #333 !important;
+}
+.mobile-search-bar {
+  margin-top: 80px;
+  border-bottom: #ADADAD 1px solid;
+  .search-bar-form {
+    input[type=text] {
+      border: 2px solid #ABADB6;
+    }
+    .search-bar-group {
+      height: 55px;
+      width: 108% !important;
+      padding-left: 3.5%;
+    }
+  }
+}
+
+//homepage
+.smokefreegov-teen .mobile-search-bar {
+  margin-top: 25px !important;
+}
