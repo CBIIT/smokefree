@@ -215,10 +215,10 @@
 $databases = array();
    $databases['default']['default'] = array(
       'driver' => 'mysql',
-      'database' => 'smokefree_stage',
-      'username' => 'root',
-      'password' => 'root',
-      'host' => 'localhost',
+      'database' => 'default',
+      'username' => 'user',
+      'password' => 'user',
+      'host' => 'db',
       'prefix' => '',
     );
 
@@ -331,7 +331,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * between your various domains. Make sure to always start the $cookie_domain
  * with a leading dot, as per RFC 2109.
  */
-# $cookie_domain = '.example.com';
+$cookie_domain = '.smokefree.docksal';
 
 /**
  * Variable overrides:
@@ -600,3 +600,5 @@ if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['D
   require $_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_smokefreegit_dd.inc';
 }
 // </DDSETTINGS>
+
+include DRUPAL_ROOT . '/sites/all/modules/domain/settings.inc';
