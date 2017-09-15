@@ -21,14 +21,14 @@ function content_repository_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_blog_entry';
-  $strongarm->value = 'edit-xmlsitemap';
+  $strongarm->value = 'edit-linkchecker';
   $export['additional_settings__active_tab_blog_entry'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_disclaimer';
-  $strongarm->value = 'edit-print';
+  $strongarm->value = 'edit-linkchecker';
   $export['additional_settings__active_tab_disclaimer'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -81,6 +81,15 @@ function content_repository_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_include';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_include'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_cr_article';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_cr_article'] = $strongarm;
@@ -91,6 +100,13 @@ function content_repository_strongarm() {
   $strongarm->name = 'menu_parent_cr_landing';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_cr_landing'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_include';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_include'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -158,6 +174,16 @@ function content_repository_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_include';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_include'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_cr_article';
   $strongarm->value = '1';
   $export['node_preview_cr_article'] = $strongarm;
@@ -172,6 +198,13 @@ function content_repository_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_preview_include';
+  $strongarm->value = '1';
+  $export['node_preview_include'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_cr_article';
   $strongarm->value = 1;
   $export['node_submitted_cr_article'] = $strongarm;
@@ -182,6 +215,13 @@ function content_repository_strongarm() {
   $strongarm->name = 'node_submitted_cr_landing';
   $strongarm->value = 1;
   $export['node_submitted_cr_landing'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_include';
+  $strongarm->value = 1;
+  $export['node_submitted_include'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -461,6 +501,16 @@ function content_repository_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_cr_landing'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_include';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_include'] = $strongarm;
 
   return $export;
 }
