@@ -340,6 +340,28 @@ p.quiz-results-message {
 	left:0;
 	z-index: 99;
 }
+.text_confirmation {
+	color:#000000;
+	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom:15px;
+	padding: 10px;
+    background-color: #e2e2e2;
+}
+@media (max-width: 728px) {
+	.text_confirmation {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 400px) {
+	.text_confirmation {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
 @media (max-width: 490px) {
 	.programs .input-group {
 		width:100%;
@@ -355,6 +377,11 @@ p.quiz-results-message {
 		display:block;
 		float:none;
 		margin:15px 0px 5px;
+	}
+}
+@media (max-width: 374px) {
+	.programContent .form-control {
+		font-size:13px;
 	}
 }
 /* -------------------------------------- Video -------------------------------------- */
@@ -578,6 +605,11 @@ p.quiz-results-message {
 		height:400px;	
 	}
 }
+@media (max-width: 360px) {
+	#flipCard {
+		height:440px;	
+	}
+}
 /* -------------------------------------- App -------------------------------------- */
 .app {
 	background-color:#e6d9c9;
@@ -774,6 +806,11 @@ p.quiz-results-message {
 	background-color: #ffffff;
 	overflow: hidden;
 	height:300px;
+}
+@media (max-width: 350px) {
+	.whiteBox {
+		height:350px;
+	}
 }
 /* -------------------------------------- buttons -------------------------------------- */
 button {
