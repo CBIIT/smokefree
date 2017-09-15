@@ -141,4 +141,22 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
 	{
 		throw new PendingException();
 	}
+
+  /**
+   * @Given /^I wait for "(?P<num>\d+)" seconds$/
+   */
+  public function iWaitForSeconds($seconds) {
+    $this->getSession()->wait(intval($seconds) * 1000);
+  }
+
+  /**
+   * @Then /^The "(?P<element>[^"]*)" element should not be broken$/
+   */
+  public function theElementShouldNotBeBroken($element) {
+    $image = $this->getSession()->getPage()->find('css', $element);
+    $imgUrl = $image->getAttribute('src');
+    $this->getSession()->visit($this->locatePath($imgUrl));
+    return $this->assertSession()->elementsCount('css', 'img', 1);
+  }
+
 }
