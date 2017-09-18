@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+## Run Gulp in the theme folder
+##
+## Usage: fin gulp <gulpcommand>
+##
+##
+
+THEME_PATH_INSIDE_VM="/var/www/${DOCROOT}/sites/all/themes/${THEME_NAME}"
+
+fin exec "cd ${THEME_PATH_INSIDE_VM}; gulp $1"

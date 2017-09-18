@@ -1,0 +1,56 @@
+core: 7.x
+api: 2
+
+projects:
+  drupal:
+    version: 7.x
+
+  views:
+    version: ~
+
+  seckit:
+    version: ~
+
+  admin_menu:
+    version: ~
+
+  linkchecker:
+    version: ~
+
+  adminimal_admin_menu:
+    version: ~
+
+  ctools:
+    version: ~
+
+  features:
+    version: ~
+
+  module_filter:
+    version: ~
+
+  jquery_update:
+    version: ~
+
+  bootstrap:
+    version: ~
+    type: "theme"
+    subdir: ""
+
+  adminimal_theme:
+    version: ~
+    type: "theme"
+    subdir: ""
+
+defaults:
+  projects:
+    subdir: "contrib"
+
+libraries:
+  bootstrap-multiselect:
+    download:
+      type: git
+      version: ~
+      url: "https://github.com/davidstutz/bootstrap-multiselect"
+    destination: libraries
+    directory_name: bootstrap-multiselect
