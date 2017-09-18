@@ -739,9 +739,20 @@ p.quiz-results-message {
 	background-size: 80px 80px;
 }
 .callinfo .call-title {
+	display: inline-block;
+	vertical-align: middle;
 	font-size:32px;
 	font-weight:900;
 }
+.callinfo .call-numbers-dial {
+	display: inline-block;
+	vertical-align: middle;
+}
+.callinfo .call-numbers-dial a:hover {
+	color: #dee1ac;
+	text-decoration: none;
+}
+
 @media (max-width: 600px) {
 	.call-number {
 		margin-bottom:80px;	
