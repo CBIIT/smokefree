@@ -703,6 +703,9 @@ p.quiz-results-message {
 	color:#dee1ac;
 	text-decoration: none;
 }
+.moreHelp h2 a:hover {
+	border-bottom: none;
+}
 @media (max-width: 1200px) {
 	.moreHelp {
 		background-image: url(../images/morehelp-background.png);
