@@ -700,7 +700,8 @@ p.quiz-results-message {
 }
 .moreHelp a:focus,
 .moreHelp a:hover {
-	color:#ffffff;
+	color:#dee1ac;
+	text-decoration: none;
 }
 @media (max-width: 1200px) {
 	.moreHelp {
