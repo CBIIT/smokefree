@@ -718,6 +718,9 @@ p.quiz-results-message {
 	}	
 }
 /* -------------------------------------- footer - call info -------------------------------------- */
+p.phone {
+    padding-top:10px;
+}
 .callinfo {
 	background-color: rgba(0,0,0,0.7);
 	padding:20px 15px 30px 15px;
