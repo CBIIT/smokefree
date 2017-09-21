@@ -1,0 +1,5 @@
+AuthUserFile /home/smokefree/public_html/everytrycounts/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Secure Document"
+AuthType Basic
+require user fdauser

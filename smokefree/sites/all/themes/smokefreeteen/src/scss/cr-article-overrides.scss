@@ -1,0 +1,24 @@
+.node-type-cr-article {
+    .article-title {
+        padding-top: 30px;
+    }
+    @media only screen and (min-device-width : 768px) {
+        .teen-article-logo {
+            width: 90%;
+        }
+    }
+    @media only screen and (max-device-width : 767px) {
+        .teen-article-logo {
+            width: 105%;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 414px) {
+    .main-container.container, .container.margin-top-lg {
+        margin-top: 80px !important;
+    }
+    .smokefreegov-teen .main-container.container {
+        margin-top: 0px !important;
+    }
+}

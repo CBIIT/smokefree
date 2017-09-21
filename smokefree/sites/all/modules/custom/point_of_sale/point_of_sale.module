@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Point Of Sale feature.
+ */
+
+include_once 'point_of_sale.features.inc';

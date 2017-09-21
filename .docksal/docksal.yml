@@ -1,0 +1,26 @@
+version: "2.1"
+
+services:
+  mail:
+    hostname: mail
+    image: mailhog/mailhog
+    expose:
+      - "80"
+    environment:
+      - MH_API_BIND_ADDR=0.0.0.0:80
+      - MH_UI_BIND_ADDR=0.0.0.0:80
+    labels:
+      - io.docksal.virtual-host=webmail.${VIRTUAL_HOST}
+    user: root
+  blackfire:
+     image: blackfire/blackfire
+     environment:
+     - BLACKFIRE_SERVER_ID=3d9488de-a378-440f-b18c-e1d1aa02e33e
+     - BLACKFIRE_SERVER_TOKEN=b332dc83e4c659330df43bcd6af7a052c2069153c0d68ea5aa9b0c70fde2f277
+   # Browser
+  browser:
+    hostname: browser
+    image: selenium/standalone-chrome
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
