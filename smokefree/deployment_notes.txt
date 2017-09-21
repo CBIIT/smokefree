@@ -1,4 +1,9 @@
-Smokefree 1.5 2017-09-25
+Smokefree 1.5 2017-09-21
+-----------------------
+- SF-567 TopHat Improvements
+- SF-569 Bing Webmaster Tools
+
+Smokefree 1.5 2017-09-15
 -----------------------
 - SF-515 SmokeFree Teen
 - SF-558 Security Updates
