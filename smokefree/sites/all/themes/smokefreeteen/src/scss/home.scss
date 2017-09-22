@@ -371,6 +371,12 @@
              margin: auto;
         }
     }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 991px) {
+        .hidden-sm {
+            display: none;
+        }
+
+    }
 }
 
 .multi-item-carousel {
