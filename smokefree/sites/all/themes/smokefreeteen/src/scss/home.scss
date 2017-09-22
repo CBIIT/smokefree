@@ -361,8 +361,8 @@
     }
 
     @media only screen and (min-device-width : 481px) and (max-device-width : 766px) {
-        .syndicate section.block.block-views.clearfix {
-            width: 100% !important;
+        section.block.block-views.clearfix {
+            width: 100%;
         }
 
     }
@@ -370,6 +370,12 @@
         #myCarousel .middle .img-responsive{
              margin: auto;
         }
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 991px) {
+        .hidden-sm {
+            display: none;
+        }
+
     }
 }
 
