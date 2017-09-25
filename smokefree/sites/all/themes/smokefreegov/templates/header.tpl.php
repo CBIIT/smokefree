@@ -5,7 +5,6 @@
     ?>
       <nav class="scrollmenu">
           <div class="nav-container">
-              <a href="/" id="smokefree-gov" class="active"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-gov.png" alt="smokefree-gov"></a>
               <a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-vet.png" alt="smokefree-vet"></a>
               <a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-women.png" alt="smokefree-women"></a>
               <a href="https://teen.smokefree.gov" id="smokefree-teen"><span><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-teen.png" alt="smokefree-teen"></span></a>
