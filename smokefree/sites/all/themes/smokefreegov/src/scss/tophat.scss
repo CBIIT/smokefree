@@ -37,14 +37,6 @@ nav.scrollmenu a:before {
     left: 0;
     right: 0;
     background: #000000;
-    border-left:#ffffff 1px solid;
-    border-right:#ffffff 1px solid;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 50%;
-    transform-origin: 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
@@ -58,21 +50,10 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
-
-#smokefree-teen:before {
-    border-left:#FFB600 1px solid !important;
-    border-right:#FFB600 1px solid !important;
+.scrollmenu a:hover:before {
+    background-color: #333;
 }
 
-#smokefree-vet:before {
-    border-left:#7ADE61 1px solid !important;
-    border-right:#7ADE61 1px solid !important;
-}
-
-#smokefree-women:before {
-    border-left:#FFA9D7 1px solid !important;
-    border-right:#FFA9D7 1px solid !important;
-}
 #smokefree-gov.active{
     display: inline-block;
     color: white;
@@ -91,17 +72,7 @@ nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:a
     left:-20px;
 }
 #smokefree-gov.active:before{
-    border-left:#9ACAE4 1px solid !important;
-    border-right:#9ACAE4 1px solid !important;
     background-color: #333333;
-}
-#smokefree-espanol:before {
-    border-left:#FFB09E 1px solid !important;
-    border-right:#FFB09E 1px solid !important;
-}
-#smokefree-60plus:before {
-    border-left:#7EE7FB 1px solid !important;
-    border-right:#7EE7FB 1px solid !important;
 }
 
 @media only screen and (min-width : 786px) {
