@@ -360,7 +360,7 @@
         }
     }
 
-    @media only screen and (min-device-width : 481px) and (max-device-width : 766px) {
+    @media only screen and (min-width : 481px) and (max-width : 766px) {
         section.block.block-views.clearfix {
             width: 100%;
         }
@@ -369,6 +369,17 @@
     @media only screen and (max-device-width : 766px) {
         #myCarousel .middle .img-responsive{
              margin: auto;
+        }
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 991px) {
+        .hidden-sm {
+            display: none;
+        }
+
+    }
+    @media only screen and (min-device-width : 1200px) {
+        .scrollmenu .container {
+            width: 1170px !important;
         }
     }
 }
