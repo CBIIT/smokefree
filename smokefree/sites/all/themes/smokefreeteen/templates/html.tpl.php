@@ -57,6 +57,7 @@
 <html<?php if (!empty($html_attributes)) {print $html_attributes;} ?><?php if (!empty($rdf_namespaces)) {print $rdf_namespaces;} ?>>
 <head>
 
+<?php if ($_SERVER['HTTP_HOST'] == "teen.smokefree.gov" || $_SERVER['HTTP_HOST'] == "www.teen.smokefree.gov") : ?>
   <meta name="google-site-verification" content="PUSFJOhbNJlL_-NDz0NB49EN2MdclUqhec3d2qQh8iY" />
     <!-- Page hiding snippet (recommended) -->
         <style>.async-hide { opacity: 0 !important} </style>
@@ -74,6 +75,27 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-MLXJR9');</script>
     <!-- End Google Tag Manager -->
+<?php else: ?>
+  <!-- Page hiding snippet (recommended) -->
+  <style>.async-hide { opacity: 0 !important} </style>
+  <script>
+    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+    })(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-56KKS26':true});
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+      {'gtm.start': new Date().getTime(),event:'gtm.js'}
+    );var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-56KKS26');</script>
+  <!-- End Google Tag Manager -->
+<?php endif; ?>
+
+
 
   <?php if (!empty($node->id) && $node->id == 49): ?>
     <!-- Twitter Card Meta Tags -->
@@ -110,10 +132,17 @@
   <?php print $scripts; ?>
 </head>
 <body<?php if (!empty($body_attributes)) {print $body_attributes;} ?>>
+<?php if ($_SERVER['HTTP_HOST'] == "teen.smokefree.gov" || $_SERVER['HTTP_HOST'] == "www.teen.smokefree.gov") : ?>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLXJR9"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+<?php else: ?>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56KKS26"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<?php endif; ?>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
