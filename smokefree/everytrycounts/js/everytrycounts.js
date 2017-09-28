@@ -320,7 +320,7 @@ fallback.load({
                     var yyyy = today.getFullYear();
 
                     var url = 'https://addevent.com/dir/?'
-                        + 'client=alytbm1p6z01u48glmv7810'
+                        + 'client=atKBDEWJHzBPomqyXmmf31049'
                         + "&service="       + encodeURIComponent(service)
                         + "&start="         + encodeURIComponent(mm + "/" + dd + "/" + yyyy + " 09:00 AM")
                         + "&end="           + encodeURIComponent(mm + "/" + dd + "/" + yyyy + " 10:00 AM")
