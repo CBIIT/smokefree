@@ -142,10 +142,8 @@
       d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca99729/e.js","//www.rnengage.com/api/1/javascript/acs.debug.js"]);
   </script>
 
-  <?php if ($_SERVER['HTTP_HOST'] == "smokefree.gov" || $_SERVER['HTTP_HOST'] == "www.smokefree.gov") : ?>
     <!-- Omniture Analytics -->
     <script src="https://static.cancer.gov/webanalytics/WA_DCCPS_PageLoad.js"></script>
     <!-- End Omniture Analytics -->
-  <?php endif; ?>
 </body>
 </html>
