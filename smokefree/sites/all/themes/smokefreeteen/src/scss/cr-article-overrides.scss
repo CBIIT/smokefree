@@ -12,6 +12,13 @@
             width: 105%;
         }
     }
+    @media (max-width:480px) {
+        .syndicate {
+            p a.ext {
+                color: #337ab7;
+            }
+        }
+    }
 }
 
 @media only screen and (min-device-width: 414px) {
