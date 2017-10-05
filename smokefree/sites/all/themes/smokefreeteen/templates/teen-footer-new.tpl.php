@@ -26,7 +26,6 @@
                 <a href="http://smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-gov-footer.png" width="auto" height="15"></a>
                 <a href="http://smokefree.gov/veterans/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-vet-footer.png" width="auto" height="15"></a>
 			    <a href="http://women.smokefree.gov"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-women-footer.png" width="auto" height="15"></a>
-			    <a href="http://teen.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-teen-footer.png" width="auto" height="15"></a>
 			    <a href="http://espanol.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-espanol-footer.png" width="auto" height="15"></a>
 			    <a href="https://60plus.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-60-footer.png" width="auto" height="15"></a>
 			    </div>
@@ -34,7 +33,6 @@
 			    <div class="smokefree-row hidden-md hidden-lg  hidden-xs">
 			    <a href="http://smokefree.gov/veterans/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-vet-footer.png" width="107.77" height="15"></a>
 			    <a href="http://women.smokefree.gov"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-women-footer.png" width="139.15" height="15"></a>
-			    <a href="http://teen.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-teen-footer.png" width="117.18" height="15"></a>
 			    </div>
 			    <div class="smokefree-row hidden-md hidden-lg hidden-xs">
 			    <a href="http://espanol.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-espanol-footer.png" width="145.26" height="15"></a>
@@ -44,7 +42,6 @@
 			    <div class="smokefree-row hidden-lg hidden-md hidden-sm ">
 			   	<a href="http://smokefree.gov/veterans/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-vet-footer.png" width="107.77" height="15"></a>
 			    <a href="http://women.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-women-footer.png" width="139.15" height="15"></a>
-			    <a href="http://teen.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-teen-footer.png" width="117.18" height="15"></a>
 			    <a href="http://espanol.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-espanol-footer.png" width="145.26" height="15" class="smmargin"></a>
 			    <a href="https://60plus.smokefree.gov/"><img src="/<?php echo drupal_get_path('theme', 'smokefreeteen'); ?>/src/images/footer/smokefree-60-footer.png" width="110.38" height="15"></a>
 			    </div>
