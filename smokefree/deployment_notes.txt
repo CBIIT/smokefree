@@ -1,4 +1,14 @@
-Smokefree 1.5 2017-09-21
+Smokefree 1.7 2017-10-05
+-----------------------
+- SF-552 TopHat on SFG
+- SF-504/SF-590 Footer domain fixes
+- SF-562 Submit button fix for webforms on mobile devices
+- SF-556 Landing page design improvements for tablets
+- SF-579 Hide MFY on healthcare pros
+- SF-504 Footer domain fixes
+- SF-582 Omniture code for teen
+
+Smokefree 1.6 2017-09-21
 -----------------------
 - SF-567 TopHat Improvements
 - SF-569 Bing Webmaster Tools
