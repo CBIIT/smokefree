@@ -1,3 +1,17 @@
+<?php
+
+// create the og:description tag
+$header = array(
+'#tag' => 'meta',
+'#attributes' => array(
+  'property' => 'og:description',
+  'content' => 'Prepare to quit with a personalized quit plan. Build your quit plan in 7 easy steps.',
+  ),
+);
+drupal_add_html_head($header, 'bpq_description');
+
+?>
+
 <div id="quit-plan">
     <section class="start quit-plan-panel">
       <div class="page-head">
