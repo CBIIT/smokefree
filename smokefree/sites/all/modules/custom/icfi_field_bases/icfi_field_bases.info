@@ -92,6 +92,7 @@ features[field_base][] = field_top_5_links
 features[field_base][] = field_topics
 features[field_base][] = field_type
 features[field_base][] = field_waypoint
+features[field_instance][] = node-page-field_read_more_text
 features[taxonomy][] = article_bundle
 features[variable][] = pathauto_taxonomy_term_article_bundle_pattern
 features_exclude[taxonomy][tags] = tags
