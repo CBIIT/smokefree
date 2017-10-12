@@ -1,4 +1,4 @@
-@javascript
+@api
 Feature: Navigation
   In order to navigate through the smokefree website
   As a website user
