@@ -15,5 +15,3 @@ Feature: Navigation
     Then I should see the link "Stay Smokefree for Good"
     Then I should see the link "Help Others Quit"
 
-  @javascript
-  Scenario: User click
