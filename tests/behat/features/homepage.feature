@@ -1,15 +1,14 @@
-@api
-
+@javascript
   Feature: Home Page
   In order to use the smokefree website
   As a website user
   I need to be able to view all contents on the home page
 
     Background:
-      Given I am on the homepage
+      Given I visit homepage
 
     Scenario: User looks for the homepage logo
-      Then I should see "smokefree.gov"
+      Then I should see the text "smokefree.gov"
 
     Scenario: User looks for the primary navigation
       Then I should see the link "Home"
@@ -24,6 +23,13 @@
       Then I should see the link "My Quit Day"
       Then I should see the link "I Recently Quit"
       Then I should see the link "Staying Quit"
+
+    Scenario: User looks for the intro block
+      Then I should see the text "Quitting is a Journey"
+      Then I should see the text "On this site you’ll find support, tips, tools, and expert advice to help you or someone you love quit smoking"
+      Then I should see the text "Get 24/7 Help"
+      Then I should see the text "Explore our apps to discover tips and tools to help you on your smokefree journey"
+      Then I should see the link "Download"
 
     Scenario: User looks for articles and Information
       Then I should see the text "ARTICLES & INFORMATION"
