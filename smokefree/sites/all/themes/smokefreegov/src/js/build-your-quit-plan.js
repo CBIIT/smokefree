@@ -70,7 +70,7 @@
 
         _addEvent = function (service, data) {
             var url = 'https://addevent.com/dir/?'
-                + 'client=alytbm1p6z01u48glmv7810'
+                + 'client=atKBDEWJHzBPomqyXmmf31049'
                 + "&service="       + encodeURIComponent(service)
                 + "&start="         + encodeURIComponent(data.date.replace(new RegExp("-", "g"), '/'))
                 + "&end="           + encodeURIComponent(data.date.replace(new RegExp("-", "g"), '/'))

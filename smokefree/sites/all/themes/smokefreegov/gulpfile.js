@@ -16,7 +16,7 @@ var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
-var notify = require('gulp-notify');
+// var notify = require('gulp-notify');
 
 
 /************Working Tasks************/
@@ -47,11 +47,11 @@ gulp.task('sass', function() {
         })
         .pipe(sourcemaps.write('src/maps'))
         .pipe(gulp.dest('css'))
-        .pipe(notify({
-            title: "SASS Compiled",
-            message: "All SASS files have been recompiled to CSS",
-            onLast: true
-        }));
+        // .pipe(notify({
+        //     title: "SASS Compiled",
+        //     message: "All SASS files have been recompiled to CSS",
+        //     onLast: true
+        // }));
 });
 gulp.task('js', function() {
 	return gulp.src('src/js/**/*.js')

@@ -12,6 +12,20 @@
             width: 105%;
         }
     }
+    @media (max-width:480px) {
+        .syndicate {
+            p a.ext {
+                color: #337ab7;
+                display: initial;
+                padding: 0;
+                width: auto;
+                float: none;
+                span.ext {
+                    float: none;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-device-width: 414px) {
@@ -21,4 +35,9 @@
     .smokefreegov-teen .main-container.container {
         margin-top: 0px !important;
     }
+}
+
+// Hide the more for you block on the "esources for Health Professionals" page
+.smokefreegov-resources-for-health-professionals #block-views-more-for-you-content-bottom {
+    display: none;
 }
