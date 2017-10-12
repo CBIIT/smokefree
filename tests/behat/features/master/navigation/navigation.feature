@@ -1,12 +1,12 @@
-@api
 Feature: Navigation
   In order to navigate through the smokefree website
   As a website user
-  I need to be able to view and click on all the primary navigation elements
+  I need to be able to view all the primary navigation elements
 
   Background:
     Given I am on the homepage
 
+  @api
   Scenario: User looks for the primary navigation
     Then I should see the link "Home"
     Then I should see the link "Tools & Tips"
@@ -14,3 +14,6 @@ Feature: Navigation
     Then I should see the link "Quitting Smoking"
     Then I should see the link "Stay Smokefree for Good"
     Then I should see the link "Help Others Quit"
+
+  @javascript
+  Scenario: User click
