@@ -145,13 +145,6 @@
   <meta property="og:title"     content="<?php if (isset($head_title_array['title'])) { echo $head_title_array['title']; } ?>" />
   <?php if ($is_front) : ?>
     <meta property="og:image" content="<?php echo "https://".$_SERVER['HTTP_HOST']."/" . path_to_theme(); ?>/images/header/facebook-smokefree.jpg" />
-    <meta property="og:description" content="Smokefree.gov is an initiative from the National Cancer Institute to help you or someone you care about quit smoking." />
-  <?php endif; ?>
-
-  <?php
-    // @TODO Remove this once we move the veterans pages into its own domain
-    if (request_path() == 'veterans') : ?>
-      <meta property="og:description" content="SmokefreeVET’s mission is to help veterans who get their health care through VA become tobacco-free." />
   <?php endif; ?>
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
   <meta charset="utf-8">
