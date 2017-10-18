@@ -1,0 +1,180 @@
+<?php
+
+/**
+ * Implements hook_init
+ *
+ * Make sure all JS files are available globally
+ */
+function icfi_api_keys_init() {
+  $variables = ICFIApi::getJsKeys();
+  if (!empty($variables)) {
+    foreach ($variables as $variable) {
+      drupal_add_js(array('icfi_api_keys' => array($variable->api_key_machine_name => $variable->api_key_value)), array('type' => 'setting'));
+    }
+  }
+}
+
+/**
+ * Implements hook_permission
+ */
+function icfi_api_keys_permission() {
+  return array(
+    'administer api keys' => array(
+      'title' => t('Administer API Keys'),
+      'description' => t('Enter or edit API keys.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu()
+ *
+ */
+function icfi_api_keys_menu() {
+  $items = array();
+  $items['admin/config/system/icfi-api'] = array(
+    'title' => 'ICFI API',
+    'description' => 'Settings page to configure various API keys',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('icfi_api_keys_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer api keys')
+  );
+  $items['admin/config/system/icfi-api/add'] = array(
+    'title' => 'Add ICFI API Key',
+    'description' => 'Add a new API keys',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('icfi_api_keys_add_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer api keys')
+  );
+  $items['admin/config/system/icfi-api/%/edit'] = array(
+    'title' => 'Edit ICFI API Key',
+    'description' => 'Edit API key',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('icfi_api_keys_edit_form', 4),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer api keys')
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_form()
+ *
+ * Displays a list of all keys added to the site
+ */
+function icfi_api_keys_form() {
+  $header = array('Api Machine Name', 'Value', 'Is JS Variable', 'Edit Link');
+  $query = db_select('icfi_api_keys', 'c')
+    ->fields('c')
+    ->execute()
+    ->fetchAll();
+
+  # build the table fields
+  $rows = array();
+  foreach ($query as $row) {
+    $rows[] = array(
+      $row->api_key_machine_name,
+      $row->api_key_value,
+      ($row->javascript_variable == 1 ? "Yes" : "No"),
+      '<a href=/admin/config/system/icfi-api/' .$row->api_key_machine_name. '/edit>edit</a>',
+    );
+  }
+  return array(
+    '#prefix' => '<div><a href="/admin/config/system/icfi-api/add"><h3>Add Key</h3></a>',
+    '#suffix' => '</div>',
+    '#theme' => 'table',
+    '#rows' => $rows,
+    '#header' => $header
+  );
+}
+
+/**
+ * Form to add new keys
+ */
+function icfi_api_keys_add_form($form, &$form_state) {
+  $form = array();
+  $form['machine_name'] = array(
+    '#title' => 'Machine Name',
+    '#type' => 'textfield',
+    '#required' => TRUE
+  );
+  $form['api_value'] = array(
+    '#title' => 'Key Value',
+    '#type' => 'textfield',
+    '#required' => TRUE
+  );
+  $form['is_javascript'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Will this key be used in Javascript files?'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit')
+  );
+  return $form;
+}
+
+/**
+ * Submit handler for icfi_api_keys_add_form
+ */
+function icfi_api_keys_add_form_submit($form, &$form_state) {
+  $api = new ICFIApi($form_state['values']['machine_name'],$form_state['values']['api_value'], $form_state['values']['is_javascript']);
+  $insert_value = $api->create();
+  if ($insert_value == TRUE) {
+    drupal_set_message(t('Successfully entered the new API keys.'), 'status');
+  }
+  else {
+    drupal_set_message(t('Could not add the API key. Please make sure that the value doe snot exist already. Refer logs for more information'), 'error');
+  }
+  $form_state['redirect'] = 'admin/config/system/icfi-api';
+}
+
+/**
+ * Form to edit existing keys
+ */
+function icfi_api_keys_edit_form($form, &$form_state, $machine_name) {
+  $api = ICFIApi::load($machine_name);
+  $form = array();
+  $form['display_machine_name'] = array(
+    '#title' => 'Machine Name',
+    '#type' => 'item',
+    '#markup' => $api->api_key_machine_name,
+  );
+  $form['machine_name'] = array(
+    '#type' => 'hidden',
+    '#value' => $api->api_key_machine_name ,
+  );
+  $form['api_value'] = array(
+    '#title' => 'Key Value',
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#default_value' => $api->api_key_value ,
+  );
+  $form['is_javascript'] = array(
+    '#type' => 'checkbox',
+    '#default_value' => $api->javascript_variable ,
+    '#title' => t('Will this key be used in Javascript files?'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit')
+  );
+  return $form;
+}
+
+/**
+ * Submit handler for icfi_api_keys_edit_form
+ */
+function icfi_api_keys_edit_form_submit($form, &$form_state) {
+  $api = new ICFIApi($form_state['values']['machine_name'],$form_state['values']['api_value'], $form_state['values']['is_javascript']);
+  $insert_value = $api->update();
+  if ($insert_value == TRUE) {
+    drupal_set_message(t('Successfully updated API keys.'), 'status');
+  }
+  else {
+    drupal_set_message(t('Could not add the API key. Please make sure that the value does not exist already. Refer logs for more information'), 'error');
+  }
+  $form_state['redirect'] = 'admin/config/system/icfi-api';
+}
