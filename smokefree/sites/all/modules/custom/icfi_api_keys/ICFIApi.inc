@@ -10,6 +10,8 @@ class ICFIApi {
     if (empty($machineName) || empty($apiValue)) {
       throw new InvalidArgumentException('Please supply a valid api value and an appropriate machine name');
     }
+
+    // Remove accidental whitespaces at the end
     $this->machineName = trim($machineName);
     $this->apiValue = trim($apiValue);
     $this->isJsVariable = $isJsVariable;
@@ -20,9 +22,9 @@ class ICFIApi {
    */
   public function create() {
 
-    //check if this machine name exists, only enter a new record if there is no existing value
-    $entryExist = self::getKeyValue($this->machineName);
-    if (empty($entryExist)) {
+    // Check if this machine name exists, only enter a new record if there is no existing value
+    $entryExists = self::getKeyValue($this->machineName);
+    if (empty($entryExists)) {
       $transaction = db_transaction();
       try {
         $query = db_insert('icfi_api_keys')->fields(array(
@@ -32,7 +34,8 @@ class ICFIApi {
         );
         $query->execute();
         return TRUE;
-      } //shouldn't really happen
+      }
+      //Shouldn't really happen
       catch (Exception $e) {
         $transaction->rollback();
         watchdog_exception('icfi_api_keys', $e);
@@ -58,7 +61,7 @@ class ICFIApi {
       $query->execute();
       return TRUE;
     }
-      //shouldn't really happen
+    // Shouldn't really happen
     catch (Exception $e) {
       $transaction->rollback();
       watchdog_exception('icfi_api_keys', $e);

@@ -5,7 +5,7 @@ The motivation for writing this module was to
 2: Provide an UI for administrators (or users with the correct permissions) to easily update or add new keys/information
 
 
-The values could have been store in the "variable" table as opposed to creating a new one. Hopwever, that would not let us easily maintain different
+The values could have been store in the "variable" table as opposed to creating a new one. However, that would not let us easily maintain different
 values across environments. By storing this in a separate table, we can easily maintain the environment specific information by excluding the table
 during the backporting process
 
