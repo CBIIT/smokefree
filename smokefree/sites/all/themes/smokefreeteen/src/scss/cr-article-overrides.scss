@@ -16,6 +16,13 @@
         .syndicate {
             p a.ext {
                 color: #337ab7;
+                display: initial;
+                padding: 0;
+                width: auto;
+                float: none;
+                span.ext {
+                    float: none;
+                }
             }
         }
     }
