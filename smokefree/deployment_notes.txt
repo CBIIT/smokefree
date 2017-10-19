@@ -1,3 +1,9 @@
+Smokefree 1.8 2017-10-19
+-----------------------
+- SF-563 Fixing teen link
+- SF-591 Syncing and removing unused features
+- SF-549 Adding meta tags to homepage, teen homepage and veterans pages
+
 Smokefree 1.7 2017-10-05
 -----------------------
 - SF-552 TopHat on SFG
