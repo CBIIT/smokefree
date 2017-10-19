@@ -21,7 +21,8 @@ class ICFIApi {
   public function create() {
 
     //check if this machine name exists, only enter a new record if there is no existing value
-    if (empty(self::getKeyValue($this->machineName))) {
+    $entryExist = self::getKeyValue($this->machineName);
+    if (empty($entryExist)) {
       $transaction = db_transaction();
       try {
         $query = db_insert('icfi_api_keys')->fields(array(
