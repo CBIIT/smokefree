@@ -10,8 +10,8 @@ class ICFIApi {
     if (empty($machineName) || empty($apiValue)) {
       throw new InvalidArgumentException('Please supply a valid api value and an appropriate machine name');
     }
-    $this->machineName = $machineName;
-    $this->apiValue = $apiValue;
+    $this->machineName = trim($machineName);
+    $this->apiValue = trim($apiValue);
     $this->isJsVariable = $isJsVariable;
   }
 
