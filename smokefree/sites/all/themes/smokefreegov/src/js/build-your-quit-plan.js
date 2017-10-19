@@ -70,7 +70,7 @@
 
         _addEvent = function (service, data) {
             var url = 'https://addevent.com/dir/?'
-                + 'client=atKBDEWJHzBPomqyXmmf31049'
+                + 'client=' + Drupal.settings.icfi_api_keys.addevent
                 + "&service="       + encodeURIComponent(service)
                 + "&start="         + encodeURIComponent(data.date.replace(new RegExp("-", "g"), '/'))
                 + "&end="           + encodeURIComponent(data.date.replace(new RegExp("-", "g"), '/'))
