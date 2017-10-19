@@ -320,7 +320,7 @@ fallback.load({
                     var yyyy = today.getFullYear();
 
                     var url = 'https://addevent.com/dir/?'
-                        + 'client=' + Drupal.settings.icfi_api_keys.addevent
+                        + 'client=atKBDEWJHzBPomqyXmmf31049'
                         + "&service="       + encodeURIComponent(service)
                         + "&start="         + encodeURIComponent(mm + "/" + dd + "/" + yyyy + " 09:00 AM")
                         + "&end="           + encodeURIComponent(mm + "/" + dd + "/" + yyyy + " 10:00 AM")

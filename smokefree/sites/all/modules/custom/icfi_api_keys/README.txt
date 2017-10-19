@@ -13,9 +13,9 @@ during the backporting process
 
 - Add new keys by going to "admin/config/system/icfi-api"
 - If you wish to use this value in JS files check the box
-- The machine name is important, please make sure you choose it wisely as you cannot edit it.
+- The machine name is important, please make sure you choose it wisely, as you cannot edit it.
 
-NOTE: THis iteration of the module does not allow deletion of keys. The reason being, deletion of the key will also
+NOTE: This iteration of the module does not allow deletion of keys. The reason being, deletion of the key will also
 warrant removal of all its references from the codebase which will require a developer. Deletion should be rare and only done by a developer.
 
 - PHP -
