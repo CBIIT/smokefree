@@ -68,7 +68,7 @@
 	<div class="row somethingNew">
 		<div class="col-lg-5 col-md-6 col-sm-12">
 			<h2>Try Something New</h2>
-			<p>Quitting smoking takes skills. And building skills takes practice. Try a text message program to build the skills and confidence you need to quit for good.</p>
+			<p>Try a text message program to build the skills and confidence you need for your next quit. You’ll receive texts with challenges and tips to keep you on track. You haven’t failed as long as you keep trying.</p>
 			<p class="bold">CHOOSE THE PROGRAM THAT’S RIGHT FOR YOU</p>
 		</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
@@ -82,13 +82,13 @@
 				<div class="programBox" id="programChallenge" v-if="show_program_challenge">
 					<button class="titleArea active" id="programChallengeClose" v-on:click="show_program_challenge = !show_program_challenge"><h3>TRY DAILY CHALLENGES</h3></button>
 					<div class="programContent">
-						<p>Get a new challenge at 9 a.m. every day for a week to build skills without quitting.</p>
+						<p>Get a new challenge at 9 a.m. every day for a week to build skills that will help you quit later.</p>
 						<p class="example">Try to resist 2 cigarette cravings today for 10 minutes each. Go for a walk or call someone. Cravings usually last only 5 to 10 minutes.</p>
 						<div class="input-group" v-if="show_program_challenge_submit==true">
 						   <input class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_challenge_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programchallengephone') }" id="programchallengephone" name="programchallengephone" />
 							<span v-show="errors.has('programchallengephone')" class="help is-danger">{{ errors.first('programchallengephone') }}</span>
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Start Now</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else v-html="program_challenge_confirmation">
@@ -109,7 +109,7 @@
 						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_practice_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programpracticephone') }" id="programpracticephone" name="programpracticephone" />
 							<span v-show="errors.has('programpracticephone')" class="help is-danger">{{ errors.first('programpracticephone') }}</span>
 							<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Start Now</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else v-html="program_practice_confirmation">
@@ -130,7 +130,7 @@
 						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_quit_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programquitphone') }" id="programquitphone" name="programquitphone" />
 							<span v-show="errors.has('programquitphone')" class="help is-danger">{{ errors.first('programquitphone') }}</span>
 							<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Sign Up</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Start Now</button>
 						   </span>
 						</div> <!-- /.input-group -->
 						<div class="text_confirmation" v-else v-html="program_quit_confirmation">
@@ -146,7 +146,7 @@
 	<div class="row video">
 		<div class="topShadow"></div> <!-- Top Shadow -->
 		<div class="col-lg-3 col-md-4 col-sm-12">
-			<h2>What Will You Get Out of This Try?</h2>
+			<h2>USE YOUR PHONE TO GET READY TO QUIT</h2>
 		</div> <!-- /.col-lg-3 /.col-md-4 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-2 col-sm-12">
 			<div class="embed-responsive embed-responsive-16by9">
@@ -159,7 +159,7 @@
 	<div class="row tips">
 		<div class="col-lg-5 col-md-6 col-sm-12">
 			<h2>Deal With Cravings</h2>
-			<p>Cravings can make quitting hard, but they typically last only 5 to 10 minutes. It might be uncomfortable, but you can wait them out.</p>
+			<p>Cravings can make quitting hard, but they typically last only 5 to 10 minutes. It might be uncomfortable, but you can get through cravings with these tips.</p>
 			<p class="bold">FIGHT CRAVINGS WITH THESE TIPS</p>
 		</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
@@ -245,8 +245,8 @@
 	
 	<div class="row challenges">
 		<div class="col-lg-6 col-md-6 col-sm-12">
-			<h2>Conquer Your Daily Challenge</h2>
-			<p>Daily challenges are small steps that help you build the skills and knowledge you need to quit. Try a challenge today and come back again for another one.</p>
+			<h2>PRACTICE THE QUIT WITH THESE TIPS</h2>
+			<p>Take small steps to help you build the skills and knowledge you need to quit. Pick a challenge that works for you.</p>
 		</div> <!-- /.col-lg-6 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-md-6 col-sm-12">
 			<div id="flipCard">
@@ -341,6 +341,7 @@
 				<li><a href="https://smokefree.gov/quitting-smoking">Quitting Smoking</a></li>
 				<li><a href="https://smokefree.gov/stay-smokefree-good">Stay Smokefree for Good</a></li>
 				<li><a href="https://smokefree.gov/help-others-quit">Help Others Quit</a></li>
+				<li><a href="https://smokefree.gov/tools-tips/medications-can-help-you-quit/using-nicotine-replacement-therapy">Quit Smoking Medications</a></li>
 				<li><a href="https://smokefree.gov/about-smokefree/">About Smokefree.gov</a></li>
 			</ul>
 		</div> <!-- /.col-lg-6 /.col-md-7 /.col-sm-10 /.col-xs-12 -->
