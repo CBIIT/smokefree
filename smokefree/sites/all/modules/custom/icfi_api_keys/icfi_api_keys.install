@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function icfi_api_keys_schema() {
+  $schema = array();
+  $schema['icfi_api_keys'] = array(
+    'description' => '.',
+    'fields' => array(
+      'api_key_machine_name' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'default' => '',
+        'length' => 255,
+        'description' => 'Machine name for the API keys',
+      ),
+      'api_key_value' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'default' => '',
+        'length' => 255,
+        'description' => 'API Key value',
+      ),
+      'javascript_variable' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'default' => 0,
+        'description' => 'An indicator of whether this will be loaded in Javascript files',
+      ),
+    ),
+  );
+  return $schema;
+}

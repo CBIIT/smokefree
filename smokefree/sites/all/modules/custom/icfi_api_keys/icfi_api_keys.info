@@ -1,0 +1,5 @@
+name = ICFI API Keys
+description = Stores API keys in the database and makes them available to developers via code
+core = 7.x
+package = ICFI Custom
+files[] = ICFIApi.inc
