@@ -33,9 +33,6 @@ function icfi_section_landing_strongarm() {
         'xmlsitemap' => array(
           'weight' => '9',
         ),
-        'domain' => array(
-          'weight' => '1',
-        ),
       ),
       'display' => array(),
     ),
