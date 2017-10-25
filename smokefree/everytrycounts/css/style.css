@@ -825,6 +825,12 @@ p.phone {
 	overflow: hidden;
 	height:300px;
 }
+@media (max-width: 650px) {
+	.box.grayBox {
+		padding: 0px;
+		padding-bottom: 30px;
+	}
+}
 @media (max-width: 350px) {
 	.whiteBox {
 		height:350px;
