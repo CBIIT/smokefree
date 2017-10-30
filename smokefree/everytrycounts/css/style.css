@@ -4,10 +4,10 @@
 	font-family: 'Knockout';
 	src: url('../fonts/Knockout-HTF91-UltmtMiddlewt.eot');
 	src: url('../fonts/Knockout-HTF91-UltmtMiddlewt.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Knockout-HTF91-UltmtMiddlewt.woff2') format('woff2'),
-		url('../fonts/Knockout-HTF91-UltmtMiddlewt.woff') format('woff'),
-		url('../fonts/Knockout-HTF91-UltmtMiddlewt.ttf') format('truetype'),
-		url('../fonts/Knockout-HTF91-UltmtMiddlewt.svg#Knockout-HTF91-UltmtMiddlewt') format('svg');
+	url('../fonts/Knockout-HTF91-UltmtMiddlewt.woff2') format('woff2'),
+	url('../fonts/Knockout-HTF91-UltmtMiddlewt.woff') format('woff'),
+	url('../fonts/Knockout-HTF91-UltmtMiddlewt.ttf') format('truetype'),
+	url('../fonts/Knockout-HTF91-UltmtMiddlewt.svg#Knockout-HTF91-UltmtMiddlewt') format('svg');
 	font-weight: 500;
 	font-style: normal;
 }
@@ -22,9 +22,9 @@ h1 {
 h2 {
 	color:#1c3a5e;
 	font-family: "Knockout", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 56px;
+	font-size: 56px;
 	font-weight: 500;
-    font-style: normal;
+	font-style: normal;
 	line-height: 50px;
 	text-transform: uppercase;
 	margin:0px 0px 15px;
@@ -32,18 +32,18 @@ h2 {
 h3 {
 	color:#2a2a2a;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 24px;
+	font-size: 24px;
 	font-weight: 900;
-    font-style: normal;
+	font-style: normal;
 	line-height: 32px;
 	margin:0px 0px 8px;
 }
 .programBox .titleArea h3 {
 	text-align: center;
 	font-family: "Knockout", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 32px;
+	font-size: 32px;
 	font-weight: 500;
-    font-style: normal;
+	font-style: normal;
 	line-height: 32px;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
@@ -58,7 +58,7 @@ p,
 ul>li {
 	color:#000000;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 20px;
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 28px;
 }
@@ -87,7 +87,7 @@ p.quiz-results-message {
 .moreHelp ul,
 .moreHelp p {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 18px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 28px;
 }
@@ -95,7 +95,7 @@ p.quiz-results-message {
 	margin-bottom:8px;
 }
 .moreHelp ul>li:last-of-type {
-	margin-bottom:24px;	
+	margin-bottom:24px;
 }
 .moreHelp p.phone {
 	margin:0;
@@ -103,22 +103,22 @@ p.quiz-results-message {
 	font-weight: 900;
 }
 .moreHelp p.phone a {
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 .moreHelp p {
-	padding-right:50px;	
+	padding-right:50px;
 }
 @media (max-width: 992px) {
 	.moreHelp h2 {
 		padding-right:30px;
-	}	
+	}
 }
 @media (max-width: 768px) {
 	.moreHelp h2 {
 		padding-right:0px;
 	}
 	.moreHelp p {
-		padding-right:0px;	
+		padding-right:0px;
 	}
 }
 @media (max-width: 650px) {
@@ -181,7 +181,7 @@ p.quiz-results-message {
 	}
 }
 /* -------------------------------------- Rows -------------------------------------- */
-.everyTryCounts, 
+.everyTryCounts,
 .video,
 .tips,
 .questions,
@@ -195,7 +195,7 @@ p.quiz-results-message {
 	position:relative;
 	padding: 30px;
 }
-.somethingNew, 
+.somethingNew,
 .tips,
 .challenges {
 	background-color:#ffffff;
@@ -267,9 +267,9 @@ p.quiz-results-message {
 	position: relative;
 }
 #programChallenge .titleArea::after,
-#programPractice .titleArea::after, 
+#programPractice .titleArea::after,
 #programQuit .titleArea::after {
-	content:'';	
+	content:'';
 	position: absolute;
 	top:0px;
 	right:0px;
@@ -285,16 +285,16 @@ p.quiz-results-message {
 	box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.15);
 }
 #programChallenge .titleArea.active::after,
-#programPractice .titleArea.active::after, 
+#programPractice .titleArea.active::after,
 #programQuit .titleArea.active::after {
 	-webkit-transition: all 400ms ease-in;
-    -ms-transition: all 400ms ease-in;
-    transition: all 400ms ease-in;
+	-ms-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;
 	top: 50%;
-    right: 8px;
-    width: 36px;
-    height: 36px;
-    margin-top: -20px;
+	right: 8px;
+	width: 36px;
+	height: 36px;
+	margin-top: -20px;
 }
 .programBox .programContent {
 	font-size:18px;
@@ -333,7 +333,7 @@ p.quiz-results-message {
 	margin-bottom:0px;
 }
 #programChallenge,
-#programPractice, 
+#programPractice,
 #programQuit {
 	position: absolute;
 	top:0;
@@ -343,12 +343,12 @@ p.quiz-results-message {
 .text_confirmation {
 	color:#000000;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 20px;
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 28px;
 	margin-bottom:15px;
 	padding: 10px;
-    background-color: #e2e2e2;
+	background-color: #e2e2e2;
 }
 @media (max-width: 728px) {
 	.text_confirmation {
@@ -391,7 +391,7 @@ p.quiz-results-message {
 @media (max-width: 450px) {
 	.video {
 		min-height: auto;
-	}	
+	}
 }
 .video .col-sm-12 {
 	z-index:50;
@@ -409,12 +409,12 @@ p.quiz-results-message {
 	.video .smokerMale {
 		top:5px;
 		left:160px;
-	}	
+	}
 }
 @media (max-width: 992px) {
 	.video .smokerMale {
 		background-image: none;
-	}	
+	}
 }
 /* -------------------------------------- Tips -------------------------------------- */
 .carousel {
@@ -442,15 +442,15 @@ p.quiz-results-message {
 	left:0px;
 	min-height:70px;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 15px;
+	font-size: 15px;
 	font-weight: 400;
-    font-style: normal;
+	font-style: normal;
 	line-height: 20px;
 	margin: 0px;
 	padding:0px 30px;
 }
 .carousel-inner {
-    position: absolute;
+	position: absolute;
 	left: 0;
 	top: 0;
 }
@@ -497,12 +497,15 @@ p.quiz-results-message {
 	.carousel {
 		height: 100px;
 	}
-}
-@media (max-width: 330px) {
-	.carousel {
-		height: 80px;
+	.tipContent {
+		bottom:10px;
 	}
 }
+/*@media (max-width: 330px) {*/
+/*.carousel {*/
+/*height: 80px;*/
+/*}*/
+/*}*/
 /* -------------------------------------- Questions -------------------------------------- */
 .questions {
 	background-color:#dad6d3;
@@ -518,7 +521,7 @@ p.quiz-results-message {
 @media (max-width: 992px) {
 	.questions {
 		background-image: none;
-	}	
+	}
 }
 .question {
 	position: absolute;
@@ -536,29 +539,29 @@ p.quiz-results-message {
 	min-height:120px;
 }
 #flipCard {
-  position: relative;
-  height: 370px;
-  background: #fff;
-  /* Set the depth of the elements */
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
+	position: relative;
+	height: 370px;
+	background: #fff;
+	/* Set the depth of the elements */
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px;
 }
 #flipCard .card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  cursor: pointer;
-  /* Set the transition effects */
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -moz-transform 0.4s;
-  -o-transition: -o-transform 0.4s;
-  transition: transform 0.4s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+	/* Set the transition effects */
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	-o-transition: -o-transform 0.4s;
+	transition: transform 0.4s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 #flipCard .card.flipped {
 	-webkit-transform: rotateY( 180deg );
@@ -573,41 +576,41 @@ p.quiz-results-message {
 	transform: rotateY( 90deg );
 }
 #flipCard .card.flipped-in {
-  -webkit-transform: rotateY( 90deg );
-  -moz-transform: rotateY( 90deg );
-  -o-transform: rotateY( 90deg );
-  transform: rotateY( 90deg );
+	-webkit-transform: rotateY( 90deg );
+	-moz-transform: rotateY( 90deg );
+	-o-transform: rotateY( 90deg );
+	transform: rotateY( 90deg );
 }
 #flipCard .card .front,
 #flipCard .card .back {
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  padding: 30px;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding: 30px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 #flipCard .card .front {
-  background: #ededed;
+	background: #ededed;
 }
 #flipCard .card .back {
-  background: #ededed;
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+	background: #ededed;
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
 }
 @media (max-width: 520px) {
 	#flipCard {
-		height:400px;	
+		height:400px;
 	}
 }
 @media (max-width: 360px) {
 	#flipCard {
-		height:440px;	
+		height:440px;
 	}
 }
 /* -------------------------------------- App -------------------------------------- */
@@ -646,7 +649,7 @@ p.quiz-results-message {
 @media (max-width: 1200px) {
 	.quitGuideIntro {
 		padding-right:160px;
-	}	
+	}
 }
 @media (max-width: 992px) {
 	.quitGuideIntro {
@@ -710,16 +713,16 @@ p.quiz-results-message {
 	.moreHelp {
 		background-image: url(../images/morehelp-background.png);
 		background-position: left top;
-	}	
+	}
 }
 @media (max-width: 768px) {
 	.moreHelp {
 		background-image: none;
-	}	
+	}
 }
 /* -------------------------------------- footer - call info -------------------------------------- */
 p.phone {
-    padding-top:10px;
+	padding-top:10px;
 }
 .callinfo {
 	background-color: rgba(0,0,0,0.7);
@@ -762,7 +765,7 @@ p.phone {
 
 @media (max-width: 600px) {
 	.call-number {
-		margin-bottom:80px;	
+		margin-bottom:80px;
 	}
 }
 @media (max-width: 400px) {
@@ -786,7 +789,7 @@ p.phone {
 		padding-left:0px;
 	}
 	.call-number::before {
-		display:none;	
+		display:none;
 	}
 }
 /* -------------------------------------- shadows -------------------------------------- */
@@ -825,9 +828,19 @@ p.phone {
 	overflow: hidden;
 	height:300px;
 }
+@media (max-width: 650px) {
+	.box.grayBox {
+		padding: 0px;
+		padding-bottom: 30px;
+	}
+}
 @media (max-width: 350px) {
 	.whiteBox {
 		height:350px;
+	}
+	.box.grayBox {
+		padding: 0px;
+		padding-bottom: 35px;
 	}
 }
 /* -------------------------------------- buttons -------------------------------------- */
@@ -841,9 +854,9 @@ button {
 	border-radius:0;
 	color:#ffffff;
 	font-family: "Knockout", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 32px;
+	font-size: 32px;
 	font-weight: 500;
-    font-style: normal;
+	font-style: normal;
 	line-height: 32px;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
@@ -854,8 +867,8 @@ button {
 .programs button.btn:hover {
 	background-color:#3e5269;
 	-webkit-transition: background-color 500ms ease-in;
-    -ms-transition: background-color 500ms ease-in;
-    transition: background-color 500ms ease-in;
+	-ms-transition: background-color 500ms ease-in;
+	transition: background-color 500ms ease-in;
 }
 .programs button.btn.btn-signup {
 	height:64px;
@@ -863,9 +876,9 @@ button {
 	display:inline-block;
 	color:#ffffff;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 22px;
+	font-size: 22px;
 	font-weight: 900;
-    font-style: normal;
+	font-style: normal;
 	line-height: 22px;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
@@ -877,9 +890,9 @@ button {
 }
 .answerGroup button.btn {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 24px;
+	font-size: 24px;
 	font-weight: 900;
-    font-style: normal;
+	font-style: normal;
 	line-height: 28px;
 	text-transform: uppercase;
 	width:47%;
@@ -890,18 +903,18 @@ button {
 	border-radius: 0;
 }
 .answerGroup button.btn:first-of-type {
-	margin-right:10px;	
+	margin-right:10px;
 }
 .answerGroup button.btn:last-of-type {
-	margin-left:10px;	
+	margin-left:10px;
 }
 .answerGroup button.btn:focus,
 .answerGroup button.btn:hover {
 	background-color:#5B799B;
 	color:#ffffff;
 	-webkit-transition: all 500ms ease-in;
-    -ms-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
+	-ms-transition: all 500ms ease-in;
+	transition: all 500ms ease-in;
 }
 #quiz_next_button,
 #try_again {
@@ -910,9 +923,9 @@ button {
 }
 .challenges .btn.btn-calendar {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 14px;
+	font-size: 14px;
 	font-weight: 400;
-    font-style: normal;
+	font-style: normal;
 	line-height: 20px;
 	padding: 6px 12px;
 	color: #1c3a5e;
@@ -943,8 +956,8 @@ button {
 	color: #ffffff;
 	border:1px solid #3e5269;
 	-webkit-transition: all 500ms ease-in;
-    -ms-transition: all 500ms ease-in;
-    transition: all 500ms ease-in;
+	-ms-transition: all 500ms ease-in;
+	transition: all 500ms ease-in;
 }
 .challenges .btn.btn-calendar:focus .calendarIcon,
 .challenges .btn.btn-calendar:hover .calendarIcon {
@@ -952,9 +965,9 @@ button {
 }
 .challenges .btn.btn-challenge {
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 24px;
+	font-size: 24px;
 	font-weight: 900;
-    font-style: normal;
+	font-style: normal;
 	line-height: 28px;
 	text-transform: uppercase;
 	width:100%;
@@ -967,16 +980,16 @@ button {
 .challenges .btn.btn-challenge:hover {
 	background-color:#3e5269;
 	-webkit-transition: background-color 500ms ease-in;
-    -ms-transition: background-color 500ms ease-in;
-    transition: background-color 500ms ease-in;
+	-ms-transition: background-color 500ms ease-in;
+	transition: background-color 500ms ease-in;
 }
 
 @media (max-width: 1200px) {
 	.answerGroup button.btn {
-		width:45%;	
+		width:45%;
 	}
-	.challenges .btn.btn-calendar { 
-		float:none;	
+	.challenges .btn.btn-calendar {
+		float:none;
 	}
 }
 @media (max-width: 650px) {
@@ -1031,10 +1044,10 @@ button {
 		width:45%;
 	}
 	.answerGroup button.btn:first-of-type {
-		margin-right:5px;	
+		margin-right:5px;
 	}
 	.answerGroup button.btn:last-of-type {
-		margin-left:5px;	
+		margin-left:5px;
 	}
 	#quiz_next_button,
 	#try_again {
