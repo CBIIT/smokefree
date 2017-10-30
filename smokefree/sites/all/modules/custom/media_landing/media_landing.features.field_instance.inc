@@ -560,6 +560,58 @@ function media_landing_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-media_landing-field_read_more_text'.
+  $field_instances['node-media_landing-field_read_more_text'] = array(
+    'bundle' => 'media_landing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_read_more_text',
+    'label' => 'Read More Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 25,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 44,
+    ),
+  );
+
   // Exported field_instance: 'node-media_landing-field_smokefreetxt_image'.
   $field_instances['node-media_landing-field_smokefreetxt_image'] = array(
     'bundle' => 'media_landing',
@@ -792,6 +844,7 @@ function media_landing_field_default_field_instances() {
   t('Header Blurb body');
   t('Image to appear beneath the SmokefreeTXT promo');
   t('Image to appear over the App promo');
+  t('Read More Text');
   t('SmokefreeTXT Image');
   t('SmokefreeTXT Image Mobile');
   t('Social Display');
