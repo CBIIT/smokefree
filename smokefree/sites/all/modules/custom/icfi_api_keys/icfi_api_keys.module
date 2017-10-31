@@ -3,7 +3,7 @@
 /**
  * Implements hook_init
  *
- * Make sure all JS files are available globally
+ * Make sure all JS variables are available globally
  */
 function icfi_api_keys_init() {
   $variables = ICFIApi::getJsKeys();
@@ -126,7 +126,7 @@ function icfi_api_keys_add_form_submit($form, &$form_state) {
     drupal_set_message(t('Successfully entered the new API keys.'), 'status');
   }
   else {
-    drupal_set_message(t('Could not add the API key. Please make sure that the value doe snot exist already. Refer logs for more information'), 'error');
+    drupal_set_message(t('Could not add the API key. Please make sure that this is a new entry. To update existing keys use the "edit" feature.'), 'error');
   }
   $form_state['redirect'] = 'admin/config/system/icfi-api';
 }
