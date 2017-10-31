@@ -323,10 +323,15 @@
 
 .node-type-cr-article .sidebar-button-wrapper .btn-include {
   width: 75%;
-  @media (max-width: 420px) {
+  @media (max-width: 618px) {
     float: none;
     position: relative;
     padding-bottom: 55px;
+  }
+  @media (min-width: 619px) and (max-width: 766px) {
+    float: none;
+    position: relative;
+    padding-bottom: 36px;
   }
 }
 
