@@ -361,14 +361,14 @@ If you are reading this, you are probably interested in these topics and that li
     ),
   );
   /* Field: Content: Body */
-  $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
-  $handler->display->display_options['fields']['body_1']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body_1']['field'] = 'body';
-  $handler->display->display_options['fields']['body_1']['label'] = '';
-  $handler->display->display_options['fields']['body_1']['alter']['max_length'] = '500';
-  $handler->display->display_options['fields']['body_1']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body_1']['settings'] = array(
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '500';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['settings'] = array(
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
