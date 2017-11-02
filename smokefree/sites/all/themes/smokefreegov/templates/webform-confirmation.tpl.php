@@ -17,6 +17,8 @@
 ?>
 
 <?php
+define('TEST_QUIZ', 863);
+define('TEST_QUIZ_2', 862);
 define('NICOTINE_WITHDRAWAL_SYMPTOMS_QUIZ', 37);
 define('NICOTINE_ADDICTION_QUIZ', 38);
 define('DEPRESSION_QUIZ', 31);
@@ -250,6 +252,19 @@ define('WHY_I_USE_TOBACCO_QUIZ', 149);
     }
   }
 
+    if($node->nid == NICOTINE_WITHDRAWAL_SYMPTOMS_QUIZ || $node->nid == NICOTINE_ADDICTION_QUIZ || $node->nid == TEST_QUIZ || $node->nid == TEST_QUIZ_2) {
+        // Id of the current webform.
+        $quiz = $node->nid;
+        $score = 0;
+        // Iterate through all the answers, running each answer through the
+        // calculate score function and then adding the value to $score.
+        foreach(array($submission->data) as $data) {
+            foreach($data as $question) {
+                $score += $question[0];
+            }
+        }
+    }
+
   // The scoring for the depression quiz is wacky.  You can see how it works at
   // http://www.ids-qids.org/index2.html#table2.
   if($node->nid == DEPRESSION_QUIZ || $node->nid == DEPRESSION_QUIZ_2) {
@@ -311,7 +326,76 @@ define('WHY_I_USE_TOBACCO_QUIZ', 149);
 
 
 <div class="webform-confirmation">
-	<!-- Markup for Depression quiz -->
+    <!-- Test quiz markup -->
+    <?php if($node->nid == TEST_QUIZ): ?>
+        <div class="quiz-dip-outer">
+            <div class="quiz-dip-header">
+                <h2 class="quiz-dip-title">Quiz: <strong>Think you know dip?</strong></h2>
+                <p class="quiz-dip-question-number">Your <span>Results</span></p>
+            </div>
+            <div class="quiz-dip-inner">
+                <div class="quiz-dip-scoring-block">
+                    <?php if($score <= 3): ?>
+                        <div class="score score-low">
+                            <h3>Not so great.</h3>
+                            <p>Want to try again?</p>
+                            <p><a href="/content/quiz-think-you-know-dip" class="btn-retry">Try again</a></p>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($score > 3 && $score <= 6): ?>
+                        <div class="score score-medium">
+                            <h3>Not bad &mdash; but not amazing.</h3>
+                            <p>Read more on the site and try again.</p>
+                            <p><a href="/content/quiz-think-you-know-dip" class="btn-retry">Try again</a></p>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($score > 6): ?>
+                        <div class="score score-high">
+                            <h3>Nice!</h3>
+                            <p>You seem to know your stuff.</p>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div><!-- / .quiz-dip-inner  -->
+        </div><!-- / .quiz-dip-outer  -->
+    <?php endif; ?>
+    <!--End of Test quiz 2 markup -->
+    <!-- Test quiz 2 markup -->
+    <?php if($node->nid == TEST_QUIZ_2): ?>
+        <div class="quiz-dip-outer">
+            <div class="quiz-dip-header">
+                <h2 class="quiz-dip-title">Dip Quiz: <strong>Myths and Facts</strong></h2>
+                <p class="quiz-dip-question-number">Your <span>Results</span></p>
+            </div>
+            <div class="quiz-dip-inner">
+                <div class="quiz-dip-scoring-block">
+                    <?php if($score <= 2): ?>
+                        <div class="score score-low">
+                            <h3>Come on! You can do better than that.</h3>
+                            <p>Read up more and try again.</p>
+                            <p><a href="/content/dip-quiz-myths-and-facts" class="btn-retry">Try again</a></p>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($score == 3): ?>
+                        <div class="score score-medium">
+                            <h3>Not terrible, but you could have done better.</h3>
+                            <p>Read up more and try again.</p>
+                            <p><a href="/content/dip-quiz-myths-and-facts" class="btn-retry">Try again</a></p>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($score > 3): ?>
+                        <div class="score score-high">
+                            <h3>You seem to know the facts.</h3>
+                            <p>Does that mean you’re <a href="/quit-plan">ready to quit</a>?</p>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div><!-- / .quiz-dip-inner  -->
+        </div><!-- / .quiz-dip-outer  -->
+    <?php endif; ?>
+    <!--End of Test quiz 2 markup -->
+
+    <!-- Markup for Depression quiz -->
 	<?php if($node->nid == DEPRESSION_QUIZ || $node->nid == DEPRESSION_QUIZ_2): ?>
 
 		<div id="depression">

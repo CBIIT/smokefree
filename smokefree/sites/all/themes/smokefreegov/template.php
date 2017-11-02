@@ -282,6 +282,7 @@ function smokefreegov_preprocess_html(&$variables) {
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/linkanimation.custom.js', 'file');
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/jquery.slides.min.js', 'file');
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/jquery.bxslider.js', 'file');
+  drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/quiz-dip.js', 'file');
 
   // JS For Livehelp.
 
