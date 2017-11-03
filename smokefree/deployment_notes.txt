@@ -1,3 +1,9 @@
+Smokefree 1.9 2017-11-02
+-----------------------
+- SF-573 Module to remove API keys from codebase
+- SF-588 Webform Clear module
+- SF-599 Smokeless graphics and quizzes
+
 Smokefree 1.8 2017-10-19
 -----------------------
 - SF-563 Fixing teen link
