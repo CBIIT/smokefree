@@ -14,22 +14,22 @@
 <meta name="msapplication-tap-highlight" content="no">
 	<!-- Google Tag Manager -->
 	<script>
-		if (location.hostname == 'smokefree.gov' || location.hostname == 'www.smokefree.gov') {
-			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
-					{'gtm.start': new Date().getTime(),event:'gtm.js'}
-			);var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-55BKGG');
-		}
-		else {
-			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
-					{'gtm.start': new Date().getTime(),event:'gtm.js'}
-			);var f=d.getElementsByTagName(s)[0],
-					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-MKWX85');
-		}
+        if (location.hostname == 'smokefree.gov' || location.hostname == 'www.smokefree.gov') {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+                {'gtm.start': new Date().getTime(),event:'gtm.js'}
+            );var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-55BKGG');
+        }
+        else {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+                {'gtm.start': new Date().getTime(),event:'gtm.js'}
+            );var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MKWX85');
+        }
 	</script>
 	<!-- End Google Tag Manager -->
 <!-- Google Fonts, Muli -->
@@ -46,7 +46,6 @@
 </head>
 
 <body>
-
 <header role="banner">
 <div class="container">
 	<div class="row everyTryCounts">
@@ -68,7 +67,7 @@
 	<div class="row somethingNew">
 		<div class="col-lg-5 col-md-6 col-sm-12">
 			<h2>Try Something New</h2>
-			<p>Try a text message program to build the skills and confidence you need for your next quit. You’ll receive texts with challenges and tips to keep you on track. You haven’t failed as long as you keep trying.</p>
+			<p>Quitting smoking takes skills. And building skills takes practice. Try a text message program to build the skills and confidence you need to quit for good.</p>
 			<p class="bold">CHOOSE THE PROGRAM THAT’S RIGHT FOR YOU</p>
 		</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
@@ -82,13 +81,13 @@
 				<div class="programBox" id="programChallenge" v-if="show_program_challenge">
 					<button class="titleArea active" id="programChallengeClose" v-on:click="show_program_challenge = !show_program_challenge"><h3>TRY DAILY CHALLENGES</h3></button>
 					<div class="programContent">
-						<p>Get a new challenge at 9 a.m. every day for a week to build skills that will help you quit later.</p>
+						<p>Get a new challenge at 9 a.m. every day for a week to build skills without quitting.</p>
 						<p class="example">Try to resist 2 cigarette cravings today for 10 minutes each. Go for a walk or call someone. Cravings usually last only 5 to 10 minutes.</p>
 						<div class="input-group" v-if="show_program_challenge_submit==true">
 						   <input class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_challenge_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programchallengephone') }" id="programchallengephone" name="programchallengephone" />
 							<span v-show="errors.has('programchallengephone')" class="help is-danger">{{ errors.first('programchallengephone') }}</span>
 						   <span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Start Now</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else v-html="program_challenge_confirmation">
@@ -109,7 +108,7 @@
 						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_practice_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programpracticephone') }" id="programpracticephone" name="programpracticephone" />
 							<span v-show="errors.has('programpracticephone')" class="help is-danger">{{ errors.first('programpracticephone') }}</span>
 							<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Start Now</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
                         <div class="text_confirmation" v-else v-html="program_practice_confirmation">
@@ -130,7 +129,7 @@
 						   <input type="text" class="form-control" maxlength="11" placeholder="Enter Your Phone Number" v-model="program_quit_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programquitphone') }" id="programquitphone" name="programquitphone" />
 							<span v-show="errors.has('programquitphone')" class="help is-danger">{{ errors.first('programquitphone') }}</span>
 							<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Start Now</button>
+								<button class="btn btn-signup" type="button" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Sign Up</button>
 						   </span>
 						</div> <!-- /.input-group -->
 						<div class="text_confirmation" v-else v-html="program_quit_confirmation">
@@ -146,7 +145,7 @@
 	<div class="row video">
 		<div class="topShadow"></div> <!-- Top Shadow -->
 		<div class="col-lg-3 col-md-4 col-sm-12">
-			<h2>USE YOUR PHONE TO GET READY TO QUIT</h2>
+			<h2>What Will You Get Out of This Try?</h2>
 		</div> <!-- /.col-lg-3 /.col-md-4 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-2 col-sm-12">
 			<div class="embed-responsive embed-responsive-16by9">
@@ -159,7 +158,7 @@
 	<div class="row tips">
 		<div class="col-lg-5 col-md-6 col-sm-12">
 			<h2>Deal With Cravings</h2>
-			<p>Cravings can make quitting hard, but they typically last only 5 to 10 minutes. It might be uncomfortable, but you can get through cravings with these tips.</p>
+			<p>Cravings can make quitting hard, but they typically last only 5 to 10 minutes. It might be uncomfortable, but you can wait them out.</p>
 			<p class="bold">FIGHT CRAVINGS WITH THESE TIPS</p>
 		</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
@@ -184,11 +183,11 @@
     				</div> <!-- /.carousel-inner -->
                     </transition-group>
 					<!-- Controls -->
-  					<a class="left carousel-control" v-bind:class="'current_tip_' + current_crave_tip_number" href="#carousel-tips" role="button" v-on:click.prevent="previous_crave_tip" >
+  					<a class="left carousel-control" href="#carousel-tips" role="button" v-on:click.prevent="previous_crave_tip" >
     					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     					<span class="sr-only">Previous</span>
   					</a>
-  					<a class="right carousel-control" v-bind:class="'current_tip_' + current_crave_tip_number" href="#carousel-tips" role="button" v-on:click.prevent="next_crave_tip">
+  					<a class="right carousel-control" href="#carousel-tips" role="button" v-on:click.prevent="next_crave_tip">
     					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     					<span class="sr-only">Next</span>
   					</a>
@@ -220,8 +219,8 @@
 					<div v-for="question, index in all_quiz_questions" v-if="index == current_quiz_question_number - 1 && show_quiz_part=='question'" v-bind:key="index + '_question'" class="question" v-bind:class="'question_' + index">
 						<p><strong>True or False?</strong> {{ question.node.field_statement }}</p>
 						<div class="answerGroup">
-							<button v-on:click="record_answer" v-bind:class="'current_question_' + current_quiz_question_number" class="btn" id="true">TRUE</button>
-							<button v-on:click="record_answer" v-bind:class="'current_question_' + current_quiz_question_number" class="btn" id="false">FALSE</button>
+							<button v-on:click="record_answer" class="btn" id="true">TRUE</button>
+							<button v-on:click="record_answer" class="btn" id="false">FALSE</button>
 						</div>
 					</div>
 					<div v-for="question, index in all_quiz_questions" v-if="index == current_quiz_question_number - 1 && show_quiz_part=='feedback'" v-bind:key="index + '_answer'" class="question" v-bind:class="'question_' + index">
@@ -245,8 +244,8 @@
 	
 	<div class="row challenges">
 		<div class="col-lg-6 col-md-6 col-sm-12">
-			<h2>PRACTICE THE QUIT WITH THESE TIPS</h2>
-			<p>Take small steps to help you build the skills and knowledge you need to quit. Pick a challenge that works for you.</p>
+			<h2>Conquer Your Daily Challenge</h2>
+			<p>Daily challenges are small steps that help you build the skills and knowledge you need to quit. Try a challenge today and come back again for another one.</p>
 		</div> <!-- /.col-lg-6 /.col-md-6 /.col-sm-12 -->
 		<div class="col-lg-6 col-md-6 col-sm-12">
 			<div id="flipCard">
@@ -267,7 +266,7 @@
 								</div> <!-- /.col-lg-6 -->
 								<div class="col-lg-6">
 									<div class="calendar-button-container">
-										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index" v-bind:class="'current_challenge_' + (index + 1)">Add to My Calendar</span></button>
+										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index">Add to My Calendar</span></button>
 										<ul class="calendar-dropdown-menu" v-if="show_calendar_dropdown" role="menu" v-bind:aria-labelledby="'calendarAdd' + index">
 											<li>
 												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
@@ -341,14 +340,14 @@
 				<li><a href="https://smokefree.gov/quitting-smoking">Quitting Smoking</a></li>
 				<li><a href="https://smokefree.gov/stay-smokefree-good">Stay Smokefree for Good</a></li>
 				<li><a href="https://smokefree.gov/help-others-quit">Help Others Quit</a></li>
-				<li><a href="https://smokefree.gov/tools-tips/medications-can-help-you-quit/using-nicotine-replacement-therapy">Quit Smoking Medications</a></li>
+				<li><a href="https://smokefree.gov/tools-tips/medications-can-help-you-quit/using-nicotine-replacement-therapy">Using Nicotine Replacement Therapy</a></li>
 				<li><a href="https://smokefree.gov/about-smokefree/">About Smokefree.gov</a></li>
 			</ul>
 		</div> <!-- /.col-lg-6 /.col-md-7 /.col-sm-10 /.col-xs-12 -->
 	</div> <!-- /.row -->
 	<div class="row callinfo">
 		<div class="col-md-6">
-			<p>The <b>National Cancer Institute’s</b> trained counselors provide information and support for quitting in English and Spanish. Call Monday through Friday 8:00 a.m. to 8:00 p.m. Eastern time.</p></div>
+			<p>The <b>National Cancer Institute’s</b> trained counselors provide information and support for quitting in English and Spanish. Call Monday through Friday 9:00 a.m. to 9:00 p.m. Eastern time or get live online assistance from the NCI's <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> service.</p></div>
 		<div class="col-md-6">
 			<div class="call-number">
 				<p class="phone">
