@@ -1,4 +1,4 @@
-@javascript
+@api
 Feature: Basic validation
   In order to prove Drupal was installed properly
   As a developer
