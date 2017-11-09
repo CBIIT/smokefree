@@ -5,7 +5,7 @@
   I need to be able to view all contents on the home page
 
     Background:
-      Given I visit homepage
+      Given I visit "/"
 
     Scenario: User looks for the homepage logo
       Then I should see the text "smokefree.gov"
