@@ -267,16 +267,16 @@
 								</div> <!-- /.col-lg-6 -->
 								<div class="col-lg-6">
 									<div class="calendar-button-container">
-										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index" v-bind:class="'current_challenge_' + (index + 1)">Add to My Calendar</span></button>
+										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index">Add to My Calendar</span></button>
 										<ul class="calendar-dropdown-menu" v-if="show_calendar_dropdown" role="menu" v-bind:aria-labelledby="'calendarAdd' + index">
 											<li>
-												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
+												<button type="button" v-bind:class="'btn btn-calendar-dropdown calendarAdd_Google_current_challenge_' + (index + 1)" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
 											</li>
 											<li>
-												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
+												<button type="button" v-bind:class="'btn btn-calendar-dropdown calendarAdd_iCal_current_challenge_' + (index + 1)" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
 											</li>
 											<li>
-												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
+												<button type="button" v-bind:class="'btn btn-calendar-dropdown calendarAdd_Outlook_current_challenge_' + (index + 1)" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
 											</li>
 										</ul>
 									</div> <!-- /.calendar-button-container -->
