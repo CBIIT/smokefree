@@ -267,16 +267,16 @@
 								</div> <!-- /.col-lg-6 -->
 								<div class="col-lg-6">
 									<div class="calendar-button-container">
-										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index" v-bind:class="'current_challenge_' + (index + 1)">Add to My Calendar</span></button>
+										<button class="btn btn-calendar" v-on:click="show_calendar_dropdown = !show_calendar_dropdown"><span class="calendarIcon"></span><span class="calendarAdd" v-bind:id="'calendarAdd' + index">Add to My Calendar</span></button>
 										<ul class="calendar-dropdown-menu" v-if="show_calendar_dropdown" role="menu" v-bind:aria-labelledby="'calendarAdd' + index">
 											<li>
-												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
+												<button type="button" v-bind:class="'btn btn-calendar-dropdown calendarAdd_Google_current_challenge_' + (index + 1)" v-on:click.prevent="_addEvent($event, 'google', challenge.node.title, challenge.node.field_challenge_description)">Google Calendar</button>
 											</li>
 											<li>
-												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
+												<button type="button" v-bind:class="'btn btn-calendar-dropdown calendarAdd_iCal_current_challenge_' + (index + 1)" v-on:click.prevent="_addEvent($event, 'appleical', challenge.node.title, challenge.node.field_challenge_description)">iCal</button>
 											</li>
 											<li>
-												<button type="button" class="btn btn-calendar-dropdown" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
+												<button type="button" v-bind:class="'btn btn-calendar-dropdown calendarAdd_Outlook_current_challenge_' + (index + 1)" v-on:click.prevent="_addEvent($event, 'outlook', challenge.node.title, challenge.node.field_challenge_description)">Outlook</button>
 											</li>
 										</ul>
 									</div> <!-- /.calendar-button-container -->
@@ -341,14 +341,14 @@
 				<li><a href="https://smokefree.gov/quitting-smoking">Quitting Smoking</a></li>
 				<li><a href="https://smokefree.gov/stay-smokefree-good">Stay Smokefree for Good</a></li>
 				<li><a href="https://smokefree.gov/help-others-quit">Help Others Quit</a></li>
-				<li><a href="https://smokefree.gov/tools-tips/medications-can-help-you-quit/using-nicotine-replacement-therapy">Quit Smoking Medications</a></li>
+				<li><a href="https://smokefree.gov/tools-tips/explore-quit-methods">Explore Quit Methods</a></li>
 				<li><a href="https://smokefree.gov/about-smokefree/">About Smokefree.gov</a></li>
 			</ul>
 		</div> <!-- /.col-lg-6 /.col-md-7 /.col-sm-10 /.col-xs-12 -->
 	</div> <!-- /.row -->
 	<div class="row callinfo">
 		<div class="col-md-6">
-			<p>The <b>National Cancer Institute’s</b> trained counselors provide information and support for quitting in English and Spanish. Call Monday through Friday 9:00 a.m. to 9:00 p.m. Eastern time or get live online assistance from the NCI's <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> service.</p></div>
+			<p>The <b>National Cancer Institute’s</b> trained counselors provide information and support for quitting in English and Spanish. Call the quitline or get live online assistance from NCI's <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> service Monday through Friday from 9:00 a.m. to 9:00 p.m. Eastern time. </p></div>
 		<div class="col-md-6">
 			<div class="call-number">
 				<p class="phone">
