@@ -127,7 +127,7 @@
       <input type="hidden" name="filter"          value="0" />
       <input type="hidden" name="getfields"       value="*" />
       <label for="searchbox-footer"
-             class="hiddenSearch sr-only">Search</label>
+             class="hiddenSearch hidden">Search</label>
       <div id="search-footer-container">
         <input id="searchbox-footer"
                type="text"
