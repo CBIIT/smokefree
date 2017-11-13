@@ -1048,7 +1048,7 @@ caption {
   .slide-content p {
     font-size: 1.65em;
     line-height: 1.3; }
-    @media screen and (max-width: 39.8em) {
+    @media screen and (max-width: 49.8em) {
       .slide-content p {
         font-size: 1.25em; } }
   .slide-content .t-up-1 {
