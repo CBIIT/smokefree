@@ -12,4 +12,4 @@
 #   $DOCROOT - name of the docroot folder
 #   $DOCKER_RUNNING - (string) "true" or "false"
 
-java -Dwebdriver.chrome.driver=${PROJECT_ROOT}/tests/chromedriver -jar ${PROJECT_ROOT}/tests/selenium-server-standalone-3.4.0.jar
+java -Dwebdriver.chrome.driver=${PROJECT_ROOT}/tests/chromedriver -jar ${PROJECT_ROOT}/tests/selenium-server-standalone-3.7.1.jar

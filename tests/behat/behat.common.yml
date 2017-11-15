@@ -28,6 +28,7 @@ default:
       # Map template regions.
       region_map:
         header: "#header"
+        main_nav: "#main-nav"
         content: "#content"
         footer: "#footer"
       # Map selectors.

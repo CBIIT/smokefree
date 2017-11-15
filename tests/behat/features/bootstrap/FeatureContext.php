@@ -183,4 +183,56 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
         }
     }
 
+    /**
+     * @When /^I hover over the link "([^"]*)"$/
+     */
+    public function iHoverOverTheLink($link)
+    {
+        $session = $this->getSession(); // get the mink session
+        $element = $this->getSession()->getPage();
+        $result = $element->findLink($link);
+        // errors must not pass silently
+        if (null === $result) {
+            throw new \InvalidArgumentException(sprintf('Could not evaluate id|title|alt|text: "%s"', $link));
+        }
+
+        //hovering over the element
+        $result->mouseOver();
+    }
+
+    /**
+     * @Given I click the :arg1 element
+     */
+    public function iClickTheElement($selector)
+    {
+        $page = $this->getSession()->getPage();
+        $element = $page->find('css', $selector);
+
+        if (empty($element)) {
+            throw new Exception("No html element found for the selector ('$selector')");
+        }
+
+        $element->click();
+    }
+
+    /**
+     * @When I scroll :elementId into view
+     */
+    public function scrollIntoView($elementId) {
+        $function = <<<JS
+(function(){
+ var elem = document.getElementById("$elementId");
+       elem.scrollIntoView(false);
+       })()
+JS;
+        try {
+            $this->getSession()->executeScript($function);
+        }
+        catch(Exception $e) {
+            throw new \Exception("ScrollIntoView failed");
+        }
+    }
+
 }
+
+
