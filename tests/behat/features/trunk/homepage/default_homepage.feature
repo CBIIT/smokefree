@@ -4,8 +4,13 @@ Feature: Home Page
   As a website user
   I need to be able to view all contents on the home page
 
+<<<<<<< HEAD:tests/behat/features/trunk/homepage/default_homepage.feature
   Background:
       Given I am on the homepage
+=======
+    Background:
+      Given I visit "/"
+>>>>>>> b1e9f034e79f4a4e8eb93bb1845c2ce6f94167e6:tests/behat/features/trunk/homepage/default.feature
 
   Scenario:
      When I reload the page

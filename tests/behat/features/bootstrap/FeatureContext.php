@@ -191,7 +191,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
         $session = $this->getSession(); // get the mink session
         $element = $this->getSession()->getPage();
         $result = $element->findLink($link);
-        // errors must not pass silently
+
         if (null === $result) {
             throw new \InvalidArgumentException(sprintf('Could not evaluate id|title|alt|text: "%s"', $link));
         }
@@ -200,8 +200,9 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
         $result->mouseOver();
     }
 
+
     /**
-     * @Given I click the :arg1 element
+     * @Given I click the :input element
      */
     public function iClickTheElement($selector)
     {
@@ -214,6 +215,8 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
 
         $element->click();
     }
+
+
 
     /**
      * @When I scroll :elementId into view
