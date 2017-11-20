@@ -339,14 +339,14 @@ define('WHY_I_USE_TOBACCO_QUIZ', 149);
                         <div class="score score-low">
                             <h3>Not so great.</h3>
                             <p>Want to try again?</p>
-                            <p><a href="/content/quiz-think-you-know-dip" class="btn-retry">Try again</a></p>
+                            <p><a href="/dealing-triggers" class="btn-retry">Try again</a></p>
                         </div>
                     <?php endif; ?>
                     <?php if ($score > 3 && $score <= 6): ?>
                         <div class="score score-medium">
                             <h3>Not bad &mdash; but not amazing.</h3>
                             <p>Read more on the site and try again.</p>
-                            <p><a href="/content/quiz-think-you-know-dip" class="btn-retry">Try again</a></p>
+                            <p><a href="/dealing-triggers" class="btn-retry">Try again</a></p>
                         </div>
                     <?php endif; ?>
                     <?php if ($score > 6): ?>
@@ -373,14 +373,14 @@ define('WHY_I_USE_TOBACCO_QUIZ', 149);
                         <div class="score score-low">
                             <h3>Come on! You can do better than that.</h3>
                             <p>Read up more and try again.</p>
-                            <p><a href="/content/dip-quiz-myths-and-facts" class="btn-retry">Try again</a></p>
+                            <p><a href="/why-do-you-want-quit-dip" class="btn-retry">Try again</a></p>
                         </div>
                     <?php endif; ?>
                     <?php if ($score == 3): ?>
                         <div class="score score-medium">
                             <h3>Not terrible, but you could have done better.</h3>
                             <p>Read up more and try again.</p>
-                            <p><a href="/content/dip-quiz-myths-and-facts" class="btn-retry">Try again</a></p>
+                            <p><a href="/why-do-you-want-quit-dip" class="btn-retry">Try again</a></p>
                         </div>
                     <?php endif; ?>
                     <?php if ($score > 3): ?>
