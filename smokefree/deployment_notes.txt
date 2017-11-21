@@ -1,3 +1,10 @@
+Smokefree 1.10 2017-11-16
+-----------------------
+- SF-599, SF-617 and SF-618 Fixes to dipfree quizzes
+- SF-621 Adding title to quiz and calculator pages
+- SF-599 Smokeless graphics and quizzes
+- SF-616 Adding alt text on images
+
 Smokefree 1.9 2017-11-02
 -----------------------
 - SF-573 Module to remove API keys from codebase
