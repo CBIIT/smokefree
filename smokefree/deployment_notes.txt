@@ -1,7 +1,8 @@
 Smokefree 1.11 2017-11-30
 -----------------------
-- SF-551, SF-611, SF-635 and SF-601 Everytrycounts (POS) Page
+- SF-551, SF-611, SF-635, SF-629 and SF-601 Everytrycounts (POS) Page
 - SF-622 and SF-623 Adding four new question to the Daily Challenges and Practice Quit webforms
+- SF-642 Re-enable HYT PA and HYT Diet web opt ins
 
 Smokefree 1.10 2017-11-16
 -----------------------
