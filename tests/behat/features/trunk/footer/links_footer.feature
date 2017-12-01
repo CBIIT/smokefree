@@ -10,7 +10,7 @@ Feature: Footer Content Links
   Scenario Outline: Main navigation links in the footer get directed to their corresponding pages
     When I click "<link>" in the footer
     Then I am on "<page>"
-   But the response status code should be 200
+#   But the response status code should be 200
    Examples: Main navigations links and corresponding pages
       |link                      | page                     |
       | Tools & Tips             | tools-tips               |
@@ -62,7 +62,7 @@ Feature: Footer Content Links
   Scenario Outline: The sub menu links under the "Stay Smokefree for Good" main navigation link in the footer get directed to their corresponding pages
     When I click "<sub_menu_link>" in the footer
     Then I am on "<page>"
-    But the response status code should not be 200
+    But the response status code should be 200
     Examples: Navigation footer "Stay Smokefree for Good" sub menu links
       | sub_menu_link         | page                                   |
       | How to Stay Smokefree | stay-smokefree-good/how-stay-smokefree |
@@ -73,7 +73,7 @@ Feature: Footer Content Links
   Scenario Outline: The sub menu links under the "Help Others Quit" main navigation link in the footer get directed to their corresponding pages
     When I click "<sub_menu_link>" in the footer
     Then I am on "<page>"
-    But the response status code should not be 200
+    But the response status code should be 200
     Examples: Navigation footer "Help Others Quit" sub menu links
       | sub_menu_link            | page                                  |
       | For Health Professionals | help-others-quit/health-professionals |
@@ -82,7 +82,7 @@ Feature: Footer Content Links
   Scenario: The sub menu link under the "About Smokefree.gov" main navigation link in the footer get directed to its corresponding page
     When I click "Smokefree Partner Toolkit" in the footer
     Then I am on "help-others-quit/health-professionals/smokefree-partner-toolkit"
-    But the response status code should not be 200
+    But the response status code should be 200
 
   Scenario Outline: Smokefree vet, women, teen, espanol and 60+ website image links get directed to their corresponding pages
     When I click "<link>" in the footer
