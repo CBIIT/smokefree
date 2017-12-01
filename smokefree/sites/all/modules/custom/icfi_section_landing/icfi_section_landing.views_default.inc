@@ -52,37 +52,13 @@ function icfi_section_landing_views_default_views() {
   $handler->display->display_options['fields']['field_short_summary']['field'] = 'field_short_summary';
   $handler->display->display_options['fields']['field_short_summary']['label'] = '';
   $handler->display->display_options['fields']['field_short_summary']['element_label_colon'] = FALSE;
-  /* Field: Content: Read More Text */
-  $handler->display->display_options['fields']['field_read_more_text']['id'] = 'field_read_more_text';
-  $handler->display->display_options['fields']['field_read_more_text']['table'] = 'field_data_field_read_more_text';
-  $handler->display->display_options['fields']['field_read_more_text']['field'] = 'field_read_more_text';
-  $handler->display->display_options['fields']['field_read_more_text']['label'] = '';
-  $handler->display->display_options['fields']['field_read_more_text']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_read_more_text']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_read_more_text']['empty'] = 'Read More';
-  $handler->display->display_options['fields']['field_read_more_text']['type'] = 'text_plain';
-  $handler->display->display_options['fields']['field_read_more_text']['settings'] = array(
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
-  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['alter']['text'] = '[field_read_more_text]';
-  $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Read More';
   /* Sort criterion: Content: Nid */
   $handler->display->display_options['sorts']['nid']['id'] = 'nid';
   $handler->display->display_options['sorts']['nid']['table'] = 'node';
