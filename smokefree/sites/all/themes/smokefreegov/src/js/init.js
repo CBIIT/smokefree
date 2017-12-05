@@ -285,9 +285,9 @@
             $("#live-chat-bar-form").submit();
             //return false;
         });
-        
+		
         // 508 search input
-		$('input.search-bar-input').attr('id', 'searchbox-header');
+        // $('input.search-bar-input').attr('id', 'searchbox-header');
 
 	});
 }) (jQuery);
