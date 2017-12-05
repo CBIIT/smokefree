@@ -281,6 +281,9 @@
             $("#live-chat-bar-form").submit();
             //return false;
         });
+		
+		//
+        // $('<label for="searchbox-header"></label>').insertBefore("#searchbox-header");
 
 	});
 }) (jQuery);
