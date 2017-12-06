@@ -5,11 +5,11 @@
 ?>
 </div>
 <div class="content_section col-sm-12">
-  <div class="content_section_title">
+  <h1 class="content_section_title">
     <?php
     print render($title);
     ?>
-  </div>
+  </h1>
   <div class="content_section_body">
     <?php
     print render($content['body']);
