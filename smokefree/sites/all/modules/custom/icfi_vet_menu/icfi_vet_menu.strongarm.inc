@@ -33,6 +33,9 @@ function icfi_vet_menu_strongarm() {
         'xmlsitemap' => array(
           'weight' => '32',
         ),
+        'domain' => array(
+          'weight' => '1',
+        ),
       ),
       'display' => array(),
     ),

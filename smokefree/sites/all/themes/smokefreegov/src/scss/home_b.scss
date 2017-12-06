@@ -1328,6 +1328,12 @@
 
 }
 
+.page-home-b .view-home-b .views-row {
+    @media (max-width:768px) {
+        overflow: hidden;
+    }
+}
+
 .page-home-b .view-home-b .views-row.content-area {
   display: none;
 }

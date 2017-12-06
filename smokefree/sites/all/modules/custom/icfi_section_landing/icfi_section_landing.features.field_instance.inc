@@ -266,6 +266,58 @@ function icfi_section_landing_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-section_landing-field_read_more_text'.
+  $field_instances['node-section_landing-field_read_more_text'] = array(
+    'bundle' => 'section_landing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_read_more_text',
+    'label' => 'Read More Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 25,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-section_landing-field_section'.
   $field_instances['node-section_landing-field_section'] = array(
     'bundle' => 'section_landing',
@@ -377,6 +429,7 @@ function icfi_section_landing_field_default_field_instances() {
   t('Featured Image');
   t('Featured Image Mobile');
   t('Read More Links');
+  t('Read More Text');
   t('Section');
   t('Short Summary');
   t('Which section of the site is this landing page for?  Changing this value will alter the <a href="/admin/structure/context">Context</a> in use.');
