@@ -19,7 +19,7 @@ function icfi_txt_signup_page_build(&$page) {
 //Displays two of the eight A/B questions on the form
 
 function icfi_txt_signup_form_alter(&$form, &$form_state, $form_id) {
-  if (!empty($form['#node']->title) && in_array($form['#node']->title, array('SmokefreeTXT', 'SmokefreeTXT-Women'))  && $form['#node']->type == 'webform') {
+  if (!empty($form['#node']->title) && in_array($form['#node']->title, array('SmokefreeTXT', 'SmokefreeTXT-Women', 'Practice Quit', 'Daily Challenges'))  && $form['#node']->type == 'webform') {
 
     // Force the A/B fields we want, for now.
     $form['submitted']['a_b_show_fields']['#default_value'] = array(

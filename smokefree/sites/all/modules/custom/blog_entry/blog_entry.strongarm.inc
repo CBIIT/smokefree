@@ -81,12 +81,6 @@ function blog_entry_strongarm() {
         'redirect' => array(
           'weight' => '30',
         ),
-        'domain' => array(
-          'weight' => '1',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '30',
-        ),
       ),
       'display' => array(),
     ),
