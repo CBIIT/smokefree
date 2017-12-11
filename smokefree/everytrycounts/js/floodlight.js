@@ -1,11 +1,11 @@
 
 jQuery(document).ready(function () {
     jQuery('.appDownloads .ios img').on( "click", function() {
-        console.log('Clicked iOS Button');
+        alert('Clicked iOS Button');
         makeFloodlightTagCall('DC-4345482/CTP/posev006+standard');
     });
     jQuery('.appDownloads .android img').on( "click", function() {
-        console.log('Clicked Android Button');
+        alert('Clicked Android Button');
         makeFloodlightTagCall('DC-4345482/CTP/posev007+standard');
     });
 
