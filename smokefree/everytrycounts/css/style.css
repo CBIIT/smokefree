@@ -1285,3 +1285,12 @@ button {
 		display:none;
 	}
 }
+
+@media (max-width: 601px) {
+	#backgroundPopup {
+		display: none !important;
+	}
+	#popupContact {
+		display: none !important;
+	}
+}
