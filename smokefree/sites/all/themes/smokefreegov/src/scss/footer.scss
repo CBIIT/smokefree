@@ -339,6 +339,12 @@ section#block-boxes-live-char-bar {
 	}
 }
 
+#popup-message-window, #popup-message-background {
+	@media (max-width: 601px) {
+		display: none !important;
+	}
+}
+
 
 
 
