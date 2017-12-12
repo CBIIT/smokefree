@@ -300,7 +300,7 @@
 							</div> <!-- /.row -->	
 						</div> <!-- /.challengeTitle -->
 						<p class="challengeContent">{{ challenge.node.field_challenge_description }}</p>
-						<button class="btn btn-challenge" v-on:click="next_daily_challenge">{{ daily_challenge_next_button_text }}</button>
+						<button class="btn btn-challenge" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev005+standard')" v-on:click="next_daily_challenge">{{ daily_challenge_next_button_text }}</button>
 					</div> <!-- /.front -->
 					<div class="back">
 						<div class="text-right challengeTicker">
