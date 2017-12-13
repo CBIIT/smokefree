@@ -339,6 +339,13 @@ section#block-boxes-live-char-bar {
 	}
 }
 
+/* disable popup window in mobile */
+#popup-message-window, #popup-message-background {
+	@media (max-width: 601px) {
+		display: none !important;
+	}
+}
+
 
 
 
