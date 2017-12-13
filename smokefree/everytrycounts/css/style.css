@@ -1286,6 +1286,7 @@ button {
 	}
 }
 
+/* disable popup window in mobile */
 @media (max-width: 601px) {
 	#backgroundPopup {
 		display: none !important;
