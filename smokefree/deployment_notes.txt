@@ -1,3 +1,20 @@
+Smokefree 1.12 2017-11-30
+-----------------------
+- SF-643, SF-652 and SF-655 Everytrycounts (POS) Page Improvements
+
+Smokefree 1.11 2017-11-30
+-----------------------
+- SF-551, SF-611, SF-635, SF-629 and SF-601 Everytrycounts (POS) Page
+- SF-622 and SF-623 Adding four new question to the Daily Challenges and Practice Quit webforms
+- SF-642 Re-enable HYT PA and HYT Diet web opt ins
+
+Smokefree 1.10 2017-11-16
+-----------------------
+- SF-599, SF-617 and SF-618 Fixes to dipfree quizzes
+- SF-621 Adding title to quiz and calculator pages
+- SF-599 Smokeless graphics and quizzes
+- SF-616 Adding alt text on images
+
 Smokefree 1.9 2017-11-02
 -----------------------
 - SF-573 Module to remove API keys from codebase

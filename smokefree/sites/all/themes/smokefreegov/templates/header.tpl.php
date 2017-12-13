@@ -23,7 +23,7 @@
   <div class="header-col-12" id="main-nav">
     <div class="nav-bar">
       <div class="nav-bar-logo">
-        <a href="/"><img class="nav-bar-brand" src="/<?php echo drupal_get_path('theme', 'smokefreegov'); ?>/images/header/smokefree_logo.png" /></a>
+        <a href="/"><img alt="Smokefree-logo" class="nav-bar-brand" src="/<?php echo drupal_get_path('theme', 'smokefreegov'); ?>/images/header/smokefree_logo.png" /></a>
       </div>
 
       <div class="nav-bar-menu logo_area">
@@ -63,7 +63,8 @@
   								return false;" _lpchecked="1">
       <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*"> <label class="hiddenSearch sr-only" for="searchbox-header">Search</label>
       <div class="search-bar-group">
-        <input maxlength="255" name="q" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
+          <label for="searchbox-header-input" class="element-invisible">Search</label>
+        <input maxlength="255" name="q" id="searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
         <button type="submit" value="Search" class="btn btn-default">Submit</button>
         <a class="closebtn">&times;</a>
       </div>
