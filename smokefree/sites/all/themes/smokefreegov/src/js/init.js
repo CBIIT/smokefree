@@ -7,6 +7,10 @@
         });
         
 		$('#mobile-accordion section#block-tb-megamenu-main-menu > #tb-megamenu-main-menu > .nav-collapse').addClass('collapse in');
+        
+        // For stat purpose
+		$('body.page-build-your-quit-plan').addClass('bqp-for-stat');
+        $('body.smokefreegov-build-your-quit-plan.node-type-webform').addClass('bqp-for-stat');
 		
 		//Create rm-header-footer class
 		if ($(".node-webform").hasClass('rm-header-footer')) {
@@ -281,6 +285,9 @@
             $("#live-chat-bar-form").submit();
             //return false;
         });
+        
+        // 508 search input
+		$('input.search-bar-input').attr('id', 'searchbox-header');
 
 	});
 }) (jQuery);
