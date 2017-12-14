@@ -497,8 +497,11 @@ p.quiz-results-message {
 	.carousel {
 		height: 100px;
 	}
+}
+@media (max-width: 374px) {
 	.tipContent {
-		bottom:10px;
+		font-size: 13px;
+		top: 130px;
 	}
 }
 /*@media (max-width: 330px) {*/
