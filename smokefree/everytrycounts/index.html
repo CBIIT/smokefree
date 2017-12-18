@@ -95,7 +95,7 @@
 				
 				<!-- Try Daily Challenges overlay box -->
 				<transition name="slidetoggle">
-				<div class="programBox" id="programChallenge" v-if="show_program_challenge">
+				<div class="programBox" id="programChallenge" v-if="show_program_challenge" v-cloak>
 					<button class="titleArea active" id="programChallengeClose" v-on:click="show_program_challenge = !show_program_challenge"><h3>TRY DAILY CHALLENGES</h3></button>
 					<div class="programContent">
 						<p>Get a new challenge at 9 a.m. every day for a week to build skills that will help you quit later.</p>
@@ -116,7 +116,7 @@
 				
 				<!-- Try Practice Quitting overlay box -->
 				<transition name="slidetoggle">
-				<div class="programBox" id="programPractice" v-if="show_program_practice">
+				<div class="programBox" id="programPractice" v-if="show_program_practice" v-cloak>
 					<button class="titleArea active" id="programPracticeClose" v-on:click="show_program_practice = !show_program_practice"><h3>PRACTICE QUITTING</h3></button>
 					<div class="programContent">
 						<p>Practice quitting for 1, 3, or 5 days at a time and build up to quitting for good.</p>
@@ -137,7 +137,7 @@
 				
 				<!-- Try Quit for Good overlay box -->
 				<transition name="slidetoggle">
-				<div class="programBox" id="programQuit" v-if="show_program_quit">
+				<div class="programBox" id="programQuit" v-if="show_program_quit" v-cloak>
 					<button class="titleArea active" id="programQuitClose" v-on:click="show_program_quit = !show_program_quit"><h3>QUIT FOR GOOD</h3></button>
 					<div class="programContent">
 						<p>Become &#8212; and stay &#8212; smokefree with 6-8 weeks of support.</p>

@@ -1295,3 +1295,7 @@ button {
 		display: none !important;
 	}
 }
+
+[v-cloak] {
+	display: none;
+}
