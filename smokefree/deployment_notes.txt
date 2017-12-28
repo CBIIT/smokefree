@@ -1,3 +1,9 @@
+Smokefree 1.14 2017-28-14
+-----------------------
+
+- SF-677 App pages metatag description
+- SF-613 Addming alt text to images
+
 Smokefree 1.13 2017-12-14
 -----------------------
 - SF-634, SF-614, SF-632, SF-633, SF-637 and SF-650 508: 508 compliance fixes
