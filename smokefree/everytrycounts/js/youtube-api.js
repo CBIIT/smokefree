@@ -1,10 +1,3 @@
-/* Load the Youtube JS API and get going */
-var j = document.createElement("script"),
-    f = document.getElementsByTagName("script")[0];
-j.src = "//www.youtube.com/iframe_api";
-j.async = true;
-f.parentNode.insertBefore(j, f);
-
 /* Support multiple players on the same page */
 var gtmYTPlayers = [];
 
@@ -135,3 +128,10 @@ window.addEventListener('beforeunload', function(e){
         }
     }
 });
+
+/* Load the Youtube JS API and get going */
+var j = document.createElement("script"),
+    f = document.getElementsByTagName("script")[0];
+j.src = "//www.youtube.com/iframe_api";
+j.async = true;
+f.parentNode.insertBefore(j, f);

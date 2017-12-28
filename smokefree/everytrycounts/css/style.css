@@ -1285,3 +1285,17 @@ button {
 		display:none;
 	}
 }
+
+/* disable popup window in mobile */
+@media (max-width: 601px) {
+	#backgroundPopup {
+		display: none !important;
+	}
+	#popupContact {
+		display: none !important;
+	}
+}
+
+[v-cloak] {
+	display: none;
+}
