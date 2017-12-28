@@ -327,7 +327,7 @@ fallback.load({
                         + "&title="         + encodeURIComponent(title)
                         + "&date_format="   + encodeURIComponent("MM/DD/YYYY")
                         + "&description="   + encodeURIComponent(description)
-                        + "&timezone="      + encodeURIComponent("America/Chicago")
+                        //+ "&timezone="      + encodeURIComponent("America/Chicago")
                         + "&all_day_event=false";
 
                     window.open(url);
