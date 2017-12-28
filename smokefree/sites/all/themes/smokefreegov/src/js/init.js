@@ -290,4 +290,23 @@
 		$('input.search-bar-input').attr('id', 'searchbox-header');
 
 	});
+	   // homepage btns 508 fix
+       $('.page-home .btn-img-My-Quit-Day img').attr('alt', 'Bullseye icon');
+       $('.page-home .btn-img-Newly-Quit img').attr('alt', 'Hourglass icon');
+       $('.page-home .btn-img-Staying-Quit img').attr('alt', 'Progress chart icon');
+       $('.page-home .tool-tip-3 img').attr('alt', 'Mobile phone icon');
+       $('.page-home .tool-tip-4 img').attr('alt', 'Nicotine patch icon');
+	   $('.page-home .tool-tip-5 img').attr('alt', 'Online chat icon');
+       $('.page-home .tool-tip-6 img').attr('alt', 'Smartphone icon');
+       $('.page-home .tool-tip-7 img').attr('alt', 'Pencil and ruler icon');
+
+       // basic page 508 fix
+       $('.node-type-page .image-note > img').attr('alt', 'Page icon');
+
+       // cr_landing 508 fix
+       $('.node-type-cr-landing.smokefreegov-quitting-dip .promo_button img').attr('alt', 'Go to The Real Cost button');
+
+	   // Vet 508 fix
+	   $('.smokefreegov-build-your-quit-plan.veterans_branded .btn-quit-plan > img').attr('alt', 'Arrow pointing down');
+	   $('.smokefreegov-build-your-quit-plan.veterans_branded .next-section > img').attr('alt', 'Arrow pointing down');
 }) (jQuery);
