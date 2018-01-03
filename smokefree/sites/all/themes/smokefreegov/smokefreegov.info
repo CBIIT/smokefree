@@ -53,7 +53,7 @@ scripts[] = 'bootstrap/js/tab.js'
 scripts[] = 'bootstrap/js/transition.js'
 scripts[] = 'js/508-fixes.js'
 scripts[] = 'js/less-1.3.3.minx.js'
-;scripts[] = 'js/tophat.js'
+scripts[] = 'js/tophat.js'
 
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
