@@ -244,7 +244,7 @@ function smokefreegov_preprocess_html(&$variables) {
   $apple_icon = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => drupal_get_path('theme', 'smokefreegov') . '/images/favicons/smartphone-icon.png',
+      'href' => '/'. drupal_get_path('theme', 'smokefreegov') . '/images/favicons/smartphone-icon.png',
       'rel' => 'apple-touch-icon',
     ),
   );
