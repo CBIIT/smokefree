@@ -1,4 +1,11 @@
-Smokefree 1.14 2017-28-14
+Smokefree 1.15 2018-01-11
+-----------------------
+
+- SF-667 Domain verification file for facebook
+- SF-686 POS Calender time changes
+- SF-687 Display skip link
+
+Smokefree 1.14 2017-12-28
 -----------------------
 
 - SF-677 App pages metatag description
