@@ -449,6 +449,11 @@ p.quiz-results-message {
 	margin: 0px;
 	padding:0px 30px;
 }
+@media (max-width: 370px) {
+	.tipContent {
+		font-size: 12px !important;
+	}
+}
 .carousel-inner {
 	position: absolute;
 	left: 0;
