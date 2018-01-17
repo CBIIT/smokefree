@@ -449,6 +449,11 @@ p.quiz-results-message {
 	margin: 0px;
 	padding:0px 30px;
 }
+@media (max-width: 370px) {
+	.tipContent {
+		font-size: 12px !important;
+	}
+}
 .carousel-inner {
 	position: absolute;
 	left: 0;
@@ -497,8 +502,11 @@ p.quiz-results-message {
 	.carousel {
 		height: 100px;
 	}
+}
+@media (max-width: 374px) {
 	.tipContent {
-		bottom:10px;
+		font-size: 13px;
+		top: 130px;
 	}
 }
 /*@media (max-width: 330px) {*/
