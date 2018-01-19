@@ -22,7 +22,7 @@ function _seckit_fix() {
 function smokefreegov_preprocess_page(&$variables) {
 
   //SF-800: Only deploy this if the government shutdown occurs.
-  drupal_set_message("Because of a lapse in government funding, the information on this website may not be up to date, transactions submitted via the website may not be processed, and the agency may not be able to respond to inquiries until appropriations are enacted.
+  drupal_set_message("Because of a lapse in government funding, the information on this website may not be up to date, transactions submitted via the website may not be processed, and the agency may not be able to respond to inquiries until appropriations are enacted.<br>
 The NIH Clinical Center (the research hospital of NIH) is open. For more details about its operating status, please visit <a href='https://cc.nih.gov/'>cc.nih.gov</a>.
 Updates regarding government operating status and resumption of normal operations can be found at <a href='https://www.usa.gov'>USA.gov</a>.");
 
