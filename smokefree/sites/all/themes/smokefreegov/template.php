@@ -20,8 +20,8 @@ function _seckit_fix() {
 
 
 function smokefreegov_preprocess_page(&$variables) {
-
   _seckit_fix();
+
 
   if (isset($variables['node']->type)) {
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
