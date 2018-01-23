@@ -1175,7 +1175,7 @@ button {
 
 #popupContact {
 	display: none;
-	position: fixed;
+	position: fixed !important;
 	_position: absolute; /* hack for internet explorer 6*/
 	overflow: hidden;
 	background: #ffffff;
