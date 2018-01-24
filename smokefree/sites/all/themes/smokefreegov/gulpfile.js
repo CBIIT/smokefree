@@ -21,13 +21,6 @@ var sourcemaps = require('gulp-sourcemaps');
 
 /************Working Tasks************/
 
-// gulp.task('less', function() {
-// 	return gulp.src('src/less/style.less')
-// 		.pipe(less())
-// 		//.pipe(cleanCss())
-//         .pipe(cssnano())
-// 		.pipe(gulp.dest('dist/css'))
-// });
 gulp.task('sass', function() {
     return gulp.src('src/scss/style.scss')
         //.pipe(sass().on('error', sass.logError))
