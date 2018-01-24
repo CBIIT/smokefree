@@ -1,3 +1,12 @@
+Smokefree 1.17 2018-01-25
+-----------------------
+
+- SF-703 Adding missing font
+- SF-694 Fixing links in the footer
+- SF-653 & SF-654 Responsive issues with POS page
+- SF-566 & SF-576 Fixing some responsive isses on the teen site
+
+
 Smokefree 1.15 2018-01-11
 -----------------------
 
