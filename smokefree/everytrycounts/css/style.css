@@ -41,7 +41,7 @@ h3 {
 .programBox .titleArea h3 {
 	text-align: center;
 	font-family: "Knockout", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 32px;
+	font-size: 30px;
 	font-weight: 500;
 	font-style: normal;
 	line-height: 32px;
@@ -449,6 +449,11 @@ p.quiz-results-message {
 	margin: 0px;
 	padding:0px 30px;
 }
+@media (max-width: 370px) {
+	.tipContent {
+		font-size: 12px !important;
+	}
+}
 .carousel-inner {
 	position: absolute;
 	left: 0;
@@ -497,8 +502,11 @@ p.quiz-results-message {
 	.carousel {
 		height: 100px;
 	}
+}
+@media (max-width: 374px) {
 	.tipContent {
-		bottom:10px;
+		font-size: 13px;
+		top: 130px;
 	}
 }
 /*@media (max-width: 330px) {*/
@@ -1167,7 +1175,7 @@ button {
 
 #popupContact {
 	display: none;
-	position: fixed;
+	position: fixed !important;
 	_position: absolute; /* hack for internet explorer 6*/
 	overflow: hidden;
 	background: #ffffff;
