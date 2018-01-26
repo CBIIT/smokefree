@@ -49,9 +49,18 @@ function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
   // bug so that the answers are always associated with a pre-existing
   // account per Kiran Muppidi.
   if (strpos($target['url'], 'secure.mcommons.com') !== FALSE) {
-    // $mCDoublePost = new MCDoublePost($payload, $target);
-    // $mCDoublePost->pre_post();
+    $mCDoublePost = new MCDoublePost($payload, $target);
+    $mCDoublePost->pre_post();
+
+    // This is not recommended at all!
+    // Unfortunately, the way the Mobile Commons API is designed, it requires a duplicate submission
+    // to be made two seconds after the initial post request. ヽ(ಠ_ಠ)ノ
+    // See SF-430 for details
+
+    sleep(2);
+
   }
+
   // In cases where there are two questions that need the same key, use
   // _alrernative_version suffix on the second, and remove it before post.
   foreach($payload as $key=>$value) {
@@ -61,5 +70,8 @@ function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
       }
       unset($payload[$key]);
     }
+
+    // See SF-430
+    unset($payload['opt_in_path']);
   }
 }
