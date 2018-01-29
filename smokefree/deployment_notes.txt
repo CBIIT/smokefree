@@ -1,4 +1,9 @@
-Smokefree 1.17 2018-01-25
+Smokefree 1.17 2018-01-29
+-----------------------
+
+- SF-430 Fix for Mobile Commons reporting
+
+Smokefree 1.16 2018-01-25
 -----------------------
 
 - SF-703 Adding missing font
