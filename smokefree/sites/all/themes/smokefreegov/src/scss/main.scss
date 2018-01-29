@@ -3755,6 +3755,7 @@ button:active {
 /* NCI LiveHelp */
 
 #popup-message-window {
+    position: fixed !important;
     overflow: hidden;
 }
 
