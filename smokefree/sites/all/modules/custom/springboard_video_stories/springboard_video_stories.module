@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Springboard Video Stories feature.
- */
-
-include_once 'springboard_video_stories.features.inc';
