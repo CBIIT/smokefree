@@ -1,5 +1,0 @@
-name = Smokefree
-description = 'Smokefree Custom Code'
-core = 7.x
-php = 5.2
-version = 7.x-1.0
