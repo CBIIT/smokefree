@@ -84,10 +84,10 @@
 			<div class="col-lg-5 col-md-6 col-sm-12">
 				<h2>Try Something New</h2>
 				<p>Try a text message program to build the skills and confidence you need for your next quit. You’ll receive texts with challenges and tips to keep you on track. You haven’t failed as long as you keep trying.</p>
-				<p class="bold">CHOOSE THE PROGRAM THAT’S RIGHT FOR YOU</p>
 			</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 			<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
 				<div class="programs">
+					<p class="bold">CHOOSE THE PROGRAM THAT’S RIGHT FOR YOU</p>
 					<button class="btn" id="programChallengeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev00+standard')" v-on:click="show_program_challenge = !show_program_challenge">TRY DAILY CHALLENGES</button>
 					<button class="btn" id="programPracticeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev001+standard')" v-on:click="show_program_practice = !show_program_practice">PRACTICE QUITTING</button>
 					<button class="btn" id="programQuitButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev003+standard')" v-on:click="show_program_quit = !show_program_quit">QUIT FOR GOOD</button>
@@ -175,9 +175,9 @@
 			<div class="col-lg-5 col-md-6 col-sm-12">
 				<h2>Deal With Cravings</h2>
 				<p>Cravings can make quitting hard, but they typically last only 5 to 10 minutes. It might be uncomfortable, but you can get through cravings with these tips.</p>
-				<p class="bold">FIGHT CRAVINGS WITH THESE TIPS</p>
 			</div> <!-- /.col-lg-5 /.col-md-6 /.col-sm-12 -->
 			<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
+				<p class="bold">FIGHT CRAVINGS WITH THESE TIPS</p>
 				<div class="box grayBox" v-cloak>
 					<div class="text-right" id="tipTicker">
 						TIP <span id="tipCurrent">{{current_crave_tip_number}}</span>/<span id="tipTotal">{{total_crave_tips}}</span>
@@ -405,6 +405,13 @@ Creation date: 11/30/2017
         'allow_custom_scripts': true,
         'send_to': 'DC-4345482/CTP/posev0+standard'
     });
+</script>
+<!--Add user agent related info to HTML tag -->
+<script>
+    var b = document.documentElement;
+    b.className = b.className.replace('no-js', 'js');
+    b.setAttribute("data-useragent", navigator.userAgent);
+    b.setAttribute("data-platform", navigator.platform);
 </script>
 <!-- Omniture Analytics -->
 <script src="https://static.cancer.gov/webanalytics/WA_DCCPS_PageLoad.js"></script>

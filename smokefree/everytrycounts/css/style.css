@@ -322,7 +322,7 @@ p.quiz-results-message {
 	border: 0 solid transparent;
 	border-left-width: 15px;
 	border-right-width: 15px;
-	border-top: 15px solid ffffff;
+	border-top: 15px solid #ffffff;
 }
 .programContent .form-control {
 	height:64px;
@@ -1017,6 +1017,10 @@ button {
 		font-size:28px;
 		padding:20px;
 	}
+	.programBox .titleArea h3 {
+		padding-right: 47px;
+		padding-left: 47px;
+	}
 	.answerGroup button.btn {
 		font-size:22px;
 		line-height:20px;
@@ -1034,6 +1038,10 @@ button {
 		font-size:24px;
 		padding:15px;
 	}
+	.programBox .titleArea h3 {
+		padding-right: 47px;
+		padding-left: 47px;
+	}
 	#quiz_next_button,
 	#try_again {
 		width:auto;
@@ -1044,6 +1052,10 @@ button {
 	.programBox .titleArea h3,
 	.challenges .btn.btn-challenge{
 		font-size:20px;
+	}
+	.programBox .titleArea h3 {
+		padding-right: 47px;
+		padding-left: 47px;
 	}
 	.answerGroup button.btn {
 		font-size:18px;
@@ -1068,6 +1080,10 @@ button {
 		font-size:18px;
 		padding:12px;
 		letter-spacing: 0.04em;
+	}
+	.programBox .titleArea h3 {
+		padding-right: 47px;
+		padding-left: 47px;
 	}
 	.challenges .btn.btn-challenge{
 		font-size:16px;
@@ -1286,9 +1302,6 @@ button {
 	.live-chat-bar {
 		display:none;
 	}
-}
-
-@media (min-width: 601px) {
 	section#block-boxes-live-char-bar {
 		display:none;
 	}
@@ -1307,3 +1320,29 @@ button {
 [v-cloak] {
 	display: none;
 }
+
+/* exception for Android devices to always show the chat bar */
+/* VERIFY BEFORE DOING THIS. If you do, you'll need to do something about the image. Also, I was just using Chrome for
+ * testing; if it's used, it should be changed to Android
+html[data-useragent*='Chrome'] #backgroundPopup {
+	display: none !important;
+}
+html[data-useragent*='Chrome'] #popupContact {
+	display: none !important;
+}
+html[data-useragent*='Chrome'] .live-chat-bar {
+	position: fixed;
+	bottom: 0px;
+	z-index: 1001;
+	display:block;
+}
+html[data-useragent*='Chrome'] .live-chat-bar img {
+	padding: 0px;
+}
+html[data-useragent*='Chrome'] .live-chat-bar button {
+	border: 0px;
+}
+html[data-useragent*='Chrome'] section#block-boxes-live-char-bar {
+	display:block;
+}
+*/
