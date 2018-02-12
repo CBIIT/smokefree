@@ -1321,28 +1321,39 @@ button {
 	display: none;
 }
 
-/* exception for Android devices to always show the chat bar */
-/* VERIFY BEFORE DOING THIS. If you do, you'll need to do something about the image. Also, I was just using Chrome for
- * testing; if it's used, it should be changed to Android
-html[data-useragent*='Chrome'] #backgroundPopup {
+/* exception for mobile devices to always show the chat bar */
+html[data-useragent*='Android'] #backgroundPopup,
+html[data-useragent*='iPad'] #backgroundPopup,
+html[data-useragent*='iPhone'] #backgroundPopup,
+html[data-useragent*='Android'] #popupContact,
+html[data-useragent*='iPad'] #popupContact,
+html[data-useragent*='iPhone'] #popupContact {
 	display: none !important;
 }
-html[data-useragent*='Chrome'] #popupContact {
-	display: none !important;
-}
-html[data-useragent*='Chrome'] .live-chat-bar {
+
+html[data-useragent*='Android'] .live-chat-bar,
+html[data-useragent*='iPad'] .live-chat-bar,
+html[data-useragent*='iPhone'] .live-chat-bar {
 	position: fixed;
-	bottom: 0px;
+	bottom: 0;
 	z-index: 1001;
-	display:block;
+	display: block;
 }
-html[data-useragent*='Chrome'] .live-chat-bar img {
-	padding: 0px;
+html[data-useragent*='Android'] .live-chat-bar img,
+html[data-useragent*='iPad'] .live-chat-bar img,
+html[data-useragent*='iPhone'] .live-chat-bar img {
+	padding: 0;
+	margin-right: 0;
+	margin-left: auto;
 }
-html[data-useragent*='Chrome'] .live-chat-bar button {
-	border: 0px;
+html[data-useragent*='Android'] .live-chat-bar button,
+html[data-useragent*='iPad'] .live-chat-bar button,
+html[data-useragent*='iPhone'] .live-chat-bar button {
+	border: 0;
 }
-html[data-useragent*='Chrome'] section#block-boxes-live-char-bar {
-	display:block;
+html[data-useragent*='Android'] section#block-boxes-live-char-bar,
+html[data-useragent*='iPad'] section#block-boxes-live-char-bar,
+html[data-useragent*='iPhone'] section#block-boxes-live-char-bar {
+	display: block;
 }
-*/
+
