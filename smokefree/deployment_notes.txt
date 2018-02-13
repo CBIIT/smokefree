@@ -1,3 +1,12 @@
+Smokefree 1.17 2018-02-08
+-----------------------
+
+- SF-678 Fix pop up location on scroll
+- SF-705 Removing unused modules
+- SF-705 VA header bugfix
+- SF-716 Disable mHealth subscription
+- SF-715 Change default view on explore quit methods page
+
 Smokefree 1.17 2018-01-29
 -----------------------
 
