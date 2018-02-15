@@ -207,6 +207,7 @@ p.quiz-results-message {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
 }
 /* -------------------------------------- Every Try Counts -------------------------------------- */
 .everyTryCounts {
@@ -400,7 +401,7 @@ p.quiz-results-message {
 	background-image: url(../images/smoker-male.png);
 	background-repeat: no-repeat;
 	width:582px;
-	height:625px;
+	height:360px;
 	position: absolute;
 	top:5px;
 	left:200px;
@@ -413,7 +414,7 @@ p.quiz-results-message {
 }
 @media (max-width: 992px) {
 	.video .smokerMale {
-		background-image: none;
+		display:none;
 	}
 }
 /* -------------------------------------- Tips -------------------------------------- */
@@ -1343,7 +1344,7 @@ html[data-useragent*='Android'] .live-chat-bar img,
 html[data-useragent*='iPad'] .live-chat-bar img,
 html[data-useragent*='iPhone'] .live-chat-bar img {
 	padding: 0;
-	margin-right: 0;
+	margin-right: auto;
 	margin-left: auto;
 }
 html[data-useragent*='Android'] .live-chat-bar button,
@@ -1355,5 +1356,15 @@ html[data-useragent*='Android'] section#block-boxes-live-char-bar,
 html[data-useragent*='iPad'] section#block-boxes-live-char-bar,
 html[data-useragent*='iPhone'] section#block-boxes-live-char-bar {
 	display: block;
+}
+html[data-useragent*='Android'] #live-chat-bar-background,
+html[data-useragent*='iPad'] #live-chat-bar-background,
+html[data-useragent*='iPhone'] #live-chat-bar-background  {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+	background-color: rgb(20,58,92);
+  width: 100%;
+  z-index: -1;
 }
 
