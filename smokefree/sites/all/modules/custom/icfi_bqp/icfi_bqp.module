@@ -99,7 +99,7 @@ function _veterans_bqp_results_callback() {
 }
 
 /**
- * Callback function for build-your-quit-plan menu item.
+ * Callback function for veterans build-your-quit-plan menu item.
  *
  * @return array|mixed
  *    The form as a render array.
@@ -421,6 +421,8 @@ function bqp_results_form($form, &$form_state, $view = 'sf') {
   if (isset($existing_choices)) {
     $form['choices']['#value'] = $existing_choices;
   }
+
+  //Redirect to appropriate URL's
   elseif ($view == VETERANS_PAGE) {
     // No choices to display so redirect to input form.
     drupal_goto(VETERANS_PAGE_RESULTS_URL);
