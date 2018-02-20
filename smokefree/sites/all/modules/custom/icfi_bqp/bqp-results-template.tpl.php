@@ -1,6 +1,6 @@
 <div id="quit-plan">
   <div id="get-quit-plan" class="quit-plan-output">
-    <div class="output_intro">Get a PDF of your quit plan to save or print. Keep it where you can use it when you have cravings or need some motivation. You may want to cut it into smaller pieces and put the different sections in the places where they will be most helpful.
+      <div class="output_intro"><p>Get a PDF of your quit plan to save or print. Keep it where you can use it when you have cravings or need some motivation. You may want to cut it into smaller pieces and put the different sections in the places where they will be most helpful.</p>
     </div>
     <div class="edit-print-btn clearfix">
       <h2 tabindex="-1" id="get-quit-plan-header">My Quit Plan</h2>
@@ -327,7 +327,7 @@
       </h3>
 
       <p>There are lots of tools available to make quitting more manageable. Explore these resources to find what is right for you.</p>
-      <?php if (in_array('help.medication', $form['choices']['#value']['extra_help'])) : ?>
+      <?php if (in_array('help.medicationSF', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.medication">
           <h4>Medications and Nicotine Replacement Therapy (NRT)</h4>
           <p>Using medications and/or nicotine replacement therapy (NRT) can improve your chances of quitting for good (<a href="http://smokefree.gov/explore-medications" target="_blank">http://smokefree.gov/explore-medications</a>). Make an appointment with your health care provider to find out which options are best for you.</p>
@@ -335,11 +335,17 @@
       <?php endif; ?>
       <?php if (in_array('help.smokefreeVet', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.smokefreeVet">
-          <h4>SmokefreeTXT Text Message Program</h4>
-          <p>SmokefreeTXT is a mobile text messaging service designed for adults and young adults across the United States who are trying to quit smoking. Sign up online (<a href="http://smokefree.gov/smokefreetxt" target="_blank">http://smokefree.gov/smokefreetxt</a>) or send a text message with the word QUIT to 47848.</p>
+            <h4>SmokefreeVET Text Message Program</h4>
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848.</p>
         </div>
       <?php endif; ?>
-      <?php if (in_array('help.apps', $form['choices']['#value']['extra_help'])) : ?>
+      <?php if (in_array('help.smokefreeSF', $form['choices']['#value']['extra_help'])) : ?>
+          <div id="get.help.smokefreeVet">
+              <h4>SmokefreeTXT Text Message Program</h4>
+              <p><strong>SmokefreeTXT</strong> is a mobile text messaging service designed for adults and young adults across the United States who are trying to quit smoking. <a href="http://smokefree.gov/smokefreetxt" target="_blank">Sign up online</a> or send a text message with the word QUIT to 47848.</p>
+          </div>
+      <?php endif; ?>
+      <?php if (in_array('help.appsSF', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.apps">
           <h4>Apps</h4>
           <p>
@@ -347,13 +353,25 @@
           </p>
         </div>
       <?php endif; ?>
-      <?php if (in_array('help.facebook', $form['choices']['#value']['extra_help'])) : ?>
+      <?php if (in_array('help.appsVet', $form['choices']['#value']['extra_help'])) : ?>
+          <div id="get.help.apps">
+              <h4>Apps</h4>
+              <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become smokefree.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
+          </div>
+      <?php endif; ?>
+      <?php if (in_array('help.facebookSF', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.facebook">
           <h4>SmokefreeUS Facebook</h4>
           <p>Get extra support and information by checking out Smokefree on Facebook (<a href="https://www.facebook.com/SmokefreeUS" target="_blank">https://www.facebook.com/SmokefreeUS</a>). </p>
         </div>
       <?php endif; ?>
-      <?php if (in_array('help.quitlines', $form['choices']['#value']['extra_help'])) : ?>
+      <?php if (in_array('help.facebookVet', $form['choices']['#value']['extra_help'])) : ?>
+          <div id="get.help.facebook">
+              <h4>SmokefreeVet Facebook</h4>
+              <p>Get extra support and information by checking out SmokefreeVET on <a href="https://www.facebook.com/smokefreevet" target="_blank" class="ext extlink">Facebook.<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></p>
+          </div>
+      <?php endif; ?>
+      <?php if (in_array('help.quitlinesSF', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.quitlines">
           <h4>Quitlines</h4>
 
@@ -363,6 +381,16 @@
             <li><strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">Find your state’s quitline: </a></strong>1-800-QUIT-NOW (1-800-784-8669) </li>
           </ul>
         </div>
+
+      <?php endif; ?>
+      <?php if (in_array('help.quitlinesVet', $form['choices']['#value']['extra_help'])) : ?>
+          <div id="get.help.quitlines">
+              <h4>Quitlines</h4>
+
+              <p>The <a href="http://www.publichealth.va.gov/smoking/quitline.asp" target="_blank">VA quitline</a> is for Veterans who receive their healthcare through VA: 1-855-QUIT-VET (1-855-784-8838)</p> <p>If you do not receive healthcare through VA, consider these options:</p> <ul> <li> <strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">The National Cancer Institute quitline:</a></strong> 1-877-44U-QUIT (1-877-448-7848)</li> <li> <strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">Find your state’s quitline: </a></strong>1-800-QUIT-NOW (1-800-784-8669)</li> </ul>
+
+          </div>
+
       <?php endif; ?>
       <?php if (in_array('help.livehelp', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.livehelp">
