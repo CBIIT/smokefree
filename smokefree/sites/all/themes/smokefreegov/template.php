@@ -85,14 +85,6 @@ function smokefreegov_preprocess_page(&$variables) {
     $variables['five_resources'] = ' ads-page-contain';
   }
 
- /* if (!empty($variables['content_column_class'])) {
-    $additional_center_column_classes = 'center_column content-container';
-    if (!empty($variables['node']->nid) && in_array($variables['node']->nid, $five_resources_node_ids)) {
-      $additional_center_column_classes .= ' ads-page-contain';
-    }
-    $variables['content_column_class'] = substr_replace($variables['content_column_class'], ' ' . $additional_center_column_classes . '"', -1);
-  }*/
-
   // Twitter.
   $variables['twitter_link'] = 'http://twitter.com/SmokefreeUs';
 
@@ -195,34 +187,6 @@ function smokefreegov_theme(&$existing, $type, $theme, $path) {
   );
 }
 
-/**
- * Override theme_breadrumb().
- *
- * Print breadcrumbs as a list, with separators.
-
-function smokefreegov_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
-
-  if (!empty($breadcrumb)) {
-    $breadcrumbs = '<ul class="breadcrumb">';
-
-    $count = count($breadcrumb) - 1;
-    foreach ($breadcrumb as $key => $value) {
-      $name = is_array($value) ? $value['data'] : $value;
-      if ($count != $key) {
-        $breadcrumbs .= '<li>' . $name . '<span class="divider">/</span></li>';
-      }
-      else{
-        $breadcrumbs .= '<li>' . $name . '</li>';
-      }
-    }
-    $breadcrumbs .= '</ul>';
-
-    return $breadcrumbs;
-  }
-}*/
-
-
 function smokefreegov_preprocess_html(&$variables) {
   /**
    * Add default icon
@@ -321,32 +285,6 @@ function smokefreegov_preprocess_html(&$variables) {
     drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/init-tier-mmg-dev.js', 'file');
   }
 
-  // Other production JS.
-  // SF-358 Remove Universal-Federated-Analytics-Min.JS from all smokefree sites.
-  //if ($_SERVER['HTTP_HOST'] == "smokefree.gov" || $_SERVER['HTTP_HOST'] == "www.smokefree.gov") {
-  //  $path = drupal_get_path('theme', 'smokefreegov');
-  //  $inline_script = <<<EOL
-  //  <script language="javascript" id="_fed_an_ua_tag" src="$path/js/Universal-Federated-Analytics-Min.1.0.js?agency=HHS&subagency=NIH"></script>
-//EOL;
-  //  $element = array(
-  //    '#type' => 'markup',
-  //    '#markup' => $inline_script,
-  //  );
-      //SF-340, Remove this snippet of js, David Vaughan will implement a replacement in GTM
-      //drupal_add_html_head($element, '_fed_an_ua_tag');
-   /* $element = array(
-      '#tag' => 'script',
-      '#type' => 'html_tag',
-      '#attributes' => array(
-        'src' => drupal_get_path('theme', 'smokefreegov') . '/js/Universal-Federated-Analytics-Min.1.0.js?agency=HHS&subagency=NIH',
-        'type' => 'text/javascript',
-        'id' => '_fed_an_ua_tag',
-      ),
-      '#suffix' => '</script>',
-    );
-    drupal_add_html_head($element, '_fed_an_ua_tag');*/
-  //}
-
   // Other JS.
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/init.js', 'file');
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/vetsidebar.js', 'file', array('scope' => 'footer'));
@@ -398,10 +336,7 @@ function smokefreegov_preprocess_html(&$variables) {
 
   // Rather than scouring all of the CSS and adding classes like .page-node-149 a dozen times
   // Just add your node id here to brand a non-veterans page as a veterans page.
-  
-  
-    $array_veterans_branded = array("755","149", "163");
-    
+  $array_veterans_branded = array("755","149", "163");
 
   if (!empty($current_node->nid) and in_array($current_node->nid, $array_veterans_branded)) {
         $variables['classes_array'][] = 'veterans_branded';
@@ -699,21 +634,6 @@ function smokefreegov_bootstrap_search_form_wrapper(&$variables) {
   return $output;
 }
 
-/* Overrides the bootstrap theme poll function as it only pulls the latest poll */
-function smokefreegov_poll_block_view($delta = '', $nid) {
-  if (user_access('access content')) {
-    if ($nid) {
-      $poll = node_load($nid);
-      if ($poll->nid) {
-        $poll = poll_override_block_latest_poll_view($poll);
-        $block['subject'] = t('Poll');
-        $block['content'] = $poll->content;
-        return $block;
-      }
-    }
-  }
-}
-
 /* Removes the unnecessary meta tags from the page header */
 function smokefreegov_html_head_alter(&$head_elements) {
   foreach ($head_elements as $key => $element) {
@@ -740,7 +660,7 @@ function smokefreegov_html_head_alter(&$head_elements) {
   }
 }
 
-/*
+/**
  * Implements hook_preprocess_views_view_unformatted
  */
 function smokefreegov_preprocess_views_view_unformatted(&$vars) {
