@@ -1,6 +1,15 @@
 Smokefree 1.17 2018-02-08
 -----------------------
 
+- SF-726 Drupal core security update for Smokefree and Espanol
+- SF-725 Entity module security update
+- SF-721 Cleaning up template.php file
+- SF-712 Removing more unused modules
+- SF-691 Compressing images
+
+Smokefree 1.17 2018-02-08
+-----------------------
+
 - SF-678 Fix pop up location on scroll
 - SF-705 Removing unused modules
 - SF-705 VA header bugfix
