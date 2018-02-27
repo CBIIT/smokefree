@@ -1,6 +1,0 @@
-Ideally, we will use a CSS class
-to just move the background images
-between mobile and tablet and just use the tablet version, so only on image is downloaded.
-
-The same thing goes for the small and large desktop images.
-
