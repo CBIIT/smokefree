@@ -1,0 +1,153 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function icfi_motion_ai_api_menu() {
+  $items = array();
+  $items['endpoint/include'] = array(
+    'page callback' => '_get_random_include_as_json',
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+
+/**
+ * Callback for the API endpoint.
+ *
+ * It checks if the API key is valid, the term is valid
+ * and then returns appropriate include data
+ */
+function _get_random_include_as_json() {
+
+  // Check if the API key is valid
+  if (is_valid_key() === FALSE) {
+    _error_response('403 Forbidden', 'Please supply a valid API key.');
+  }
+
+  $category_tid = get_category_tid();
+  // Check if the category exists
+  if ($category_tid === FALSE) {
+    _error_response('404 Not Found', 'Please supply a valid category.');
+  }
+  else {
+    $include_id = get_random_include_by_category($category_tid);
+
+    // In the unlikely event that the category does not have any include associated with it
+    if (empty($include_id)) {
+      print drupal_json_encode(array('error_message' => 'Could not find any includes for the supplied term.'));
+    }
+    else {
+      $content = _get_loaded_include($include_id, $_GET['category']);
+      print drupal_json_encode($content);
+    }
+    drupal_exit();
+  }
+}
+
+/**
+ * Check if the supplied API key is valid.
+ * Please see README.txt file of icfi_api_keys module.
+ *
+ * @return bool TRUE is the key matches the one in the database, FALSE otherwise.
+ */
+function is_valid_key() {
+  return (isset($_GET['key']) && $_GET['key'] === ICFIApi::getKeyValue('chatbot_key'));
+}
+
+/**
+ * Return the tid for the chatbot category get parameter.
+ *
+ * @return bool|mixed Category tid if found, FALSE otherwise.
+ */
+function get_category_tid() {
+  $chatbot_categories = get_chatbot_categories();
+  if (!isset($_GET['category']) || !array_key_exists(strtolower($_GET['category']), $chatbot_categories)) {
+    return FALSE;
+  }
+  else {
+    return $chatbot_categories[$_GET['category']];
+  }
+}
+
+/**
+ * Gets the chatbot categories taxonomy terms and id in key value pairs.
+ *
+ * @see cache_set()
+ * @see cache_get()
+ *
+ * @return array containing the chatbot term name and tid as key value pairs.
+ */
+function get_chatbot_categories() {
+  $chatbot_categories_is_cached = cache_get('cache_chatbot_categories');
+  if ($chatbot_categories_is_cached === FALSE) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load('chatbot_categories');
+    $tree = taxonomy_get_tree($vocabulary->vid);
+    $chatbot_categories = array();
+    foreach ($tree as $term) {
+      $chatbot_categories[strtolower($term->name)] = $term->tid;
+    }
+    cache_set('cache_chatbot_categories', $chatbot_categories);
+  }
+  else {
+    $chatbot_categories = $chatbot_categories_is_cached->data;
+  }
+  return $chatbot_categories;
+}
+
+/**
+ * Adds the appropriate header and prints the supplied error message.
+ *
+ * @param $http_status string: HTTP response status
+ * @param $message: Message to print
+ */
+function _error_response($http_status, $message) {
+  drupal_add_http_header('Status', $http_status);
+  $message = array(
+    'error_message' => $message,
+  );
+  print drupal_json_encode($message);
+  drupal_exit();
+}
+
+/**
+ * Get a random include based off of the supplied
+ * chatbot api term tid.
+ *
+ * @param $category_tid string: A valid tid associated with the "Chatbot Categories" term
+ * @return bool|mixed The nid of the include, FALSE if no content is found
+ */
+function get_random_include_by_category($category_tid) {
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'node')
+    ->propertyCondition('type', 'include')
+    ->propertyCondition('status', 1)
+    ->fieldCondition('field_publish_to_api', 'value', 1)
+    ->fieldCondition('field_chatbot_categories', 'tid', $category_tid);
+  $result = $query->execute();
+  if (empty($result['node'])) {
+    return FALSE;
+  }
+  else {
+    return array_rand($result['node']);
+  }
+}
+
+/**
+ * Get the fields to output.
+ *
+ * @param $nid string: Node ID of the include Content type
+ * @param $category string: The chatbot category
+ * @return array Containing the fields for the API
+ */
+function _get_loaded_include($nid, $category) {
+  $node = node_load($nid);
+  $fields = array(
+    'title' => $node->title,
+    'description' => $node->field_api_text['und'][0]['value'],
+    'category' => $category,
+    'image' => file_create_url($node->field_featured_image_include['und'][0]['uri']),
+  );
+  return $fields;
+}
