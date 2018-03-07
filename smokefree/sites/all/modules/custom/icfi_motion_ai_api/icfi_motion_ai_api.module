@@ -3,7 +3,6 @@
 /**
  * Implements hook_menu().
  */
-
 function icfi_motion_ai_api_menu() {
   $items = array();
   $items['endpoint/include'] = array(
@@ -143,7 +142,6 @@ function get_random_include_by_category($category_tid) {
  * @return array Containing the fields for the API
  */
 function _get_loaded_include($nid, $category) {
-  $fields = array();
   $node = node_load($nid);
   $fields = array(
     'title' => $node->title,
