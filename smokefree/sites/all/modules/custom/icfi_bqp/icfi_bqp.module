@@ -269,19 +269,34 @@ function bqp_form($form, &$form_state, $view = 'sf') {
       $form[$trigger]['#default_value'] = $form_state['values'][$trigger];
     }
   }
-
-  $form['fight_cravings'] = array(
-    '#type' => 'checkboxes',
-    '#options' => array(
-      'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
-      'cravings.relieveStress' => 'Do you smoke to relieve stress or improve your mood?',
-      'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
-      'cravings.pleasurable' => 'Do you smoke because it’s pleasurable and relaxing?',
-      'cravings.irritable' => 'Do you get irritable and anxious without cigarettes?',
-      'cravings.energyBoost' => 'Do you smoke for an energy boost?',
-    ),
-    '#required' => FALSE,
-  );
+  if ($view == VETERANS_PAGE) {
+    $form['fight_cravings'] = array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
+        'cravings.relieveStressVet' => 'Do you smoke or dip to relieve stress or improve your mood?',
+        'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
+        'cravings.pleasurableVet' => 'Do you smoke or dip because it’s pleasurable and relaxing?',
+        'cravings.irritableVet' => 'Do you get irritable and anxious without cigarettes or tobacco?',
+        'cravings.energyBoostVet' => 'Do you smoke or use tobacco for an energy boost?',
+      ),
+      '#required' => FALSE,
+    );
+  }
+  else {
+    $form['fight_cravings'] = array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
+        'cravings.relieveStress' => 'Do you smoke to relieve stress or improve your mood?',
+        'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
+        'cravings.pleasurable' => 'Do you smoke because it’s pleasurable and relaxing?',
+        'cravings.irritable' => 'Do you get irritable and anxious without cigarettes?',
+        'cravings.energyBoost' => 'Do you smoke for an energy boost?',
+      ),
+      '#required' => FALSE,
+    );
+  }
 
   if ($view == VETERANS_PAGE) {
     $form['extra_help'] = array(
@@ -291,7 +306,7 @@ function bqp_form($form, &$form_state, $view = 'sf') {
         'help.appsVet' => 'Apps',
         'help.facebookVet' => 'SmokefreeVET Facebook',
         'help.quitlinesVet' => 'Quitlines',
-        'help.livehelp' => 'NCI LiveHelp',
+        'help.livehelpVet' => 'NCI LiveHelp',
       ),
       '#required' => FALSE,
     );
@@ -538,6 +553,23 @@ EOC;
 EOC;
       break;
 
+    case 'cravings.relieveStressVet':
+      $content = <<< EOC
+        <div id="collapse2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Breath.png" alt="yoga icon">
+              <p>Practice deep breathing to calm down or go for a walk or do some pushups to blow off steam.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Talk.png" alt="two people icon">
+              <p>Turn to friends, family, and counselors when you need someone to talk to.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
     case 'cravings.mindOccupied':
       $content = <<< EOC
         <div id="collapse3" class="accordion-body collapse">
@@ -564,6 +596,18 @@ EOC;
 EOC;
       break;
 
+    case 'cravings.pleasurableVet':
+      $content = <<< EOC
+      <div id="collapse4" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div class="span12 clearfix crave-tip">
+            <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets">
+            <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your cigarette money for a special treat when you reach a tobacco free milestone.</p>
+          </div>
+        </div>
+      </div>
+EOC;
+      break;
     case 'cravings.irritable':
       $content = <<< EOC
         <div id="collapse5" class="accordion-body collapse">
@@ -576,7 +620,18 @@ EOC;
         </div>
 EOC;
       break;
-
+    case 'cravings.irritableVet':
+      $content = <<< EOC
+        <div id="collapse5" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span12 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Gum.png" alt="gum">
+              <p>Nicotine replacement therapy (NRT), such as patches, gum, or lozenges, can help relieve your withdrawal symptoms. Talk to your doctor to see which type of NRT is right for you.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
     case 'cravings.energyBoost':
       $content = <<< EOC
         <div id="collapse7" class="accordion-body collapse">
@@ -593,12 +648,27 @@ EOC;
         </div>
 EOC;
       break;
-
+    case 'cravings.energyBoostVet':
+      $content = <<< EOC
+        <div id="collapse7" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" width="37" height="32" alt="person running icon">
+              <p>To keep your energy level stable, get regular exercise and have healthy snacks throughout the day.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Sleep.png" alt="sleep cloud">
+              <p>Make sure you’re getting plenty of sleep at night to help you from feeling slow during the day.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
     case 'help.smokefreeVet':
       $content = <<< EOC
         <div id="help-collapse-1" class="accordion-body collapse">
           <div class="accordion-inner">
-            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848.</p>          </div>
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew..</p>          </div>
         </div>
 EOC;
       break;
@@ -627,7 +697,7 @@ EOC;
       $content = <<< EOC
         <div id="help-collapse-2" class="accordion-body collapse">
           <div class="accordion-inner">
-            <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become smokefree.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
+            <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become tobacco free.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
           </div>
         </div>
 EOC;
@@ -683,7 +753,15 @@ EOC;
         </div>
 EOC;
       break;
-
+    case 'help.livehelpVet':
+      $content = <<< EOC
+        <div id="help-collapse-6" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Get help quitting through an online chat with a tobacco cessation counselor. LiveHelp is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. <a href="https://livehelp.cancer.gov/app/chat/chat_launch/" target="_blank">Visit the NCI LiveHelp page to chat with a counselor.</a></p>
+          </div>
+        </div>
+EOC;
+      break;
     case 'help.medicationSF':
       $content = <<< EOC
          <div id="help-collapse-6" class="accordion-body collapse">
@@ -760,10 +838,10 @@ function bqp_results_form_submit($form, &$form_state) {
     else if ($form_state['clicked_button']['#value'] == 'Edit My Quit Plan') {
       // User wants to edit plan. Redirect to form input page.
       if ($form_state['values']['view'] == VETERANS_PAGE) {
-        $form_state['redirect'] = VETERANS_PAGE_RESULTS_URL;
+        $form_state['redirect'] = 'veterans/build-your-quit-plan';
       }
       else {
-        $form_state['redirect'] = '/build-your-quit-plan-results';
+        $form_state['redirect'] = '/build-your-quit-plan';
       }
     }
   }

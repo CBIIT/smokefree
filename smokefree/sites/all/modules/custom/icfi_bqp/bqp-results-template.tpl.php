@@ -251,6 +251,21 @@
           </div>
         </div>
       <?php endif; ?>
+      <?php if (in_array('cravings.relieveStressVet', $form['choices']['#value']['fight_cravings'])) : ?>
+          <div id="get.cravings.relieveStress">
+              <h4>Do you smoke or dip to relieve stress or improve your mood?</h4>
+              <div class="row-fluid">
+                  <div class="span6 clearfix crave-tip">
+                      <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Breath.png" alt="yoga icon">
+                      <p>Practice deep breathing to calm down or go for a walk or do some pushups to blow off steam.</p>
+                  </div>
+                  <div class="span6 clearfix crave-tip">
+                      <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Talk.png" alt="two people icon">
+                      <p>Turn to friends, family, and counselors when you need someone to talk to.</p>
+                  </div>
+              </div>
+          </div>
+      <?php endif; ?>
       <?php if (in_array('cravings.mindOccupied', $form['choices']['#value']['fight_cravings'])) : ?>
         <div id="get.cravings.mindOccupied">
           <h4>Do you have trouble keeping yourself busy and your mind occupied?</h4>
@@ -273,6 +288,17 @@
           </div>
         </div>
       <?php endif; ?>
+      <?php if (in_array('cravings.pleasurableVet', $form['choices']['#value']['fight_cravings'])) : ?>
+          <div id="get.cravings.pleasurable">
+              <h4>Do you smoke or dip because it’s pleasurable and relaxing?</h4>
+              <div class="row-fluid">
+                  <div class="span12 clearfix crave-tip">
+                      <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets">
+                      <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your cigarette money for a special treat when you reach a tobacco free milestone.</p>
+                  </div>
+              </div>
+          </div>
+      <?php endif; ?>
       <?php if (in_array('cravings.irritable', $form['choices']['#value']['fight_cravings'])) : ?>
         <div id="get.cravings.irritable">
           <h4>Do you get irritable and anxious without cigarettes?</h4>
@@ -283,6 +309,17 @@
             </div>
           </div>
         </div>
+      <?php endif; ?>
+      <?php if (in_array('cravings.irritableVet', $form['choices']['#value']['fight_cravings'])) : ?>
+          <div id="get.cravings.irritable">
+              <h4>Do you get irritable and anxious without cigarettes or tobacco?</h4>
+              <div class="row-fluid">
+                  <div class="span12 clearfix crave-tip">
+                      <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Gum.png" alt="gum">
+                      <p>Nicotine replacement therapy (NRT), such as patches, gum, or lozenges, can help relieve your withdrawal symptoms. Talk to your doctor to see which type of NRT is right for you.</p>
+                  </div>
+              </div>
+          </div>
       <?php endif; ?>
       <?php if (in_array('cravings.energyBoost', $form['choices']['#value']['fight_cravings'])) : ?>
         <div id="get.cravings.energyBoost">
@@ -298,6 +335,21 @@
             </div>
           </div>
         </div>
+      <?php endif; ?>
+      <?php if (in_array('cravings.energyBoostVet', $form['choices']['#value']['fight_cravings'])) : ?>
+          <div id="get.cravings.energyBoost">
+              <h4>Do you smoke or use tobacco for an energy boost?</h4>
+              <div class="row-fluid">
+                  <div class="span6 clearfix crave-tip">
+                      <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Checklist.png" alt="checklist icon">
+                      <p>Make a list of tasks that you can accomplish when a craving hits. This list can include chores, replying to emails, running errands, or planning your schedule for the next day.</p>
+                  </div>
+                  <div class="span6 clearfix crave-tip">
+                      <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Sleep.png" alt="sleep cloud">
+                      <p>Make sure you’re getting plenty of sleep at night to help you from feeling slow during the day.</p>
+                  </div>
+              </div>
+          </div>
       <?php endif; ?>
       <hr>
     </section>
@@ -336,7 +388,7 @@
       <?php if (in_array('help.smokefreeVet', $form['choices']['#value']['extra_help'])) : ?>
         <div id="get.help.smokefreeVet">
             <h4>SmokefreeVET Text Message Program</h4>
-            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848.</p>
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew.</p>
         </div>
       <?php endif; ?>
       <?php if (in_array('help.smokefreeSF', $form['choices']['#value']['extra_help'])) : ?>
@@ -356,7 +408,7 @@
       <?php if (in_array('help.appsVet', $form['choices']['#value']['extra_help'])) : ?>
           <div id="get.help.apps">
               <h4>Apps</h4>
-              <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become smokefree.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
+              <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become tobacco free.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
           </div>
       <?php endif; ?>
       <?php if (in_array('help.facebookSF', $form['choices']['#value']['extra_help'])) : ?>
@@ -397,6 +449,12 @@
           <h4>NCI LiveHelp</h4>
           <p>Get help quitting through an online chat with a smoking cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch" target="_blank">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
         </div>
+      <?php endif; ?>
+      <?php if (in_array('help.livehelpVet', $form['choices']['#value']['extra_help'])) : ?>
+          <div id="get.help.livehelp">
+              <h4>NCI LiveHelp</h4>
+              <p>Get help quitting through an online chat with a tobacco cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch" target="_blank">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
+          </div>
       <?php endif; ?>
     </section>
     <?php endif; ?>
