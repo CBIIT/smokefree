@@ -41,8 +41,8 @@
             <a href="#show" class="trigger-scroll step7" data-target="show">show</a>
           </li>
         </ul>
-          <img alt="man riding bycicle icon" class="icon" src="/sites/all/themes/sfg/images/sf-vet/Bike_Black.png">
-        <p class="heading">The smokefree journey can be a </p>
+          <img alt="man riding bicycle icon" class="icon" src="/sites/all/themes/sfg/images/sf-vet/Bike_Black.png">
+        <p class="heading">The tobacco free journey can be a </p>
         <h2 class="quit-plan">BUMPY RIDE</h2>
         <p class="heading">but making a quit plan can help smooth things out.</p>
         <a href="#mark" class="button  down-arrow-btn btn-quit-plan trigger-scroll" type="button">Build your quit plan now</a>
@@ -104,7 +104,7 @@
                 <li class="milestone">
                   <button class="btn btn-link modal-milestone-trigger" data-toggle="modal" type="button" data-target="#modal-24-hours">
                     <img src="/sites/all/themes/sfg/images/sf-vet/milestone-plus.png" width="42" height="42" alt="">
-                    <span class="sr-only">24 hours smokefree</span>
+                    <span class="sr-only">24 hours tobacco free</span>
                   </button>
                 </li>
                 <li class="milestone">
@@ -116,7 +116,7 @@
                 <li class="milestone">
                   <button class="btn btn-link modal-milestone-trigger" data-toggle="modal" type="button" data-target="#modal-one-week">
                     <img src="/sites/all/themes/sfg/images/sf-vet/milestone-plus.png" width="42" height="42" alt="">
-                    <span class="sr-only">1 week smokefree</span>
+                    <span class="sr-only">1 week tobacco</span>
                   </button>
                 </li>
                 <li class="milestone">
@@ -161,10 +161,10 @@
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="modal-header-24-hours">
-                <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Calendar.png" alt="calendar icon" width="34" height="40" /> 24 hours smokefree</h4>
+                <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Calendar.png" alt="calendar icon" width="34" height="40" /> 24 hours tobacco free</h4>
             </div>
             <div class="modal-body">
-              <p>Your first day without cigarettes is a big accomplishment!</p>
+              <p>Your first day without tobacco is a big accomplishment!</p>
               <fieldset>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="person dancing icon">
                 <legend> Celebrate this milestone with a reward:</legend>
@@ -220,8 +220,8 @@
             </div>
             <div class="modal-body">
               <p><strong>What to expect:</strong> Withdrawal is your body adjusting to not having nicotine. This can be uncomfortable. You might not feel like yourself and you might feel down during this time. </p>
-              <p>Nicotine withdrawal is not dangerous, but you may want to talk to your health care provider about using nicotine replacement therapy (NRT), like the gum or the patch, to help manage withdrawal.</p>
-              <p><strong>What to do:</strong> Make time for activities that make you feel happy or relaxed to get through the first days of quitting.</p>
+              <p>Use of nicotine replacement, like the gum or patcUse of nicotine replacement, like the gum or patch, can really help manage your withdrawal. Talk to your health care provider for more information.</p>
+              <p><strong>What to do:</strong> Make time for activities that help you manage your stress and get support to get through the first days of quitting.</p>
               <fieldset>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" alt="person dancing icon">
                 <legend>
@@ -266,10 +266,10 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="modal-header-one-week">
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Calendar.png" alt="calendar icon" width="34" height="40" />
-                1 week smokefree</h4>
+                1 week tobacco free</h4>
             </div>
             <div class="modal-body">
-              <p>Being smokefree for a week is a huge achievement! Nicotine is completely out of your system, and the worst of the withdrawal is probably over.
+              <p>Being tobacco free for a week is a huge achievement! Nicotine is completely out of your system, and the worst of the withdrawal is probably over.
               </p>
               <fieldset>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="person dancing icon">
@@ -325,7 +325,7 @@
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Calendar.png" alt="calendar icon" width="34" height="40" /> First Two Weeks</h4>
             </div>
             <div class="modal-body">
-              <p><strong>What to expect:</strong> Most withdrawal symptoms will fade by the time you are smokefree for two weeks. </p>
+              <p><strong>What to expect:</strong> Most withdrawal symptoms will fade by the time you are tobacco free for two weeks. </p>
               <p><strong>What to do:</strong> Make time for activities that put you in a good mood and make you feel relaxed to get through the challenges of quitting.</p>
               <p>Plan an activity to keep you occupied:</p>
               <fieldset>
@@ -371,10 +371,10 @@
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="modal-header-one-month">
-                <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Calendar.png" alt="calendar icon" width="34" height="40"> 1 month smokefree:</h4>
+                <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Calendar.png" alt="calendar icon" width="34" height="40"> 1 month tobacco free:</h4>
             </div>
             <div class="modal-body">
-              <p>A whole month without cigarettes means that withdrawal is behind you and cravings are becoming less intense.</p>
+              <p>A whole month without tobacco means that withdrawal is behind you and cravings are becoming less intense.</p>
               <fieldset>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="shopping basket" />
                 <legend>
@@ -446,8 +446,8 @@
       </div>
 
       <div class="section-body">
-        <p>Everyone has their own reasons for wanting to be smokefree.</p>
-        <p>Choose your reasons for quitting smoking.</p>
+        <p>Everyone has their own reasons for wanting to be tobacco free.</p>
+        <p>Choose your reasons for quitting smoking or for quitting dip or chew.</p>
 
         <fieldset>
           <div class="reason-options-wrap clearfix">
@@ -479,7 +479,7 @@
 
         <p>Knowing your triggers helps you stay in control. When you first quit, you might want to completely avoid your triggers. After staying smokefree for a while, you may find other ways to handle your triggers.</p>
 
-        <p><span class="form-required">*</span>Here are some common smoking triggers:</p>
+        <p><span class="form-required">*</span>Here are some common tobacco use triggers:</p>
 
         <div class="row triggers-block">
           <div class="triggers col-sm-4">
@@ -522,6 +522,7 @@
       <div class="section-body">
           <p>Cravings only last a few minutes, but those minutes can be tough.</p>
           <p><strong>Build your quit kit:</strong> Think about the kinds of cravings you experience, and collect the things you will use to help you get through each one.</p>
+          <p>Consider talking to your provider about using tobacco cessation medications such as Nicotine Replacement Therapy as tools to help you work through cravings as you stop using tobacco.</p>
         <div class="accordion-cravings" id="accordion1">
           <?php print render($form['fight_cravings']);?>
         </div>
@@ -547,7 +548,7 @@
         <div class="validation-error section-error collapse">
           <p class="alert alert-error">Please select your smoking reminders(s)</p>
         </div>
-          <p>Get ready for your quit day by clearing your spaces of anything associated with smoking. This includes your home, car, workplace, and any other places you can think of!</p>        <fieldset>
+          <p>Get ready for your quit day by clearing your spaces of anything associated with tobacco. This includes your home, car, workplace, and any other places you can think of!</p>        <fieldset>
           <div class="smoking-reminders-wrap clearfix">
             <div class="reminder">
               <img src="/sites/all/themes/sfg/images/sf-vet/wash-clothes.png" alt="clothes">
@@ -570,12 +571,12 @@
             <div class="reminder">
               <img src="/sites/all/themes/sfg/images/sf-vet/quit-items.png" alt="table ornaments">
               <p>
-                Put craving fighting items—like straws, nicotine gum, or a list of chores—in the places where you kept your cigarettes, ashtrays, matches, and lighters.
+                Put your quit kit items in the places where you kept your cigarettes, dip or chew, ashtrays, matches, and lighters.
               </p>
             </div>
           </div>
         </fieldset>
-        <p>The night before quit day, throw away everything that is related to smoking. Don’t hide a pack in your freezer or stash your ashtrays in the back of a cabinet.</p>
+        <p>The night before quit day, throw away everything that is related to tobacco. Don’t hide a pack in your freezer or stash your ashtrays in the back of a cabinet.</p>
         <p class="emphasis">Everything must go!</p>
 
         <a href="#help" class="next-section trigger-scroll">
@@ -607,13 +608,13 @@
     <section class="tell clearfix quit-plan-panel">
       <h2 class="tell-friends">Tell friends and family.</h2>
       <div class="section-body">
-        <p>Quitting smoking is easier when you have support from your loved ones. Let your family and friends know that you are quitting, or invite a friend to quit with you.</p>
+        <p>Quitting tobacco is easier when you have support from your loved ones. Let your family and friends know that you are quitting, or invite a friend to quit with you.</p>
         <div class="send-invite">
           <div class="dropdown dropdown-tell-friends-family">
             <button type="button" data-target="dropdown-tell-friends-family" data-toggle="dropdown" class="dropdown-toggle button btn-quit-plan tell-friends-family-btn" role="button" id="tell-friends-family">Tell Friends and Family You’re Quitting</button>
             <ul class="quitplan-dropdown-menu dropdown-menu dropdown-menu-tell-friends-family" role="menu" id="dropdown-tell-friends-family" aria-labelledby="tell-friends-family">
               <li>
-                <a class="btn btn-link" data-service="SendMessage" type="button" href="mailto:?subject=I%27m%20becoming%20smokefree%20and%20I%20need%20your%20help!&amp;body=On%20%5BQuit%20Date%5D%20I%27m%20quitting%20smoking.%0D%0A%0D%0A%20I%27m%20letting%20you%20know%20this%20because%20quitting%20will%20be%20tough,%20but%20having%20the%20support%20of%20my%20loved%20ones%20will%20make%20it%20a%20little%20easier.%20I%20hope%20that%20I%20can%20turn%20to%20you%20for%20help%20during%20my%20journey%20to%20become%20smokefree.%0D%0A%0D%0AI%20look%20forward%20to%20sharing%20this%20new%20chapter%20of%20my%20life%20with%20you.%0D%0ASincerely,%0D%0A%5BName%5D">Send an email</a>
+                <a class="btn btn-link" data-service="SendMessage" type="button" href="mailto:?subject=I%27m%20becoming%20tobacco%20free%20and%20I%20need%20your%20help!&amp;body=On%20%5BQuit%20Date%5D%20I%27m%20quitting%20tobacco.%0D%0A%0D%0A%20I%27m%20letting%20you%20know%20this%20because%20quitting%20will%20be%20tough,%20but%20having%20the%20support%20of%20my%20loved%20ones%20will%20make%20it%20a%20little%20easier.%20I%20hope%20that%20I%20can%20turn%20to%20you%20for%20help%20during%20my%20journey%20to%20become%20tobacco%20free.%0D%0A%0D%0AI%20look%20forward%20to%20sharing%20this%20new%20chapter%20of%20my%20life%20with%20you.%0D%0ASincerely,%0D%0A%5BName%5D">Send an email</a>
               </li>
               <li>
                 <button type="button" class="btn btn-link" data-service="Facebook">Share on Facebook</button>
@@ -630,7 +631,7 @@
             <button type="button" data-target="dropdown-invite-friend" data-toggle="dropdown" class="dropdown-toggle button btn-quit-plan invite-friend-btn" role="button" id="invite-friend">Invite a friend to quit with you</button>
             <ul class="quitplan-dropdown-menu dropdown-menu dropdown-menu-invite-friend" role="menu" id="dropdown-invite-friend" aria-labelledby="invite-friend">
               <li>
-                <a class="btn btn-link" data-service="SendMessage" type="button" href="mailto:?subject=Will%20you%20become%20smokefree%20with%20me?&amp;body=On%20%5BQuit%20Date%5D%20I%27m%20quitting%20smoking%20and%20I%20want%20you%20to%20quit%20with%20me.%0D%0A%0D%0ABecoming%20smokefree%20is%20easier%20when%20you%20do%20it%20with%20someone%20you%20care%20about.%20Let%27s%20take%20the%20smokefree%20journey%20together,%20and%20we%20can%20help%20and%20support%20each%20other%20along%20the%20way.%0D%0A%0D%0AI%20look%20forward%20to%20sharing%20this%20new%20chapter%20of%20my%20life%20with%20you.%0D%0A%0D%0ASincerely,%0D%0A%5BName%5D">Send an email</a>
+                <a class="btn btn-link" data-service="SendMessage" type="button" href="mailto:?subject=Will%20you%20become%20tobacco%20free%20with%20me?&amp;body=On%20%5BQuit%20Date%5D%20I%27m%20quitting%20smoking%20and%20I%20want%20you%20to%20quit%20with%20me.%0D%0A%0D%0ABecoming%20tobacco%20free%20is%20easier%20when%20you%20do%20it%20with%20someone%20you%20care%20about.%20Let%27s%20take%20the%20tobacco%20free%20journey%20together,%20and%20we%20can%20help%20and%20support%20each%20other%20along%20the%20way.%0D%0A%0D%0AI%20look%20forward%20to%20sharing%20this%20new%20chapter%20of%20my%20life%20with%20you.%0D%0A%0D%0ASincerely,%0D%0A%5BName%5D">Send an email</a>
               </li>
               <li>
                 <button type="button" class="btn btn-link" data-service="Facebook">Share on Facebook</button>
