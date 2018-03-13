@@ -838,10 +838,10 @@ function bqp_results_form_submit($form, &$form_state) {
     else if ($form_state['clicked_button']['#value'] == 'Edit My Quit Plan') {
       // User wants to edit plan. Redirect to form input page.
       if ($form_state['values']['view'] == VETERANS_PAGE) {
-        $form_state['redirect'] = VETERANS_PAGE_RESULTS_URL;
+        $form_state['redirect'] = 'veterans/build-your-quit-plan';
       }
       else {
-        $form_state['redirect'] = '/build-your-quit-plan-results';
+        $form_state['redirect'] = '/build-your-quit-plan';
       }
     }
   }
