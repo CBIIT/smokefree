@@ -249,11 +249,16 @@ fallback.load({
                  */
                 send_text_signup: function(opt_in, phone_number) {
                     if (phone_number.length > 0 && !isNaN(phone_number)) {
+                        var fields = {};
+                        fields.opt_in_path = opt_in;
+                        fields.person_phone = phone_number;
                         switch (opt_in) {
                             case vm.program_challenge_opt_in_path:
+                                fields.person_POS_DC_Hidden = 'ETC';
                                 vm.show_program_challenge_submit = false;
                                 break;
                             case vm.program_practice_opt_in_path:
+                                fields.person_POS_PQ_Hidden = 'ETC';
                                 vm.show_program_practice_submit = false;
                                 break;
                             case vm.program_quit_opt_in_path:
@@ -263,10 +268,7 @@ fallback.load({
                         var request = $.ajax({
                             url: mobile_commons_url,
                             type: "POST",
-                            data: {
-                                opt_in_path: opt_in,
-                                person_phone: phone_number
-                            },
+                            data: fields,
                             opt_in_path: opt_in,
                             dataType: "html"
                         });
