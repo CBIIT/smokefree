@@ -16,7 +16,7 @@ function icfi_motion_ai_api_menu() {
  * Callback for the API endpoint.
  *
  * It checks if the API key is valid, the term is valid
- * and then returns appropriate include data
+ * and then returns the appropriate include data
  */
 function _get_random_include_as_json() {
 
@@ -56,7 +56,7 @@ function is_valid_key() {
 }
 
 /**
- * Return the tid for the chatbot category get parameter.
+ * Return the tid for the chatbot category GET parameter.
  *
  * @return bool|mixed Category tid if found, FALSE otherwise.
  */
@@ -72,6 +72,7 @@ function get_category_tid() {
 
 /**
  * Gets the chatbot categories taxonomy terms and id in key value pairs.
+ * These categories will seldom change, so the function leverages the cache API.
  *
  * @see cache_set()
  * @see cache_get()

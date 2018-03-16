@@ -1,3 +1,8 @@
+Smokefree 1.18 2018-03-08
+-----------------------
+
+- SF-722, SF-723, SF-724 and SF-728: Clean up unwanted CSS and files
+
 Smokefree 1.17 2018-02-08
 -----------------------
 
