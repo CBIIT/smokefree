@@ -540,7 +540,7 @@
         <img src="/sites/all/themes/sfg/images/sf-vet/reminder.jpg" alt="hand holding trash bag" />
         <h2>
           <span class="section-head-top"><span>GET RID OF</span></span>
-          <span class="section-head-bottom"> SMOKING REMINDERS</span>
+          <span class="section-head-bottom"> REMINDERS</span>
         </h2>
       </div>
 

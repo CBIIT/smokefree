@@ -303,7 +303,7 @@ if (in_array('cravings.pleasurableVet', $form['choices']['#value']['fight_cravin
                 <table>
                     <tr class="quit-tip">
                         <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets" /></td>
-                        <td>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your cigarette money for a special treat when you reach a tobacco milestone.</td>
+                        <td>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your tobacco money for a special treat when you reach a tobacco milestone.</td>
                     </tr>
                 </table>
 
@@ -403,7 +403,7 @@ if (in_array('help.medicationSF', $form['choices']['#value']['extra_help'])) {
 if (in_array('help.smokefreeVet', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.smokefreeVet">
                 <h4>SmokefreeVET Text Message Program</h4>
-            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew..</p>
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew.</p>
             </div>
 ';
 }
