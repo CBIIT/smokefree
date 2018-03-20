@@ -28,4 +28,3 @@ Feature: Default Navigation Links
         | Help Others Quit         | help-others-quit         |
       And the response status code should be 200
 
-      

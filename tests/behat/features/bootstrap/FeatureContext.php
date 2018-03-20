@@ -188,7 +188,6 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
      */
     public function iHoverOverTheLink($link)
     {
-        $session = $this->getSession(); // get the mink session
         $element = $this->getSession()->getPage();
         $result = $element->findLink($link);
 
@@ -217,7 +216,6 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     }
 
 
-
     /**
      * @When I scroll :elementId into view
      */
@@ -236,6 +234,59 @@ JS;
         }
     }
 
+    /**
+     * @When /^The website should open in a new tab$/
+     */
+    public function documentShouldOpenInNewTab()
+    {
+        $session     = $this->getSession();
+        $windowNames = $session->getWindowNames();
+        if(sizeof($windowNames) < 2){
+            throw new \ErrorException("Expected to see at least 3 windows opened");
+        }
+
+
+        $session->switchToWindow($windowNames[0]);
+    }
+
+    /**
+     * @Given /^I confirm the dialog$/
+     * @throws \Behat\Mink\Exception\DriverException
+     */
+    public function iConfirmTheDialog()
+    {
+        $this->getSession()->getDriver()->executeScript('window.confirm = function () { return true; };');
+    }
+
+
+    /**
+     * @Given I should see the image :image
+     */
+    public function viewTheImage($image)
+    {
+        $this->getSession()->getPage()->findLink($image);
+
+        if (null === $image) {
+          throw new ElementNotFoundException($this->getDriver(), 'link', 'id|name|title|alt|value|', $image);
+        }
+
+    }
+
+    /**
+     * @Given /^the page title should be "([^"]*)"$/
+     */
+    public function thePageTitleShouldBe($expectedTitle)
+    {
+        $titleElement = $this->getSession()->getPage()->find('css', 'head title');
+        if ($titleElement === null) {
+            throw new Exception('Page title element was not found!');
+        } else {
+            $title = $titleElement->getText();
+            if ($expectedTitle !== $title) {
+                throw new Exception("Incorrect title! Expected:$expectedTitle | Actual:$title ");
+            }
+        }
+    }
 }
 
 

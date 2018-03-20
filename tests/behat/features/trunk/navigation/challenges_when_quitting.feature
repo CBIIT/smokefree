@@ -1,6 +1,6 @@
 @javascript
 Feature: Challenges When Quitting Main Navigation Link
-  In order to navigate to links under the Challenges When Quitting main navigation link
+  In order to navigate to links under the 'Challenges When Quitting' main navigation link
   As a website user
   I need to be able hover over the main navigation link and click on those links to go the corresponding pages and get more information
 

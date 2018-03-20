@@ -1,5 +1,5 @@
 @api
-Feature: Footer Content Visibility
+Feature: Footer Content Text
   In order to find more content and information on the website
   As a website user
   I need to be able to scroll down to the bottom of the page and view all the footer links on the Smokefree Website
@@ -7,8 +7,7 @@ Feature: Footer Content Visibility
   Background:
    Given I am on the homepage
 
-
-  Scenario Outline: Main navigation links are present in the footer
+  Scenario Outline: Main navigation links are present and visible in the footer
     Then I should see the link "<main_navigation_link>" in the footer
     Examples: Navigation footer links
       | main_navigation_link     |
@@ -17,10 +16,9 @@ Feature: Footer Content Visibility
       | Quitting Smoking         |
       | Stay Smokefree for Good  |
       | Help Others Quit         |
-      | About Smokefree.gov      |
-      | Ask for Help             |
+      | About                    |
 
-   Scenario Outline: The sub menu links under the "Tools & Tips" main navigation link are present in the footer
+   Scenario Outline: The sub menu links under the "Tools & Tips" main navigation link are present and visible in the footer
      Then I should see the link "<sub_menu_link>" in the footer
      Examples: Navigation footer "Tools & Tips" sub menu links
        | sub_menu_link         |
@@ -30,7 +28,7 @@ Feature: Footer Content Visibility
        | Speak To An Expert    |
        | Join a Research Study |
 
-  Scenario Outline: The sub menu links under the "Challenges When Quitting" main navigation link are present in the footer
+  Scenario Outline: The sub menu links under the "Challenges When Quitting" main navigation link are present and visible in the footer
     Then I should see the link "<sub_menu_link>" in the footer
     Examples: Navigation footer "Challenges When Quitting" sub menu links
       | sub_menu_link                           |
@@ -40,7 +38,7 @@ Feature: Footer Content Visibility
       | Mood Management                         |
       | Dealing with Weight Gain after Quitting |
 
-  Scenario Outline: The sub menu links under the "Quitting Smoking" main navigation link are present in the footer
+  Scenario Outline: The sub menu links under the "Quitting Smoking" main navigation link are present and visible in the footer
     Then I should see the link "<sub_menu_link>" in the footer
     Examples: Navigation footer "Quitting Smoking" sub menu links
       | sub_menu_link            |
@@ -50,7 +48,7 @@ Feature: Footer Content Visibility
       | Why Quitting Is Hard     |
       | Ask for Help             |
 
-  Scenario Outline: The sub menu links under the "Stay Smokefree for Good" main navigation link are present in the footer
+  Scenario Outline: The sub menu links under the "Stay Smokefree for Good" main navigation link are present and visible in the footer
     Then I should see the link "<sub_menu_link>" in the footer
     Examples: Navigation footer "Stay Smokefree for Good" sub menu links
       | sub_menu_link         |
@@ -59,17 +57,22 @@ Feature: Footer Content Visibility
       | Get Active            |
       | Eat Healthy           |
 
-  Scenario Outline: The sub menu links under the "Help Others Quit" main navigation link are present in the footer
+  Scenario Outline: The sub menu links under the "About" main navigation link are present and visible in the footer
+    Then I should see the link "<sub_menu_link>" in the footer
+    Examples: Navigation footer "About" sub menu links
+      | sub_menu_link            |
+      | About Smokefree.gov      |
+      | Get Social               |
+
+  Scenario Outline: The sub menu links under the "Help Others Quit" main navigation link are present and visible in the footer
     Then I should see the link "<sub_menu_link>" in the footer
     Examples: Navigation footer "Help Others Quit" sub menu links
       | sub_menu_link            |
       | For Health Professionals |
       | For Family & Friends     |
 
-  Scenario: The sub menu link under the "About Smokefree.gov" main navigation link is present in the footer
-    Then I should see the link "Smokefree Partner Toolkit" in the footer
 
-  Scenario Outline: Smokefree vet, Women, Teen, Espanol and 60+ website image links are present in the footer
+  Scenario Outline: Smokefree vet, Women, Teen, Espanol and 60+ website links are present and visible in the footer
     Then I should see the link "<link>" in the footer
     Examples: Smokefree website links
       | link    |
@@ -80,7 +83,8 @@ Feature: Footer Content Visibility
       | 60      |
     But I should not see the link "smokefree-gov" in the footer
 
-   Scenario Outline: Help links are present in the footer
+
+  Scenario Outline: LiveHelp, Quit Plan, SmokefreeTxt and mHealth Monitor links are present and visible in the footer
      Then I should see the link "<link>" in the footer
      Examples: Help footer links
      | link            |
@@ -89,18 +93,18 @@ Feature: Footer Content Visibility
      | SmokefreeTXT    |
      | mHealth Monitor |
 
-  Scenario Outline: Social media icons(facebook, instagram and twitter) are present in the footer
+  Scenario Outline: Social media icons(facebook, instagram and twitter) are present and visible in the footer
     Then I should see an "<element>" element
     Examples: Social media footer icons
-    | element |
+    | element                                                                                                  |
     | #footer > footer > div.container > div.left-box > div.col-xs-12.col-md-12.iconrow > div > a:nth-child(1) |
     | #footer > footer > div.container > div.left-box > div.col-xs-12.col-md-12.iconrow > div > a:nth-child(2) |
     | #footer > footer > div.container > div.left-box > div.col-xs-12.col-md-12.iconrow > div > a:nth-child(3) |
 
-  Scenario Outline: The site map links in the footer are present
+  Scenario Outline: The site map links in the footer are present and visible in the footer
     Then I should see the link "<link>" in the footer
     Examples: Site map footer links
-    | link |
+    | link                                         |
     | Home                                         |
     | About Smokefree                              |
     | Health Professionals                         |
@@ -113,7 +117,6 @@ Feature: Footer Content Visibility
     | National Institutes of Health                |
     | National Cancer Institute                    |
     | USA.gov                                      |
-
 
   Scenario: BeTobaccoFree.gov image is present in the footer
     Then I should see the link "BeTobaccoFree.gov" in the footer
