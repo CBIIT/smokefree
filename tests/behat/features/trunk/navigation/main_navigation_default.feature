@@ -7,16 +7,16 @@ Feature: Default Navigation Links
   Background:
     Given I am on the homepage
 
-    Scenario: Clicking on the Home link will redirect back to the home page
+    Scenario: Clicking on the "Home"  link will redirect back to the home page
       When I should see the link "Home" in the main_nav
       And  I click "Home" in the main_nav
       Then I am on the homepage
 
-    Scenario Outline: Clicking on the Main Navigation links will redirect to the corresponding pages
+    Scenario Outline: Clicking on the main navigation links will direct to the corresponding pages
       When I should see the link "<link>" in the main_nav
       And I click "<link>" in the main_nav
       Then I am on "<page>"
-      But the response status code should not be 404
+      And the response status code should be 200
       When I click "Home" in the main_nav
       Then I am on the homepage
       Examples:
@@ -26,6 +26,6 @@ Feature: Default Navigation Links
         | Quitting Smoking         | quitting-smoking         |
         | Stay Smokefree for Good  | stay-smokefree-good      |
         | Help Others Quit         | help-others-quit         |
-      And the response should not contain "404"
+      And the response status code should be 200
 
-
+      
