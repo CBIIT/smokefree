@@ -7,6 +7,17 @@
 /* generic styles
 ***************************************************/
 
+#quit-plan p {
+    font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4A4A4A;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
 .clearfix:after {
     content: "";
     visibility: hidden;
@@ -161,9 +172,9 @@ section {
 }
 
 p.heading, p.pre_heading {
-    font-size: 1.3em;
-    line-height: 1.5em;
-    padding: 0;
+    font-size: 1.3em !important;
+    line-height: 1.5em !important;
+    padding: 0 !important;
 }
 
 p.pre_heading {
@@ -197,9 +208,9 @@ ul.plan-ul {
 }
 
 p.emphasis {
-    color: #10345b;
-    text-transform: uppercase;
-    font-size: 2em;
+    color: #10345b !important;
+    text-transform: uppercase !important;
+    font-size: 2em !important;
 }
 
 .next-section {
@@ -304,7 +315,7 @@ button.modal-milestone-trigger {
 
 .timeline-markers {
     max-width: 850px;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -579,7 +590,7 @@ button.btn-milestone:hover {
 .reason-options {
     text-align: left;
     float: left;
-    width: 23%;
+    width: 18%;
     margin: 0 1%;
 }
 
@@ -956,11 +967,11 @@ button.btn-edit-plan {
     outline: 0;
 }
 #get-quit-day {
-    padding-bottom: 0;
-    padding-left: 75px;
-    font-size: 3em;
-    color: #3c84a4;
-    background: #FFF url(/sites/all/themes/smokefreegov/images/sf-vet/SF_Vet_Calendars_Calendar.png) no-repeat left center;
+    padding-bottom: 0 !important;
+    padding-left: 75px !important;
+    font-size: 3em !important;
+    color: #3c84a4 !important;
+    background: #FFF url(/sites/all/themes/smokefreegov/images/sf-vet/SF_Vet_Calendars_Calendar.png) no-repeat left center !important;
 }
 
 .plan-input {
@@ -968,8 +979,8 @@ button.btn-edit-plan {
 }
 
 #get-quit-plan .triggers h4 {
-    margin: 0;
-    color: inherit;
+    margin: 0 !important;
+    color: inherit !important;
 }
 
 .craving {
@@ -1336,7 +1347,7 @@ media queries - min 1170px
     }
 
     p.heading, p.pre_heading {
-        font-size: 1.5em;
+        font-size: 2.0em !important;
     }
     h2.quit-plan {
         font-size: 5em;
@@ -1662,4 +1673,18 @@ mark, .mark {
 
 .milestone .btn {
     border: none;
+}
+
+.output_intro {
+    text-align: center;
+}
+
+.article-title {
+    max-width: 1170px;
+    margin: 0 auto;
+    font-size: 2.1875em;
+    line-height: 1.5em;
+}
+.page-veterans .container-page #edit-extra-help ul {
+    width: 98% !important;
 }

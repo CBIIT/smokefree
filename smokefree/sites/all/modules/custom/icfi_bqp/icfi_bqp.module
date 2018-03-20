@@ -1,5 +1,7 @@
 <?php
 
+CONST VETERANS_PAGE = 'veterans';
+CONST VETERANS_PAGE_RESULTS_URL = 'veterans/how-to-quit/build-your-quit-plan/results';
 /**
  * Implements hook_init().
  *
@@ -22,6 +24,11 @@ function icfi_bqp_theme($existing, $type, $theme, $path) {
   $custom_theme['bqp_theme'] = array(
     'render element' => 'form',
     'template' => 'bqp-template',
+    'path' => drupal_get_path('module', 'icfi_bqp'),
+  );
+  $custom_theme['veterans_bqp_theme'] = array(
+    'render element' => 'form',
+    'template' => 'veterans-bqp-template',
     'path' => drupal_get_path('module', 'icfi_bqp'),
   );
   $custom_theme['bqp_results_theme'] = array(
@@ -49,8 +56,20 @@ function icfi_bqp_menu() {
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
+  $items['veterans/how-to-quit/build-your-quit-plan'] = array(
+    'title' => 'Build Your Quit Plan',
+    'page callback' => '_veterans_bqp_callback',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['veterans/how-to-quit/build-your-quit-plan/results'] = array(
+    'title' => 'Your Quit Plan',
+    'page callback' => '_veterans_bqp_results_callback',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
   $items['build-your-quit-plan-results'] = array(
-    'title' => 'Build Your Quit Plan Results',
+    'title' => 'Your Quit Plan',
     'page callback' => '_bqp_results_callback',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
@@ -68,6 +87,28 @@ function _bqp_results_callback() {
   $theform = drupal_get_form('bqp_results_form');
   return $theform;
 }
+/**
+ * Callback function for veterans build-your-quit-plan menu item.
+ *
+ * @return array|mixed
+ *    The form as a render array.
+ */
+function _veterans_bqp_results_callback() {
+  $theform = drupal_get_form('bqp_results_form', VETERANS_PAGE);
+  return $theform;
+}
+
+/**
+ * Callback function for veterans build-your-quit-plan menu item.
+ *
+ * @return array|mixed
+ *    The form as a render array.
+ */
+function _veterans_bqp_callback() {
+  $theform = drupal_get_form('bqp_form', VETERANS_PAGE);
+  return $theform;
+}
+
 
 /**
  * Callback function for build-your-quit-plan menu item.
@@ -83,8 +124,7 @@ function _bqp_callback() {
 /**
  * Creates the build-your-quit-plan form.
  */
-function bqp_form($form, &$form_state) {
-
+function bqp_form($form, &$form_state, $view = 'sf') {
   $fields = array(
     'quit_day',
     'reasons_for_quitting',
@@ -133,6 +173,7 @@ function bqp_form($form, &$form_state) {
   $form['reasons_for_quitting'] = array(
     '#type' => 'checkboxes',
     '#options' => array(
+      'reasons.liveLonger' => 'Live longer',
       'reasons.breathEasier' => 'Be healthier',
       'reasons.saveMoney' => 'Save money',
       'reasons.smellBetter' => 'Smell better',
@@ -140,11 +181,22 @@ function bqp_form($form, &$form_state) {
     ),
     '#required' => FALSE,
   );
+  if ($view == VETERANS_PAGE) {
+    $form['reasons_for_quitting']['#options']['reasons.myLovedOnes'] = 'For my family and friends';
+  }
   if (!empty($form_state['values']['reasons_for_quitting'])) {
     $form['reasons_for_quitting']['#default_value'] = $form_state['values']['reasons_for_quitting'];
   }
 
   $icon_markup = array();
+  if ($view == VETERANS_PAGE) {
+    $icon_markup['reasons.liveLonger'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_LiveLonger.png" alt="live longer icon">';
+
+  }
+  // Remove the "Live longer" option from the main site
+  else {
+    unset($form['reasons_for_quitting']['#options']['reasons.liveLonger']);
+  }
   $icon_markup['reasons.breathEasier'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_BreatheEasier.png" alt="breath easier icon">';
   $icon_markup['reasons.saveMoney'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_MoreMoney.png" alt="money icon">';
   $icon_markup['reasons.smellBetter'] = '<img class="reasons-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Reasons_SenseSmell.png" alt="smell better icon">';
@@ -203,6 +255,9 @@ function bqp_form($form, &$form_state) {
     ),
     '#required' => FALSE,
   );
+  if ($view == VETERANS_PAGE) {
+    $form['triggers_social']['#options']['social.friends'] = 'Being with friends who smoke';
+  }
   foreach(array('triggers_emotional', 'triggers_habitual', 'triggers_social') as $trigger) {
     foreach ($form[$trigger]['#options'] as $name => $label) {
       $form[$trigger][$name]['#prefix'] = '<div class="fancy-checkbox-wrap">';
@@ -219,33 +274,62 @@ function bqp_form($form, &$form_state) {
       $form[$trigger]['#default_value'] = $form_state['values'][$trigger];
     }
   }
+  if ($view == VETERANS_PAGE) {
+    $form['fight_cravings'] = array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
+        'cravings.relieveStressVet' => 'Do you smoke or dip to relieve stress or improve your mood?',
+        'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
+        'cravings.pleasurableVet' => 'Do you smoke or dip because it’s pleasurable and relaxing?',
+        'cravings.irritableVet' => 'Do you get irritable and anxious without cigarettes or tobacco?',
+        'cravings.energyBoostVet' => 'Do you smoke or use tobacco for an energy boost?',
+      ),
+      '#required' => FALSE,
+    );
+  }
+  else {
+    $form['fight_cravings'] = array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
+        'cravings.relieveStress' => 'Do you smoke to relieve stress or improve your mood?',
+        'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
+        'cravings.pleasurable' => 'Do you smoke because it’s pleasurable and relaxing?',
+        'cravings.irritable' => 'Do you get irritable and anxious without cigarettes?',
+        'cravings.energyBoost' => 'Do you smoke for an energy boost?',
+      ),
+      '#required' => FALSE,
+    );
+  }
 
-  $form['fight_cravings'] = array(
-    '#type' => 'checkboxes',
-    '#options' => array(
-      'cravings.keepBusy' => 'Do you need to keep your hands and mouth busy?',
-      'cravings.relieveStress' => 'Do you smoke to relieve stress or improve your mood?',
-      'cravings.mindOccupied' => 'Do you have trouble keeping busy and your mind occupied?',
-      'cravings.pleasurable' => 'Do you smoke because it’s pleasurable and relaxing?',
-      'cravings.irritable' => 'Do you get irritable and anxious without cigarettes?',
-      'cravings.energyBoost' => 'Do you smoke for an energy boost?',
-    ),
-    '#required' => FALSE,
-  );
-
-  $form['extra_help'] = array(
-    '#type' => 'checkboxes',
-    '#options' => array(
-      'help.smokefreeVet' => 'SmokefreeTXT Text Message Program',
-      'help.apps' => 'Apps',
-      'help.facebook' => 'SmokefreeUS Facebook',
-      'help.quitlines' => 'Quitlines',
-      'help.livehelp' => 'NCI LiveHelp',
-      'help.medication' => 'Medication and Nicotine Replacement Therapy (NRT)',
-    ),
-    '#required' => FALSE,
-  );
-
+  if ($view == VETERANS_PAGE) {
+    $form['extra_help'] = array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'help.smokefreeVet' => 'SmokefreeVET Text Message Program',
+        'help.appsVet' => 'Apps',
+        'help.facebookVet' => 'SmokefreeVET Facebook',
+        'help.quitlinesVet' => 'Quitlines',
+        'help.livehelpVet' => 'NCI LiveHelp',
+      ),
+      '#required' => FALSE,
+    );
+  }
+  else {
+    $form['extra_help'] = array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'help.smokefreeSF' => 'SmokefreeTXT Text Message Program',
+        'help.appsSF' => 'Apps',
+        'help.facebookSF' => 'SmokefreeUS Facebook',
+        'help.quitlinesSF' => 'Quitlines',
+        'help.livehelp' => 'NCI LiveHelp',
+        'help.medicationSF' => 'Medication and Nicotine Replacement Therapy (NRT)',
+      ),
+      '#required' => FALSE,
+    );
+  }
   foreach (array('fight_cravings', 'extra_help') as $accordion_parent) {
     if (!empty($form_state['values'][$accordion_parent])) {
       $form[$accordion_parent]['#default_value'] = $form_state['values'][$accordion_parent];
@@ -311,7 +395,10 @@ EOC;
       'id' => 'milestones.oneMonth',
     ),
   );
-
+  $form['view'] = array(
+    '#type' => 'hidden',
+    '#value' => $view,
+  );
   foreach (array('milestones_24hours', 'milestones_48hours', 'milestones_oneWeek', 'milestones_twoWeeks', 'milestones_oneMonth') as $milestone) {
     if (!empty($form_state['values'][$milestone])) {
       $form[$milestone]['#default_value'] = $form_state['values'][$milestone];
@@ -326,12 +413,20 @@ EOC;
       'id' => 'get-my-quit-plan',
     ),
   );
-  $form['#theme'] = 'bqp_theme';
+  if ($view == VETERANS_PAGE) {
+    $form['#theme'] = 'veterans_bqp_theme';
+    $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
+
+  }
+  else {
+    $form['#theme'] = 'bqp_theme';
+    $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-non-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
+
+  }
   $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/jquery.waypoints.min.js';
   $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/build-your-quit-plan-progress-bar.js';
 
 
-  $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-non-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
   $form['#attached']['css'][] = drupal_get_path('module', 'icfi_bqp') . '/css/bootstrap-datepicker.standalone.min.css';
   $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/bootstrap-datepicker.min.js';
   $form['#attached']['js'][] = drupal_get_path('module', 'icfi_bqp') . '/js/icfi_bqp.js';
@@ -339,18 +434,28 @@ EOC;
   return $form;
 }
 
-function bqp_results_form($form, &$form_state) {
-
+function bqp_results_form($form, &$form_state, $view = 'sf') {
   $existing_choices = &$_SESSION['existing_bqp_choices'];
   // If static variable existing_choices is set, use them as default for
   // users to edit.
   if (isset($existing_choices)) {
     $form['choices']['#value'] = $existing_choices;
   }
-  else {
+
+  //Redirect to appropriate URL's
+  elseif ($view == VETERANS_PAGE) {
     // No choices to display so redirect to input form.
+    drupal_goto(VETERANS_PAGE_RESULTS_URL);
+  }
+
+  else {
     drupal_goto('/build-your-quit-plan');
   }
+
+  $form['view'] = array(
+    '#type' => 'hidden',
+    '#value' => $view,
+  );
 
   // Used only in the results template.
   $form['print_pdf_top'] = array(
@@ -388,7 +493,15 @@ function bqp_results_form($form, &$form_state) {
       'id' => 'edit-my-quit-plan-bottom',
     ),
   );
+
   $form['#theme'] = 'bqp_results_theme';
+  if ($view == VETERANS_PAGE) {
+    $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
+
+  }
+  else {
+    $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-non-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
+  }
 
   $form['#attached']['css'][drupal_get_path('module', 'icfi_bqp') . '/css/quit-plan-non-vet.css'] = array('group' => CSS_THEME, 'weight' => '999');
   $form['#attached']['css'][] = drupal_get_path('module', 'icfi_bqp') . '/css/bootstrap-datepicker.standalone.min.css';
@@ -445,6 +558,23 @@ EOC;
 EOC;
       break;
 
+    case 'cravings.relieveStressVet':
+      $content = <<< EOC
+        <div id="collapse2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Breath.png" alt="yoga icon">
+              <p>Practice deep breathing to calm down or go for a walk or do some pushups to blow off steam.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Talk.png" alt="two people icon">
+              <p>Turn to friends, family, and counselors when you need someone to talk to.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
+
     case 'cravings.mindOccupied':
       $content = <<< EOC
         <div id="collapse3" class="accordion-body collapse">
@@ -471,6 +601,18 @@ EOC;
 EOC;
       break;
 
+    case 'cravings.pleasurableVet':
+      $content = <<< EOC
+      <div id="collapse4" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div class="span12 clearfix crave-tip">
+            <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets">
+            <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your tobacco money for a special treat when you reach a tobacco free milestone.</p>
+          </div>
+        </div>
+      </div>
+EOC;
+      break;
     case 'cravings.irritable':
       $content = <<< EOC
         <div id="collapse5" class="accordion-body collapse">
@@ -483,7 +625,18 @@ EOC;
         </div>
 EOC;
       break;
-
+    case 'cravings.irritableVet':
+      $content = <<< EOC
+        <div id="collapse5" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span12 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Gum.png" alt="gum">
+              <p>Nicotine replacement therapy (NRT), such as patches, gum, or lozenges, can help relieve your withdrawal symptoms. Talk to your doctor to see which type of NRT is right for you.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
     case 'cravings.energyBoost':
       $content = <<< EOC
         <div id="collapse7" class="accordion-body collapse">
@@ -500,8 +653,32 @@ EOC;
         </div>
 EOC;
       break;
-
+    case 'cravings.energyBoostVet':
+      $content = <<< EOC
+        <div id="collapse7" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" width="37" height="32" alt="person running icon">
+              <p>To keep your energy level stable, get regular exercise and have healthy snacks throughout the day.</p>
+            </div>
+            <div class="span6 clearfix crave-tip">
+              <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Sleep.png" alt="sleep cloud">
+              <p>Make sure you’re getting plenty of sleep at night to help you from feeling slow during the day.</p>
+            </div>
+          </div>
+        </div>
+EOC;
+      break;
     case 'help.smokefreeVet':
+      $content = <<< EOC
+        <div id="help-collapse-1" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew.</p>          </div>
+        </div>
+EOC;
+      break;
+
+    case 'help.smokefreeSF':
       $content = <<< EOC
         <div id="help-collapse-1" class="accordion-body collapse">
           <div class="accordion-inner">
@@ -510,8 +687,7 @@ EOC;
         </div>
 EOC;
       break;
-
-    case 'help.apps':
+    case 'help.appsSF':
       $content = <<< EOC
         <div id="help-collapse-2" class="accordion-body collapse">
           <div class="accordion-inner">
@@ -522,8 +698,17 @@ EOC;
         </div>
 EOC;
       break;
+    case 'help.appsVet':
+      $content = <<< EOC
+        <div id="help-collapse-2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become tobacco free.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
+          </div>
+        </div>
+EOC;
+      break;
 
-    case 'help.facebook':
+    case 'help.facebookSF':
       $content = <<< EOC
         <div id="help-collapse-3" class="accordion-body collapse">
           <div class="accordion-inner">
@@ -533,7 +718,15 @@ EOC;
 EOC;
       break;
 
-    case 'help.quitlines':
+    case 'help.facebookVet':
+      $content = <<< EOC
+        <div id="help-collapse-3" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Get extra support and information by checking out SmokefreeVET on <a href="https://www.facebook.com/smokefreevet" target="_blank" class="ext extlink">Facebook.<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></p>          </div>
+        </div>
+EOC;
+      break;
+    case 'help.quitlinesSF':
       $content = <<< EOC
         <div id="help-collapse-5" class="accordion-body collapse">
           <div class="accordion-inner">
@@ -547,6 +740,15 @@ EOC;
 EOC;
       break;
 
+    case 'help.quitlinesVet':
+      $content = <<< EOC
+        <div id="help-collapse-5" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>The <a href="http://www.publichealth.va.gov/smoking/quitline.asp" target="_blank">VA quitline</a> is for Veterans who receive their healthcare through VA: 1-855-QUIT-VET (1-855-784-8838)</p> <p>If you do not receive healthcare through VA, consider these options:</p> <ul> <li> <strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">The National Cancer Institute quitline:</a></strong> 1-877-44U-QUIT (1-877-448-7848)</li> <li> <strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">Find your state’s quitline: </a></strong>1-800-QUIT-NOW (1-800-784-8669)</li> </ul>
+          </div>
+        </div>
+EOC;
+      break;
     case 'help.livehelp':
       $content = <<< EOC
         <div id="help-collapse-6" class="accordion-body collapse">
@@ -556,8 +758,16 @@ EOC;
         </div>
 EOC;
       break;
-
-    case 'help.medication':
+    case 'help.livehelpVet':
+      $content = <<< EOC
+        <div id="help-collapse-6" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Get help quitting through an online chat with a tobacco cessation counselor. LiveHelp is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. <a href="https://livehelp.cancer.gov/app/chat/chat_launch/" target="_blank">Visit the NCI LiveHelp page to chat with a counselor.</a></p>
+          </div>
+        </div>
+EOC;
+      break;
+    case 'help.medicationSF':
       $content = <<< EOC
          <div id="help-collapse-6" class="accordion-body collapse">
             <div class="accordion-inner">
@@ -608,7 +818,12 @@ function bqp_form_submit($form, &$form_state) {
   // Save choices in static variable and redirect to results page.
   $existing_choices = &$_SESSION['existing_bqp_choices'];
   $existing_choices = $choices;
-  $form_state['redirect'] = '/build-your-quit-plan-results';
+  if ($form_state['values']['view'] == VETERANS_PAGE) {
+    $form_state['redirect'] = VETERANS_PAGE_RESULTS_URL;
+  }
+  else {
+    $form_state['redirect'] = '/build-your-quit-plan-results';
+  }
 }
 
 function bqp_results_form_submit($form, &$form_state) {
@@ -627,7 +842,12 @@ function bqp_results_form_submit($form, &$form_state) {
     }
     else if ($form_state['clicked_button']['#value'] == 'Edit My Quit Plan') {
       // User wants to edit plan. Redirect to form input page.
-      $form_state['redirect'] = '/build-your-quit-plan';
+      if ($form_state['values']['view'] == VETERANS_PAGE) {
+        $form_state['redirect'] = 'veterans/build-your-quit-plan';
+      }
+      else {
+        $form_state['redirect'] = '/build-your-quit-plan';
+      }
     }
   }
 }
