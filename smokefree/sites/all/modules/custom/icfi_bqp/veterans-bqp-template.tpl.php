@@ -327,7 +327,6 @@
             <div class="modal-body">
               <p><strong>What to expect:</strong> Most withdrawal symptoms will fade by the time you are tobacco free for two weeks. </p>
               <p><strong>What to do:</strong> Make time for activities that put you in a good mood and make you feel relaxed to get through the challenges of quitting.</p>
-              <p>Plan an activity to keep you occupied:</p>
               <fieldset>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" alt="person dancing icon">
                 <legend>
