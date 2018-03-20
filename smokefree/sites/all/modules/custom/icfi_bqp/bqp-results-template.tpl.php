@@ -211,6 +211,9 @@
             <?php if (in_array('social.othersSmoking', $form['choices']['#value']['triggers_social'])) : ?>
               <li id="get.triggers.social.othersSmoking">Seeing someone else smoke</li>
             <?php endif; ?>
+            <?php if (in_array('social.friends', $form['choices']['#value']['triggers_social'])) : ?>
+                <li id="get.triggers.social.friends">Being with friends who smoke</li>
+            <?php endif; ?>
           </ul>
         </div>
       </div>
@@ -294,7 +297,7 @@
               <div class="row-fluid">
                   <div class="span12 clearfix crave-tip">
                       <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets">
-                      <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your cigarette money for a special treat when you reach a tobacco free milestone.</p>
+                      <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your tobacco money for a special treat when you reach a tobacco free milestone.</p>
                   </div>
               </div>
           </div>

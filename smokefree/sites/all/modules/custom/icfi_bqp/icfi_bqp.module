@@ -181,7 +181,9 @@ function bqp_form($form, &$form_state, $view = 'sf') {
     ),
     '#required' => FALSE,
   );
-
+  if ($view == VETERANS_PAGE) {
+    $form['reasons_for_quitting']['#options']['reasons.myLovedOnes'] = 'For my family and friends';
+  }
   if (!empty($form_state['values']['reasons_for_quitting'])) {
     $form['reasons_for_quitting']['#default_value'] = $form_state['values']['reasons_for_quitting'];
   }
@@ -253,6 +255,9 @@ function bqp_form($form, &$form_state, $view = 'sf') {
     ),
     '#required' => FALSE,
   );
+  if ($view == VETERANS_PAGE) {
+    $form['triggers_social']['#options']['social.friends'] = 'Being with friends who smoke';
+  }
   foreach(array('triggers_emotional', 'triggers_habitual', 'triggers_social') as $trigger) {
     foreach ($form[$trigger]['#options'] as $name => $label) {
       $form[$trigger][$name]['#prefix'] = '<div class="fancy-checkbox-wrap">';
@@ -602,7 +607,7 @@ EOC;
         <div class="accordion-inner">
           <div class="span12 clearfix crave-tip">
             <img class="crave-img" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets">
-            <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your cigarette money for a special treat when you reach a tobacco free milestone.</p>
+            <p>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your tobacco money for a special treat when you reach a tobacco free milestone.</p>
           </div>
         </div>
       </div>
@@ -668,7 +673,7 @@ EOC;
       $content = <<< EOC
         <div id="help-collapse-1" class="accordion-body collapse">
           <div class="accordion-inner">
-            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew..</p>          </div>
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew.</p>          </div>
         </div>
 EOC;
       break;
