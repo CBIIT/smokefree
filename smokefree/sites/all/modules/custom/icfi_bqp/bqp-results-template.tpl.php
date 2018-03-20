@@ -211,6 +211,9 @@
             <?php if (in_array('social.othersSmoking', $form['choices']['#value']['triggers_social'])) : ?>
               <li id="get.triggers.social.othersSmoking">Seeing someone else smoke</li>
             <?php endif; ?>
+            <?php if (in_array('social.friends', $form['choices']['#value']['triggers_social'])) : ?>
+                <li id="get.triggers.social.friends">Being with friends who smoke</li>
+            <?php endif; ?>
           </ul>
         </div>
       </div>

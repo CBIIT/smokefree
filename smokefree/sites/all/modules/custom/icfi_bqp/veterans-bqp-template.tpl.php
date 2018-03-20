@@ -220,7 +220,7 @@
             </div>
             <div class="modal-body">
               <p><strong>What to expect:</strong> Withdrawal is your body adjusting to not having nicotine. This can be uncomfortable. You might not feel like yourself and you might feel down during this time. </p>
-              <p>Use of nicotine replacement, like the gum or patcUse of nicotine replacement, like the gum or patch, can really help manage your withdrawal. Talk to your health care provider for more information.</p>
+              <p>Use of nicotine replacement, like the gum or patch, can really help manage your withdrawal. Talk to your health care provider for more information.</p>
               <p><strong>What to do:</strong> Make time for activities that help you manage your stress and get support to get through the first days of quitting.</p>
               <fieldset>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" alt="person dancing icon">
@@ -468,7 +468,7 @@
         <img src="/sites/all/themes/sfg/images/sf-vet/triggers.jpg" alt="cup of coffee" />
         <h2>
           <span class="section-head-top"><span>IDENTIFY</span></span>
-          <span class="section-head-bottom"> YOUR SMOKING</BR>TRIGGERS</span>
+          <span class="section-head-bottom"> YOUR TOBACCO USE</BR>TRIGGERS</span>
         </h2>
       </div>
 
@@ -477,7 +477,7 @@
           <p class="alert alert-error">Please select your smoking trigger(s)</p>
         </div>
 
-        <p>Knowing your triggers helps you stay in control. When you first quit, you might want to completely avoid your triggers. After staying smokefree for a while, you may find other ways to handle your triggers.</p>
+        <p>Knowing your triggers helps you stay in control. When you first quit, you might want to completely avoid your triggers. After staying quit for a while, you may find other ways to handle your triggers.</p>
 
         <p><span class="form-required">*</span>Here are some common tobacco use triggers:</p>
 

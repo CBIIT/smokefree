@@ -181,7 +181,9 @@ function bqp_form($form, &$form_state, $view = 'sf') {
     ),
     '#required' => FALSE,
   );
-
+  if ($view == VETERANS_PAGE) {
+    $form['reasons_for_quitting']['#options']['reasons.myLovedOnes'] = 'For my family and friends';
+  }
   if (!empty($form_state['values']['reasons_for_quitting'])) {
     $form['reasons_for_quitting']['#default_value'] = $form_state['values']['reasons_for_quitting'];
   }
@@ -253,6 +255,9 @@ function bqp_form($form, &$form_state, $view = 'sf') {
     ),
     '#required' => FALSE,
   );
+  if ($view == VETERANS_PAGE) {
+    $form['triggers_social']['#options']['social.friends'] = 'Being with friends who smoke';
+  }
   foreach(array('triggers_emotional', 'triggers_habitual', 'triggers_social') as $trigger) {
     foreach ($form[$trigger]['#options'] as $name => $label) {
       $form[$trigger][$name]['#prefix'] = '<div class="fancy-checkbox-wrap">';

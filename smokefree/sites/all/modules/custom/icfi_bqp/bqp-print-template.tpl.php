@@ -204,6 +204,9 @@ if (in_array('social.event', $form['choices']['#value']['triggers_social'])) {
 if (in_array('social.othersSmoking', $form['choices']['#value']['triggers_social'])) {
   $html .= '<li id="get.triggers.social.othersSmoking">Seeing someone else smoke</li>';
 }
+if (in_array('social.friends', $form['choices']['#value']['triggers_social'])) {
+  $html .= '<li id="get.triggers.social.friends">Being with friends who smoke</li>';
+}
 
 $html .= '
                     </ul>
