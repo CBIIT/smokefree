@@ -1,0 +1,5 @@
+name = ICFI Motion AI API
+description = Generates an endpoint for the Motion AI API to Consume
+core = 7.x
+package = ICFI Custom
+dependencies[] = icfi_api_keys

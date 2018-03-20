@@ -1,5 +1,5 @@
 .smokefreegov-teen {
-    @media only screen and (min-device-width : 320px) and (max-device-width : 766px) {
+    @media only screen and (min-width : 320px) and (max-width : 766px) {
         .syndicate {
             margin-bottom: -30px !important;
         }
@@ -20,7 +20,7 @@
                 padding-top: 25px;
             }
         }
-        @media only screen and (min-device-width : 320px) and (max-device-width : 766px) {
+        @media only screen and (min-width : 320px) and (max-width : 766px) {
             .become-smokefree-more {
                 a {
                     float: left !important;
@@ -29,7 +29,7 @@
                 }
             }
         }
-        @media only screen and (min-device-width : 767px) and (max-device-width : 1023px) {
+        @media only screen and (min-width : 767px) and (max-width : 1023px) {
             .row-eq-height {
                 margin-left: 35px !important;
                 .teen-h2 {
@@ -76,7 +76,7 @@
             .block-view-content {
                 display: inline-block;
             }
-            @media only screen and (min-device-width : 767px) and (max-device-width : 1023px) {
+            @media only screen and (min-width : 767px) and (max-width : 1023px) {
                 .block-view-content {
                     width: 98% !important;
                     .views-row.two-col {
@@ -124,7 +124,7 @@
                     }
                 }
             }
-            @media only screen and (min-device-width : 320px) and (max-device-width : 766px) {
+            @media only screen and (min-width : 320px) and (max-width : 766px) {
                 .block-view-content {
                     width: 105%;
 
@@ -200,12 +200,12 @@
                 }
             }
         }
-        @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+        @media only screen and (min-width : 769px) and (max-width : 1024px) {
             .block-tools-tips {
                 padding-left: 6% !important;
             }
         }
-        @media only screen and (max-device-width : 991px) {
+        @media only screen and (max-width : 991px) {
             .block.tools-tips {
                 padding-left: 6% !important;
             }
@@ -214,7 +214,7 @@
             padding-left: 9%;
             padding-bottom: 25px;
             .teen-toolbox-container {
-                @media only screen and (max-device-width : 991px) {
+                @media only screen and (max-width : 991px) {
                     .toolbox-flex {
                         width: 19.5% !important;
                         margin-right: -1.42% !important;
@@ -245,14 +245,14 @@
                             align-items: center;
                             height: 80px;
                         }
-                    @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+                    @media only screen and (min-width : 769px) and (max-width : 1024px) {
                         .teen-toolbox-title {
                             font-size: 13px !important;
                             line-height: 16px !important;
                             padding-left: 8%;
                         }
                     }
-                    @media only screen and (max-device-width : 991px) {
+                    @media only screen and (max-width : 991px) {
                         .tool-img {
                             width: 100% !important;
                             height: 50px;
@@ -285,7 +285,7 @@
                 padding-left: 15%;
                 font-size: 13px;
             }
-            @media only screen and (min-device-width : 481px) and (max-device-width : 766px) {
+            @media only screen and (min-width : 481px) and (max-width : 766px) {
                 .carousel-instruction {
                     padding-top: 0%;
                     padding-left: 25%;
@@ -354,7 +354,7 @@
         }
     }
 
-    @media only screen and (min-device-width : 320px) and (max-device-width : 766px) {
+    @media only screen and (min-width : 320px) and (max-width : 766px) {
         .col-sm-9.center_column.content-container {
             padding-left: 0%;
         }
@@ -366,18 +366,18 @@
         }
 
     }
-    @media only screen and (max-device-width : 766px) {
+    @media only screen and (max-width : 766px) {
         #myCarousel .middle .img-responsive{
              margin: auto;
         }
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 991px) {
+    @media only screen and (min-width : 768px) and (max-width : 991px) {
         .hidden-sm {
             display: none;
         }
 
     }
-    @media only screen and (min-device-width : 1200px) {
+    @media only screen and (min-width : 1200px) {
         .scrollmenu .container {
             width: 1170px !important;
         }
@@ -418,4 +418,9 @@
             background-image: none;
         }
     }
+}
+
+#popup-message-window {
+    position: fixed !important;
+    overflow: hidden;
 }

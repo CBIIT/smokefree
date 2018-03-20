@@ -1,3 +1,61 @@
+Smokefree 1.18 2018-03-08
+-----------------------
+
+- SF-722, SF-723, SF-724 and SF-728: Clean up unwanted CSS and files
+
+Smokefree 1.17 2018-02-08
+-----------------------
+
+- SF-726 Drupal core security update for Smokefree and Espanol
+- SF-725 Entity module security update
+- SF-721 Cleaning up template.php file
+- SF-712 Removing more unused modules
+- SF-691 Compressing images
+
+Smokefree 1.17 2018-02-08
+-----------------------
+
+- SF-678 Fix pop up location on scroll
+- SF-705 Removing unused modules
+- SF-705 VA header bugfix
+- SF-716 Disable mHealth subscription
+- SF-715 Change default view on explore quit methods page
+
+Smokefree 1.17 2018-01-29
+-----------------------
+
+- SF-430 Fix for Mobile Commons reporting
+
+Smokefree 1.16 2018-01-25
+-----------------------
+
+- SF-703 Adding missing font
+- SF-694 Fixing links in the footer
+- SF-653 & SF-654 Responsive issues with POS page
+- SF-566 & SF-576 Fixing some responsive isses on the teen site
+
+
+Smokefree 1.15 2018-01-11
+-----------------------
+
+- SF-667 Domain verification file for facebook
+- SF-686 POS Calender time changes
+- SF-687 Display skip link
+
+Smokefree 1.14 2017-12-28
+-----------------------
+
+- SF-677 App pages metatag description
+- SF-613 Addming alt text to images
+
+Smokefree 1.13 2017-12-14
+-----------------------
+- SF-634, SF-614, SF-632, SF-633, SF-637 and SF-650 508: 508 compliance fixes
+- SF-645 Adding two questions to the SF Vet webform
+- SF-639 Adding author page
+- SF-657 and SF-666 Hide livechat pop up on responsive view
+- SF-651: Adding floodlight tags for POS page
+
 Smokefree 1.12 2017-11-30
 -----------------------
 - SF-643, SF-652 and SF-655 Everytrycounts (POS) Page Improvements

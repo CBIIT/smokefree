@@ -14,8 +14,10 @@ var cssnano = require('gulp-cssnano');
 var cached = require('gulp-cached');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
-var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
+var imageminMozjpeg = require('imagemin-mozjpeg');
+// var tinify = require('gulp-tinify');
+// var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 // var notify = require('gulp-notify');
 
 
@@ -62,8 +64,13 @@ gulp.task('js', function() {
 });
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
-        .pipe(cache(imagemin()))
-        .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true, multipass: true}))
+        // .pipe(cache(imagemin()))
+        //.pipe(imagemin({optimizationLevel: 1, progressive: true, interlaced: true, multipass: true}))
+        .pipe(imagemin({
+            use:[imageminMozjpeg({
+                quality: 10
+            })]
+        }))
 		.pipe(gulp.dest('images'))
 });
 gulp.task('fonts', function() {

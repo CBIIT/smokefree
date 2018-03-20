@@ -204,6 +204,9 @@ if (in_array('social.event', $form['choices']['#value']['triggers_social'])) {
 if (in_array('social.othersSmoking', $form['choices']['#value']['triggers_social'])) {
   $html .= '<li id="get.triggers.social.othersSmoking">Seeing someone else smoke</li>';
 }
+if (in_array('social.friends', $form['choices']['#value']['triggers_social'])) {
+  $html .= '<li id="get.triggers.social.friends">Being with friends who smoke</li>';
+}
 
 $html .= '
                     </ul>
@@ -250,6 +253,23 @@ if (in_array('cravings.relieveStress', $form['choices']['#value']['fight_craving
 
             </div>';
 }
+if (in_array('cravings.relieveStressVet', $form['choices']['#value']['fight_cravings'])) {
+  $html .= '<div id="get.cravings.relieveStress">
+                <h4>Do you smoke or dip to relieve stress or improve your mood?</h4>
+
+                <table>
+                    <tr class="quit-tip">
+                        <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Breath.png" alt="yoga icon" /></td>
+                        <td>Practice deep breathing to calm down or go for a walk or do some pushups to blow off steam.</td>
+                    </tr>
+                    <tr class="quit-tip">
+                        <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Talk.png" alt="two people icon" /></td>
+                        <td>Turn to friends, family, and counselors when you need someone to talk to.</td>
+                    </tr>
+                </table>
+
+            </div>';
+}
 if (in_array('cravings.mindOccupied', $form['choices']['#value']['fight_cravings'])) {
   $html .= '<div id="get.cravings.mindOccupied">
                 <h4>Do you have trouble keeping yourself busy and your mind occupied?</h4>
@@ -276,6 +296,19 @@ if (in_array('cravings.pleasurable', $form['choices']['#value']['fight_cravings'
 
             </div>';
 }
+if (in_array('cravings.pleasurableVet', $form['choices']['#value']['fight_cravings'])) {
+  $html .= '<div id="get.cravings.pleasurable">
+                <h4>Do you smoke or dip because it’s pleasurable and relaxing?</h4>
+
+                <table>
+                    <tr class="quit-tip">
+                        <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Purchase.png" alt="movie tickets" /></td>
+                        <td>Treat yourself to a different pleasure. Listen to your favorite songs, plan a movie night with friends, or save up your tobacco money for a special treat when you reach a tobacco milestone.</td>
+                    </tr>
+                </table>
+
+            </div>';
+}
 if (in_array('cravings.irritable', $form['choices']['#value']['fight_cravings'])) {
   $html .= '<div id="get.cravings.irritable">
                 <h4>Do you get irritable and anxious without cigarettes?</h4>
@@ -289,9 +322,39 @@ if (in_array('cravings.irritable', $form['choices']['#value']['fight_cravings'])
 
             </div>';
 }
+if (in_array('cravings.irritableVet', $form['choices']['#value']['fight_cravings'])) {
+  $html .= '<div id="get.cravings.irritable">
+                <h4>Do you get irritable and anxious without cigarettes or tobacco?</h4>
+
+                <table>
+                    <tr class="quit-tip">
+                        <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Gum.png" alt="gum" /></td>
+                        <td>Nicotine replacement therapy (NRT), such as patches, gum, or lozenges, can help relieve your withdrawal symptoms. Talk to your doctor to see which type of NRT is right for you.</td>
+                    </tr>
+                </table>
+
+            </div>';
+}
 if (in_array('cravings.energyBoost', $form['choices']['#value']['fight_cravings'])) {
   $html .= '<div id="get.cravings.energyBoost">
                 <h4>Do you smoke for an energy boost?</h4>
+
+                <table>
+                    <tr class="quit-tip">
+                        <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Checklist.png" alt="checklist icon" /></td>
+                        <td>Make a list of tasks that you can accomplish when a craving hits. This list can include chores, replying to emails, running errands, or planning your schedule for the next day.</td>
+                    </tr>
+                    <tr class="quit-tip">
+                        <td class="plan-help-img"><img src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Cravings_Sleep.png" alt="sleep cloud" /></td>
+                        <td>Make sure you’re getting plenty of sleep at night to help you from feeling slow during the day.</td>
+                    </tr>
+                </table>
+
+            </div>';
+}
+if (in_array('cravings.energyBoostVet', $form['choices']['#value']['fight_cravings'])) {
+  $html .= '<div id="get.cravings.energyBoost">
+                <h4>Do you smoke or use tobacco for an energy boost?</h4>
 
                 <table>
                     <tr class="quit-tip">
@@ -331,7 +394,7 @@ $html .= '<hr></section>
                 <img class="plan-help-icon" src="' . DRUPAL_ROOT . '/' . drupal_get_path('theme', 'smokefreegov') . '/images/sf-vet/SF_Vet_Help_Groups.png" alt="people group icon">
             </h3>
             <p>There are lots of tools available to make quitting more manageable. Explore these resources to find what is right for you.</p>';
-if (in_array('help.medication', $form['choices']['#value']['extra_help'])) {
+if (in_array('help.medicationSF', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.apps">
                 <h4>Medications and Nicotine Replacement Therapy (NRT)</h4>
                 <p>Using medications and/or nicotine replacement therapy (NRT) can improve your chances of quitting for good (<a href="http://smokefree.gov/explore-medications">http://smokefree.gov/explore-medications</a>). Make an appointment with your health care provider to find out which options are best for you.</p>
@@ -339,12 +402,19 @@ if (in_array('help.medication', $form['choices']['#value']['extra_help'])) {
 }
 if (in_array('help.smokefreeVet', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.smokefreeVet">
-                <h4>SmokefreeTXT Text Message Program</h4>
-                <p>SmokefreeTXT is a mobile text messaging service designed for adults and young adults across the United States who are trying to quit smoking. Sign up online (<a href="http://smokefree.gov/smokefreetxt">http://smokefree.gov/smokefreetxt</a>) or send a text message with the word QUIT to 47848.</p>
+                <h4>SmokefreeVET Text Message Program</h4>
+            <p><strong>SmokefreeVET Text Message Program</strong> is a mobile text messaging service for military Veterans who receive their healthcare through VA. <a href="http://smokefree.gov/vet" target="_blank">Sign up online</a> or send a text message with the word VET to 47848 for help with quitting smoking or with quitting dip or chew.</p>
             </div>
 ';
 }
-if (in_array('help.apps', $form['choices']['#value']['extra_help'])) {
+if (in_array('help.smokefreeSF', $form['choices']['#value']['extra_help'])) {
+  $html .= '<div id="get.help.smokefreeVet">
+                <h4>SmokefreeTXT Text Message Program</h4>
+                <p><strong>SmokefreeTXT</strong> is a mobile text messaging service designed for adults and young adults across the United States who are trying to quit smoking. <a href="http://smokefree.gov/smokefreetxt" target="_blank">Sign up online</a> or send a text message with the word QUIT to 47848.</p>
+            </div>
+';
+}
+if (in_array('help.appsSF', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.apps">
                 <h4>Apps</h4>
                 <ul class="plan-ul">
@@ -352,13 +422,25 @@ if (in_array('help.apps', $form['choices']['#value']['extra_help'])) {
                 </ul>
             </div>';
 }
-if (in_array('help.facebook', $form['choices']['#value']['extra_help'])) {
+if (in_array('help.appsVet', $form['choices']['#value']['extra_help'])) {
+  $html .= '<div id="get.help.apps">
+                <h4>Apps</h4>
+                <p><ul><li><strong><a href="http://smokefree.gov/apps-quitguide" target="_blank">QuitGuide</a></strong> helps you track cravings, monitor progress, and gives you strategies to help you become tobacco free.</li><li><strong><a href="https://mobile.va.gov/app/stay-quit-coach/" target="_blank">VA’s Stay Quit Coach</a></strong> was designed to help Veterans with Post-Traumatic Stress Disorder (PTSD) quit smoking. This app has been shown to double quit rates for Veterans with PTSD.</li></ul></p>
+            </div>';
+}
+if (in_array('help.facebookSF', $form['choices']['#value']['extra_help'])) {
   $html .= ' <div id="get.help.facebook">
                 <h4>SmokefreeUS Facebook</h4>
                 <p>Get extra support and information by checking out Smokefree on Facebook (<a href="https://www.facebook.com/SmokefreeUS">https://www.facebook.com/SmokefreeUS</a>). </p>
             </div>';
 }
-if (in_array('help.quitlines', $form['choices']['#value']['extra_help'])) {
+if (in_array('help.facebookVet', $form['choices']['#value']['extra_help'])) {
+  $html .= ' <div id="get.help.facebook">
+                <h4>SmokefreeVet Facebook</h4>
+                <p>Get extra support and information by checking out SmokefreeVET on <a href="https://www.facebook.com/smokefreevet" target="_blank" class="ext extlink">Facebook.<span class="ext"><span class="element-invisible"> (link is external)</span></span></a></p>
+            </div>';
+}
+if (in_array('help.quitlinesSF', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.quitlines">
                 <h4>Quitlines</h4>
 
@@ -370,10 +452,24 @@ if (in_array('help.quitlines', $form['choices']['#value']['extra_help'])) {
                 </ul>
             </div>';
 }
+if (in_array('help.quitlinesVet', $form['choices']['#value']['extra_help'])) {
+  $html .= '<div id="get.help.quitlines">
+                <h4>Quitlines</h4>
+
+                <p>The <a href="http://www.publichealth.va.gov/smoking/quitline.asp" target="_blank">VA quitline</a> is for Veterans who receive their healthcare through VA: 1-855-QUIT-VET (1-855-784-8838)</p> <p>If you do not receive healthcare through VA, consider these options:</p> <ul> <li> <strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">The National Cancer Institute quitline:</a></strong> 1-877-44U-QUIT (1-877-448-7848)</li> <li> <strong><a href="http://smokefree.gov/talk-to-an-expert/" target="_blank">Find your state’s quitline: </a></strong>1-800-QUIT-NOW (1-800-784-8669)</li> </ul>
+
+            </div>';
+}
 if (in_array('help.livehelp', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.liveHelp">
                 <h4>NCI LiveHelp</h4>
                 <p>Get help quitting through an online chat with a smoking cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
+            </div>';
+}
+if (in_array('help.livehelpVet', $form['choices']['#value']['extra_help'])) {
+  $html .= '<div id="get.help.liveHelp">
+                <h4>NCI LiveHelp</h4>
+                <p>Get help quitting through an online chat with a tobacco cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
             </div>';
 }
 $html .= '

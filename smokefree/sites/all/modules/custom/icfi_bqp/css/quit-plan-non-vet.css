@@ -651,6 +651,7 @@ input.fancy[type="checkbox"]:not(old):checked + label > span:before,
     max-width: 800px;
     margin: 0 auto;
     background-color: #efefef;
+    border: 1px solid #10345b;
 }
 
 .smoking-reminders-wrap .reminder {

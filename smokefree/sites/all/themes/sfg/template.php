@@ -299,21 +299,6 @@ function bootstrap_bootstrap_search_form_wrapper(&$variables) {
   return $output;
  }
 
- /* Overrides the bootstrap theme poll function as it only pulls the latest poll */
-function bootstrap_poll_block_view($delta = '', $nid) {
-	if (user_access('access content')) {
-		if ($nid) {
-		  $poll = node_load($nid);
-		  if ($poll->nid) {
-			$poll = poll_override_block_latest_poll_view($poll);
-			$block['subject'] = t('Poll');
-			$block['content'] = $poll->content;
-			return $block;
-		  }
-		}
-	}
-}
-
 /* Removes the unnecessary meta tags from the page header */
 function bootstrap_html_head_alter(&$head_elements) {
 	foreach ($head_elements as $key => $element) {

@@ -136,6 +136,7 @@ vertical-align:top;
 	padding-right:5px;
 	text-decoration:none !important;
 	pointer-events: none;
+	display: inline-block;
 
 }
 
@@ -339,6 +340,7 @@ section#block-boxes-live-char-bar {
 	}
 }
 
+/* disable popup window in mobile */
 #popup-message-window, #popup-message-background {
 	@media (max-width: 601px) {
 		display: none !important;
