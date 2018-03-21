@@ -1,7 +1,7 @@
 <?php
 
 CONST VETERANS_PAGE = 'veterans';
-CONST VETERANS_PAGE_RESULTS_URL = 'veterans/build-your-quit-plan/results';
+CONST VETERANS_PAGE_RESULTS_URL = 'veterans/how-to-quit/build-your-quit-plan/results';
 /**
  * Implements hook_init().
  *
@@ -56,13 +56,13 @@ function icfi_bqp_menu() {
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
-  $items['veterans/build-your-quit-plan'] = array(
+  $items['veterans/how-to-quit/build-your-quit-plan'] = array(
     'title' => 'Build Your Quit Plan',
     'page callback' => '_veterans_bqp_callback',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
-  $items['veterans/build-your-quit-plan/results'] = array(
+  $items['veterans/how-to-quit/build-your-quit-plan/results'] = array(
     'title' => 'Your Quit Plan',
     'page callback' => '_veterans_bqp_results_callback',
     'access callback' => TRUE,
