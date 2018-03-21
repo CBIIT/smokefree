@@ -12,6 +12,30 @@
               <a href="https://60plus.smokefree.gov" id="smokefree-60plus"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-60+.png" alt="smokefree-60+"></a>
           </div>
       </nav>
+      <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
+          <?php if (!empty($primary_nav)
+              || !empty($secondary_nav)
+              || !empty($page['navigation'])): ?>
+              <div id="mega-desktop" class="navbar nav">
+                  <nav role="navigation">
+                      <?php
+                      if (!empty($primary_nav)) {
+                          print render($primary_nav);
+                      }
+                      if (!empty($page['navigation'])) {
+                          print render($page['navigation']);
+                      }
+                      if (!empty($secondary_nav)) {
+                          print render($secondary_nav);
+                      }
+                      ?>
+                  </nav>
+              </div>
+
+              <!-- end desktop nav -->
+
+          <?php endif; ?>
+      </div>
   <?php endif; ?>
 
     <div id="bg-container">
@@ -24,31 +48,6 @@
     <div class="nav-bar">
       <div class="nav-bar-logo">
         <a href="/"><img alt="Smokefree-logo" class="nav-bar-brand" src="/<?php echo drupal_get_path('theme', 'smokefreegov'); ?>/images/header/smokefree_logo.png" /></a>
-      </div>
-
-      <div class="nav-bar-menu logo_area">
-        <?php if (!empty($primary_nav)
-            || !empty($secondary_nav)
-            || !empty($page['navigation'])): ?>
-          <div id="mega-desktop" class="navbar nav">
-            <nav role="navigation">
-              <?php
-              if (!empty($primary_nav)) {
-                print render($primary_nav);
-              }
-              if (!empty($page['navigation'])) {
-                print render($page['navigation']);
-              }
-              if (!empty($secondary_nav)) {
-                print render($secondary_nav);
-              }
-              ?>
-            </nav>
-          </div>
-
-          <!-- end desktop nav -->
-
-        <?php endif; ?>
       </div>
       <div class="nav-bar-icon">
         <span class="glyphicon glyphicon-search nav-search" aria-hidden="true"></span>
