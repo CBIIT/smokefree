@@ -1,3 +1,11 @@
+Smokefree 1.19 2018-03-22
+-----------------------
+
+- SF-761 Fixing images on FDA pages
+- SF-729 Compressing theme images
+- SF-735 Chatbot API
+- SF-754 POS hidden fields
+
 Smokefree 1.18 2018-03-08
 -----------------------
 
