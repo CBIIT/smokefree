@@ -445,10 +445,8 @@
       </div>
 
       <div class="section-body">
-
-        <p>Select your reasons for quitting. They will be added to your quit plan.</p>
-
         <fieldset>
+        <legend>Select your reasons for quitting. They will be added to your quit plan</legend>
           <div class="reason-options-wrap clearfix">
             <?php print render($form['reasons_for_quitting']); ?>
           </div>
@@ -548,6 +546,7 @@
         </div>
         <p>Seeing reminders of smoking makes it harder to stay smokefree. Get rid of any reminders in your home, car, and workplace before your quit day. Below is a list of common smoking reminders and how to deal with them. This list will be added to your quit plan.</p>
         <fieldset>
+          <legend>Get ready to quit</legend>
           <div class="smoking-reminders-wrap clearfix">
             <div class="reminder">
               <img src="/sites/all/themes/sfg/images/sf-vet/wash-clothes.png" alt="clothes">
