@@ -86,6 +86,7 @@
 				<label for="searchbox-header" 
 					class="hiddenSearch hidden">B&uacute;squeda</label>
 				<div id="search-header-container">
+                    <label for="searchbox-header-input" class="element-invisible">Búsqueda</label>
 					<input id="searchbox-header" 
 						type="text" 
 						name="q" 
