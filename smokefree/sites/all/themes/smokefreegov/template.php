@@ -692,15 +692,17 @@ function smokefreegov_views_pre_render(&$view) {
 }
 
 /**
- * Get a random include nid pusblished on the smokefree.gov domain
+ * Get a random include nid published to the current domain
  */
 function get_random_include() {
+  $domain = domain_get_domain();
   $nids = db_query("
     SELECT n.nid
     FROM node n
     INNER JOIN domain_access da ON n.nid = da.nid
     WHERE n.type = 'include'
-    AND n.status = 1")->fetchAll();
-  $random_include = ($nids[array_rand($nids)]);
+    AND n.status = 1
+    AND da.gid = :domain_id", array(':domain_id' => $domain['domain_id']))->fetchAll();
+  $random_include = $nids[array_rand($nids)];
   return $random_include->nid;
 }

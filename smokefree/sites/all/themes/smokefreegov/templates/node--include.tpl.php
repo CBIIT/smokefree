@@ -2,8 +2,8 @@
 $label = 'Fact:';
 switch ($content['field_type'][0]['#markup']){
   case 'Crave Tip':
-      $description = $content['field_tip'][0]['#markup'];
-      break;
+    $description = $content['field_tip'][0]['#markup'];
+    break;
   case 'Fact':
     $description = $content['field_fact'][0]['#markup'];
     break;
@@ -23,7 +23,7 @@ switch ($content['field_type'][0]['#markup']){
     $description = $content['field_quote'][0]['#markup'];
     break;
   default:
-      $description = '';
+    $description = '';
 }
 
 // create the og:description tag
@@ -35,9 +35,10 @@ $meta_description = array(
   ),
 );
 drupal_add_html_head($meta_description, 'meta_description');
+
+// Get the random include
 $include_nid = get_random_include();
 $include_url = drupal_get_path_alias('node/'.$include_nid);
-
 ?>
 
 <h2 class="quit-note-title">Quit Notes</h2>
