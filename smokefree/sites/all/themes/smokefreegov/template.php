@@ -100,7 +100,7 @@ function smokefreegov_preprocess_page(&$variables) {
   if (!empty($variables['node']->title)
     && ($variables['node']->title == 'Veterans Home'
     || in_array($variables['node']->nid, $five_resources_node_ids)
-    || in_array($variables['node']->type, array('section_landing')))) {
+    || in_array($variables['node']->type, array('section_landing', 'include')))) {
     $variables['include_title'] = FALSE;
   }
 
