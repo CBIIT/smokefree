@@ -34,17 +34,25 @@ $meta_description = array(
     'content' => $description,
   ),
 );
-
 drupal_add_html_head($meta_description, 'meta_description');
+$include_nid = get_random_include();
+$include_url = drupal_get_path_alias('node/'.$include_nid);
+
 ?>
 
 <h2 class="quit-note-title">Quit Notes</h2>
 <div class="quit-note-text col-lg-6 col-md-6 col-sm-6">
     <div class="fact"><h3><?php print $label; ?></h3></div>
     <div class="description"><p><?php print $description; ?></p></div>
+    <div class="hidden-xs btn-program">
+      <a href="/<?php print $include_url; ?>">View Another Quit Note</a>
+    </div>
 </div>
 <div class="quit-note-image col-lg-6 col-md-6 col-sm-6">
 <?php
 print render($content['field_featured_image_include']);
 ?>
+<div class="visible-xs btn-program">
+    <a href="/<?php print $include_url; ?>">View Another Quit Note</a>
+</div>
 </div>
