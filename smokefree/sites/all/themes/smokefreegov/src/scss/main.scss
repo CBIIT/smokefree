@@ -15,36 +15,9 @@ body {
     padding-right: 0px;
 }
 
-.page-node-106 li {
-    line-height: 20px;
-    list-style: none outside none;
-}
-
-/*.navbar {
-    margin-bottom: 0px;
-    overflow: visible;
-}
-
-.navbar .nav {
-   display: block;
-   float: left;
-    left: 38px;
-    right: 0px;
-   margin: 0 0;
-   background-color: rgba(0, 0, 0, 0.5);
-   width: 100%;
-} */
-
 .features_label {
     width: 100% !important;
 }
-
-/*.navbar .nav li {
-    display: block;
-    float: left;
-    margin: 0 0;
-    position: relative;
-}*/
 
 img {
     vertical-align: top;
@@ -3235,93 +3208,6 @@ div.workbench-info-block {
     color: #ffffff;
 }
 
-
-/***Colors for H2 on Landing Pages***/
-
-.page-node-134 h2 {
-    color: #ffffff !important;
-}
-
-.page-node-133 h2 {
-    color: #ffffff !important;
-}
-
-.page-node-135 h2 {
-    color: #ffffff !important;
-}
-
-.page-node-136 h2 {
-    color: #ffffff !important;
-}
-
-.page-node-137 h2 {
-    color: #ffffff !important;
-}
-
-.page-node-138h2 {
-    color: #ffffff !important;
-}
-
-.page-node-94 h2 {
-    color: #ffffff !important;
-}
-
-.page-node-133 .page-header-div {
-    text-align: center;
-}
-
-.page-node-134 .page-header-div {
-    text-align: center;
-}
-
-.page-node-135 .page-header-div {
-    text-align: center;
-}
-
-.page-node-136 .page-header-div {
-    text-align: center;
-}
-
-.page-node-137 .page-header-div {
-    text-align: center;
-}
-
-.page-node-138 .page-header-div {
-    text-align: center;
-}
-
-.page-node-94 .page-header-div {
-    text-align: center;
-}
-.page-node-106 li {
-    line-height: 20px;
-    list-style: none outside none;
-}
-
-.page-node-138 A.addthis_button_compact {
-    display: none;
-}
-
-.page-node-137 A.addthis_button_compact {
-    display: none;
-}
-
-.page-node-136 A.addthis_button_compact {
-    display: none;
-}
-
-.page-node-135 A.addthis_button_compact {
-    display: none;
-}
-
-.page-node-134 A.addthis_button_compact {
-    display: none;
-}
-
-.page-node-133 A.addthis_button_compact {
-    display: none;
-}
-
 .btn:focus {
     color: #ffffff !important;
 }
@@ -3779,14 +3665,6 @@ input[disabled] {
 .quitPlan p{color:#ffffff; font-size:1.09999em; line-height:1.5; }
 
 
-.page-node-133 .quitPlan p {
-color: #ffffff;
-font-size: 1.09999em;
-line-height: 1.5;
-padding-top: 22px;
-}
-
-
 .steps {width:30%; float:left; background-color:#0a5371; margin-right:20px; height:250px; padding:5px; box-shadow:1px 8px 6px -6px #666666;}
 .steps p{color:#ffffff; font-size:1.09999em; line-height:1.033;}
 .steps h1 {font-size:1.855em; color:#ffffff; line-height:1; margin-bottom:5px;}
@@ -3794,37 +3672,11 @@ padding-top: 22px;
 .awards{width:33%; float:left; background-color:#0a5371; margin-right:5px; height:210px; padding:5px; box-shadow:1px 8px 6px -6px #666666;}
 .awards p {color:#ffffff; font-size:1.09999em; line-height:1.5; padding:8px; padding-bottom:0px !important;}
 
-.page-node-94 .awards p {padding-bottom:0px !important;}
-.page-node-94 .speak .clickHere {
-float: right;
-margin-right: 10px;
-margin-toP: 22px;
-}
-
-.page-node-94 .quitPlan .clickHere {
-float: right;
-margin-right: 10px;
-margin-top: 40px !important;
-}
 .awards h1 {font-size:1.655em; color:#ffffff; line-height:1; margin-bottom:5px;}
 
 .layoutLinks{width:96%; border:1px solid #cccccc; float:left; background-color:#dfdfdf; border-radius:4px; margin-top:5px;
 
 
-}
-
-.page-node-136 .awards .clickHere {
-float: right !important;
-margin-right: 10px;
-position: relative;
-bottom: 35px;
-}
-
-.page-node-136 .speak .clickHere {
-float: right !important;
-margin-right: 10px;
-position: relative;
-margin-top: 22px !important;
 }
 
 
@@ -3890,29 +3742,6 @@ margin-top: 22px !important;
 
 .clickHere {float:right; margin-right:10px;}
 
-
-.page-node-99 .awards .clickHere {
-float: right;
-margin-right: 10px;
-margin-top: 40px !important;
-}
-
-.page-node-99 .quitPlan .clickHere {
-float: right;
-margin-right: 10px;
-margin-toP: 30px;
-}
-
-
-.page-node-133 .quitPlan .clickHere {
-float: right;
-margin-right: 10px;
-margin-toP: 20px;
-}
-
-.page-node-136 .awards .clickHere {margin-top:30px !important;}
-
-
 .leftImage{float:left; width:auto;}
 .leftImage IMG {width:auto !important;}
 
@@ -3955,45 +3784,14 @@ width:10%;
 
 /* Misc responsive styles that do not fit into other responsive stylesheets */
 @media (max-width: 780px) {
-    .page-node-133 .image-note{float:right;
-        width:10%;
-        margin-top:25px;
-        background:url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0) !important;
-    }
     .linkMessage {float:left; width:50%; font-size:1.3em !important; padding:auto; line-height:1.06777; margin:6.5% 0 0.5%;}
-    .page-node-134.image-note{
-        float:right;
-        width:10%;
-        margin-top:25px;
-        background:url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0) !important;
-    }
+
     .linkMessage {float:left; width:50%; font-size:1.3em !important; padding:auto; line-height:1.06777; margin:6.5% 0 0.5%;}
-    .page-node-135 .image-note{
-        float:right;
-        width:10%;
-        margin-top:25px;
-        background:url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0) !important;
-    }
+
     .linkMessage {float:left; width:50%; font-size:1.3em !important; padding:auto; line-height:1.06777; margin:6.5% 0 0.5%;}
-    .page-node-136 .image-note{
-        float:right;
-        width:10%;
-        margin-top:25px;
-        background:url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0) !important;
-    }
+
     .linkMessage {float:left; width:50%; font-size:1.3em !important; padding:auto; line-height:1.06777; margin:6.5% 0 0.5%;}
-    .page-node-137 .image-note{
-        float:right;
-        width:10%;
-        margin-top:25px;
-        background:url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0) !important;
-    }
     .linkMessage {float:left; width:50%; font-size:1.3em !important; padding:auto; line-height:1.06777; margin:6.5% 0 0.5%;}
-    .page-node-138 .image-note{float:right;
-        width:10%;
-        margin-top:25px;
-        background:url("/sites/all/themes/smokefreegov/images/arrow_right.png") no-repeat scroll 4px 0 rgba(0, 0, 0, 0) !important;
-    }
     .linkMessage {float:left; width:50%; font-size:1.3em !important; padding:auto; line-height:1.06777; margin:6.5% 0 0.5%;}
     .quitPlan { float:left; background-color:#608018; margin-right:20px; height:auto; padding:5px;box-shadow:1px 8px 6px -6px #666666; width:auto; margin-top:2%; }
     .quitPlan h1 {font-size:1.855em; color:#ffffff; padding:8px; line-height:1; margin-bottom:5px; font-family:'cabinregular',Arial,Helvetica,sans-serif;}
@@ -4344,6 +4142,540 @@ div#dashboard-form div.form-item.form-item-quit-journey.form-type-radio.radio:fi
     margin-top: -5px;
 }
 
+
+/** Paid Ads **/
+#ads-container h1 {
+  color: #2c7faa;
+  font-size:1.4em;
+  margin: 0px 0px 10px 0px;
+}
+
+.ads-container {background: #f0f0f0;}
+
+#ads-content {overflow: auto; margin: auto;}
+
+.ads-container p, .ads-container h1, .ads-container span, .ads-container a, .ads-container button {
+    font-family: 'Cabin', sans-serif;
+}
+
+#ads-container p {font-size: 13px; line-height: 1.5em; display: inline;}
+#ads-container a {color: #2c7faa; text-decoration:underline;}
+
+.row .FirstCol {
+    margin-left: 0;
+}
+
+.row .SecondCol {
+    margin-left: 1.9%;
+}
+
+.ads-page-contain {
+    background: #f0f0f0;
+}
+
+.ads-page-contain img.tb {
+    width: 99.3%;
+    box-shadow: 3px 3px 1px #cdcdcd;
+    margin-bottom: 20px;
+}
+
+.ads-page-contain h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.ads-page-contain .top-box {
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+.ads-page-contain .shareButtons {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 180px;
+}
+
+.smokefreegov-dejar .ads-page-contain .shareButtons {
+  width: 250px;
+}
+
+.ads-page-contain .shareButtons img {
+    padding: 0 5px;
+}
+
+.ads-page-contain .shareButtons p {
+    display: inline;
+    font-size: 20px;
+}
+
+p.textQuit {
+    font-weight: bold;
+    font-size: 1.9em;
+    text-align: center;
+}
+
+.ads-page-contain .txtR {
+    margin-left: 25px;
+}
+
+.ads-page-contain a.ad-btn:visited, .ads-page-contain a.ad-btn:hover, .ads-page-contain a.ad-btn:visited:hover, .ads-page-contain a.ad-btn:focus, .ads-page-contain a.ad-btn:link {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.ads-page-contain span.ext {
+    display: none;
+}
+
+ .ads-page-contain {
+    background: #f0f0f0;
+}
+
+.ads-page-contain img.tb2 {
+    width: 17%;
+}
+
+.ads-page-contain .bannerText {
+    position: absolute;
+    left: 23%;
+    top: 15%;
+}
+
+.ads-page-contain .bannerText p#everyDay {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.ads-page-contain .bannerText p#sloganText {
+    font-size: 1.5em;
+}
+
+.ads-page-contain .bannerDash {
+    left: 20%;
+    top: 20%;
+}
+
+.ads-page-contain h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.ads-page-contain .top-box {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 99.3%;
+    box-shadow: 3px 3px 1px #cdcdcd;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+}
+
+p.textQuit {
+    font-weight: bold;
+    font-size: 1.9em;
+    text-align: center;
+}
+
+.ads-page-contain .ad-btn {
+    background-color: #286b97;
+    background-image: none;
+    border: none;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 16px;
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 2em;
+    padding: 5px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.smokefreegov-dejar .ads-page-contain .ad-btn {
+  width: 145px;
+}
+
+.ads-page-contain .txtR {
+    margin-left: 25px;
+}
+
+.ads-page-contain .ad-btn:visited, .ads-page-contain .ad-btn:hover, .ads-page-contain .ad-btn:focus, .ads-page-contain .ad-btn:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ads-page-contain span.ext {
+    display: none;
+}
+
+.quit-guide-icon {
+height: 100px;
+}
+
+.mobile-phone-img {
+    display:block;
+    margin:auto;
+    height:90%;
+}
+
+p.paid-ad-paragraph {
+    display:inline;
+    font-size: 16px;
+    margin-bottom: 1em !important;
+}
+
+.paid-link, .facebook-social-link {
+
+    color: #337ab7 !important;
+    text-decoration: none;
+}
+
+.accent-text {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.paid-clear {
+    clear:both;
+}
+
+/****** Paid Ads and 2-Column Responsiveness - Tiffany *******/
+ @media screen and (min-width : 1281px) {
+
+.page-mysmokefree div.dash-shareButtons.shareButtons {
+    position:relative !important;
+    margin:auto;
+    text-align: center;
+    right: 0px;
+    bottom: 10px;
+}
+
+.page-mysmokefree .col-sm-8 a.dash-button {
+    float: right !important;
+}
+
+.page-mysmokefree .SecondCol .dash-button {
+    display: inline-block;
+    text-align: center;
+    margin-left: 25%;
+    width: auto;
+}
+
+p.paid-ad-paragraph {
+    display:block;
+    font-size: 16px;
+    margin-bottom: 1em !important;
+}
+
+.mobile-phone-img {
+
+    height: auto !important;
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+ }
+
+ @media screen and (min-width : 980px) and (max-width:1280px) {
+
+.col-sm-5{
+    width:45%;
+}
+
+.ads-page-contain .txtR {
+    width: 47%;
+}
+
+.mobile-phone-img {
+
+    height: auto !important;
+    margin-bottom: 1em;
+    width: 75%;
+}
+
+div#buttons img.store-button {
+    float: left;
+    height:40px !important;
+    width:auto !important;
+}
+
+.ads-page-contain .ad-btn {
+    display:block;
+    margin:auto;
+}
+
+p.paid-ad-paragraph {
+    display:block;
+    font-size: 16px;
+    margin-bottom: 1em !important;
+}
+
+.shareButtons {
+    display: block;
+    margin: auto;
+}
+
+.shareButtons img {
+    height:1.3em !important;
+    width:auto !important;
+}
+
+.page-mysmokefree .SecondCol .dash-button, .page-mysmokefree .SecondCol a.dash-button {
+    display: block;
+    margin: auto !important;
+    width:70% !important;
+    text-align: center;
+    margin: auto !important;
+}
+
+.page-mysmokefree div.dash-shareButtons.shareButtons {
+    position:relative !important;
+    margin:auto;
+    text-align: center;
+    right: 0px;
+    bottom: 10px;
+}
+
+.page-mysmokefree .col-sm-8 a.dash-button {
+    float: right !important;
+}
+
+}
+
+ @media only screen and (min-width : 767px) and (max-width:979px) {
+
+div.col-sm-10.ads-container  {
+    width:100% !important;
+}
+
+.FirstCol.col-sm-6, .SecondCol.col-sm-6  {
+    /*width: 48% !important;*/
+}
+
+.col-sm-5{
+    width:100%;
+}
+
+.ads-page-contain .txtR {
+    width: 100%;
+}
+
+.mobile-phone-img {
+
+    height: auto !important;
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+div#buttons img.store-button {
+    float: left;
+    height:40px !important;
+    width:auto !important;
+}
+
+.ads-page-contain .ad-btn {
+    display:block;
+    margin:auto;
+}
+
+p.paid-ad-paragraph {
+    display:block;
+    font-size: 16px;
+    padding:0px !important;
+    margin-bottom: 1em !important;
+}
+
+.shareButtons {
+    display: block;
+    margin: auto;
+}
+
+.shareButtons img {
+    height:1.3em !important;
+    width:auto !important;
+}
+
+.page-mysmokefree .col-sm-8.module.module-pad .accent-text {
+    font-size:1.2em;
+}
+
+div.col-sm-8.module.module-pad a.dash-button {
+    float:right !important;
+}
+
+.page-mysmokefree .SecondCol .dash-button, .page-mysmokefree .SecondCol a.dash-button {
+    display: block;
+    margin: auto !important;
+    width:50% !important;
+    text-align: center;
+    margin: auto !important;
+}
+
+.page-mysmokefree div.dash-shareButtons.shareButtons {
+    position:relative !important;
+    margin:auto;
+    text-align: center;
+}
+
+div.col-sm-4.module.SecondCol.module-pad {
+    padding: 21px 25px !important;
+}
+
+}
+
+@media only screen and (min-width:481px) and (max-width:766px) {
+
+.FirstCol.col-sm-6, .SecondCol.col-sm-6, .page-mysmokefree div.col-sm-8.module.module-pad {
+    width: 100% !important;
+}
+
+.col-sm-5{
+    width: 40%;
+    float: left;
+}
+
+div.col-sm-8.module.module-pad a.dash-button {
+    float:right !important;
+}
+
+.ads-page-contain .txtR {
+    overflow: auto;
+}
+
+.mobile-phone-img, .page-mysmokefree .mobile-phone-img {
+    height: auto !important;
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+div#buttons img.store-button {
+    float: left;
+    height:40px !important;
+    width:auto !important;
+}
+
+.ads-page-contain .ad-btn {
+    display:block;
+    margin:auto;
+}
+
+p.paid-ad-paragraph {
+    display:block;
+    font-size: 16px;
+    margin-bottom: 1em !important;
+}
+
+.shareButtons img {
+    height:1.3em !important;
+    width:auto !important;
+}
+
+.page-mysmokefree div.dash-shareButtons.shareButtons{
+    width:50% !important;
+    margin:auto !important;
+    text-align: center;
+    position:relative !important;
+}
+
+
+.page-mysmokefree .SecondCol .dash-button, .page-mysmokefree .SecondCol a.dash-button {
+    display: block;
+    margin: auto !important;
+    width:50% !important;
+    text-align: center;
+    margin: auto !important;
+}
+
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+.page-node-39 .ext {
+    color: #246d9e !important;
+}
+
+.tab-content .tab-pane IFRAME {
+    min-height: 80em !important;
+    width: 100% !important;
+}
+
+.FirstCol.col-sm-6, .SecondCol.col-sm-6, .page-mysmokefree div.col-sm-8.module.module-pad  {
+    width: 100% !important;
+}
+
+div.col-sm-8.module.module-pad {
+    text-align:center;
+}
+
+.mobile-phone-img, {
+
+    height: auto !important;
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+div#buttons img.store-button {
+    float: left;
+    height:40px !important;
+    width:auto !important;
+}
+
+.ads-page-contain .ad-btn {
+    display:block;
+    margin:auto;
+}
+
+p.paid-ad-paragraph {
+    display:inline;
+    font-size: 16px;
+    margin-bottom: 1em !important;
+}
+
+.shareButtons {
+    position: relative !important;
+    display: block;
+    margin: auto;
+}
+
+.shareButtons img {
+    height:1.3em !important;
+    width:auto !important;
+}
+
+.col-sm-5{
+    width:100%;
+}
+
+.ads-page-contain .txtR {
+    width: 100%;
+}
+
+.page-mysmokefree .SecondCol .dash-button, .page-mysmokefree .SecondCol a.dash-button {
+    display: block;
+    /*margin-left: 57%;*/
+    width:50% !important;
+    text-align: center;
+    margin: auto !important;
+}
+
+.page-mysmokefree div.dash-shareButtons.shareButtons {
+    width:50% !important;
+    margin:auto;
+    text-align: center;
+}
+
+.page-mysmokefree .col-sm-8 a.dash-button {
+    display: block;
+    margin: 15px 25%;
+    width: 50%;
+}
+
+}
+
 /** Just Ask Link Animation **/
 nav.cl-effect-4 a {
     position: relative;
@@ -4610,10 +4942,6 @@ article ul.nav.nav-pills {
   #quizzes .layoutLinks_header{
     width: 100% !important;
   }
-}
-
-.page-node-138 .tabbable {
-  margin-right: 0px;
 }
 
 #why-i-use h3 {

@@ -1,3 +1,30 @@
+Smokefree 1.20 2018-03-23
+-----------------------
+
+508 fixes for SF, Espanol and SFT
+
+Smokefree 1.19 2018-03-22
+-----------------------
+
+- SF-761 Fixing images on FDA pages
+- SF-729 Compressing theme images
+- SF-735 Chatbot API
+- SF-754 POS hidden fields
+
+Smokefree 1.18 2018-03-08
+-----------------------
+
+- SF-722, SF-723, SF-724 and SF-728: Clean up unwanted CSS and files
+
+Smokefree 1.17 2018-02-08
+-----------------------
+
+- SF-726 Drupal core security update for Smokefree and Espanol
+- SF-725 Entity module security update
+- SF-721 Cleaning up template.php file
+- SF-712 Removing more unused modules
+- SF-691 Compressing images
+
 Smokefree 1.17 2018-02-08
 -----------------------
 
