@@ -1,0 +1,22 @@
+.node-type-include {
+  p {
+    font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4A4A4A;
+    padding-bottom: 15px;
+    margin: 0px;
+  }
+  .fact {
+    margin-top: -25px;
+    margin-bottom: -20px;
+  }
+  @media only screen and (max-width: 979px) {
+    .container.main-container {
+      padding-left: 4% !important;
+      padding-right: 4% !important;
+    }
+  }
+}
