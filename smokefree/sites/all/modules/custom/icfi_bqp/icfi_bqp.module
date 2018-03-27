@@ -56,7 +56,6 @@ function icfi_bqp_menu() {
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
-  /*
   $items['veterans/how-to-quit/build-your-quit-plan'] = array(
     'title' => 'Build Your Quit Plan',
     'page callback' => '_veterans_bqp_callback',
@@ -68,7 +67,7 @@ function icfi_bqp_menu() {
     'page callback' => '_veterans_bqp_results_callback',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
-  );*/
+  );
   $items['build-your-quit-plan-results'] = array(
     'title' => 'Your Quit Plan',
     'page callback' => '_bqp_results_callback',
