@@ -412,10 +412,16 @@ function smokefreegov_preprocess_node(&$variables) {
   if ($variables['type'] == 'media_landing') {
 	$img = field_get_items('node', $variables['node'], 'field_app_image');
 	$img_url = file_create_url($img[0]['uri']);
-  } elseif ($variables['type'] == 'cr_landing') {
+  }
+  else if ($variables['type'] == 'cr_landing') {
 	$img = field_get_items('node', $variables['node'], 'field_hero_image');
 	$img_url = file_create_url($img[0]['uri']);
-  } else {
+  }
+  else if ($variables['type'] == 'include') {
+    $img = field_get_items('node', $variables['node'], 'field_featured_image_include');
+    $img_url = file_create_url($img[0]['uri']);
+  }
+  else {
 	$img = field_get_items('node', $variables['node'], 'field_featured_image');
 	$img_url = file_create_url($img[0]['uri']);
   }
