@@ -103,11 +103,19 @@ footer{
 	padding-left:5px;
 	padding-right:5px;
 	text-decoration:none;
+	margin: 0 12px 0 0;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 400;
 	}
 .help-row a:first-child	{
 	padding-left:0px;
 	}
-
+.help-row a:focus,
+.help-row a:hover {
+	color:#52cdff;
+	text-decoration: underline;
+}
 
 
 .smokefree-row {padding-bottom:10px; }
@@ -129,11 +137,15 @@ vertical-align:top;
 .sitemap-row a{
 	color:#ffffff;
 	text-decoration:none;
+	margin: 0 6px 0 0;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 400;
 	}
 .sitemap-row a:after{
 	content: " | ";
 	color:#949494;
-	padding-left:5px;
+	padding-left:11px;
 	padding-right:5px;
 	text-decoration:none !important;
 	pointer-events: none;
@@ -155,6 +167,12 @@ vertical-align:top;
 	padding-left:0px;
 	}
 
+.sitemap-row a:focus,
+.sitemap-row a:hover {
+	color:#52cdff;
+	text-decoration: underline;
+}
+
 /* Footer Icons*/
 
 .icon-row{
@@ -167,6 +185,9 @@ display:block !important;}
 	float:left;
 	margin-right:10px;
 	margin-bottom:15px;
+	.extlink {
+		padding-right: 15px;
+	}
 
 }
 
@@ -181,8 +202,7 @@ display:block !important;}
 }
 
 .footer-icons .icon {
-	background-image: url('../images/footer/footer-icons@2x.png');
-	width: 30px;
+	width: 35px;
 	background-repeat: no-repeat;
 	background-size: 130px 62px;
 	vertical-align: baseline !important;
@@ -192,25 +212,32 @@ display:block !important;}
 }
 
 .footer-icons .facebook{
+	background-image: url('../images/footer/facebook-2x.png');
     background-position: 0px 0px;
+	background-size: 34px 63px;
 }
 .footer-icons .instagram{
-	background-position:  -49px 0px;
+	background-image: url('../images/footer/instagram-2x.png');
+	background-size: 34px 63px;
 }
 .footer-icons .twitter{
-	background-position: -99px 0px ;
+	background-size: 34px 63px;
+	background-image: url('../images/footer/twitter-2x.png');
 }
-
-
+.footer-icons a {
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
 
 .footer-icons .facebook:hover {
 	background-position: 0px -32px !important;
 }
 .footer-icons .instagram:hover {
-	background-position: -49px -32px !important;
+	background-position: 0px -32px !important;
 }
 .footer-icons .twitter:hover {
-	background-position: -99px -32px !important;
+	background-position: 0px -32px !important;
 }
 
 /* HOVER*/
