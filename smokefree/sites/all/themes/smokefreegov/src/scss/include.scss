@@ -9,18 +9,8 @@
     padding-bottom: 15px;
     margin: 0px;
   }
-  .fact {
-    margin-top: -25px;
-    margin-bottom: -20px;
-  }
   .description {
     width: 95%;
-  }
-  @media only screen and (max-width: 979px) {
-    .container.main-container {
-      padding-left: 4% !important;
-      padding-right: 4% !important;
-    }
   }
   .btn-program {
     color: #ffffff;
@@ -50,8 +40,6 @@
       width: 100%;
       text-align: center;
     }
-
-
     a:hover{
       background-color:#0A558E !important;
       -webkit-transform: scale(1.1);
@@ -61,6 +49,12 @@
         max-width: 600px;
         width: 100% !important;
         padding: 10px 0px 0px 0px !important;
+    }
+    @media only screen and (max-width: 979px) {
+      .container.main-container {
+        padding-left: 4% !important;
+        padding-right: 4% !important;
+      }
     }
   }
 }
