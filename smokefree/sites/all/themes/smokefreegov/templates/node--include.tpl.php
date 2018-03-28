@@ -43,7 +43,6 @@ $include_url = drupal_get_path_alias('node/'.$include_nid);
 
 <h2 class="quit-note-title">Quit Notes</h2>
 <div class="quit-note-text col-lg-6 col-md-6 col-sm-6">
-    <div class="fact"><h3><?php print $label; ?></h3></div>
     <div class="description"><p><?php print $description; ?></p></div>
     <div class="hidden-xs btn-program">
       <a href="/<?php print $include_url; ?>">View Another Quit Note</a>
