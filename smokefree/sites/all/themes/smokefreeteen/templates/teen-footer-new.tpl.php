@@ -17,7 +17,7 @@
 
 			    <!--Help Row Start-->
 			    <div class="help-row">
-			    <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> | <a href="/build-your-quit-plan">QuitPlan</a> | <a href="https://smokefree.gov/smokefree-text-messaging-programs">SmokefreeTXT</a> | <a href="/mhealthmonitor/blog-index">mHealth Monitor</a>
+			    <a href="https://livehelp.cancer.gov/app/chat/chat_landing">LiveHelp</a> | <a href="https://smokefree.gov/mhealthmonitor/blog-index">QuitPlan</a> | <a href="https://smokefree.gov/smokefree-text-messaging-programs">SmokefreeTXT</a> | <a href="https://smokefree.gov/mhealthmonitor/blog-index">mHealth Monitor</a>
 			    </div>
 			    <!--Help Row End-->
 			    <!--Smokefree Icon Row Start-->
