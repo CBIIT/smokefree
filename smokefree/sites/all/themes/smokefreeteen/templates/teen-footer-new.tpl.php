@@ -19,7 +19,7 @@
                 <!--Help Row End-->
                 <!--Site Map Row-->
                 <div class="sitemap-row">
-                    <a href="/">Home</a><span> </span><a href="/about">About SmokefreeTeen</a><a href="/health-care-profesionals/">Health Professionals</a>
+                    <a href="/">Home</a><span> </span><a href="/about">About SmokefreeTeen </a><a href="/health-care-profesionals/">Health Professionals</a>
                     <a href="http://www.cancer.gov/global/web/policies/foia/">FOIA</a><a href="https://smokefree.gov/privacy-policy/">Privacy</a><a href="https://smokefree.gov/accessibility/">Accessibility</a>
                     <a href="https://smokefree.gov/viewing-files/">Viewing Files</a><a href="https://smokefree.gov/disclaimer/">Disclaimer</a>
                 </div>
