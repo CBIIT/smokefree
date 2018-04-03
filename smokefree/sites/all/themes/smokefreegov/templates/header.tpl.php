@@ -13,10 +13,12 @@
           </div>
       </nav>
       <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 nav-inner">
           <?php if (!empty($primary_nav)
               || !empty($secondary_nav)
               || !empty($page['navigation'])): ?>
-              <div id="mega-desktop" class="navbar nav">
                   <nav role="navigation">
                       <?php
                       if (!empty($primary_nav)) {
@@ -30,12 +32,11 @@
                       }
                       ?>
                   </nav>
-              </div>
 
               <!-- end desktop nav -->
 
           <?php endif; ?>
-      </div>
+      </div></div></div></div>
   <?php endif; ?>
 
     <div id="bg-container">
@@ -43,32 +44,6 @@
   </div>
 
   <div class="nav-bottom-border"><!--<img src="/<?php echo drupal_get_path('theme', 'smokefreegov'); ?>/images/header/smokefree-hd6-tagline-bottomborder-mobile-4x1.png" alt="" />--></div>
-
-  <div class="header-col-12" id="main-nav">
-    <div class="nav-bar">
-      <div class="nav-bar-logo">
-        <a href="/"><img alt="Smokefree-logo" class="nav-bar-brand" src="/<?php echo drupal_get_path('theme', 'smokefreegov'); ?>/images/header/smokefree_logo.png" /></a>
-      </div>
-      <div class="nav-bar-icon">
-        <span class="glyphicon glyphicon-search nav-search" aria-hidden="true"></span>
-      </div>
-
-    </div>
-
-  </div>
-  <div class="header-col-12 search-bar" >
-    <form class="search-bar-form" action="https://barney2.cit.nih.gov/search" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
-  							|| document.getElementById('searchbox-header').value=='')
-  								return false;" _lpchecked="1">
-      <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*"> <label class="hiddenSearch sr-only" for="searchbox-header">Search</label>
-      <div class="search-bar-group">
-          <label for="searchbox-header-input" class="element-invisible">Search</label>
-        <input maxlength="255" name="q" id="searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
-        <button type="submit" value="Search" class="btn btn-default">Submit</button>
-        <a class="closebtn">&times;</a>
-      </div>
-    </form>
-  </div>
 
   <!-- Brand and toggle get grouped for better mobile display -->
 

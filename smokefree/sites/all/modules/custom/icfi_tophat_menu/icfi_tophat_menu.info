@@ -1,0 +1,14 @@
+name = ICFI Tophat Menu
+core = 7.x
+package = ICFI Custom
+version = 7.x-1.0
+dependencies[] = boxes
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = superfish
+features[box][] = ss_search_bar
+features[context][] = main_menu
+features[ctools][] = boxes:box:1
+features[ctools][] = context:context:3
+features[features_api][] = api:2
+project path = sites/all/modules/custom
