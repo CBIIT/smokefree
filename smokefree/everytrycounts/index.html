@@ -130,7 +130,7 @@
 									<input type="text" class="form-control" maxlength="11" placeholder="Phone Number" v-model="program_practice_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programpracticephone') }" id="programpracticephone" name="programpracticephone" />
 									<span v-show="errors.has('programpracticephone')" class="help is-danger">{{ errors.first('programpracticephone') }}</span>
 									<span class="input-group-btn">
-								<button id="start-now-practice-quittin" class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev002+standard')" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Start Now</button>
+								<button id="start-now-practice-quitting" class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev002+standard')" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Start Now</button>
 						   </span>
 								</div> <!-- /.input-group -->
 								<div class="text_confirmation" v-else v-html="program_practice_confirmation">
