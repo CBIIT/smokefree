@@ -94,9 +94,9 @@
 			<div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12">
 				<div class="programs">
 					<p class="bold">CHOOSE THE PROGRAM THAT’S RIGHT FOR YOU</p>
-					<button class="btn" id="programChallengeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev00+standard')" v-on:click="show_program_challenge = !show_program_challenge">TRY DAILY CHALLENGES</button>
-					<button class="btn" id="programPracticeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev001+standard')" v-on:click="show_program_practice = !show_program_practice">PRACTICE QUITTING</button>
-					<button class="btn" id="programQuitButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev003+standard')" v-on:click="show_program_quit = !show_program_quit">QUIT FOR GOOD</button>
+					<button class="btn try-something-new-btn" id="programChallengeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev00+standard')" v-on:click="show_program_challenge = !show_program_challenge">TRY DAILY CHALLENGES</button>
+					<button class="btn try-something-new-btn" id="programPracticeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev001+standard')" v-on:click="show_program_practice = !show_program_practice">PRACTICE QUITTING</button>
+					<button class="btn try-something-new-btn" id="programQuitButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev003+standard')" v-on:click="show_program_quit = !show_program_quit">QUIT FOR GOOD</button>
 
 					<!-- Try Daily Challenges overlay box -->
 					<transition name="slidetoggle">
@@ -109,7 +109,7 @@
 									<input class="form-control" maxlength="11" placeholder="Phone Number" v-model="program_challenge_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programchallengephone') }" id="programchallengephone" name="programchallengephone" />
 									<span v-show="errors.has('programchallengephone')" class="help is-danger">{{ errors.first('programchallengephone') }}</span>
 									<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev000+standard')" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Start Now</button>
+								<button id="start-now-daily-challenges" class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev000+standard')" v-on:click="errors.has('programchallengephone') ? null : send_text_signup(program_challenge_opt_in_path, program_challenge_phone);">Start Now</button>
 						   </span>
 								</div> <!-- /.input-group -->
 								<div class="text_confirmation" v-else v-html="program_challenge_confirmation">
@@ -130,7 +130,7 @@
 									<input type="text" class="form-control" maxlength="11" placeholder="Phone Number" v-model="program_practice_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programpracticephone') }" id="programpracticephone" name="programpracticephone" />
 									<span v-show="errors.has('programpracticephone')" class="help is-danger">{{ errors.first('programpracticephone') }}</span>
 									<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev002+standard')" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Start Now</button>
+								<button id="start-now-practice-quittin" class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev002+standard')" v-on:click="errors.has('programpracticephone') ? null : send_text_signup(program_practice_opt_in_path, program_practice_phone);">Start Now</button>
 						   </span>
 								</div> <!-- /.input-group -->
 								<div class="text_confirmation" v-else v-html="program_practice_confirmation">
@@ -151,7 +151,7 @@
 									<input type="text" class="form-control" maxlength="11" placeholder="Phone Number" v-model="program_quit_phone" v-validate.initial="'numeric'" v-bind:class="{'input': true, 'is-danger': errors.has('programquitphone') }" id="programquitphone" name="programquitphone" />
 									<span v-show="errors.has('programquitphone')" class="help is-danger">{{ errors.first('programquitphone') }}</span>
 									<span class="input-group-btn">
-								<button class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev004+standard')" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Start Now</button>
+								<button id="start-now-quit-for-good" class="btn btn-signup" type="button" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev004+standard')" v-on:click="errors.has('programquitphone') ? null : send_text_signup(program_quit_opt_in_path, program_quit_phone);">Start Now</button>
 						   </span>
 								</div> <!-- /.input-group -->
 								<div class="text_confirmation" v-else v-html="program_quit_confirmation">
