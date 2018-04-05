@@ -73,6 +73,16 @@
  * @ingroup templates
  */
 ?>
+<?php
+if ($node->type === 'include') {
+  $class = 'include';
+  $content_container_class = 'no-container';
+}
+else {
+  $class = 'col-sm-9 center_column content-container';
+  $content_container_class = 'content-container';
+}
+?>
   <?php require_once drupal_get_path('theme', 'smokefreeteen') . '/templates/header.tpl.php';?>
 
 <?php if (!empty($page['header'])):  ?>
@@ -97,10 +107,10 @@
 
   <div class="row col-sm-12 special-wrapper">
 
-    <section class="col-sm-9 center_column content-container<?php if (!empty($five_resources)) print $five_resources;
+      <section class="<?php print $class; ?><?php if (!empty($five_resources)) print $five_resources;
         if (empty($page['sidebar_second'])) {print ' no-sidebar';}?>">
       <?php if(empty($five_resources)): ?>
-      <div class="<?php print !empty($page['sidebar_second']) ? 'col-sm-9' : 'col-sm-12'; ?> content-container page-content-container">
+          <div class="<?php print !empty($page['sidebar_second']) ? 'col-sm-9' : 'col-sm-12'; ?> <?php print $content_container_class; ?> page-content-container">
       <?php endif; ?>
         <?php if (!empty($page['sidebar_first'])): ?>
           <aside class="col-sm-3 sidebar_first" role="complementary">
