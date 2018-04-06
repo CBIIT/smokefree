@@ -288,6 +288,53 @@
         
         // 508 search input
 		$('input.search-bar-input').attr('id', 'searchbox-header');
+        // Smokefree.gov Homepage 4 Boxes
+        $('#btn__I-Want-to-Quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__My-Quit-Day').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__Newly-Quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__Staying-Quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#expanded_btn__I-Want-to-Quit .collapse-box').click(function() {
+            $('#expanded_btn__I-Want-to-Quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__I-Want-to-Quit').toggleClass('open');
+            $('#expanded_btn__I-Want-to-Quit').collapse('hide');
+        });
+        $('#expanded_btn__My-Quit-Day .collapse-box').click(function() {
+            $('#expanded_btn__My-Quit-Day').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__My-Quit-Day').toggleClass('open');
+            $('#expanded_btn__My-Quit-Day').collapse('hide');
+        });
+        $('#expanded_btn__Newly-Quit .collapse-box').click(function() {
+            $('#expanded_btn__Newly-Quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__Newly-Quit').toggleClass('open');
+            $('#expanded_btn__Newly-Quit').collapse('hide');
+        });
+        $('#expanded_btn__Staying-Quit .collapse-box').click(function() {
+            $('#expanded_btn__Staying-Quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__Staying-Quit').toggleClass('open');
+            $('#expanded_btn__Staying-Quit').collapse('hide');
+        });
+        // Homepage 4 boxes document load animation
+        $('#btn__I-Want-to-Quit').addClass('section-animation');
+
+        setTimeout(function() { $('#btn__I-Want-to-Quit').removeClass('section-animation'); }, 1200);
+        setTimeout(function() { $('#btn__My-Quit-Day').addClass('section-animation'); }, 300);
+        setTimeout(function() { $('#btn__My-Quit-Day').removeClass('section-animation'); }, 1500);
+        setTimeout(function() { $('#btn__Newly-Quit').addClass('section-animation'); }, 600);
+        setTimeout(function() { $('#btn__Newly-Quit').removeClass('section-animation'); }, 1800);
+        setTimeout(function() { $('#btn__Staying-Quit').addClass('section-animation'); }, 900);
+        setTimeout(function() { $('#btn__Staying-Quit').removeClass('section-animation'); }, 2100);
 
 	});
 	   // homepage btns 508 fix
