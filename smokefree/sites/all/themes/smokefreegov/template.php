@@ -99,8 +99,8 @@ function smokefreegov_preprocess_page(&$variables) {
   $variables['include_title'] = TRUE;
   if (!empty($variables['node']->title)
     && ($variables['node']->title == 'Veterans Home'
-    || in_array($variables['node']->nid, $five_resources_node_ids)
-    || in_array($variables['node']->type, array('section_landing')))) {
+      || in_array($variables['node']->nid, $five_resources_node_ids)
+      || in_array($variables['node']->type, array('section_landing', 'include')))) {
     $variables['include_title'] = FALSE;
   }
 
@@ -193,16 +193,16 @@ function smokefreegov_preprocess_html(&$variables) {
    */
   $current_node = menu_get_object();
 
-    if ($current_node && $current_node->nid) {
-        //var_dump($current_node->type);
-        if ($current_node->type == 'html_page') {
-            $variables['theme_hook_suggestions'][] = 'html__' . $current_node->type;
-        }
-        // Add extra body class to veterans landing pages for theming.
-        elseif ($current_node->type == 'section_landing' && !empty($current_node->field_section[LANGUAGE_NONE][0]['value'])) {
-          $variables['classes_array'][] = 'node-type-section-landing--' . $current_node->field_section[LANGUAGE_NONE][0]['value'];
-        }
+  if ($current_node && $current_node->nid) {
+    //var_dump($current_node->type);
+    if ($current_node->type == 'html_page') {
+      $variables['theme_hook_suggestions'][] = 'html__' . $current_node->type;
     }
+    // Add extra body class to veterans landing pages for theming.
+    elseif ($current_node->type == 'section_landing' && !empty($current_node->field_section[LANGUAGE_NONE][0]['value'])) {
+      $variables['classes_array'][] = 'node-type-section-landing--' . $current_node->field_section[LANGUAGE_NONE][0]['value'];
+    }
+  }
 
   $apple_icon = array(
     '#tag' => 'link',
@@ -339,17 +339,17 @@ function smokefreegov_preprocess_html(&$variables) {
   $array_veterans_branded = array("755","149", "163");
 
   if (!empty($current_node->nid) and in_array($current_node->nid, $array_veterans_branded)) {
-        $variables['classes_array'][] = 'veterans_branded';
+    $variables['classes_array'][] = 'veterans_branded';
+  }
+  elseif (empty($current_node)) {
+    $current_menu_item = menu_get_item();
+    if (!empty($current_menu_item['page_arguments'][0]->nid) && in_array($current_menu_item['page_arguments'][0]->nid, $array_veterans_branded)) {
+      $variables['classes_array'][] = 'veterans_branded';
     }
-    elseif (empty($current_node)) {
-      $current_menu_item = menu_get_item();
-      if (!empty($current_menu_item['page_arguments'][0]->nid) && in_array($current_menu_item['page_arguments'][0]->nid, $array_veterans_branded)) {
-        $variables['classes_array'][] = 'veterans_branded';
-      }
   }
 }
 
-      
+
 
 /**
  * Returns HTML for a single local action link.
@@ -408,30 +408,36 @@ function smokefreegov_menu_local_action($variables) {
  */
 function smokefreegov_preprocess_node(&$variables) {
   // add conditionals for various content types and their image fields
-  
+
   if ($variables['type'] == 'media_landing') {
-	$img = field_get_items('node', $variables['node'], 'field_app_image');
-	$img_url = file_create_url($img[0]['uri']);
-  } elseif ($variables['type'] == 'cr_landing') {
-	$img = field_get_items('node', $variables['node'], 'field_hero_image');
-	$img_url = file_create_url($img[0]['uri']);
-  } else {
-	$img = field_get_items('node', $variables['node'], 'field_featured_image');
-	$img_url = file_create_url($img[0]['uri']);
+    $img = field_get_items('node', $variables['node'], 'field_app_image');
+    $img_url = file_create_url($img[0]['uri']);
+  }
+  else if ($variables['type'] == 'cr_landing') {
+    $img = field_get_items('node', $variables['node'], 'field_hero_image');
+    $img_url = file_create_url($img[0]['uri']);
+  }
+  else if ($variables['type'] == 'include') {
+    $img = field_get_items('node', $variables['node'], 'field_featured_image_include');
+    $img_url = file_create_url($img[0]['uri']);
+  }
+  else {
+    $img = field_get_items('node', $variables['node'], 'field_featured_image');
+    $img_url = file_create_url($img[0]['uri']);
   }
 
 
-  
-  // create the og:image tag 
-	$og_image = array(
-	  '#tag' => 'meta',
-	  '#attributes' => array(
-		'property' => 'og:image',
-		'content' => $img_url,
-	  ),
-	);
 
-	drupal_add_html_head($og_image, 'og_image');
+  // create the og:image tag
+  $og_image = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'property' => 'og:image',
+      'content' => $img_url,
+    ),
+  );
+
+  drupal_add_html_head($og_image, 'og_image');
 
 
 
@@ -439,7 +445,7 @@ function smokefreegov_preprocess_node(&$variables) {
     $variables['classes_array'][] = 'row';
   }
   $current_node = $variables['node'];
-  
+
 
   if (isset($current_node->field_section['und'][0]['value'])) {
     if ($current_node->field_section['und'][0]['value'] == 'smokefree-text'){
@@ -461,8 +467,8 @@ function smokefreegov_preprocess_node(&$variables) {
           $variables['hero_text'] = '<img src="/' . drupal_get_path('theme', 'smokefreegov') . '/images/Smokeless_Hero_Phrase.png" alt="I control my life, and I choose not to dip." />';
           $variables['logo_color'] = 'white';
           $variables['promo_button'] = l('<img src="/' . drupal_get_path('theme', 'smokefreegov') . '/images/Smokeless_RealCost_Button.png" />',
-          'http://therealcost.betobaccofree.hhs.gov/dip', array('html'=>TRUE, 'attributes'=>array('class'=>array('header_promo_button'))));
-        break;
+            'http://therealcost.betobaccofree.hhs.gov/dip', array('html'=>TRUE, 'attributes'=>array('class'=>array('header_promo_button'))));
+          break;
 
         case 'lgbt':
           $variables['hero_text'] = '<img class="top_smokefree_logo" src="/' . drupal_get_path('theme', 'smokefreegov') . '/images/lgbt_hero_new_text.png" alt="I am strong enough to quit!" />';
@@ -683,4 +689,20 @@ function smokefreegov_views_pre_render(&$view) {
     }
   }
 
+}
+
+/**
+ * Get a random include nid published to the current domain
+ */
+function get_random_include() {
+  $domain = domain_get_domain();
+  $nids = db_query("
+    SELECT n.nid
+    FROM node n
+    INNER JOIN domain_access da ON n.nid = da.nid
+    WHERE n.type = 'include'
+    AND n.status = 1
+    AND da.gid = :domain_id", array(':domain_id' => $domain['domain_id']))->fetchAll();
+  $random_include = $nids[array_rand($nids)];
+  return $random_include->nid;
 }

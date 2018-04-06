@@ -73,97 +73,107 @@
  * @ingroup templates
  */
 ?>
-  <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/header.tpl.php'; ?>
+<?php
+if ($node->type === 'include') {
+  $class = 'include';
+  $content_container_class = 'no-container';
+}
+else {
+  $class = 'col-sm-9 center_column content-container';
+  $content_container_class = 'content-container';
+}
+?>
+<?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/header.tpl.php'; ?>
 
 <?php if (!empty($page['header'])): ?>
-  <div class="vet-sub-menu"><?php print render($page['header']); ?></div>
+    <div class="vet-sub-menu"><?php print render($page['header']); ?></div>
 <?php endif; ?>
-<div class="main-container <?php if (!empty($container_class)) {print $container_class;} ?>">
+    <div class="main-container <?php if (!empty($container_class)) {print $container_class;} ?>">
 
-  <?php if (!empty($veterans_breadcrumb)): ?>
-    <?php print $veterans_breadcrumb; ?>
-  <?php endif; ?>
-  <?php if (!empty($veterans_banner)): ?>
-    <?php print $veterans_banner; ?>
-  <?php endif; ?>
-
-  <?php if ($show_breadcrumbs && !empty($breadcrumb)): ?>
-      <div class="row col-sm-12 breadcrumb-wrapper">
-        <?php
-          print $breadcrumb;
-        ?>
-      </div>
-  <?php endif; ?>
-
-  <div class="row col-sm-12 special-wrapper">
-
-    <section class="col-sm-9 center_column content-container<?php if (!empty($five_resources)) print $five_resources;
-        if (empty($page['sidebar_second'])) {print ' no-sidebar';}?>">
-      <?php if(empty($five_resources)): ?>
-      <div class="<?php print !empty($page['sidebar_second']) ? 'col-sm-9' : 'col-sm-12'; ?> content-container page-content-container">
+      <?php if (!empty($veterans_breadcrumb)): ?>
+        <?php print $veterans_breadcrumb; ?>
       <?php endif; ?>
-        <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-sm-3 sidebar_first" role="complementary">
-            <?php print render($page['sidebar_first']); ?>
-          </aside>  <!-- /#sidebar-first -->
-        <div class="col-sm-9">
-        <?php endif; ?>
-          <?php if (!empty($page['highlighted'])): ?>
-            <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-          <?php endif; ?>
-          <a id="main-content"></a>
-          <?php print render($title_prefix); ?>
-          <?php if (!empty($title)): ?>
-            <div class="page-header-div">
-              <?php if ($include_title == TRUE): ?>
-              <div class="syndicate">
-                <h1 class="page-header"><?php print $title; ?></h1>
-              </div>
-              <?php endif;?>
-            </div>
-          <?php endif; ?>
+      <?php if (!empty($veterans_banner)): ?>
+        <?php print $veterans_banner; ?>
+      <?php endif; ?>
 
-          <?php print render($title_suffix); ?>
-
-          <?php if (!empty($action_links)): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
-
-          <?php print $messages; ?>
-
-
-          <?php if (!empty($tabs)): ?>
-            <div class="tabs-wrapper">
-              <?php print render($tabs); ?>
-            </div>
-          <?php endif; ?>
-          <div class="syndicate">
-            <?php print render($page['content']); ?>
+      <?php if ($show_breadcrumbs && !empty($breadcrumb)): ?>
+          <div class="row col-sm-12 breadcrumb-wrapper">
+            <?php
+            print $breadcrumb;
+            ?>
           </div>
-          <?php print render($page['below_content']); ?>
-          
+      <?php endif; ?>
 
-        <?php if (!empty($page['sidebar_first'])): ?>
+        <div class="row col-sm-12 special-wrapper">
+
+            <section class="<?php print $class; ?><?php if (!empty($five_resources)) print $five_resources;
+            if (empty($page['sidebar_second'])) {print ' no-sidebar';}?>">
+              <?php if(empty($five_resources)): ?>
+                <div class="<?php print !empty($page['sidebar_second']) ? 'col-sm-9' : 'col-sm-12'; ?> <?php print $content_container_class; ?> page-content-container">
+                  <?php endif; ?>
+                  <?php if (!empty($page['sidebar_first'])): ?>
+                    <aside class="col-sm-3 sidebar_first" role="complementary">
+                      <?php print render($page['sidebar_first']); ?>
+                    </aside>  <!-- /#sidebar-first -->
+                    <div class="col-sm-9">
+                      <?php endif; ?>
+                      <?php if (!empty($page['highlighted'])): ?>
+                          <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+                      <?php endif; ?>
+                        <a id="main-content"></a>
+                      <?php print render($title_prefix); ?>
+                      <?php if (!empty($title)): ?>
+                          <div class="page-header-div">
+                            <?php if ($include_title == TRUE): ?>
+                                <div class="syndicate">
+                                    <h1 class="page-header"><?php print $title; ?></h1>
+                                </div>
+                            <?php endif;?>
+                          </div>
+                      <?php endif; ?>
+
+                      <?php print render($title_suffix); ?>
+
+                      <?php if (!empty($action_links)): ?>
+                          <ul class="action-links"><?php print render($action_links); ?></ul>
+                      <?php endif; ?>
+
+                      <?php print $messages; ?>
+
+
+                      <?php if (!empty($tabs)): ?>
+                          <div class="tabs-wrapper">
+                            <?php print render($tabs); ?>
+                          </div>
+                      <?php endif; ?>
+                        <div class="syndicate">
+                          <?php print render($page['content']); ?>
+                        </div>
+                      <?php print render($page['below_content']); ?>
+
+
+                      <?php if (!empty($page['sidebar_first'])): ?>
+                    </div>
+                <?php endif; ?>
+                  <?php if(empty($five_resources)): ?>
+                </div>
+            <?php endif; ?>
+            </section>
+
+          <?php if (!empty($page['sidebar_second'])): ?>
+              <aside class="col-sm-3 sidebar_second" role="complementary">
+                <?php print render($page['sidebar_second']); ?>
+              </aside>  <!-- /#sidebar-second -->
+          <?php endif; ?>
+
         </div>
-        <?php endif; ?>
-      <?php if(empty($five_resources)): ?>
-      </div>
-    <?php endif; ?>
-    </section>
-
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3 sidebar_second" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
-
-  </div>
-</div>
+    </div>
 
 <?php if (!empty($page['content_bottom'])): ?>
-  <div class="row col-sm-12 content-bottom" role="complementary">
-    <?php print render($page['content_bottom']); ?>
-  </div>  <!-- /#content bottom -->
+    <div class="row col-sm-12 content-bottom" role="complementary">
+      <?php print render($page['content_bottom']); ?>
+    </div>  <!-- /#content bottom -->
 <?php endif; ?>
 
 <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/' . $footer_filename; ?>
