@@ -347,6 +347,7 @@ section#block-boxes-live-char-bar {
 	}
 }
 
-
-
-
+/* hide 508 compliance iframe; was adding whitespace to bottom of page */
+body > iframe[title="508 compliance"]{
+	display: none;
+}
