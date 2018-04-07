@@ -420,3 +420,7 @@ section#block-boxes-live-char-bar {
 	height: 65px;
 	padding-top: 23px;
 }
+/* hide 508 compliance iframe; was adding whitespace to bottom of page */
+body > iframe[title="508 compliance"]{
+	display: none;
+}
