@@ -103,6 +103,7 @@ features[variable][] = menu_parent_home
 features[variable][] = node_options_home
 features[variable][] = node_preview_home
 features[variable][] = node_submitted_home
+features[variable][] = pathauto_node_home_pattern
 features[variable][] = xmlsitemap_settings_node_home
 features[views_view][] = articles_upper
 features[views_view][] = home

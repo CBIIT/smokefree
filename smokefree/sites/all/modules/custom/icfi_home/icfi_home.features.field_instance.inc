@@ -775,6 +775,7 @@ function icfi_home_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
@@ -829,6 +830,7 @@ function icfi_home_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
