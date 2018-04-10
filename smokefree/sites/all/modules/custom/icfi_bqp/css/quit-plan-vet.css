@@ -1043,6 +1043,7 @@ li.in.collapse {
     z-index: 100;
     margin-right: 0px;
     display: none;
+    max-width: 50px !important;
 }
 
 #progress_bar .page-nav-item {
