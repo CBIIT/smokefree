@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ICFI Tophat Menu feature.
+ */
+
+include_once 'icfi_tophat_menu.features.inc';
