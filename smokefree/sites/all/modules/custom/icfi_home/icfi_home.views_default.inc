@@ -727,14 +727,11 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: View (Views field view) */
-  $handler->display->display_options['header']['view_field']['id'] = 'view_field';
-  $handler->display->display_options['header']['view_field']['table'] = 'views';
-  $handler->display->display_options['header']['view_field']['field'] = 'view_field';
-  $handler->display->display_options['header']['view_field']['label'] = '';
-  $handler->display->display_options['header']['view_field']['element_label_colon'] = FALSE;
-  $handler->display->display_options['header']['view_field']['view'] = 'home';
-  $handler->display->display_options['header']['view_field']['display'] = 'block_1';
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'home:block_1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -1115,11 +1112,53 @@ function icfi_home_views_default_views() {
     ),
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'home' => 'home',
+  );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['value'] = 'Default Home';
   $handler->display->display_options['path'] = 'home/default-home';
 
   /* Display: Button */
   $handler = $view->new_display('block', 'Button', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'sf_homepage_4boxes';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'home_nq' => 'home_nq',
+  );
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_waypoint_landing_pages_target_id']['id'] = 'field_waypoint_landing_pages_target_id';
+  $handler->display->display_options['relationships']['field_waypoint_landing_pages_target_id']['table'] = 'field_data_field_waypoint_landing_pages';
+  $handler->display->display_options['relationships']['field_waypoint_landing_pages_target_id']['field'] = 'field_waypoint_landing_pages_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -1138,12 +1177,12 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Button image */
   $handler->display->display_options['fields']['field_button_image']['id'] = 'field_button_image';
   $handler->display->display_options['fields']['field_button_image']['table'] = 'field_data_field_button_image';
   $handler->display->display_options['fields']['field_button_image']['field'] = 'field_button_image';
   $handler->display->display_options['fields']['field_button_image']['label'] = '';
-  $handler->display->display_options['fields']['field_button_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_button_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_button_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_button_image']['settings'] = array(
@@ -1166,7 +1205,6 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['fields']['field_button_text']['table'] = 'field_data_field_button_text';
   $handler->display->display_options['fields']['field_button_text']['field'] = 'field_button_text';
   $handler->display->display_options['fields']['field_button_text']['label'] = '';
-  $handler->display->display_options['fields']['field_button_text']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_button_text']['alter']['text'] = '<div class="btn-img-[nid]">[field_button_image][field_button_text]</div>';
   $handler->display->display_options['fields']['field_button_text']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_button_text']['settings'] = array(
@@ -1182,15 +1220,13 @@ function icfi_home_views_default_views() {
       ),
     ),
   );
-  /* Field: Content: Button Link */
-  $handler->display->display_options['fields']['field_button_link']['id'] = 'field_button_link';
-  $handler->display->display_options['fields']['field_button_link']['table'] = 'field_data_field_button_link';
-  $handler->display->display_options['fields']['field_button_link']['field'] = 'field_button_link';
-  $handler->display->display_options['fields']['field_button_link']['label'] = '';
-  $handler->display->display_options['fields']['field_button_link']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_button_link']['alter']['text'] = '<span class="glyphicon glyphicon-remove"></span><div class="btn-img btn-img-[field_button_link-value]"><a class="top_button_link" data-id="[nid]" href="#[nid]_intro"><div class="home-icon-wrapper">[field_button_image]</div>[field_button_text]</a></div>';
-  $handler->display->display_options['fields']['field_button_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_button_link']['settings'] = array(
+  /* Field: Content: Introductory Block Title */
+  $handler->display->display_options['fields']['field_quit_title']['id'] = 'field_quit_title';
+  $handler->display->display_options['fields']['field_quit_title']['table'] = 'field_data_field_quit_title';
+  $handler->display->display_options['fields']['field_quit_title']['field'] = 'field_quit_title';
+  $handler->display->display_options['fields']['field_quit_title']['label'] = '';
+  $handler->display->display_options['fields']['field_quit_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quit_title']['settings'] = array(
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -1203,6 +1239,164 @@ function icfi_home_views_default_views() {
       ),
     ),
   );
+  /* Field: Content: Introductory Block Subtitle */
+  $handler->display->display_options['fields']['field_quit_paragraph']['id'] = 'field_quit_paragraph';
+  $handler->display->display_options['fields']['field_quit_paragraph']['table'] = 'field_data_field_quit_paragraph';
+  $handler->display->display_options['fields']['field_quit_paragraph']['field'] = 'field_quit_paragraph';
+  $handler->display->display_options['fields']['field_quit_paragraph']['label'] = '';
+  $handler->display->display_options['fields']['field_quit_paragraph']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quit_paragraph']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_quit_paragraph']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Introductory Block Link */
+  $handler->display->display_options['fields']['field_phone_link']['id'] = 'field_phone_link';
+  $handler->display->display_options['fields']['field_phone_link']['table'] = 'field_data_field_phone_link';
+  $handler->display->display_options['fields']['field_phone_link']['field'] = 'field_phone_link';
+  $handler->display->display_options['fields']['field_phone_link']['label'] = '';
+  $handler->display->display_options['fields']['field_phone_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_phone_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_phone_link']['type'] = 'link_title_plain';
+  $handler->display->display_options['fields']['field_phone_link']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Introductory Block Title */
+  $handler->display->display_options['fields']['field_quit_title_1']['id'] = 'field_quit_title_1';
+  $handler->display->display_options['fields']['field_quit_title_1']['table'] = 'field_data_field_quit_title';
+  $handler->display->display_options['fields']['field_quit_title_1']['field'] = 'field_quit_title';
+  $handler->display->display_options['fields']['field_quit_title_1']['label'] = '';
+  $handler->display->display_options['fields']['field_quit_title_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quit_title_1']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Button Link */
+  $handler->display->display_options['fields']['field_button_link_1']['id'] = 'field_button_link_1';
+  $handler->display->display_options['fields']['field_button_link_1']['table'] = 'field_data_field_button_link';
+  $handler->display->display_options['fields']['field_button_link_1']['field'] = 'field_button_link';
+  $handler->display->display_options['fields']['field_button_link_1']['label'] = '';
+  $handler->display->display_options['fields']['field_button_link_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_button_link_1']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_button_link_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_button_link_1']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Introductory Block Link */
+  $handler->display->display_options['fields']['field_phone_link_1']['id'] = 'field_phone_link_1';
+  $handler->display->display_options['fields']['field_phone_link_1']['table'] = 'field_data_field_phone_link';
+  $handler->display->display_options['fields']['field_phone_link_1']['field'] = 'field_phone_link';
+  $handler->display->display_options['fields']['field_phone_link_1']['label'] = '';
+  $handler->display->display_options['fields']['field_phone_link_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_phone_link_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_phone_link_1']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_phone_link_1']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_phone_link_1']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Waypoint Button Text */
+  $handler->display->display_options['fields']['field_waypoint_button_text']['id'] = 'field_waypoint_button_text';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['table'] = 'field_data_field_waypoint_button_text';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['field'] = 'field_waypoint_button_text';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['label'] = '';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_waypoint_button_text']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['relationship'] = 'field_waypoint_landing_pages_target_id';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'home' => 'home',
+  );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = '!=';
+  $handler->display->display_options['filters']['title']['value'] = 'Default Home';
   $export['home'] = $view;
 
   return $export;
