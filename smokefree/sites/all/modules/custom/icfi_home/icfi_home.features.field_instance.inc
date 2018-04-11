@@ -2158,6 +2158,113 @@ function icfi_home_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-home-field_waypoint_button_text'.
+  $field_instances['node-home-field_waypoint_button_text'] = array(
+    'bundle' => 'home',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 32,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_waypoint_button_text',
+    'label' => 'Waypoint Button Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-home-field_waypoint_landing_pages'.
+  $field_instances['node-home-field_waypoint_landing_pages'] = array(
+    'bundle' => 'home',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 31,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_waypoint_landing_pages',
+    'label' => 'Waypoint Landing Pages',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-home-field_ways_to_get_support'.
   $field_instances['node-home-field_ways_to_get_support'] = array(
     'bundle' => 'home',
@@ -2299,6 +2406,8 @@ function icfi_home_field_default_field_instances() {
   t('Tools and Tips Class');
   t('Tools and Tips Icon');
   t('Tools and Tips Link');
+  t('Waypoint Button Text');
+  t('Waypoint Landing Pages');
   t('Ways to Get Support');
 
   return $field_instances;

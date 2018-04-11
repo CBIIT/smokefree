@@ -28,8 +28,9 @@
 <?php
   $button_link = strip_tags($fields['field_button_link_1']->content);
   $link = strip_tags($fields['field_phone_link_1']->content);
+  $waypoint = new SimpleXMLElement($fields['view_node']->content);
 ?>
-  <div class="sf_homepage_4boxes__wrapper">
+  <div class="sf_homepage_4boxes__wrapper hp-button">
     <button id="btn__<?php print $button_link; ?>" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#expanded_btn__<?php print $button_link; ?>" aria-expanded="false" aria-controls="expanded_btn__<?php print $button_link; ?>">
       <div class="text-wrapper">
         <h2><?php print $fields['field_button_text']->content; ?></h2>
@@ -43,7 +44,7 @@
           <?php print $fields['field_quit_paragraph']->content; ?>
         </div> <!-- /.text-wrapper -->
         <div class="buttons">
-          <a href="#" class="btn-new btn-default-new btn-fullwidth">Create a Plan</a>
+          <a href="<?php print $waypoint->a['href']; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_waypoint_button_text']->content); ?></a>
           <a href="<?php print $link; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_phone_link']->content); ?></a>
         </div>
       </div> <!-- /.content-wrapper -->

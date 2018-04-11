@@ -33,6 +33,9 @@ function icfi_home_strongarm() {
         'xmlsitemap' => array(
           'weight' => '2',
         ),
+        'domain' => array(
+          'weight' => '1',
+        ),
       ),
       'display' => array(),
     ),

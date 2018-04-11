@@ -1146,6 +1146,19 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'sf_homepage_4boxes';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'home_nq' => 'home_nq',
+  );
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_waypoint_landing_pages_target_id']['id'] = 'field_waypoint_landing_pages_target_id';
+  $handler->display->display_options['relationships']['field_waypoint_landing_pages_target_id']['table'] = 'field_data_field_waypoint_landing_pages';
+  $handler->display->display_options['relationships']['field_waypoint_landing_pages_target_id']['field'] = 'field_waypoint_landing_pages_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -1329,6 +1342,33 @@ function icfi_home_views_default_views() {
       ),
     ),
   );
+  /* Field: Content: Waypoint Button Text */
+  $handler->display->display_options['fields']['field_waypoint_button_text']['id'] = 'field_waypoint_button_text';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['table'] = 'field_data_field_waypoint_button_text';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['field'] = 'field_waypoint_button_text';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['label'] = '';
+  $handler->display->display_options['fields']['field_waypoint_button_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_waypoint_button_text']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['relationship'] = 'field_waypoint_landing_pages_target_id';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
