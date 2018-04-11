@@ -1369,6 +1369,23 @@ function icfi_home_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['element_default_classes'] = FALSE;
+  /* Field: Content: Button Active Text */
+  $handler->display->display_options['fields']['field_button_active_text']['id'] = 'field_button_active_text';
+  $handler->display->display_options['fields']['field_button_active_text']['table'] = 'field_data_field_button_active_text';
+  $handler->display->display_options['fields']['field_button_active_text']['field'] = 'field_button_active_text';
+  $handler->display->display_options['fields']['field_button_active_text']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
