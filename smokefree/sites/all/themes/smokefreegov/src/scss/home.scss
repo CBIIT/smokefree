@@ -1272,11 +1272,15 @@
       height:110px;
       h3 {
         margin: 0 0 -5px 0;
+        text-align: left;
       }
       p {
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
+      }
+      .description {
+        text-align: left;
       }
     }
     .collapse-box {
@@ -1321,6 +1325,11 @@
   }
   .btn-new {
     transition: all .3s;
+  }
+  .btn-default-new:focus,
+  .btn-default-new:hover {
+    background-color: #064d80;
+    border-color: #064d80;
   }
 }
 .section-animation {

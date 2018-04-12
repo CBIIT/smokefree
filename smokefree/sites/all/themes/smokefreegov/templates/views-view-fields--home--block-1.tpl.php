@@ -41,7 +41,7 @@
       <div class="content-wrapper">
         <div class="text-wrapper">
           <h3><?php print $fields['field_quit_title']->content; ?></h3>
-          <?php print $fields['field_button_active_text']->content; ?>
+            <div class="description"><?php print $fields['field_button_active_text']->content; ?></div>
         </div> <!-- /.text-wrapper -->
         <div class="buttons">
           <a href="<?php print $waypoint->a['href']; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_waypoint_button_text']->content); ?></a>
