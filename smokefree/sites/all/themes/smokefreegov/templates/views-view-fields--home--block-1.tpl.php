@@ -44,8 +44,8 @@
             <div class="description"><?php print $fields['field_button_active_text']->content; ?></div>
         </div> <!-- /.text-wrapper -->
         <div class="buttons">
-          <a href="<?php print $waypoint->a['href']; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_waypoint_button_text']->content); ?></a>
-          <a href="<?php print $link; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_phone_link']->content); ?></a>
+            <a href="<?php print $link; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_phone_link']->content); ?></a>
+            <a href="<?php print $waypoint->a['href']; ?>" class="btn-new btn-default-new btn-fullwidth"><?php print strip_tags($fields['field_waypoint_button_text']->content); ?></a>
         </div>
       </div> <!-- /.content-wrapper -->
       <button class="collapse-box"><span class="sr-only">Close</span></button>
