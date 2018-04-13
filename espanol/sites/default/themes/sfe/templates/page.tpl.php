@@ -129,7 +129,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo1.jpg" 
-										alt="" 
+										alt="mujer feliz"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -149,7 +149,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo2.jpg" 
-										alt="" 
+										alt="hermanos"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -169,7 +169,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo3.jpg" 
-										alt="" 
+										alt="familia feliz"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -188,7 +188,7 @@ if (drupal_is_front_page()) : ?>
 								><a href="/preparacion-de-un-plan-para-dejar-de-fumar"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo4.jpg" 
-										alt="" 
+										alt="pareja jove"
 										/>
 									<div class="photo-badge">Preparaci&oacute;n de un plan para dejar de fumar</div>
 									<div class="image-caption-bg"
@@ -215,7 +215,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo5.jpg" 
-										alt="" 
+										alt="hombre serio"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -235,7 +235,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo6.jpg" 
-										alt=""
+										alt="familia feliz"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -255,7 +255,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo7.jpg" 
-										alt="" 
+										alt="pareja jove"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -274,7 +274,7 @@ if (drupal_is_front_page()) : ?>
 								><a href="/smokefreetxt-espanol" 
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo8.jpg" 
-										alt="" 
+										alt="hombre serio"
 										/>
 									<div class="photo-badge"><span lang="en-US" title="Smoke-free Text">SmokefreeTXT</span> en espa&ntilde;ol </div>
 									<div class="image-caption-bg"
