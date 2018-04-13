@@ -83,10 +83,8 @@
 				<input type="hidden" name="output"          value="xml_no_dtd" />
 				<input type="hidden" name="filter"          value="0" />
 				<input type="hidden" name="getfields"       value="*" />
-				<label for="searchbox-header" 
-					class="hiddenSearch hidden">B&uacute;squeda</label>
 				<div id="search-header-container">
-                    <label for="searchbox-header" class="element-invisible">Búsqueda</label>
+                    <label for="searchbox-header" class="sr-only">Búsqueda</label>
 					<input id="searchbox-header" 
 						type="text" 
 						name="q" 
