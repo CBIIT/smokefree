@@ -1156,7 +1156,7 @@ else : ?>
 								<h2><?php print $node->field_related_links['und']['0']['title']; ?></h2>
 									<p><?php print $node->field_related_link_descriptions['und']['0']['value']; ?></p>
 							</div>
-							<div class="image-note"><img alt="" src="/<?php print path_to_theme(); ?>/images/content/spacer.png" /></div>
+							<div class="image-note"></div>
 						</a></li>
 					<?php endif; ?>
 					<?php if (!empty($node->field_related_links['und']['1'])): ?>
@@ -1165,7 +1165,7 @@ else : ?>
 								<h2><?php print $node->field_related_links['und']['1']['title']; ?></h2>
 									<p><?php print $node->field_related_link_descriptions['und']['1']['value']; ?></p>
 							</div>
-							<div class="image-note"><img alt="" src="/<?php print path_to_theme(); ?>/images/content/spacer.png" /></div>
+							<div class="image-note"></div>
 						</a></li>
 					<?php endif; ?>
 					<?php if (!empty($node->field_related_links['und']['2'])): ?>
@@ -1174,7 +1174,7 @@ else : ?>
 								<h2><?php print $node->field_related_links['und']['2']['title']; ?></h2>
 									<p><?php print $node->field_related_link_descriptions['und']['2']['value']; ?></p>
 							</div>
-							<div class="image-note"><img alt="" src="/<?php print path_to_theme(); ?>/images/content/spacer.png" /></div>
+							<div class="image-note"></div>
 						</a></li>
 					<?php endif; ?>
 					</ul>
