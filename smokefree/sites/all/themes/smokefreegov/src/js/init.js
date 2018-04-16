@@ -40,6 +40,15 @@
             $(this).find('.dropdown-menu').stop(true, true).fadeOut(200);
             $(this).toggleClass('open');
         });
+        //
+        var counter = 0;
+        $('.ss-navbar-desktop #superfish-2 > li > a.sf-depth-1:not(:first)').each(function () {
+            counter++;
+            var phref = $(this).attr('href');
+            var ptext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-'+counter).append('<li><a href="'+phref+'">'+ptext+'</a></li>');
+            $('#navbar-responsive .slide-menu .landingpage-menu').append('<li><a href="'+phref+'">'+ptext+'</a><button class="mobile-subnav submenu-' + counter + '-btn"></button></li>');
+        });
         // Navigation Active Line Above
         $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
         // Mobile Menu Open
@@ -96,32 +105,38 @@
         $('.header-search-form__toggle').click(function() {
             $('.search-overlay').addClass('open');
         });
-        $('.search-overlay .btn-close').click(function() {
+        $('.search-overlay .btn-close').click(function(event) {
+            event.preventDefault();
             $('.search-overlay').removeClass('open');
         });
-        // LiveHelp Popup Window
-        if ($(window).width() > 960) {
-            // Desktop view, the modal window appears
-            setTimeout(function(){
-                $('#popup-message-window').toggleClass('in');
-                open_overlay();
-            }, 36000);
-        }
-        else {
-            // Mobile view, the sticky footer appears
-        }
-        if ($('#popup-message-window').hasClass('in')) {
-            $(document).keyup(function(e) {
-                if (e.keyCode === 27) {
-                    $('#popup-message-window').toggleClass('in');
-                    close_overlay();
-                }
-            });
-        }
-        $('#popup-message-window .btn-close').click(function() {
-            $('#popup-message-window').toggleClass('in');
-            close_overlay();
+		
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-2 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-1').append('<li><a href="'+href+'">'+mtext+'</a></li>');
         });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-3 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-2').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-4 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-3').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-5 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-4').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-6 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-5').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > li > a.active').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
+        
         //Smokefree Teen Homepage Hero Image Random
         if ($('body').hasClass('sft')) {
             var sft_heroimg = ['sft-heroimage-1.jpg', 'sft-heroimage-2.jpg', 'sft-heroimage-3.jpg'];
