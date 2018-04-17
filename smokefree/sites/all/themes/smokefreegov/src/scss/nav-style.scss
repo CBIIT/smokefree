@@ -575,33 +575,13 @@ Search Bar styles at the top, Search Results page below
 	filter: alpha(opacity=90);
 	opacity: .9;
 }
-///* Nav Pills Stacked, Sidebar Navigation in Blog */
-//aside {
-//	.nav>li>a {
-//		padding: 5px 0px;
-//		transition: all 0.3s;
-//	}
-//	.nav-pills>li>a {
-//		color:#087599;
-//		border-radius: 0px;
-//		text-decoration: none;
-//	}
-//	.nav-pills>li>a:focus,
-//	.nav-pills>li>a:hover {
-//		padding: 5px 10px;
-//		color:#ffffff;
-//		background-color: #064d80;
-//		text-decoration: none;
-//	}
-//	.nav-pills>li.active>a {
-//		padding: 5px 10px;
-//		background-color: #087599;
-//		text-decoration: none;
-//	}
-//	.nav-pills>li.active>a:focus,
-//	.nav-pills>li.active>a:hover {
-//		padding: 5px 10px;
-//		background-color: #064d80;
-//		text-decoration: none;
-//	}
-//}
+#block-boxes-ss-search-bar {
+	width: 60px;
+	height: 60px;
+	float: right;
+}
+#sfg-nav-bar-menu > .container {
+	width: 1200px !important;
+	margin-left: auto;
+	margin-right: auto;
+}
