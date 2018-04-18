@@ -40,6 +40,7 @@
 			font-weight: 600;
 			letter-spacing: 0;
 			margin-bottom: 0;
+			//width: 100% !important;
 		}
 		li>a {
 			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -48,6 +49,7 @@
 			position: relative;
 			text-transform: uppercase;
 			height: 60px;
+			white-space: nowrap;
 		}
 		li.active-trail a span.on-bar-wrapper {
 			position: absolute;
@@ -82,12 +84,17 @@
 				display: none;
 			}
 		}
+		li:hover {
+			display: block;
+		}
 		li>ul {
 			background-color: #087599;
 			min-width: 100%;
 			border: 0px;
 			border-radius: 0px;
 			top: 60px;
+			display: none;
+			width: auto !important;
 			li>a {
 				text-transform: uppercase;
 			}
@@ -584,4 +591,5 @@ Search Bar styles at the top, Search Results page below
 	width: 1200px !important;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #2a2a2a;
 }
