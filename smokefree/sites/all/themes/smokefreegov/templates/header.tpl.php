@@ -3,14 +3,32 @@
   $path = request_path();
   if (strpos($path, 'veterans') === FALSE):
     ?>
-      <nav class="scrollmenu TopHat">
-          <div class="nav-container">
-              <a href="https://smokefree.gov" id="smokefree-gov"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-gov.png" alt="smokefree-gov"></a>
-              <a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-vet.png" alt="smokefree-vet"></a>
-              <a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-women.png" alt="smokefree-women"></a>
-              <a href="https://teen.smokefree.gov" id="smokefree-teen"><span><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-teen.png" alt="smokefree-teen"></span></a>
-              <a href="https://espanol.smokefree.gov" id="smokefree-espanol"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-espanol.png" alt="smokefree-espanol"></a>
-              <a href="https://60plus.smokefree.gov" id="smokefree-60plus"><img src="/sites/all/themes/smokefreeteen/dist/images/smokefree-60+.png" alt="smokefree-60+"></a>
+
+      <nav class="navbar navbar-default TopHat">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <div type="button" id="toggle-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tophat-navbar-collapse" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="toggle-message text collapsed">Explore the<br />Smokefree Family</span>
+                      <span class="toggle-message text expanded">CLOSE</span>
+                      <span class="toggle-message graphic">
+                          <img class="toggle-message collapsed" src="/sites/all/themes/smokefreegov/images/header/tophat-grid-2x.png" alt="grid" />
+                          <img class="toggle-message toggle-arrow" src="/sites/all/themes/smokefreegov/images/header/tophat-arrow-2x.png" alt="arrow" />
+                      </span>
+                  </div>
+                  <a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /></a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="tophat-navbar-collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="active"><a href="https://smokefree.gov" id="smokefree-gov"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /><span class="sr-only">(current)</span></a></li>
+                      <li><a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /></a></li>
+                      <li><a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-women.png" alt="smokefree-women" /></a></li>
+                      <li><a href="https://teen.smokefree.gov" id="smokefree-teen"><span><img src="/sites/all/themes/smokefreegov/images/header/smokefree-teen.png" alt="smokefree-teen" /></span></a></li>
+                      <li><a href="https://espanol.smokefree.gov" id="smokefree-espanol"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-espanol.png" alt="smokefree-espanol" /></a></li>
+                      <li><a href="https://60plus.smokefree.gov" id="smokefree-60plus"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-60+.png" alt="smokefree-60+" /></a></li>
+                  </ul>
+              </div>
           </div>
       </nav>
       <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
