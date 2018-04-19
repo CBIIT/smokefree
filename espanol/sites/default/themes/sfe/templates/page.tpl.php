@@ -83,10 +83,8 @@
 				<input type="hidden" name="output"          value="xml_no_dtd" />
 				<input type="hidden" name="filter"          value="0" />
 				<input type="hidden" name="getfields"       value="*" />
-				<label for="searchbox-header" 
-					class="hiddenSearch hidden">B&uacute;squeda</label>
 				<div id="search-header-container">
-                    <label for="searchbox-header" class="element-invisible">Búsqueda</label>
+                    <label for="searchbox-header" class="sr-only">Búsqueda</label>
 					<input id="searchbox-header" 
 						type="text" 
 						name="q" 
@@ -131,7 +129,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo1.jpg" 
-										alt="" 
+										alt="mujer feliz"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -151,7 +149,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo2.jpg" 
-										alt="" 
+										alt="hermanos"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -171,7 +169,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo3.jpg" 
-										alt="" 
+										alt="familia feliz"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -190,7 +188,7 @@ if (drupal_is_front_page()) : ?>
 								><a href="/preparacion-de-un-plan-para-dejar-de-fumar"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo4.jpg" 
-										alt="" 
+										alt="pareja jove"
 										/>
 									<div class="photo-badge">Preparaci&oacute;n de un plan para dejar de fumar</div>
 									<div class="image-caption-bg"
@@ -217,7 +215,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo5.jpg" 
-										alt="" 
+										alt="hombre serio"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -237,7 +235,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo6.jpg" 
-										alt=""
+										alt="familia feliz"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -257,7 +255,7 @@ if (drupal_is_front_page()) : ?>
 									class="homelink"
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo7.jpg" 
-										alt="" 
+										alt="pareja jove"
 										/>
 									<div class="image-caption-bg"
 										><div class="image-caption-text">
@@ -276,7 +274,7 @@ if (drupal_is_front_page()) : ?>
 								><a href="/smokefreetxt-espanol" 
 									><img class="photo"
 										src="/<?php echo path_to_theme(); ?>/images/home/smokefree-homepage-photo8.jpg" 
-										alt="" 
+										alt="hombre serio"
 										/>
 									<div class="photo-badge"><span lang="en-US" title="Smoke-free Text">SmokefreeTXT</span> en espa&ntilde;ol </div>
 									<div class="image-caption-bg"
@@ -1158,7 +1156,7 @@ else : ?>
 								<h2><?php print $node->field_related_links['und']['0']['title']; ?></h2>
 									<p><?php print $node->field_related_link_descriptions['und']['0']['value']; ?></p>
 							</div>
-							<div class="image-note"><img alt="" src="/<?php print path_to_theme(); ?>/images/content/spacer.png" /></div>
+							<div class="image-note"></div>
 						</a></li>
 					<?php endif; ?>
 					<?php if (!empty($node->field_related_links['und']['1'])): ?>
@@ -1167,7 +1165,7 @@ else : ?>
 								<h2><?php print $node->field_related_links['und']['1']['title']; ?></h2>
 									<p><?php print $node->field_related_link_descriptions['und']['1']['value']; ?></p>
 							</div>
-							<div class="image-note"><img alt="" src="/<?php print path_to_theme(); ?>/images/content/spacer.png" /></div>
+							<div class="image-note"></div>
 						</a></li>
 					<?php endif; ?>
 					<?php if (!empty($node->field_related_links['und']['2'])): ?>
@@ -1176,7 +1174,7 @@ else : ?>
 								<h2><?php print $node->field_related_links['und']['2']['title']; ?></h2>
 									<p><?php print $node->field_related_link_descriptions['und']['2']['value']; ?></p>
 							</div>
-							<div class="image-note"><img alt="" src="/<?php print path_to_theme(); ?>/images/content/spacer.png" /></div>
+							<div class="image-note"></div>
 						</a></li>
 					<?php endif; ?>
 					</ul>
