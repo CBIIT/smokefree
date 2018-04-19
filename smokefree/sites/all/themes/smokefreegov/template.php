@@ -700,7 +700,7 @@ function get_random_include() {
     SELECT n.nid
     FROM node n
     INNER JOIN domain_access da ON n.nid = da.nid
-    INNER JOIN field_data_field_featured_image_include fi ON n.nid = fi.nid
+    INNER JOIN field_data_field_featured_image_include fi ON n.nid = fi.entity_id
     WHERE n.type = 'include'
     AND n.status = 1
     AND da.gid = :domain_id", array(':domain_id' => $domain['domain_id']))->fetchAll();
