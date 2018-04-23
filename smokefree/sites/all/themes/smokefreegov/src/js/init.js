@@ -52,11 +52,11 @@
         // Navigation Active Line Above
         $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
         // Mobile Menu Open
-        $('.navbar-toggle').click(function() {
+        $('#nav-bar-header .navbar-toggle').click(function() {
             open_overlay();
         });
         // Close Mobile Nav
-        $('.nav-close').click(function() {
+        $('#nav-bar-header .nav-close').click(function() {
             $('#navbar-responsive').collapse('hide');
             close_overlay();
         });
