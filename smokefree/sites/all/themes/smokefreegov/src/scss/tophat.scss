@@ -47,20 +47,25 @@ nav.TopHat #bs-navbar-collapse-1 {
     height: 50px;
 }
 @media only screen and (min-width: 1200px) {
-    nav.TopHat .navbar-header {
-      display:none;
-    }
-    nav.TopHat ul.navbar-nav li,
-    nav.TopHat ul.navbar-nav li > a {
-        width:auto !important;
-    }
-    nav.TopHat ul.navbar-nav li > a {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    nav.TopHat ul.navbar-nav > * + * {
-        margin-left: 12px;
-    }
+  nav.TopHat .navbar-header {
+    display: none;
+  }
+  nav.TopHat ul.navbar-nav li,
+  nav.TopHat ul.navbar-nav li > a {
+    width: auto !important;
+  }
+  nav.TopHat ul.navbar-nav li > a {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  nav.TopHat ul.navbar-nav > * + * {
+    margin-left: 12px;
+  }
+  nav.TopHat #tophat-navbar-collapse {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media only screen and (max-width: 1199px) {
     nav.TopHat #tophat-navbar-collapse {
@@ -68,10 +73,11 @@ nav.TopHat #bs-navbar-collapse-1 {
         border-top:0;
         padding:0;
       max-height:none;
+
     }
     nav.TopHat ul.navbar-nav,
     nav.TopHat .navbar-header {
-        max-width: 771px;
+        max-width: 1100px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -166,7 +172,7 @@ nav.TopHat .toggle-message.text.expanded {
   color:#FFF;
   padding-right:10px;
   transition:all .2s;
-  margin-bottom:5px;
+  margin-bottom:2px;
   margin-right:-5px;
 }
 nav.TopHat #toggle-btn .toggle-arrow {
