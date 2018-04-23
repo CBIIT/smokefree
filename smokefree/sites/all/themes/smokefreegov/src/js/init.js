@@ -56,7 +56,7 @@
             open_overlay();
         });
         // Close Mobile Nav
-        $('#nav-bar-header .nav-close').click(function() {
+        $('#navbar-responsive .nav-close').click(function() {
             $('#navbar-responsive').collapse('hide');
             close_overlay();
         });
