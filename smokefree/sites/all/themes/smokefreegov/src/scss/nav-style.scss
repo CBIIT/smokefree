@@ -115,6 +115,11 @@
 	}
 }
 }
+#sfg-nav-bar-menu.sf-navbar-fixed {
+	position: fixed;
+	z-index: 200;
+	width: 100%;
+}
 /* LESS Document search.less
 Search Bar styles at the top, Search Results page below
 */
