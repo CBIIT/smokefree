@@ -3,6 +3,7 @@ Smokefree 1.24 2018-04-25
 
 - Drupal security Update (Smokefree+ Espanol)
 - SF-793: Include pages should only display content with images
+- Drupal security updates to the media module
 
 Smokefree 1.23 2018-04-13
 -----------------------
