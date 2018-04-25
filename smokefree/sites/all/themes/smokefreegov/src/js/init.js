@@ -40,6 +40,33 @@
             $(this).find('.dropdown-menu').stop(true, true).fadeOut(200);
             $(this).toggleClass('open');
         });
+        
+        $(window).scroll(function () {
+            //if you hard code, then use console
+            //.log to determine when you want the
+            //nav bar to stick.
+            // console.log($(window).scrollTop())
+            if ($(window).scrollTop() > 47) {
+                $('#sfg-nav-bar-menu').addClass('sf-navbar-fixed');
+            }
+            if ($(window).scrollTop() < 48) {
+                $('#sfg-nav-bar-menu').removeClass('sf-navbar-fixed');
+            }
+        });
+        
+        $('#sfg-nav-bar-menu .ss-navbar-desktop ul#superfish-2 > li').hover(
+            
+            function () {
+                $(this).children( "ul" ).css({"display":"block"});
+                $(this).children( "ul" ).removeClass('sf-hidden');
+            },
+    
+            function () {
+                $(this).children( "ul" ).css({"display":"none"});
+                $(this).children( "ul" ).addClass('sf-hidden');
+            }
+        );
+        
         //
         var counter = 0;
         $('.ss-navbar-desktop #superfish-2 > li > a.sf-depth-1:not(:first)').each(function () {
