@@ -54,6 +54,19 @@
             }
         });
         
+        $('#sfg-nav-bar-menu .ss-navbar-desktop ul#superfish-2 > li').hover(
+            
+            function () {
+                $(this).children( "ul" ).css({"display":"block"});
+                $(this).children( "ul" ).removeClass('sf-hidden');
+            },
+    
+            function () {
+                $(this).children( "ul" ).css({"display":"none"});
+                $(this).children( "ul" ).addClass('sf-hidden');
+            }
+        );
+        
         //
         var counter = 0;
         $('.ss-navbar-desktop #superfish-2 > li > a.sf-depth-1:not(:first)').each(function () {
