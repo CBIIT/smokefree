@@ -32,6 +32,7 @@
               </div>
           </div>
       </nav>
+  <?php if (strpos($path, 'veterans') === FALSE) : ?>
 
     <div id="bg-container">
     <div id="bg-photo"></div>
