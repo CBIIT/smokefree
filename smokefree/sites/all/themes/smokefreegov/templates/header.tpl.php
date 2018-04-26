@@ -32,6 +32,7 @@
               </div>
           </div>
       </nav>
+
       <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
           <div class="container">
               <div class="row">
@@ -56,8 +57,10 @@
                         <!-- end desktop nav -->
 
                     <?php endif; ?>
-                  </div></div></div></div>
-  <?php endif; ?>
+                  </div>
+              </div>
+          </div>
+      </div>
 
     <div id="bg-container">
         <div id="bg-photo"></div>
