@@ -58,9 +58,9 @@
 
                       <!-- end desktop nav -->
 
-                  <?php endif; ?>
-                </div></div></div></div>
-  <?php endif; ?>
+          <?php endif; ?>
+      </div></div></div></div>
+
 
     <div id="bg-container">
         <div id="bg-photo"></div>
@@ -157,6 +157,7 @@
 
 
 
-        </div>
     </div>
-    <!--navigation end -->
+  </div>
+  <?php endif; ?>
+  <!--navigation end -->
