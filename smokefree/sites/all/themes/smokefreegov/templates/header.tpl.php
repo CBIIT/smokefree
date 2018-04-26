@@ -37,7 +37,7 @@
 
           <?php endif; ?>
       </div></div></div></div>
-  <?php endif; ?>
+
 
     <div id="bg-container">
     <div id="bg-photo"></div>
@@ -136,4 +136,5 @@
 
     </div>
   </div>
+  <?php endif; ?>
   <!--navigation end -->
