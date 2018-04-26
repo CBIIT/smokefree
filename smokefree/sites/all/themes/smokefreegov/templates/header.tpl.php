@@ -2,65 +2,62 @@
   <?php
   $path = request_path();
   $active_site = strpos($path, 'veterans') === FALSE ? 'gov': 'vet';
-    ?>
+  ?>
 
-      <nav class="navbar navbar-default TopHat sf-<?php print $active_site; ?>">
-          <div class="container-fluid">
-              <div class="navbar-header">
-                  <div type="button" id="toggle-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tophat-navbar-collapse" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="toggle-message text collapsed">Explore the<br />Smokefree Family</span>
-                      <span class="toggle-message text expanded">CLOSE</span>
-                      <span class="toggle-message graphic">
+    <nav class="navbar navbar-default TopHat sf-<?php print $active_site; ?>">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div type="button" id="toggle-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tophat-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="toggle-message text collapsed">Explore the<br />Smokefree Family</span>
+                    <span class="toggle-message text expanded">CLOSE</span>
+                    <span class="toggle-message graphic">
                           <img class="toggle-message collapsed" src="/sites/all/themes/smokefreegov/images/header/tophat-grid-2x.png" alt="grid" />
                           <img class="toggle-message toggle-arrow" src="/sites/all/themes/smokefreegov/images/header/tophat-arrow-2x.png" alt="arrow" />
                         </span>
-                  </div>
-                <?php if($active_site == "gov") : ?><a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /></a><?php endif; ?>
-                <?php if($active_site == "vet") : ?><a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /></a><?php endif; ?>
-              </div>
+                </div>
+              <?php if($active_site == "gov") : ?><a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /></a><?php endif; ?>
+              <?php if($active_site == "vet") : ?><a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /></a><?php endif; ?>
+            </div>
 
-              <div class="collapse navbar-collapse" id="tophat-navbar-collapse">
-                  <ul class="nav navbar-nav">
-                      <li <?php if($active_site == "gov") : ?>class="active"<?php endif; ?>><a href="https://smokefree.gov" id="smokefree-gov"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /><?php if($active_site == "gov") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
-                      <li <?php if($active_site == "vet") : ?>class="active"<?php endif; ?>><a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /><?php if($active_site == "vet") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
-                      <li><a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-women.png" alt="smokefree-women" /></a></li>
-                      <li><a href="https://teen.smokefree.gov" id="smokefree-teen"><span><img src="/sites/all/themes/smokefreegov/images/header/smokefree-teen.png" alt="smokefree-teen" /></span></a></li>
-                      <li><a href="https://espanol.smokefree.gov" id="smokefree-espanol"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-espanol.png" alt="smokefree-espanol" /></a></li>
-                      <li><a href="https://60plus.smokefree.gov" id="smokefree-60plus"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-60+.png" alt="smokefree-60+" /></a></li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
+            <div class="collapse navbar-collapse" id="tophat-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li <?php if($active_site == "gov") : ?>class="active"<?php endif; ?>><a href="https://smokefree.gov" id="smokefree-gov"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /><?php if($active_site == "gov") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
+                    <li <?php if($active_site == "vet") : ?>class="active"<?php endif; ?>><a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /><?php if($active_site == "vet") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
+                    <li><a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-women.png" alt="smokefree-women" /></a></li>
+                    <li><a href="https://teen.smokefree.gov" id="smokefree-teen"><span><img src="/sites/all/themes/smokefreegov/images/header/smokefree-teen.png" alt="smokefree-teen" /></span></a></li>
+                    <li><a href="https://espanol.smokefree.gov" id="smokefree-espanol"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-espanol.png" alt="smokefree-espanol" /></a></li>
+                    <li><a href="https://60plus.smokefree.gov" id="smokefree-60plus"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-60+.png" alt="smokefree-60+" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 nav-inner">
+                  <?php if (!empty($primary_nav)
+                    || !empty($secondary_nav)
+                    || !empty($page['navigation'])): ?>
+                      <nav role="navigation">
+                        <?php
+                        if (!empty($primary_nav)) {
+                          print render($primary_nav);
+                        }
+                        if (!empty($page['navigation'])) {
+                          print render($page['navigation']);
+                        }
+                        if (!empty($secondary_nav)) {
+                          print render($secondary_nav);
+                        }
+                        ?>
+                      </nav>
 
-      <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 nav-inner">
-                    <?php if (!empty($primary_nav)
-                      || !empty($secondary_nav)
-                      || !empty($page['navigation'])): ?>
-                        <nav role="navigation">
-                          <?php
-                          if (!empty($primary_nav)) {
-                            print render($primary_nav);
-                          }
-                          if (!empty($page['navigation'])) {
-                            print render($page['navigation']);
-                          }
-                          if (!empty($secondary_nav)) {
-                            print render($secondary_nav);
-                          }
-                          ?>
-                        </nav>
+                      <!-- end desktop nav -->
 
-                        <!-- end desktop nav -->
-
-                    <?php endif; ?>
-                  </div>
-              </div>
-          </div>
-      </div>
+                  <?php endif; ?>
+                </div></div></div></div>
+  <?php endif; ?>
 
     <div id="bg-container">
         <div id="bg-photo"></div>
