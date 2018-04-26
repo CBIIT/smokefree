@@ -32,7 +32,10 @@
             </div>
         </div>
     </nav>
-    <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
+
+  <?php if (strpos($path, 'veterans') === FALSE) : ?>
+
+      <div class="sfg-nav-bar-menu logo_area" id="sfg-nav-bar-menu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 nav-inner">
