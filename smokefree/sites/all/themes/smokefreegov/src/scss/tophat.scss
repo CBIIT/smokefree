@@ -4,9 +4,14 @@ nav.TopHat {
   background-color:#000;
   border:0;
   border-radius:0;
-  border-bottom:2px solid #9ACAE4;
   display:block !important;
   opacity:100 !important;
+}
+nav.TopHat.sf-gov {
+  border-bottom:2px solid #9ACAE4;
+}
+nav.TopHat.sf-vet {
+  border-bottom:2px solid #7ADE5D;
 }
 nav.TopHat a.navbar-brand {
   display:none;
@@ -32,8 +37,13 @@ nav.TopHat ul.navbar-nav>li>a>img {
     margin-left:auto;
 }
 nav.TopHat ul.navbar-nav>.active {
-    border-top: 2px solid #9ACAE4;
     top: 2px;
+}
+nav.TopHat.sf-gov ul.navbar-nav>.active {
+  border-top: 2px solid #9ACAE4;
+}
+nav.TopHat.sf-vet ul.navbar-nav>.active {
+  border-top: 2px solid #7ADE5D;
 }
 nav.TopHat ul.navbar-nav>.active>a {
     background-color: #2a2a2a;
@@ -85,8 +95,13 @@ nav.TopHat #bs-navbar-collapse-1 {
       border:none;
     }
     nav.TopHat ul.navbar-nav>li.active {
-        border-bottom: 2px solid #9ACAE4;
         top: 0;
+    }
+    nav.TopHat.sf-gov ul.navbar-nav>li.active {
+      border-bottom: 2px solid #9ACAE4;
+    }
+    nav.TopHat.sf-vet ul.navbar-nav>li.active {
+      border-bottom: 2px solid #7ADE5D;
     }
     nav.TopHat #tophat-navbar-collapse ul > li {
         width:100%;
