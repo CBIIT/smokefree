@@ -446,7 +446,7 @@
 
       <div class="section-body">
         <p>Everyone has their own reasons for wanting to be tobacco free.</p>
-        <p>Choose your reasons for quitting smoking or for quitting dip or chew.</p>
+        <legend>Choose your reasons for quitting smoking or for quitting dip or chew.</legend>
 
         <fieldset>
           <div class="reason-options-wrap clearfix">
@@ -547,7 +547,8 @@
         <div class="validation-error section-error collapse">
           <p class="alert alert-error">Please select your smoking reminders(s)</p>
         </div>
-          <p>Get ready for your quit day by clearing your spaces of anything associated with tobacco. This includes your home, car, workplace, and any other places you can think of!</p>        <fieldset>
+          <fieldset>
+              <legend>Get ready for your quit day by clearing your spaces of anything associated with tobacco. This includes your home, car, workplace, and any other places you can think of!</legend>
           <div class="smoking-reminders-wrap clearfix">
             <div class="reminder">
               <img src="/sites/all/themes/sfg/images/sf-vet/wash-clothes.png" alt="clothes">
