@@ -179,6 +179,12 @@ Search Bar styles at the top, Search Results page below
 				font-weight: 400;
 			}
 		}
+		button {
+			@media only screen and (max-width: 766px) {
+				background: none;
+				margin: unset;
+			}
+		}
 		button.btn-submit {
 			box-shadow: none;
 			width: auto;
