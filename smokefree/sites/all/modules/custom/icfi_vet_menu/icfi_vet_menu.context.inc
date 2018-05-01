@@ -51,6 +51,18 @@ function icfi_vet_menu_context_default_contexts() {
           'region' => 'header',
           'weight' => '-9',
         ),
+        'boxes-vet_search_icon' => array(
+          'module' => 'boxes',
+          'delta' => 'vet_search_icon',
+          'region' => 'header',
+          'weight' => '-8',
+        ),
+        'boxes-vet_search' => array(
+          'module' => 'boxes',
+          'delta' => 'vet_search',
+          'region' => 'header',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
