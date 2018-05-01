@@ -28,6 +28,8 @@
 	color: #FFFFFF;
 	width: 1080px;
 	float:left;
+	margin-bottom: 0;
+	text-align: unset;
 	ul.sf-main-menu {
 		margin-left:-15px;
 		float: none;
@@ -597,6 +599,8 @@ Search Bar styles at the top, Search Results page below
 	width: 60px;
 	height: 60px;
 	float: right;
+	margin-bottom: 0;
+	text-align: unset;
 }
 #sfg-nav-bar-menu > .container {
 	width: 1200px !important;
