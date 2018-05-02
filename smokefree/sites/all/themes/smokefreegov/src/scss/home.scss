@@ -664,7 +664,9 @@
         padding-right: 4%;
       }
     }
-
+    .view.view-home .global-view-articles-upper .view-content, .view.view-home .global-view-articles-bottom .view-content {
+      display: flex;
+    }
   }
 
 @media (min-width: 992px) {
