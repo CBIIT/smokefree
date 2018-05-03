@@ -1062,7 +1062,7 @@
 
 	@media (max-width:992px) {
 
-		.container-page ul {
+		.container-page ul:not(.landingpage-menu):not(.submenu-1):not(.submenu-2):not(.submenu-3):not(.submenu-4):not(.submenu-5) {
 			width:750px !important;
 
 			li a {
