@@ -13,18 +13,18 @@ function closeNav() {
 
 	/* Load script only after DOM is ready */
 	$(document).ready(function() {
-
+		
 		/* Search Bar */
-		$(".nav-search").click(function () {
-		  $(".search-bar-form .search-bar-group").height("45px");
-		  $(".nav-search").css("opacity", 0);
-		  $("#block-boxes-vet-search").removeClass('hide');
-		});
-		$(".search-bar-form .closebtn").click(function(){
-		  $(".nav-search").css("opacity", 1);
-			$(".search-bar-form .search-bar-group").height("0px");
+        $(".nav-search").click(function () {
+            $(".search-bar-form .search-bar-group").height("45px");
+            $(".nav-search").css("opacity", 0);
+            $("#block-boxes-vet-search").removeClass('hide');
+        });
+        $(".search-bar-form .closebtn").click(function(){
+            $(".nav-search").css("opacity", 1);
+            $(".search-bar-form .search-bar-group").height("0px");
             $("#block-boxes-vet-search").addClass('hide');
-		});
+        });
         $("#block-boxes-vet-search").addClass('hide');
 
 
