@@ -18,11 +18,14 @@ function closeNav() {
 		$(".nav-search").click(function () {
 		  $(".search-bar-form .search-bar-group").height("45px");
 		  $(".nav-search").css("opacity", 0);
+		  $("#block-boxes-vet-search").removeClass('hide');
 		});
 		$(".search-bar-form .closebtn").click(function(){
 		  $(".nav-search").css("opacity", 1);
 			$(".search-bar-form .search-bar-group").height("0px");
+            $("#block-boxes-vet-search").addClass('hide');
 		});
+        $("#block-boxes-vet-search").addClass('hide');
 
 
 		/* Click to slide to subhomepage */
