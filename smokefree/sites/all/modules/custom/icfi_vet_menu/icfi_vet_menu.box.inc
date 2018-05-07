@@ -50,5 +50,22 @@ function icfi_vet_menu_default_box() {
   );
   $export['vet_search_icon'] = $box;
 
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'vet_search_icon_mobile';
+  $box->plugin_key = 'simple';
+  $box->title = '<none>';
+  $box->description = 'vet search icon mobile';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="nav-bar-icon">
+        <span class="glyphicon glyphicon-search nav-search" aria-hidden="true"></span>
+      </div>',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['vet_search_icon_mobile'] = $box;
+
   return $export;
 }

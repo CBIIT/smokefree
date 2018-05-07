@@ -4,6 +4,18 @@
 
 .page-veterans, .node-type-section-landing, .veterans_branded, .node-type-veterans {
 
+	@media (min-width: 1101px) {
+		#block-boxes-vet-search-icon-mobile {
+			display: none;
+		}
+	}
+
+	@media (max-width: 1101px) {
+	#block-boxes-vet-search-icon {
+		display: none;
+	}
+	}
+
 	#main-nav {
 		position: relative;
 		z-index: 10; //SF-472
@@ -221,6 +233,12 @@
 		.hidden-sm {
 			display: none!important;
 		}
+	}
+
+	#block-boxes-vet-search-icon-mobile {
+		float: right;
+		margin-top: -50px;
+		margin-right: -10px;
 	}
 
 } /***** End of Veterans Header styling *****/
