@@ -273,17 +273,19 @@ margin: 0px;
       }
 
       #mobile-nav {
-
-      background-color: #023448;
+        height: 100%;
       width: 100%;
       position: fixed;
-      z-index: 20;
+      //z-index: 20;
       top: 0;
       left: 0;
       overflow-y: auto;
       transition: 0.5s;
-      height: 0%;
       font-family: Cabinregular, sans-serif !important;
+
+        > .closebtn {
+          display: none;
+        }
 
  
 
