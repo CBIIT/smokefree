@@ -584,7 +584,7 @@ Search Bar styles at the top, Search Results page below
 	margin-right: 30px;
 }
 
-#mobile-nav {z-index: 901 !important;}
+//#mobile-nav {z-index: 901 !important;}
 .dark-overlay {
 	position: fixed;
 	top: 0;
@@ -608,4 +608,13 @@ Search Bar styles at the top, Search Results page below
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #2a2a2a;
+}
+#mobile-nav #navbar-responsive li.responsive-menu-controls > .row {
+	margin-right: 0px;
+}
+#mobile-nav > .overlay-content > .mobilebtn {
+	display: none;
+}
+.nav-bar-header {
+	z-index: 1;
 }
