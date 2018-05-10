@@ -28,6 +28,8 @@
 	color: #FFFFFF;
 	width: 1080px;
 	float:left;
+	margin-bottom: 0;
+	text-align: unset;
 	ul.sf-main-menu {
 		margin-left:-15px;
 		float: none;
@@ -177,6 +179,12 @@ Search Bar styles at the top, Search Results page below
 				margin:10px;
 				width: auto;
 				font-weight: 400;
+			}
+		}
+		button {
+			@media only screen and (max-width: 766px) {
+				background: none;
+				margin: unset;
 			}
 		}
 		button.btn-submit {
@@ -379,6 +387,7 @@ Search Bar styles at the top, Search Results page below
 		ul.navbar-nav {
 			margin: 0;
 			background-color: #2a2a2a;
+			width: auto !important;
 			li.responsive-menu-controls {
 				display: block;
 				width: 310px;
@@ -575,7 +584,7 @@ Search Bar styles at the top, Search Results page below
 	margin-right: 30px;
 }
 
-#mobile-nav {z-index: 901 !important;}
+//#mobile-nav {z-index: 901 !important;}
 .dark-overlay {
 	position: fixed;
 	top: 0;
@@ -591,10 +600,21 @@ Search Bar styles at the top, Search Results page below
 	width: 60px;
 	height: 60px;
 	float: right;
+	margin-bottom: 0;
+	text-align: unset;
 }
 #sfg-nav-bar-menu > .container {
 	width: 1200px !important;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #2a2a2a;
+}
+#mobile-nav #navbar-responsive li.responsive-menu-controls > .row {
+	margin-right: 0px;
+}
+#mobile-nav > .overlay-content > .mobilebtn {
+	display: none;
+}
+.nav-bar-header {
+	z-index: 1;
 }

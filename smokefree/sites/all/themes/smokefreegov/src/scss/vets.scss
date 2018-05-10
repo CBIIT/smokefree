@@ -4,6 +4,18 @@
 
 .page-veterans, .node-type-section-landing, .veterans_branded, .node-type-veterans {
 
+	@media (min-width: 1101px) {
+		#block-boxes-vet-search-icon-mobile {
+			display: none;
+		}
+	}
+
+	@media (max-width: 1101px) {
+	#block-boxes-vet-search-icon {
+		display: none;
+	}
+	}
+
 	#main-nav {
 		position: relative;
 		z-index: 10; //SF-472
@@ -13,6 +25,15 @@
 	/****** SF Vet Menu and Header *******/
 
 	.vet-sub-menu {
+
+		#block-boxes-vet-search-icon {
+			float: right;
+			margin-top: -50px;
+			margin-right: 50px;
+		}
+		.boxes-box .boxes-box-controls {
+			display: none;
+		}
 
 		section#block-icfi-veterans-icfi-veterans-header {
 			background-color: #35723C;
@@ -212,6 +233,12 @@
 		.hidden-sm {
 			display: none!important;
 		}
+	}
+
+	#block-boxes-vet-search-icon-mobile {
+		float: right;
+		margin-top: -50px;
+		margin-right: -10px;
 	}
 
 } /***** End of Veterans Header styling *****/
@@ -1062,7 +1089,7 @@
 
 	@media (max-width:992px) {
 
-		.container-page ul {
+		.container-page ul:not(.landingpage-menu):not(.submenu-1):not(.submenu-2):not(.submenu-3):not(.submenu-4):not(.submenu-5) {
 			width:750px !important;
 
 			li a {

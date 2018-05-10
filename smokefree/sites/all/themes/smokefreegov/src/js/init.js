@@ -77,13 +77,15 @@
             $('#navbar-responsive .slide-menu .landingpage-menu').append('<li><a href="'+phref+'">'+ptext+'</a><button class="mobile-subnav submenu-' + counter + '-btn"></button></li>');
         });
         // Navigation Active Line Above
-        $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
+        $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class=""><span class="on-bar"></span></span>');
         // Mobile Menu Open
         $('#nav-bar-header .navbar-toggle').click(function() {
+            $('#mobile-nav').css("z-index", "901");
             open_overlay();
         });
         // Close Mobile Nav
         $('#navbar-responsive .nav-close').click(function() {
+            $('#mobile-nav').css("z-index", "0");
             $('#navbar-responsive').collapse('hide');
             close_overlay();
         });
@@ -162,7 +164,7 @@
             var mtext = $(this).text();
             $('#navbar-responsive .slide-menu .submenu-5').append('<li><a href="'+href+'">'+mtext+'</a></li>');
         });
-        $('.ss-navbar-desktop #superfish-2 > li > a.active').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
+        $('.ss-navbar-desktop #superfish-2 > li.active-trail > a').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
         
         //Smokefree Teen Homepage Hero Image Random
         if ($('body').hasClass('sft')) {

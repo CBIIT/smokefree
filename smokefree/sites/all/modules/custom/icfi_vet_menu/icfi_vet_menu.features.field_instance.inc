@@ -771,6 +771,7 @@ function icfi_vet_menu_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
@@ -825,6 +826,7 @@ function icfi_vet_menu_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
@@ -879,6 +881,7 @@ function icfi_vet_menu_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
@@ -933,6 +936,7 @@ function icfi_vet_menu_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
@@ -1074,6 +1078,58 @@ function icfi_vet_menu_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-veterans-field_read_more_text'.
+  $field_instances['node-veterans-field_read_more_text'] = array(
+    'bundle' => 'veterans',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_read_more_text',
+    'label' => 'Read More Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 25,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 35,
     ),
   );
 
@@ -1471,6 +1527,7 @@ function icfi_vet_menu_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
@@ -1585,6 +1642,7 @@ function icfi_vet_menu_field_default_field_instances() {
   t('Includes Sidebar');
   t('Introduction');
   t('Language');
+  t('Read More Text');
   t('SERP Description');
   t('Short Summary');
   t('Sidebar Image');
