@@ -80,10 +80,12 @@
         $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class=""><span class="on-bar"></span></span>');
         // Mobile Menu Open
         $('#nav-bar-header .navbar-toggle').click(function() {
+            $('#mobile-nav').css("z-index", "901");
             open_overlay();
         });
         // Close Mobile Nav
         $('#navbar-responsive .nav-close').click(function() {
+            $('#mobile-nav').css("z-index", "0");
             $('#navbar-responsive').collapse('hide');
             close_overlay();
         });
