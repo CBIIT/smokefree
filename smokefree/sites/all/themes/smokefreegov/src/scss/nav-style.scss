@@ -107,6 +107,10 @@
 			li.active-trail>a:hover {
 				background-color: #064d80;
 			}
+			li>ul {
+				top: 0px !important;
+				bottom: 0px !important;
+			}
 		}
 	}
 	.nav .sfHover>a,
