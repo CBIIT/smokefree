@@ -175,5 +175,35 @@ else {
       <?php print render($page['content_bottom']); ?>
     </div>  <!-- /#content bottom -->
 <?php endif; ?>
+<?php
 
+
+/**
+ * Adds the CDC tracking pixel code
+ */
+function _pixel_code() {
+  $default = '3894/chip=b18bc7903b6a0136a0230024e87a30c2.gif';
+  $paths = array(
+    'smokefreetxt' => '3883/chip=82a1a7303b680136a01d0024e87a30c2.gif',
+    'quitstart-cdc' => '3884/chip=a5f85f303b680136a01e0024e87a30c2.gif',
+    'build-your-quit-plan' => '3885/chip=e0462f003b680136a0200024e87a30c2.gif',
+    'build-your-quit-plan-results' => 'cv=3886/chip=0f4effc03b690136a0230024e87a30c2.gif',
+    'node/487/done' => 'cv=3887/chip=37de67c03b690136a0200024e87a30c2.gif', //Smokefree TXT done page
+    'quitting-smoking/steps-manage-quit-day' => '3890/chip=ebfbd7003b690136a0200024e87a30c2.gif',
+    'smokefree-text-messaging-programs' => '3883/chip=82a1a7303b680136a01d0024e87a30c2.gif',
+    'tools-tips/apps' => '3892/chip=6eb29b303b6a0136a01d0024e87a30c2.gif',
+    'tools-tips/medications-can-help-you-quit/using-nicotine-replacement-therapy' => 'cv=3891/chip=064799e03b6a0136a0240024e87a30c2.gif',
+    'tools-tips/apps/quitstart' => '3893/chip=8d4cc7403b6a0136a0210024e87a30c2.gif',
+    '' => 'cv=3888/chip=5fb1a4803b690136a0200024e87a30c2.gif', //homepage
+  );
+  $path = request_path();
+  if (array_key_exists($path, $paths)) {
+    return $paths[$path];
+  }
+  else {
+    return $default;
+  }
+}
+?>
 <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/' . $footer_filename; ?>
+<img src="https://d.runadtag.com/conversions/cv=<?php print(_pixel_code()); ?>?AG_REV=" width="1" height="1" border="0" />
