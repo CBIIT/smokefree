@@ -348,37 +348,7 @@ function smokefreegov_preprocess_html(&$variables) {
     }
   }
 
-  //SF-817
-  _add_cdc_tracking_pixel();
 }
-
-/**
- * Adds the CDC tracking pixel code
- */
-function _add_cdc_tracking_pixel() {
-  $paths = array(
-    'smokefreetxt' => '',
-    'quitstart-cdc' => '',
-    'build-your-quit-plan' => '',
-    'build-your-quit-plan-results' => '',
-    'node/487/done' => '', //Smokefree TXT done page
-    'quitting-smoking/steps-manage-quit-day' => '',
-    'smokefree-text-messaging-programs' => '',
-    'tools-tips/apps' => '',
-    'tools-tips/medications-can-help-you-quit/using-nicotine-replacement-therapy' => '',
-    'tools-tips/apps/quitstart' => '',
-    '' => "home", //homepage
-  );
-  $path = request_path();
-  if (array_key_exists($path, $paths)) {
-    // add appropriate JS
-  }
-  else {
-    // add generic JS
-  }
-
-}
-
 
 
 /**
