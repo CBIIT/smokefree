@@ -78,7 +78,10 @@
 		}
 		li>a.sfHover,
 		li>a:focus,
-		li>a:hover {
+		li>a.sf-depth-1:hover {
+			background-color: #064380;
+		}
+		.sfHover > a {
 			background-color: #087599;
 		}
 		li.menuparent {
