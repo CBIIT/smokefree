@@ -347,8 +347,8 @@ function smokefreegov_preprocess_html(&$variables) {
       $variables['classes_array'][] = 'veterans_branded';
     }
   }
-}
 
+}
 
 
 /**
