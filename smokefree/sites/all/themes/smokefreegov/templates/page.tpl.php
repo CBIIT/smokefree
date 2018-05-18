@@ -175,5 +175,4 @@ else {
       <?php print render($page['content_bottom']); ?>
     </div>  <!-- /#content bottom -->
 <?php endif; ?>
-<?php
 <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/' . $footer_filename; ?>
