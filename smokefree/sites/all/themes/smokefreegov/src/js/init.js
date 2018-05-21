@@ -1,6 +1,263 @@
 ( function($) {
 	$(document).ready(function() {
         
+        // Header Affix
+        var iScrollPos = 0;
+        $(window).scroll(function () {
+            var iCurScrollPos = $(this).scrollTop();
+            if (iCurScrollPos > iScrollPos) {
+                //Scrolling Down
+                $('#tophat').addClass('minimized');
+            } else {
+                //Scrolling Up
+                $('#tophat').removeClass('minimized');
+            }
+            iScrollPos = iCurScrollPos;
+        });
+// ************** Dark Overlay Functions **************
+        function open_overlay() {
+            $(document.createElement('div'))
+                .addClass('dark-overlay')
+                .appendTo($(document.body));
+        }
+        function close_overlay() {
+            $('.dark-overlay').remove();
+        }
+// ************** Navigation **************
+        // TopHat Expand
+        $('.tophat-menu').click(function() {
+            $('.tophat-grid').fadeToggle();
+            $('.tophat-arrow').toggleClass('rotated');
+            $('.sf-family').fadeToggle();
+            $('.close-text').delay(2000).toggleClass('open');
+            $('#tophat').toggleClass('in');
+        });
+        // Dropdown on Hover
+        $('ul.nav li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).fadeIn(200);
+            $(this).toggleClass('open');
+        }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).fadeOut(200);
+            $(this).toggleClass('open');
+        });
+        
+        $(window).scroll(function () {
+            //if you hard code, then use console
+            //.log to determine when you want the
+            //nav bar to stick.
+            // console.log($(window).scrollTop())
+            if ($(window).scrollTop() > 47) {
+                $('#sfg-nav-bar-menu').addClass('sf-navbar-fixed');
+            }
+            if ($(window).scrollTop() < 48) {
+                $('#sfg-nav-bar-menu').removeClass('sf-navbar-fixed');
+            }
+        });
+        
+        $('#sfg-nav-bar-menu .ss-navbar-desktop ul#superfish-2 > li').hover(
+            
+            function () {
+                $(this).children( "ul" ).css({"display":"block"});
+                $(this).children( "ul" ).removeClass('sf-hidden');
+            },
+    
+            function () {
+                $(this).children( "ul" ).css({"display":"none"});
+                $(this).children( "ul" ).addClass('sf-hidden');
+            }
+        );
+        
+        //
+        var counter = 0;
+        $('.ss-navbar-desktop #superfish-2 > li > a.sf-depth-1:not(:first)').each(function () {
+            counter++;
+            var phref = $(this).attr('href');
+            var ptext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-'+counter).append('<li><a href="'+phref+'">'+ptext+'</a></li>');
+            $('#navbar-responsive .slide-menu .landingpage-menu').append('<li><a href="'+phref+'">'+ptext+'</a><button class="mobile-subnav submenu-' + counter + '-btn"></button></li>');
+        });
+        // Navigation Active Line Above
+        $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class=""><span class="on-bar"></span></span>');
+        // Mobile Menu Open
+        $('#nav-bar-header .navbar-toggle').click(function() {
+            $('#mobile-nav').css("z-index", "901");
+            open_overlay();
+        });
+        // Close Mobile Nav
+        $('#navbar-responsive .nav-close').click(function() {
+            $('#mobile-nav').css("z-index", "0");
+            $('#navbar-responsive').collapse('hide');
+            close_overlay();
+        });
+        // Change Mobile SubNav
+        $('.submenu-1-btn').click(function() {
+            $('ul.landingpage-menu').animate({left: '-310px'});
+            $('ul.submenu-1').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        $('.submenu-2-btn').click(function() {
+            $('ul.landingpage-menu').animate({left: '-310px'});
+            $('ul.submenu-2').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        $('.submenu-3-btn').click(function() {
+            $('ul.landingpage-menu').animate({left: '-310px'});
+            $('ul.submenu-3').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        $('.submenu-4-btn').click(function() {
+            $('ul.landingpage-menu').animate({left: '-310px'});
+            $('ul.submenu-4').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        $('.submenu-5-btn').click(function() {
+            $('ul.landingpage-menu').animate({left: '-300px'});
+            $('ul.submenu-5').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        $('.submenu-6-btn').click(function() {
+            $('ul.landingpage-menu').animate({left: '-300px'});
+            $('ul.submenu-6').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        $('.nav-back').click(function() {
+            $('ul.submenu-1').animate({left: '-310px'});
+            $('ul.submenu-2').animate({left: '-310px'});
+            $('ul.submenu-3').animate({left: '-310px'});
+            $('ul.submenu-4').animate({left: '-310px'});
+            $('ul.submenu-5').animate({left: '-310px'});
+            $('ul.submenu-6').animate({left: '-310px'});
+            $('ul.landingpage-menu').animate({left: '0px'});
+            $('.nav-back').fadeToggle();
+        });
+        // Search Button toggle
+        $('.header-search-form__toggle').click(function() {
+            $('.search-overlay').addClass('open');
+        });
+        $('.search-overlay .btn-close').click(function(event) {
+            event.preventDefault();
+            $('.search-overlay').removeClass('open');
+        });
+		
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-2 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-1').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-3 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-2').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-4 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-3').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-5 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-4').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > .sf-item-6 > ul > li > a').each(function () {
+            var href = $(this).attr('href');
+            var mtext = $(this).text();
+            $('#navbar-responsive .slide-menu .submenu-5').append('<li><a href="'+href+'">'+mtext+'</a></li>');
+        });
+        $('.ss-navbar-desktop #superfish-2 > li.active-trail > a').append('<span class="on-bar-wrapper"><span class="on-bar"></span></span>');
+        
+        //Smokefree Teen Homepage Hero Image Random
+        if ($('body').hasClass('sft')) {
+            var sft_heroimg = ['sft-heroimage-1.jpg', 'sft-heroimage-2.jpg', 'sft-heroimage-3.jpg'];
+            $('.homepage__hero').css({'background-image': 'url(images/' + sft_heroimg[Math.floor(Math.random() * sft_heroimg.length)] + ')'});
+        }
+        // Smokefree.gov Homepage 4 Boxes
+        $('#btn__i_want_to_quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__my_quit_day').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__i_recently_quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__staying_quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#expanded_btn__i_want_to_quit .collapse-box').click(function() {
+            $('#expanded_btn__i_want_to_quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__i_want_to_quit').toggleClass('open');
+            $('#expanded_btn__i_want_to_quit').collapse('hide');
+        });
+        $('#expanded_btn__my_quit_day .collapse-box').click(function() {
+            $('#expanded_btn__my_quit_day').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__my_quit_day').toggleClass('open');
+            $('#expanded_btn__my_quit_day').collapse('hide');
+        });
+        $('#expanded_btn__i_recently_quit .collapse-box').click(function() {
+            $('#expanded_btn__i_recently_quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__i_recently_quit').toggleClass('open');
+            $('#expanded_btn__i_recently_quit').collapse('hide');
+        });
+        $('#expanded_btn__staying_quit .collapse-box').click(function() {
+            $('#expanded_btn__staying_quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__staying_quit').toggleClass('open');
+            $('#expanded_btn__staying_quit').collapse('hide');
+        });
+        // Homepage 4 boxes document load animation
+        $('#btn__i_want_to_quit').addClass('section-animation');
+        setTimeout(function() { $('#btn__i_want_to_quit').removeClass('section-animation'); }, 1200);
+        setTimeout(function() { $('#btn__my_quit_day').addClass('section-animation'); }, 300);
+        setTimeout(function() { $('#btn__my_quit_day').removeClass('section-animation'); }, 1500);
+        setTimeout(function() { $('#btn__i_recently_quit').addClass('section-animation'); }, 600);
+        setTimeout(function() { $('#btn__i_recently_quit').removeClass('section-animation'); }, 1800);
+        setTimeout(function() { $('#btn__staying_quit').addClass('section-animation'); }, 900);
+        setTimeout(function() { $('#btn__staying_quit').removeClass('section-animation'); }, 2100);
+        // Tools and Tips Mobile
+        $('.ttj-1').click(function() {
+            $('.tools_tips_list').find('.active').removeClass('active');
+            $('.tools_tips_jumpers_wrapper').find('.active').removeClass('active');
+            $('.tools_tips_list').find('li:nth-of-type(1)').addClass('active');
+            $('.tools_tips_jumpers_wrapper').find('button:nth-of-type(1)').addClass('active');
+            $('.tools_tips_wrapper').animate({left: '0px'});
+        });
+        $('.ttj-2').click(function() {
+            $('.tools_tips_list').find('.active').removeClass('active');
+            $('.tools_tips_jumpers_wrapper').find('.active').removeClass('active');
+            $('.tools_tips_list').find('li:nth-of-type(2)').addClass('active');
+            $('.tools_tips_jumpers_wrapper').find('button:nth-of-type(2)').addClass('active');
+            $('.tools_tips_wrapper').animate({left: '-60px'});
+        });
+        $('.ttj-3').click(function() {
+            $('.tools_tips_list').find('.active').removeClass('active');
+            $('.tools_tips_jumpers_wrapper').find('.active').removeClass('active');
+            $('.tools_tips_list').find('li:nth-of-type(3)').addClass('active');
+            $('.tools_tips_jumpers_wrapper').find('button:nth-of-type(3)').addClass('active');
+            $('.tools_tips_wrapper').animate({left: '-220px'});
+        });
+        $('.ttj-4').click(function() {
+            $('.tools_tips_list').find('.active').removeClass('active');
+            $('.tools_tips_jumpers_wrapper').find('.active').removeClass('active');
+            $('.tools_tips_list').find('li:nth-of-type(4)').addClass('active');
+            $('.tools_tips_jumpers_wrapper').find('button:nth-of-type(4)').addClass('active');
+            $('.tools_tips_wrapper').animate({left: '-380px'});
+        });
+        $('.ttj-5').click(function() {
+            $('.tools_tips_list').find('.active').removeClass('active');
+            $('.tools_tips_jumpers_wrapper').find('.active').removeClass('active');
+            $('.tools_tips_list').find('li:nth-of-type(5)').addClass('active');
+            $('.tools_tips_jumpers_wrapper').find('button:nth-of-type(5)').addClass('active');
+            $('.tools_tips_wrapper').animate({left: '-540px'});
+        });
+        // Mobile Quit Notes Carousel
+        $('.carousel').carousel({
+            interval: 20000
+        });
+        
         $('.page-home .toolsandtips li, .page-home-b .toolsandtips li').each(function () {
             var href = $(this).find('a.ClickClass-ToolsTips').attr('href');
             $(this).find('.col-md-9').wrapInner('<a class="ClickClass-ToolsTips" href="'+href+'"></a>');
@@ -288,6 +545,53 @@
         
         // 508 search input
 		$('input.search-bar-input').attr('id', 'searchbox-header');
+        // Smokefree.gov Homepage 4 Boxes
+        $('#btn__I-Want-to-Quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__My-Quit-Day').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__Newly-Quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#btn__Staying-Quit').click(function() {
+            $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $(this).toggleClass('open');
+        });
+        $('#expanded_btn__I-Want-to-Quit .collapse-box').click(function() {
+            $('#expanded_btn__I-Want-to-Quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__I-Want-to-Quit').toggleClass('open');
+            $('#expanded_btn__I-Want-to-Quit').collapse('hide');
+        });
+        $('#expanded_btn__My-Quit-Day .collapse-box').click(function() {
+            $('#expanded_btn__My-Quit-Day').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__My-Quit-Day').toggleClass('open');
+            $('#expanded_btn__My-Quit-Day').collapse('hide');
+        });
+        $('#expanded_btn__Newly-Quit .collapse-box').click(function() {
+            $('#expanded_btn__Newly-Quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__Newly-Quit').toggleClass('open');
+            $('#expanded_btn__Newly-Quit').collapse('hide');
+        });
+        $('#expanded_btn__Staying-Quit .collapse-box').click(function() {
+            $('#expanded_btn__Staying-Quit').parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
+            $('#btn__Staying-Quit').toggleClass('open');
+            $('#expanded_btn__Staying-Quit').collapse('hide');
+        });
+        // Homepage 4 boxes document load animation
+        $('#btn__I-Want-to-Quit').addClass('section-animation');
+
+        setTimeout(function() { $('#btn__I-Want-to-Quit').removeClass('section-animation'); }, 1200);
+        setTimeout(function() { $('#btn__My-Quit-Day').addClass('section-animation'); }, 300);
+        setTimeout(function() { $('#btn__My-Quit-Day').removeClass('section-animation'); }, 1500);
+        setTimeout(function() { $('#btn__Newly-Quit').addClass('section-animation'); }, 600);
+        setTimeout(function() { $('#btn__Newly-Quit').removeClass('section-animation'); }, 1800);
+        setTimeout(function() { $('#btn__Staying-Quit').addClass('section-animation'); }, 900);
+        setTimeout(function() { $('#btn__Staying-Quit').removeClass('section-animation'); }, 2100);
 
 	});
 	   // homepage btns 508 fix

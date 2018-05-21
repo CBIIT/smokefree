@@ -7,7 +7,7 @@
     a {text-decoration:none;}
 
     .view-home img.img-responsive {
-      padding-bottom: 0 !important;
+      padding-bottom: 25px !important;
     }
 
     #home-view {
@@ -69,7 +69,7 @@
             display:none;
         }
 
-        .views-row-2, .views-row-3, .views-row-4, .views-row-5 {
+        .views-row-1, .views-row-2, .views-row-3, .views-row-4, .views-row-5 {
             width: 24%;
             display: inline-block;
         }
@@ -85,8 +85,8 @@
             box-sizing: border-box;
         }
 
-        .views-row-2, .views-row-3, .views-row-4  {
-           margin-right:1%; 
+        .views-row-1, .views-row-2, .views-row-3, .views-row-4  {
+           margin-right:0.5%;
         }
 
       .glyphicon-remove {
@@ -166,11 +166,11 @@
         padding: 10px;
     }
 
-    .col-sm-4 {
+    .views-field-field-blue-box-text .col-sm-4 {
         text-align: center;
     }
 
-    .col-sm-4 a {
+    .views-field-field-blue-box-text .col-sm-4 a {
         font-weight: 500;
         font-size: 26px;
         background-color: #D31F0D;
@@ -190,14 +190,14 @@
         transition-property: transform;
     }
 
-    .col-sm-4 a:hover {
+    .views-field-field-blue-box-text .col-sm-4 a:hover {
         color: #ffffff;
         background-color: #9B0404;
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
 
-    .col-sm-4 img {
+    .views-field-field-blue-box-text .col-sm-4 img {
         display: block;
         margin:auto;
         height: 170px;
@@ -362,7 +362,7 @@
 
 
     .views-field-field-featured-image img {
-        width: 35% !important;
+        //width: 35% !important;
         float: left;
         margin-right: 2em;
         margin-bottom: -5px;  
@@ -385,7 +385,6 @@
         text-align: left;
         overflow:hidden;
         letter-spacing: 1.01px;
-        padding-right: 1.5em;
     }
 
     .global-view-articles-upper .views-field-title, .global-view-articles-bottom .views-field-title {
@@ -402,7 +401,7 @@
 
   .view-articles-upper .views-field-title span.field-content {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 28px;
     color: #4A4A4A;
     letter-spacing: 1.01px;
     text-transform: capitalize;
@@ -421,7 +420,7 @@
     .view-articles-upper .views-field-field-short-summary {
         font-weight: 400;
         font-size: 16px;
-        line-height: 29px;
+        line-height: 25px;
         color: #303841;
       .field-content {
         text-transform: initial;
@@ -641,22 +640,52 @@
     .btn-img-Staying-Quit:hover a {color:#2e5077;}
 
     .btn-img-Staying-Quit.btn-selected a {color:#2e5077 !important;}
+    .view.view-home.view-id-home .view-header {
+        height: 470px;
+    }
             
 @media (min-width: 768px) {
     .view.view-home.view-id-home.view-display-id-block_1 {
         width: 750px;
     }
-}
+    .view.view-home.view-id-home.view-display-id-block_1 {
+        height: 360px;
+    }
+    .view.view-home.view-id-home .view-header {
+       height: 380px;
+    }
+    .view.view-home .global-view-articles-upper .views-row, .view.view-home .global-view-articles-bottom .views-row {
+       width: 30%;
+       height: 325px;
+       display: inline-block;
+       margin-right: 3%;
+      .views-field.views-field-title, .views-field.views-field-field-short-summary {
+        padding-left: 4%;
+        padding-right: 4%;
+      }
+    }
+    .view.view-home .global-view-articles-upper .view-content, .view.view-home .global-view-articles-bottom .view-content {
+      display: flex;
+    }
+  }
 
 @media (min-width: 992px) {
     .view.view-home.view-id-home.view-display-id-block_1 {
         width: 970px;
     }
 }
+  @media (min-width: 997px) {
+    .view.view-home.view-id-home .view-header {
+      height: 180px;
+    }
+  }
 
 @media (min-width: 1200px) {
     .view.view-home.view-id-home.view-display-id-block_1 {
         width: 1170px;
+    }
+    .view.view-home.view-id-home .view-header {
+        height: 280px;
     }
 }
 
@@ -739,7 +768,7 @@
 }
 
 /* No greater than 996px, no less than 704px */
-@media screen and (min-width: 704px) and (max-width: 996px) {
+@media screen and (min-width: 768px) and (max-width: 996px) {
 
 .view.view-home.view-id-home.view-display-id-block_1 {
 
@@ -751,14 +780,14 @@
     
     .btn-img-I-Want-to-Quit a, .btn-img-My-Quit-Day a, .btn-img-Newly-Quit a, .btn-img-Staying-Quit a{font-size:26px;}
 
-    .views-row-2, .views-row-3, .views-row-4, .views-row-5 {
-        min-height: 230px;
+    .views-row-1, .views-row-2, .views-row-3, .views-row-4, .views-row-5 {
+        min-height: 145px;
         width: 46% !important;
         margin-bottom: 2%;
     }
 
     .views-row-2, .views-row-4 {margin-right: 1%;}
-    .views-row-3, .views-row-5 {margin-right: 0 !important;}
+    //.views-row-3, .views-row-5 {margin-right: 0 !important;}
 
     .view.view-home.view-id-home.view-display-id-block_1 {
         width: 100%;
@@ -776,13 +805,13 @@
         margin-top: 3em !important;
     }
 
-    .col-sm-4 {
+    .views-field-field-blue-box-text .col-sm-4 {
     margin: auto;
     text-align: center;
     width: 200px;
     }
 
-    .col-sm-4 img {
+    .views-field-field-blue-box-text .col-sm-4 img {
         margin: auto;
     }
 
@@ -851,13 +880,13 @@
     .view-articles-upper {
 
         .views-field-field-featured-image img {
-            width: 45% !important;
+            //width: 45% !important;
             margin-right: 1em;
-            min-height: 150px;
+            //min-height: 150px;
         }
 
         span {
-            font-size: 24px !important;
+            font-size: 22px !important;
         }
 
         .views-field-field-short-summary {
@@ -936,7 +965,7 @@
 
 
 /* less than 704px */   
-@media only screen and (max-width: 704px) {
+@media only screen and (max-width: 767px) {
 
 
 .view.view-home.view-id-home.view-display-id-block_1 {
@@ -948,8 +977,8 @@
     
     .btn-img-I-Want-to-Quit a, .btn-img-My-Quit-Day a, .btn-img-Newly-Quit a, .btn-img-Staying-Quit a{font-size:22px;}
 
-    .views-row-2, .views-row-3, .views-row-4, .views-row-5 {
-        width: 50% !important;
+    .views-row-1, .views-row-2, .views-row-3, .views-row-4, .views-row-5 {
+        width: 80% !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         margin-left: -0.5% !important;
@@ -972,13 +1001,13 @@
         padding-right: 5% !important;
     }
 
-    .col-sm-4 {
+    .views-field-field-blue-box-text .col-sm-4 {
         margin: auto;
         text-align: center;
         width: 200px;
     }
     
-    .col-sm-4 img {
+    .views-field-field-blue-box-text .col-sm-4 img {
         margin: auto;
     }
 
@@ -1083,4 +1112,373 @@
   display: block;
   background: #ffffff;
   border-top: 1px solid #adadad;
+}
+
+/* 4 Boxes */
+.sf-homepage-4boxes {
+  height: 180px;
+  margin-bottom: 80px;
+  display: block;
+  position: relative;
+}
+.sf_homepage_4boxes__wrapper {
+  display: block;
+  position: relative;
+  #btn__I-Want-to-Quit,
+  #btn__My-Quit-Day,
+  #btn__Newly-Quit,
+  #btn__Staying-Quit {
+    width:100%;
+    height: 180px;
+    position: absolute;
+    top:0;
+    left:0;
+    padding:15px 40px 15px 15px;
+    border: 0;
+    color: white;
+    border-radius: 0px;
+    transition: all 0.3s;
+    .text-wrapper {
+      width:100%;
+      height:100%;
+      text-align: left;
+      h2 {
+        text-align: left;
+        margin: 0;
+        white-space: normal;
+        color: white;
+      }
+      @media (max-width: 1200px) {
+        h2 {
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+    }
+    .expand-box {
+      transition: all 0.3s;
+      height:3px;
+      width:100%;
+      position: absolute;
+      bottom:0px;
+      left:0px;
+      background-image: url('../images/arrow-down-2x.png');
+      background-color: rgba(0,0,0,0.15);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 0px 0px;
+    }
+  }
+  #btn__I-Want-to-Quit {
+    background-image: url('../images/lightbulb.png');
+    background-color: #1f7a21 !important;
+    background-size: 219px 218px;
+    background-repeat: no-repeat;
+    background-position: 100px 15px;
+  }
+  #btn__My-Quit-Day {
+    background: url('../images/bullseye.png');
+    background-color: #53336f !important;
+    background-size: 219px 205px;
+    background-repeat: no-repeat;
+    background-position: 90px 20px;
+  }
+  #btn__Newly-Quit {
+    background-image: url('../images/hourglass.png');
+    background-color: #b65e00 !important;
+    background-size: 148px 257px;
+    background-repeat: no-repeat;
+    background-position: 150px 48px;
+  }
+  #btn__Staying-Quit {
+    background-image: url('../images/chart.png');
+    background-color: #931f45 !important;
+    background-size: 205px 206px;
+    background-repeat: no-repeat;
+    background-position: 90px 40px;
+  }
+  #btn__I-Want-to-Quit:focus,
+  #btn__I-Want-to-Quit:hover,
+  #btn__My-Quit-Day:focus,
+  #btn__My-Quit-Day:hover,
+  #btn__Newly-Quit:focus,
+  #btn__Newly-Quit:hover,
+  #btn__Staying-Quit:focus,
+  #btn__Staying-Quit:hover {
+    top:-15px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.15);
+    .expand-box {
+      height:45px;
+      background-size: 20px 25px;
+    }
+  }
+  #btn__I-Want-to-Quit.open,
+  #btn__My-Quit-Day.open,
+  #btn__Newly-Quit.open,
+  #btn__Staying-Quit.open {
+    top:-15px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.15);
+    .expand-box {
+      height:0px;
+      background-size: 0px 0px;
+    }
+  }
+  #expanded_btn__I-Want-to-Quit {
+    background-image: url('../images/lightbulb.png');
+    background-size: 219px 218px;
+    background-position: 100px -165px;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+  #expanded_btn__My-Quit-Day {
+    background-image: url('../images/bullseye.png');
+    background-size: 219px 205px;
+    background-position: 90px -160px;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+  #expanded_btn__Newly-Quit {
+    background-image: url('../images/hourglass.png');
+    background-size: 148px 257px;
+    background-position: 150px -132px;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+  #expanded_btn__Staying-Quit {
+    background-image: url('../images/chart.png');
+    background-size: 205px 206px;
+    background-position: 90px -140px;
+    background-repeat: no-repeat;
+    background-color: white;
+  }
+  #expanded_btn__I-Want-to-Quit,
+  #expanded_btn__My-Quit-Day,
+  #expanded_btn__Newly-Quit,
+  #expanded_btn__Staying-Quit {
+    transition: all 0.3s;
+    position: absolute;
+    top: 165px;
+    z-index: 99;
+    width: 100%;
+    background-color: white;
+    color:black;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.15);
+    .content-wrapper {
+      padding:15px 15px 0px 15px;
+      height:215px;
+      a.btn {
+        margin-top:10px;
+      }
+    }
+    .text-wrapper {
+      height:110px;
+      h3 {
+        margin: 0 0 -5px 0;
+        text-align: left;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      .description {
+        text-align: left;
+      }
+    }
+    .collapse-box {
+      transition: all 0.3s;
+      width:100%;
+      height:45px;
+      margin-top: 15px;
+      border: 0;
+      display: block;
+      background-image: url('../images/arrow-up-2x.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 20px 25px;
+    }
+  }
+  #expanded_btn__I-Want-to-Quit .collapse-box { background-color: #175b19; }
+  #expanded_btn__My-Quit-Day .collapse-box { background-color: #3e2653; }
+  #expanded_btn__Newly-Quit .collapse-box { background-color: #884600; }
+  #expanded_btn__Staying-Quit .collapse-box { background-color: #6e1734; }
+  #expanded_btn__I-Want-to-Quit .collapse-box:focus,
+  #expanded_btn__I-Want-to-Quit .collapse-box:hover { background-color: #114212; }
+  #expanded_btn__My-Quit-Day .collapse-box:focus,
+  #expanded_btn__My-Quit-Day .collapse-box:hover { background-color: #2c1b3b; }
+  #expanded_btn__Newly-Quit .collapse-box:focus,
+  #expanded_btn__Newly-Quit .collapse-box:hover { background-color: #6e3900; }
+  #expanded_btn__Staying-Quit .collapse-box:focus,
+  #expanded_btn__Staying-Quit .collapse-box:hover { background-color: #541228; }
+  .btn-default-new {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    padding: 6px 16px;
+    border: 1px solid #087599;
+    border-radius: 0;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #087599;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .btn-new {
+    transition: all .3s;
+  }
+  .btn-default-new:focus,
+  .btn-default-new:hover {
+    background-color: #064d80;
+    border-color: #064d80;
+  }
+}
+.section-animation {
+  animation: move .4s ease-in-out .3s forwards;
+}
+@keyframes move {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -15px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .sf-homepage-4boxes {
+    height: 130px;
+    margin-bottom: 50px;
+  }
+  .sf_homepage_4boxes__wrapper {
+    #btn__I-Want-to-Quit,
+    #btn__My-Quit-Day,
+    #btn__Newly-Quit,
+    #btn__Staying-Quit {
+      height: 130px;
+    }
+    #expanded_btn__I-Want-to-Quit,
+    #expanded_btn__My-Quit-Day,
+    #expanded_btn__Newly-Quit,
+    #expanded_btn__Staying-Quit {
+      top: 115px;
+      .content-wrapper { height:235px; }
+      .text-wrapper {
+        height:130px;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+      .collapse-box {
+        height:30px;
+        background-size: 15px auto;
+      }
+    }
+    #btn__I-Want-to-Quit {
+      background-size: 140px auto;
+      background-position: 100px 15px;
+    }
+    #btn__My-Quit-Day {
+      background-size: 170px auto;
+      background-position: 80px 10px;
+    }
+    #btn__Newly-Quit {
+      background-size: 120px auto;
+      background-position: 110px 42px;
+    }
+    #btn__Staying-Quit {
+      background-size: 160px auto;
+      background-position: 80px 20px;
+    }
+    #expanded_btn__I-Want-to-Quit {
+      background-size: 140px auto;
+      background-position: 100px -115px;
+    }
+    #expanded_btn__My-Quit-Day {
+      background-size: 170px auto;
+      background-position: 80px -120px;
+    }
+    #expanded_btn__Newly-Quit {
+      background-size: 120px auto;
+      background-position: 110px -92px;
+    }
+    #expanded_btn__Staying-Quit {
+      background-size: 160px auto;
+      background-position: 80px -120px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sf-homepage-4boxes {
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .sf_homepage_4boxes__wrapper {
+    #btn__I-Want-to-Quit,
+    #btn__My-Quit-Day,
+    #btn__Newly-Quit,
+    #btn__Staying-Quit {
+      position: relative;
+      top: auto;
+      left: auto;
+      height: 60px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid transparent;
+      .text-wrapper {
+        h2 {
+          font-size:18px;
+        }
+      }
+      .expand-box { display: none; }
+    }
+    #btn__I-Want-to-Quit { border-bottom-color: #175b19; }
+    #btn__My-Quit-Day { border-bottom-color: #3e2653; }
+    #btn__Newly-Quit { border-bottom-color: #884600; }
+    #btn__Staying-Quit { border-bottom-color: #6e1734; }
+    #btn__I-Want-to-Quit.open,
+    #btn__My-Quit-Day.open,
+    #btn__Newly-Quit.open,
+    #btn__Staying-Quit.open {
+      top:0px;
+    }
+    #btn__I-Want-to-Quit {
+      background-size: 70px auto;
+      background-position: right center;
+    }
+    #btn__My-Quit-Day {
+      background-size: 60px auto;
+      background-position: right center;
+    }
+    #btn__Newly-Quit {
+      background-size: 30px auto;
+      background-position: right 20px center;
+    }
+    #btn__Staying-Quit {
+      background-size: 50px auto;
+      background-position: right 10px center;
+    }
+    #expanded_btn__I-Want-to-Quit,
+    #expanded_btn__My-Quit-Day,
+    #expanded_btn__Newly-Quit,
+    #expanded_btn__Staying-Quit {
+      background-image: none;
+    }
+    #expanded_btn__I-Want-to-Quit,
+    #expanded_btn__My-Quit-Day,
+    #expanded_btn__Newly-Quit,
+    #expanded_btn__Staying-Quit {
+      top: 70px;
+      margin-left: -10px;
+      .content-wrapper { height:auto; }
+      .text-wrapper { height:auto; }
+    }
+  }
 }

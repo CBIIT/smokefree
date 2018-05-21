@@ -1,103 +1,269 @@
-/*navigation*/
-nav.scrollmenu {
-    background-color: #000000;
-    overflow: auto;
-    white-space: nowrap;
-    top:0;
-    position: fixed;
-    width:100%;
-    z-index: 100;
+nav.TopHat {
+    z-index: 1; //Without this, the mobile-nav div is over and makes it unclickable
+    margin-bottom:0;
+    margin-top:0;
+    background-color:#000;
+    border:0;
+    border-radius:0;
+    display:block !important;
+    opacity:100 !important;
+
+    &.sf-gov {
+        border-bottom:2px solid #9ACAE4;
+
+        ul.navbar-nav>.active {
+            border-top: 2px solid #9ACAE4;
+        }
+    }
+
+    &.sf-vet {
+        border-bottom:2px solid #7ADE5D;
+
+        ul.navbar-nav>.active {
+            border-top: 2px solid #7ADE5D;
+        }
+    }
+
+    a.navbar-brand {
+        display:none;
+        padding:15px !important;
+    }
+
+    ul.navbar-nav {
+        margin-bottom: 0;
+        margin-top:0;
+    }
+
+    ul.navbar-nav>li {
+        width:auto;
+
+        >a {
+            padding-top: 15px;
+            padding-bottom: 14px;
+            text-align: center;
+
+            >img {
+                margin-right:auto;
+                margin-left:auto;
+            }
+        }
+    }
+
+    ul.navbar-nav>.active {
+        top: 2px;
+    }
+
+    ul.navbar-nav>.active>a {
+        background-color: #2a2a2a;
+    }
+
+    ul.navbar-nav>li>a:hover,
+    ul.navbar-nav>li.active>a:hover {
+        background-color: #2a2a2a;
+    }
+
+    #bs-navbar-collapse-1 {
+        height: 50px;
+    }
+
+    /** Explore button **/
+    .navbar-toggle {
+        text-align: right;
+        border: none;
+
+        &#toggle-btn {
+            display: flex;
+            align-items: flex-end;
+            padding: 8px 15px;
+            min-height: 47px;
+        }
+        &:hover,
+        &:active {
+            background-color: transparent;
+        }
+    }
+
+    .toggle-message {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        color: #fff;
+        text-align: right;
+
+        &.expanded {
+            display:none;
+        }
+        &.graphic {
+            display: flex;
+            flex-direction: column;
+        }
+        &.graphic img {
+            width: 20px;
+            padding-top: 4px;
+        }
+        &.text {
+            margin-right: 4px;
+        }
+        &.text.expanded {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: .08em;
+            font-weight: 600;
+            color: #fff;
+            padding-right: 10px;
+            transition: all .2s;
+            margin-bottom: 2px;
+            margin-right: -5px;
+        }
+    }
+
+    #toggle-btn {
+        .toggle-arrow {
+            -moz-transform: scaleY(-1); /* Gecko */
+            -o-transform: scaleY(-1); /* Opera */
+            -webkit-transform: scaleY(-1); /* Webkit */
+            transform: scaleY(-1);
+        }
+        &.collapsed .toggle-arrow {
+            -moz-transform: scaleY(1); /* Gecko */
+            -o-transform: scaleY(1); /* Opera */
+            -webkit-transform: scaleY(1); /* Webkit */
+            transform: scaleY(1);
+        }
+    }
+    /** END Explore Button **/
 }
 
-nav.scrollmenu a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 24px;
-    text-decoration: none;
-    height: 100%;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px transparent;
-    position: relative;
-    background: #000000;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    left:-20px;
-}
-nav.scrollmenu a:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #000000;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-nav.scrollmenu a:hover, nav.scrollmenu a:focus, nav.scrollmenu a:active {
-    background-color: #000000
-}
-
-nav.scrollmenu a:hover:before, nav.scrollmenu a:focus:before, nav.scrollmenu a:active:before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-.scrollmenu a:hover:before {
-    background-color: #333;
-}
-
-#smokefree-gov.active{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 24px;
-    text-decoration: none;
-    height: 100%;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px transparent;
-    position: relative;
-    border-left:#9ACAE4 1px solid !important;
-    border-right:#9ACAE4 1px solid !important;
-    background-color: #333333;
-    left:-20px;
-}
-#smokefree-gov.active:before{
-    background-color: #333333;
-}
-
-@media only screen and (min-width : 786px) {
-    .nav-container {
-        width: 750px;
+@media only screen and (min-width: 1200px) {
+    nav.TopHat {
+        .navbar-header {
+            display: none;
+        }
+        ul.navbar-nav li,
+        ul.navbar-nav li > a {
+            width: auto !important;
+        }
+        ul.navbar-nav li > a {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        ul.navbar-nav > * + * {
+            margin-left: 12px;
+        }
+        #tophat-navbar-collapse {
+            max-width: 1250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
-@media only screen and (min-width : 992px) {
-    .nav-container {
-        width: 970px;
+@media only screen and (max-width: 1199px) {
+    nav.TopHat {
+        #tophat-navbar-collapse {
+            margin: 0;
+            border-top: 0;
+            padding: 0;
+            max-height: none;
+        }
+        ul.navbar-nav,
+        .navbar-header {
+            max-width: 1100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        ul.navbar-nav > li {
+            border: none;
+        }
+        ul.navbar-nav > li.active {
+            top: 0;
+        }
+        &.sf-gov ul.navbar-nav > li.active {
+            border-bottom: 2px solid #9acae4;
+        }
+        &.sf-vet ul.navbar-nav > li.active {
+            border-bottom: 2px solid #7ade5d;
+        }
+        #tophat-navbar-collapse ul > li {
+            width: 100%;
+            margin-left: 0;
+        }
+        #tophat-navbar-collapse ul > li > a {
+            text-align: left;
+            width: 100% !important;
+            padding: 15px;
+            line-height: 1.07143em;
+        }
     }
 }
 
-@media only screen and (min-width : 1200px) {
-    .nav-container {
-        width: 1050px;
+@media only screen and (max-width: 766px) {
+    nav.TopHat {
+        ul.nav {
+            display: inline;
+            float: left;
+            position: relative;
+            width: 90%;
+            left: inherit;
+            top: 0;
+            box-shadow: none;
+        }
+        ul.nav > li {
+            width: 100% !important;
+        }
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
-.nav-container {
-    margin-left: auto;
-    margin-right:auto;
+@media only screen and (max-width: 440px) {
+    nav.TopHat {
+        .toggle-message.text {
+            display: none !important;
+        }
+
+        #tophat-navbar-collapse {
+            box-shadow: none;
+        }
+    }
 }
 
-.tophat-508-margin {
-    margin-top: 20px;
+/** Change the tophat collapse width **/
+@media (max-width: 1199px) {
+    nav.TopHat {
+        .navbar-header {
+            float: none;
+        }
+        a.navbar-brand {
+            display: block;
+        }
+        .navbar-toggle {
+            display: block;
+            margin: 0 !important;
+            padding: 5px;
+        }
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 1px;
+        }
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+        .navbar-nav {
+            float: none !important;
+            margin-top: 7.5px;
+        }
+        .navbar-nav > li {
+            float: none;
+        }
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .collapse.in {
+            display: block !important;
+        }
+    }
 }
