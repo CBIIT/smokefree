@@ -110,6 +110,11 @@
 			li.active-trail>a:hover {
 				background-color: #064d80;
 			}
+
+			// SF-810
+			li>ul {
+				display: none !important;
+			}
 		}
 	}
 	.nav .sfHover>a,
