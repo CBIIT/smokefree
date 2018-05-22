@@ -13,8 +13,8 @@
                         <img class="toggle-message toggle-arrow" src="/sites/all/themes/smokefreegov/images/header/tophat-arrow-2x.png" alt="arrow" />
                     </span>
                 </div>
-                <?php if($active_site == "gov") : ?><a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /></a><?php endif; ?>
-                <?php if($active_site == "vet") : ?><a class="navbar-brand collapsed" href="#"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /></a><?php endif; ?>
+                <?php if($active_site == "gov") : ?><a class="navbar-brand collapsed" href="/"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /></a><?php endif; ?>
+                <?php if($active_site == "vet") : ?><a class="navbar-brand collapsed" href="/veterans"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /></a><?php endif; ?>
             </div>
 
             <div class="collapse navbar-collapse" id="tophat-navbar-collapse">
