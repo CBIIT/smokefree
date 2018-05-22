@@ -135,7 +135,7 @@
                 </li> <!-- /.responsive-menu-controls -->
                 <li class="slide-menu">
                     <ul class="landingpage-menu">
-                        <li class="active"><a href="/home">SMOKEFREE.GOV HOME</a></li>
+                        <li class="active"><a href="/">SMOKEFREE.GOV HOME</a></li>
                     </ul>
                     <ul class="submenu-1">
                     </ul>
