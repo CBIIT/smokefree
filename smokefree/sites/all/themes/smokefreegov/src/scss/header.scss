@@ -225,6 +225,17 @@ margin: 0px;
     width: auto;
     position: relative;
   }
+  .vet-sub-menu a.closebtn {
+    margin-left: 15px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+    border-radius: 30px;
+    background-color: #0A558E !important;
+    text-align: center;
+    font-size: 2em;
+  }
 }
 @media (max-width: 1099px) {
   .nav-bar-icon {
