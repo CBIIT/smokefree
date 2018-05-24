@@ -231,6 +231,6 @@
     }
   }
   ?>
-  <img src="https://match.rundsp.com/event?event_type=conversion&pixel_id=<?php print(_pixel_code()); ?>" width="1" height="1" border="0" />
+  <img src="https://match.rundsp.com/event?event_type=conversion&pixel_id=<?php print(_pixel_code()); ?>" width="1" height="1" border="0" style="display:none;"/>
 </body>
 </html>
