@@ -78,10 +78,7 @@
 		}
 		li>a.sfHover,
 		li>a:focus,
-		li>a.sf-depth-1:hover {
-			background-color: #064d80;
-		}
-		.sfHover > a {
+		li>a:hover {
 			background-color: #087599;
 		}
 		li.menuparent {
@@ -109,11 +106,6 @@
 			li.active-trail>a:focus,
 			li.active-trail>a:hover {
 				background-color: #064d80;
-			}
-
-			// SF-810
-			li>ul {
-				display: none !important;
 			}
 		}
 	}
@@ -617,11 +609,13 @@ Search Bar styles at the top, Search Results page below
 	margin-right: auto;
 	background-color: #2a2a2a;
 }
+
 #mobile-nav #navbar-responsive li.responsive-menu-controls > .row {
-	margin-right: 0px;
+  margin-right: 0px;
 }
+
 #mobile-nav > .overlay-content > .mobilebtn {
-	display: none;
+  display:none;
 }
 .nav-bar-header {
 	z-index: 1;
