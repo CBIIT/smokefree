@@ -617,11 +617,13 @@ Search Bar styles at the top, Search Results page below
 	margin-right: auto;
 	background-color: #2a2a2a;
 }
+
 #mobile-nav #navbar-responsive li.responsive-menu-controls > .row {
-	margin-right: 0px;
+  margin-right: 0px;
 }
+
 #mobile-nav > .overlay-content > .mobilebtn {
-	display: none;
+  display:none;
 }
 .nav-bar-header {
 	z-index: 1;

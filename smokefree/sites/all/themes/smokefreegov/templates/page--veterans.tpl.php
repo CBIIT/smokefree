@@ -73,7 +73,7 @@
  * @ingroup templates
  */
 ?>
-  <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/header.tpl.php'; ?>
+<?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/header.tpl.php'; ?>
 
 <div style="clear: both;"></div>
 <?php if (!empty($page['header'])): ?>
