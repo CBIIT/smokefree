@@ -15,19 +15,19 @@
   };
 
   Drupal.behaviors.expandTopHat =
-    function(context) {
-      $("nav.TopHat .toggle-message.expanded").show();
-      $("nav.TopHat .toggle-message.collapsed").hide();
-      $("nav.TopHat .toggle-message.grid").show();
-      $("nav.TopHat .navbar-brand.collapsed").hide();
-    };
+      function(context) {
+        $("nav.TopHat .toggle-message.expanded").show();
+        $("nav.TopHat .toggle-message.collapsed").hide();
+        $("nav.TopHat .toggle-message.grid").show();
+        $("nav.TopHat .navbar-brand.collapsed").hide();
+      };
 
   Drupal.behaviors.collapseTopHat =
-    function(context) {
-      $("nav.TopHat .toggle-message.expanded").hide();
-      $("nav.TopHat .toggle-message.collapsed").show();
-      $("nav.TopHat .toggle-message.grid").hide();
-      $("nav.TopHat .navbar-brand.collapsed").show();
-    };
+      function(context) {
+        $("nav.TopHat .toggle-message.expanded").hide();
+        $("nav.TopHat .toggle-message.collapsed").show();
+        $("nav.TopHat .toggle-message.grid").hide();
+        $("nav.TopHat .navbar-brand.collapsed").show();
+      };
 
 })(jQuery);

@@ -1,241 +1,269 @@
 nav.TopHat {
-  margin-bottom:0;
-  margin-top:0;
-  background-color:#000;
-  border:0;
-  border-radius:0;
-  display:block !important;
-  opacity:100 !important;
-}
-nav.TopHat.sf-gov {
-  border-bottom:2px solid #9ACAE4;
-}
-nav.TopHat.sf-vet {
-  border-bottom:2px solid #7ADE5D;
-}
-nav.TopHat a.navbar-brand {
-  display:none;
-  padding:15px !important;
-}
-nav.TopHat ul.navbar-nav {
-    margin-bottom: 0;
+    z-index: 1; //Without this, the mobile-nav div is over and makes it unclickable
+    margin-bottom:0;
     margin-top:0;
-}
-nav.TopHat .toggle-message.expanded {
-    display:none;
-}
-nav.TopHat ul.navbar-nav>li {
-    width:auto;
-}
-nav.TopHat ul.navbar-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 14px;
-    text-align: center;
-}
-nav.TopHat ul.navbar-nav>li>a>img {
-    margin-right:auto;
-    margin-left:auto;
-}
-nav.TopHat ul.navbar-nav>.active {
-    top: 2px;
-}
-nav.TopHat.sf-gov ul.navbar-nav>.active {
-  border-top: 2px solid #9ACAE4;
-}
-nav.TopHat.sf-vet ul.navbar-nav>.active {
-  border-top: 2px solid #7ADE5D;
-}
-nav.TopHat ul.navbar-nav>.active>a {
-    background-color: #2a2a2a;
+    background-color:#000;
+    border:0;
+    border-radius:0;
+    display:block !important;
+    opacity:100 !important;
+
+    &.sf-gov {
+        border-bottom:2px solid #9ACAE4;
+
+        ul.navbar-nav>.active {
+            border-top: 2px solid #9ACAE4;
+        }
+    }
+
+    &.sf-vet {
+        border-bottom:2px solid #7ADE5D;
+
+        ul.navbar-nav>.active {
+            border-top: 2px solid #7ADE5D;
+        }
+    }
+
+    a.navbar-brand {
+        display:none;
+        padding:15px !important;
+    }
+
+    ul.navbar-nav {
+        margin-bottom: 0;
+        margin-top:0;
+    }
+
+    ul.navbar-nav>li {
+        width:auto;
+
+        >a {
+            padding-top: 15px;
+            padding-bottom: 14px;
+            text-align: center;
+
+            >img {
+                margin-right:auto;
+                margin-left:auto;
+            }
+        }
+    }
+
+    ul.navbar-nav>.active {
+        top: 2px;
+    }
+
+    ul.navbar-nav>.active>a {
+        background-color: #2a2a2a;
+    }
+
+    ul.navbar-nav>li>a:hover,
+    ul.navbar-nav>li.active>a:hover {
+        background-color: #2a2a2a;
+    }
+
+    #bs-navbar-collapse-1 {
+        height: 50px;
+    }
+
+    /** Explore button **/
+    .navbar-toggle {
+        text-align: right;
+        border: none;
+
+        &#toggle-btn {
+            display: flex;
+            align-items: flex-end;
+            padding: 8px 15px;
+            min-height: 47px;
+        }
+        &:hover,
+        &:active {
+            background-color: transparent;
+        }
+    }
+
+    .toggle-message {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        color: #fff;
+        text-align: right;
+
+        &.expanded {
+            display:none;
+        }
+        &.graphic {
+            display: flex;
+            flex-direction: column;
+        }
+        &.graphic img {
+            width: 20px;
+            padding-top: 4px;
+        }
+        &.text {
+            margin-right: 4px;
+        }
+        &.text.expanded {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: .08em;
+            font-weight: 600;
+            color: #fff;
+            padding-right: 10px;
+            transition: all .2s;
+            margin-bottom: 2px;
+            margin-right: -5px;
+        }
+    }
+
+    #toggle-btn {
+        .toggle-arrow {
+            -moz-transform: scaleY(-1); /* Gecko */
+            -o-transform: scaleY(-1); /* Opera */
+            -webkit-transform: scaleY(-1); /* Webkit */
+            transform: scaleY(-1);
+        }
+        &.collapsed .toggle-arrow {
+            -moz-transform: scaleY(1); /* Gecko */
+            -o-transform: scaleY(1); /* Opera */
+            -webkit-transform: scaleY(1); /* Webkit */
+            transform: scaleY(1);
+        }
+    }
+    /** END Explore Button **/
 }
 
-nav.TopHat ul.navbar-nav>li>a:hover,
-nav.TopHat ul.navbar-nav>li.active>a:hover {
-    background-color: #2a2a2a;
-}
-nav.TopHat #bs-navbar-collapse-1 {
-    height: 50px;
-}
 @media only screen and (min-width: 1200px) {
-  nav.TopHat .navbar-header {
-    display: none;
-  }
-  nav.TopHat ul.navbar-nav li,
-  nav.TopHat ul.navbar-nav li > a {
-    width: auto !important;
-  }
-  nav.TopHat ul.navbar-nav li > a {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  nav.TopHat ul.navbar-nav > * + * {
-    margin-left: 12px;
-  }
-  nav.TopHat #tophat-navbar-collapse {
-    max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    nav.TopHat {
+        .navbar-header {
+            display: none;
+        }
+        ul.navbar-nav li,
+        ul.navbar-nav li > a {
+            width: auto !important;
+        }
+        ul.navbar-nav li > a {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        ul.navbar-nav > * + * {
+            margin-left: 12px;
+        }
+        #tophat-navbar-collapse {
+            max-width: 1250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
-@media only screen and (max-width: 1199px) {
-    nav.TopHat #tophat-navbar-collapse {
-        margin:0;
-        border-top:0;
-        padding:0;
-      max-height:none;
 
-    }
-    nav.TopHat ul.navbar-nav,
-    nav.TopHat .navbar-header {
-        max-width: 1100px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    nav.TopHat ul.navbar-nav>li {
-      border:none;
-    }
-    nav.TopHat ul.navbar-nav>li.active {
-        top: 0;
-    }
-    nav.TopHat.sf-gov ul.navbar-nav>li.active {
-      border-bottom: 2px solid #9ACAE4;
-    }
-    nav.TopHat.sf-vet ul.navbar-nav>li.active {
-      border-bottom: 2px solid #7ADE5D;
-    }
-    nav.TopHat #tophat-navbar-collapse ul > li {
-        width:100%;
-        margin-left:0;
-    }
-    nav.TopHat #tophat-navbar-collapse ul > li > a{
-        text-align:left;
-        width:100% !important;
-        padding:15px;
-        line-height: 1.07143em;
+@media only screen and (max-width: 1199px) {
+    nav.TopHat {
+        #tophat-navbar-collapse {
+            margin: 0;
+            border-top: 0;
+            padding: 0;
+            max-height: none;
+        }
+        ul.navbar-nav,
+        .navbar-header {
+            max-width: 1100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        ul.navbar-nav > li {
+            border: none;
+        }
+        ul.navbar-nav > li.active {
+            top: 0;
+        }
+        &.sf-gov ul.navbar-nav > li.active {
+            border-bottom: 2px solid #9acae4;
+        }
+        &.sf-vet ul.navbar-nav > li.active {
+            border-bottom: 2px solid #7ade5d;
+        }
+        #tophat-navbar-collapse ul > li {
+            width: 100%;
+            margin-left: 0;
+        }
+        #tophat-navbar-collapse ul > li > a {
+            text-align: left;
+            width: 100% !important;
+            padding: 15px;
+            line-height: 1.07143em;
+        }
     }
 }
 
 @media only screen and (max-width: 766px) {
-  nav.TopHat ul.nav {
-    display: inline;
-    float: left;
-    position: relative;
-    width: 90%;
-    left:inherit;
-    top:0;
-    box-shadow:none;
-  }
-  nav.TopHat ul.nav > li {
-    width: 100% !important;
-  }
-  nav.TopHat .container-fluid {
-    padding-left:0;
-    padding-right:0;
-  }
+    nav.TopHat {
+        ul.nav {
+            display: inline;
+            float: left;
+            position: relative;
+            width: 90%;
+            left: inherit;
+            top: 0;
+            box-shadow: none;
+        }
+        ul.nav > li {
+            width: 100% !important;
+        }
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 
 @media only screen and (max-width: 440px) {
-  nav.TopHat .toggle-message.text {
-    display: none !important;
-  }
+    nav.TopHat {
+        .toggle-message.text {
+            display: none !important;
+        }
 
-  nav.TopHat #tophat-navbar-collapse {
-    box-shadow:none;
-  }
+        #tophat-navbar-collapse {
+            box-shadow: none;
+        }
+    }
 }
-
-/** Explore button **/
-nav.TopHat .navbar-toggle {
-    text-align: right;
-}
-nav.TopHat .navbar-toggle#toggle-btn {
-    display:flex;
-    align-items:flex-end;
-    padding:8px 15px;
-    min-height:47px;
-}
-nav.TopHat .navbar-toggle:hover,
-nav.TopHat .navbar-toggle:active {
-    background-color: transparent;
-}
-nav.TopHat .navbar-toggle {
-    border:none;
-}
-nav.TopHat .toggle-message {
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 600;
-    color: #fff;
-    text-align: right;
-}
-nav.TopHat .toggle-message.graphic {
-    display:flex;
-    flex-direction:column;
-}
-nav.TopHat .toggle-message.graphic img {
-    width:20px;
-    padding-top:4px;
-}
-nav.TopHat .toggle-message.text {
-  margin-right:4px;
-}
-nav.TopHat .toggle-message.text.expanded {
-  font-size:14px;
-  line-height:16px;
-  letter-spacing:.08em;
-  font-weight:600;
-  color:#FFF;
-  padding-right:10px;
-  transition:all .2s;
-  margin-bottom:2px;
-  margin-right:-5px;
-}
-nav.TopHat #toggle-btn .toggle-arrow {
-  -moz-transform: scaleY(-1);    /* Gecko */
-  -o-transform: scaleY(-1);      /* Opera */
-  -webkit-transform: scaleY(-1); /* Webkit */
-  transform: scaleY(-1);
-
-}
-nav.TopHat #toggle-btn.collapsed .toggle-arrow {
-   -moz-transform: scaleY(1);    /* Gecko */
-   -o-transform: scaleY(1);      /* Opera */
-   -webkit-transform: scaleY(1); /* Webkit */
-   transform: scaleY(1);
- }
 
 /** Change the tophat collapse width **/
 @media (max-width: 1199px) {
-    nav.TopHat .navbar-header {
-        float: none;
-    }
-    nav.TopHat a.navbar-brand {
-        display:block;
-    }
-    nav.TopHat .navbar-toggle {
-        display: block;
-        margin:0 !important;
-        padding:5px;
-    }
-    nav.TopHat .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    nav.TopHat .navbar-collapse.collapse {
-        display: none!important;
-    }
-    nav.TopHat .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    nav.TopHat .navbar-nav>li {
-        float: none;
-    }
-    nav.TopHat .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    nav.TopHat .collapse.in{
-        display:block !important;
+    nav.TopHat {
+        .navbar-header {
+            float: none;
+        }
+        a.navbar-brand {
+            display: block;
+        }
+        .navbar-toggle {
+            display: block;
+            margin: 0 !important;
+            padding: 5px;
+        }
+        .navbar-fixed-top {
+            top: 0;
+            border-width: 0 0 1px;
+        }
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+        .navbar-nav {
+            float: none !important;
+            margin-top: 7.5px;
+        }
+        .navbar-nav > li {
+            float: none;
+        }
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .collapse.in {
+            display: block !important;
+        }
     }
 }
