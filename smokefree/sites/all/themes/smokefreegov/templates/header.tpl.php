@@ -86,6 +86,7 @@
               <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*">
               <div class="search-icon"></div>
               <div class="search-field-wrapper">
+                  <label for="searchbox-header" class="sr-only">Search</label>
                   <input name="q" id="searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="50" maxlength="128" type="text" class="search-bar-input form-control" placeholder="Search Smokefree">
               </div> <!-- /.search-field-wrapper -->
               <button type="submit" value="Search" class="btn btn-submit">Go</button>
