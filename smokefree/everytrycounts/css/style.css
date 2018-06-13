@@ -338,7 +338,7 @@ p.quiz-results-message {
 #programPractice,
 #programQuit {
 	position: absolute;
-	top:0;
+	top: 94px;
 	left:0;
 	z-index: 99;
 }
@@ -1383,6 +1383,7 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
 	font-size:17px;
 	line-height: 40px;
 	text-transform: uppercase;
+	margin-bottom: 15px;
 }
 .choose-one .circle {
 	display: inline-block;
@@ -1414,8 +1415,17 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
 .programs button.btn.btn-small {
 	text-align: center;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 700;
-	padding: 6px 12px;
+	padding: 4px 8px;
 	text-transform: uppercase;
+}
+.programs button#programPracticeButton {
+	background-color: #4d6682;
+}
+.programs button#programQuitButton {
+	background-color: #3e5269;
+}
+.programs button#programQuitButton {
+	background-color: #3e5269;
 }
