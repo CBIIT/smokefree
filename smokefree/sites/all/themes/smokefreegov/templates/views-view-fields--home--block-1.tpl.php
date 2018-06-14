@@ -31,7 +31,7 @@
   $waypoint = new SimpleXMLElement($fields['view_node']->content);
 ?>
   <div class="sf_homepage_4boxes__wrapper hp-button">
-    <button id="btn__<?php print $button_link; ?>" class="btn btn-primary Articles" type="button" data-toggle="collapse" data-target="#expanded_btn__<?php print $button_link; ?>" aria-expanded="false" aria-controls="expanded_btn__<?php print $button_link; ?>">
+    <button id="btn__<?php print $button_link; ?>" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#expanded_btn__<?php print $button_link; ?>" aria-expanded="false" aria-controls="expanded_btn__<?php print $button_link; ?>">
       <div class="text-wrapper">
         <h2><?php print $fields['field_button_text']->content; ?></h2>
       </div> <!-- /.text-wrapper -->
