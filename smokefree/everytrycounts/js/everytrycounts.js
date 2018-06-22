@@ -85,7 +85,10 @@ fallback.load({
                 show_calendar_dropdown: false,
                 program_challenge_opt_in_path: program_challenge_opt_in_path,
                 program_practice_opt_in_path: program_practice_opt_in_path,
-                program_quit_opt_in_path: program_quit_opt_in_path
+                program_quit_opt_in_path: program_quit_opt_in_path,
+                btn_sm_1_example: false,
+                btn_sm_2_example: false,
+                btn_sm_3_example: false
             },
             mounted: function () {
                 /**
