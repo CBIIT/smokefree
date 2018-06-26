@@ -74,8 +74,6 @@ endif;
 	
 	<!-- Scripts To Execute on Page Load -->
 
-	<!-- js needed for LiveHelp -->
-	<script type="text/javascript">var HOST_SERVER="livehelp.cancer.gov";</script>
 
 	<?php
 /* Tier-dependent scripts */
