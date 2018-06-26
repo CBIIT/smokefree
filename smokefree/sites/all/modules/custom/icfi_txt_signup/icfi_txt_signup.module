@@ -61,8 +61,28 @@ function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
 
   }
 
+  // SF-790 & SOW-565
+  switch ($target['label']) {
+    case 'SmokefreeTXT':
+      $allowed_utm_params = array('alias', 'video', 'display');
+      $cdc_parameter = strtolower($_GET['utm_medium']);
+      if (isset($cdc_parameter) && in_array($cdc_parameter, $allowed_utm_params)) {
+        $payload['person_CDC_Promo'] = $cdc_parameter;
+      }
+      break;
+    case 'SmokelessVET':
+      $allowed_utm_params = array('search', 'clicktowebsite', 'display');
+      $cdc_parameter = strtolower($_GET['utm_medium']);;
+      if (isset($cdc_parameter) && in_array($cdc_parameter, $allowed_utm_params)) {
+        $payload['person_VET_Promo'] = $cdc_parameter;
+      }
+      break;
+    default:
+      break;
+  }
+
   // In cases where there are two questions that need the same key, use
-  // _alrernative_version suffix on the second, and remove it before post.
+  // _alternative_version suffix on the second, and remove it before post.
   foreach($payload as $key=>$value) {
     if (strpos($key, '_alternative_version') !== FALSE) {
       if (!empty($value)) {
@@ -75,3 +95,5 @@ function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
     unset($payload['opt_in_path']);
   }
 }
+
+

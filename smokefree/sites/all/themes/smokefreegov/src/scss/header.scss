@@ -225,6 +225,17 @@ margin: 0px;
     width: auto;
     position: relative;
   }
+  .vet-sub-menu a.closebtn {
+    margin-left: 15px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+    border-radius: 30px;
+    background-color: #0A558E !important;
+    text-align: center;
+    font-size: 2em;
+  }
 }
 @media (max-width: 1099px) {
   .nav-bar-icon {
@@ -282,9 +293,11 @@ margin: 0px;
       overflow-y: auto;
       transition: 0.5s;
       font-family: Cabinregular, sans-serif !important;
+
         > .closebtn {
           display: none;
         }
+
  
 
       .tb-megamenu .mega-inner, .tb-megamenu .mega-nav > li, .tb-megamenu .dropdown-menu .mega-nav > li {
@@ -425,13 +438,8 @@ margin: 0px;
 }/**** end of @media screen max 1099 for mobile menu */
  /***end of tb-megamenu-subnav styling ***/
 
-@media screen and (min-width: 1201px) {
-  #mobile-nav {display: none !important;}
-}
-
 @media screen and (min-width: 1100px) {
-  #mobile-nav > .closebtn {display: none !important;}
-  #mobile-nav > .overlay-content > .mobilebtn {display: none !important;}
+  #mobile-nav {display: none !important;}
 }
 
 

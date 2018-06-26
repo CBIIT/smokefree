@@ -304,13 +304,14 @@ p.quiz-results-message {
 }
 .example {
 	background-color: #ffffff;
-	border:1px solid #5ea4ea;
-	color:#0048aa;
-	font-size:16px;
+	border: 1px solid #5ea4ea;
+	color: #0048aa;
+	font-size: 16px;
 	line-height: 20px;
-	padding:15px;
-	margin-bottom:30px;
+	padding: 15px;
+	margin-bottom: 30px;
 	position: relative;
+	-webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.15);
 	box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.15);
 }
 .example::after {
@@ -337,7 +338,7 @@ p.quiz-results-message {
 #programPractice,
 #programQuit {
 	position: absolute;
-	top:0;
+	top: 94px;
 	left:0;
 	z-index: 99;
 }
@@ -858,19 +859,21 @@ button {
 }
 .programs button.btn {
 	background-color: #5B799B;
-	display:block;
-	width:100%;
-	border-radius:0;
-	color:#ffffff;
-	font-family: "Knockout", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 32px;
-	font-weight: 500;
+	display: block;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	border-radius: 0;
+	color: #ffffff;
+	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 20px;
+	font-weight: 300;
 	font-style: normal;
-	line-height: 32px;
-	letter-spacing: 0.02em;
-	text-transform: uppercase;
-	padding:25px;
-	margin:0px 0px 15px;
+	line-height: 28px;
+	letter-spacing: 0.03em;
+	padding: 20px 70px;
+	margin: 0px 0px 15px;
+	white-space: normal;
 }
 .programs button.btn:focus,
 .programs button.btn:hover {
@@ -880,10 +883,11 @@ button {
 	transition: background-color 500ms ease-in;
 }
 .programs button.btn.btn-signup {
-	height:64px;
-	width:auto;
-	display:inline-block;
-	color:#ffffff;
+	height: 64px;
+	width: 180px;
+	text-align: center;
+	display: inline-block;
+	color: #ffffff;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-size: 22px;
 	font-weight: 900;
@@ -891,7 +895,7 @@ button {
 	line-height: 22px;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
-	padding:15px;
+	padding: 15px;
 	margin-left: 10px;
 }
 .answerGroup {
@@ -1368,3 +1372,60 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
   z-index: -1;
 }
 
+/* V2 */
+.subhead {
+	font-size: 24px;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: 28px;
+}
+.choose-one {
+	font-size:17px;
+	line-height: 40px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+.choose-one .circle {
+	display: inline-block;
+	width: 40px;
+	height:40px;
+	border-radius: 50%;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	color:#ffffff;
+	background-color:#5B799B;
+	margin:0px 5px;
+}
+.programs button.btn .arrow {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-top: 49px solid transparent;
+	border-bottom: 49px solid transparent;
+	border-left: 40px solid #7aa1cf;
+}
+.programs button.btn .btn-emphasis {
+	font-size: 24px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.programs button.btn.btn-small {
+	text-align: center;
+	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+	font-weight: 700;
+	padding: 4px 8px;
+	text-transform: uppercase;
+}
+.programs button#programPracticeButton {
+	background-color: #4d6682;
+}
+.programs button#programQuitButton {
+	background-color: #3e5269;
+}
+.programs button#programQuitButton {
+	background-color: #3e5269;
+}

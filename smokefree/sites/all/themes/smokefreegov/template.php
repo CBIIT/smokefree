@@ -88,13 +88,7 @@ function smokefreegov_preprocess_page(&$variables) {
   // Twitter.
   $variables['twitter_link'] = 'http://twitter.com/SmokefreeUs';
 
-  if (!empty($variables['node']->type)
-    && (($variables['node']->type == 'veterans') || $variables['node']->title == 'Why I use Tobacco Quiz')) {
-    $variables['footer_filename'] = 'footer-veterans.tpl.php';
-  }
-  else {
-    $variables['footer_filename'] = 'footer-new.tpl.php';
-  }
+  $variables['footer_filename'] = 'footer-new.tpl.php';
 
   $variables['include_title'] = TRUE;
   if (!empty($variables['node']->title)
@@ -347,8 +341,8 @@ function smokefreegov_preprocess_html(&$variables) {
       $variables['classes_array'][] = 'veterans_branded';
     }
   }
-}
 
+}
 
 
 /**
