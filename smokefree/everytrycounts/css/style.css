@@ -342,6 +342,20 @@ p.quiz-results-message {
 	left:0;
 	z-index: 99;
 }
+@media (max-width: 414px) {
+	#programChallenge,
+	#programPractice,
+	#programQuit {
+	top: 197px;
+	}
+}
+@media (max-width: 375px) {
+	#programChallenge,
+	#programPractice,
+	#programQuit {
+		top: 224px;
+	}
+}
 .text_confirmation {
 	color:#000000;
 	font-family: "Muli", "Helvetica Neue", Helvetica, Arial, "sans-serif";
