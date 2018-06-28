@@ -1,3 +1,12 @@
+Smokefree 1.32 2018-06-28
+-----------------------
+- SOW-655 - ETC TXT opt-in section changes
+- SOW-1155 - Broken Link on SF.gov
+- SOW-1305 - Content Deployment
+  - SOW-1298 - 404 Error on Smokefree.gov PDF (relates back to SOW-1155)
+  - SOW-1356 - Add July promo content to homepage
+  - SOW-1318 - Add quitSTART app to Prepare to Quit page
+
 Smokefree 1.31 2018-06-14
 -----------------------
 - SOW-415, SOW-433, SOW-1156 508 Fixes
