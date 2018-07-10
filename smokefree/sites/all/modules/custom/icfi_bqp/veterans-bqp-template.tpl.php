@@ -446,9 +446,9 @@
 
       <div class="section-body">
         <p>Everyone has their own reasons for wanting to be tobacco free.</p>
-        <legend>Choose your reasons for quitting smoking or for quitting dip or chew.</legend>
 
         <fieldset>
+          <legend>Choose your reasons for quitting smoking or for quitting dip or chew.</legend>
           <div class="reason-options-wrap clearfix">
             <?php print render($form['reasons_for_quitting']); ?>
           </div>
