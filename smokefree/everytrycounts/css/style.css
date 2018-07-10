@@ -338,7 +338,6 @@ p.quiz-results-message {
 #programPractice,
 #programQuit {
 	position: absolute;
-	top: 94px;
 	left:0;
 	z-index: 99;
 }
@@ -346,14 +345,14 @@ p.quiz-results-message {
 	#programChallenge,
 	#programPractice,
 	#programQuit {
-	top: 197px;
+	/*top: 197px;*/
 	}
 }
 @media (max-width: 375px) {
 	#programChallenge,
 	#programPractice,
 	#programQuit {
-		top: 224px;
+		/*top: 224px;*/
 	}
 }
 .text_confirmation {
