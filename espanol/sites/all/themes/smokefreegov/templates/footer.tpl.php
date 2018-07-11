@@ -115,7 +115,7 @@
   </div>
   <div id="search-footer">
     <form method="get"
-          action="https://barney2.cit.nih.gov/search"
+          action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?"
           name="search"
           onsubmit="javascript:if (document.getElementById('searchbox-footer').value=='Search'
 							|| document.getElementById('searchbox-footer').value=='')
@@ -131,7 +131,7 @@
       <div id="search-footer-container">
         <input id="searchbox-footer"
                type="text"
-               name="q"
+               name="query"
                size="30"
                maxlength="255"
                value="Search"

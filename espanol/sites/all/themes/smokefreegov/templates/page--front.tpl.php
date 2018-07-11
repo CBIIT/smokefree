@@ -5,7 +5,7 @@
 </div>
 <div id="search-header">
   <form method="get"
-        action="https://barney2.cit.nih.gov/search"
+        action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?"
         name="search"
         onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
 							|| document.getElementById('searchbox-header').value=='')
@@ -21,7 +21,7 @@
     <div id="search-header-container">
       <input id="searchbox-header"
              type="text"
-             name="q"
+             name="query"
              size="30"
              maxlength="255"
              value="Search"
