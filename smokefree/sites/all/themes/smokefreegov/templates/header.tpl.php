@@ -80,7 +80,7 @@
       </div>
       <button class="header-search-form__toggle mobile-search-btn"><span class="sr-only">Open the Search Form</span></button>
       <div class="search-overlay">
-          <form action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
+          <form action="http://websrch.cit.nih.gov/sps/SmokeFree/Results.html?" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
   							|| document.getElementById('searchbox-header').value=='')
   								return false;" _lpchecked="1">
               <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*">
