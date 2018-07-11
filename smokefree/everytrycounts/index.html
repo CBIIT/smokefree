@@ -96,10 +96,7 @@
 			<div class="col-lg-7 col-lg-offset-1 col-md-7 col-sm-12">
 				<div class="programs">
 					<p class="subhead">HOW DO YOU FEEL ABOUT QUITTING TODAY?</p>
-					<p class="choose-one">Choose <span class="circle">1</span> of our text message programs to help you quit</p>
-					<button class="btn try-something-new-btn" id="programChallengeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev00+standard')" v-on:click="show_program_challenge = !show_program_challenge"><div class="arrow hidden-xs"></div><span class="btn-emphasis">I WANT TO TRY A SMALL STEP</span><br>Help me build skills to try quitting</button>
-					<button class="btn try-something-new-btn" id="programPracticeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev001+standard')" v-on:click="show_program_practice = !show_program_practice"><div class="arrow hidden-xs"></div><span class="btn-emphasis">I Want to Practice Quitting</span><br>Try it for a few days</button>
-					<button class="btn try-something-new-btn" id="programQuitButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev003+standard')" v-on:click="show_program_quit = !show_program_quit"><div class="arrow hidden-xs"></div><span class="btn-emphasis">I’m Ready to Quit for Good</span><br>Set a quit date</button>
+					<p id="choose-one-text" class="choose-one">Choose <span class="circle">1</span> of our text message programs to help you quit</p>
 
 					<!-- Try Daily Challenges overlay box -->
 					<transition name="slidetoggle">
@@ -190,6 +187,11 @@
 							</div> <!-- /.programContent -->
 						</div> <!-- /.programBox /#programQuit -->
 					</transition>
+
+					<button class="btn try-something-new-btn" id="programChallengeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev00+standard')" v-on:click="show_program_challenge = !show_program_challenge"><div class="arrow hidden-xs"></div><span class="btn-emphasis">I WANT TO TRY A SMALL STEP</span><br>Help me build skills to try quitting</button>
+					<button class="btn try-something-new-btn" id="programPracticeButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev001+standard')" v-on:click="show_program_practice = !show_program_practice"><div class="arrow hidden-xs"></div><span class="btn-emphasis">I Want to Practice Quitting</span><br>Try it for a few days</button>
+					<button class="btn try-something-new-btn" id="programQuitButton" onclick="makeFloodlightTagCall('DC-4345482/CTP/posev003+standard')" v-on:click="show_program_quit = !show_program_quit"><div class="arrow hidden-xs"></div><span class="btn-emphasis">I’m Ready to Quit for Good</span><br>Set a quit date</button>
+
 				</div> <!-- /.programs -->
 			</div> <!-- /.col-lg-6 /.col-lg-offset-1 /.col-md-6 /.col-sm-12 -->
 		</div> <!-- /.row /.somethingNew-->
