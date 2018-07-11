@@ -66,37 +66,37 @@
 
       <!-- Brand and toggle get grouped for better mobile display -->
 
-      <div class="nav-bar-header col-sm-12" id="nav-bar-header">
-          <div class="navbar-header">
-              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-responsive" aria-controls="navbar-responsive" aria-expanded="false">
-                  <div class="nav-hamburger">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </div> <!-- /.nav-hamburger -->
-                  <div class="nav-menu-title">MENU</div>
-              </button>
-          </div>
-          <button class="header-search-form__toggle mobile-search-btn"><span class="sr-only">Open the Search Form</span></button>
-          <div class="search-overlay">
-              <form action="https://barney2.cit.nih.gov/search" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
+  <div class="nav-bar-header col-sm-12" id="nav-bar-header">
+      <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-responsive" aria-controls="navbar-responsive" aria-expanded="false">
+              <div class="nav-hamburger">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </div> <!-- /.nav-hamburger -->
+              <div class="nav-menu-title">MENU</div>
+          </button>
+      </div>
+      <button class="header-search-form__toggle mobile-search-btn"><span class="sr-only">Open the Search Form</span></button>
+      <div class="search-overlay">
+          <form action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
   							|| document.getElementById('searchbox-header').value=='')
   								return false;" _lpchecked="1">
-                  <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*">
-                  <div class="search-icon"></div>
-                  <div class="search-field-wrapper">
-                      <label for="searchbox-header" class="sr-only">Search</label>
-                      <input name="q" id="searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="50" maxlength="128" type="text" class="search-bar-input form-control" placeholder="Search Smokefree">
-                  </div> <!-- /.search-field-wrapper -->
-                  <button type="submit" value="Search" class="btn btn-submit">Go</button>
-                  <button type="close" value="close" class="btn btn-close">
-                      <span class="glyphicon glyphicon-remove-circle"></span>
-                      <span class="sr-only">Close Search</span>
-                  </button>
-              </form>
-          </div>
+              <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*">
+              <div class="search-icon"></div>
+              <div class="search-field-wrapper">
+                  <label for="searchbox-header" class="sr-only">Search</label>
+                  <input name="query" id="searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="50" maxlength="128" type="text" class="search-bar-input form-control" placeholder="Search Smokefree">
+              </div> <!-- /.search-field-wrapper -->
+              <button type="submit" value="Search" class="btn btn-submit">Go</button>
+              <button type="close" value="close" class="btn btn-close">
+                  <span class="glyphicon glyphicon-remove-circle"></span>
+                  <span class="sr-only">Close Search</span>
+              </button>
+          </form>
       </div>
+  </div>
 
 
       <!--  mobile navigation display -->
