@@ -48,13 +48,13 @@
         </div>
       </div>
     <div class="header-col-12 search-bar" >
-        <form class="search-bar-form" action="https://barney2.cit.nih.gov/search" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
+        <form class="search-bar-form" action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
                         || document.getElementById('searchbox-header').value=='')
                             return false;" _lpchecked="1">
             <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*">
             <div class="search-bar-group">
                 <label for="teen-searchbox-header-input" class="sr-only">Search</label>
-                <input maxlength="255" name="q" id="teen-searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
+                <input maxlength="255" name="query" id="teen-searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
                 <button type="submit" value="Search" class="btn btn-default">Submit</button>
                 <a class="closebtn">&times;</a>
             </div>
@@ -64,13 +64,13 @@
   </div>
     <div class="visible-xs">
         <div class="header-col-12 mobile-search-bar" >
-            <form class="search-bar-form" action="https://barney2.cit.nih.gov/search" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
+            <form class="search-bar-form" action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?" method="get" name="search" onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search'
                         || document.getElementById('searchbox-header').value=='')
                             return false;" _lpchecked="1">
                 <input name="site" type="hidden" value="SMOKEFREE"> <input name="client" type="hidden" value="SMOKEFREE_frontend"> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend"> <input name="output" type="hidden" value="xml_no_dtd"> <input name="filter" type="hidden" value="0"> <input name="getfields" type="hidden" value="*">
                 <div class="search-bar-group">
                     <label for="teen-searchbox-header-input" class="sr-only">Search</label>
-                    <input maxlength="255" name="q" id="teen-searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
+                    <input maxlength="255" name="query" id="teen-searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
                     <button type="submit" value="Search" class="btn btn-default">Submit</button>
                 </div>
             </form>
