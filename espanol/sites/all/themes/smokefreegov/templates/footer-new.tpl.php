@@ -113,7 +113,7 @@
         </div>
         <div id="search-footer">
           <form method="get"
-                action="http://staging.websrch.cit.nih.gov/sps/SmokeFree/Results.html?"
+                action="https://websrch.cit.nih.gov/sps/Smokefree_Espanol/Results.html?"
                 name="search"
                 onsubmit="javascript:if (document.getElementById('searchbox-footer').value=='Search'
                   || document.getElementById('searchbox-footer').value=='')
