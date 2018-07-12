@@ -890,7 +890,7 @@ button {
 }
 .programs button.btn:focus,
 .programs button.btn:hover {
-	background-color:#3e5269;
+	/*background-color:#3e5269;*/
 	-webkit-transition: background-color 500ms ease-in;
 	-ms-transition: background-color 500ms ease-in;
 	transition: background-color 500ms ease-in;
