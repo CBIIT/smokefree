@@ -241,28 +241,6 @@ function smokefreegov_preprocess_html(&$variables) {
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/jquery.bxslider.js', 'file');
   drupal_add_js(drupal_get_path('theme', 'smokefreegov') . '/js/quiz-dip.js', 'file');
 
-  // JS For Livehelp.
-
-  drupal_add_js('var HOST_SERVER="livehelp.cancer.gov";',
-    array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
-  );
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/yahoo-dom-event/yahoo-dom-event.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/connection/connection-min.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/animation/animation-min.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/container/container-min.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/history/history-min.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/json/json-min.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/rnt/rnw/yui_2.7/element/element-min.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.Ajax.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.Text.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.UI.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.UI.AbuseDetection.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.Url.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/RightNow.Event.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/euf/rightnow/debug-js/TreeViewAriaPlugin.js', 'external');
-  drupal_add_js('https://livehelp.cancer.gov/cgi-bin/nci.cfg/php/euf/application/development/source/widgets/custom/chat/nciChatLaunchButton/logic.js', 'external');
-
   // Tier-dependent JS.
   if ($_SERVER['HTTP_HOST'] == "smokefree.gov"
     || $_SERVER['HTTP_HOST'] == "www.smokefree.gov"
