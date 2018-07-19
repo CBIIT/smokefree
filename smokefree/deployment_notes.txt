@@ -1,4 +1,10 @@
-Smokefree 1.33 2018-07-12
+SmokeSmokefree 1.34 2018-07-19
+-----------------------
+- SOW-1327 - Remove unneeded Live Help JavaScript files
+    - This, apparently, didn't get pushed last time with everything else
+- SOW-1487 - Critical Drupal update: XML Sitemap
+
+SmokeSmokefree 1.33 2018-07-12
 -----------------------
 - SOW-1327 - Remove unneeded Live Help JavaScript files
 - SOW-1312 - LiveHelp link in Footer is incorrectly routing
