@@ -35,8 +35,8 @@ if (drupal_is_front_page()) : ?>
         </div>
         
         <div id="search-header">
-			<form method="get" 
-				action="https://barney2.cit.nih.gov/search"
+			<form method="get"
+                action="https://websrch.cit.nih.gov/sps/Smokefree_Espanol/Results.html?"
 				name="search"
 				onsubmit="javascript:if (document.getElementById('searchbox-header').value=='Search' 
 							|| document.getElementById('searchbox-header').value=='') 
@@ -52,7 +52,7 @@ if (drupal_is_front_page()) : ?>
 				<div id="search-header-container">
 					<input id="searchbox-header" 
 						type="text" 
-						name="q" 
+						name="query"
 						size="30" 
 						maxlength="255"
 						value="Search"
@@ -370,8 +370,8 @@ if (drupal_is_front_page()) : ?>
 			</div>
 		</div>
 		<div id="search-footer">
-			<form method="get" 
-				action="https://barney2.cit.nih.gov/search"
+			<form method="get"
+                action="https://websrch.cit.nih.gov/sps/Smokefree_Espanol/Results.html?"
 				name="search"
 				onsubmit="javascript:if (document.getElementById('searchbox-footer').value=='Search' 
 							|| document.getElementById('searchbox-footer').value=='') 
@@ -387,7 +387,7 @@ if (drupal_is_front_page()) : ?>
 				<div id="search-footer-container">
 					<input id="searchbox-footer" 
 						type="text" 
-						name="q" 
+						name="query"
 						size="30" 
 						maxlength="255"
 						value="Search"
