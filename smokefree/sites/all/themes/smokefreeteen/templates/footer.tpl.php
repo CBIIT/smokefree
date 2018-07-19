@@ -115,16 +115,11 @@
   </div>
   <div id="search-footer">
     <form method="get"
-          action="http://search2.google.cit.nih.gov/search"
+          action="https://websrch.cit.nih.gov/sps/SMOKEFREE_TEEN/Results.html?""
           name="search"
           onsubmit="javascript:if (document.getElementById('searchbox-footer').value=='Search'
 							|| document.getElementById('searchbox-footer').value=='')
 								return false;">
-      <input type="hidden" name="site"            value="SMOKEFREE" />
-      <input type="hidden" name="client"          value="SMOKEFREE_frontend" />
-      <input type="hidden" name="proxystylesheet" value="SMOKEFREE_frontend" />
-      <input type="hidden" name="output"          value="xml_no_dtd" />
-      <input type="hidden" name="filter"          value="0" />
       <input type="hidden" name="getfields"       value="*" />
       <label for="searchbox-footer"
              class="hiddenSearch sr-only">Search</label>

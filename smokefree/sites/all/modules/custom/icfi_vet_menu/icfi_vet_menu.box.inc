@@ -19,7 +19,7 @@ function icfi_vet_menu_default_box() {
   $box->description = 'Vet Search';
   $box->options = array(
     'body' => array(
-      'value' => '<form _lpchecked="1" action="http://websrch.cit.nih.gov/sps/SmokeFree/Results.html?" class="search-bar-form" method="get" name="search" onsubmit="javascript:if (document.getElementById(\'searchbox-header\').value==\'Search\'
+      'value' => '<form _lpchecked="1" action="https://websrch.cit.nih.gov/sps/SmokeFree/Results.html?" class="search-bar-form" method="get" name="search" onsubmit="javascript:if (document.getElementById(\'searchbox-header\').value==\'Search\'
   							|| document.getElementById(\'searchbox-header\').value==\'\')
   								return false;">
 	<input name="site" type="hidden" value="SMOKEFREE" /> <input name="client" type="hidden" value="SMOKEFREE_frontend" /> <input name="proxystylesheet" type="hidden" value="SMOKEFREE_frontend" /> <input name="output" type="hidden" value="xml_no_dtd" /> <input name="filter" type="hidden" value="0" /> <input name="getfields" type="hidden" value="*" />
