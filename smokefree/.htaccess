@@ -7,6 +7,16 @@
   Order allow,deny
 </FilesMatch>
 
+# Browser-side caching
+# One month for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+# One week for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+
 # Don't show directory listings for URLs which map to a directory.
 Options -Indexes
 
