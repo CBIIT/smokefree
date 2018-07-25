@@ -36,7 +36,7 @@ Header set Cache-Control "max-age=604800, public"
 
   # CSS
 
-    ExpiresByType text/css                              "access plus 1 year"
+    ExpiresByType text/css                              "access plus 1 week"
 
 
   # Data interchange
@@ -66,9 +66,9 @@ Header set Cache-Control "max-age=604800, public"
 
   # JavaScript
 
-    ExpiresByType application/javascript                "access plus 1 year"
-    ExpiresByType application/x-javascript              "access plus 1 year"
-    ExpiresByType text/javascript                       "access plus 1 year"
+    ExpiresByType application/javascript                "access plus 1 week"
+    ExpiresByType application/x-javascript              "access plus 1 week"
+    ExpiresByType text/javascript                       "access plus 1 week"
 
 
   # Manifest files
