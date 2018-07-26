@@ -1007,3 +1007,9 @@
 .node-type-cr-article .vert_social .email:hover {
   background-position: -100px -210px !important;
 }
+
+/* SOW-1489 */
+
+.page-node-921 #block-views-quit-notes-block .block-title, .page-node-918 #block-views-quit-notes-block .block-title{
+    display:none;
+}

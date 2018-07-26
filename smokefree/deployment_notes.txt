@@ -1,3 +1,32 @@
+Smokefree 1.34 2018-07-19
+-----------------------
+- SOW-1327 - Remove unneeded Live Help JavaScript files
+    - This, apparently, didn't get pushed last time with everything else
+- SOW-1487 - Critical Drupal update: XML Sitemap
+- SOW-1477 - Code changes for Sharepoint search
+
+Smokefree 1.33 2018-07-12
+-----------------------
+- SOW-1327 - Remove unneeded Live Help JavaScript files
+- SOW-1312 - LiveHelp link in Footer is incorrectly routing
+- SOW-1362 - ETC TXT opt-in buttons are overlapping text in Raging Wire Stage env.
+- SOW-1288 - Responsive - ETC Text above the program links gets hidden when the links are in open state
+- SOW-1367 - Fix typo in ETC text opt in section
+- SOW-1384 - TXT opt-in button colors should be gradient
+- SOW-1358 - 508 fixes
+- SOW-1401 - Update link on Join a Research Study Page
+- SOW-1324 - Update jQuery
+- SOW-1387 - Update Drupal Module uuid
+
+Smokefree 1.32 2018-06-28
+-----------------------
+- SOW-655 - ETC TXT opt-in section changes
+- SOW-1155 - Broken Link on SF.gov
+- SOW-1305 - Content Deployment
+  - SOW-1298 - 404 Error on Smokefree.gov PDF (relates back to SOW-1155)
+  - SOW-1356 - Add July promo content to homepage
+  - SOW-1318 - Add quitSTART app to Prepare to Quit page
+
 Smokefree 1.31 2018-06-14
 -----------------------
 - SOW-415, SOW-433, SOW-1156 508 Fixes
