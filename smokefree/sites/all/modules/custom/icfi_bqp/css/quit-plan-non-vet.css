@@ -1164,12 +1164,6 @@ media queries - 768px
     .smoking-reminders-wrap .reminder {
         width: 90%;
     }
-    .reason-options {
-        width: 150px;
-        margin: 30px auto;
-        float: none;
-    }
-
     a.btn-send,
     .dropdown-tell-friends-family,
     .dropdown-invite-friend {
