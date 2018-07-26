@@ -1689,3 +1689,8 @@ mark, .mark {
 .page-veterans .container-page #edit-extra-help ul {
     width: 98% !important;
 }
+
+/* SOW-1486 */
+.page-build-your-quit-plan .live-chat-bar {
+    display: none !important;
+}
