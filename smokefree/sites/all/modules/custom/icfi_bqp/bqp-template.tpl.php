@@ -613,7 +613,6 @@
     <section id="show">
       <?php print render($form['submit']); ?>
     </section>
-    <div id="bottom_trigger"></div>
 </div>
 <?php
 print render($form['form_id']);
