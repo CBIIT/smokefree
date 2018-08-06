@@ -1011,5 +1011,8 @@
 /* SOW-1489 */
 
 .page-node-921 #block-views-quit-notes-block .block-title, .page-node-918 #block-views-quit-notes-block .block-title{
-    display:none;
+   display:none;
+ }
+.page-node-921 #block-views-quit-notes-block .view-id-quit_notes, .page-node-918 #block-views-quit-notes-block .view-id-quit_notes{
+  padding-top: 15px;
 }

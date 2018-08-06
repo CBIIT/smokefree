@@ -1128,6 +1128,9 @@ media queries - 768px
         margin: 20px 0 0 0;
         clear: both;
     }
+    .reason-options-wrap {
+        margin: 0;
+    }
 }
 @media (max-width:400px) {
     .page-head h1 {
@@ -1144,7 +1147,7 @@ media queries - 768px
     }
 
     .section-head {
-        margin-bottom: 30px;
+        margin-bottom: 30px !important;
     }
     .section-head h2 {
         position: static;

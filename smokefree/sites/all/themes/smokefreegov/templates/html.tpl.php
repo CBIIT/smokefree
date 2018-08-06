@@ -221,6 +221,12 @@
       'tools-tips/how-to-quit/using-nicotine-replacement-therapy' => '3891&chip=064799e03b6a0136a0240024e87a30c2',
       'tools-tips/apps/quitstart' => '3893&chip=8d4cc7403b6a0136a0210024e87a30c2',
       '' => '3888&chip=5fb1a4803b690136a0200024e87a30c2', //homepage
+      'challenges-when-quitting/withdrawal/understanding-withdrawal' => '3934&chip=a6fc0640788d0136c0200024e87a30c2',
+      'challenges-when-quitting/cravings-triggers/how-manage-cravings' => '3936&chip=d911f070788d0136c0230024e87a30c2',
+      'quit-smoking/why-you-should-quit/benefits-of-quitting' => '3935&chip=c96a2ce0788d0136c0220024e87a30c2',
+      'quit-smoking/getting-started/prepare-to-quit' => '3938&chip=f7b186d0788d0136c0200024e87a30c2',
+      'tools-tips' => '3937&chip=ec203c00788d0136c0240024e87a30c2',
+
     );
     $path = request_path();
     if (array_key_exists($path, $paths)) {
