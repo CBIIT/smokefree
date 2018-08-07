@@ -20,7 +20,7 @@ function icfi_interactive_vet_react_app_menu() {
  * Loads the necessary react css and js files
  */
 function icfi_interactive_vet_react_app_page() {
-  $base_assets_path = drupal_get_path('module', 'icfi_react');
+  $base_assets_path = drupal_get_path('module', 'icfi_interactive_vet_react_app');
   return [
     '#type' => 'markup',
     '#markup' => '<div id="root"></div>',
