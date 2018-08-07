@@ -27,7 +27,7 @@ function isScrolledIntoView(el) {
     return isVisible;
 }
 
-window.onscroll = function() { isScrolledIntoView(document.getElementById('reCaptcha_')); };
+window.onscroll = function() { isScrolledIntoView(document.getElementsByClassName("captcha")); };
 
 focusWhatever = function (response) {
     if(window.reCaptchaPos) { $("html, body").scrollTop(window.reCaptchaPos); }
