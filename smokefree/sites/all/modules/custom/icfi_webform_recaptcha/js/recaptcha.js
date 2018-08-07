@@ -7,28 +7,7 @@ jQuery(document).ready(function() {
     jQuery(".node-webform .webform-submit.button-primary.btn.form-submit").before(captcha);
 });
 
-window.reCaptchaPos = false;
-
-function attachEvent(element, event, callbackFunction) {
-    if (element.addEventListener) {
-        element.addEventListener(event, callbackFunction, false);
-    } else if (element.attachEvent) {
-        element.attachEvent('on' + event, callbackFunction);
-    }
-};
-
-function isScrolledIntoView(el) {
-    var theTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    var elemTop = el.getBoundingClientRect().top;
-    var elemBottom = el.getBoundingClientRect().bottom;
-
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    if(isVisible) { window.reCaptchaPos = theTop;  }
-    return isVisible;
+if (window.innerWidth < 768 && (/iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)) {
+    var destElementOffset = jQuery('.g-recaptcha').position().top - window.innerWidth;
+    jQuery('html, body').animate({ scrollTop: destElementOffset }, 0);
 }
-
-window.onscroll = function() { isScrolledIntoView(document.getElementsByClassName("captcha")); };
-
-focusWhatever = function (response) {
-    if(window.reCaptchaPos) { $("html, body").scrollTop(window.reCaptchaPos); }
-};
