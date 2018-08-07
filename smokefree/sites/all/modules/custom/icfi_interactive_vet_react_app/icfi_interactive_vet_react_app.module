@@ -1,0 +1,37 @@
+<?php
+
+/**
+* Implements hook_menu().
+*/
+function icfi_interactive_vet_react_app_menu() {
+  return [
+    'veterans/tools-help-you-quit/quit-for-good-with-nrt' => [
+      'title' => 'Interactive Vet',
+      'page callback' => 'icfi_interactive_vet_react_app_page',
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    ]
+  ];
+}
+
+/**
+ * Callback for hook_menu()
+ *
+ * Loads the necessary react css and js files
+ */
+function icfi_interactive_vet_react_app_page() {
+  $base_assets_path = drupal_get_path('module', 'icfi_react');
+  return [
+    '#type' => 'markup',
+    '#markup' => '<div id="root"></div>',
+    '#attached' => [
+      'css' => ["$base_assets_path/static/css/main.88c58ed6.css" => ['preprocess' => FALSE]],
+      'js' => [
+        "$base_assets_path/static/js/main.684d1e9c.js" => ['preprocess' => FALSE],
+        [
+          'type' => 'settings',
+        ]
+      ],
+    ]
+  ];
+}
