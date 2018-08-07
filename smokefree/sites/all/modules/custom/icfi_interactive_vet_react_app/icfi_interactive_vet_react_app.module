@@ -21,17 +21,20 @@ function icfi_interactive_vet_react_app_menu() {
  */
 function icfi_interactive_vet_react_app_page() {
   $base_assets_path = drupal_get_path('module', 'icfi_interactive_vet_react_app');
+  drupal_add_css($base_assets_path . '/static/css/main.8b0bc121.css', array(
+    'scope' => 'footer',
+    'group' => CSS_THEME,
+    'every_page' => TRUE,
+    'weight' => -2,
+  ));
+  drupal_add_js($base_assets_path . '/static/js/main.8d20a110.js', array(
+    'scope' => 'footer',
+    'group' => JS_THEME,
+    'every_page' => TRUE,
+    'weight' => -2,
+  ));
   return [
     '#type' => 'markup',
     '#markup' => '<div id="root"></div>',
-    '#attached' => [
-      'css' => ["$base_assets_path/static/css/main.88c58ed6.css" => ['preprocess' => FALSE]],
-      'js' => [
-        "$base_assets_path/static/js/main.684d1e9c.js" => ['preprocess' => FALSE],
-        [
-          'type' => 'settings',
-        ]
-      ],
-    ]
   ];
 }
