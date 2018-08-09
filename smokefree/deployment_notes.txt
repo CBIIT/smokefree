@@ -1,3 +1,7 @@
+Smokefree 1.36 2018-08-09
+-----------------------
+- CDC task updated
+
 Smokefree 1.35 2018-07-26
 -----------------------
 - SOW-1477 - Update search block code for https
