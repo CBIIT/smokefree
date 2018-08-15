@@ -6,7 +6,6 @@
 function icfi_interactive_vet_react_app_menu() {
   return [
     'veterans/tools-help-you-quit/quit-for-good-with-nrt' => [
-      'title' => 'Interactive Vet',
       'page callback' => 'icfi_interactive_vet_react_app_page',
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
@@ -21,18 +20,24 @@ function icfi_interactive_vet_react_app_menu() {
  */
 function icfi_interactive_vet_react_app_page() {
   $base_assets_path = drupal_get_path('module', 'icfi_interactive_vet_react_app');
-  drupal_add_css($base_assets_path . '/static/css/main.8b0bc121.css', array(
-    'scope' => 'footer',
-    'group' => CSS_THEME,
-    'every_page' => TRUE,
-    'weight' => -2,
-  ));
-  drupal_add_js($base_assets_path . '/static/js/main.8d20a110.js', array(
-    'scope' => 'footer',
-    'group' => JS_THEME,
-    'every_page' => TRUE,
-    'weight' => -2,
-  ));
+  $css_files = glob($base_assets_path. '/build/static/css/*.css');
+  $js_files = glob($base_assets_path. '/build/static/js/*.js');
+  foreach ($css_files as $css_file) {
+    drupal_add_css($css_file, array(
+      'scope' => 'footer',
+      'group' => CSS_THEME,
+      'every_page' => TRUE,
+      'weight' => -2,
+    ));
+  }
+  foreach ($js_files as $js_file) {
+    drupal_add_js($js_file, array(
+      'scope' => 'footer',
+      'group' => JS_THEME,
+      'every_page' => TRUE,
+      'weight' => -2,
+    ));
+  }
   return [
     '#type' => 'markup',
     '#markup' => '<div id="root"></div>',
