@@ -208,19 +208,25 @@
    * Adds the CDC tracking pixel code
    */
   function _pixel_code() {
-    $default = '3894&chip=b18bc7903b6a0136a0230024e87a30c2';
+    $default = 'event?event_type=conversion&pixel_id=3894&chip=b18bc7903b6a0136a0230024e87a30c2';
     $paths = array(
-      'smokefreetxt' => '3883&chip=82a1a7303b680136a01d0024e87a30c2',
-      'quitstart-cdc' => '3884&chip=a5f85f303b680136a01e0024e87a30c2',
-      'build-your-quit-plan' => '3885&chip=e0462f003b680136a0200024e87a30c2',
-      'build-your-quit-plan-results' => '3886&chip=0f4effc03b690136a0230024e87a30c2',
-      'node/487/done' => '3887&chip=37de67c03b690136a0200024e87a30c2', //Smokefree TXT done page
-      'quit-smoking/getting-started/steps-to-manage-quit-day' => '3890&chip=ebfbd7003b690136a0200024e87a30c2',
-      'tools-tips/text-programs' => '3889&chip=d1cd75103b690136a0200024e87a30c2',
-      'tools-tips/apps' => '3892&chip=6eb29b303b6a0136a01d0024e87a30c2',
-      'tools-tips/how-to-quit/using-nicotine-replacement-therapy' => '3891&chip=064799e03b6a0136a0240024e87a30c2',
-      'tools-tips/apps/quitstart' => '3893&chip=8d4cc7403b6a0136a0210024e87a30c2',
-      '' => '3888&chip=5fb1a4803b690136a0200024e87a30c2', //homepage
+      'smokefreetxt' => 'redirect?seg=VkT&dp=4163&chip=bca19ee0763e0136bf000024e87a30c2',
+      'quitstart-cdc' => 'redirect?seg=VkU&dp=4164&chip=ebf48980763e0136bf030024e87a30c2',
+      'build-your-quit-plan' => 'redirect?seg=VkV&dp=4165&chip=f6e63e70763e0136bf040024e87a30c2',
+      'build-your-quit-plan-results' => 'event?event_type=conversion&pixel_id=3886&chip=0f4effc03b690136a0230024e87a30c2',
+      'node/487/done' => 'event?event_type=conversion&pixel_id=3887&chip=37de67c03b690136a0200024e87a30c2', //Smokefree TXT done page
+      'quit-smoking/getting-started/steps-to-manage-quit-day' => 'event?event_type=conversion&pixel_id=3890&chip=ebfbd7003b690136a0200024e87a30c2',
+      'tools-tips/text-programs' => 'event?event_type=conversion&pixel_id=3889&chip=d1cd75103b690136a0200024e87a30c2',
+      'tools-tips/apps' => 'event?event_type=conversion&pixel_id=3892&chip=6eb29b303b6a0136a01d0024e87a30c2',
+      'tools-tips/how-to-quit/using-nicotine-replacement-therapy' => 'event?event_type=conversion&pixel_id=3891&chip=064799e03b6a0136a0240024e87a30c2',
+      'tools-tips/apps/quitstart' => 'event?event_type=conversion&pixel_id=3893&chip=8d4cc7403b6a0136a0210024e87a30c2',
+      '' => 'event?event_type=conversion&pixel_id=3888&chip=5fb1a4803b690136a0200024e87a30c2', //homepage
+      'challenges-when-quitting/withdrawal/understanding-withdrawal' => 'event?event_type=conversion&pixel_id=3934&chip=a6fc0640788d0136c0200024e87a30c2',
+      'challenges-when-quitting/cravings-triggers/how-manage-cravings' => 'event?event_type=conversion&pixel_id=3936&chip=d911f070788d0136c0230024e87a30c2',
+      'quit-smoking/why-you-should-quit/benefits-of-quitting' => 'event?event_type=conversion&pixel_id=3935&chip=c96a2ce0788d0136c0220024e87a30c2',
+      'quit-smoking/getting-started/prepare-to-quit' => 'event?event_type=conversion&pixel_id=3938&chip=f7b186d0788d0136c0200024e87a30c2',
+      'tools-tips' => 'event?event_type=conversion&pixel_id=3937&chip=ec203c00788d0136c0240024e87a30c2',
+
     );
     $path = request_path();
     if (array_key_exists($path, $paths)) {
@@ -231,6 +237,6 @@
     }
   }
   ?>
-  <img src="https://match.rundsp.com/event?event_type=conversion&pixel_id=<?php print(_pixel_code()); ?>" width="1" height="1" border="0" style="display:none;"/>
+  <img src="https://match.rundsp.com/<?php print(_pixel_code()); ?>" width="1" height="1" border="0" style="display:none;"/>
 </body>
 </html>

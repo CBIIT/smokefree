@@ -60,7 +60,6 @@ a:focus {
 .next-section.trigger-scroll {
     display: block;
     margin-bottom: 10px;
-    margin-top: 65px;
     width: 47px;
     height: 47px;
     background-image: url(/sites/all/themes/smokefreegov/images/sf-vet/section_scroll.png);
@@ -85,7 +84,7 @@ section {
     height: 30px;
     background-image: url(/sites/all/themes/smokefreegov/images/sf-vet/gray_bar.png);
     background-repeat: repeat-x;
-    margin: 6em 0;
+    margin: 1em 0;
 
     position: relative;
     width: 500%;
@@ -1175,12 +1174,6 @@ media queries - 768px
     .smoking-reminders-wrap .reminder {
         width: 90%;
     }
-    .reason-options {
-        width: 150px;
-        margin: 30px auto;
-        float: none;
-    }
-
     a.btn-send,
     .dropdown-tell-friends-family,
     .dropdown-invite-friend {
@@ -1688,4 +1681,9 @@ mark, .mark {
 }
 .page-veterans .container-page #edit-extra-help ul {
     width: 98% !important;
+}
+
+/* SOW-1486 */
+.page-build-your-quit-plan .live-chat-bar {
+    display: none !important;
 }

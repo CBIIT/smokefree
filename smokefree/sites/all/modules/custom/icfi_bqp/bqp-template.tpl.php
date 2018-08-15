@@ -607,53 +607,12 @@
       <h2 class="tell-friends">Tell friends and family.</h2>
       <div class="section-body">
         <p>Quitting smoking is easier when you have support from your loved ones. Let your family and friends know that you are quitting, or invite a friend to quit with you.</p>
-        <div class="send-invite">
-          <div class="dropdown dropdown-tell-friends-family">
-            <button type="button" data-target="dropdown-tell-friends-family" data-toggle="dropdown" class="dropdown-toggle button btn-quit-plan tell-friends-family-btn" role="button" id="tell-friends-family">Tell Friends and Family You’re Quitting</button>
-            <ul class="quitplan-dropdown-menu dropdown-menu dropdown-menu-tell-friends-family" role="menu" id="dropdown-tell-friends-family" aria-labelledby="tell-friends-family">
-              <li>
-                <a class="btn btn-link" data-service="SendMessage" type="button" href="mailto:?subject=I%27m%20becoming%20smokefree%20and%20I%20need%20your%20help!&amp;body=On%20%5BQuit%20Date%5D%20I%27m%20quitting%20smoking.%0D%0A%0D%0A%20I%27m%20letting%20you%20know%20this%20because%20quitting%20will%20be%20tough,%20but%20having%20the%20support%20of%20my%20loved%20ones%20will%20make%20it%20a%20little%20easier.%20I%20hope%20that%20I%20can%20turn%20to%20you%20for%20help%20during%20my%20journey%20to%20become%20smokefree.%0D%0A%0D%0AI%20look%20forward%20to%20sharing%20this%20new%20chapter%20of%20my%20life%20with%20you.%0D%0ASincerely,%0D%0A%5BName%5D">Send an email</a>
-              </li>
-              <li>
-                <button type="button" class="btn btn-link" data-service="Facebook">Share on Facebook</button>
-              </li>
-              <li>
-                <button type="button" class="btn btn-link" data-service="Twitter" data-sharetext="I'm quitting smoking. Please support me as I work to become #smokefree.">Share on Twitter</button>
-              </li>
-              <li>
-                <button type="button" class="btn btn-link tell-friends-family-skip" data-service="skip">Skip This Step</button>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown dropdown-invite-friend">
-            <button type="button" data-target="dropdown-invite-friend" data-toggle="dropdown" class="dropdown-toggle button btn-quit-plan invite-friend-btn" role="button" id="invite-friend">Invite a friend to quit with you</button>
-            <ul class="quitplan-dropdown-menu dropdown-menu dropdown-menu-invite-friend" role="menu" id="dropdown-invite-friend" aria-labelledby="invite-friend">
-              <li>
-                <a class="btn btn-link" data-service="SendMessage" type="button" href="mailto:?subject=Will%20you%20become%20smokefree%20with%20me?&amp;body=On%20%5BQuit%20Date%5D%20I%27m%20quitting%20smoking%20and%20I%20want%20you%20to%20quit%20with%20me.%0D%0A%0D%0ABecoming%20smokefree%20is%20easier%20when%20you%20do%20it%20with%20someone%20you%20care%20about.%20Let%27s%20take%20the%20smokefree%20journey%20together,%20and%20we%20can%20help%20and%20support%20each%20other%20along%20the%20way.%0D%0A%0D%0AI%20look%20forward%20to%20sharing%20this%20new%20chapter%20of%20my%20life%20with%20you.%0D%0A%0D%0ASincerely,%0D%0A%5BName%5D">Send an email</a>
-              </li>
-              <li>
-                <button type="button" class="btn btn-link" data-service="Facebook">Share on Facebook</button>
-              </li>
-              <li>
-                <button type="button" class="btn btn-link" data-service="Twitter" data-sharetext="I’m quitting smoking. Want to become #smokefree with me?">Share on Twitter</button>
-              </li>
-              <li>
-                <button type="button" class="btn btn-link invite-friend-skip" data-service="skip">Skip This Step</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <a href="#show" class="next-section trigger-scroll">
-          show
-        </a>
-      </div>
       <div class="section-divider"></div>
     </section>
 
     <section id="show">
       <?php print render($form['submit']); ?>
     </section>
-    <div id="bottom_trigger"></div>
 </div>
 <?php
 print render($form['form_id']);
