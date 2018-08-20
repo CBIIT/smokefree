@@ -33,19 +33,6 @@
                 }
             });
 
-            var bottom = new Waypoint({
-                element: document.getElementById('bottom_trigger'),
-                handler: function(direction) {
-                    if (direction == "down") {
-                        $("#progress_bar").hide();
-                    }
-                    else if ($(window).width() >= 800){
-                        $("#progress_bar").show();
-                    }
-                },
-                offset: 'bottom-in-view'
-            });
-
             var step1 = new Waypoint({
                 element: document.getElementById('mark'),
                 handler: function(direction) {
