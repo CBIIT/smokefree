@@ -10,7 +10,7 @@ import TipsBlock from './components/TipsBlock';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="invet-app">
         <main id="main-content" role="main" tabIndex="-1">
           <Hero />
           <div className="section_block">

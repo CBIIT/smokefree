@@ -4,11 +4,6 @@ import FlipCard from './FlipCard';
 
 
 class TipsBlock extends Component {
-    constructor() {
-        super();
-        
-    }
-
     render() { 
         return (
             <div className="section_block">
