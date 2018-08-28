@@ -58,15 +58,15 @@ class CigarettePanel extends Component {
     }
     
     const cigaretteChangeHandlerDown = () => {
-        if(this.state.data.key == 1) {
+        if(this.state.data.key === 1) {
             this.setState({
                 data: calculatorData.cigarettes[2]
             })
-        } else if(this.state.data.key == 2) {
+        } else if(this.state.data.key === 2) {
             this.setState({
                 data: calculatorData.cigarettes[0]
             })
-        } else if(this.state.data.key == 3) {
+        } else if(this.state.data.key === 3) {
             this.setState({
                 data: calculatorData.cigarettes[1]
             })
