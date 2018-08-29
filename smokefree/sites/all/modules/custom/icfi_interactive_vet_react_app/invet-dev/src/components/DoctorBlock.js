@@ -9,7 +9,7 @@ const DoctorBlock = () => {
                         <h2>Talk to Your Doctor</h2>
                     </div> 
                     <div className="col-md-6">
-                        <p>Talk with your healthcare provider about the best NRT or other tobacco cessation medication for you. It will be based on your experiences with medications in the past, how much you currently smoke, dip, or chew, and any other medical conditions you have.</p>
+                        <p>Talk with your healthcare provider about the best NRT or other tobacco cessation medication for you. It will be based on your experiences with medications in the past, how much you currently smoke, dip, or chew; and any other medical conditions you have.</p>
                         <p>Your doctor may recommend prescription medicines such as bupropion (Zyban®/Wellbutrin®) or varenicline (CHANTIX®) to help you quit. These medications do not contain nicotine, but they can reduce your urge to smoke.</p>
                         <p>Call 1-855-QUIT-VET (1-855-784-8838), VA’s <a href="#">smoking quitline</a> for veterans, to speak with a tobacco cessation counselor Monday–Friday. Counseling is available in English and Spanish.</p>
                     </div>

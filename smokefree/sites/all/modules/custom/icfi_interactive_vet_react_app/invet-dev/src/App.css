@@ -7288,14 +7288,14 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.35em;
-  margin: 40px 0;
+  margin-bottom: 10px;
 }
 @media (max-width: 1200px) {
   .invet-app .section_block h2 {
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.3em;
-    margin: 30px 0;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 992px) {
@@ -7303,7 +7303,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.25em;
-    margin: 20px 0;
+    margin-bottom: 0px;
   }
 }
 @media (max-width: 768px) {
@@ -7311,7 +7311,7 @@ body {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.2em;
-    margin: 15px 0;
+    margin-bottom: -3px;
   }
 }
 /* Card Style */
