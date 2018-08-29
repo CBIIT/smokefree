@@ -14,9 +14,8 @@ const TherapySelection = (props) => {
   return (
     <div className="col-md-4">
         <div className="box">
-        <hr />
             <h3>You Selected this Therapy:</h3>
-            <br />
+            <hr />
             {selectionList}
             {props.showButton ? (<a href={props.factsSheetUrl} className="btn-invet btn-default btn-center" style={{ color: 'white', backgroundColor: 'rgb(8, 117, 153)' }}>Download a Fact Sheet</a>) : null}
         </div> 
