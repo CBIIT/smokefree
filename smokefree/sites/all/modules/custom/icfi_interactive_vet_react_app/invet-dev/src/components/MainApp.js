@@ -34,8 +34,8 @@ class MainApp extends Component {
                 factsSheetUrl: '#',
                 quickTips: [
                     'Begin using the patch and lozenge on your quit date.',
-                    'Each day, remove the old patch when you wake up and apply one new patch.',
-                    'Use lozenges as needed to reduce cravings.',
+                    'Each day, remove the old patch when you wake up, and apply one new patch.',
+                    'Use lozenges as needed to control cravings.',
                     'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
                     'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                 ],
@@ -83,7 +83,7 @@ class MainApp extends Component {
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Factsheet_508.pdf',
                     quickTips: [
                         'Begin using the patch on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Avoid wearing the patch on the same area more than once a week.',
                         'If you have trouble sleeping or vivid dreams, remove the patch before going to sleep.'
                      ],
@@ -254,7 +254,7 @@ class MainApp extends Component {
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Gum_Combo_Factsheet_508.pdf',
                     quickTips: [
                         'Begin using the patch and gum on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Use a piece of nicotine gum as needed for strong cravings.',
                         'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
                         'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
@@ -302,8 +302,8 @@ class MainApp extends Component {
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Lozenge_Combo_508.pdf',
                     quickTips: [
                         'Begin using the patch and lozenge on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
-                        'Use lozenges as needed to reduce cravings.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
+                        'Use lozenges as needed to control cravings.',
                         'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
                         'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                      ],
@@ -350,7 +350,7 @@ class MainApp extends Component {
                     quickTips: [
                         'Tell your health care provider that you’re quitting tobacco. They can give you counseling and suggest the best NRT for you.',
                         'Begin using the patch on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Avoid wearing the patch on the same area more than once a week.',
                         'If you have trouble sleeping or vivid dreams, remove the patch before going to sleep.'
                      ],
@@ -495,7 +495,7 @@ class MainApp extends Component {
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Gum_Combo+Counseling_Factsheet_508.pdf',
                     quickTips: [
                         'Begin using the patch and gum on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Use a piece of nicotine gum as needed for strong cravings.',
                         'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
                         'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
@@ -552,8 +552,8 @@ class MainApp extends Component {
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Lozenge_Combo+Counseling_508.pdf',
                     quickTips: [
                         'Begin using the patch and lozenge on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
-                        'Use lozenges as needed to reduce cravings.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
+                        'Use lozenges as needed to control cravings.',
                         'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
                         'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                      ],
@@ -589,8 +589,8 @@ class MainApp extends Component {
                     factsSheetUrl: '#',
                     quickTips: [
                         'Begin using the patch and lozenge on your quit date.',
-                        'Each day, remove the old patch when you wake up and apply one new patch.',
-                        'Use lozenges as needed to reduce cravings.',
+                        'Each day, remove the old patch when you wake up, and apply one new patch.',
+                        'Use lozenges as needed to control cravings.',
                         'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
                         'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                      ],

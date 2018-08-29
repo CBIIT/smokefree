@@ -1147,7 +1147,7 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 10px;
+  margin-top: 0px !important;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
@@ -6982,8 +6982,8 @@ body {
     line-height: 36px;
   }
   .invet-app h3 {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 20px !important;
+    line-height: 24px !important;
   }
   .invet-app p {
     font-size: 15px;
@@ -7014,8 +7014,8 @@ body {
     line-height: 32px;
   }
   .invet-app h3 {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
   .invet-app p {
     font-size: 15px;
@@ -7055,8 +7055,8 @@ body {
     line-height: 32px;
   }
   .invet-app h3 {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
   .invet-app p {
     font-size: 14px;
@@ -7095,8 +7095,8 @@ body {
     line-height: 30px;
   }
   .invet-app h3 {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
   .invet-app p {
     font-size: 13px;
