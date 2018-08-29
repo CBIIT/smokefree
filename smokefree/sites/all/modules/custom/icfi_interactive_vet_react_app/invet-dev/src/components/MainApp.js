@@ -11,7 +11,10 @@ class MainApp extends Component {
         super();
         this.state = {
             changes: {
-                chancesOfStayingQuit: '<p className="larger">Many people choose to quit without any assistance—also known as “quitting cold turkey.” But data show that you are much more likely to stay quit if you use aids like NRT and counseling.</p> <p className="larger"><strong>Select one or more</strong> of the therapies above to see how your likelihood of staying quit could change.</p>',
+                chancesOfStayingQuit: {
+                    times: 'Many people choose to quit without any assistance—also known as “quitting cold turkey.” But data show that you are much more likely to stay quit if you use aids like NRT and counseling.',
+                    paragraphTwo: [<strong>Select one or more</strong> ," of the therapies above to see how your likelihood of staying quit could change."]
+                },
                 face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-1.jpg',
                 lozengeDisabled: {
                     className: "",
@@ -57,7 +60,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '2 times',
+                        times: ["You are up to ", <strong>2 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Try combining with the nicotine gum or lozenge for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
@@ -98,7 +101,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '2 times',
+                        times: ["You are up to ", <strong>2 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Try combining with the nicotine patch for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
@@ -141,7 +144,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '3 times',
+                        times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Try combining with the nicotine patch for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
@@ -182,7 +185,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '2 times',
+                        times: ["You are up to ", <strong>2 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Add NRT for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
@@ -223,7 +226,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '4 times',
+                        times: ["You are up to ", <strong>4 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Add counseling for the best chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
@@ -271,7 +274,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '4 times',
+                        times: ["You are up to ", <strong>4 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Add counseling for the best chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
@@ -318,7 +321,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '3 times',
+                        times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Try adding the nicotine gum or lozenge for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-3.jpg',
@@ -365,7 +368,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '3 times',
+                        times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Try adding the nicotine patch for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-3.jpg',
@@ -413,7 +416,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '3 times',
+                        times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Try combining with the nicotine patch for an even greater chance to stay quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-3.jpg',
@@ -459,7 +462,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '4 times',
+                        times: ["You are up to ", <strong>4 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Great job! You are maximizing your chances of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
@@ -512,7 +515,7 @@ class MainApp extends Component {
             this.setState({
                 changes: {
                     chancesOfStayingQuit: {
-                        times: '4 times',
+                        times: ["You are up to ", <strong>4 times</strong> ," more likely to stay quit."],
                         paragraphTwo: 'Great job! You are maximizing your chances of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
@@ -563,7 +566,10 @@ class MainApp extends Component {
         } if((patch.checked === false) && (lozenge.checked === false) && (gum.checked === false) && (counseling.checked === false)) {
             this.setState({
                 changes: {
-                    chancesOfStayingQuit: '<p className="larger">Many people choose to quit without any assistance—also known as “quitting cold turkey.” But data show that you are much more likely to stay quit if you use aids like NRT and counseling.</p> <p className="larger"><strong>Select one or more</strong> of the therapies above to see how your likelihood of staying quit could change.</p>',
+                    chancesOfStayingQuit: {
+                        times: 'Many people choose to quit without any assistance—also known as “quitting cold turkey.” But data show that you are much more likely to stay quit if you use aids like NRT and counseling. ',
+                        paragraphTwo: [<strong>Select one or more</strong> ," of the therapies above to see how your likelihood of staying quit could change."]
+                    },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-1.jpg',
                     lozengeDisabled: {
                         className: "",

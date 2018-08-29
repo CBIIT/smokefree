@@ -9,7 +9,7 @@ const StayingQuit = (props) => {
             </div>
             <div className="col-md-5 col-sm-6">
                 <div id="chances">
-                     <p className="larger">You are up to <strong>{props.times}</strong> more likely to stay quit.</p> <p className="larger">{props.paragraphTwo} </p>        
+                     <p className="larger">{props.times}</p> <p className="larger">{props.paragraphTwo} </p>
                 </div>
             </div>
             <div className="col-md-7 col-sm-6">
