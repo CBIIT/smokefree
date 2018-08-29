@@ -8532,6 +8532,9 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   border-color: #dddddd;
   border-bottom-color: #f2f2f2;
 }
+.invet-app .nicotine_replacement {
+  margin-bottom: 0px;
+}
 .quit-tips-content{
   margin-left: 15px;
 }

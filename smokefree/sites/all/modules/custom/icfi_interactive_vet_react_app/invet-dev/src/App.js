@@ -14,7 +14,7 @@ class App extends Component {
         <main id="main-content" role="main" tabIndex="-1">
           <div className="container">
             <Hero />
-            <div className="section_block">
+            <div className="section_block nicotine_replacement">
               <div className="container-fluid">
                 <div className="row">
                   <div className="col-lg-12">
