@@ -6857,6 +6857,7 @@ body {
   margin: 0;
   border-left: none;
   position: relative;
+  padding-left: 10px;
 }
 .invet-app blockquote::before {
   content: "\201C";
@@ -6864,7 +6865,7 @@ body {
   left: -12px;
 }
 .invet-app blockquote::after {
-  content: '';
+  content: '\201D';
 }
 .invet-app blockquote.small-quote {
   font-size: 32px;
@@ -8231,6 +8232,9 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 }
 .invet-app #facts h4.counseling-icon::before {
   background-position: -1px -91px;
+}
+.invet-app #facts h4 {
+  margin-bottom: 6px;
 }
 
 .invet-app .quit-tips {
