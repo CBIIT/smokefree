@@ -6,7 +6,7 @@ const TherapySelection = (props) => {
         return (
             
             <div id="facts">
-                <h4 className="patch-icon">{selection.title}</h4>
+                <h4 className={`${selection.iconPath}`}>{selection.title}</h4>
                 <p>{selection.text}</p>
             </div>
         )
@@ -18,9 +18,10 @@ const TherapySelection = (props) => {
             <h3>You Selected this Therapy:</h3>
             <br />
             {selectionList}
-            <a href={props.factsSheetUrl} className="btn-invet btn-default btn-center" style={{ color: 'white', backgroundColor: 'rgb(8, 117, 153)' }}>Download a Fact Sheet</a>
+            {props.showButton ? (<a href={props.factsSheetUrl} className="btn-invet btn-default btn-center" style={{ color: 'white', backgroundColor: 'rgb(8, 117, 153)' }}>Download a Fact Sheet</a>) : null}
         </div> 
     </div>
   )
+  
 }
 export default TherapySelection;

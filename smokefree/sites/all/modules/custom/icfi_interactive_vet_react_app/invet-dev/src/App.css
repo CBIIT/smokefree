@@ -108,34 +108,34 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-button,
-input,
-optgroup,
-select,
-textarea {
+.invet-app button,
+.invet-app input,
+.invet-app optgroup,
+.invet-app select,
+.invet-app textarea {
   margin: 0;
   font: inherit;
   color: inherit;
 }
-button {
+.invet-app button {
   overflow: visible;
 }
-button,
+.invet-app button,
 select {
   text-transform: none;
 }
-button,
+.invet-app button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-button[disabled],
+.invet-app button[disabled],
 html input[disabled] {
   cursor: default;
 }
-button::-moz-focus-inner,
+.invet-app button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -242,7 +242,7 @@ th {
     display: none;
   }
   .btn-invet > .caret,
-  .dropup > .btn-invr > .caret {
+  .dropup > .btn-invet > .caret {
     border-top-color: #000 !important;
   }
   .label {
@@ -1091,10 +1091,10 @@ body {
   color: #333;
   background-color: #fff;
 }
-input,
-button,
-select,
-textarea {
+.invet-app input,
+.invet-app button,
+.invet-app select,
+.invet-app textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -3047,15 +3047,15 @@ select[multiple].input-lg {
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
 .invet-app .btn-invet.disabled,
-.invet-app .btn[disabled],
-fieldset[disabled] .btn {
+.invet-app .btn-invet[disabled],
+fieldset[disabled] .btn-invet {
   cursor: not-allowed;
   filter: alpha(opacity=65);
   -webkit-box-shadow: none;
           box-shadow: none;
   opacity: .65;
 }
-.invet-app a.btn.disabled,
+.invet-app a.btn-invet.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
@@ -4027,7 +4027,6 @@ fieldset[disabled] .btn-success.focus {
 }
 .invet-app .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.42857143;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
@@ -7959,12 +7958,12 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 }
 .invet-app .btn.btn-external .share-icon-twitter {
   width: 24px;
-  background: url(/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/share-twitter-2x.png);
+  background: url('/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/share-twitter-2x.png');
   background-size: 24px 40px;
 }
 .invet-app .btn.btn-external .share-icon-email {
   width: 30px;
-  background: url(/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/envelope-2x.png);
+  background: url('/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/envelope-2x.png');
   background-size: 30px 40px;
 }
 .invet-app .btn.btn-external:focus,
@@ -8067,7 +8066,7 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   top: 10px;
   left: 50%;
   margin-left: -60px;
-  background-image: url(/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png);
+  background-image: url('/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png');
   background-repeat: no-repeat;
   background-size: 110px 440px;
 }
@@ -8110,6 +8109,44 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   .invet-app .checkbox.nrt-selection label#counseling::before {
     background-position: 0 -270px;
   }
+}
+.selection-icons {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  padding: 8px;
+}
+.selection-icons .patch,
+.selection-icons .gum,
+.selection-icons .lozenge,
+.selection-icons .counseling {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-right: 4px;
+  padding: 4px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  background-image: url('/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 30px 120px;
+}
+.selection-icons .patch {
+  display: none;
+  background-position: -1px -1px;
+}
+.selection-icons .gum {
+  display: none;
+  background-position: -1px -31px;
+}
+.selection-icons .lozenge {
+  display: none;
+  background-position: -1px -61px;
+}
+.selection-icons .counseling {
+  display: none;
+  background-position: -1px -91px;
 }
 @media (max-width: 768px) {
   .invet-app .checkbox.nrt-selection label {
@@ -8164,6 +8201,38 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 .invet-app #emoji {
   background-color: #FFFFFF;
 }
+.invet-app #facts h4.patch-icon::before,
+.invet-app #facts h4.gum-icon::before,
+.invet-app #facts h4.lozenge-icon::before,
+.invet-app #facts h4.counseling-icon::before {
+  content: '';
+  left: 0px;
+  top: -3px;
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-right: 4px;
+  padding: 4px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  background-image: url('/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 30px 120px;
+}
+.invet-app #facts h4.patch-icon::before {
+  background-position: -1px -1px;
+}
+.invet-app #facts h4.gum-icon::before {
+  background-position: -1px -31px;
+}
+.invet-app #facts h4.lozenge-icon::before {
+  background-position: -1px -61px;
+}
+.invet-app #facts h4.counseling-icon::before {
+  background-position: -1px -91px;
+}
+
 .invet-app .quit-tips {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
@@ -8477,11 +8546,14 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   background-color: #064d80;
   border-color: #064d80;
 }
-
+@media only screen and (max-width: 1200px) {
+  .quit-tips-content {
+    width: 400px;
+  }
+}
 @media only screen and (max-width: 644px) {
   .quit-tips-content {
     width: 355px;
-
   }
 }
 @media only screen and (max-width: 449px) {
@@ -8489,7 +8561,15 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
     width: 300px;
   }
 }
-
+@media only screen and (max-width: 425px) {
+  .quit-tips-content {
+    width: 250px;
+  }
+  .invet-app  h3{
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+}
 .invet-app p {
   padding-bottom: 10px;
 }
@@ -8535,3 +8615,56 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   }
 }
 
+.invet-app button {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+invet tabs li a:hover, 
+invet .nav-tabs li a:focus {
+  line-height: 22px !important;
+}
+.invet .nav.nav-tabs,
+.invet .nav.nav-tabs,
+.invet .nav.nav-tabs a:hover,
+.invet .nav.nav-tabs a:focus {
+  line-height: 22px !important;
+  animation: none !important;
+  transition: none !important;
+
+}
+@media only screen and (max-width: 767px) {
+  .checkbox.nrt-selection.card-gray {
+    margin-bottom: 25px;
+  }
+  .invet .nav.nav-tabs,
+  .invet .nav.nav-tabs,
+  .invet .nav.nav-tabs a:hover,
+  .invet .nav.nav-tabs a:focus {
+    line-height: 22px !important;
+    animation: none !important;
+    transition: none !important;
+    font-size: 16px !important;
+  }
+  .invet .tab-text {
+    font-size: 16px !important;
+  }
+  .invet-app .nav-tabs > li > a > span.tab-text {
+    margin-right: 2px;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    font-size: 16px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .invet-app .nav-tabs > li > a > span.tab-text {
+    margin-right: 2px;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px !important;
+  }
+  .invet-app .nav-tabs > li > a {
+    padding: 10px;
+    line-height: 22px;
+  }
+}

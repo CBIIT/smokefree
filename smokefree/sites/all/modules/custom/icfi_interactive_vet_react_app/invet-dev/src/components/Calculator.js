@@ -34,8 +34,8 @@ class Calculator extends Component {
                         <p></p>
                         <ul className="nav nav-tabs" role="tablist">
                             <li className="nonactive"><b>Do You…</b></li>
-                            <li role="presentation" className={this.state.cigPanel}><a onClick={cigPane} style={{cursor:'pointer'}} aria-controls="cigarettes" role="tab" data-toggle="tab">Smoke Cigarettes?</a></li>
-                            <li role="presentation" className={this.state.chewPanel}><a onClick={chewPane} style={{cursor:'pointer'}} aria-controls="smokeless" role="tab" data-toggle="tab">Dip or Chew Tobacco?</a></li>
+                            <li role="presentation" className={this.state.cigPanel}><a onClick={cigPane} style={{cursor:'pointer'}} aria-controls="cigarettes" role="tab" data-toggle="tab"><span className="tab-text">Smoke Cigarettes?</span></a></li>
+                            <li role="presentation" className={this.state.chewPanel}><a onClick={chewPane} style={{cursor:'pointer'}} aria-controls="smokeless" role="tab" data-toggle="tab"><span className="tab-text">Dip or Chew Tobacco?</span></a></li>
                         </ul>
                         <CigarettePanel showCigarettes={this.state.showCigarettes} />
                     </div>

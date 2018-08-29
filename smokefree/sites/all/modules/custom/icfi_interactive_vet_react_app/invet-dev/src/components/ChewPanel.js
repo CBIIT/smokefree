@@ -10,8 +10,8 @@ constructor() {
             selection: 'Within 5 Minutes',
             gum: '2mg',
             patch: '21mg',
-            amounts: '1'
         },
+        amounts: '1',
         currentAmount: '1',
         currentTime: '5 mins' 
     }
@@ -308,15 +308,18 @@ constructor() {
     const updateAmountsUp = () => {
         if (this.state.amounts === '1') {
             this.setState({
-                amounts: '2-3'
+                amounts: '2-3',
+                currentAmount:'1'
             })
         } else if (this.state.amounts === '2-3') {
             this.setState({
-                amounts: 'More than 3'
+                amounts: 'More than 3',
+                currentAmount:'2-3'
             })
         } else {
             this.setState({
-                amounts: '1'
+                amounts: '1',
+                currentAmount:'More than 3'
             })
         }
         updateNRT(this.state.amounts);
@@ -325,22 +328,22 @@ constructor() {
     const updateAmountsDown = () => {
         if (this.state.amounts === '1') {
             this.setState({
-                amounts: 'More than 3'
+                amounts: 'More than 3',
+                currentAmount:'1'
             })
         } else if (this.state.amounts === '2-3') {
             this.setState({
-                amounts: '1'
+                amounts: '1',
+                currentAmount:'2-3'
             })
         } else {
             this.setState({
-                amounts: '2-3'
+                amounts: '2-3',
+                currentAmount:'More than 3'
             }) 
         }
-        console.log(this.state.amounts);
         updateNRT(this.state.amounts);
     }
-
-
    
     return (
         <div role="tabpanel" className="tab-pane active" id="smokeless">
@@ -355,16 +358,16 @@ constructor() {
                 <div className="spacer-10"></div>
                 <div className="row">
                     <div className="col-xs-3">
-                        <button onClick={updateAmountsDown} className="btn btn-default btn-minus">
+                        <button onClick={updateAmountsDown} className="btn-invet btn-default btn-minus">
                             <span className="glyphicon glyphicon-minus"></span>
                             <span className="sr-only">Minus</span>
                         </button>
                     </div>
                     <div className="col-xs-6">
-                        <div className="smokeless-amount">{this.state.amounts}</div>
+                        <div className="smokeless-amount">{this.state.currentAmount}</div>
                     </div>
                     <div className="col-xs-3">
-                        <button onClick={updateAmountsUp} className="btn btn-default btn-plus pull-right">
+                        <button onClick={updateAmountsUp} className="btn-invet btn-default btn-plus pull-right">
                             <span className="glyphicon glyphicon-plus"></span>
                             <span className="sr-only">Plus</span>
                         </button>

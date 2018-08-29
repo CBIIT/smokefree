@@ -13,6 +13,12 @@ const QuitTipsVideo = (props) => {
                 <ul className="list-group" id="quit-tips-content">
                     {tipList}        
                 </ul>
+                <div class="selection-icons">
+                        <div class="patch" style={{display: props.quitTipsIconPatch}}></div>
+                        <div class="gum" style={{display: props.quitTipsIconGum}}></div>
+                        <div class="lozenge" style={{display: props.quitTipsIconLozenge}}></div>
+                        <div class="counseling" style={{display: props.quitTipsIconCounseling}}></div>
+                </div>
             </div>
         </div> 
         <div className="col-md-6">

@@ -8,7 +8,7 @@ const DayPlanningBlock = (props) => {
         </div>
         <div className="col-md-5">
             <div id="yourday">
-                {props.planningyourDay}        
+            <p className="larger">{props.planningyourDay}</p>       
             </div>
             <div className="quote-block">
                 <blockquote id="nrt-quote">

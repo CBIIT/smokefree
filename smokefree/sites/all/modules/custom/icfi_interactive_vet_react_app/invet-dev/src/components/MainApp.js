@@ -24,7 +24,8 @@ class MainApp extends Component {
                 youSelected: [
                     {
                         iconPath: "",
-                        text: 'Please make a selection above.'
+                        text: 'Please make a selection above.',
+                        showButton: false,
                     }
                 ],
                 factsSheetUrl: '#',
@@ -34,7 +35,11 @@ class MainApp extends Component {
                     'Use lozenges as needed to reduce cravings.',
                     'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
                     'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
-                 ],
+                ],
+                quitTipsIconPatch: 'none',
+                quitTipsIconGum: 'none',
+                quitTipsIconCounseling: 'none',
+                quitTipsIconLozenge: 'none',
                  planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
                  quote: 'I’m 9 days cigarette-free!”',
                  videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -48,7 +53,6 @@ class MainApp extends Component {
         const gum = document.getElementById('gum-box');
         const lozenge = document.getElementById('lozenge-box');
         const counseling = document.getElementById('counseling-box');
-        console.log(lozenge.checked);
         if(patch.checked === true) {
             this.setState({
                 changes: {
@@ -67,9 +71,10 @@ class MainApp extends Component {
                     },
                     youSelected:[
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'patch-icon',
                             title: 'Patch',
                             text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            showButton: true
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Factsheet_508.pdf',
@@ -79,6 +84,10 @@ class MainApp extends Component {
                         'Avoid wearing the patch on the same area more than once a week.',
                         'If you have trouble sleeping or vivid dreams, remove the patch before going to sleep.'
                      ],
+                     quitTipsIconPatch: 'inline-block',
+                     quitTipsIconGum: 'none',
+                     quitTipsIconCounseling: 'none',
+                     quitTipsIconLozenge: 'none',
                      planningyourDay: 'The patch provides a steady dose of nicotine for withdrawal relief throughout the day. When you wake up, remove your old patch and apply a new one. Apply only one patch at a time.',
                      quote: 'No urges today!”',
                      videoUrl: 'https://www.youtube.com/embed/6S8UnLKVwiM',
@@ -103,9 +112,10 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.'
+                            text: 'The gum has nicotine to help decrease withdrawal symptoms.',
+                            showButton: true
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Gum_Factsheet_508.pdf',
@@ -117,6 +127,10 @@ class MainApp extends Component {
                         'Do not bite down too quickly or swallow the nicotine; it may make you nauseous or upset your stomach.',
                         'Do not eat or drink 15 minutes before or during use.'
                      ],
+                     quitTipsIconPatch: 'none',
+                    quitTipsIconGum: 'inline-block',
+                    quitTipsIconCounseling: 'none',
+                    quitTipsIconLozenge: 'none',
                      planningyourDay: 'The gum has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
                      quote: '"I’m taking it one craving at a time, one day at a time.”',
                      videoUrl: 'https://www.youtube.com/embed/LRMAM29TtTk',
@@ -141,9 +155,10 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'lozenge-icon',
                             title: 'Nicotine Lozenge',
-                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.'
+                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.',
+                            showButton: true
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Lozenge_Factsheet_508.pdf',
@@ -153,6 +168,10 @@ class MainApp extends Component {
                         'Use up to 20 pieces per day as needed to reduce cravings.',
                         'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                      ],
+                     quitTipsIconPatch: 'none',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'none',
+                    quitTipsIconLozenge: 'inline-block',
                      planningyourDay: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
                      quote: '"I quit today!”',
                      videoUrl: 'https://www.youtube.com/embed/7cIG8jlPwJw',
@@ -177,9 +196,10 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'counseling-icon',
                             title: 'Counseling',
-                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.'
+                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.',
+                            showButton: true
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Counseling_Factsheet_508.pdf',
@@ -189,6 +209,10 @@ class MainApp extends Component {
                         'Speak with a Quit VET counselor Monday–Friday. Dial 1-855-QUIT-VET (1-855-784-8838).',
                         'Sign up for SmokefreeVET Text. Text VET to 47848 or go to smokefree.gov/vet.'
                      ],
+                     quitTipsIconPatch: 'none',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'inline-block',
+                    quitTipsIconLozenge: 'none',
                      planningyourDay: 'There are lots of ways to get counseling. On a weekly basis, you might try individual counseling one on one, attend a group session at your local VA, or speak with a counselor over the phone. For a daily support in between other counseling sessions, get encouraging and informative messages via text.',
                      quote: '"I am DONE smoking.”',
                      videoUrl: 'https://www.youtube.com/embed/5BcoasP1VOo',
@@ -213,14 +237,15 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'patch-icon',
                             title: 'Patch',
                             text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.', 
+                            text: 'The gum has nicotine to help decrease withdrawal symptoms.', 
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Gum_Combo_Factsheet_508.pdf',
@@ -232,6 +257,10 @@ class MainApp extends Component {
                         'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.'
                      ],
+                     quitTipsIconPatch: 'inline-block',
+                    quitTipsIconGum: 'inline-block',
+                    quitTipsIconCounseling: 'none',
+                    quitTipsIconLozenge: 'none',
                      planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the gum is used as needed to control cravings.',
                      quote: '"Doing well with the patch and gum.”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -256,12 +285,13 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'patch-icon',
                             title: 'Patch',
                             text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'lozenge-icon',
                             title: 'Lozenge',
                             text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.' 
                         }
@@ -274,6 +304,10 @@ class MainApp extends Component {
                         'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
                         'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                      ],
+                     quitTipsIconPatch: 'inline-block',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'none',
+                    quitTipsIconLozenge: 'inline-block',
                      planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
                      quote: '"I’m 9 days cigarette-free!”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -298,12 +332,13 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'patch-icon',
                             title: 'Patch',
                             text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'counseling-icon',
                             title: 'Counseling',
                             text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
                         }
@@ -316,6 +351,10 @@ class MainApp extends Component {
                         'Avoid wearing the patch on the same area more than once a week.',
                         'If you have trouble sleeping or vivid dreams, remove the patch before going to sleep.'
                      ],
+                     quitTipsIconPatch: 'inline-block',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'inline-block',
+                    quitTipsIconLozenge: 'none',
                      planningyourDay: 'The patch provides a steady dose of nicotine for withdrawal relief throughout the day. When you wake up, remove your old patch and apply a new one. Apply only one patch at a time.',
                      quote: '"No urges today!”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -340,12 +379,13 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.'
+                            text: 'The gum has nicotine to help decrease withdrawal symptoms.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'counseling-icon',
                             title: 'Counseling',
                             text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
                         }
@@ -359,6 +399,10 @@ class MainApp extends Component {
                         'Do not bite down too quickly or swallow the nicotine; it may make you nauseous or upset your stomach.',
                         'Do not eat or drink 15 minutes before or during use.'
                      ],
+                     quitTipsIconPatch: 'none',
+                    quitTipsIconGum: 'inline-block',
+                    quitTipsIconCounseling: 'inline-block',
+                    quitTipsIconLozenge: 'none',
                      planningyourDay: 'The gum has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
                      quote: '"I’m taking it one craving at a time, one day at a time.”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -383,12 +427,13 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'lozenge-icon',
                             title: 'Nicotine Lozenge',
-                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.'
+                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'counseling-icon',
                             title: 'Counseling',
                             text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
                         }
@@ -400,6 +445,10 @@ class MainApp extends Component {
                         'Use up to 20 pieces per day as needed to reduce cravings.',
                         'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
                      ],
+                     quitTipsIconPatch: 'none',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'inline-block',
+                    quitTipsIconLozenge: 'inline-block',
                      planningyourDay: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
                      quote: '"I quit today!”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -424,17 +473,18 @@ class MainApp extends Component {
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'patch-icon',
                             title: 'Patch',
                             text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.', 
+                            text: 'The gum has nicotine to help decrease withdrawal symptoms.', 
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'counseling-icon',
                             title: 'Counseling',
                             text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
                         }
@@ -448,6 +498,10 @@ class MainApp extends Component {
                         'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.',
                      ],
+                     quitTipsIconPatch: 'inline-block',
+                    quitTipsIconGum: 'inline-block',
+                    quitTipsIconCounseling: 'inline-block',
+                    quitTipsIconLozenge: 'none',
                      planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the gum is used as needed to control cravings.',
                      quote: '"Doing well with the patch and gum.”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
@@ -463,30 +517,35 @@ class MainApp extends Component {
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
                     lozengeDisabled: {
-                        className: 'disabled',
+                        className: '',
                         inLine: false
                     },
                     gumDisabled: {
-                        className: "",
+                        className: "disabled",
                         inLine: true
                     },
                     youSelected: [
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'patch-icon',
                             title: 'Patch',
                             text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            showButton: true
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'lozenge-icon',
                             title: 'Nicotine Lozenge',
                             text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.'
                         },
                         {
-                            iconPath: '..//sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-selection-icons-2x.png',
+                            iconPath: 'counseling-icon',
                             title: 'Counseling',
                             text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
                         }
                     ],
+                    quitTipsIconPatch: 'inline-block',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'inline-block',
+                    quitTipsIconLozenge: 'inline-block',
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Lozenge_Combo+Counseling_508.pdf',
                     quickTips: [
                         'Begin using the patch and lozenge on your quit date.',
@@ -499,6 +558,44 @@ class MainApp extends Component {
                      quote: '"I’m 9 days cigarette-free!”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_GREEN-_PATCH+GUM-LOZENGE+COUNSELING.gif'
+                 }
+            })
+        } if((patch.checked === false) && (lozenge.checked === false) && (gum.checked === false) && (counseling.checked === false)) {
+            this.setState({
+                changes: {
+                    chancesOfStayingQuit: '<p className="larger">Many people choose to quit without any assistance—also known as “quitting cold turkey.” But data show that you are much more likely to stay quit if you use aids like NRT and counseling.</p> <p className="larger"><strong>Select one or more</strong> of the therapies above to see how your likelihood of staying quit could change.</p>',
+                    face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-1.jpg',
+                    lozengeDisabled: {
+                        className: "",
+                        inLine: ""
+                    },
+                    gumDisabled: {
+                        className: "",
+                        inLine: ""
+                    },
+                    youSelected: [
+                        {
+                            iconPath: "",
+                            text: 'Please make a selection above.',
+                            showButton: false
+                        }
+                    ],
+                    factsSheetUrl: '#',
+                    quickTips: [
+                        'Begin using the patch and lozenge on your quit date.',
+                        'Each day, remove the old patch when you wake up and apply one new patch.',
+                        'Use lozenges as needed to reduce cravings.',
+                        'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
+                        'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
+                     ],
+                     quitTipsIconPatch: 'none',
+                    quitTipsIconGum: 'none',
+                    quitTipsIconCounseling: 'none',
+                    quitTipsIconLozenge: 'none',
+                     planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
+                     quote: 'I’m 9 days cigarette-free!”',
+                     videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
+                     gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-slider-placeholder.jpg'
                  }
             })
         }
@@ -532,10 +629,10 @@ class MainApp extends Component {
             </div>
             <div className="row">
                 <StayingQuit times={this.state.changes.chancesOfStayingQuit.times} paragraphTwo={this.state.changes.chancesOfStayingQuit.paragraphTwo} face={this.state.changes.face} />
-                <TherapySelection youSelected={this.state.changes.youSelected} factsSheetUrl={this.state.changes.factsSheetUrl} />
+                <TherapySelection youSelected={this.state.changes.youSelected} showButton={this.state.changes.youSelected[0].showButton} factsSheetUrl={this.state.changes.factsSheetUrl} />
             </div>
             <div className="spacer-30"></div>
-            <QuitTipsVideo videoUrl={this.state.changes.videoUrl} quickTips={this.state.changes.quickTips} />
+            <QuitTipsVideo videoUrl={this.state.changes.videoUrl} quitTipsIconPatch={this.state.changes.quitTipsIconPatch} quitTipsIconGum={this.state.changes.quitTipsIconGum} quitTipsIconLozenge={this.state.changes.quitTipsIconLozenge} quitTipsIconCounseling={this.state.changes.quitTipsIconCounseling} quickTips={this.state.changes.quickTips} />
             <div className="spacer-30"></div>
             <DayPlanningBlock planningyourDay={this.state.changes.planningyourDay} quote={this.state.changes.quote} gifImage={this.state.changes.gifImage}  />
             <div className="spacer-30"></div>
