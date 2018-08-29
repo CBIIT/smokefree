@@ -43,7 +43,7 @@ class MainApp extends Component {
                  planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
                  quote: 'I’m 9 days cigarette-free!”',
                  videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
-                 gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-slider-placeholder.jpg'
+                 gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_GREEN-_PATCH+GUM-LOZENGE+COUNSELING.gif'
              }
         }
     }
@@ -595,7 +595,7 @@ class MainApp extends Component {
                      planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
                      quote: 'I’m 9 days cigarette-free!”',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
-                     gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-slider-placeholder.jpg'
+                     gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_GREEN-_PATCH+GUM-LOZENGE+COUNSELING.gif'
                  }
             })
         }
