@@ -219,7 +219,7 @@ class MainApp extends Component {
                      planningyourDay: 'There are lots of ways to get counseling. On a weekly basis, you might try individual counseling one on one, attend a group session at your local VA, or speak with a counselor over the phone. For a daily support in between other counseling sessions, get encouraging and informative messages via text.',
                      quote: 'I am DONE smoking.',
                      videoUrl: 'https://www.youtube.com/embed/5BcoasP1VOo',
-                     gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_GREEN-_PATCH+GUM-LOZENGE+COUNSELING.gif'
+                     gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_YELLOW.gif'
                  }
             })
         }  if(patch.checked === true && gum.checked === true) {
@@ -360,7 +360,7 @@ class MainApp extends Component {
                     quitTipsIconLozenge: 'none',
                      planningyourDay: 'The patch provides a steady dose of nicotine for withdrawal relief throughout the day. When you wake up, remove your old patch and apply a new one. Apply only one patch at a time.',
                      quote: 'No urges today!',
-                     videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
+                     videoUrl: 'https://www.youtube.com/embed/6S8UnLKVwiM',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_BLUE-RED_PATCH+COUNSELING.gif'
                  }
             })
@@ -408,7 +408,7 @@ class MainApp extends Component {
                     quitTipsIconLozenge: 'none',
                      planningyourDay: 'The gum has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
                      quote: 'I’m taking it one craving at a time, one day at a time.',
-                     videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
+                     videoUrl: 'https://www.youtube.com/embed/LRMAM29TtTk',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_BLUE-RED_GUM-LOZENGE+COUNSELING.gif'
                  }
             })
@@ -454,7 +454,7 @@ class MainApp extends Component {
                     quitTipsIconLozenge: 'inline-block',
                      planningyourDay: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
                      quote: 'I quit today!',
-                     videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
+                     videoUrl: 'https://www.youtube.com/embed/7cIG8jlPwJw',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_BLUE-RED_GUM-LOZENGE+COUNSELING.gif'
                  }
             })
