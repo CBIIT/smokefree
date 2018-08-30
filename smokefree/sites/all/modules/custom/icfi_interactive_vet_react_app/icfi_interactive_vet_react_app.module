@@ -6,6 +6,7 @@
 function icfi_interactive_vet_react_app_menu() {
   return [
     'veterans/tools-help-you-quit/quit-for-good-with-nrt' => [
+      'title' => 'Quit for Good with NRT',
       'page callback' => 'icfi_interactive_vet_react_app_page',
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
@@ -38,6 +39,15 @@ function icfi_interactive_vet_react_app_page() {
       'weight' => -2,
     ));
   }
+  // create the og:description tag
+  $meta_description = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'description',
+      'content' => 'Nicotine replacement therapy (NRT) can double your chances of quitting for good when used correctly. Explore your NRT options—like gum, patches, and lozenges—and learn how they can be used together to fight the toughest cravings.',
+    ),
+  );
+  drupal_add_html_head($meta_description, 'meta_description');
   return [
     '#type' => 'markup',
     '#markup' => '<div id="root"></div>',

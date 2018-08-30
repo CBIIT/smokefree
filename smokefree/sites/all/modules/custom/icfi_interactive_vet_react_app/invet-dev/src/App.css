@@ -8672,3 +8672,6 @@ invet .vet-nav-tabs li a:focus {
     line-height: 22px;
   }
 }
+.page-veterans-tools-help-you-quit .article-title {
+  display: none;
+}
