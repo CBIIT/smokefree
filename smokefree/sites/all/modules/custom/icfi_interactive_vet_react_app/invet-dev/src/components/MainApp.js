@@ -61,7 +61,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>2 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Try combining with the nicotine gum or lozenge for an even greater chance to stay quit.'
+                        paragraphTwo: 'Try combining with the nicotine gum or lozenge for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
                     lozengeDisabled: {
@@ -102,7 +102,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>2 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Try combining with the nicotine patch for an even greater chance to stay quit.'
+                        paragraphTwo: 'Try combining with the nicotine patch for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
                     lozengeDisabled: {
@@ -145,7 +145,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Try combining with the nicotine patch for an even greater chance to stay quit.'
+                        paragraphTwo: 'Try combining with the nicotine patch for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
                     lozengeDisabled: {
@@ -186,7 +186,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>2 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Add NRT for an even greater chance to stay quit.'
+                        paragraphTwo: 'Add NRT for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-2.jpg',
                     lozengeDisabled: {
@@ -227,7 +227,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>4 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Add counseling for the best chance to stay quit.'
+                        paragraphTwo: 'Add counseling for the best chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
                     lozengeDisabled: {
@@ -275,7 +275,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>4 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Add counseling for the best chance to stay quit.'
+                        paragraphTwo: 'Add counseling for the best chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-4.jpg',
                     lozengeDisabled: {
@@ -322,7 +322,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Try adding the nicotine gum or lozenge for an even greater chance to stay quit.'
+                        paragraphTwo: 'Try adding the nicotine gum or lozenge for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-3.jpg',
                     lozengeDisabled: {
@@ -369,7 +369,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Try adding the nicotine patch for an even greater chance to stay quit.'
+                        paragraphTwo: 'Try adding the nicotine patch for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-3.jpg',
                     lozengeDisabled: {
@@ -417,7 +417,7 @@ class MainApp extends Component {
                 changes: {
                     chancesOfStayingQuit: {
                         times: ["You are up to ", <strong>3 times</strong> ," more likely to stay quit."],
-                        paragraphTwo: 'Try combining with the nicotine patch for an even greater chance to stay quit.'
+                        paragraphTwo: 'Try combining with the nicotine patch for an even greater chance of staying quit.'
                     },
                     face: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/nrt-animation-placeholder-3.jpg',
                     lozengeDisabled: {
