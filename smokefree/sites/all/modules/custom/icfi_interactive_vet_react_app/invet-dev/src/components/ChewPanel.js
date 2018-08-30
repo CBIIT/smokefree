@@ -7,101 +7,17 @@ constructor() {
     this.state = {
         selections: ['Within 5 Minutes', '6-30 Minutes', '31-60 Minutes', 'After 60 Minutes'],
         data: {
-            selection: 'Within 5 Minutes',
             gum: '2mg',
             patch: '21mg',
         },
         amounts: '1',
         currentAmount: '1',
-        currentTime: '5 mins' 
+        currentTime: '5-mins' 
     }
 }
 
 
   render() {
-    const calculatorData = {
-            selections: ['Within 5 Minutes', '6-30 Minutes', '31-60 Minutes', 'After 60 Minutes'],
-            withinFiveMinutes: {
-                selection: 'Within 5 Minutes',
-                amountOfCans: {
-                    one: {
-                        amount: '1',
-                        gum: '2mg',
-                        patch: '21mg'
-                    },
-                    twoToThree: {
-                        amount: '2-3',
-                        gum: '2mg',
-                        patch: '21mg'
-                    },
-                    moreThanThree: {
-                        amount: 'More than 3',
-                        gum: '4mg',
-                        patch: '21mg'
-                    }
-                }
-            },
-            sixToThirty: {
-                selection: '6-30 Minutes',
-                amountOfCans: {
-                    one: {
-                        amount: '1',
-                        gum: '2mg',
-                        patch: '14mg'
-                    },
-                    twoToThree: {
-                        amount: '2-3',
-                        gum: '2mg',
-                        patch: '21mg'
-                    },
-                    moreThanThree: {
-                        amount: 'More than 3',
-                        gum: '2mg',
-                        patch: '21mg'
-                    }
-                }
-            },
-            thirtyOneToSixty: {
-                selection: '31-60 Minutes',
-                amountOfCans: {
-                    one: {
-                        amount: '1',
-                        gum: '2mg',
-                        patch: '14mg'
-                    },
-                    twoToThree: {
-                        amount: '2-3',
-                        gum: '2mg',
-                        patch: '14mg'
-                    },
-                    moreThanThree: {
-                        amount: 'More than 3',
-                        gum: '2mg',
-                        patch: '21mg'
-                    }
-                }
-            },
-            afterSixty: {
-                selection: 'After 60 Minutes',
-                amountOfCans: {
-                    one: {
-                        amount: '1',
-                        gum: '2mg',
-                        patch: '14mg'
-                    },
-                    twoToThree: {
-                        amount: '2-3',
-                        gum: '2mg',
-                        patch: '14mg'
-                    },
-                    moreThanThree: {
-                        amount: 'More than 3',
-                        gum: '2mg',
-                        patch: '14mg'
-                    }
-                }
-            },
-        }
 
     const calculateNrt = (e) => {
         this.setState({
@@ -206,7 +122,6 @@ constructor() {
     }
 
     const updateNRT = (amount) => {
-        console.log(amount + " " + this.state.currentTime);
         if(this.state.currentTime === '5-mins' && amount === '1') {
             this.setState({
                 data: {
@@ -218,7 +133,7 @@ constructor() {
         if(this.state.currentTime === '5-mins' && amount === '2-3') {
             this.setState({
                 data: {
-                    gum: '2mg',
+                    gum: '4mg',
                     patch: '21mg'
                 }
             })
@@ -226,7 +141,7 @@ constructor() {
         if(this.state.currentTime === '5-mins' && amount === 'More than 3') {
             this.setState({
                 data: {
-                    gum: '4mg',
+                    gum: '2mg',
                     patch: '21mg'
                 }
             })
@@ -309,19 +224,22 @@ constructor() {
         if (this.state.amounts === '1') {
             this.setState({
                 amounts: '2-3',
-                currentAmount:'1'
-            })
-        } else if (this.state.amounts === '2-3') {
-            this.setState({
-                amounts: 'More than 3',
                 currentAmount:'2-3'
             })
-        } else {
+            
+        }  if (this.state.amounts === '2-3') {
             this.setState({
-                amounts: '1',
+                amounts: 'More than 3',
                 currentAmount:'More than 3'
             })
+            
+        } if (this.state.amounts === 'More than 3') {
+            this.setState({
+                amounts: '1',
+                currentAmount:'1'
+            })   
         }
+        console.log("Amounts: " + this.state.amounts +" Current Amount: " + this.state.currentAmount);
         updateNRT(this.state.amounts);
     }
 
@@ -358,7 +276,7 @@ constructor() {
                 <div className="spacer-10"></div>
                 <div className="row">
                     <div className="col-xs-3">
-                        <button onClick={updateAmountsDown} className="btn-invet btn-default btn-minus">
+                        <button onClick={updateAmountsDown.bind(this)} className="btn-invet btn-default btn-minus">
                             <span className="glyphicon glyphicon-minus"></span>
                             <span className="sr-only">Minus</span>
                         </button>
@@ -367,7 +285,7 @@ constructor() {
                         <div className="smokeless-amount">{this.state.currentAmount}</div>
                     </div>
                     <div className="col-xs-3">
-                        <button onClick={updateAmountsUp} className="btn-invet btn-default btn-plus pull-right">
+                        <button onClick={updateAmountsUp.bind(this)} className="btn-invet btn-default btn-plus pull-right">
                             <span className="glyphicon glyphicon-plus"></span>
                             <span className="sr-only">Plus</span>
                         </button>
@@ -378,11 +296,11 @@ constructor() {
                 <div className="form-group">
                     <label className="larger">How soon after you wake up do you place your first dip?</label>
                     <div className="form-check">
-                    <select onChange={calculateNrt}>
-                        <option className="select-item" value="5-mins">{calculatorData.selections[0]}</option>
-                        <option className="select-item" value="6-30">{calculatorData.selections[1]}</option>
-                        <option className="select-item" value="31-60">{calculatorData.selections[2]}</option>
-                        <option className="select-item" value="After-60">{calculatorData.selections[3]}</option>
+                    <select onChange={calculateNrt.bind(this)}>
+                        <option className="select-item" value="5-mins">{this.state.selections[0]}</option>
+                        <option className="select-item" value="6-30">{this.state.selections[1]}</option>
+                        <option className="select-item" value="31-60">{this.state.selections[2]}</option>
+                        <option className="select-item" value="After-60">{this.state.selections[3]}</option>
                     </select>
                     </div>
                 </div> 
