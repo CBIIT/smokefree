@@ -85,7 +85,7 @@ class MainApp extends Component {
                         'Begin using the patch on your quit date.',
                         'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Avoid wearing the patch on the same area more than once a week.',
-                        'If you have trouble sleeping or vivid dreams, remove the patch before going to sleep.'
+                        'If you have trouble sleeping or have vivid dreams, remove the patch before going to sleep.'
                      ],
                      quitTipsIconPatch: 'inline-block',
                      quitTipsIconGum: 'none',
@@ -117,7 +117,7 @@ class MainApp extends Component {
                         {
                             iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The gum has nicotine to help decrease withdrawal symptoms.',
+                            text: 'The gum releases nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one piece every 1–2 hours.',
                             showButton: true
                         }
                     ],
@@ -125,16 +125,16 @@ class MainApp extends Component {
                     quickTips: [
                         'Begin using the gum on your quit date.',
                         'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
-                        'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
+                        'Park the gum between your cheek and gum. Leave it there for about 1 minute so you can absorb the nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.',
-                        'Do not bite down too quickly or swallow the nicotine; it may make you nauseous or upset your stomach.',
+                        'Do not bite down too quickly on the gum or swallow the nicotine; it may make you nauseous or upset your stomach.',
                         'Do not eat or drink 15 minutes before or during use.'
                      ],
                      quitTipsIconPatch: 'none',
                     quitTipsIconGum: 'inline-block',
                     quitTipsIconCounseling: 'none',
                     quitTipsIconLozenge: 'none',
-                     planningyourDay: 'The gum has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
+                     planningyourDay: 'The gum releases nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before using the gum or during use.',
                      quote: 'I’m taking it one craving at a time, one day at a time.',
                      videoUrl: 'https://www.youtube.com/embed/LRMAM29TtTk',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_BLUE-RED_GUM-LOZENGE.gif'
@@ -160,7 +160,7 @@ class MainApp extends Component {
                         {
                             iconPath: 'lozenge-icon',
                             title: 'Nicotine Lozenge',
-                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.',
+                            text: 'The lozenge releases nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.',
                             showButton: true
                         }
                     ],
@@ -168,14 +168,14 @@ class MainApp extends Component {
                     quickTips: [
                         'Begin using the lozenge on your quit date.',
                         'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
-                        'Use up to 20 pieces per day as needed to reduce cravings.',
-                        'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
+                        'Use up to 20 pieces per day as needed to control cravings.',
+                        'Do not chew or swallow the lozenge; it may make you nauseated or upset your stomach.'
                      ],
                      quitTipsIconPatch: 'none',
                     quitTipsIconGum: 'none',
                     quitTipsIconCounseling: 'none',
                     quitTipsIconLozenge: 'inline-block',
-                     planningyourDay: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
+                     planningyourDay: 'There are lots of ways to get counseling. On a weekly basis, you might try one-on-one counseling sessions, attend a group session at your local VA, or speak with a counselor over the phone. For daily support in between other counseling sessions, get encouraging and informative messages via text.',
                      quote: 'I quit today!',
                      videoUrl: 'https://www.youtube.com/embed/7cIG8jlPwJw',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_BLUE-RED_GUM-LOZENGE.gif'
@@ -257,7 +257,7 @@ class MainApp extends Component {
                         'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Use a piece of nicotine gum as needed for strong cravings.',
                         'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
-                        'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
+                        'Park the gum between your cheek and gum. Leave it there for about 1 minute so you can absorb the nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.'
                      ],
                      quitTipsIconPatch: 'inline-block',
@@ -352,7 +352,7 @@ class MainApp extends Component {
                         'Begin using the patch on your quit date.',
                         'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Avoid wearing the patch on the same area more than once a week.',
-                        'If you have trouble sleeping or vivid dreams, remove the patch before going to sleep.'
+                        'If you have trouble sleeping or have vivid dreams, remove the patch before going to sleep.'
                      ],
                      quitTipsIconPatch: 'inline-block',
                     quitTipsIconGum: 'none',
