@@ -256,7 +256,7 @@ class MainApp extends Component {
                         'Begin using the patch and gum on your quit date.',
                         'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Use a piece of nicotine gum as needed for strong cravings.',
-                        'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
+                        'Unlike regular gum, bite down slowly a few times until you feel a slight tingling in your mouth.',
                         'Park the gum between your cheek and gum. Leave it there for about 1 minute so you can absorb the nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.'
                      ],
@@ -264,7 +264,7 @@ class MainApp extends Component {
                     quitTipsIconGum: 'inline-block',
                     quitTipsIconCounseling: 'none',
                     quitTipsIconLozenge: 'none',
-                     planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the gum is used as needed to control cravings.',
+                     planningyourDay: 'Using combination therapy increases your chances of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the gum is used as needed to control cravings.',
                      quote: 'Doing well with the patch and gum.',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_GREEN_PATCH+GUM-LOZEENGE.gif'
@@ -296,7 +296,7 @@ class MainApp extends Component {
                         {
                             iconPath: 'lozenge-icon',
                             title: 'Lozenge',
-                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.' 
+                            text: 'The lozenge releases nicotine to help decrease withdrawal symptoms. '
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Lozenge_Combo_508.pdf',
@@ -305,13 +305,13 @@ class MainApp extends Component {
                         'Each day, remove the old patch when you wake up, and apply one new patch.',
                         'Use lozenges as needed to control cravings.',
                         'Let the lozenge slowly dissolve in your mouth near your cheek and gum.',
-                        'Do not chew or swallow the lozenge; it may make you nauseous or upset your stomach.'
+                        'Do not chew or swallow the lozenge; it may make you nauseated or upset your stomach.'
                      ],
                      quitTipsIconPatch: 'inline-block',
                     quitTipsIconGum: 'none',
                     quitTipsIconCounseling: 'none',
                     quitTipsIconLozenge: 'inline-block',
-                     planningyourDay: 'Using combination therapy increases your chance of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
+                     planningyourDay: 'Using combination therapy increases your chances of staying quit. The patch provides a steady dose of nicotine for withdrawal relief, while the lozenge is used as needed to control cravings.',
                      quote: 'I’m 9 days cigarette-free!',
                      videoUrl: 'https://www.youtube.com/embed/hfT4NU-NTY4',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_GREEN_PATCH+GUM-LOZEENGE.gif'
@@ -337,13 +337,13 @@ class MainApp extends Component {
                         {
                             iconPath: 'patch-icon',
                             title: 'Patch',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            text: 'The patch will release small, but continuous amounts of nicotine into the body through the skin. This helps to decrease withdrawal symptoms.',
                             showButton: true
                         },
                         {
                             iconPath: 'counseling-icon',
                             title: 'Counseling',
-                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
+                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use, and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.'
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Factsheet+Counseling_508.pdf',
@@ -384,7 +384,7 @@ class MainApp extends Component {
                         {
                             iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The gum has nicotine to help decrease withdrawal symptoms.',
+                            text: 'The gum releases nicotine to help decrease withdrawal symptoms.',
                             showButton: true
                         },
                         {
@@ -399,14 +399,14 @@ class MainApp extends Component {
                         'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
                         'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.',
-                        'Do not bite down too quickly or swallow the nicotine; it may make you nauseous or upset your stomach.',
+                        'Do not bite down too quickly on the gum or swallow the nicotine; it may make you nauseous or upset your stomach.',
                         'Do not eat or drink 15 minutes before or during use.'
                      ],
                      quitTipsIconPatch: 'none',
                     quitTipsIconGum: 'inline-block',
                     quitTipsIconCounseling: 'inline-block',
                     quitTipsIconLozenge: 'none',
-                     planningyourDay: 'The gum has nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before or during use.',
+                     planningyourDay: 'The gum releases nicotine to help decrease withdrawal symptoms. Use it regularly to control cravings throughout the day. Do not eat or drink 15 minutes before using the gum or during use.',
                      quote: 'I’m taking it one craving at a time, one day at a time.',
                      videoUrl: 'https://www.youtube.com/embed/LRMAM29TtTk',
                      gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_BLUE-RED_GUM-LOZENGE+COUNSELING.gif'
@@ -478,27 +478,27 @@ class MainApp extends Component {
                         {
                             iconPath: 'patch-icon',
                             title: 'Patch',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            text: 'The patch will release small, but continuous amounts of nicotine into the body through the skin. This helps to decrease withdrawal symptoms.',
                             showButton: true
                         },
                         {
                             iconPath: 'gum-icon',
                             title: 'Nicotine Gum',
-                            text: 'The gum has nicotine to help decrease withdrawal symptoms.', 
+                            text: 'The gum releases nicotine to help decrease withdrawal symptoms.',
                         },
                         {
                             iconPath: 'counseling-icon',
                             title: 'Counseling',
-                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
+                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use, and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.'
                         }
                     ],
                     factsSheetUrl: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/pdf/SfVET_Patch_Gum_Combo+Counseling_Factsheet_508.pdf',
                     quickTips: [
                         'Begin using the patch and gum on your quit date.',
                         'Each day, remove the old patch when you wake up, and apply one new patch.',
-                        'Use a piece of nicotine gum as needed for strong cravings.',
-                        'Unlike regular gum, bite down slowly a few times until you have a slight tingling in your mouth.',
-                        'Park the gum between your cheek and gum. Leave it there for about 1 minute to absorb nicotine.',
+                        'Use a piece of nicotine gum as needed for to control cravings.',
+                        'Unlike regular gum, bite down slowly a few times until you feel a slight tingling in your mouth.',
+                        'Park the gum between your cheek and gum. Leave it there for about 1 minute so you can absorb nicotine.',
                         'Repeat biting and parking until the taste or tingle is gone. One piece of gum lasts 20–30 minutes.',
                      ],
                      quitTipsIconPatch: 'inline-block',
@@ -531,18 +531,18 @@ class MainApp extends Component {
                         {
                             iconPath: 'patch-icon',
                             title: 'Patch',
-                            text: 'The patch will release small, but continuous amounts of nicotine through the skin. This helps to decrease withdrawal symptoms.',
+                            text: 'The patch will release small, but continuous amounts of nicotine into the body through the skin. This helps to decrease withdrawal symptoms.',
                             showButton: true
                         },
                         {
                             iconPath: 'lozenge-icon',
                             title: 'Nicotine Lozenge',
-                            text: 'The lozenge has nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.'
+                            text: 'The lozenge releases nicotine to help decrease withdrawal symptoms. Use throughout the day to control cravings. During the first week, use one lozenge every 1–2 hours.'
                         },
                         {
                             iconPath: 'counseling-icon',
                             title: 'Counseling',
-                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.' 
+                            text: 'Tobacco cessation counseling is when you talk with a health care provider or a counselor about your tobacco use, and work on ways to get tobacco out of your life. This type of counseling helps you break your tobacco habit.'
                         }
                     ],
                     quitTipsIconPatch: 'inline-block',
