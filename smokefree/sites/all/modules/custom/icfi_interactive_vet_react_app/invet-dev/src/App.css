@@ -4016,71 +4016,71 @@ fieldset[disabled] .btn-success.focus {
 .invet-app .nav > li > a > img {
   max-width: none;
 }
-.invet-app .nav-tabs {
+.invet-app .vet-nav-tabs {
   border-bottom: 1px solid #ddd;
 }
-.invet-app .nav-tabs > li {
+.invet-app .vet-nav-tabs > li {
   float: left;
   margin-bottom: -1px;
 }
-.invet-app .nav-tabs > li > a {
+.invet-app .vet-nav-tabs > li > a {
   margin-right: 2px;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
-.invet-app .nav-tabs > li > a:hover {
+.invet-app .vet-nav-tabs > li > a:hover {
   border-color: #eee #eee #ddd;
 }
-.invet-app .nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.invet-app .nav-tabs > li.active > a:focus {
+.invet-app .vet-nav-tabs > li.active > a,
+.vet-nav-tabs > li.active > a:hover,
+.invet-app .vet-nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
-.invet-app .nav-tabs.nav-justified {
+.invet-app .vet-nav-tabs.nav-justified {
   width: 100%;
   border-bottom: 0;
 }
-.invet-app .nav-tabs.nav-justified > li {
+.invet-app .vet-nav-tabs.nav-justified > li {
   float: none;
 }
-.invet-app .nav-tabs.nav-justified > li > a {
+.invet-app .vet-nav-tabs.nav-justified > li > a {
   margin-bottom: 5px;
   text-align: center;
 }
-.invet-app .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+.invet-app .vet-nav-tabs.nav-justified > .dropdown .dropdown-menu {
   top: auto;
   left: auto;
 }
 @media (min-width: 768px) {
-  .invet-app .nav-tabs.nav-justified > li {
+  .invet-app .vet-nav-tabs.nav-justified > li {
     display: table-cell;
     width: 1%;
   }
-  .invet-app .nav-tabs.nav-justified > li > a {
+  .invet-app .vet-nav-tabs.nav-justified > li > a {
     margin-bottom: 0;
   }
 }
-.invet-app .nav-tabs.nav-justified > li > a {
+.invet-app .vet-nav-tabs.nav-justified > li > a {
   margin-right: 0;
   border-radius: 4px;
 }
-.invet-app .nav-tabs.nav-justified > .active > a,
-.invet-app .nav-tabs.nav-justified > .active > a:hover,
-.invet-app .nav-tabs.nav-justified > .active > a:focus {
+.invet-app .vet-nav-tabs.nav-justified > .active > a,
+.invet-app .vet-nav-tabs.nav-justified > .active > a:hover,
+.invet-app .vet-nav-tabs.nav-justified > .active > a:focus {
   border: 1px solid #ddd;
 }
 @media (min-width: 768px) {
-  .invet-app .nav-tabs.nav-justified > li > a {
+  .invet-app .vet-nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #ddd;
     border-radius: 4px 4px 0 0;
   }
-  .invet-app .nav-tabs.nav-justified > .active > a,
-  .invet-app .nav-tabs.nav-justified > .active > a:hover,
-  .invet-app .nav-tabs.nav-justified > .active > a:focus {
+  .invet-app .vet-nav-tabs.nav-justified > .active > a,
+  .invet-app .vet-nav-tabs.nav-justified > .active > a:hover,
+  .invet-app .vet-nav-tabs.nav-justified > .active > a:focus {
     border-bottom-color: #fff;
   }
 }
@@ -4129,26 +4129,26 @@ fieldset[disabled] .btn-success.focus {
     margin-bottom: 0;
   }
 }
-.invet-app .nav-tabs-justified {
+.invet-app .vet-nav-tabs-justified {
   border-bottom: 0;
 }
-.invet-app .nav-tabs-justified > li > a {
+.invet-app .vet-nav-tabs-justified > li > a {
   margin-right: 0;
   border-radius: 4px;
 }
-.invet-app .nav-tabs-justified > .active > a,
-.invet-app .nav-tabs-justified > .active > a:hover,
-.invet-app .nav-tabs-justified > .active > a:focus {
+.invet-app .vet-nav-tabs-justified > .active > a,
+.invet-app .vet-nav-tabs-justified > .active > a:hover,
+.invet-app .vet-nav-tabs-justified > .active > a:focus {
   border: 1px solid #ddd;
 }
 @media (min-width: 768px) {
-  .invet-app .nav-tabs-justified > li > a {
+  .invet-app .vet-nav-tabs-justified > li > a {
     border-bottom: 1px solid #ddd;
     border-radius: 4px 4px 0 0;
   }
-  .invet-app .nav-tabs-justified > .active > a,
-  .invet-app .nav-tabs-justified > .active > a:hover,
-  .invet-app .nav-tabs-justified > .active > a:focus {
+  .invet-app .vet-nav-tabs-justified > .active > a,
+  .invet-app .vet-nav-tabs-justified > .active > a:hover,
+  .invet-app .vet-nav-tabs-justified > .active > a:focus {
     border-bottom-color: #fff;
   }
 }
@@ -4158,7 +4158,7 @@ fieldset[disabled] .btn-success.focus {
 .invet-app .tab-content > .active {
   display: block;
 }
-.invet-app .nav-tabs .dropdown-menu {
+.invet-app .vet-nav-tabs .dropdown-menu {
   margin-top: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -8244,26 +8244,26 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 .invet-app .quit-tips h3:first-of-type {
   margin-top: 0;
 }
-.invet-app .dosage .nav-tabs {
+.invet-app .dosage .vet-nav-tabs {
   border-bottom: none;
   top: 1px;
   position: relative;
 }
-.invet-app .dosage .nav-tabs li.nonactive {
+.invet-app .dosage .vet-nav-tabs li.nonactive {
   padding: 10px 15px;
 }
 @media (max-width: 430px) {
-  .invet-app .dosage .nav-tabs li.nonactive {
+  .invet-app .dosage .vet-nav-tabs li.nonactive {
     display: block;
     width: 100%;
   }
 }
 @media (max-width: 350px) {
-  .invet-app .dosage .nav-tabs li {
+  .invet-app .dosage .vet-nav-tabs li {
     font-size: 12px;
   }
 }
-.invet-app .dosage .nav-tabs > li > a {
+.invet-app .dosage .vet-nav-tabs > li > a {
   background-color: #ffffff;
   color: #087599;
   text-decoration: none;
@@ -8271,13 +8271,13 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   top: 1px;
 }
 @media (max-width: 1200px) {
-  .invet-app .dosage .nav-tabs > li > a {
+  .invet-app .dosage .vet-nav-tabs > li > a {
     top: 0px;
   }
 }
-.invet-app .dosage .nav-tabs > li.active > a,
-.invet-app .dosage .nav-tabs > li.active > a:focus,
-.invet-app .dosage .nav-tabs > li.active > a:hover {
+.invet-app .dosage .vet-nav-tabs > li.active > a,
+.invet-app .dosage .vet-nav-tabs > li.active > a:focus,
+.invet-app .dosage .vet-nav-tabs > li.active > a:hover {
   text-decoration: none;
   background-color: #f2f2f2;
   color: #000000;
@@ -8285,8 +8285,8 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   border-color: #dddddd;
   border-bottom-color: #f2f2f2;
 }
-.invet-app .dosage .nav-tabs > li > a:focus,
-.invet-app .dosage .nav-tabs > li > a:hover {
+.invet-app .dosage .vet-nav-tabs > li > a:focus,
+.invet-app .dosage .vet-nav-tabs > li > a:hover {
   text-decoration: underline;
 }
 .invet-app .dosage .tab-content {
@@ -8525,7 +8525,7 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
   border-color: #064d80;
   text-decoration: none;
 }
-.invet-app .dosage .nav-tabs > li.active > a, .dosage .nav-tabs > li.active > a:focus, .dosage .nav-tabs > li.active > a:hover {
+.invet-app .dosage .vet-nav-tabs > li.active > a, .dosage .vet-nav-tabs > li.active > a:focus, .dosage .vet-nav-tabs > li.active > a:hover {
   text-decoration: none;
   background-color: #f2f2f2;
   color: #000000;
@@ -8625,13 +8625,13 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 }
 
 invet tabs li a:hover, 
-invet .nav-tabs li a:focus {
+invet .vet-nav-tabs li a:focus {
   line-height: 22px !important;
 }
-.invet .nav.nav-tabs,
-.invet .nav.nav-tabs,
-.invet .nav.nav-tabs a:hover,
-.invet .nav.nav-tabs a:focus {
+.invet .nav.vet-nav-tabs,
+.invet .nav.vet-nav-tabs,
+.invet .nav.vet-nav-tabs a:hover,
+.invet .nav.vet-nav-tabs a:focus {
   line-height: 22px !important;
   animation: none !important;
   transition: none !important;
@@ -8641,10 +8641,10 @@ invet .nav-tabs li a:focus {
   .checkbox.nrt-selection.card-gray {
     margin-bottom: 25px;
   }
-  .invet .nav.nav-tabs,
-  .invet .nav.nav-tabs,
-  .invet .nav.nav-tabs a:hover,
-  .invet .nav.nav-tabs a:focus {
+  .invet .nav.vet-nav-tabs,
+  .invet .nav.vet-nav-tabs,
+  .invet .nav.vet-nav-tabs a:hover,
+  .invet .nav.vet-nav-tabs a:focus {
     line-height: 22px !important;
     animation: none !important;
     transition: none !important;
@@ -8653,7 +8653,7 @@ invet .nav-tabs li a:focus {
   .invet .tab-text {
     font-size: 16px !important;
   }
-  .invet-app .nav-tabs > li > a > span.tab-text {
+  .invet-app .vet-nav-tabs > li > a > span.tab-text {
     margin-right: 2px;
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0;
@@ -8661,13 +8661,13 @@ invet .nav-tabs li a:focus {
   }
 }
 @media only screen and (max-width: 767px) {
-  .invet-app .nav-tabs > li > a > span.tab-text {
+  .invet-app .vet-nav-tabs > li > a > span.tab-text {
     margin-right: 2px;
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0;
     font-size: 14px !important;
   }
-  .invet-app .nav-tabs > li > a {
+  .invet-app .vet-nav-tabs > li > a {
     padding: 10px;
     line-height: 22px;
   }

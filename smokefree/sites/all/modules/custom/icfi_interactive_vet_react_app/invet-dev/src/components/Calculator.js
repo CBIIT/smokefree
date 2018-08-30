@@ -32,7 +32,7 @@ class Calculator extends Component {
                 <div className="col-md-12">
                     <div className="dosage">
                         <p></p>
-                        <ul className="nav nav-tabs" role="tablist">
+                        <ul className="nav vet-nav-tabs" role="tablist">
                             <li className="nonactive"><b>Do You…</b></li>
                             <li role="presentation" className={this.state.cigPanel}><a onClick={cigPane} style={{cursor:'pointer'}} aria-controls="cigarettes" role="tab" data-toggle="tab"><span className="tab-text">Smoke Cigarettes?</span></a></li>
                             <li role="presentation" className={this.state.chewPanel}><a onClick={chewPane} style={{cursor:'pointer'}} aria-controls="smokeless" role="tab" data-toggle="tab"><span className="tab-text">Dip or Chew Tobacco?</span></a></li>
