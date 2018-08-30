@@ -8675,3 +8675,13 @@ invet .vet-nav-tabs li a:focus {
 .page-veterans-tools-help-you-quit .article-title {
   display: none;
 }
+
+.page-veterans-tools-help-you-quit .live-chat-bar {
+  display: none !important;
+}
+
+@media (max-width: 1099px) {
+  .nav-bar-icon {
+    margin-top: 7px;
+  }
+}
