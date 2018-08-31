@@ -13,7 +13,7 @@ class TipsBlock extends Component {
                             <h2>Nicotine Facts</h2>
                         </div>
                         <div className="col-md-5">
-                            <p className="larger">These facts about nicotine replacement therapy may surprise you. They may also encourage you to try NRT to see if it’s right for you. Even if you tried NRT before, it might be worth trying again.</p>
+                            <p className="larger">These facts about NRT may surprise you. Like the fact that NRT contains only purified nicotine and none of the other toxins found in tobacco. That way, you can safely reduce your dependence on nicotine. Click through to learn more facts about NRT.</p>
                         </div>
                         <FlipCard /> 
                     </section> 

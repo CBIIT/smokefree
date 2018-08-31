@@ -8,7 +8,7 @@ class FlipCard extends Component {
             tips:{
                 tipId: 1, 
                 tipTitle: 'NRT works.', 
-                tipText: 'NRT can double a smoker’s chances of quitting smoking for good.', 
+                tipText: 'When used as directed, NRT can double your chances of quitting for good.',
                 buttonText: 'NEXT FACT',
                 counter: 1
             }
@@ -20,7 +20,7 @@ class FlipCard extends Component {
             {
                 tipId: 1, 
                 tipTitle: 'NRT works.', 
-                tipText: 'NRT can double a smoker’s chances of quitting smoking for good.', 
+                tipText: 'When used as directed, NRT can double your chances of quitting for good.',
                 buttonText: 'NEXT FACT'
             },
             {
@@ -56,7 +56,7 @@ class FlipCard extends Component {
             {
                 tipId: 7, 
                 tipTitle: 'NRT is designed to prevent addiction.', 
-                tipText: 'NRT delivers far less nicotine than cigarettes or smokeless tobacco products do, and much more slowly. This makes it less addictive. Most people find it easy to get off nicotine medicines after a few months.', 
+                tipText: 'NRT delivers far less nicotine than cigarettes or smokeless tobacco products do, and it delivers nicotine much more slowly. That makes it less addictive. Most people find it easy to taper down and get off nicotine medicines after a few months.',
                 buttonText: 'START OVER'
             },
         ]
