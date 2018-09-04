@@ -60,7 +60,9 @@ class CigarettePanel extends Component {
                         dosage: '10 or fewer',
                         gum: '2mg',
                         patch: '14mg',
-                        key: 1
+                        key: 1,
+                        clickClassPlus : 'cigarette-amount_11_20',
+                        clickClassMinus : 'cigarette-amount_21'
                     }
                 })
             }

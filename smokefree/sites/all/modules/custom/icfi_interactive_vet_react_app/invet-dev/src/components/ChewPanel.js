@@ -253,7 +253,8 @@ class ChewPanel extends Component {
                 this.setState({
                     amounts: '2-3',
                     currentAmount:'2-3',
-                    clickClassNext: 'morethan3_cans_per_week'
+                    clickClassNext: 'morethan3_cans_per_week',
+                    clickClassPrev: '1_cans_per_week',
                 })
 
             }  if (this.state.amounts === '2-3') {
@@ -261,6 +262,7 @@ class ChewPanel extends Component {
                     amounts: 'More than 3',
                     currentAmount:'More than 3',
                     clickClassNext: '1_cans_per_week',
+                    clickClassPrev: '2-3_cans_per_week',
                 })
 
             } if (this.state.amounts === 'More than 3') {
@@ -268,6 +270,7 @@ class ChewPanel extends Component {
                     amounts: '1',
                     currentAmount:'1',
                     clickClassNext: '2-3_cans_per_week',
+                    clickClassPrev: 'morethan3_cans_per_week',
                 })
             }
             updateNRT(this.state.amounts);
@@ -279,40 +282,24 @@ class ChewPanel extends Component {
                     amounts: 'More than 3',
                     currentAmount:'More than 3',
                     clickClassPrev: '2-3_cans_per_week',
+                    clickClassNext: '1_cans_per_week',
                 })
             } if (this.state.amounts === '2-3') {
                 this.setState({
                     amounts: '1',
                     currentAmount:'1',
                     clickClassPrev: 'morethan3_cans_per_week',
+                    clickClassNext: '2-3_cans_per_week',
                 })
             } if (this.state.amounts === 'More than 3'){
                 this.setState({
                     amounts: '2-3',
                     currentAmount:'2-3',
                     clickClassPrev: '1_cans_per_week',
+                    clickClassNext: 'morethan3_cans_per_week',
                 })
             }
             updateNRT(this.state.amounts);
-        }
-
-        const getClickClasses = () => {
-            if (this.state.amounts === '1') {
-                this.setState({
-                    minus: 'more_than_3_cans',
-                    plus:'2_3_cans'
-                })
-            } if (this.state.amounts === '2-3') {
-                this.setState({
-                    minus: '1_cans',
-                    plus:'more_than_3_cans'
-                })
-            } if (this.state.amounts === 'More than 3'){
-                this.setState({
-                    minus: '2_3_cans',
-                    plus:'1_cans'
-                })
-            }
         }
 
 
