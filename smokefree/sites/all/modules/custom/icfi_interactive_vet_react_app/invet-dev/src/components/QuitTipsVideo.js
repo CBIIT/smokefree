@@ -23,7 +23,7 @@ const QuitTipsVideo = (props) => {
         </div> 
         <div className="col-md-6">
             <div className="embed-responsive embed-responsive-16by9">
-                <iframe width="420" height="315" src={props.videoUrl} frameborder="0" allowfullscreen></iframe>
+                <iframe width="420" height="315" title="video to help you quit" src={props.videoUrl} frameborder="0" allowfullscreen></iframe>
             </div>
         </div> 
     </div>
