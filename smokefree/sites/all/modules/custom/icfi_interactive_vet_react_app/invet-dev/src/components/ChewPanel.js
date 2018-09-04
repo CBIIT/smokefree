@@ -13,6 +13,8 @@ class ChewPanel extends Component {
             },
             amounts: '1',
             currentAmount: '1',
+            clickClassNext: '2-3_cans_per_week',
+            clickClassPrev: 'morethan3_cans_per_week',
             currentTime: '5-mins',
             amountsList: ['1', '2-3', 'More than 3']
         }
@@ -250,19 +252,22 @@ class ChewPanel extends Component {
             if (this.state.amounts === '1') {
                 this.setState({
                     amounts: '2-3',
-                    currentAmount:'2-3'
+                    currentAmount:'2-3',
+                    clickClassNext: 'morethan3_cans_per_week'
                 })
 
             }  if (this.state.amounts === '2-3') {
                 this.setState({
                     amounts: 'More than 3',
-                    currentAmount:'More than 3'
+                    currentAmount:'More than 3',
+                    clickClassNext: '1_cans_per_week',
                 })
 
             } if (this.state.amounts === 'More than 3') {
                 this.setState({
                     amounts: '1',
-                    currentAmount:'1'
+                    currentAmount:'1',
+                    clickClassNext: '2-3_cans_per_week',
                 })
             }
             updateNRT(this.state.amounts);
@@ -272,21 +277,44 @@ class ChewPanel extends Component {
             if (this.state.amounts === '1') {
                 this.setState({
                     amounts: 'More than 3',
-                    currentAmount:'More than 3'
+                    currentAmount:'More than 3',
+                    clickClassPrev: '2-3_cans_per_week',
                 })
             } if (this.state.amounts === '2-3') {
                 this.setState({
                     amounts: '1',
-                    currentAmount:'1'
+                    currentAmount:'1',
+                    clickClassPrev: 'morethan3_cans_per_week',
                 })
             } if (this.state.amounts === 'More than 3'){
                 this.setState({
                     amounts: '2-3',
-                    currentAmount:'2-3'
+                    currentAmount:'2-3',
+                    clickClassPrev: '1_cans_per_week',
                 })
             }
             updateNRT(this.state.amounts);
         }
+
+        const getClickClasses = () => {
+            if (this.state.amounts === '1') {
+                this.setState({
+                    minus: 'more_than_3_cans',
+                    plus:'2_3_cans'
+                })
+            } if (this.state.amounts === '2-3') {
+                this.setState({
+                    minus: '1_cans',
+                    plus:'more_than_3_cans'
+                })
+            } if (this.state.amounts === 'More than 3'){
+                this.setState({
+                    minus: '2_3_cans',
+                    plus:'1_cans'
+                })
+            }
+        }
+
 
         return (
             <div role="tabpanel" className="tab-pane active" id="smokeless" style={{display: this.props.showChew ? 'block' : 'none' }}>
@@ -301,7 +329,7 @@ class ChewPanel extends Component {
                         <div className="spacer-10"></div>
                         <div className="row">
                             <div className="col-xs-3">
-                                <button onClick={updateAmountsDown.bind(this)} className="btn-invet btn-default btn-minus">
+                                <button onClick={updateAmountsDown.bind(this)} className={'btn-invet btn-default btn-minus ' + this.state.clickClassPrev}>
                                     <span className="glyphicon glyphicon-minus"></span>
                                     <span className="sr-only">Minus</span>
                                 </button>
@@ -310,7 +338,7 @@ class ChewPanel extends Component {
                                 <div className="smokeless-amount">{this.state.currentAmount}</div>
                             </div>
                             <div className="col-xs-3">
-                                <button onClick={updateAmountsUp.bind(this)} className="btn-invet btn-default btn-plus pull-right">
+                                <button onClick={updateAmountsUp.bind(this)} className={'btn-invet btn-default btn-plus pull-right ' + this.state.clickClassNext}>
                                     <span className="glyphicon glyphicon-plus"></span>
                                     <span className="sr-only">Plus</span>
                                 </button>
@@ -322,10 +350,10 @@ class ChewPanel extends Component {
                             <label className="larger">How soon after you wake up do you place your first dip?</label>
                             <div className="form-check">
                                 <select style={{margin: 'auto'}} onChange={calculateNrt.bind(this)}>
-                                    <option className="select-item" value="5-mins">{this.state.selections[0]}</option>
-                                    <option className="select-item" value="6-30">{this.state.selections[1]}</option>
-                                    <option className="select-item" value="31-60">{this.state.selections[2]}</option>
-                                    <option className="select-item" value="After-60">{this.state.selections[3]}</option>
+                                    <option className="select-item 5-minutes" value="5-mins">{this.state.selections[0]}</option>
+                                    <option className="select-item 6-30minutes" value="6-30">{this.state.selections[1]}</option>
+                                    <option className="select-item 31-60minutes" value="31-60">{this.state.selections[2]}</option>
+                                    <option className="select-item after-60minutes" value="After-60">{this.state.selections[3]}</option>
                                 </select>
                             </div>
                         </div>

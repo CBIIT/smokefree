@@ -11,7 +11,9 @@ class CigarettePanel extends Component {
                 dosage: '10 or fewer',
                 gum: '2mg',
                 patch: '14mg',
-                key: 1
+                key: 1,
+                clickClassPlus : 'cigarette-amount_11_20',
+                clickClassMinus : 'cigarette-amount_21'
             }
         }
     }
@@ -24,19 +26,25 @@ class CigarettePanel extends Component {
                     dosage: '10 or fewer',
                     gum: '2mg',
                     patch: '14mg',
-                    key: 1
+                    key: 1,
+                    clickClassPlus : 'cigarette-amount_11_20',
+                    clickClassMinus : 'cigarette-amount_21'
                 },
                 {
                     dosage: '11-20',
                     gum: '2mg',
                     patch: '21mg',
-                    key: 2
+                    key: 2,
+                    clickClassPlus : 'cigarette-amount_21',
+                    clickClassMinus : 'cigarette-amount_10_less'
                 },
                 {
                     dosage: '21 or more',
                     gum: '4mg',
                     patch: '21mg',
-                    key: 3
+                    key: 3,
+                    clickClassPlus : 'cigarette-amount_10_less',
+                    clickClassMinus : 'cigarette-amount_11_20'
                 }
             ]
         }
@@ -88,7 +96,7 @@ class CigarettePanel extends Component {
                             <div className="spacer-10"></div>
                             <div className="row">
                                 <div className="col-md-3 col-xs-3">
-                                    <button onClick={cigaretteChangeHandlerDown} className="btn-invet btn-default btn-minus">
+                                    <button onClick={cigaretteChangeHandlerDown} className={'btn-invet btn-default btn-minus ' + this.state.data.clickClassMinus}>
                                         <span className="glyphicon glyphicon-minus"></span>
                                         <span className="sr-only">Minus</span>
                                     </button>
@@ -97,7 +105,7 @@ class CigarettePanel extends Component {
                                     <div className="cigarette-amount">{this.state.data.dosage}</div>
                                 </div>
                                 <div className="col-md-3 col-xs-3">
-                                    <button onClick={cigaretteChangeHandler} className="btn-invet btn-default btn-plus pull-right">
+                                    <button onClick={cigaretteChangeHandler} className={'btn-invet btn-default btn-plus pull-right ' + this.state.data.clickClassPlus}>
                                         <span className="glyphicon glyphicon-plus"></span>
                                         <span className="sr-only">Plus</span>
                                     </button>
