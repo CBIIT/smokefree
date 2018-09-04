@@ -215,10 +215,10 @@
 $databases = array();
 $databases['default']['default'] = array(
   'driver' => 'mysql',
-    'database' => 'drupal7',
-   'username' => 'drupal7',
-   'password' => 'drupal7',
-    'host' => 'database',
+    'database' => 'default',
+   'username' => 'user',
+   'password' => 'user',
+    'host' => 'db',
   'prefix' => '',
  );
 
