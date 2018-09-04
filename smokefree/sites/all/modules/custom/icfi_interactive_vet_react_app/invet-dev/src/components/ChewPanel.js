@@ -13,7 +13,8 @@ class ChewPanel extends Component {
             },
             amounts: '1',
             currentAmount: '1',
-            currentTime: '5-mins'
+            currentTime: '5-mins',
+            amountsList: ['1', '2-3', 'More than 3']
         }
     }
 
@@ -264,7 +265,6 @@ class ChewPanel extends Component {
                     currentAmount:'1'
                 })
             }
-            console.log("Amounts: " + this.state.amounts +" Current Amount: " + this.state.currentAmount);
             updateNRT(this.state.amounts);
         }
 
@@ -272,17 +272,17 @@ class ChewPanel extends Component {
             if (this.state.amounts === '1') {
                 this.setState({
                     amounts: 'More than 3',
-                    currentAmount:'1'
+                    currentAmount:'More than 3'
                 })
-            } else if (this.state.amounts === '2-3') {
+            } if (this.state.amounts === '2-3') {
                 this.setState({
                     amounts: '1',
-                    currentAmount:'2-3'
+                    currentAmount:'1'
                 })
-            } else {
+            } if (this.state.amounts === 'More than 3'){
                 this.setState({
                     amounts: '2-3',
-                    currentAmount:'More than 3'
+                    currentAmount:'2-3'
                 })
             }
             updateNRT(this.state.amounts);
