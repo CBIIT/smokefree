@@ -216,7 +216,7 @@ class MainApp extends Component {
                         quitTipsIconGum: 'none',
                         quitTipsIconCounseling: 'inline-block',
                         quitTipsIconLozenge: 'none',
-                        planningyourDay: 'There are lots of ways to get counseling. On a weekly basis, you might try individual one-on-one counseling sessions, attend a group session at your local VA, or speak with a counselor over the phone. For a daily support in between other counseling sessions, get encouraging and informative messages via text.',
+                        planningyourDay: 'There are lots of ways to get counseling. On a weekly basis, you might try individual one-on-one counseling sessions, attend a group session at your local VA, or speak with a counselor over the phone. For daily support in between other counseling sessions, get encouraging and informative messages via text.',
                         quote: 'I am DONE smoking.',
                         videoUrl: 'https://www.youtube.com/embed/5BcoasP1VOo',
                         gifImage: '/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/SLIDER_YELLOW.gif'
