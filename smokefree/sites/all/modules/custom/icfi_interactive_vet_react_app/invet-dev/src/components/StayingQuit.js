@@ -14,7 +14,7 @@ const StayingQuit = (props) => {
             </div>
             <div className="col-md-7 col-sm-6">
                 <div id="emoji">
-                    <img src={`${props.face}`} alt="Emoji Placeholder" className="img-responsive"/>
+                    <img src={`${props.face}`} alt="Illustrated man whose smile gets broader as your chances of staying quit increase." className="img-responsive"/>
                 </div>
             </div> 
         </div>

@@ -14,7 +14,7 @@ const DoctorBlock = () => {
                         <p>Call 1-855-QUIT-VET (1-855-784-8838), VA’s <a href="https://www.mentalhealth.va.gov/quit-tobacco/how-to-quit.asp " target="_blank">smoking quitline</a> for veterans, to speak with a tobacco cessation counselor Monday–Friday. Counseling is available in English and Spanish.</p>
                     </div>
                     <div className="col-md-6">
-                        <img src="/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/talk-to-your-dr.jpg" className="img-responsive" alt="Talk to your doctor about NRT and your health" />
+                        <img src="/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/talk-to-your-dr.jpg" className="img-responsive" alt="Photo of a female doctor talking with her male patient about how to quit tobacco in the hallway of a clinic." />
                     </div>
                 </section>
             </div> 

@@ -15,7 +15,7 @@ const Hero = () => {
                     <p>Nicotine medicines are proven to increase your chances of quitting, but they won’t completely take away the urge to smoke. For best results, carefully follow the directions for using NRT. Use a high enough dose, and use the medicine for the recommended time (2–4 months). Combining NRT with counseling can improve your chances of quitting and staying quit.</p>
                 </div> 
                 <div className="col-md-6">
-                    <img src="/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/quit-with-nrt.jpg" className="img-responsive" alt="Quitting with NRT is safe and effective." />
+                    <img src="/sites/all/modules/custom/icfi_interactive_vet_react_app/build/images/quit-with-nrt.jpg" className="img-responsive" alt="Photo of a male veteran standing in a garden smiling confidently at the camera." />
                 </div> 
             </section> 
         </div>

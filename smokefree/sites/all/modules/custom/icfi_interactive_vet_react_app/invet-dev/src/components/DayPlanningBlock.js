@@ -26,7 +26,7 @@ const DayPlanningBlock = (props) => {
                     </div>
                 </div>
                 <div className="col-md-6 col-md-offset-1">
-                    <img src={`${props.gifImage}`} className="img-responsive" alt="gif image"/>
+                    <img src={`${props.gifImage}`} className="img-responsive" alt="Animated GIF showing how one might space out their NRT and/or counseling use throughout the day."/>
                 </div>
             </div>
         </div>
