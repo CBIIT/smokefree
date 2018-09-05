@@ -1,6 +1,6 @@
-Smokefree 1.36 2018-08-09
+Smokefree 1.36 2018-09-06
 -----------------------
-- CDC task updated
+- Interactive vet application
 
 Smokefree 1.35 2018-07-26
 -----------------------
