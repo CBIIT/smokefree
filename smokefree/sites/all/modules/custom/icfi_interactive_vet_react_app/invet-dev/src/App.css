@@ -8591,11 +8591,13 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 }
 
 .flip-enter {
-  animation: flip-in 300ms ease-out forwards;
+  -webkit-transform: rotateY(180deg);
+}
+.flip-enter-active {
   -webkit-animation: flip-in 300ms ease-out forwards;
-  -moz-animation: flip-in 300ms ease-out forwards;
-  -o-animation: flip-in 300ms ease-out forwards;
-  -ms-animation: flip-in 300ms ease-out forwards;
+}
+.flip-leave {
+  transform: rotateY(0deg);
 }
 
 .flip-leave-active {
