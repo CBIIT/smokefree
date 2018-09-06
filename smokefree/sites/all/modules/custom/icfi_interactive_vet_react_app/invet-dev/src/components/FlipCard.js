@@ -86,7 +86,7 @@ class FlipCard extends Component {
     return (
         <div className="col-md-6 col-md-offset-1">
         <div id="flip-card">
-            <ReactCSSTransitionGroup component="div" className="card" transitionName="flip" transitionEnterTimeout={300} transitionLeave={false}>
+            <ReactCSSTransitionGroup component="div" className="card" transitionName="flip" transitionEnterTimeout={10} transitionLeave={false}>
                 <div key={this.state.tips.tipId} className="front">
                     <div className="ticker">
                         FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
