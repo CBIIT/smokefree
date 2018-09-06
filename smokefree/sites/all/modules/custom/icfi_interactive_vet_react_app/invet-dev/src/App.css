@@ -8591,8 +8591,9 @@ aside #quit-notes-carousel .carousel-indicators .active a.thumbnail:hover {
 }
 
 .flip-enter {
-  animation: flip-in 300ms ease-out forwards;
-  -webkit-animation: flip-in 300ms ease-out forwards;;
+  -ms-animation: flip-in 300ms ease-out forwards;
+  -webkit-animation: flip-in 300ms ease-out forwards;
+
 }
 
 .flip-leave-active {
