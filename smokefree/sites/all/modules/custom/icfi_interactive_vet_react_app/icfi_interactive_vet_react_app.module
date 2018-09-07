@@ -6,7 +6,6 @@
 function icfi_interactive_vet_react_app_menu() {
   return [
     'veterans/tools-help-you-quit/quit-for-good-with-nrt' => [
-      'title' => 'Quit for Good with NRT',
       'page callback' => 'icfi_interactive_vet_react_app_page',
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
@@ -48,6 +47,7 @@ function icfi_interactive_vet_react_app_page() {
     ),
   );
   drupal_add_html_head($meta_description, 'meta_description');
+  drupal_set_title('Quit for Good with NRT');
   return [
     '#type' => 'markup',
     '#markup' => '<div id="root"></div>',
