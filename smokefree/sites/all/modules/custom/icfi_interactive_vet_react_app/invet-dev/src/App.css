@@ -8705,3 +8705,21 @@ invet .vet-nav-tabs li a:focus {
     margin-top: 7px;
   }
 }
+
+@media only screen and (min-width: 593px) and (max-width: 650px) {
+  .invet-app .col-md-6.gif-block {
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 991px) {
+  .invet-app .col-md-6.gif-block {
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (min-width: 593px) and (max-width: 991px) {
+  .invet-app .quote-block {
+    padding-left: 15% !important;
+  }
+}

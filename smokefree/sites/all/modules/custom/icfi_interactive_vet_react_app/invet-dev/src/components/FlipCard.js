@@ -63,7 +63,7 @@ class FlipCard extends Component {
             {
                 tipId: 7, 
                 tipTitle: 'NRT is designed to prevent addiction.', 
-                tipText: 'NRT delivers far less nicotine than cigarettes or smokeless tobacco products do, and it delivers nicotine much more slowly. That makes it less addictive. Most people find it easy to taper down and get off nicotine medicines after a few months.',
+                tipText: 'NRT is far less addictive than tobacco because it delivers less nicotine at a slower rate. Most people can taper down and stop using NRT after a few months.',
                 buttonText: 'START OVER',
                 next: 1
             },
