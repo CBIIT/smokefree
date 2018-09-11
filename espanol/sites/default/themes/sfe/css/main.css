@@ -1445,9 +1445,22 @@ SmokefreeTXT sign-up form styles
 	background: url(/sites/default/themes/sfe/images/footer/smokefree-ftr2-chat-46x34.png) #104d64 no-repeat;
 	margin: -40px -40px 20px -40px;
 	background-position-y: 1em;
-	background-position-x: 8.7em;
+	background-position-x: 9.7em;
 	padding: 30px 40px 20px 40px;
 	color: #fff;
+}
+#popup-message-window #popup-message-content .col-sm-5{
+	float: left;
+	width: 41%;
+}
+
+#popup-message-window #popup-message-content .col-sm-7 {
+	width: 58%;
+	display: inline-block;
+}
+
+#popup-message-window #popup-message-content .col-sm-12 {
+	padding-top: 15px;
 }
 
 #popup-message-window #popup-message-content .col-sm-7 p {
