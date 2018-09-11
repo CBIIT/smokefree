@@ -1405,3 +1405,31 @@ SmokefreeTXT sign-up form styles
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
+.live-chat-bar {
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.live-chat-bar {
+		position: fixed;
+		bottom: 0px;
+		z-index: 1001;
+	}
+
+	.live-chat-bar img {
+			padding: 0px;
+	}
+
+	.live-chat-bar button {
+			border: 0px;
+	}
+
+	.live-chat-bar footer {
+			padding-bottom: 9%;
+	}
+}
+
+@media (min-width: 601px) {
+	.live-chat-bar {display:none;}
+}
