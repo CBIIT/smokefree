@@ -1355,4 +1355,9 @@ else : ?>
 			<p>NIH...Transformaci&oacute;n de Descubrimientos de la Salud&reg;</p>
 		</div>
 	</div><!-- end page footer -->
+    <div class="live-chat-bar">
+        <form action="https://livehelp-es.cancer.gov/app/chat/chat_landing" id="live-chat-bar-form" method="POST"><input name="_icf_22" style="display: none;" value="91" type="text">
+            <a href="#" id="live-chat-bar-link" style=" padding: 0px; "><img class="img-responsive" alt="Chat online" src="/sites/default/themes/sfe/images/footer/chat-online-bar.png"></a>
+        </form>
+    </div>
 </div> <!-- end page container -->
