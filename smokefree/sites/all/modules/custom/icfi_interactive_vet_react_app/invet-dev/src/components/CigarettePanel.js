@@ -120,7 +120,7 @@ class CigarettePanel extends Component {
                                     <h4>TRY THESE NRTs<span className="red">*</span></h4>
                                     <div className="row">
                                         <div className="col-lg-4 col-md-5 col-sm-4">
-                                            <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={500} transitionLeave={false}>
+                                            <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={100} transitionLeave={false}>
                                                 <div key={this.state.data.key} className="circle gum-amount">{this.state.data.gum}</div>
                                                 <div className="solution-type"><b>Gum or Lozenge</b></div>
                                             </ReactCSSTransitionGroup>
@@ -129,7 +129,7 @@ class CigarettePanel extends Component {
                                             <div className="and"></div>
                                         </div>
                                         <div className="col-lg-4 col-md-5 col-sm-4">
-                                            <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={500} transitionLeave={false}>
+                                            <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={100} transitionLeave={false}>
                                                 <div key={this.state.data.key} className="circle patch-amount">{this.state.data.patch}</div>
                                                 <div className="solution-type"><b>Patch</b></div>
                                             </ReactCSSTransitionGroup>

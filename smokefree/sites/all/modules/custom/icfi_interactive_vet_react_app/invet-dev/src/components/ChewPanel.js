@@ -138,7 +138,7 @@ class ChewPanel extends Component {
         }
 
         const updateNRT = (amount) => {
-            if(this.state.currentTime === '5-mins' && amount === '1') {
+             if(this.state.currentTime === '5-mins' && amount === '1') {
                 this.setState({
                     data: {
                         gum: '2mg',
@@ -150,7 +150,7 @@ class ChewPanel extends Component {
             if(this.state.currentTime === '5-mins' && amount === '2-3') {
                 this.setState({
                     data: {
-                        gum: '4mg',
+                        gum: '2mg',
                         patch: '21mg',
                         key: 13
                     }
@@ -159,7 +159,7 @@ class ChewPanel extends Component {
             if(this.state.currentTime === '5-mins' && amount === 'More than 3') {
                 this.setState({
                     data: {
-                        gum: '2mg',
+                        gum: '4mg',
                         patch: '21mg',
                         key: 14
                     }
@@ -250,6 +250,7 @@ class ChewPanel extends Component {
 
         const updateAmountsUp = () => {
             if (this.state.amounts === '1') {
+                var nextAmount = '2-3';
                 this.setState({
                     amounts: '2-3',
                     currentAmount:'2-3',
@@ -258,6 +259,7 @@ class ChewPanel extends Component {
                 })
 
             }  if (this.state.amounts === '2-3') {
+                var nextAmount = 'More than 3';
                 this.setState({
                     amounts: 'More than 3',
                     currentAmount:'More than 3',
@@ -266,6 +268,7 @@ class ChewPanel extends Component {
                 })
 
             } if (this.state.amounts === 'More than 3') {
+                var nextAmount = '1';
                 this.setState({
                     amounts: '1',
                     currentAmount:'1',
@@ -273,11 +276,12 @@ class ChewPanel extends Component {
                     clickClassPrev: 'morethan3_cans_per_week',
                 })
             }
-            updateNRT(this.state.amounts);
+            updateNRT(nextAmount);
         }
 
         const updateAmountsDown = () => {
             if (this.state.amounts === '1') {
+                var prevAmount = 'More than 3';
                 this.setState({
                     amounts: 'More than 3',
                     currentAmount:'More than 3',
@@ -285,6 +289,7 @@ class ChewPanel extends Component {
                     clickClassNext: '1_cans_per_week',
                 })
             } if (this.state.amounts === '2-3') {
+                var prevAmount = '1';
                 this.setState({
                     amounts: '1',
                     currentAmount:'1',
@@ -292,6 +297,7 @@ class ChewPanel extends Component {
                     clickClassNext: '2-3_cans_per_week',
                 })
             } if (this.state.amounts === 'More than 3'){
+                var prevAmount = '2-3';
                 this.setState({
                     amounts: '2-3',
                     currentAmount:'2-3',
@@ -299,7 +305,7 @@ class ChewPanel extends Component {
                     clickClassNext: 'morethan3_cans_per_week',
                 })
             }
-            updateNRT(this.state.amounts);
+            updateNRT(prevAmount);
         }
 
 
@@ -351,7 +357,7 @@ class ChewPanel extends Component {
                                 <h4>TRY THESE NRTs<span className="red">*</span></h4>
                                 <div className="row">
                                     <div className="col-lg-4 col-md-5 col-sm-4">
-                                        <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={500} transitionLeave={false}>
+                                        <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={100} transitionLeave={false}>
                                             <div key={this.state.data.key} className="circle gum-amount">{this.state.data.gum}</div>
                                             <div className="solution-type"><b>Gum or Lozenge</b></div>
                                         </ReactCSSTransitionGroup>
@@ -360,7 +366,7 @@ class ChewPanel extends Component {
                                         <div className="and"></div>
                                     </div>
                                     <div className="col-lg-4 col-md-5 col-sm-4">
-                                        <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={500} transitionLeave={false}>
+                                        <ReactCSSTransitionGroup component="div" className="solution-wrapper" transitionName="fade" transitionEnterTimeout={100} transitionLeave={false}>
                                             <div key={this.state.data.key} className="circle patch-amount">{this.state.data.patch}</div>
                                             <div className="solution-type"><b>Patch</b></div>
                                         </ReactCSSTransitionGroup>
