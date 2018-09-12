@@ -63,7 +63,7 @@ function icfi_txt_signup_webform_remote_post_repost_alter(&$payload, $target) {
 
   // SF-790 & SOW-565
   switch ($target['label']) {
-    case 'Sign up for SmokefreeTXT':
+    case 'SmokefreeTXT':
       $allowed_utm_params = array('alias', 'video', 'display');
       $cdc_parameter = strtolower($_GET['utm_medium']);
       if (isset($cdc_parameter) && in_array($cdc_parameter, $allowed_utm_params)) {
