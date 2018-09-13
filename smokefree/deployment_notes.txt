@@ -1,3 +1,9 @@
+Smokefree 1.37 2018-09-13
+-----------------------
+- Improvements to interactive vet application
+- Fixing bug with adult text form
+- URL changes to ETC page
+
 Smokefree 1.36 2018-09-06
 -----------------------
 - Interactive vet application
