@@ -40,5 +40,9 @@
 			}
 			return false;
 		});
+        //Livechat redirect
+        $("#live-chat-bar-link img").click(function() {
+            $("#live-chat-bar-form").submit();
+        });
 	});
 }) (jQuery);
