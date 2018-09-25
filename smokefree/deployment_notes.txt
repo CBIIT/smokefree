@@ -1,3 +1,8 @@
+Smokefree 1.38 2018-09-25
+-----------------------
+- Changing search URL for espanol
+- Adding the popup and stick livechat bar
+
 Smokefree 1.37 2018-09-13
 -----------------------
 - Improvements to interactive vet application
