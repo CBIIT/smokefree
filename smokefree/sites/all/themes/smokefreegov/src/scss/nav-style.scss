@@ -202,7 +202,7 @@ Search Bar styles at the top, Search Results page below
 			cursor: pointer;
 			outline: 0;
 			float: left;
-			background-color: #087599;
+			background-color: #087599 !important;
 			color:#FFFFFF;
 			border: none;
 			font-family: "Montserrat", "Times New Roman", Times, Georgia, serif !important;
@@ -217,7 +217,7 @@ Search Bar styles at the top, Search Results page below
 		}
 		button.btn-submit:focus,
 		button.btn-submit:hover {
-			background-color: #064d80;
+			background-color: #064d80 !important;
 		}
 		button.btn-close {
 			box-shadow: none;
