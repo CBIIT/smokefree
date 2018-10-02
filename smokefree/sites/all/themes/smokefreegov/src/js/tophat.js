@@ -6,6 +6,8 @@
       $("nav.TopHat #toggle-btn").once().click(function() {
         if($("nav.TopHat #toggle-btn").hasClass('collapsed')){
           Drupal.behaviors.expandTopHat();
+          // This pushes the menu below the expanded tophat
+          $('.navbar-default').css('height', 'auto');
         }
         else {
           Drupal.behaviors.collapseTopHat();
