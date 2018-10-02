@@ -1,16 +1,17 @@
 ( function($) {
 	$(document).ready(function() {
-        
-        // Header Affix
+
         var iScrollPos = 0;
         $(window).scroll(function () {
             var iCurScrollPos = $(this).scrollTop();
             if (iCurScrollPos > iScrollPos) {
                 //Scrolling Down
-                $('#tophat').addClass('minimized');
+                $('.TopHat').addClass('minimized');
+                $('#nav-bar-header').addClass('sf-navbar-fixed');
             } else {
                 //Scrolling Up
-                $('#tophat').removeClass('minimized');
+                $('.TopHat').removeClass('minimized');
+                $('#nav-bar-header').removeClass('sf-navbar-fixed');
             }
             iScrollPos = iCurScrollPos;
         });
@@ -39,19 +40,6 @@
         }, function() {
             $(this).find('.dropdown-menu').stop(true, true).fadeOut(200);
             $(this).toggleClass('open');
-        });
-        
-        $(window).scroll(function () {
-            //if you hard code, then use console
-            //.log to determine when you want the
-            //nav bar to stick.
-            // console.log($(window).scrollTop())
-            if ($(window).scrollTop() > 47) {
-                $('#sfg-nav-bar-menu').addClass('sf-navbar-fixed');
-            }
-            if ($(window).scrollTop() < 48) {
-                $('#sfg-nav-bar-menu').removeClass('sf-navbar-fixed');
-            }
         });
         
         $('#sfg-nav-bar-menu .ss-navbar-desktop ul#superfish-2 > li').hover(

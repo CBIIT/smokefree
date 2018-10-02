@@ -1,6 +1,7 @@
 <div class="container-page">
   <?php $path = request_path(); ?>
   <?php $active_site = strpos($path, 'veterans') === FALSE ? 'gov': 'vet';  ?>
+    <div class="affix">
     <nav class="navbar navbar-default TopHat sf-<?php print $active_site; ?>">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -57,7 +58,6 @@
           <?php endif; ?>
       </div></div></div></div>
 
-
     <div id="bg-container">
     <div id="bg-photo"></div>
   </div>
@@ -97,7 +97,7 @@
           </form>
       </div>
   </div>
-
+    </div>
 
   <!--  mobile navigation display -->
 
