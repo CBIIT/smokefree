@@ -322,8 +322,8 @@ class ChewPanel extends Component {
                         <div className="spacer-10"></div>
                         <div className="row">
                             <div className="col-xs-3">
-                                <button onClick={updateAmountsDown.bind(this)} className={'btn-invet btn-default btn-minus ' + this.state.clickClassPrev}>
-                                    <span className="glyphicon glyphicon-minus"></span>
+                                <button onClick={updateAmountsDown.bind(this)} className="btn-invet btn-default btn-minus">
+                                    <span className={this.state.clickClassPrev + ' glyphicon glyphicon-minus'}></span>
                                     <span className="sr-only">Minus</span>
                                 </button>
                             </div>
@@ -331,8 +331,8 @@ class ChewPanel extends Component {
                                 <div className="smokeless-amount">{this.state.currentAmount}</div>
                             </div>
                             <div className="col-xs-3">
-                                <button onClick={updateAmountsUp.bind(this)} className={'btn-invet btn-default btn-plus pull-right ' + this.state.clickClassNext}>
-                                    <span className="glyphicon glyphicon-plus"></span>
+                                <button onClick={updateAmountsUp.bind(this)} className="btn-invet btn-default btn-plus pull-right">
+                                    <span className={this.state.clickClassPrev + ' glyphicon glyphicon-plus'}></span>
                                     <span className="sr-only">Plus</span>
                                 </button>
                             </div>
