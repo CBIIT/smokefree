@@ -1,20 +1,22 @@
 ( function($) {
 	$(document).ready(function() {
-
-        var iScrollPos = 0;
-        $(window).scroll(function () {
-            var iCurScrollPos = $(this).scrollTop();
-            if (iCurScrollPos > iScrollPos) {
-                //Scrolling Down
-                $('.TopHat').addClass('minimized');
-                $('#nav-bar-header').addClass('sf-navbar-fixed');
-            } else {
-                //Scrolling Up
-                $('.TopHat').removeClass('minimized');
-                $('#nav-bar-header').removeClass('sf-navbar-fixed');
+        // Show or hide tophat on scroll
+        var lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            var st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > 70) {
+                if (st > lastScrollTop) {
+                    //Scrolling Down
+                    $('.TopHat').addClass('minimized');
+                    $('#nav-bar-header').addClass('sf-navbar-fixed');
+                } else {
+                    //Scrolling Up
+                    $('.TopHat').removeClass('minimized');
+                    $('#nav-bar-header').removeClass('sf-navbar-fixed');
+                }
+                lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
             }
-            iScrollPos = iCurScrollPos;
-        });
+        }, false);
 // ************** Dark Overlay Functions **************
         function open_overlay() {
             $(document.createElement('div'))
