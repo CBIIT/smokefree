@@ -604,4 +604,25 @@ display: block;
   box-shadow: 0 5px 10px rgba(26,26,26,0.2);
 }
 
+.affix {
+  z-index: 206;
+  position: fixed;
+  width: 100%;
+}
+
+.minimized {
+  height: 2px !important;
+  transition: height 0.2s ;
+  .navbar-default, .navbar-nav {
+    height: 2px;
+    transition: height 1s ease-out;
+  }
+  .TopHat {
+    z-index: 0;
+  }
+}
+
+.main-container {
+  padding-top: 114px !important;
+}
 
