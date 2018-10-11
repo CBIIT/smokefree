@@ -463,13 +463,13 @@ if (in_array('help.quitlinesVet', $form['choices']['#value']['extra_help'])) {
 if (in_array('help.livehelp', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.liveHelp">
                 <h4>NCI LiveHelp</h4>
-                <p>Get help quitting through an online chat with a smoking cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
+                <p>Get help quitting through an online chat with a smoking cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 9:00 a.m. to 9:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
             </div>';
 }
 if (in_array('help.livehelpVet', $form['choices']['#value']['extra_help'])) {
   $html .= '<div id="get.help.liveHelp">
                 <h4>NCI LiveHelp</h4>
-                <p>Get help quitting through an online chat with a tobacco cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 8:00 a.m. to 11:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
+                <p>Get help quitting through an online chat with a tobacco cessation counselor. LiveHelp (<a href="https://livehelp.cancer.gov/app/chat/chat_launch">https://livehelp.cancer.gov/app/chat/chat_launch</a>) is offered Monday through Friday, 9:00 a.m. to 9:00 p.m. Eastern Time. Visit the NCI LiveHelp page to chat with a counselor. </p>
             </div>';
 }
 $html .= '
