@@ -1,0 +1,55 @@
+<?php
+
+/**
+* Implements hook_menu().
+*/
+function icf_lgbt_app_menu() {
+  return [
+    'lgbt-and-smoking-1' => [
+      'page callback' => 'icf_lgbt_react_app_page',
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    ]
+  ];
+}
+
+/**
+ * Callback for hook_menu()
+ *
+ * Loads the necessary react css and js files
+ */
+function icf_lgbt_react_app_page() {
+  $base_assets_path = drupal_get_path('module', 'icf_lgbt_app');
+  $css_files = glob($base_assets_path. '/build/static/css/*.css');
+  $js_files = glob($base_assets_path. '/build/static/js/*.js');
+  foreach ($css_files as $css_file) {
+    drupal_add_css($css_file, array(
+      'scope' => 'footer',
+      'group' => CSS_THEME,
+      'every_page' => TRUE,
+      'weight' => -2,
+    ));
+  }
+  foreach ($js_files as $js_file) {
+    drupal_add_js($js_file, array(
+      'scope' => 'footer',
+      'group' => JS_THEME,
+      'every_page' => TRUE,
+      'weight' => -2,
+    ));
+  }
+  // create the og:description tag
+  $meta_description = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'description',
+      'content' => 'LGBT & Smoking',
+    ),
+  );
+  drupal_add_html_head($meta_description, 'meta_description');
+  drupal_set_title('LGBT & Smoking');
+  return [
+    '#type' => 'markup',
+    '#markup' => '<div id="root"></div>',
+  ];
+}
