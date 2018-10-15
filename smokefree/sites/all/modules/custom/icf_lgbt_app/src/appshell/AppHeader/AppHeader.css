@@ -1,0 +1,51 @@
+
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 65px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: left;
+}
+.highLight{
+    color: #ffd02d;
+}
+
+
+.appheader{
+    background-image: url('/sites/all/modules/custom/icf_lgbt_app/src/assets/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 650px;
+}
+.mobileHead{
+    display: none;
+}
+.heroImg{
+    padding-right: 10px;
+}
+
+@media screen and (max-width:991px){
+    h1{
+        font-size: 8vw;
+    }
+    .heroImg{
+        max-width: 120px;
+    }
+    .appheader{
+        background-image: none;
+        background-color: #FB2AA0;
+        min-height: auto;
+
+    }
+    .mobileHead{
+        display:block;
+        width: 100%;
+        height: auto;
+    }
+
+    .mobileHide{
+        display: none;
+    }
+}

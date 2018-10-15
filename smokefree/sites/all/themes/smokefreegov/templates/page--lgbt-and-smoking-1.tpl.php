@@ -74,11 +74,7 @@
  */
 ?>
 
-<div class="main-container <?php print $container_class; ?>">
-
-  <div class="row col-sm-12">
-
-    <section class="col-sm-12">
+<div class="lgbt">
           <?php if (!empty($page['highlighted'])): ?>
             <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
           <?php endif; ?>
@@ -100,10 +96,6 @@
             <?php print render($page['content']); ?>
           </div>
           <?php print render($page['below_content']); ?>
-
-    </section>
-
-  </div>
 </div>
 
 <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/' . $footer_filename; ?>
