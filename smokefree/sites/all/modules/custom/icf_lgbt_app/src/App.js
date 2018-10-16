@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AppHeader from './appshell/AppHeader/AppHeader.js';
+import AppFooter from './appshell/AppFooter/AppFooter.js';
 import LearnAbout from './appshell/LearnAbout/LearnAbout.js';
 import TryAnApp from './appshell/TryAnApp/TryAnApp.js';
 import SmokefreeTXT from './appshell/SmokefreeTXT/SmokefreeTXT.js';
@@ -46,6 +47,7 @@ class App extends Component {
             </Col>
           </Row>
         </Grid>
+        <AppFooter/>
       </div>
      
     );

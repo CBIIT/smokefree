@@ -30,7 +30,7 @@ class AppHeader extends Component {
             </Row>
             <Row>
               <Col xs={12}>
-              <h1>We are <br className="mobileHide"/><span className="highLight">strong <br className="mobileHide"/>enough</span> <br className="mobileHide"/>to quit</h1>
+              <h1>I am <br className="mobileHide"/><span className="highLight">strong <br className="mobileHide"/>enough</span> <br className="mobileHide"/>to quit</h1>
               </Col>
             </Row>
            
