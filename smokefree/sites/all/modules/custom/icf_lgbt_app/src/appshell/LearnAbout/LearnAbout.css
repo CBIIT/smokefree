@@ -6,21 +6,6 @@
     min-height: 535px;
 }
 
-.learnabout .button{
-    width: 100%;
-    border: 1px solid #000000;
-    padding: 15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: left;
-    position: relative;
-    transition: all 0.1s ease-in;
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-}
 .learnabout .button:hover{
     font-size: 19px;
     color: #ffffff;

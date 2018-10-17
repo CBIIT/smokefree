@@ -10,12 +10,18 @@ h2{
   color: #000000;
   text-transform: uppercase;
   text-align: left;
+  padding-bottom: 0 !important;
 }
 p{
   font-family: 'Roboto', sans-serif !important;
   text-align: left !important;
   font-size: 18px !important;
   line-height: 28px !important;
+  padding-bottom: 20px;
+}
+span.ext{
+  background: none !important;
+  width: 0 !important;
 }
 .container {
   padding-right: 15px !important;
@@ -68,4 +74,30 @@ footer{
 footer .col-lg-12{
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+
+.button{
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  position: relative;
+  transition: all 0.1s ease-in;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: block !important;
+  text-decoration: none !important;
+}
+
+.buttonText{
+  z-index: 10;
+  display:block; 
+  position:relative;
+  text-decoration: none !important;
 }
