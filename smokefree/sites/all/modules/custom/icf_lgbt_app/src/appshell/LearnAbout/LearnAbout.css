@@ -5,10 +5,13 @@
     padding: 15px;
     min-height: 535px;
 }
+.learnabout a{
+    color: #333333 !important;
+}
 
 .learnabout .button:hover{
     font-size: 19px;
-    color: #ffffff;
+    color: #ffffff !important;
     border: 2px solid #000000;
 }
 .learnabout .button:before{

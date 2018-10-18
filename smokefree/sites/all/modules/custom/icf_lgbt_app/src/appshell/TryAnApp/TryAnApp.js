@@ -10,10 +10,14 @@ class TryAnApp extends Component {
         <div className="stores">
           <Row>
             <Col xs={6} md={12}>
+            <a href="https://itunes.apple.com/app/apple-store/id494552000?pt=564700&ct=ThisFreeLife&mt=8" target="_blank">
             <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/apple-store.png" width="200" height="auto"  alt="apple store" className="storeButton" />
+            </a>
             </Col>
             <Col xs={6} md={12}>
+            <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitstart&referrer=utm_source%3DSmokefreeGov%26utm_medium%3DWebsite%26utm_campaign%3DThisFreeLife" target="_blank">
             <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/google-play.png" width="200" height="auto"  alt="google play" className="storeButton" />
+            </a>
             </Col>
           </Row>
         </div>

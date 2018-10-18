@@ -19,7 +19,7 @@ class AppHeader extends Component {
         <Grid>
          
         <Row className="show-grid">
-          <Col xs={12} md={4}>
+          <Col xs={12} md={5}>
             <Row>
               <FlexView vAlignContent="center" width="100%" marginTop="20px" marginLeft="15px">
               <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/smokefree-logo.png" width="164" height="auto" className="heroImg" alt="Smokefree-logo" />
