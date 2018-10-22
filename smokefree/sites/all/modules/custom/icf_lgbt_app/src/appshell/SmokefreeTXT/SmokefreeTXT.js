@@ -3,6 +3,7 @@ import './SmokefreeTXT.css';
 import 'react-bootstrap/dist/react-bootstrap';
 import {Row, Col} from 'react-bootstrap/lib';
 import FlexView from 'react-flexview';
+import { DefaultButton } from '../../components/Button/Button';
 class SmokefreeTXT extends Component {
     render() {
       return (
@@ -14,7 +15,7 @@ class SmokefreeTXT extends Component {
           <input type="text" className="txtInput" placeholder="Phone Number"></input>
           </Col>
           <Col xs={12} md={4} lg={3}>
-          <a className="button" href="#" target="_blank"><span className="buttonText">Start Now</span></a>
+          <DefaultButton href="#" text="Start Now"/>
           </Col>
           <Col xs={12}>
           <p className="unsubscribe">To unsubscribe text STOP to 47848</p>

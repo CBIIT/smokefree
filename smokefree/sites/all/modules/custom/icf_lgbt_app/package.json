@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://kpongyu.github.io/smokefree",
   "dependencies": {
+    "@types/react-addons-css-transition-group": "^15.0.5",
     "gh-pages": "^2.0.0",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
