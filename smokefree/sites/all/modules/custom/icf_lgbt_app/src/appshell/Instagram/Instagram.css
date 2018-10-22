@@ -2,10 +2,11 @@
     background: #00ff00;
     border: #1788f8 5px solid;
     padding: 15px;
-    min-height: 535px;
+    min-height: 625px;
 }
 .instagram-section img{
     transition:all 0.3s ease;
+    margin: 0 auto;
 }
 .instagram-section:hover img{
     transform: scale(0.98);
@@ -13,6 +14,7 @@
 .instagram-section a{
     color: #333333 !important;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .instagram-section .button:hover{

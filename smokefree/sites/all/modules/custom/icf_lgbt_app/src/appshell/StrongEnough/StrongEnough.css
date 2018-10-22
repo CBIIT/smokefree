@@ -1,0 +1,44 @@
+.strongEnough{
+    background: url("/sites/all/modules/custom/icf_lgbt_app/src/assets/strong-enough-bg.png");
+    background-size: cover;
+    border: #2bfed3 5px solid;
+    padding: 15px;
+    min-height: 535px;
+    position: relative;
+    overflow: hidden;
+    min-height: 626px;
+    transition: all 0.3s ease;
+}
+.strongEnough a{
+    color: #333333 !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+.strongEnough .brush{
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    transition: all 0.3s ease;
+    
+}
+.strongEnough:hover .brush{
+    left: -85px !important;
+}
+@media screen and (max-width:991px){
+    .strongEnough{
+        background: #fc2a9f !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .strongEnough .brush{
+        left: -15vh !important;
+    }
+}
+@media screen and (max-width:780px){
+    .strongEnough{
+        min-height: auto !important;
+    }
+}
