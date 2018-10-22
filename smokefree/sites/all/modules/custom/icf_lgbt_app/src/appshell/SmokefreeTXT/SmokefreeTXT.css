@@ -7,7 +7,7 @@
     position: relative;
     overflow: hidden;
     transition: all 0.2s ease;
-    min-height: 460px;
+    min-height: 470px;
 }
 
 
@@ -51,7 +51,7 @@
 }
 .txt .button:hover{
     font-size: 19px;
-    color: #ffffff !important;
+    color: #333333 !important;
     border: 2px solid #000000;
 }
 .txt .button{

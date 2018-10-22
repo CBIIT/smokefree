@@ -6,7 +6,7 @@
   "dependencies": {
     "@types/react-addons-css-transition-group": "^15.0.5",
     "gh-pages": "^2.0.0",
-    "react": "^16.5.2",
+    "react": "^16.0.0",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-flexview": "^4.0.1",

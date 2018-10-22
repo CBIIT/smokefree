@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class FlipCard extends Component {
     constructor() {
         super();
-        this.state = {
+        this.stateFront = {
             tips:{
                 tipId: 1, 
                 tipTitle: 'NRT works.', 
@@ -12,6 +12,16 @@ class FlipCard extends Component {
                 buttonText: 'NEXT FACT',
                 counter: 1,
                 next: 2
+            }
+        }
+        this.stateBack = {
+            tips:{
+                tipId: 2, 
+                tipTitle: 'NRT helps with tough cravings.', 
+                tipText: 'The worst withdrawal symptoms usually last only a few days to a couple of weeks. NRT can help make these symptoms less intense.', 
+                buttonText: 'NEXT FACT',
+                counter: 2,
+                next: 3
             }
         }
     }
@@ -71,9 +81,9 @@ class FlipCard extends Component {
     }
 
     const nextFact = (e) => {
-        if(this.state.tips.tipId <= 6) {
+        if(this.stateFront.tips.tipId <= 6) {
             this.setState({
-                tips: tipsData.tips[0 + this.state.tips.tipId],
+                tips: tipsData.tips[0 + this.stateFront.tips.tipId],
             })
         } else {
             this.setState({
@@ -87,15 +97,27 @@ class FlipCard extends Component {
         <div className="col-md-6 col-md-offset-1">
         <div id="flip-card">
             <ReactCSSTransitionGroup component="div" className="card" transitionName="flip" transitionEnterTimeout={300} transitionLeave={false}>
-                <div key={this.state.tips.tipId} className="front">
+                <div key={this.stateFront.tips.tipId} className="front">
                     <div className="ticker">
-                        FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
+                        FACT <span className="flip-card-current">{this.stateFront.tips.tipId}</span>/<span className="flip-card-total">7</span>
                     </div> 
                     <div className="flip-card-wrapper">
-                        <h3 className="flip-card-title">{this.state.tips.tipTitle}</h3>
-                        <p className="flip-card-content">{this.state.tips.tipText}</p>
+                        <h3 className="flip-card-title">{this.stateFront.tips.tipTitle}</h3>
+                        <p className="flip-card-content">{this.stateFront.tips.tipText}</p>
                     </div> 
-                    <button onClick={nextFact} className={'btn-invet btn-default btn-center btn-flip fact_' + this.state.tips.next}>{this.state.tips.buttonText}</button>
+                    <button onClick={nextFact} className={'btn-invet btn-default btn-center btn-flip fact_' + this.stateFront.tips.next}>{this.stateFront.tips.buttonText}</button>
+                </div> 
+
+
+                <div key={this.stateBack.tips.tipId} className="back">
+                    <div className="ticker">
+                        FACT <span className="flip-card-current">{this.stateBack.tips.tipId}</span>/<span className="flip-card-total">7</span>
+                    </div> 
+                    <div className="flip-card-wrapper">
+                        <h3 className="flip-card-title">{this.stateBack.tips.tipTitle}</h3>
+                        <p className="flip-card-content">{this.stateBack.tips.tipText}</p>
+                    </div> 
+                    <button onClick={nextFact} className={'btn-invet btn-default btn-center btn-flip fact_' + this.stateBack.tips.next}>{this.stateBack.tips.buttonText}</button>
                 </div> 
             </ReactCSSTransitionGroup> 
         </div> 
