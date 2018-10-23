@@ -4,23 +4,16 @@ import 'react-bootstrap/dist/react-bootstrap';
 import {Row, Col} from 'react-bootstrap/lib';
 import FlexView from 'react-flexview';
 import { DefaultButton } from '../../components/Button/Button';
+import PhoneForm from '../../components/Form/Form';
+
+
 class SmokefreeTXT extends Component {
     render() {
       return (
         <div className="txt">
         <div className="brush">
         <FlexView vAlignContent="center" width="100%">
-        <Row className="txtInputRow">
-          <Col xs={12} md={8} lg={9}>
-          <input type="text" className="txtInput" placeholder="Phone Number"></input>
-          </Col>
-          <Col xs={12} md={4} lg={3}>
-          <DefaultButton href="#" text="Start Now"/>
-          </Col>
-          <Col xs={12}>
-          <p className="unsubscribe">To unsubscribe text STOP to 47848</p>
-          </Col>
-        </Row>
+        <PhoneForm/>
         </FlexView>
         </div>
           <Row >
