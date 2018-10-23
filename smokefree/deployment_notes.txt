@@ -1,3 +1,7 @@
+Smokefree 1.38 2018-10-25
+-----------------------
+- Updating Drupal core to 7.60
+
 Smokefree 1.38 2018-09-25
 -----------------------
 - Changing search URL for espanol
