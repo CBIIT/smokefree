@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Form.css'
 import {Row, Col} from 'react-bootstrap/lib';
+import jQuery from 'jquery'
 
 class PhoneForm extends React.Component {
     constructor(props) {
@@ -52,27 +53,25 @@ class PhoneForm extends React.Component {
     }
   
     handleSubmit(event) {
-      if (this.handleValidation(this.state.value)){
-        alert(this.state.value);
-        fetch('https://secure.mcommons.com/profiles/join', {
-          method: 'POST',
-          headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-          },
-          body: 
-              JSON.stringify({
+      if (this.handleValidation(this.state.value)) {
+          const myPost = {
               opt_in_path: 'OP0ADA4EE89DEE0B00D21080E885429007',
-              person_phone: this.state.value
-              }),
-      }).then(
-        response => {
-          if (response.status >= 200 && response.status < 300) {
-             console.log(response);
-            } else {
-             console.log('Somthing happened wrong');
-            }
-      }).catch(err => err);}
+              person_phone: this.state.value,
+          }
+
+          var request = jQuery.ajax({
+              url: 'https://secure.mcommons.com/profiles/join',
+              type: "POST",
+              data: myPost,
+              dataType: "html"
+          });
+          request.done(function(msg) {
+              // success
+          });
+          request.fail(function(jqXHR, textStatus) {
+             // failed
+          });
+      }
 
       else{
         event.preventDefault();
@@ -83,15 +82,12 @@ class PhoneForm extends React.Component {
   
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-
-
         <Row className="txtInputRow">
           <Col xs={12} md={8}>
           <input type="text" className="txtInput" placeholder="Phone Number" value={this.state.value} onChange={this.handleChange}></input>
           </Col>
           <Col xs={12} md={4}>
-          <button disabled={this.state.disabled} type="submit" className="button submit"> <span className="buttonText">START NOW</span></button>
+          <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">START NOW</span></button>
           </Col>
           <Col xs={12}>
           <p className="alert">{this.state.alert}</p>
@@ -99,7 +95,6 @@ class PhoneForm extends React.Component {
           </Col>
         </Row>
 
-        </form>
       );
     }
   }
