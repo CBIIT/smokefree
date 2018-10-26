@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Form.css'
 import {Row, Col} from 'react-bootstrap/lib';
 
-
 class PhoneForm extends React.Component {
     constructor(props) {
       super(props);
@@ -38,7 +37,10 @@ class PhoneForm extends React.Component {
        }
 
     }
-  
+
+
+
+
     handleChange(event) {
       var message = event.target.value;
       this.setState({value: event.target.value});
@@ -50,13 +52,34 @@ class PhoneForm extends React.Component {
     }
   
     handleSubmit(event) {
-
       if (this.handleValidation(this.state.value)){
-        alert('Phone was submitted: ' + this.state.value);
-      }else{
+        alert(this.state.value);
+        fetch('https://secure.mcommons.com/profiles/join', {
+          method: 'POST',
+          headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+          },
+          body: 
+              JSON.stringify({
+              opt_in_path: 'OP0ADA4EE89DEE0B00D21080E885429007',
+              person_phone: this.state.value
+              }),
+      }).then(
+        response => {
+          if (response.status >= 200 && response.status < 300) {
+             console.log(response);
+            } else {
+             console.log('Somthing happened wrong');
+            }
+      }).catch(err => err);}
+
+      else{
         event.preventDefault();
       }
     }
+
+   
   
     render() {
       return (
