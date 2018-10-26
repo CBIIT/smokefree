@@ -12,7 +12,12 @@
     border-color: #777474;
 }
 .alert{
-    color: #651943;
     padding: 0 !important;
     margin: 0 !important;
+}
+.pass{
+    color: #0B6623 !important;
+}
+.unpass{
+    color: #651943;
 }

@@ -10,7 +10,8 @@ class PhoneForm extends React.Component {
           value: '', 
           alert: '',
           unsubscribe:'To unsubscribe text STOP to 47848',
-          disabled: true};
+          disabled: true,
+          pass: 0};
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -64,12 +65,23 @@ class PhoneForm extends React.Component {
               type: "POST",
               data: myPost,
               dataType: "html"
-          });
-          request.done(function(msg) {
-              // success
-          });
-          request.fail(function(jqXHR, textStatus) {
+          }).done(
+            ({data}) => {
+              this.setState({
+                pass: 1,
+                alert: "thanks for joining SmokefreeTXT!"
+               
+              })
+            }
+
+
+          ).fail(function(jqXHR, textStatus) {
              // failed
+             ({data}) => {
+              this.setState({
+                alert: "Sorry we cannot add you at the time",
+              })
+            }
           });
       }
 
@@ -90,7 +102,7 @@ class PhoneForm extends React.Component {
           <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">START NOW</span></button>
           </Col>
           <Col xs={12}>
-          <p className="alert">{this.state.alert}</p>
+          <p className={`alert ${this.state.pass? 'pass' : 'unpass'}`}>{this.state.alert}</p>
           <p className="unsubscribe">{this.state.unsubscribe}</p>
           </Col>
         </Row>
