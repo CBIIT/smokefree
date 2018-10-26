@@ -1,0 +1,24 @@
+.button{
+    width: 100%;
+    border: 1px solid #000000;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    position: relative;
+    transition: all 0.1s ease-in;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: block !important;
+    text-decoration: none !important;
+  }
+
+  .buttonText{
+    z-index: 10;
+    display:block; 
+    position:relative;
+    text-decoration: none !important;
+  }

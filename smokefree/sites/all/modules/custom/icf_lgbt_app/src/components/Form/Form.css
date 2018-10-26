@@ -1,0 +1,18 @@
+.submit{
+    display: inline-block;
+    width: 100% !important;
+    height: auto !important;
+    padding: 15px 12px !important;
+    background: none;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+.submit:disabled{
+    color: #777474 !important;
+    border-color: #777474;
+}
+.alert{
+    color: #651943;
+    padding: 0 !important;
+    margin: 0 !important;
+}
