@@ -9,8 +9,8 @@ class FlipCard extends Component {
         this.state = {
             tips:{
                 tipId: 1, 
-                tipTitle: 'Be Kind', 
-                tipText: 'Doing something nice for others helps reduce your stress.',
+                tipTitle: 'Take 5 Deep Breaths', 
+                tipText: 'Breathe slowly\u2014in through your nose, out through your mouth.',
                 buttonText: 'NEXT FACT',
                 counter: 1,
                 next: 2,
@@ -23,51 +23,66 @@ class FlipCard extends Component {
         tips:[
             {
                 tipId: 1, 
-                tipTitle: 'Be Kind', 
-                tipText: 'Doing something nice for others helps reduce your stress.',
+                tipTitle: 'Take 5 Deep Breaths', 
+                tipText: 'Breathe slowly\u2014in through your nose, out through your mouth.',
                 buttonText: 'NEXT FACT',
                 next: 2,
                 flipped: 1
             },
             {
                 tipId: 2, 
-                tipTitle: 'Lorem Ipsum 2', 
-                tipText: 'Maecenas aliquet libero in erat congue, sed volutpat nisi ultrices. ', 
+                tipTitle: 'Talk to a Friend', 
+                tipText: 'You don’t have to deal with tough times alone.', 
                 buttonText: 'NEXT FACT',
                 next: 3,
                 flipped: 1
             },
             {
                 tipId: 3, 
-                tipTitle: 'Lorem Ipsum 3', 
-                tipText: 'NMorbi vel neque vitae magna rutrum congue non eu ligula.', 
+                tipTitle: 'Break a Sweat', 
+                tipText: 'Exercise releases endorphins, which naturally boost your mood.', 
                 buttonText: 'NEXT FACT',
                 next: 4,
                 flipped: 1
             },
             {
                 tipId: 4, 
-                tipTitle: 'Lorem Ipsum 4', 
-                tipText: 'Suspendisse pulvinar vestibulum nisl sit amet vehicula.', 
+                tipTitle: 'Treat Yourself', 
+                tipText: 'Enjoy a hot bath, your favorite meal, or something else you love.', 
                 buttonText: 'NEXT FACT',
                 next: 5,
                 flipped: 1
             },
             {
                 tipId: 5, 
-                tipTitle: 'Lorem Ipsum 5', 
-                tipText: 'Mauris maximus leo purus, nec faucibus velit elementum eget.', 
-                buttonText: 'START OVER',
+                tipTitle: 'Write it Down', 
+                tipText: 'Journaling can reduce stress\u2014try focusing on the positive.', 
+                buttonText: 'NEXT FACT',
                 next: 6,
                 flipped: 1
             },
-           
+            {
+                tipId: 6, 
+                tipTitle: 'Laugh Out Loud', 
+                tipText: 'Watch funny YouTube videos when you need a good laugh.', 
+                buttonText: 'NEXT FACT',
+                next: 7,
+                flipped: 1
+            },
+            {
+                tipId: 7, 
+                tipTitle: 'Stay in the Moment', 
+                tipText: 'Practice mindfulness with a guided meditation app.', 
+                buttonText: 'START OVER',
+                next: 1,
+                flipped: 1
+            },
         ]
     }
 
     const nextFact = (e) => {
         
-        if(this.state.tips.tipId <= 4) {
+        if(this.state.tips.tipId <= 6) {
             this.setState({
                 tips: tipsData.tips[0 + this.state.tips.tipId],
             })
@@ -92,7 +107,7 @@ class FlipCard extends Component {
                         <Col className="removePadding" xs={8}><h3 className="flip-card-title">{this.state.tips.tipTitle}</h3></Col>
                         <Col className="removePadding" xs={4}>
                         <div className="ticker">
-                        FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">5</span>
+                        FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
                         </div> 
                         </Col>
                     </Row>
