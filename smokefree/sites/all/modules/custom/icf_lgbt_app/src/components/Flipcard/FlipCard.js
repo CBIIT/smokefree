@@ -27,7 +27,7 @@ class FlipCard extends Component {
                 tipText: 'Doing something nice for others helps reduce your stress.',
                 buttonText: 'NEXT FACT',
                 next: 2,
-                flipped: 0
+                flipped: 1
             },
             {
                 tipId: 2, 
