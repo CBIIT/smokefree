@@ -1,0 +1,39 @@
+.learnabout{
+    background: url("/sites/all/modules/custom/icf_lgbt_app/src/assets/learn-about-bg.png");
+    background-size: cover;
+    border: #9f48f9 5px solid;
+    padding: 15px;
+    min-height: 535px;
+}
+.learnabout a{
+    color: #333333 !important;
+}
+
+.learnabout .button:hover{
+    color: #ffffff !important;
+    border: 2px solid #000000;
+}
+.learnabout .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #9f48f9;
+    border-left: 20px solid transparent;
+    transition: all 0.1s ease-in;
+}
+.learnabout .button:hover:before{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: #9f48f9;
+}
+.buttonText{
+    z-index: 10;
+    display:block; 
+    position:relative;
+}

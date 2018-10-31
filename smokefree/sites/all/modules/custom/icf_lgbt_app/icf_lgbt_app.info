@@ -1,0 +1,4 @@
+name = LGBT App
+core = 7.x
+package = ICFI Custom
+version = 7.x-1.0

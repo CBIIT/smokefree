@@ -1,0 +1,43 @@
+.instagram-section{
+    background: #00ff00;
+    border: #1788f8 5px solid;
+    padding: 15px;
+    min-height: 625px;
+}
+.instagram-section img{
+    transition:all 0.3s ease;
+    margin: 0 auto;
+}
+.instagram-section:hover img{
+    transform: scale(0.98);
+}
+.instagram-section a{
+    color: #333333 !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.instagram-section .button:hover{
+    font-size: 19px;
+    color: #ffffff !important;
+    border: 2px solid #000000;
+}
+.instagram-section .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #1788f8;
+    border-left: 20px solid transparent;
+    transition: all 0.1s ease-in;
+}
+.instagram-section .button:hover:before{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: #1788f8;
+}

@@ -1,0 +1,73 @@
+.tryapp{
+    background-repeat: no-repeat;
+    background-color: #00FED4;
+    background: url("/sites/all/modules/custom/icf_lgbt_app/src/assets/try-app-bg.png");
+    background-size: cover;
+    border: #fc2a9f 5px solid;
+    padding: 15px;
+    position: relative;
+    min-height: 535px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+}
+.tryapp:hover{
+    background-position: 10px 0;
+}
+
+
+.appscreenimage{
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    max-width: 330px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    
+}
+.appscreenimage:hover{
+   right: 0;
+}
+.tryapp:hover .appscreenimage{
+    right: 0;
+}
+.stores{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+}
+.storeButton{
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.storeButton:hover{
+    transform: scale(0.9);
+    -webkit-filter: brightness(90%); /* Safari 6.0 - 9.0 */
+    filter: brightness(90%);
+}
+@media screen and (max-width:768px){
+    .appscreenimage{
+        width: 70%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 220px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1200px){
+    .appscreenimage{
+        width: 60%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 180px;
+    }
+    
+}
+
