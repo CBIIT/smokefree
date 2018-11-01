@@ -10,7 +10,6 @@
 
 .tips .button:hover{
     color: #333333 !important;
-    border: 2px solid #000000;
 }
 .tips .button:before{
     content: "";
@@ -22,18 +21,24 @@
     height: 0;
     border-bottom: 20px solid #ffd02d;
     border-left: 20px solid transparent;
-    transition: all 0.1s ease-in;
 }
-.tips .button:hover:before{
-    width: 100%;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    background-color: #ffd02d;
-}
+.tips .button-transition:after {
+    background: #ffd02d !important;
 
-@media screen and (min-width:768px) and (max-width:1200px){
+  }
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:991px){
 	.tips{
-		height: 600px !important;
+		height: 700px !important;
 	}
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .tips{
+        height: 600px !important;
+    }
+
 }

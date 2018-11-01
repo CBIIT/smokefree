@@ -20,7 +20,7 @@
     position: absolute;
     bottom: 0;
     right: -10px;
-    max-width: 330px;
+    max-width: 400px;
     z-index: 1;
     transition: all 0.3s ease;
     
@@ -51,23 +51,41 @@
     -webkit-filter: brightness(90%); /* Safari 6.0 - 9.0 */
     filter: brightness(90%);
 }
+@media screen and (max-width:600px){
+    .storeButton{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 @media screen and (max-width:768px){
     .appscreenimage{
-        width: 70%;
+        width: 80%;
     }
     .storeButton{
         width: 100% !important;
         max-width: 220px;
     }
 }
-@media screen and (min-width:768px) and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:991px){
     .appscreenimage{
-        width: 60%;
+        width: 80%;
     }
     .storeButton{
         width: 100% !important;
-        max-width: 180px;
+        padding-left: 0;
+        padding-right: 0;
     }
     
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .appscreenimage{
+        width: 60% !important;
+    }
+    .storeButton{
+        width: auto !important;
+        max-width: 170px !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 

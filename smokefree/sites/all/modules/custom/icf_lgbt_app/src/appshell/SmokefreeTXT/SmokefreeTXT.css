@@ -13,7 +13,7 @@
 
 .txtimage{
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: 15px;
     max-width: 330px;
     z-index: 1;
@@ -21,10 +21,10 @@
     display:block;
 }
 .txtimage:hover{
-   top: 30px;
+   top: 50px;
 }
 .txt:hover .txtimage{
-    top: 30px;
+    top: 50px;
 }
 
 .txt .brush{
@@ -38,7 +38,7 @@
     text-align: left;
     background-image: url("/sites/all/modules/custom/icf_lgbt_app/src/assets/txt-brush.png");
     background-size: cover;
-    min-height: 230px;
+    min-height: 200px;
     justify-content: center;
 }
 .txtInput{
@@ -51,7 +51,6 @@
 }
 .txt .button:hover{
     color: #333333 !important;
-    border: 2px solid #000000;
 }
 .txt .button:disabled:hover{
     cursor:not-allowed;
@@ -95,52 +94,71 @@
     transition: all 0.1s ease-in;
     background-color: transparent;
 }
+.txt .button-transition:after {
+    background: #00ff00 !important;
+
+  }
 .txtInputRow{
-    padding-top: 60px;
+    padding-top: 50px;
 }
 .txt .unsubscribe{
     font-size: 12px !important; 
+    padding-bottom: 10px !important;
 }
 
 @media screen and (max-width:768px){
     .txt{
-        min-height: 600px;
+        min-height: 700px;
     }
 
     .txtimage{
         top: auto;
-        bottom: 100px;
+        bottom: 220px;
         margin: 0 auto;
         right: 0;
         left: 0;
     }
     .txt:hover .txtimage{
         top: auto;
-        bottom: 120px;
+        bottom: 210px;
     }
     .txt .button{
         margin-top: 20px !important;
     }
 
 }
-@media screen and (min-width:768px) and (max-width:1200px){
+@media screen and (min-width:768px) and (max-width:991px){
     .txt{
-        min-height: 600px;
+        min-height: 700px;
     }
-    .appscreenimage{
-        width: 60%;
-    }
+
     .txtimage{
         top: auto;
-        bottom: 100px;
+        bottom: 220px;
         margin: 0 auto;
         right: 0;
         left: 0;
     }
     .txt:hover .txtimage{
         top: auto;
-        bottom: 120px;
+        bottom: 210px;
     }
 
 }
+@media screen and (min-width:991px) and (max-width:1200px){
+    .txt{
+        min-height: 600px;
+    }
+    .txtimage{
+        top: auto;
+        bottom: 140px;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
+    .txt:hover .txtimage{
+        top: auto;
+        bottom: 130px;
+    }
 
+}

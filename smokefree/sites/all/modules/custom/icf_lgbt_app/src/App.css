@@ -12,6 +12,12 @@ h2{
   text-align: left;
   padding-bottom: 0 !important;
 }
+@media screen and (max-width:1200px){
+  h2{
+    font-size: 26px !important;
+    line-height: 29px !important;
+  }
+}
 p{
   font-family: 'Roboto', sans-serif !important;
   text-align: left !important;

@@ -6,10 +6,19 @@
 	-o-perspective: 800px;
 	perspective: 800px;
   }
+@media screen and (max-width: 991px){
+	#flip-card{
+		height: 250px !important;
+	}
+}
 #flip-card h3{
 	text-align: left;
 	padding-bottom: 0 !important;
 	margin-bottom: 0 !important;
+}
+#flip-card p{
+	font-size: 18px!important;
+    line-height: 24px!important;
 }
 #flip-card .card {
 	margin-top: 0px;
@@ -84,7 +93,10 @@
 	#flip-card {
 		height: 260px !important;
 	}
+
 }
 .flip-card-title{
 	font-size: 21px !important;
+	line-height: 24px !important;
+	padding-top: 10px !important;
 }
