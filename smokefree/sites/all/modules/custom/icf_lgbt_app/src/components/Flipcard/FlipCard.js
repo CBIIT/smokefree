@@ -104,8 +104,8 @@ class FlipCard extends Component {
                     
                     <div className="flip-card-wrapper">
                     <Row>
-                        <Col className="removePadding" xs={8}><h3 className="flip-card-title">{this.state.tips.tipTitle}</h3></Col>
-                        <Col className="removePadding" xs={4}>
+                        <Col className="removePadding" xs={9} sm={8}><h3 className="flip-card-title">{this.state.tips.tipTitle}</h3></Col>
+                        <Col className="removePadding" xs={3} sm={4}>
                         <div className="ticker">
                         FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
                         </div> 
@@ -117,7 +117,10 @@ class FlipCard extends Component {
                         </Col>
                     </Row>
                     </div> 
-                    <a onClick={nextFact} className="button"><span className="buttonText">{this.state.tips.buttonText}</span></a>
+                    <a onClick={nextFact} className={'button btn-invet btn-default btn-center btn-flip tip-' + this.state.tips.tipId}>
+                    <div className="button-transition">
+                    <span className="buttonText">{this.state.tips.buttonText}</span>
+                    </div></a>
                 </div> 
              
             </div> 
