@@ -19,7 +19,7 @@
                 <!--Help Row End-->
                 <!--Site Map Row-->
                 <div class="sitemap-row">
-                    <a href="/">Home</a><span> </span><a href="/about-smokefree/">About Smokefree</a><a href="/health-care-profesionals/">Health Professionals</a>
+                    <a href="/">Home</a><span> </span><a href="/about-us">About Smokefree</a><a href="/health-care-profesionals/">Health Professionals</a>
                     <a href="http://www.cancer.gov/global/web/policies/foia/">FOIA</a><a href="/privacy-policy/">Privacy</a><a href="/accessibility/">Accessibility</a>
                     <a href="/viewing-files/">Viewing Files</a><a href="/disclaimer/">Disclaimer</a>
                 </div>
