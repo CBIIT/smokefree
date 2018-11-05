@@ -2,34 +2,34 @@
   text-align: center;
   background-color: #ffffff !important;
 }
-h2{
+.App h2{
   font-family: 'Montserrat', sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 30px !important;
-  line-height: 33px !important;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 33px;
   color: #000000;
   text-transform: uppercase;
   text-align: left;
   padding-bottom: 0 !important;
 }
 @media screen and (max-width:1200px){
-  h2{
+.App h2{
     font-size: 26px !important;
     line-height: 29px !important;
   }
 }
-p{
+.App p{
   font-family: 'Roboto', sans-serif !important;
-  text-align: left !important;
-  font-size: 18px !important;
-  line-height: 28px !important;
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
   padding-bottom: 20px;
 }
-ul{
+.App ul{
   font-family: 'Roboto', sans-serif !important;
   text-align: left !important;
-  font-size: 18px !important;
-  line-height: 28px !important;
+  font-size: 18px;
+  line-height: 28px;
   padding-bottom: 20px;
   margin-left: 20px !important;
 }

@@ -17,7 +17,11 @@
 }
 .pass{
     color: #0B6623 !important;
+    font-size: 13px !important;
+    line-height: 17px !important;
 }
 .unpass{
     color: #651943;
+    font-size: 13px !important;
+    line-height: 17px !important;
 }
