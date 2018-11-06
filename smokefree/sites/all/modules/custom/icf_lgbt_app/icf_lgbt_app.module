@@ -43,7 +43,7 @@ function icf_lgbt_react_app_page() {
     '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'description',
-      'content' => 'LGBT & Smoking',
+      'content' => 'LGBT people are twice as likely to smoke as straight people. Find out how tobacco use affects the LGBT community.',
     ),
   );
   drupal_add_html_head($meta_description, 'meta_description');
