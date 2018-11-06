@@ -8,7 +8,7 @@ class PhoneForm extends React.Component {
       super(props);
       this.state = {
           value: '', 
-          alert: '',
+          alert: 'Enter your 10-digit phone number without spaces or special characters.',
           unsubscribe:'To unsubscribe text STOP to 47848',
           disabled: true,
           pass: 0};
@@ -25,15 +25,15 @@ class PhoneForm extends React.Component {
             this.state.alert ="";
             return true;
        }else if(!value.match(/(^[0-9]*$)/)){
-        this.state.alert = "phone number should only contain digits";
+        this.state.alert = "Phone number should only contain digits.";
         this.state.disabled = true;
         return false;
        }else if(!value.match(/(^|\D)\d{10}($|\D)/)){
-        this.state.alert = "phone number should have 10 digits";
+        this.state.alert = "Phone number should have 10 digits.";
         this.state.disabled = true;
         return false;
        }else{
-        this.state.alert = "phone number should have 10 digits and only contains digits";
+        this.state.alert = "Phone number should have 10 digits and only contains digits.";
         this.state.disabled = true;
         return false;  
        }
@@ -69,7 +69,7 @@ class PhoneForm extends React.Component {
             ({data}) => {
               this.setState({
                 pass: 1,
-                alert: "thanks for joining SmokefreeTXT!"
+                alert: "Success! You should receive a message on your phone shortly."
                
               })
             }
@@ -79,7 +79,7 @@ class PhoneForm extends React.Component {
              // failed
              ({data}) => {
               this.setState({
-                alert: "Sorry we cannot add you at the time",
+                alert: "Something went wrong. Try again later.",
               })
             }
           });
@@ -97,13 +97,14 @@ class PhoneForm extends React.Component {
         <Row className="txtInputRow">
           <Col xs={12} md={8}>
           <input type="text" className="txtInput" placeholder="Phone Number" value={this.state.value} onChange={this.handleChange}></input>
+          <p className={`alert ${this.state.pass? 'pass' : 'unpass'}`}>{this.state.alert}</p>
+          <p className="unsubscribe">{this.state.unsubscribe}</p>
           </Col>
           <Col xs={12} md={4}>
           <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">START NOW</span></button>
           </Col>
           <Col xs={12}>
-          <p className={`alert ${this.state.pass? 'pass' : 'unpass'}`}>{this.state.alert}</p>
-          <p className="unsubscribe">{this.state.unsubscribe}</p>
+         
           </Col>
         </Row>
 
