@@ -188,7 +188,7 @@ function nci_SSO_menu() {
 /**
  * Implements hook_menu_alter().
  */
-/**
+
 function nci_SSO_menu_alter(&$items) {
     //Mixed mode needs login pages etc...  So remove them if SSO only or auto login
     if (nci_SSO_login_mode() != NCI_SSO_MODE_MIXED) {
@@ -200,7 +200,7 @@ function nci_SSO_menu_alter(&$items) {
 
     }
 }
-*/
+
 /**
  * Implements hook_block_view_MODULE_DELTA_alter().
  *
