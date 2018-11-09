@@ -10,6 +10,7 @@
     text-transform: uppercase !important;
     text-align: left;
     letter-spacing: 0.0em !important;
+    -ms-font-feature-settings: normal !important;
 }
 .highLight{
     color: #ffd02d;
@@ -37,6 +38,7 @@
     .AppH1{
         font-size: 8vw;
         letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
     }
     .heroImg{
         max-width: 120px;
@@ -62,10 +64,13 @@
         font-size: 42px !important;
         line-height: 40px !important;
         letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
     }
     .highLight, .AppH1{
         font-size: 42px !important;
-        line-height: 40px !important;       
+        line-height: 40px !important;  
+        letter-spacing: 0.0em !important;  
+        -ms-font-feature-settings: normal;   
     }
 }
 @media screen and (max-width:600px){
@@ -73,9 +78,12 @@
         font-size: 30px !important;
         line-height: 30px !important;
         letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
     }
     .highLight, .AppH1{
         font-size: 30px !important;
-        line-height: 30px !important;       
+        line-height: 30px !important; 
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;      
     }
 }

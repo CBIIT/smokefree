@@ -16,12 +16,14 @@
   text-align: left;
   padding-bottom: 0 !important;
   letter-spacing: 0.0em !important;
+  -ms-font-feature-settings: normal;
 }
 @media screen and (max-width:1200px){
 .App h2{
     font-size: 26px !important;
     line-height: 29px !important;
     letter-spacing: 0.0em !important;
+    -ms-font-feature-settings: normal;
   }
 }
 @media screen and (min-width:991px) and (max-width:1200px){
@@ -29,6 +31,7 @@
       font-size: 24px !important;
       line-height: 27px !important;
       letter-spacing: 0.0em !important;
+      -ms-font-feature-settings: normal;
     }
   }
 .App p{
@@ -45,6 +48,7 @@
   line-height: 28px;
   padding-bottom: 20px;
   margin-left: 20px !important;
+  -ms-font-feature-settings: normal;
 }
 span.ext{
   background: none !important;
@@ -125,6 +129,7 @@ footer .col-lg-12{
   text-transform: uppercase;
   display: block !important;
   text-decoration: none !important;
+  -ms-font-feature-settings: normal;
 }
 
 .buttonText{
