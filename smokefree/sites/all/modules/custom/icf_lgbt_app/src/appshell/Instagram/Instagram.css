@@ -21,6 +21,12 @@
     font-weight: bold;
 }
 
+@media screen and (max-width:768px){
+    .instagram-section{
+        max-height:none !important;
+    }
+}
+
 
 .instagram-section .button:before{
     content: "";

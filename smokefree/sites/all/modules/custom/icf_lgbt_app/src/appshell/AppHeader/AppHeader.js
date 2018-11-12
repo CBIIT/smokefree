@@ -19,13 +19,13 @@ class AppHeader extends Component {
         <Grid>
          
         <Row className="show-grid">
-          <Col xs={12} md={5}>
+          <Col xs={12} sm={5}>
             <Row>
               <FlexView vAlignContent="center" width="100%" marginTop="20px" marginLeft="15px">
               <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/smokefree-logo.png" width="164" height="auto" className="heroImg" alt="Smokefree-logo" />
              
              
-              <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/this-free-life.png" width="150" height="auto" className="heroImg" alt="this-free-life" />
+              <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/this-free-life.png" width="150" height="auto" className="heroImg rightIcon" alt="this-free-life" />
               </FlexView>
             </Row>
             <Row>

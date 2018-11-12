@@ -34,12 +34,21 @@
       -ms-font-feature-settings: normal;
     }
   }
+@media screen and (max-width: 400px){
+  .App h2{
+    font-size: 24px !important;
+    line-height: 27px !important;
+    letter-spacing: 0.0em !important;
+    -ms-font-feature-settings: normal;
+  }
+}
 .App p{
   font-family: 'Roboto', sans-serif !important;
   text-align: left;
   font-size: 18px;
   line-height: 28px;
   padding-bottom: 20px;
+  color: #000000;
 }
 .App ul{
   font-family: 'Roboto', sans-serif !important;
@@ -49,6 +58,7 @@
   padding-bottom: 20px;
   margin-left: 20px !important;
   -ms-font-feature-settings: normal;
+  color: #000000;
 }
 span.ext{
   background: none !important;

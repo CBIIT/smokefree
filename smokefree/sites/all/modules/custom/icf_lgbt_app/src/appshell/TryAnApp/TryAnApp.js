@@ -21,9 +21,14 @@ class TryAnApp extends Component {
             </Col>
           </Row>
         </div>
+        <Row>
+          <Col xs={12}>
+          <h2>Quit with An App</h2>
+          </Col>
+        </Row>
           <Row>
             <Col xs={12} md={6} lg={5} sm={12}>
-            <h2>Quit with An App</h2>
+            
             <p>Download quitSTART for tips, inspiration, 
               and challenges so you can live as the true, tobacco free you.</p>
             </Col>

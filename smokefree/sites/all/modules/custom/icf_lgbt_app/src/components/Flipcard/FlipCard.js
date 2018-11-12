@@ -11,7 +11,7 @@ class FlipCard extends Component {
                 tipId: 1, 
                 tipTitle: 'Take 5 Deep Breaths', 
                 tipText: 'Breathe slowly\u2014in through your nose, out through your mouth.',
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 counter: 1,
                 next: 2,
                 flipped: 0
@@ -25,7 +25,7 @@ class FlipCard extends Component {
                 tipId: 1, 
                 tipTitle: 'Take 5 Deep Breaths', 
                 tipText: 'Breathe slowly\u2014in through your nose, out through your mouth.',
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 next: 2,
                 flipped: 1
             },
@@ -33,7 +33,7 @@ class FlipCard extends Component {
                 tipId: 2, 
                 tipTitle: 'Talk to a Friend', 
                 tipText: 'You don’t have to deal with tough times alone.', 
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 next: 3,
                 flipped: 1
             },
@@ -41,7 +41,7 @@ class FlipCard extends Component {
                 tipId: 3, 
                 tipTitle: 'Break a Sweat', 
                 tipText: 'Exercise releases endorphins, which naturally boost your mood.', 
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 next: 4,
                 flipped: 1
             },
@@ -49,7 +49,7 @@ class FlipCard extends Component {
                 tipId: 4, 
                 tipTitle: 'Treat Yourself', 
                 tipText: 'Enjoy a hot bath, your favorite meal, or something else you love.', 
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 next: 5,
                 flipped: 1
             },
@@ -57,7 +57,7 @@ class FlipCard extends Component {
                 tipId: 5, 
                 tipTitle: 'Write it Down', 
                 tipText: 'Journaling can reduce stress\u2014try focusing on the positive.', 
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 next: 6,
                 flipped: 1
             },
@@ -65,7 +65,7 @@ class FlipCard extends Component {
                 tipId: 6, 
                 tipTitle: 'Laugh Out Loud', 
                 tipText: 'Watch funny YouTube videos when you need a good laugh.', 
-                buttonText: 'NEXT FACT',
+                buttonText: 'NEXT STRESS TIP',
                 next: 7,
                 flipped: 1
             },
@@ -104,8 +104,8 @@ class FlipCard extends Component {
                     
                     <div className="flip-card-wrapper">
                     <Row>
-                        <Col className="removePadding" xs={9} sm={8}><h3 className="flip-card-title">{this.state.tips.tipTitle}</h3></Col>
-                        <Col className="removePadding" xs={3} sm={4}>
+                        <Col className="removePadding" xs={9}><h3 className="flip-card-title">{this.state.tips.tipTitle}</h3></Col>
+                        <Col className="removePadding" xs={3}>
                         <div className="ticker">
                         FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
                         </div> 
