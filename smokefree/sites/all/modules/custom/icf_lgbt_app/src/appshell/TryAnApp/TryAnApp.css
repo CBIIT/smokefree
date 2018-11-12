@@ -60,7 +60,7 @@
         padding-right: 0;
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:514px){
     .appscreenimage{
         width: 80%;
     }
@@ -69,7 +69,25 @@
         max-width: 220px;
     }
 }
-@media screen and (min-width:768px) and (max-width:991px){
+@media screen and (min-width:515px) and (max-width:600px){
+    .appscreenimage{
+        width: 65%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 220px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:768px){
+    .appscreenimage{
+        width: 55%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 220px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:990px){
     .appscreenimage{
         width: 80%;
     }

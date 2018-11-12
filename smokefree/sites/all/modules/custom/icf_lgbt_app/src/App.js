@@ -10,6 +10,8 @@ import Instagram from './appshell/Instagram/Instagram.js';
 import {Grid, Row, Col} from 'react-bootstrap/lib';
 import StrongEnough from './appshell/StrongEnough/StrongEnough';
 
+
+
 class App extends Component {
   render() {
     return (

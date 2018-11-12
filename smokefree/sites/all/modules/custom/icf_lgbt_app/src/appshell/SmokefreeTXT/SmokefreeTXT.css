@@ -108,7 +108,11 @@
     font-size: 12px !important; 
     padding-bottom: 10px !important;
 }
-
+@media screen and (max-width:355px){
+    .txt{
+        min-height: 760px !important;
+    }
+}
 @media screen and (max-width:768px){
     .txt{
         min-height: 700px;
@@ -130,6 +134,7 @@
     }
 
 }
+
 @media screen and (min-width:768px) and (max-width:991px){
     .txt{
         min-height: 700px;
