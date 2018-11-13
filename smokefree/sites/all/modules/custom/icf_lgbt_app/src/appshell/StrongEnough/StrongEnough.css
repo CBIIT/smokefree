@@ -43,7 +43,7 @@
         left: -15vh !important;
     }
 }
-@media screen and (max-width:780px){
+@media screen and (max-width:767px){
     .strongEnough{
         min-height: auto !important;
     }
