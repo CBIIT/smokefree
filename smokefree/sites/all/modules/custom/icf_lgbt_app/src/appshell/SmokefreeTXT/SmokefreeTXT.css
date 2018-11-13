@@ -23,6 +23,16 @@
     transition: all 0.3s ease;
     display:block;
 }
+
+@media screen and (max-width:400px){
+    .txtimage{
+        max-width: 230px !important;
+        bottom: 240px !important;
+    }
+    .txt h2{
+        margin-left: -10px !important;
+    }
+}
 .txtimage:hover{
    top: 50px;
 }
@@ -108,11 +118,7 @@
     font-size: 12px !important; 
     padding-bottom: 10px !important;
 }
-@media screen and (max-width:355px){
-    .txt{
-        min-height: 760px !important;
-    }
-}
+
 @media screen and (max-width:768px){
     .txt{
         min-height: 700px;
