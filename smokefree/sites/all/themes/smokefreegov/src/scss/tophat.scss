@@ -61,6 +61,7 @@ nav.TopHat {
     ul.navbar-nav>li>a:hover,
     ul.navbar-nav>li.active>a:hover {
         background-color: #2a2a2a;
+        background-position: 0 100%;
     }
 
     #bs-navbar-collapse-1 {
@@ -143,6 +144,11 @@ nav.TopHat {
         ul.navbar-nav li,
         ul.navbar-nav li > a {
             width: auto !important;
+            background-size: 100% 200%;
+            transition: background-position 0.3s;
+        }
+        ul.navbar-nav li:not(.active) > a {
+            background-image: linear-gradient(to bottom, #000000 50%, #2a2a2a 50%);
         }
         ul.navbar-nav li > a {
             padding-right: 10px;
