@@ -39,12 +39,19 @@
     transform: translateX(calc(20% - 25px)) translateY(10%) rotate(-45deg);
     transform: translateY(10%) translateX(20%) rotate(-45deg);
     transition: transform .2s;
+
   }
   .button-transition:hover::after {
     transform: translateY(10%) translateX(-7%) rotate(-45deg);
   }
+  @media screen and (min-width:991px) and (max-width:1200px){
+    .button-transition:hover::after {
+      transform: translateY(5%) translateX(-7%) rotate(-45deg);
+    }
+  }
   .button:hover{
     transition: all initial .3s;
+    pointer-events: auto;
   }
 
 
