@@ -43,8 +43,8 @@
 }
 .storeButton{
     padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
     float: left;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -100,7 +100,7 @@
 }
 @media screen and (min-width:991px) and (max-width:1200px){
     .appscreenimage{
-        width: 60% !important;
+        width: 80% !important;
     }
     .storeButton{
         width: auto !important;
@@ -110,3 +110,7 @@
     }
 }
 
+.downloadBtn{
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
