@@ -96,7 +96,8 @@ class PhoneForm extends React.Component {
       return (
         <Row className="txtInputRow">
           <Col xs={12} md={8}>
-          <input type="text" className="txtInput" placeholder="Phone Number" value={this.state.value} onChange={this.handleChange}></input>
+          <label class="sr-only" for="phone-number">Phone Number</label>
+          <input type="text" className="txtInput" id="phone-number" placeholder="Phone Number" value={this.state.value} onChange={this.handleChange}></input>
           <p className={`alert ${this.state.pass? 'pass' : 'unpass'}`}>{this.state.alert}</p>
           <p className="unsubscribe">{this.state.unsubscribe}</p>
           </Col>

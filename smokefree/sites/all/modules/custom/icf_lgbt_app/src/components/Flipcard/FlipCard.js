@@ -107,7 +107,7 @@ class FlipCard extends Component {
                         <Col className="removePadding" xs={9}><h3 className="flip-card-title">{this.state.tips.tipTitle}</h3></Col>
                         <Col className="removePadding" xs={3}>
                         <div className="ticker">
-                        FACT <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
+                        TIP <span className="flip-card-current">{this.state.tips.tipId}</span>/<span className="flip-card-total">7</span>
                         </div> 
                         </Col>
                     </Row>

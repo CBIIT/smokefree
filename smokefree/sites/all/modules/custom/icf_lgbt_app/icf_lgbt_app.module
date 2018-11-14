@@ -5,7 +5,7 @@
 */
 function icf_lgbt_app_menu() {
   return [
-    'lgbt-and-smoking-1' => [
+    'lgbt-and-smoking' => [
       'page callback' => 'icf_lgbt_react_app_page',
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
