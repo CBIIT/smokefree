@@ -33,6 +33,11 @@
         margin-left: -10px !important;
     }
 }
+@media screen and (max-width:381px){
+    .txt h2{
+        margin-left: 0 !important;
+    }
+}
 .txtimage:hover{
    top: 50px;
 }

@@ -86,6 +86,9 @@
         line-height: 30px !important;
         letter-spacing: 0.0em !important;
         -ms-font-feature-settings: normal;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
     .highLight, .AppH1{
         font-size: 30px !important;

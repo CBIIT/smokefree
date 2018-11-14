@@ -48,3 +48,7 @@
         min-height: auto !important;
     }
 }
+
+.strongEnough a.rmUnderline{
+    text-decoration: none !important;
+}
