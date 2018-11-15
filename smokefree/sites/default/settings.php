@@ -213,14 +213,14 @@
  * @endcode
  */
 $databases = array();
-$databases['default']['default'] = array(
-  'driver' => 'mysql',
-    'database' => 'default',
-   'username' => 'user',
-   'password' => 'user',
-    'host' => 'db',
-  'prefix' => '',
- );
+   $databases['default']['default'] = array(
+      'driver' => 'mysql',
+      'database' => 'default',
+      'username' => 'user',
+      'password' => 'user',
+      'host' => 'db',
+      'prefix' => '',
+    );
 
 /**
  * Access control for update.php script.
