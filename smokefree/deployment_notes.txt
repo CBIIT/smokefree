@@ -1,3 +1,7 @@
+Smokefree 1.39 2018-11-15
+-----------------------
+- Deploying the LGBT app
+
 Smokefree 1.38 2018-10-25
 -----------------------
 - Updating Drupal core to 7.60
