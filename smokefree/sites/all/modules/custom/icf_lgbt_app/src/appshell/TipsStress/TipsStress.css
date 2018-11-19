@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+.tips{
+    background: url("/sites/all/modules/custom/icf_lgbt_app/src/assets/tips-bg.png");
+    background-size: cover;
+    border: #ffd02d 5px solid;
+    padding: 15px;
+}
+.tips a{
+    color: #333333 !important;
+}
+
+.tips .button:hover{
+    color: #333333 !important;
+}
+.tips .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #ffd02d;
+    border-left: 20px solid transparent;
+}
+.tips .button-transition:after {
+    background: #ffd02d !important;
+
+  }
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+	.tips{
+		height: 700px !important;
+	}
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .tips{
+        height: 600px !important;
+    }
+}
+@media screen and (min-width:1200px){
+    .tips{
+        height: 470px !important;
+    }
+}

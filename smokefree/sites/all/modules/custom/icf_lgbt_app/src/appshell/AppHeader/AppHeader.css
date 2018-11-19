@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.AppH1{
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 65px !important;
+    line-height: 60px !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    text-align: left;
+    letter-spacing: 0.0em !important;
+    -ms-font-feature-settings: normal !important;
+}
+.highLight{
+    color: #ffd02d;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 65px !important;
+}
+
+
+
+.appheader{
+    background-image: url('/sites/all/modules/custom/icf_lgbt_app/src/assets/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 45vw !important;
+}
+.mobileHead{
+    display: none;
+}
+.heroImg{
+    padding-right: 10px;
+}
+
+@media screen and (max-width:991px){
+    .AppH1{
+        font-size: 8vw;
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
+    }
+    .heroImg{
+        max-width: 120px;
+    }
+    .highLight, .AppH1{
+        font-size: 42px !important;
+        line-height: 40px !important;  
+        letter-spacing: 0.0em !important;  
+        -ms-font-feature-settings: normal;   
+    }
+
+
+    .mobileHide{
+        display: none;
+    }
+}
+@media screen and (min-width:600px) and (max-width: 767px){
+    .AppH1{
+        font-size: 42px !important;
+        line-height: 40px !important;
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
+    }
+    .highLight, .AppH1{
+        font-size: 42px !important;
+        line-height: 40px !important;  
+        letter-spacing: 0.0em !important;  
+        -ms-font-feature-settings: normal;   
+    }
+    .mobileHead{
+        display:block;
+        width: 100%;
+        height: auto;
+    }
+    .appheader{
+        background-image: none;
+        background-color: #FB2AA0;
+        min-height: auto;
+
+    }
+}
+@media screen and (max-width:600px){
+    .AppH1{
+        font-size: 30px !important;
+        line-height: 30px !important;
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .highLight, .AppH1{
+        font-size: 30px !important;
+        line-height: 30px !important; 
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;      
+    }
+    .mobileHead{
+        display:block;
+        width: 100%;
+        height: auto;
+    }
+    .appheader{
+        background-image: none;
+        background-color: #FB2AA0;
+        min-height: auto;
+
+    }
+    .rightIcon{
+        margin-left: auto;
+    }
+}

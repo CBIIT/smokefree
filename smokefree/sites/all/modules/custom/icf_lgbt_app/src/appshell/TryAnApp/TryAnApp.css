@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.tryapp{
+    background-repeat: no-repeat;
+    background-color: #00FED4;
+    background: url("/sites/all/modules/custom/icf_lgbt_app/src/assets/try-app-bg.png");
+    background-size: cover;
+    border: #fc2a9f 5px solid;
+    padding: 15px;
+    position: relative;
+    min-height: 535px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+}
+.tryapp:hover{
+    background-position: 10px 0;
+}
+
+
+.appscreenimage{
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    max-width: 400px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    
+}
+.appscreenimage:hover{
+   right: 0;
+}
+.tryapp:hover .appscreenimage{
+    right: 0;
+}
+.stores{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+}
+.storeButton{
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 15px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.storeButton:hover{
+    transform: scale(0.9);
+    -webkit-filter: brightness(90%); /* Safari 6.0 - 9.0 */
+    filter: brightness(90%);
+}
+@media screen and (max-width:600px){
+    .storeButton{
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0 !important;
+    }
+}
+@media screen and (max-width:514px){
+    .appscreenimage{
+        width: 80%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 220px;
+        margin-left: 0 !important;
+    }
+}
+@media screen and (min-width:515px) and (max-width:600px){
+    .appscreenimage{
+        width: 65%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 220px;
+        margin-left: 0 !important;
+    }
+}
+@media screen and (min-width:600px) and (max-width:768px){
+    .appscreenimage{
+        width: 55%;
+    }
+    .storeButton{
+        width: 100% !important;
+        max-width: 220px;
+        margin-left: 0 !important;
+    }
+}
+@media screen and (min-width:768px) and (max-width:990px){
+    .appscreenimage{
+        width: 80%;
+    }
+    .storeButton{
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0 !important;
+    }
+    
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .appscreenimage{
+        width: 60% !important;
+    }
+    .storeButton{
+        width: auto !important;
+        max-width: 200px !important;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0 !important;
+    }
+}
+
+.downloadBtn{
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
