@@ -75,7 +75,7 @@
     }
     .appheader{
         background-image: none;
-        background-color: #FB2AA0;
+        background-color: #e01c90;
         min-height: auto;
 
     }
@@ -103,11 +103,22 @@
     }
     .appheader{
         background-image: none;
-        background-color: #FB2AA0;
+        background-color: #e01c90;
         min-height: auto;
 
     }
     .rightIcon{
         margin-left: auto;
+    }
+}
+@media screen and (max-width:372px){
+    .AppH1{
+        font-size: 25px !important;
+        line-height: 27px !important;
+    }
+
+    .highLight, .AppH1{
+        font-size: 25px !important;
+        line-height: 27px !important;
     }
 }

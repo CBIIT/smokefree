@@ -39,7 +39,7 @@ class AppHeader extends Component {
         </Row>
        
       </Grid>
-      <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/header.png" className="responsive-img mobileHead" alt="mobile hero" />
+      <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/header-mobile.png" className="responsive-img mobileHead" alt="mobile hero" />
       </div>
       )
     }

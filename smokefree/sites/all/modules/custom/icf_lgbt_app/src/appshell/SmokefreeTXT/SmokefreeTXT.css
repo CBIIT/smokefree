@@ -68,18 +68,21 @@
     line-height: 20px;
 }
 .txt .button:hover{
-    color: #333333 !important;
+    color: #000000 !important;
+}
+
+.txt .button{
+    margin-top: 35px;
+    color: #000000;
+}
+.txt .button:disabled .buttonText{
+    color: #777474 !important;
 }
 .txt .button:disabled:hover{
     cursor:not-allowed;
     color: #777474 !important;
     border: 1px solid #777474;
 }
-.txt .button{
-    margin-top: 35px;
-    color: #333333 !important;
-}
-
 .txt .button:before{
     content: "";
     position: absolute;

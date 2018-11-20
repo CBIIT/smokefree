@@ -7,11 +7,11 @@
     padding: 15px;
 }
 .tips a{
-    color: #333333 !important;
+    color: #000000 !important;
 }
 
 .tips .button:hover{
-    color: #333333 !important;
+    color: #000000!important;
 }
 .tips .button:before{
     content: "";
