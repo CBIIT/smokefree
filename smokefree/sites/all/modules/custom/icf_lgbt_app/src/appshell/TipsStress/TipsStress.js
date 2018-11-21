@@ -9,9 +9,9 @@ class TipsStress extends Component {
        <div className="tips">
          <h2>Cope With Stress</h2>
          <p>Part of being smokefree is learning new, healthier ways to deal with stress without smoking.</p>
-         <div className="flip">
+         <a className="flip">
          <FlipCard/>
-         </div>
+         </a>
         
       </div>
      

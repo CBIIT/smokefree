@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
 .button{
     width: 100%;
     border: 1px solid #000000;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     font-size: 20px;
     line-height: 30px;
     text-align: left;
@@ -56,8 +58,11 @@
 
 
   .buttonText{
+    font-family: 'Roboto', sans-serif;
     z-index: 10;
     display:block; 
     position:relative;
     text-decoration: none !important;
+    color: #000000;
+    font-weight: 900 !important;
   }
