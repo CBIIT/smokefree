@@ -82,7 +82,7 @@
 }
 @media screen and (max-width:600px){
     .AppH1{
-        font-size: 30px !important;
+        font-size: 28px !important;
         line-height: 30px !important;
         letter-spacing: 0.0em !important;
         -ms-font-feature-settings: normal;
@@ -91,7 +91,7 @@
         padding-bottom: 0 !important;
     }
     .highLight, .AppH1{
-        font-size: 30px !important;
+        font-size: 28px !important;
         line-height: 30px !important; 
         letter-spacing: 0.0em !important;
         -ms-font-feature-settings: normal;      
@@ -109,7 +109,9 @@
     }
     .rightIcon{
         margin-left: auto;
+        max-width: 90px !important;
     }
+   
 }
 @media screen and (max-width:372px){
     .AppH1{
