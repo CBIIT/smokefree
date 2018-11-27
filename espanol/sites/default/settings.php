@@ -216,10 +216,10 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'drupal7',
-      'username' => 'drupal7',
-      'password' => 'drupal7',
-      'host'     => 'database',
+      'database' => 'smokefree_espanol',
+      'username' => 'root',
+      'password' => 'root',
+      'host'     => 'localhost',
       'port'     => '',
       'driver'   => 'mysql',
       'prefix'   => '',
