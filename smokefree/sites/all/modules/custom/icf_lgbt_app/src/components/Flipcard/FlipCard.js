@@ -100,15 +100,13 @@ class FlipCard extends Component {
 
 
     const handleKeyUp = (e) =>{
-        if(e.keyCode == 9){
+        if(e.keyCode == 'enter'){
             if(this.state.tips.tipId <= 6) {
                 this.setState({
                     tips: tipsData.tips[0 + this.state.tips.tipId]
                     
                 });
-            } else {
-               return false;
-            }
+            } 
         }
     }
         

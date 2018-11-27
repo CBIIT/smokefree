@@ -48,3 +48,13 @@
         height: 470px !important;
     }
 }
+
+@media screen and (max-width:400px){
+    .tips .buttonText{
+      font-size: 16px !important;
+      line-break: 18px !important;
+    }
+    .tips .button-transition{
+      padding: 9px 10px !important;
+    }
+  }

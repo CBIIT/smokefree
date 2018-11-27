@@ -11,6 +11,7 @@ class PhoneForm extends React.Component {
           alert: 'Enter your 10-digit phone number without spaces or special characters.',
           unsubscribe:'To unsubscribe text STOP to 47848',
           disabled: true,
+          buttonText: 'START NOW',
           pass: 0};
   
       this.handleChange = this.handleChange.bind(this);
@@ -69,7 +70,8 @@ class PhoneForm extends React.Component {
             ({data}) => {
               this.setState({
                 pass: 1,
-                alert: "Success! You should receive a message on your phone shortly."
+                alert: "Success! You should receive a message on your phone shortly.",
+                value:''
                
               })
             }
@@ -94,7 +96,8 @@ class PhoneForm extends React.Component {
   
     render() {
       return (
-        <Row className="txtInputRow">
+        <div className="txtInput">
+        <Row className={`txtInputRow ${this.state.pass? 'pass' : 'unpass'}`}>
           <Col xs={12} md={8}>
           <label class="sr-only" for="phone-number">Phone Number</label>
           <input type="text" className="txtInput" id="phone-number" placeholder="Phone Number" value={this.state.value} onChange={this.handleChange}></input>
@@ -102,13 +105,21 @@ class PhoneForm extends React.Component {
           <p className="unsubscribe">{this.state.unsubscribe}</p>
           </Col>
           <Col xs={12} md={4}>
-          <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">START NOW</span></button>
+          <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">{this.state.buttonText}</span></button>
           </Col>
           <Col xs={12}>
          
           </Col>
         </Row>
-
+        <Row >
+        <Col xs={12}>
+        <div className={`txtSuccessRow ${this.state.pass? 'pass' : 'unpass'}`}>
+        Success! You should receive a message on your phone shortly.
+        </div>
+        </Col>
+        
+        </Row>
+        </div>
       );
     }
   }

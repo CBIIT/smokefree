@@ -117,6 +117,10 @@
 	.flip-card-content{
 		padding-bottom: 10px !important;
 	}
+	#flip-card p{
+		font-size: 16px!important;
+		line-height: 21px!important;
+	}
 }
 .flip-card-title{
 	font-family: Montserrat,sans-serif!important;
