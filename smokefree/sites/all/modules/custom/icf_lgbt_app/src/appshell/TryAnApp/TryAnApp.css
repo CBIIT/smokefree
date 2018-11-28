@@ -132,3 +132,13 @@
        min-height: 500px !important; 
     }
 }
+@media screen and (max-width:768px){
+    .tryapp .hideMobile{
+        display: none;
+    }
+}
+@media screen and (min-width:768px){
+    .tryapp .showMobile{
+        display: none;
+    }
+}
