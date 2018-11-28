@@ -132,6 +132,15 @@
        min-height: 500px !important; 
     }
 }
+@media screen and (max-width:376px){
+    .tryapp{
+        min-height: 430px !important;
+    }
+    .tryapp .downloadBtn{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
 @media screen and (max-width:768px){
     .tryapp .hideMobile{
         display: none;

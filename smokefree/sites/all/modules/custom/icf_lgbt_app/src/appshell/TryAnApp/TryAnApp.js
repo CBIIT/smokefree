@@ -9,13 +9,13 @@ class TryAnApp extends Component {
         <div className="tryapp">
         <div className="stores">
           <Row>
-            <Col xs={6} md={12} className="downloadBtn">
+            <Col xs={6} md={12} className="downloadBtn leftDownloadBtn">
             <a href="https://itunes.apple.com/app/apple-store/id494552000?pt=564700&ct=ThisFreeLife&mt=8" target="_blank">
             <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/apple-store.png" width="200" height="auto"  alt="apple store" className="storeButton hideMobile" />
             <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/apple-store-mobile.png" width="200" height="auto"  alt="apple store" className="storeButton showMobile" />
             </a>
             </Col>
-            <Col xs={6} md={12} className="downloadBtn">
+            <Col xs={6} md={12} className="downloadBtn rightDownlaodBtn">
             <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitstart&referrer=utm_source%3DSmokefreeGov%26utm_medium%3DWebsite%26utm_campaign%3DThisFreeLife" target="_blank">
             <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/google-play.png" width="200" height="auto"  alt="google play" className="storeButton hideMobile" />
             <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/google-play-mobile.png" width="200" height="auto"  alt="google play" className="storeButton showMobile" />
