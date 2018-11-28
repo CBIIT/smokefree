@@ -26,6 +26,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 45vw !important;
+
 }
 .mobileHead{
     display: none;
@@ -72,11 +73,15 @@
         display:block;
         width: 100%;
         height: auto;
+        position: relative;
+        overflow: hidden;
     }
     .appheader{
         background-image: none;
         background-color: #e01c90;
         min-height: auto;
+        -webkit-backface-visibility: hidden;
+        overflow:hidden;
 
     }
 }
@@ -100,11 +105,16 @@
         display:block;
         width: 100%;
         height: auto;
+        overflow:hidden;
+        position: relative;
+        overflow: hidden;
+        
     }
     .appheader{
         background-image: none;
         background-color: #e01c90;
         min-height: auto;
+        
 
     }
     .rightIcon{

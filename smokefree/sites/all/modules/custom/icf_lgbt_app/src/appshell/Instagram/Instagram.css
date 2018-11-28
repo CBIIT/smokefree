@@ -23,7 +23,8 @@
 
 @media screen and (max-width:768px){
     .instagram-section{
-        max-height:none !important;
+        max-height: none !important;
+        min-height: auto !important;
     }
 }
 
