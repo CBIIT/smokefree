@@ -1,3 +1,8 @@
+Smokefree 1.40 2018-11-28
+-----------------------
+- LGBT app inprovements
+- Adding advagg module for performance
+
 Smokefree 1.39 2018-11-15
 -----------------------
 - Deploying the LGBT app
