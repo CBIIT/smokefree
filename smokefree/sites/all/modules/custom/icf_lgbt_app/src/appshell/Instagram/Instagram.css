@@ -16,14 +16,15 @@
     transform: scale(0.98);
 }
 .instagram-section a{
-    color: #333333 !important;
+    color: #000000 !important;
     text-decoration: underline;
     font-weight: bold;
 }
 
 @media screen and (max-width:768px){
     .instagram-section{
-        max-height:none !important;
+        max-height: none !important;
+        min-height: auto !important;
     }
 }
 

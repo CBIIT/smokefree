@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
 #flip-card {
 	position: relative;
 	height: 230px;
@@ -6,15 +9,11 @@
 	-o-perspective: 800px;
 	perspective: 800px;
   }
-@media screen and (max-width: 991px){
-	#flip-card{
-		height: 250px !important;
-	}
-}
+
 #flip-card h3{
 	text-align: left;
 	padding-bottom: 0 !important;
-	margin-bottom: 0 !important;
+	margin-bottom: 6px !important;
 }
 #flip-card p{
 	font-size: 18px!important;
@@ -118,11 +117,16 @@
 	.flip-card-content{
 		padding-bottom: 10px !important;
 	}
+	#flip-card p{
+		font-size: 16px!important;
+		line-height: 21px!important;
+	}
 }
 .flip-card-title{
-	font-size: 21px !important;
+	font-family: Montserrat,sans-serif!important;
+	font-size: 19px !important;
+	font-weight: 700 !important;
 	line-height: 24px !important;
-	padding-top: 10px !important;
 }
 
 /*check*/

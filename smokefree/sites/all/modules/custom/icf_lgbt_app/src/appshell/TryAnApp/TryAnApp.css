@@ -14,6 +14,11 @@
     transition: all 0.2s ease;
 
 }
+@media screen and (max-width:1200px){
+    .tryapp{
+        padding: 15px 0px;
+    }
+}
 .tryapp:hover{
     background-position: 10px 0;
 }
@@ -74,7 +79,7 @@
 }
 @media screen and (min-width:515px) and (max-width:600px){
     .appscreenimage{
-        width: 65%;
+        width: 62%;
     }
     .storeButton{
         width: 100% !important;
@@ -82,9 +87,9 @@
         margin-left: 0 !important;
     }
 }
-@media screen and (min-width:600px) and (max-width:768px){
+@media screen and (min-width:601px) and (max-width:768px){
     .appscreenimage{
-        width: 55%;
+        width: 50%;
     }
     .storeButton{
         width: 100% !important;
@@ -120,4 +125,29 @@
 .downloadBtn{
     padding-left: 8px !important;
     padding-right: 8px !important;
+}
+
+@media screen and (max-width:768px){
+    .tryapp{
+       min-height: 500px !important; 
+    }
+}
+@media screen and (max-width:376px){
+    .tryapp{
+        min-height: 430px !important;
+    }
+    .tryapp .downloadBtn{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
+@media screen and (max-width:768px){
+    .tryapp .hideMobile{
+        display: none;
+    }
+}
+@media screen and (min-width:768px){
+    .tryapp .showMobile{
+        display: none;
+    }
 }

@@ -12,11 +12,16 @@
     transition: all 0.2s ease;
     min-height: 470px;
 }
+@media screen and (max-width:1200px){
+    .txt{
+        padding: 15px 0px;
+    }
+}
 
 
 .txtimage{
     position: absolute;
-    top: 60px;
+    top: 45px;
     right: 15px;
     max-width: 330px;
     z-index: 1;
@@ -24,25 +29,12 @@
     display:block;
 }
 
-@media screen and (max-width:400px){
-    .txtimage{
-        max-width: 230px !important;
-        bottom: 240px !important;
-    }
-    .txt h2{
-        margin-left: -10px !important;
-    }
-}
-@media screen and (max-width:381px){
-    .txt h2{
-        margin-left: 0 !important;
-    }
-}
+
 .txtimage:hover{
-   top: 50px;
+   top: 40px;
 }
 .txt:hover .txtimage{
-    top: 50px;
+    top: 40px;
 }
 
 .txt .brush{
@@ -60,26 +52,34 @@
     justify-content: center;
 }
 .txtInput{
-    margin-top: 35px !important;
+    margin-top: 15px !important;
     width: 100% !important;
     padding: 16px 20px !important;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height: 20px;
 }
+@media screen and (max-width:768px){
+    .txtInput{
+        padding: 16px 10px !important;
+    }
+}
 .txt .button:hover{
-    color: #333333 !important;
+    color: #000000 !important;
+}
+
+.txt .button{
+    margin-top: 15px;
+    color: #000000;
+}
+.txt .button:disabled .buttonText{
+    color: #777474 !important;
 }
 .txt .button:disabled:hover{
     cursor:not-allowed;
     color: #777474 !important;
     border: 1px solid #777474;
 }
-.txt .button{
-    margin-top: 35px;
-    color: #333333 !important;
-}
-
 .txt .button:before{
     content: "";
     position: absolute;
@@ -121,34 +121,28 @@
 }
 .txt .unsubscribe{
     font-size: 12px !important; 
-    padding-bottom: 10px !important;
+    padding-bottom: 0px !important;
 }
 
-@media screen and (max-width:768px){
-    .txt{
-        min-height: 700px;
-    }
 
+
+
+@media screen and (min-width:991px) and (max-width:1200px){
+    .txt{
+        min-height: 600px;
+    }
     .txtimage{
         top: auto;
-        bottom: 220px;
+        bottom: 140px;
         margin: 0 auto;
         right: 0;
         left: 0;
     }
     .txt:hover .txtimage{
         top: auto;
-        bottom: 210px;
-    }
-    .txt .button{
-        margin-top: 0px !important;
+        bottom: 130px;
     }
 
-}
-@media screen and (max-width:340px){
-    .txt{
-        min-height: 700px;
-    }
 }
 @media screen and (min-width:768px) and (max-width:991px){
     .txt{
@@ -168,20 +162,47 @@
     }
 
 }
-@media screen and (min-width:991px) and (max-width:1200px){
+@media screen and (max-width:768px){
     .txt{
-        min-height: 600px;
+        min-height: 650px;
     }
+
     .txtimage{
         top: auto;
-        bottom: 140px;
+        bottom: 210px;
         margin: 0 auto;
         right: 0;
         left: 0;
     }
     .txt:hover .txtimage{
         top: auto;
-        bottom: 130px;
+        bottom: 215px;
+    }
+    .txt .button{
+        margin-top: 0px !important;
     }
 
+}
+@media screen and (min-width:401px) and (max-width:500px){
+    .txt{
+        min-height: 700px;
+    }
+}
+@media screen and (max-width:400px){
+    .txtimage{
+        max-width: 230px !important;
+        bottom: 240px;
+    }
+
+    .txt:hover .txtimage{
+        top: auto;
+        bottom: 250px;
+    }
+}
+
+
+@media screen and (max-width:340px){
+    .txt{
+        min-height: 700px;
+    }
 }

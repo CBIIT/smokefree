@@ -124,6 +124,14 @@ span.ext{
   padding-top: 30px;
 }
 
+@media screen and (max-width:768px){
+  .sectionCard{
+    padding-top: 20px !important;
+  }
+}
+
+
+
 footer{
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -173,3 +181,6 @@ footer .col-lg-12{
 }
 }
 
+.syndicate{
+  background-color: #2A2A2A;
+}

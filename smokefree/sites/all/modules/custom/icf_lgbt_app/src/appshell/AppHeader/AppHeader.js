@@ -16,7 +16,7 @@ class AppHeader extends Component {
     render() {
       return (
         <div className="appheader">
-        <Grid>
+        <Grid className="appHeaderContent">
          
         <Row className="show-grid">
           <Col xs={12} sm={5}>
@@ -39,7 +39,9 @@ class AppHeader extends Component {
         </Row>
        
       </Grid>
-      <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/header.png" className="responsive-img mobileHead" alt="mobile hero" />
+    
+      <img src="/sites/all/modules/custom/icf_lgbt_app/src/assets/header-mobile.jpg" className="responsive-img mobileHead" alt="mobile hero" />
+   
       </div>
       )
     }

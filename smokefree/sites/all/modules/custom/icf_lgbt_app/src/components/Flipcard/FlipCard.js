@@ -80,6 +80,8 @@ class FlipCard extends Component {
         ]
     }
 
+    
+
     const nextFact = (e) => {
         
         if(this.state.tips.tipId <= 6) {
@@ -89,9 +91,23 @@ class FlipCard extends Component {
         } else {
             this.setState({
                 tips: tipsData.tips[0]
-            })
+            });
+            return true;
         }
 
+    }
+
+
+
+    const handleKeyUp = (e) =>{
+        if(e.keyCode == 'enter'){
+            if(this.state.tips.tipId <= 6) {
+                this.setState({
+                    tips: tipsData.tips[0 + this.state.tips.tipId]
+                    
+                });
+            } 
+        }
     }
         
 
@@ -117,7 +133,9 @@ class FlipCard extends Component {
                         </Col>
                     </Row>
                     </div> 
-                    <a onClick={nextFact} className={'button btn-invet btn-default btn-center btn-flip tip-' + this.state.tips.tipId}>
+                    <a href="javascript:void(0)" onClick={nextFact} 
+                    className={'button btn-invet btn-default btn-center btn-flip tip-' + this.state.tips.tipId}
+                    onKeyDown = {handleKeyUp}>
                     <div className="button-transition">
                     <span className="buttonText">{this.state.tips.buttonText}</span>
                     </div></a>
