@@ -200,7 +200,7 @@
     .views-field-field-blue-box-text .col-sm-4 img {
         display: block;
         margin:auto;
-        height: 170px;
+        height: auto;
         width: 170px !important;
     }
 
@@ -255,8 +255,13 @@
 
         ul li div.col-md-9 {
             width: 100%;
+            
         }
-
+        @media screen and (max-width:996px){
+            ul li div.col-md-9 {
+               position: static;    
+            }
+        }
         ul li a {
             font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-weight: 600;
@@ -733,7 +738,7 @@
         max-width: none !important;
         padding: 15px !important;
         min-width: 0;
-        min-height: 0;
+       /* min-height: 0;*/
         top: 0;
         left: 0 !important;
 
@@ -743,9 +748,11 @@
 
         float: left !important;
         position: relative;
-        max-height: 110px;
+        max-height: auto !important;
         max-width: 110px;
         margin: 0;
+        padding-right: 1rem;
+        padding-top: 2rem;
 
     }
 
@@ -845,7 +852,7 @@
         max-width: none !important;
         padding: 15px !important;
         min-width: 0;
-        min-height: 0;
+        /*min-height: 0;*/
         top: 0;
         left: 0 !important;
 
@@ -855,10 +862,11 @@
 
         float: left !important;
         position: relative;
-        max-height: 110px;
+        max-height: none !important;
         max-width: 110px;
         margin: 0;
-
+        padding-right: 1rem;
+        padding-top: 2rem;
     }
 
     .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a a {
@@ -868,7 +876,7 @@
         transform: perspective(1px) translateY(-50%) !important;
         font-size: 28px !important;
         line-height: 28px !important;
-        left: 5em !important;
+        min-width: 100%;
 
     }
 
@@ -1049,7 +1057,7 @@
         max-width: none !important;
         padding: 15px !important;
         min-width: 0;
-        min-height: 0;
+        /*min-height: 0;*/
         top: 0;
         left: 0 !important;
 
@@ -1059,10 +1067,11 @@
 
         float: left !important;
         position: relative;
-        max-height: 110px;
+        max-height: none !important;
         max-width: 110px;
         margin: 0;
-
+        padding-right: 1rem;
+        padding-top: 0.5rem;
     }
 
     .views-field.views-field-field-tools-tips-link.tools-n-tips-icon-links ul li a a {
@@ -1072,7 +1081,7 @@
         transform: perspective(1px) translateY(-50%) !important;
         font-size: 28px !important;
         line-height: 28px !important;
-        left: 5em !important;
+        min-width: 200px;
 
     }
 
