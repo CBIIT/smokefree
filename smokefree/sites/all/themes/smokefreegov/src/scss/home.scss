@@ -146,7 +146,7 @@
     .cta-box-b {
         font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin: 0 !important;
-        padding: 25px 0px 15px 30px !important;
+        padding: 25px 15px 15px 30px !important;
         background-color: #f4faff;
         border: 1px solid #d5d5d5;
         text-align: left;
@@ -257,7 +257,7 @@
             width: 100%;
             
         }
-        @media screen and (max-width:996px){
+        @media screen and (max-width:1200px){
             ul li div.col-md-9 {
                position: static;    
             }
@@ -764,6 +764,7 @@
         font-size: 28px !important;
         line-height: 28px !important;
         left: 20% !important;
+        min-width: 100% !important;
 
     }
 
@@ -958,7 +959,7 @@
         display: block !important;
         margin: 1em auto !important;
         width: 12em !important;
-        padding: 2em !important;
+        padding: 1em 2em !important;
     }
 
     .include-bottom .field-name-field-includes-text-2 {
