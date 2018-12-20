@@ -92,6 +92,7 @@
     border-left: 20px solid transparent;
     transition: all 0.1s ease-in;
 }
+@media screen and (min-width:768px){
 .txt .button:hover:before{
     width: 100%;
     height: 100%;
@@ -99,6 +100,19 @@
     bottom: 0;
     background-color: #00ff00;
 }
+}
+
+@media screen and (max-width:768px){
+    .txt .button:active:before{
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        background-color: #00ff00;
+    }   
+}
+
+
 .txt .button:disabled:hover:before{
     content: "";
     position: absolute;
@@ -112,6 +126,7 @@
     transition: all 0.1s ease-in;
     background-color: transparent;
 }
+
 .txt .button-transition:after {
     background: #00ff00 !important;
 
@@ -190,18 +205,24 @@
 }
 @media screen and (max-width:400px){
     .txtimage{
-        max-width: 230px !important;
-        bottom: 240px;
+       width: 90%;
+        bottom: 260px;
     }
 
     .txt:hover .txtimage{
         top: auto;
         bottom: 250px;
+
     }
 }
 
 
-@media screen and (max-width:340px){
+@media screen and (max-width:400px){
+    .txt{
+        min-height: 720px;
+    }
+}
+@media screen and (max-width:360px){
     .txt{
         min-height: 700px;
     }
