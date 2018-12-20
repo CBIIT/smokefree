@@ -76,7 +76,7 @@
     color: #777474 !important;
 }
 .txt .button:disabled:hover{
-    cursor:not-allowed;
+    cursor: not-allowed;
     color: #777474 !important;
     border: 1px solid #777474;
 }
@@ -92,7 +92,7 @@
     border-left: 20px solid transparent;
     transition: all 0.1s ease-in;
 }
-@media screen and (min-width:768px){
+
 .txt .button:hover:before{
     width: 100%;
     height: 100%;
@@ -100,17 +100,9 @@
     bottom: 0;
     background-color: #00ff00;
 }
-}
 
-@media screen and (max-width:768px){
-    .txt .button:active:before{
-        width: 100%;
-        height: 100%;
-        right: 0;
-        bottom: 0;
-        background-color: #00ff00;
-    }   
-}
+
+
 
 
 .txt .button:disabled:hover:before{
