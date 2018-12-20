@@ -105,7 +105,7 @@ class PhoneForm extends React.Component {
           <p className="unsubscribe">{this.state.unsubscribe}</p>
           </Col>
           <Col xs={12} md={4}>
-          <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">{this.state.buttonText}</span></button>
+          <button disabled={this.state.disabled} onClick={this.handleSubmit} ontouchend={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">{this.state.buttonText}</span></button>
           </Col>
           <Col xs={12}>
          
