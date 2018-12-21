@@ -93,7 +93,7 @@
     transition: all 0.1s ease-in;
 }
 
-.txt .button:hover:before{
+.txt .button.nomobile:hover:before{
     width: 100%;
     height: 100%;
     right: 0;
