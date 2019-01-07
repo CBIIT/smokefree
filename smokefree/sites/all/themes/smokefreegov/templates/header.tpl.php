@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="tophat-navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li <?php if($active_site == "gov") : ?>class="active"<?php endif; ?>><a href="https://smokefree.gov" id="smokefree-gov"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-gov.png" alt="smokefree-gov" /><?php if($active_site == "gov") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
-                    <li <?php if($active_site == "vet") : ?>class="active"<?php endif; ?>><a href="https://smokefree.gov/veterans" id="smokefree-vet"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /><?php if($active_site == "vet") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
+                    <li <?php if($active_site == "vet") : ?>class="active"<?php endif; ?>><a href="https://veterans.smokefree.gov" id="smokefree-vet"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-vet.png" alt="smokefree-vet" /><?php if($active_site == "vet") : ?><span class="sr-only">(current)</span><?php endif; ?></a></li>
                     <li><a href="https://women.smokefree.gov" id="smokefree-women"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-women.png" alt="smokefree-women" /></a></li>
                     <li><a href="https://teen.smokefree.gov" id="smokefree-teen"><span><img src="/sites/all/themes/smokefreegov/images/header/smokefree-teen.png" alt="smokefree-teen" /></span></a></li>
                     <li><a href="https://espanol.smokefree.gov" id="smokefree-espanol"><img src="/sites/all/themes/smokefreegov/images/header/smokefree-espanol.png" alt="smokefree-espanol" /></a></li>
