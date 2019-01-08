@@ -540,7 +540,7 @@ Use está información para revisar qué tanto estrés tiene usted y cuáles son
 			foreach(array($submission->data) as $data){
 				foreach($data as $question){
 					if($question[0] == 0) {
-						print "<li class='checklist-item'>Otras razones: ". $question[0] ."</li>";
+						print "<li class='checklist-item'>Otras razones: ". strip_tags($question[0]) ."</li>";
 					}
 					else {
 						foreach($question as $reason){
@@ -605,7 +605,7 @@ Use está información para revisar qué tanto estrés tiene usted y cuáles son
 
 							if($reason != ''){
 								//set the reason.
-								print "<li class='checklist-item'>". $reason ."</li>";
+								print "<li class='checklist-item'>". strip_tags($reason) ."</li>";
 							}
 						}
 					}
