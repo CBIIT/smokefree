@@ -1,3 +1,9 @@
+Smokefree 1.50 2019-01-10
+-----------------------
+- Veterans site launch. Added redirects from this app to the new site
+- Fixing XSS vulnerability for espanol
+- Other bugfixes and improvements
+
 Smokefree 1.40 2018-11-28
 -----------------------
 - LGBT app inprovements
