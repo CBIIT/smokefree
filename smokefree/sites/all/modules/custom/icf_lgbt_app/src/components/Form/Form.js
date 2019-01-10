@@ -19,6 +19,27 @@ class PhoneForm extends React.Component {
 
      
     }
+
+    detectmob(){
+      if( navigator.userAgent.match(/Android/i)
+          || navigator.userAgent.match(/webOS/i)
+          || navigator.userAgent.match(/iPhone/i)
+          || navigator.userAgent.match(/iPad/i)
+          || navigator.userAgent.match(/iPod/i)
+          || navigator.userAgent.match(/BlackBerry/i)
+          || navigator.userAgent.match(/Windows Phone/i)
+        ){
+      return true;
+      }
+      else {
+      return false;
+      }
+    }
+
+
+
+
+
     handleValidation(value){
 
        if(value.match(/(^|\D)\d{10}($|\D)/) && value.match(/(^[0-9]*$)/)){
@@ -105,7 +126,7 @@ class PhoneForm extends React.Component {
           <p className="unsubscribe">{this.state.unsubscribe}</p>
           </Col>
           <Col xs={12} md={4}>
-          <button disabled={this.state.disabled} onClick={this.handleSubmit} type="submit" className="button submit"> <span className="buttonText">{this.state.buttonText}</span></button>
+          <button disabled={this.state.disabled} onClick={this.handleSubmit} ontouchend={this.handleSubmit} type="submit" className={`button submit ${this.detectmob()? '' : 'nomobile'}`}> <span className="buttonText">{this.state.buttonText}</span></button>
           </Col>
           <Col xs={12}>
          
