@@ -1,4 +1,7 @@
-Smokefree 1.50 2019-01-10
+Smokefree 1.51 2019-01-17
+-----------------------
+- Updating drupal core to 7.62
+- Fixes to webforms
 -----------------------
 - Veterans site launch. Added redirects from this app to the new site
 - Fixing XSS vulnerability for espanol
