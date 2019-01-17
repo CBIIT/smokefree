@@ -1,6 +1,6 @@
 Smokefree 1.51 2019-01-17
 -----------------------
-- Updating drupal core to 7.62
+- Updating drupal core to 7.63
 - Fixes to webforms
 
 Smokefree 1.50 2019-01-10
