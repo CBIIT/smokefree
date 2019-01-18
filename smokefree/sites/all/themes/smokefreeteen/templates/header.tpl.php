@@ -53,7 +53,7 @@
                             return false;" _lpchecked="1">
              <input name="getfields" type="hidden" value="*">
             <div class="search-bar-group">
-                <label for="teen-searchbox-header-input" class="sr-only">Search</label>
+                <label for="searchbox-header" class="sr-only">Search</label>
                 <input maxlength="255" name="query" id="teen-searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
                 <button type="submit" value="Search" class="btn btn-default">Submit</button>
                 <a class="closebtn">&times;</a>
@@ -69,7 +69,7 @@
                             return false;" _lpchecked="1">
                 <input name="getfields" type="hidden" value="*">
                 <div class="search-bar-group">
-                    <label for="teen-searchbox-header-input" class="sr-only">Search</label>
+                    <label for="searchbox-header" class="sr-only">Search</label>
                     <input maxlength="255" name="query" id="teen-searchbox-header-input" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="30" type="text" value="Search" class="search-bar-input" placeholder="Search">
                     <button type="submit" value="Search" class="btn btn-default">Submit</button>
                 </div>
