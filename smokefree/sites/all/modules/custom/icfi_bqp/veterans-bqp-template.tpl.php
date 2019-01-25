@@ -166,8 +166,8 @@
             <div class="modal-body">
               <p>Your first day without tobacco is a big accomplishment!</p>
               <fieldset>
-                <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="person dancing icon">
                 <legend> Celebrate this milestone with a reward:</legend>
+                <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="person dancing icon">
                 <div class="validation-error collapse">
                   <p class="alert alert-error">Please enter at least one reward and a valid date (mm-dd-yyyy)</p>
                 </div>
@@ -223,9 +223,8 @@
               <p>Use of nicotine replacement, like the gum or patch, can really help manage your withdrawal. Talk to your health care provider for more information.</p>
               <p><strong>What to do:</strong> Make time for activities that help you manage your stress and get support to get through the first days of quitting.</p>
               <fieldset>
+                <legend>Plan an activity to keep you occupied:</legend>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" alt="person dancing icon">
-                <legend>
-                  Plan an activity to keep you occupied:</legend>
                 <div class="validation-error collapse">
                   <p class="alert alert-error">Please enter an activity and a valid date (mm-dd-yyyy)</p>
                 </div>
@@ -272,9 +271,8 @@
               <p>Being tobacco free for a week is a huge achievement! Nicotine is completely out of your system, and the worst of the withdrawal is probably over.
               </p>
               <fieldset>
+                <legend>Celebrate this milestone with a reward:</legend>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="person dancing icon">
-                <legend>
-                  Celebrate this milestone with a reward:</legend>
                 <div class="validation-error collapse">
                   <p class="alert alert-error">Please enter at least one reward and a valid date (mm-dd-yyyy)</p>
                 </div>
@@ -328,9 +326,8 @@
               <p><strong>What to expect:</strong> Most withdrawal symptoms will fade by the time you are tobacco free for two weeks. </p>
               <p><strong>What to do:</strong> Make time for activities that put you in a good mood and make you feel relaxed to get through the challenges of quitting.</p>
               <fieldset>
+                <legend>Plan an activity to keep you occupied:</legend>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/SF_Vet_Calendars_Activities.png" alt="person dancing icon">
-                <legend>
-                  Plan an activity to keep you occupied:</legend>
                 <div class="validation-error collapse">
                   <p class="alert alert-error">Please enter an activity and a valid date (mm-dd-yyyy)</p>
                 </div>
@@ -375,9 +372,8 @@
             <div class="modal-body">
               <p>A whole month without tobacco means that withdrawal is behind you and cravings are becoming less intense.</p>
               <fieldset>
+                <legend>Celebrate this milestone with a reward:</legend>
                 <img class="modal-icon" src="/sites/all/themes/sfg/images/sf-vet/basket.png" alt="shopping basket" />
-                <legend>
-                  Celebrate this milestone with a reward:</legend>
                 <div class="validation-error collapse">
                   <p class="alert alert-error">Please enter at least one reward and a valid date (mm-dd-yyyy)</p>
                 </div>
