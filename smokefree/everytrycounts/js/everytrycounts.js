@@ -319,8 +319,8 @@ fallback.load({
                  */
                 _addEvent: function(event, service, title, description) {
 
-                    var today = new Date();
-                    var dd = today.getDate() + 1; //Use Tomorrow.
+                    var today = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+                    var dd = today.getDate(); //Use Tomorrow.
                     var mm = today.getMonth()+1; //January is 0!
                     var yyyy = today.getFullYear();
 
