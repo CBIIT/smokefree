@@ -1,3 +1,5 @@
+
+
 .morebox {
   font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#4A4A4A;
@@ -87,15 +89,12 @@
   .more-row .container {
     width: 750px !important;
   }
-  .morebox.views-row-even {
-    padding:0px 0px 0px 0px !important;
-  }
+
 }
 
 /* No greater than 996px, no less than 704px */
-@media screen and (min-width: 767px) and (max-width: 996px) {
+@media screen and (min-width: 767px) and (max-width: 980px) {
   .morebox-margin-fix{ padding:0px 0px 0px 0px !important;}
-  .morebox .views-field-field-featured-image img{height:155px;}
 
 }
 
@@ -108,3 +107,14 @@
 @media only screen and (max-width: 305px) {
   .morebox{padding-right:30px !important; padding-left:30px !important;}
 }
+
+@media screen and (min-width: 980px) and (max-width: 991px){
+  .morebox{padding-left: 60px !important; padding-right: 30px !important;}
+}
+@media screen and (min-width: 992px) and (max-width: 992px){
+  .morebox{width: 50% !important; padding-left: 60px !important; padding-right: 30px !important;}
+}
+@media screen and (min-width: 768px) and (max-width: 800px){
+  .morebox{padding-left: 60px !important; padding-right: 30px !important;}
+}
+
