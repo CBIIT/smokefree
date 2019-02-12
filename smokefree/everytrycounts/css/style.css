@@ -852,7 +852,7 @@ button {
 	cursor: pointer;
 }
 .programs button.btn {
-	background-color: #5B799B;
+	background-color: #4670a0;
 	display: block;
 	position: relative;
 	text-align: left;
@@ -1388,7 +1388,7 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
 	font-weight: 700;
 	text-align: center;
 	color:#ffffff;
-	background-color:#5B799B;
+	background-color:#4670a0;
 	margin:0px 5px;
 }
 .programs button.btn .arrow {
@@ -1415,11 +1415,8 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
 	text-transform: uppercase;
 }
 .programs button#programPracticeButton {
-	background-color: #4d6682;
+	background-color: #395b8a;
 }
 .programs button#programQuitButton {
-	background-color: #3e5269;
-}
-.programs button#programQuitButton {
-	background-color: #3e5269;
+	background-color: #2a4471;
 }
