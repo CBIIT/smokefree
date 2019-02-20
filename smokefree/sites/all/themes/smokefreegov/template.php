@@ -438,7 +438,7 @@ function smokefreegov_preprocess_node(&$variables) {
         case 'smokeless':
           $variables['hero_text'] = '<img src="/' . drupal_get_path('theme', 'smokefreegov') . '/images/Smokeless_Hero_Phrase.png" alt="I control my life, and I choose not to dip." />';
           $variables['logo_color'] = 'white';
-          $variables['promo_button'] = l('<img src="/' . drupal_get_path('theme', 'smokefreegov') . '/images/Smokeless_RealCost_Button.png" />',
+          $variables['promo_button'] = l('<img src="/' . drupal_get_path('theme', 'smokefreegov') . '/images/Smokeless_RealCost_Button.png" alt="Go to the real cost website."/>',
             'http://therealcost.betobaccofree.hhs.gov/dip', array('html'=>TRUE, 'attributes'=>array('class'=>array('header_promo_button'))));
           break;
 
