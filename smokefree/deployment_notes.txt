@@ -1,3 +1,8 @@
+Smokefree 1.52 2019-02-21
+-----------------------
+- Redesign of the POS page
+- Applying security updates to UUID and Link modules
+
 Smokefree 1.51 2019-01-17
 -----------------------
 - Updating drupal core to 7.63
