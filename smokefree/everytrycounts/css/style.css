@@ -218,8 +218,8 @@ p.quiz-results-message {
 	height:160px;
 }
 .everyTryCounts .intro {
-	padding-left:325px;
-	padding-right:30px;
+	padding-left:30px;
+	padding-right:325px;
 }
 .everyTryCounts .smokerFemale {
 	background-image: url(../images/smoker-female.png);
@@ -228,6 +228,7 @@ p.quiz-results-message {
 	height:450px;
 	position: absolute;
 	top: -10px;
+	right: 30px;
 }
 @media (max-width: 992px) {
 	.everyTryCounts .intro {
@@ -410,26 +411,6 @@ p.quiz-results-message {
 }
 .video .col-sm-12 {
 	z-index:50;
-}
-.video .smokerMale {
-	background-image: url(../images/smoker-male.png);
-	background-repeat: no-repeat;
-	width:582px;
-	height:360px;
-	position: absolute;
-	top:5px;
-	left:200px;
-}
-@media (max-width: 1200px) {
-	.video .smokerMale {
-		top:5px;
-		left:160px;
-	}
-}
-@media (max-width: 992px) {
-	.video .smokerMale {
-		display:none;
-	}
 }
 /* -------------------------------------- Tips -------------------------------------- */
 .carousel {
@@ -871,7 +852,7 @@ button {
 	cursor: pointer;
 }
 .programs button.btn {
-	background-color: #5B799B;
+	background-color: #4670a0;
 	display: block;
 	position: relative;
 	text-align: left;
@@ -1407,7 +1388,7 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
 	font-weight: 700;
 	text-align: center;
 	color:#ffffff;
-	background-color:#5B799B;
+	background-color:#4670a0;
 	margin:0px 5px;
 }
 .programs button.btn .arrow {
@@ -1434,11 +1415,8 @@ html[data-useragent*='iPhone'] #live-chat-bar-background  {
 	text-transform: uppercase;
 }
 .programs button#programPracticeButton {
-	background-color: #4d6682;
+	background-color: #395b8a;
 }
 .programs button#programQuitButton {
-	background-color: #3e5269;
-}
-.programs button#programQuitButton {
-	background-color: #3e5269;
+	background-color: #2a4471;
 }
