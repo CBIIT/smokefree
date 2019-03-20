@@ -1,6 +1,7 @@
 Smokefree 1.53 2019-03-2-
 -----------------------
 - Applying security updates to the views module
+- Applying security updates to Drupal core (7.65)
 
 Smokefree 1.53 2019-03-07
 -----------------------
