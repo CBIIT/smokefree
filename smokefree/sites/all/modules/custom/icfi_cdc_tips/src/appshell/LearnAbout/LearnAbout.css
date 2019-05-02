@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.learnabout{
+    background-color: #ffffff;
+    background-size: cover;
+    border-top: #FFECB3 8px solid;
+    padding: 15px;
+    min-height: 535px;
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (max-width:767px){
+    .learnabout{
+        min-height: auto !important;
+    }
+}
+
+
+
+.learnabout .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #9f48f9;
+    border-left: 20px solid transparent;
+    transition: all 0.2s ease-in;
+
+}
+
+.learnabout .button-transition:after {
+    background: #9f48f9 !important;
+
+  }
+.buttonText{
+    z-index: 10;
+    display:block; 
+    position:relative;
+}
+
+.phoneNumbers{
+    width:100%;
+    border: #F7DB88 1px solid;
+    background-color: #FFF7DF;
+    padding: 10px;
+    z-index: 1;
+}
+.phoneNumbersContainer{
+    z-index: 1;
+}
+.phoneIcon{
+    width: 50px;
+    height: auto;
+}
+.phoneNumbers p{
+    margin-top: 20px !important;
+}
+.handsOn{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 500ms ease-in;
+}
+.handsOn:hover{
+    transform: scale(1.1);
+}
+.learnaboutTop{
+    z-index: 1;
+}
