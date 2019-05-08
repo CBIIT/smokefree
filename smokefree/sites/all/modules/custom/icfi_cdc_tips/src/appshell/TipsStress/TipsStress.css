@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+.apptips{
+  
+    background-size: cover;
+    border-top: #65B0BD 8px solid;
+    background-color: #ffffff;
+    padding: 15px;
+}
+.apptips a{
+    color: #000000 !important;
+}
+
+.apptips .button:hover{
+    color: #000000!important;
+}
+.apptips .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #65B0BD;
+    border-left: 20px solid transparent;
+}
+.apptips .button-transition:after {
+    background: #65B0BD !important;
+
+  }
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+	.apptips{
+		height: 700px !important;
+	}
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .apptips{
+        height: 600px !important;
+    }
+}
+@media screen and (min-width:1200px){
+    .apptips{
+        height: 470px !important;
+    }
+}
+
+@media screen and (max-width:400px){
+    .apptips .buttonText{
+      font-size: 16px !important;
+      line-break: 18px !important;
+    }
+    .apptips .button-transition{
+      padding: 9px 10px !important;
+    }
+  }
