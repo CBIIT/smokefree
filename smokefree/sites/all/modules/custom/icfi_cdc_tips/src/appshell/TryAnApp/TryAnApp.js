@@ -10,12 +10,12 @@ class TryAnApp extends Component {
         <div className="stores">
           <Row>
             <Col xs={12} sm={6} md={12} className="downloadBtn leftDownloadBtn">
-            <a href="https://itunes.apple.com/app/apple-store/id494552000?pt=564700&ct=ThisFreeLife&mt=8" target="_blank" className="storeButtonContainer">
+            <a href="https://itunes.apple.com/app/apple-store/id494552000?pt=564700&ct=TIPS2019&mt=8" target="_blank" className="storeButtonContainer">
             <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/apple-store-icon.png"   alt="apple store" className="img-responsive storeIcon"  />
             </a>
             </Col>
             <Col xs={12} sm={6} md={12} className="downloadBtn rightDownlaodBtn">
-            <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitstart&referrer=utm_source%3DSmokefreeGov%26utm_medium%3DWebsite%26utm_campaign%3DThisFreeLife" target="_blank" className="storeButtonContainer">
+            <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitstart&referrer=utm_source%3DCDCTips%26utm_medium%3DCDCWebsite%26utm_campaign%3DTips2019" target="_blank" className="storeButtonContainer">
             <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/google-play-icon.png"  alt="google play" className="img-responsive storeIcon" />
        
             </a>

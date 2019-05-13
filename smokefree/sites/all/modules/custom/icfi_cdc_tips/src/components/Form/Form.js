@@ -11,7 +11,7 @@ class PhoneForm extends React.Component {
           alert: 'Enter your 10-digit phone number without spaces or special characters.',
           unsubscribe:'To unsubscribe text STOP to 47848',
           disabled: true,
-          buttonText: 'START NOW',
+          buttonText: 'SIGN UP',
           pass: 0};
   
       this.handleChange = this.handleChange.bind(this);
