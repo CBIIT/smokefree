@@ -75,3 +75,8 @@
 .learnaboutTop{
     z-index: 1;
 }
+@media screen and (max-width: 767px){
+    .handsOn{
+        display: none;
+    }
+}
