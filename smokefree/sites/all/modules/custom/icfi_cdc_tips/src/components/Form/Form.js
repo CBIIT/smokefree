@@ -6,9 +6,6 @@ import queryString from 'query-string';
 
 class PhoneForm extends React.Component {
 
-  
-
-
     constructor(props) {
       super(props);
       this.state = {
@@ -40,11 +37,6 @@ class PhoneForm extends React.Component {
       return false;
       }
     }
-
-
-
-
-
     handleValidation(value){
 
        if(value.match(/(^|\D)\d{10}($|\D)/) && value.match(/(^[0-9]*$)/)){
@@ -66,9 +58,6 @@ class PhoneForm extends React.Component {
        }
 
     }
-
-
-
 
     handleChange(event) {
       var message = event.target.value;
@@ -92,7 +81,6 @@ class PhoneForm extends React.Component {
           if(values.utm_source){
             myPost.person_CDC_Promo = values.utm_source
           }
-          console.log(myPost);
  
           var request = jQuery.ajax({
               url: 'https://secure.mcommons.com/profiles/join',
@@ -125,8 +113,6 @@ class PhoneForm extends React.Component {
       }
     }
 
-   
-  
     render() {
       return (
         <div className="txtInput">
