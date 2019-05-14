@@ -6,10 +6,7 @@ import queryString from 'query-string';
 
 class PhoneForm extends React.Component {
 
-  componentDidMount() {
-    const values = queryString.parse(window.location.search);
-    console.log(values.utm_source);
-  }
+  
 
 
     constructor(props) {
