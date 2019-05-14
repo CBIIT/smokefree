@@ -37,7 +37,7 @@
 
 @media screen and (min-width:768px) and (max-width:991px){
 	.apptips{
-		height: 700px !important;
+		height: 600px !important;
 	}
 }
 @media screen and (min-width:991px) and (max-width:1200px){
@@ -68,4 +68,9 @@
     left: 0;
     transition: 300ms ease-in all;
 
+}
+@media screen and (max-width: 767px){
+    .tips-img{
+        display: none !important;
+    }
 }

@@ -151,7 +151,7 @@
 }
 @media screen and (min-width:768px) and (max-width:991px){
     .txt{
-        min-height: 700px;
+        min-height: 600px;
     }
 
     .txtimage{
@@ -169,7 +169,7 @@
 }
 @media screen and (max-width:768px){
     .txt{
-        min-height: 600px;
+        min-height: 500px;
     }
 
     .txtimage{
@@ -188,7 +188,7 @@
 }
 @media screen and (min-width:401px) and (max-width:500px){
     .txt{
-        min-height: 700px;
+        min-height: 600px;
     }
 }
 @media screen and (max-width:400px){
