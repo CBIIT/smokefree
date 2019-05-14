@@ -56,7 +56,7 @@ class StrongEnough extends Component {
             </div>
           </Row>
           <Row>
-          <DefaultButton href="https://smokefree.gov/tools-tips" text="CHECK MORE TIPS"/>
+          <DefaultButton href="https://smokefree.gov/tools-tips" text="GET MORE TIPS"/>
           </Row>
         </div>
        
