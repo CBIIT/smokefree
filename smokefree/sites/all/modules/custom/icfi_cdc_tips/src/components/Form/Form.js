@@ -83,12 +83,17 @@ class PhoneForm extends React.Component {
     handleSubmit(event) {
       if (this.handleValidation(this.state.value)) {
           const values = queryString.parse(window.location.search);
+         
           const myPost = {
               opt_in_path: 'OPC1649949208EB0A076B001A6F7278369',
               person_phone: this.state.value,
-              person_CDC_Promo: values.utm_source
+              //person_CDC_Promo: values.utm_source
           }
-
+          if(values.utm_source){
+            myPost.person_CDC_Promo = values.utm_source
+          }
+          console.log(myPost);
+ 
           var request = jQuery.ajax({
               url: 'https://secure.mcommons.com/profiles/join',
               type: "POST",
@@ -103,7 +108,7 @@ class PhoneForm extends React.Component {
                
               })
             }
-
+             
 
           ).fail(function(jqXHR, textStatus) {
              // failed
