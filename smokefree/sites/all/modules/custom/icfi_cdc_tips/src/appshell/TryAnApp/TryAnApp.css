@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.tryapp{
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: cover;
+    border-top: #25418F 8px solid;
+    padding: 15px;
+    position: relative;
+    min-height: 535px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+}
+@media screen and (max-width:1200px){
+    .tryapp{
+        padding: 15px 0px;
+    }
+}
+.tryapp:hover{
+    background-position: 10px 0;
+}
+
+
+.appscreenimage{
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    max-width: 300px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    
+}
+.appscreenimage:hover{
+   right: 0;
+}
+.tryapp:hover .appscreenimage{
+    right: 0;
+}
+.stores{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+}
+@media screen and (max-width:450px){
+    .appscreenimage{
+        width: 95%;
+    }
+}
+@media screen and (min-width:451px) and (max-width:514px){
+    .appscreenimage{
+        width: 85%;
+    }
+}
+@media screen and (min-width:515px) and (max-width:600px){
+    .appscreenimage{
+        width: 70%;
+    }
+}
+@media screen and (min-width:601px) and (max-width:768px){
+    .appscreenimage{
+        width: 58%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:990px){
+    .appscreenimage{
+        width: 80%;
+    }    
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .appscreenimage{
+        width: 60% !important;
+    }
+}
+
+.downloadBtn{
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+@media screen and (max-width:991px){
+    .downloadBtn{
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+    }
+}
+
+@media screen and (max-width:768px){
+    .tryapp{
+       min-height: 550px !important; 
+    }
+}
+@media screen and (max-width:376px){
+    .tryapp{
+        min-height: 500px !important;
+    }
+}
+
+
+.storeButtonContainer{
+    display: block;
+    padding: 10px 20px;
+    background-color: #006AAE;
+    border-radius: 20px;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+.storeButtonContainer:hover{
+    transform: scale(0.9);
+    background-color: #015388;
+}
+.storeIcon{
+    max-width: 150px !important;
+}
+@media screen and (max-width:768px){
+    .storeIcon{
+        float: left !important;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 767px){
+    .storeIcon{
+        max-width: 120px !important;
+    }
+}
+@media screen and (max-width:991px){
+    .storeButtonContainer{
+        max-width: 250px !important;
+        width: 100% !important;
+        float: left !important;
+        text-align: center;
+    }
+    .stores{
+        width: 100% !important;
+        
+    }
+}
+@media screen and (max-width:600px){
+    .downloadBtn{
+        display: flex;
+        justify-content: center;
+    }
+   
+}
+
+.quitguide-bg{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 500ms ease-in;
+}
+.quitguide-bg:hover{
+    transform: scale(1.1);
+}

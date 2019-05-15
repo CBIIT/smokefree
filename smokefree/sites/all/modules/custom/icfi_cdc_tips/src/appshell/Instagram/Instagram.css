@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.instagram-section{
+    background: #ffffff;
+    border-top: #85BB49 8px solid;
+    padding: 15px;
+    min-height: 700px;
+    max-height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+.instagram-section img{
+    transition:all 0.3s ease;
+    margin: 0 auto;
+}
+.instagram-section:hover img{
+    transform: scale(0.98);
+}
+.instagram-section a{
+    color: #000000 !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px){
+    .instagram-section{
+        max-height: none !important;
+        min-height: auto !important;
+    }
+}
+
+
+.instagram-section .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #85BB49;
+    border-left: 20px solid transparent;
+    transition: all 0.1s ease-in;
+}
+
+.instagram-section .button-transition:after {
+    background: #85BB49 !important;
+
+  }
+.instagram-img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    transition: 300ms ease-in all;
+
+}
+.instagram-img:hover{
+    transform: scale(1.1);
+}
+@media screen and (max-width: 991px){
+    .instagram-img{
+        display: none !important;
+    }
+}
