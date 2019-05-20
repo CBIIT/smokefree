@@ -123,7 +123,7 @@ class PhoneForm extends React.Component {
         
           </Col>
           <Col xs={12} md={4}>
-          <button disabled={this.state.disabled} onClick={this.handleSubmit} ontouchend={this.handleSubmit} type="submit" className={`button submit ${this.detectmob()? '' : 'nomobile'}`}> <span className="buttonText">{this.state.buttonText}</span></button>
+          <button disabled={this.state.disabled} onClick={this.handleSubmit} ontouchend={this.handleSubmit} type="submit" className={`button submit ${this.detectmob()? '' : 'nomobile'}`}> <span className="buttonText formText">{this.state.buttonText}</span></button>
           </Col>
           <Col xs={12}>
           <p className={`alert ${this.state.pass? 'pass' : 'unpass'}`}>{this.state.alert}</p>

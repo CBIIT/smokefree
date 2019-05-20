@@ -23,8 +23,8 @@ class SmokefreeTXT extends Component {
             <p>Get daily text messages with encouragement, advice, and tips to help you quit smoking.</p>
             </Col>
             <Col xs={12}>
-            <img data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/crave-bubble.png"  alt="crave bubble" className="crave-bubble pull-right" />
-            <img data-aos="fade-up" data-aos-offset="20" data-aos-delay="200" src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/SFtxt.png"  alt="SFtxt bubble" className="SFtxt pull-left" />
+            <img data-aos="fade-up" data-aos-offset="20" data-aos-delay="50" src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/crave-bubble.png"  alt="crave bubble" className="crave-bubble pull-right img-responsive" />
+            <img data-aos="fade-up" data-aos-offset="20" data-aos-delay="200" src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/SFtxt.png"  alt="SFtxt bubble" className="SFtxt pull-left img-responsive" />
             </Col>
           </Row>
          

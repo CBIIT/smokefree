@@ -167,7 +167,7 @@
     }
 
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
     .txt{
         min-height: 500px;
     }
@@ -217,10 +217,10 @@
 }
 
 .crave-bubble{
-    width: 120px;
+    max-width: 120px !important;
     height: auto;
 }
 .SFtxt{
-    width: 300px;
+    max-width: 300px !important;
     height: auto;
 }
