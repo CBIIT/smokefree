@@ -22,8 +22,9 @@ class TipsStress extends Component {
          <Row>
           <DefaultButton href="https://smokefree.gov/build-your-quit-plan" text="MAKE MY PLAN"/>
          </Row>
-
+         <div className="tips-img">
          <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/make-plan.jpg" className="img-responsive tips-img" alt="Make a plan"  data-aos="fade-in" data-aos-delay="30"/>
+         </div>
       </div>
      
     )

@@ -9,6 +9,6 @@ const Button = ({ href, children}) => (
     </a>
   );
   
-  export const SocialButton = ({ text, href, imgName }) => (
-      <Button href={href}><img src={"/sites/all/modules/custom/icfi_cdc_tips/src/assets/" + imgName} className="socialIcon"></img>{text}</Button>
+  export const SocialButton = ({ text, href, imgName, textClass }) => (
+      <Button href={href}><img src={"/sites/all/modules/custom/icfi_cdc_tips/src/assets/" + imgName} className="socialIcon"></img><span className={textClass}>{text}</span></Button>
   );

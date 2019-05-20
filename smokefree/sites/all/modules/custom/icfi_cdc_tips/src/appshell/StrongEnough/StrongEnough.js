@@ -21,7 +21,7 @@ class StrongEnough extends Component {
           <Row>
             <div className="tipCard greyCard tipCard1" data-aos="zoom-in">
               <div className="tipCardHead top">
-                <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/toothbrush.png" className="tipImage tipCard1Image"/>
+                <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/toothbrush-icon.png" className="tipImage tipCard1Image"/>
               </div>
               <div className="tipCardBody">
                 <p>Bring a toothbrush and toothpaste everywhere. Brush your teeth whenever you have a craving.</p>
@@ -29,7 +29,7 @@ class StrongEnough extends Component {
             </div>
             <div className="tipCard brownCard" data-aos="zoom-in" data-aos-delay="10" >
               <div className="tipCardHead top">
-              <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/gum.png" className="tipImage tipCard2Image"/>
+              <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/gum-icon.png" className="tipImage tipCard2Image"/>
               </div>
               <div className="tipCardBody">
               <p>Nicotine replacement therapy (NRT) like gum, patches, or lozenges can reduce cravings and withdrawal symptoms.</p>
@@ -38,20 +38,24 @@ class StrongEnough extends Component {
           
          
             <div className="tipCard brownCard" data-aos="zoom-in" data-aos-delay="20">
-            <div className="tipCardBody">
-            <p>Stretch or walk for 10 minutes or until your craving passes.</p></div>
-              <div className="tipCardHead top">
-              <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/shoe.png" className="tipImage tipCard3Image"/>
+            
+            <div className="tipCardHead top">
+              <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/shoe-icon.png" className="tipImage tipCard3Image"/>
               </div>
+              <div className="tipCardBody">
+            <p>Stretch or walk for 10 minutes or until your craving passes.</p></div>
+             
              
             </div>
             <div className="tipCard greyCard" data-aos="zoom-in" data-aos-delay="30">
+            <div className="tipCardHead top">
+              <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/game-icon.png" className="tipImage tipCard4Image"/>
+              </div>
+            
             <div className="tipCardBody">
             <p>Distract yourself through cravings by playing a game or watching a video on your phone.</p>
             </div>
-              <div className="tipCardHead top">
-              <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/game.png" className="tipImage tipCard4Image"/>
-              </div>
+             
             
             </div>
           </Row>
