@@ -629,12 +629,9 @@ p.quiz-results-message {
 	}
 }
 /* -------------------------------------- App -------------------------------------- */
+
 .app {
-	background-color:#e6d9c9;
-	background-image: url(../images/app-background.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: white;
 }
 .appDownloads a:first-of-type img{
 	display:inline-block;
