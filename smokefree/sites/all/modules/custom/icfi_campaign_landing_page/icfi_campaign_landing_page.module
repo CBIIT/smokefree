@@ -38,16 +38,7 @@ function icfi_campaign_landing_page() {
       'weight' => -2,
     ));
   }
-  // create the og:description tag
-  $meta_description = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'description',
-      'content' => 'Campaign.',
-    ),
-  );
-  drupal_add_html_head($meta_description, 'meta_description');
-  drupal_set_title('Campaign');
+  drupal_set_title('Make Today Your Quit Day');
   return [
     '#type' => 'markup',
     '#markup' => '<div id="root"></div>',
