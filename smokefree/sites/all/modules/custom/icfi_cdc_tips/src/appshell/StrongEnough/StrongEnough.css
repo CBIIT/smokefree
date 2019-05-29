@@ -61,8 +61,18 @@
     display: inline-block;
     vertical-align: bottom;
 }
+@media screen and (max-width: 767px){
+    .strongEnough .tipCard{
+        width: 100%;
+        display: block;
+    }
+}
 .strongEnough .tipCardHead{
     height: 6em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .strongEnough .tipCardBody{
     height: 10em;
@@ -96,7 +106,6 @@
     left: 0;
     right: 0;
     width: 60%;
-    bottom: -5px;
     margin: 0 auto;
     transition: 200ms ease-in all;
 }

@@ -1,6 +1,6 @@
 var quiz_questions_path = "/true-false-quiz-json-questions";
 var quiz_answers_path = "/true-false-quiz-json-answers";
-var daily_challenges_path = "/daily-challenge-json";
+var daily_challenges_path = "js/nicotine-replacement-therapy.json";
 var crave_tips_path = "/crave-tip-json"
 var quiz_title = "How Does Smoking Harm Your Body";
 var program_challenge_opt_in_path = "OP56B6889DB1923D2D32D4CF759392DE31";
@@ -69,7 +69,7 @@ fallback.load({
                 correct_answers: 0,
                 show_quiz_part: "question",
                 quiz_next_button_text: "next",
-                daily_challenge_next_button_text: "NEXT CHALLENGE",
+                daily_challenge_next_button_text: "NEXT FACT",
                 show_program_challenge: false,
                 show_program_practice: false,
                 show_program_quit: false,
@@ -204,7 +204,7 @@ fallback.load({
                     else {
                         this.current_daily_challenge_number = 1;
                     }
-                    this.daily_challenge_next_button_text = this.current_daily_challenge_number == this.total_daily_challenges ? "START OVER" : "NEXT CHALLENGE";
+                    this.daily_challenge_next_button_text = this.current_daily_challenge_number == this.total_daily_challenges ? "LEARN MORE" : "NEXT FACT";
                 },
                 /**
                  * User moves to next crave tip. Simply increment

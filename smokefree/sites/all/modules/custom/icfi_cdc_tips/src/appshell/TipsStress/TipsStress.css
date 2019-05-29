@@ -64,7 +64,8 @@
 .tips-img{
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     left: 0;
     transition: 300ms ease-in all;
 

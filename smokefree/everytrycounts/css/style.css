@@ -506,6 +506,12 @@ p.quiz-results-message {
 		top: 130px;
 	}
 }
+.tips {
+	background-image: url(../images/craving-background.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 /*@media (max-width: 330px) {*/
 /*.carousel {*/
 /*height: 80px;*/
@@ -538,14 +544,18 @@ p.quiz-results-message {
 /* -------------------------------------- Challenges -------------------------------------- */
 .challengeTitle {
 	margin:10px 0px;
-	min-height:40px;
+	min-height:80px;
+	max-height:80px;
 }
 .challengeContent {
-	min-height:120px;
+	min-height:210px;
+	max-height:210px;
+	overflow: hidden;
+	padding-bottom: 30px;
 }
 #flipCard {
 	position: relative;
-	height: 370px;
+	height: 480px;
 	background: #fff;
 	/* Set the depth of the elements */
 	-webkit-perspective: 800px;
@@ -619,12 +629,9 @@ p.quiz-results-message {
 	}
 }
 /* -------------------------------------- App -------------------------------------- */
+
 .app {
-	background-color:#e6d9c9;
-	background-image: url(../images/app-background.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: white;
 }
 .appDownloads a:first-of-type img{
 	display:inline-block;
@@ -1102,6 +1109,21 @@ button {
 	display:block;
 	font-size:14px;
 	margin-bottom:6px;
+}
+#questionTicker {
+	background-color: #273f6b;
+	color: #fff;
+	margin-bottom: 0;
+	padding: 5px 8px;
+}
+.challengeTicker {
+	display: inline;
+	padding: 5px 10px;
+	color: white;
+	background-color: #273f6b;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* ------------------------------------ calendar dropdown ----------------------------*/

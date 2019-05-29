@@ -1,0 +1,46 @@
+<?php
+
+/**
+* Implements hook_menu().
+*/
+function icfi_campaign_landing_page_menu() {
+  return [
+    'quit' => [
+      'page callback' => 'icfi_campaign_landing_page',
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    ]
+  ];
+}
+
+/**
+ * Callback for hook_menu()
+ *
+ * Loads the necessary react css and js files
+ */
+function icfi_campaign_landing_page() {
+  $base_assets_path = drupal_get_path('module', 'icfi_campaign_landing_page');
+  $css_files = glob($base_assets_path. '/build/static/css/*.css');
+  $js_files = glob($base_assets_path. '/build/static/js/*.js');
+  foreach ($css_files as $css_file) {
+    drupal_add_css($css_file, array(
+      'scope' => 'footer',
+      'group' => CSS_THEME,
+      'every_page' => TRUE,
+      'weight' => -2,
+    ));
+  }
+  foreach ($js_files as $js_file) {
+    drupal_add_js($js_file, array(
+      'scope' => 'footer',
+      'group' => JS_THEME,
+      'every_page' => TRUE,
+      'weight' => -2,
+    ));
+  }
+  drupal_set_title('Make Today Your Quit Day');
+  return [
+    '#type' => 'markup',
+    '#markup' => '<div id="root"></div>',
+  ];
+}
