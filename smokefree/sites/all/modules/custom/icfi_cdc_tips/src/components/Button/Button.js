@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Button.css';
 
 const Button = ({ href, children}) => (
-    <a href={href} className="button">
+    <a href={href} className="button" target="_blank">
     <div className="button-transition">
       <span className="buttonText">{children}</span>
     </div>
