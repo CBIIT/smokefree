@@ -14,9 +14,9 @@ class Instagram extends Component {
            <SocialButton href="https://twitter.com/CDCTobaccoFree" text="@CDCTobaccoFree" imgName="twitter.png" textClass="socialText"/>
            <SocialButton href="https://www.instagram.com/smokefreeus/?hl=en" text="@smokefreeus" imgName="instagram.png" textClass="socialText"/>
            <span className="instagram-img">
-           <a href="https://www.instagram.com/smokefreeus/?hl=en" target="_blank">
+          
             <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/social-media.png" className="img-responsive instagram-img" alt="instagram cover"  data-aos="fade-in" data-aos-delay="30"/>
-            </a>
+           
             </span>
         </div>
        
