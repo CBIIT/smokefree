@@ -545,18 +545,17 @@ p.quiz-results-message {
 .challengeTitle {
 	margin:10px 0px;
 	min-height:80px;
-	max-height:80px;
 }
 .challengeContent {
-	min-height:210px;
-	max-height:210px;
+	min-height:310px;
 	overflow: hidden;
 	padding-bottom: 30px;
 }
 #flipCard {
 	position: relative;
-	height: 480px;
+	height: 540px;
 	background: #fff;
+	margin-bottom: 30px;
 	/* Set the depth of the elements */
 	-webkit-perspective: 800px;
 	-moz-perspective: 800px;
@@ -599,8 +598,8 @@ p.quiz-results-message {
 #flipCard .card .front,
 #flipCard .card .back {
 	display: block;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	position: absolute;
 	padding: 30px;
 	-webkit-backface-visibility: hidden;
@@ -620,12 +619,30 @@ p.quiz-results-message {
 }
 @media (max-width: 520px) {
 	#flipCard {
-		height:400px;
+		height: 600px;
+		min-height: 600px;
+	}
+	.challengeTitle {
+		max-height: 120px;
+		min-height: 120px;
+		height: 120px;
+	}
+	.challengeContent {
+		max-height: 340px;
+		min-height: 340px;
+		height: 340px;
+		padding: 0;
+		margin: 0;
 	}
 }
 @media (max-width: 360px) {
 	#flipCard {
 		height:440px;
+	}
+	.challengeContent {
+		max-height: 375px;
+		min-height: 375px;
+		height: 375px;
 	}
 }
 /* -------------------------------------- App -------------------------------------- */

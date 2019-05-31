@@ -109,9 +109,6 @@
     margin: 0 auto;
     transition: 200ms ease-in all;
 }
-.tipCard1Image:hover{
-    bottom: 0;
-}
 .tipCard2Image{
     width: 50% !important;
 }
