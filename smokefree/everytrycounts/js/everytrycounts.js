@@ -202,7 +202,8 @@ fallback.load({
                         this.current_daily_challenge_number++;
                     }
                     else {
-                        this.current_daily_challenge_number = 1;
+                        window.location.href = '/tools-tips/how-to-quit/using-nicotine-replacement-therapy';
+                        return;
                     }
                     this.daily_challenge_next_button_text = this.current_daily_challenge_number == this.total_daily_challenges ? "LEARN MORE" : "NEXT FACT";
                 },
