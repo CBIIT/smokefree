@@ -1,0 +1,30 @@
+{
+  "name": "smokefree-campaign-landing",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://kpongyu.github.io/smokefree",
+  "dependencies": {
+    "@types/react-addons-css-transition-group": "^15.0.5",
+    "aos": "^2.3.4",
+    "gh-pages": "^2.0.0",
+    "jquery": "^3.3.1",
+    "query-string": "^5.1.1",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-flexview": "^4.0.1",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.0",
+    "webpack": "^4.32.1"
+  }
+}

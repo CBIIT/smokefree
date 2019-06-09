@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+.tips{
+    background-color: #ffffff;
+    background-size: cover;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.tips a{
+    color: #000000 !important;
+}
+.tips .button:hover{
+    color: #000000!important;
+}
+.tips .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #65B0BD;
+    border-left: 20px solid transparent;
+}
+.tips .button-transition:after {
+    background: #65B0BD !important;
+
+  }
+
+
+
+.tips .button:hover{
+    color: #000000!important;
+}
+.tips .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #ffd02d;
+    border-left: 20px solid transparent;
+}
+.tips .button-transition:after {
+    background: #ffd02d !important;
+
+  }
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+	.tips{
+		height: 500px !important;
+	}
+}
+@media screen and (min-width:991px) and (max-width:1200px){
+    .tips{
+        height: 470px !important;
+    }
+}
+@media screen and (min-width:1200px){
+    .tips{
+        height: 470px !important;
+    }
+}
+
+@media screen and (max-width:400px){
+    .tips .buttonText{
+      font-size: 16px !important;
+      line-break: 18px !important;
+    }
+    .tips .button-transition{
+      padding: 9px 10px !important;
+    }
+  }
+
+.topBorder{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+
+.quitPlan-bg{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 500ms ease-in;
+}
+.quitPlan-bg:hover{
+    transform: scale(1.1);
+}
+.quitPlanImage{
+    position: absolute;
+    bottom: 0px;
+    right: -10px;
+    max-width: 310px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    
+}
+.quitPlanImage:hover{
+    right:  0px;
+}
+
+@media screen and (max-width: 767px){
+    .quitPlan-bg{
+       display: none;
+    }
+    .quitPlanImage{
+       display: none;
+        
+    }
+}
