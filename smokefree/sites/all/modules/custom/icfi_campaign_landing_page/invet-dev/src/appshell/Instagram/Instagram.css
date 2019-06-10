@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.instagram-section{
+    background: #ffffff;
+    padding: 15px;
+    min-height: 470px;
+    max-height: 470px;
+    position: relative;
+    overflow: hidden;
+}
+.instagram-section img{
+    transition:all 0.3s ease;
+    margin: 0 auto;
+}
+.instagram-section a{
+    color: #000000 !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media screen and (max-width:767px){
+    .instagram-section{
+        max-height: none !important;
+        min-height: auto !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:991px){
+    .instagram-section{
+       min-height: 500px !important;
+    }
+}
+
+.instagram-section .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #1788f8;
+    border-left: 20px solid transparent;
+    transition: all 0.1s ease-in;
+}
+
+.instagram-section .button-transition:after {
+    background: #1788f8 !important;
+
+  }
+
+.topBorder{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+.instagram-bg{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 500ms ease-in;
+}
+.instagram-bg:hover{
+    transform: scale(1.1);
+}
+.instagramImage{
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+    max-width: 190px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    
+}
+.instagramImage:hover{
+    bottom: 0px;
+}
+.socialText{
+    font-size: 16px !important;
+}
+
+@media screen and (max-width: 1200px){
+    .instagram-bg{
+        display: none;
+    }
+    .instagramImage{
+       display: none;
+        
+    }
+}

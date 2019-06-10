@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.txt{
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: cover;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    min-height: 535px;
+}
+@media screen and (max-width:1200px){
+    .txt{
+        padding: 15px 0px;
+    }
+}
+
+
+.txtimage{
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    max-width: 330px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    display:block;
+}
+
+
+.txtimage:hover{
+   top: 40px;
+}
+.txt:hover .txtimage{
+    top: 40px;
+}
+
+.txt .brush{
+    position: absolute;
+    display: flex;
+    align-content: center;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    background-image: url("/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/txt-brush-update2.png");
+    background-size: cover;
+    min-height: 200px;
+    justify-content: center;
+}
+.txtInput{
+    margin-top: 15px !important;
+    width: 100% !important;
+    padding: 16px 20px !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+}
+@media screen and (max-width:768px){
+    .txtInput{
+        padding: 16px 10px !important;
+    }
+}
+.txt .button:hover{
+    color: #000000 !important;
+}
+
+.txt .button{
+    margin-top: 15px;
+    color: #000000;
+}
+.txt .button:disabled .buttonText{
+    color: #777474 !important;
+}
+.txt .button:disabled:hover{
+    cursor: not-allowed;
+    color: #777474 !important;
+    border: 1px solid #777474;
+}
+.txt .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #00ff00;
+    border-left: 20px solid transparent;
+    transition: all 0.1s ease-in;
+}
+
+.txt .button.nomobile:hover:before{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: #00ff00;
+}
+
+
+
+
+
+.txt .button:disabled:hover:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #00ff00;
+    border-left: 20px solid transparent;
+    transition: all 0.1s ease-in;
+    background-color: transparent;
+}
+
+.txt .button-transition:after {
+    background: #00ff00 !important;
+
+  }
+.txtInputRow{
+    padding-top: 50px;
+}
+.txt .unsubscribe{
+    font-size: 12px !important; 
+    padding-bottom: 0px !important;
+}
+
+
+
+
+@media screen and (min-width:991px) and (max-width:1200px){
+    .txt{
+        min-height: 535px;
+    }
+    .txtimage{
+        top: auto;
+        bottom: 140px;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
+    .txt:hover .txtimage{
+        top: auto;
+        bottom: 130px;
+    }
+
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .txt{
+        min-height: 650px;
+    }
+
+    .txtimage{
+        top: auto;
+        bottom: 220px;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
+    .txt:hover .txtimage{
+        top: auto;
+        bottom: 210px;
+    }
+
+}
+@media screen and (max-width:767px){
+    .txt{
+        min-height: 650px;
+    }
+
+    .txtimage{
+        top: auto;
+        bottom: 210px;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
+    .txt:hover .txtimage{
+        top: auto;
+        bottom: 215px;
+    }
+    .txt .button{
+        margin-top: 0px !important;
+    }
+
+}
+@media screen and (min-width:401px) and (max-width:500px){
+    .txt{
+        min-height: 700px;
+    }
+}
+@media screen and (max-width:400px){
+    .txtimage{
+       width: 90%;
+        bottom: 260px;
+    }
+
+    .txt:hover .txtimage{
+        top: auto;
+        bottom: 250px;
+
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .txt{
+        min-height: 600px;
+    }
+}
+@media screen and (max-width:360px){
+    .txt{
+        min-height: 600px;
+    }
+    .SFtxt{
+        width: 80% !important;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+.crave-bubble{
+    width: 120px;
+    height: auto;
+}
+.SFtxt{
+    width: 300px;
+    height: auto;
+    margin-top: 50px;
+}
+.topBorder{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
