@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './Form.css'
+import './Form.css';
 import {Row, Col} from 'react-bootstrap/lib';
-import jQuery from 'jquery'
+import jQuery from 'jquery';
+import queryString from 'query-string';
 
 class PhoneForm extends React.Component {
     constructor(props) {
@@ -77,9 +78,13 @@ class PhoneForm extends React.Component {
   
     handleSubmit(event) {
       if (this.handleValidation(this.state.value)) {
+          const values = queryString.parse(window.location.search);
           const myPost = {
-              opt_in_path: 'OP0ADA4EE89DEE0B00D21080E885429007',
+              opt_in_path: 'OPA0108D163DDBED2DD9C02D3D0E65CB8B',
               person_phone: this.state.value,
+          }
+          if(values.utm_source){
+                      myPost.person_CDC_Promo = values.utm_source
           }
 
           var request = jQuery.ajax({
