@@ -54,13 +54,12 @@ class TryAnApp extends Component {
         <div className="stores">
           <Row>
             <Col xs={12} sm={6} md={12} className="downloadBtn leftDownloadBtn">
-            <a href="https://itunes.apple.com/app/apple-store/id494552000?pt=564700&ct=SFG2019&mt=8" target="_blank" className="storeButtonContainer">
+            <a href={this.state.ios} target="_blank" className="storeButtonContainer">
             <img src="sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/apple-store.png"   alt="apple store" className="img-responsive storeIcon"  />
             </a>
             </Col>
             <Col xs={12} sm={6} md={12} className="downloadBtn rightDownlaodBtn">
-            <a href="https://play.google.com/store/apps/details?id=com.mmgct.quitstart&referrer=utm_source%3DSFGLandingPage%26utm_medium%3DWebsite%26utm_campaign%3DSFG2019
-" target="_blank" className="storeButtonContainer">
+            <a href={this.state.android} target="_blank" className="storeButtonContainer">
             <img src="sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/google-play-2.png"  alt="google play" className="img-responsive storeIcon" />
        
             </a>

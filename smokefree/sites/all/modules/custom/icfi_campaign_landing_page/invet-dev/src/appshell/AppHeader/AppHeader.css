@@ -22,6 +22,7 @@
 }
 
 .btnLine{
+    font-family: 'Permanent Marker', cursive !important;
     position: relative;
 }
 .btnLine::after {
@@ -105,17 +106,21 @@
 }
 @media screen and (max-width: 767px){
     .appheader{
-        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-general-mobile.png');
-        height: 550px !important;
+        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-general-mobile-update.png');
+        height: 670px !important;
+        background-size: cover;
 
 
     
     }
     .appheader.womenHeader{
-        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-women-mobile.png') !important;
+        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-women-mobile-update.png') !important;
     }
     .appheader.teenHeader{
-        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-teen-mobile.png') !important;
+        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-teen-mobile-update.png') !important;
+    }
+    .AppPara{
+        width: 80% !important;
     }
 }
 @media screen and (min-width:600px) and (max-width: 767px){

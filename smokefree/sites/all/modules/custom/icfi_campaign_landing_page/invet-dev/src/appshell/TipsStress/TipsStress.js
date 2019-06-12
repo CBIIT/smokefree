@@ -21,7 +21,7 @@ class TipsStress extends Component {
           </Col>
          </Row>
         
-         <img src="sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/quitPlan-image.png" className="quitPlanImage" alt="app screen" />
+         <img src="sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/calendar.png" className="quitPlanImage" alt="app screen" />
           <img src="sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/quitPlan-bg.png" className="quitPlan-bg"/>
       </div>
      
