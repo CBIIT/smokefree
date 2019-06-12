@@ -105,9 +105,10 @@
     position: absolute;
     bottom: 0px;
     right: -10px;
-    max-width: 310px;
+    max-width: 270px;
     z-index: 1;
     transition: all 0.3s ease;
+    border-bottom: 1px solid #cdcdcd;
     
 }
 .quitPlanImage:hover{
