@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.strongEnough{
+    background: url("/modules/custom/icf_lgbt_app/react/src/assets/strong-enough-bg.png");
+    background-size: cover;
+    border: #2bfed3 5px solid;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    min-height: 633px;
+    transition: all 0.3s ease;
+}
+.strongEnough a{
+    color: #000000 !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+.strongEnough .brush{
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    transition: all 0.3s ease;
+    
+}
+.strongEnough li{
+    line-height: 22px !important;
+    padding-bottom: 12px !important;
+}
+.strongEnough:hover .brush{
+    left: -85px !important;
+}
+@media screen and (max-width:991px){
+    .strongEnough{
+        background: #fc2a9f !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .strongEnough .brush{
+        left: -15vh !important;
+    }
+}
+@media screen and (max-width:767px){
+    .strongEnough{
+        min-height: auto !important;
+    }
+}
+
+.strongEnough a.rmUnderline{
+    text-decoration: none !important;
+}
+
+.strongEnough .fa{
+    font-size: 10px !important;
+    vertical-align: middle !important;
+}

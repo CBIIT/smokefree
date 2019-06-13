@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.submit{
+    display: inline-block;
+    width: 100% !important;
+    height: auto !important;
+    padding: 15px 12px !important;
+    background: none;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+.submit:disabled{
+    color: #777474 !important;
+    border-color: #777474;
+}
+.alert{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+    color: #651943 !important;
+}
+
+.txtInputRow.pass{
+    display: none !important;
+}
+.txtInputRow.unpass{
+    display: block !important;
+    color: #651943 !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+}
+
+.txtSuccessRow.pass{
+    display: block !important;
+}
+.txtSuccessRow.unpass{
+    display: none !important;
+}
+
+.txtInput{
+    width: 100% !important;
+}
+.txtSuccessRow{
+    background-color: #a3d4f8 !important;
+    border: #000000 1px solid;
+    padding: 10px !important;
+    color: #0B541B;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 30px;
+}

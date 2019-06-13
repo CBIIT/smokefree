@@ -20,8 +20,8 @@ function icfi_campaign_landing_page_menu() {
  */
 function icfi_campaign_landing_page() {
   $base_assets_path = drupal_get_path('module', 'icfi_campaign_landing_page');
-  $css_files = glob($base_assets_path. '/build/static/css/*.css');
-  $js_files = glob($base_assets_path. '/build/static/js/*.js');
+  $css_files = glob($base_assets_path. '/invet-dev/build/static/css/*.css');
+  $js_files = glob($base_assets_path. '/invet-dev/build/static/js/*.js');
   foreach ($css_files as $css_file) {
     drupal_add_css($css_file, array(
       'scope' => 'footer',

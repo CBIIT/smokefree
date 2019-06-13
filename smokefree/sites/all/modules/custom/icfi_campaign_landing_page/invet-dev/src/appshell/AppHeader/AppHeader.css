@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+.AppH1{
+    font-family: 'Permanent Marker', cursive !important;
+    font-weight: 900 !important;
+    font-size: 65px !important;
+    line-height: 60px !important;
+    color: #000000 !important;
+    text-transform: uppercase !important;
+    text-align: left;
+    letter-spacing: 0.0em !important;
+    -ms-font-feature-settings: normal !important;
+    position: relative;
+    z-index: 2;
+    
+}
+.AppPara{
+    padding-top: 10px;
+    font-weight: 400;
+}
+
+.btnLine{
+    font-family: 'Permanent Marker', cursive !important;
+    position: relative;
+}
+.btnLine::after {
+    content: '';
+    position: absolute;
+    bottom: -0.125rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 2rem;
+    z-index: -1;
+    background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/underline.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.highLight{
+    color: #ffd02d;
+    font-family: 'Permanent Marker', cursive !important;
+    font-weight: 900 !important;
+    font-size: 65px !important;
+}
+.teenHeader .AppH1, .womenHeader .AppH1{
+    color: #000000 !important;
+}
+.teenHeader .AppPara, .womenHeader .AppPara{
+    color: #000000 !important;
+}
+@media screen and (min-width: 768px){
+    .AppH1{
+        color: #ffffff !important;
+    }
+    .teenHeader .AppH1, .womenHeader .AppH1{
+        color: #000000 !important;
+    }
+    .AppPara{
+        color: #ffffff !important;
+    }
+
+}
+
+
+.appheader{
+    background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-general.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30vw !important;
+
+}
+.appheader.womenHeader{
+    background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-women.png') !important;
+}
+.appheader.teenHeader{
+    background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-teen.png') !important;
+}
+.mobileHead{
+    display: none;
+}
+.heroImg{
+    padding-right: 10px;
+}
+
+@media screen and (max-width:991px){
+    .AppH1{
+        font-size: 8vw;
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
+    }
+    .heroImg{
+        max-width: 120px;
+    }
+    .highLight, .AppH1{
+        font-size: 42px !important;
+        line-height: 40px !important;  
+        letter-spacing: 0.0em !important;  
+        -ms-font-feature-settings: normal;   
+    }
+
+
+    .mobileHide{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px){
+    .appheader{
+        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-general-mobile-update.png');
+        height: 670px !important;
+        background-size: cover;
+
+
+    
+    }
+    .appheader.womenHeader{
+        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-women-mobile-update.png') !important;
+    }
+    .appheader.teenHeader{
+        background-image: url('/sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/header-teen-mobile-update.png') !important;
+    }
+    .AppPara{
+        width: 80% !important;
+    }
+}
+@media screen and (min-width:600px) and (max-width: 767px){
+    .AppH1{
+        font-size: 36px !important;
+        line-height: 40px !important;
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
+        width: 50%;
+    }
+
+    .mobileHead{
+        display:block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .appheader{
+       
+        min-height: auto;
+        -webkit-backface-visibility: hidden;
+        overflow:hidden;
+        padding-bottom: 20px;
+
+    }
+}
+@media screen and (max-width:600px){
+    .AppH1{
+        letter-spacing: 0.0em !important;
+        -ms-font-feature-settings: normal;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 36px!important;
+        line-height: 40px!important;
+        width: 100%;
+    }
+    .mobileHead{
+        display:block;
+        width: 100%;
+        height: auto;
+        overflow:hidden;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .appheader{
+       
+        min-height: auto;
+        padding-bottom: 20px;
+        background-position: 30%;
+
+    }
+    .rightIcon{
+        margin-left: auto;
+        max-width: 90px !important;
+    }
+   
+}
+.xsDisplay{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .xsHidden{
+        display: none !important;
+    }
+    .xsDisplay{
+        display: inline-block !important;
+    }
+}

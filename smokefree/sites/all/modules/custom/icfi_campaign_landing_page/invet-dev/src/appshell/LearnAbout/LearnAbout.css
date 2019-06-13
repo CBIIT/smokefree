@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800,900');
+
+.learnabout{
+    background: url("/modules/custom/icf_lgbt_app/react/src/assets/learn-about-bg.png");
+    background-size: cover;
+    border: #9f48f9 5px solid;
+    padding: 15px;
+    min-height: 535px;
+}
+@media screen and (max-width:767px){
+    .learnabout{
+        min-height: auto !important;
+    }
+}
+
+
+
+.learnabout .button:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #9f48f9;
+    border-left: 20px solid transparent;
+    transition: all 0.2s ease-in;
+
+}
+
+.learnabout .button-transition:after {
+    background: #9f48f9 !important;
+
+  }
+.buttonText{
+    z-index: 10;
+    display:block; 
+    position:relative;
+}
