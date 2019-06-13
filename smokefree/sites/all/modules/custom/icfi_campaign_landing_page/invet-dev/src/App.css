@@ -186,3 +186,7 @@ footer .col-lg-12{
 .main-container{
   padding-top: 0 !important;
 }
+.quit .content-bottom {
+  background: #EEEEEE;
+  margin-bottom: 10px;
+}
