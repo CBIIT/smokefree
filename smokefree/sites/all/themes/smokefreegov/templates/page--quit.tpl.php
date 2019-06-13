@@ -98,4 +98,10 @@
           <?php print render($page['below_content']); ?>
 </div>
 
+<?php if (!empty($page['content_bottom'])): ?>
+    <div class="row col-sm-12 content-bottom" role="complementary">
+      <?php print render($page['content_bottom']); ?>
+    </div>  <!-- /#content bottom -->
+<?php endif; ?>
+
 <?php require_once drupal_get_path('theme', 'smokefreegov') . '/templates/' . $footer_filename; ?>
