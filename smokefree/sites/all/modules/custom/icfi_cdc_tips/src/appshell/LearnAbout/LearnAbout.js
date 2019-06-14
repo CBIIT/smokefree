@@ -14,9 +14,9 @@ class LearnAbout extends Component {
          <div className="learnabout">
           <Row>
            <Col xs={12} className="learnaboutTop">
-           <h2>1-800-QUIT NOW</h2>
+           <h2>Call 1-800-QUIT NOW</h2>
            <p>
-           <a href="tel:1-800-784-8669">1-800-QUIT-NOW</a> (1-800-784-8669) is a toll-free number operated by the National Cancer Institute (NCI) that will connect you 
+           <a href="tel:1-800-784-8669">1-800-QUIT-NOW</a> (1-800-784-8669) is a toll-free number run by the National Cancer Institute (NCI) that will connect you 
            to your state’s tobacco quitline. Hours of operation and services vary from state to state.
            </p>
             </Col></Row>
@@ -33,6 +33,7 @@ class LearnAbout extends Component {
            <img src="/sites/all/modules/custom/icfi_cdc_tips/src/assets/phone-icon.png" className="phoneIcon"/>
            </Shake>
            <p>
+           English: <a href="tel:1-800-QUIT-NOW">1-800-QUIT-NOW</a><br/>
            Spanish: <a href="tel:1-855-335-3569">1-855-335-3569</a><br/>
            Korean: <a href="tel:1-800-556-5564">1-800-556-5564</a><br/>
            Mandarin and Cantonese:<br/> <a href="tel:1-800-838-8917">1-800-838-8917</a><br/>

@@ -11,9 +11,8 @@ class TipsStress extends Component {
     return (
        <div className="apptips">
          <h2>Create a Quit Plan</h2>
-         <p>Embrace the power of planning. Build your personalized quit plan to set a quit date, 
-         understand your smoking triggers, choose strategies for dealing with cravings, 
-         and find additional tools and resources to help you become smokefree.</p>
+         <p>Build your personalized quit plan by setting a quit date, learning how to handle cravings, 
+         and more! Start planning your smokefree journey.</p>
          {/*
          <a className="flip">
          <FlipCard/>

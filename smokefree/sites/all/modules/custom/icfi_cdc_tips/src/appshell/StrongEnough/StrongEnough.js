@@ -14,7 +14,7 @@ class StrongEnough extends Component {
           <Row>
             <Col xs={12}>
             <h2>MANAGE YOUR CRAVINGS</h2>
-            <p>Quitting smoking is about fighting one craving at a time. Be prepared to deal with cravings with these helpful tips.</p>
+            <p>Find out how to deal with cravings with these helpful tips.</p>
             </Col>
           </Row>
 
