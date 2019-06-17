@@ -34,8 +34,7 @@ class AppHeader extends Component {
             <Row>
               <Col xs={12}>
               <h1 className="AppH1" data-aos="fade-in" >YOU CAN QUIT</h1>
-              <p className="AppPara" data-aos="fade-in" data-aos-delay="50">Nearly 3 out of 4 adult smokers want to quit, but many people don’t know where to start.
-              Explore these tools and make a plan for how you are going to become smokefree for good.</p>
+             
               </Col>
             </Row>
            

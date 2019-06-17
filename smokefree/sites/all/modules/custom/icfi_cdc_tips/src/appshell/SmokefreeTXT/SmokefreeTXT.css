@@ -207,7 +207,7 @@
 
 @media screen and (max-width:400px){
     .txt{
-        min-height: 720px;
+        min-height: 620px;
     }
 }
 @media screen and (max-width:360px){

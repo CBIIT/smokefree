@@ -19,7 +19,7 @@ class SmokefreeTXT extends Component {
         </div>
           <Row >
             <Col xs={12}>
-            <h2>SmokefreeTXT</h2>
+            <h2>Join SmokefreeTXT</h2>
             <p>Get daily text messages with encouragement, advice, and tips to help you quit smoking.</p>
             </Col>
             <Col xs={12}>

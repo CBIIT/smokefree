@@ -24,8 +24,9 @@ class TryAnApp extends Component {
         </div>
         <Row>
           <Col xs={12}>
-          <h2>quitSTART App</h2>
-          <p>The quitSTART app gives you tailored tips, inspiration, and challenges to help you become smokefree.</p>
+          <h2>Download <br/>quitSTART App</h2>
+          <p>Get a free personalized mobile app with quit tips, ways to fight cravings, 
+          inspiration, and help to become smokefree.</p>
           </Col>
         </Row>
           <Row>
