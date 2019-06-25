@@ -15,7 +15,7 @@ class TipsStress extends Component {
          <p>
          Build your personalized quit plan by setting a quit date, learning how to handle cravings, and more! Start planning your smokefree journey.
         </p>
-         <Row>
+         <Row className="socialButtonRow">
          <Col xs={12} md={7}>
           <DefaultButton href="https://smokefree.gov/build-your-quit-plan" text="CREATE MY PLAN"/>
           </Col>
