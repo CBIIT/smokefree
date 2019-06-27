@@ -29,28 +29,9 @@ class App extends Component {
 
 
   componentDidMount() {
-    const values = window.location.href;
-    if(values.includes("vet")|| values.includes("veterans")){
-      this.setState({
-       domain: "vet"
-      }) 
-    }
-    else if (values.includes("sfw") || values.includes("women")){
-      this.setState({
-        domain: "women"
-      })
-    }
-    else if (values.includes("teen") || values.includes("teen")){
-      this.setState({
-        domain: "teen"
-      })
-    }
-    else{
       this.setState({
         domain: "general"
-      })
-    }
-    
+      });
   }
 
   componentWillReceiveProps() {

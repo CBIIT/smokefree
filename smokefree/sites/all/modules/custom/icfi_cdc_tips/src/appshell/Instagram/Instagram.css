@@ -32,8 +32,8 @@
 
 @media screen and (min-width:768px) and (max-width: 991px){
     .instagram-section{
-        max-height: 730px !important;
-        min-height: 730px !important;
+        max-height: 700px !important;
+        min-height: 700px !important;
     }
 }
 

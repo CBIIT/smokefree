@@ -57,8 +57,8 @@ class Instagram extends Component {
         <div className="instagram-section">
         <img src="sites/all/modules/custom/icfi_campaign_landing_page/invet-dev/src/assets/top-3.png"  alt="top image" className="topBorder" />
            <h2>Stay Connected</h2>
-           <p>Support can go a long way when quitting smoking. Connect with people like you through CDC and NCI’s supportive social media communities.</p>
-           <Row>
+           <p>Support can go a long way when quitting smoking. Connect with people like you through Smokefree's supportive social media communities.</p>
+           <Row className="socialButtonRow">
            <Col xs={12} lg={7}>
            <SocialButton href={this.state.facebook} text={this.state.facebookText} imgName="facebook.png" textClass="socialText"/>
            <SocialButton href={this.state.instagram} text="@SmokefreeUS" imgName="instagram.png" textClass="socialText"/>
