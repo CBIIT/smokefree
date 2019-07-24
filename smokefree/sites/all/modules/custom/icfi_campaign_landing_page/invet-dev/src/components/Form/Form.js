@@ -122,7 +122,7 @@ class PhoneForm extends React.Component {
   
     render() {
       return (
-        <div className="txtInput">
+        <div className="txtInputField">
         <Row className={`txtInputRow ${this.state.pass? 'pass' : 'unpass'}`}>
           <Col xs={12} md={8}>
           <label class="sr-only" for="phone-number">Phone Number</label>
