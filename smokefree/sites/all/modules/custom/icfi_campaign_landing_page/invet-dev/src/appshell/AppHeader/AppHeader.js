@@ -76,7 +76,7 @@ class AppHeader extends Component {
         <Grid className="appHeaderContent">
          
         <Row className="show-grid">
-          <Col xs={12} sm={7} md={5}>
+          <Col xs={12} sm={7} md={6}>
             <Row>
               <FlexView vAlignContent="center" width="100%" marginTop="20px" marginLeft="15px">
               <a href={this.state.logoLink} target="_blank">
