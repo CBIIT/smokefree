@@ -6,9 +6,9 @@
 
                 <div class="col-xs-12 col-md-12 iconrow">
                     <div class="footer-icons">
-                        <a href="https://www.facebook.com/SmokefreeUS"><div class="facebook icon"></div></a>
-                        <a href="http://instagram.com/smokefreeus"><div class="instagram icon"></div></a>
-                        <a href="http://twitter.com/SmokefreeUs"><div class="twitter icon"></div></a>
+                        <a href="https://www.facebook.com/SmokefreeUS"><div aria-label="Facebook" class="facebook icon"></div></a>
+                        <a href="http://instagram.com/smokefreeus"><div aria-label="Instagram" class="instagram icon"></div></a>
+                        <a href="http://twitter.com/SmokefreeUs"><div aria-label="Twitter" class="twitter icon"></div></a>
                     </div>
                 </div>
 
