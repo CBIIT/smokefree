@@ -64,7 +64,7 @@
             var phref = $(this).attr('href');
             var ptext = $(this).text();
             $('#navbar-responsive .slide-menu .submenu-'+counter).append('<li><a href="'+phref+'">'+ptext+'</a></li>');
-            $('#navbar-responsive .slide-menu .landingpage-menu').append('<li><a href="'+phref+'">'+ptext+'</a><button class="mobile-subnav submenu-' + counter + '-btn"></button></li>');
+            $('#navbar-responsive .slide-menu .landingpage-menu').append('<li><a href="'+phref+'">'+ptext+'</a><button class="mobile-subnav submenu-' + counter + '-btn" aria-label="' + ptext + '"></button></li>');
         });
         // Navigation Active Line Above
         $('#navbar-desktop').children('ul.navbar-nav').children('li.active').children('a').append('<span class=""><span class="on-bar"></span></span>');
@@ -534,7 +534,7 @@
         });
         
         // 508 search input
-		$('input.search-bar-input').attr('id', 'searchbox-header');
+		$('#sfg-nav-bar-menu input.search-bar-input').attr('id', 'searchbox-header');
         // Smokefree.gov Homepage 4 Boxes
         $('#btn__I-Want-to-Quit').click(function() {
             $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
