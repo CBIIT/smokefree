@@ -86,7 +86,7 @@
               <input name="getfields" type="hidden" value="*">
               <div class="search-icon"></div>
               <div class="search-field-wrapper">
-                  <label for="searchbox-header" class="sr-only">Search</label>
+                  <label for="searchbox-mobile" class="sr-only">Search</label>
                   <input name="query" id="searchbox-mobile" onblur="javascript:if (this.value == '') this.value ='Search';" onfocus="javascript:if (this.value=='Search') this.value='';" size="50" maxlength="128" type="text" class="search-bar-input form-control" placeholder="Search Smokefree">
               </div> <!-- /.search-field-wrapper -->
               <button type="submit" value="Search" class="btn btn-submit">Go</button>

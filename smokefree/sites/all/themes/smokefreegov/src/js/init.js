@@ -534,7 +534,7 @@
         });
         
         // 508 search input
-		$('input.search-bar-input').attr('id', 'searchbox-header');
+		$('#sfg-nav-bar-menu input.search-bar-input').attr('id', 'searchbox-header');
         // Smokefree.gov Homepage 4 Boxes
         $('#btn__I-Want-to-Quit').click(function() {
             $(this).parent('.sf_homepage_4boxes__wrapper').toggleClass('open');
