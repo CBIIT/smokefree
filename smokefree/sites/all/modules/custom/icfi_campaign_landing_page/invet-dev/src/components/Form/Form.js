@@ -83,8 +83,8 @@ class PhoneForm extends React.Component {
               opt_in_path: 'OPA0108D163DDBED2DD9C02D3D0E65CB8B',
               person_phone: this.state.value,
           }
-          if(values.utm_source){
-                      myPost.person_CDC_Promo = values.utm_source
+          if(values.utm_content){
+                      myPost.person_CDC_Promo = values.utm_content
           }
 
           var request = jQuery.ajax({
