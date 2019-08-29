@@ -84,7 +84,7 @@ class PhoneForm extends React.Component {
               person_phone: this.state.value,
           }
           if(values.utm_content){
-                      myPost.person_CDC_Promo = values.utm_content
+                      myPost.person_SFG_Promo = values.utm_content
           }
 
           var request = jQuery.ajax({
